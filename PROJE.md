@@ -55,11 +55,11 @@ Her karar ve nedeni burada. Bir karar değişirse eskisinin ~~üstü çizilir~~ 
 10. **Cinsellik sınırı:** Eylem, sıra, zamanlama ve pozisyon açıkça anlatılır; anatomik yakın plan yoktur. Bilinci yerinde olmayan bir karakterle cinsellik yoktur.
     - *Neden:* Kullanıcıyla netleşti (1. oturum).
 11. **Repo herkese açık kalıyor, yayın GitHub Pages'te.** Kullanıcı onayladı (1. oturum).
-12. **Pilot karakter: Defne** (öneri, kullanıcı onayı bekleniyor).
+12. **Pilot karakter: Defne.** (1. oturumda önerildi; kullanıcı itiraz etmedi, 2. oturumda kesinleşti.)
     - *Neden:* Oyunun ilk sahnesinde tanışılıyor, tek başına baştan sona oynanabiliyor, mesajlaşması zengin, kış yayı erken başlıyor, diğer karakterlere en az bağımlı olan o. Gerekçenin ayrıntısı `hikaye/omurga.md`'de.
     - *Alternatif:* Ilgın. Şehirle en iç içe olan o, ama kesişmeleri (Lara, Ceren) çok fazla; pilot olarak tek başına eksik kalır.
 
-### Teknik (2. adımda kesinleşecek)
+### Teknik (2. adımda kesinleşti)
 
 13. **Sade HTML/CSS/JavaScript.** Hazır kütüphane yok, "build" adımı yok.
     - *Neden:* Dosyalar olduğu gibi GitHub Pages'e çıkar, internetsiz çalışır, yıllar sonra da bozulmaz. Oyunun karmaşıklığı bir kütüphane gerektirmiyor.
@@ -73,19 +73,45 @@ Her karar ve nedeni burada. Bir karar değişirse eskisinin ~~üstü çizilir~~ 
 17. **Kayıt:** Telefonda otomatik kayıt, ayrıca kopyalanabilir bir "kayıt kodu". Hata olursa kopyalanabilir bir hata raporu.
 18. **Testler ve kontrol:** Node'un kendi test aracı, kurulum gerektirmez. Görsel kontrol için iPhone boyutunda ekran görüntüsü.
 19. **Yazı tipleri:** İnternetsiz çalışması için repo içinde, açık lisanslı.
+    - Sahneler için **Literata** (e-kitap okumak için tasarlanmış). Telefon için **Inter**.
+20. **İçerik biçimi:** `.dsim`. Senaryo gibi okunan, girintiyle dallanan bir biçim (Ink'ten esinlenildi). Tarifi `icerik/BICIM.md`'de.
+    - *Neden:* Yazarken diyalog düz yazı gibi okunuyor. Denetim aracı biçim hatasını, kopuk bağlantıyı ve yasaklı kalıbı satır numarasıyla yakalıyor.
+21. **Üç ekran:**
+    - **Kilit ekranı:** "şimdi". Saat, gök, bildirimler, "Ne yapacaksın?".
+    - **Telefon:** Mesajlar, Rehber, Ayarlar.
+    - **Sahne:** kitap sayfası.
+    - *Neden:* Kullanıcı mesajlaşmanın ve buluşmanın iki ayrı ekran olmasını istedi. Kilit ekranı ikisinin arasındaki "cebindeki telefon" ânı. Oyunun saati ve havası burada en güzel görünüyor.
+22. **Zaman akışı:**
+    - Oyuncu bir şey seçince ilerler.
+    - Telefon açıkken 5 dakika içindeki mesajlar "yazıyor…" ile kendiliğinden gelir.
+    - "Biraz oyalan" yarım saat, "Uyu" ertesi sabah 08:00. Uyuyunca oyuncu evine döner.
+23. **Saate göre tonlar:**
+    - Kilit ekranının gökyüzü 7 evreden birine göre değişir: gece, şafak, sabah, öğle, ikindi, gün batımı, akşam. Havaya göre de değişir: bulut, yağmur, fırtına.
+    - Telefon karanlıkta karanlık moda geçer.
+    - Sahne kâğıdı gece koyulaşır.
+24. **Oyunun görünen adı: "Pırnallı".** "dsim" proje adı olarak kalır.
+    - *Neden:* Ekranda bir kod adı yerine şehrin adı daha sıcak duruyor. Kullanıcı isterse değişir.
+25. **Yayın:** GitHub Pages, doğrudan çalışma dalından.
+    - *Neden:* Her push oyunu kendiliğinden günceller, kullanıcının birleştirme yapması gerekmez.
+26. **İskeletin içeriği:** 15–16 Eylül'lük küçük ama gerçek bir dilim.
+    - Personel evinde sabah, söküm, kordon, taşınma, Saniye Hanım, Onur, anne.
+    - Eski mesajlar: baba, anne, Ezgi, Onur, Burak. Oyuncunun yalanı ("kayıt donduruyorum… baharda dönücem") babasıyla eski yazışmada görünüyor; kimse anlatmıyor.
+    - **İleride bu metne dokunulacak, önceden bildirildi:**
+      - 3\. adımda 14 Eylül gecesi (Defne) başa eklenecek. Oyuncu o gece Defne'de kalırsa açılış sahnesine bir koşul eklenecek.
+      - 4\. adımda taşınma sahnesine Saniye Hanım'ın oyuncuyu eczaneye yollaması (Ilgın'la tanışma) eklenecek.
 
 ## Yol haritası
 
 1. ~~Temel belgeler~~ → **Temel belgeler + ses testi.** ✅
    - *Neden değişti:* Ses testi eklendi; karakterlerin farklı olduğunu en ucuz yoldan sınıyor.
-2. **İskelet + okuma aracı.**
+2. **İskelet + okuma aracı.** ✅
    - Mesajlaşma ve buluşma ekranları, oyun saati, kayıt, hata raporu.
    - İçerik biçimi ve testler.
    - Okuma aracı: oyunu farklı yollardan otomatik oynatıp metni dosyaya döker.
    - GitHub Pages yayını; kullanıcıya düşen adımlar.
    - Tasarım bu adımda da özenli olacak.
    - *Not:* Okuma aracı iskeletle birlikte kuruluyor, çünkü pilot yazılırken hazır olması gerekiyor.
-3. **Pilot karakter (önerilen: Defne).** Baştan sona eksiksiz: tanışma, mesajlaşmalar, buluşmalar, büyük anlar, cinsellik, sonlar. Okuma aracıyla defalarca kontrol.
+3. **Pilot karakter: Defne.** Baştan sona eksiksiz: tanışma, mesajlaşmalar, buluşmalar, büyük anlar, cinsellik, sonlar. Okuma aracıyla defalarca kontrol.
 4. **Diğer beş karakter,** tek tek. Her biri pilot kadar derin; oyun her adımda oynanabilir kalacak.
 5. **Kesişmeler:** Karakterler arası bağlar, çoklu ilişki, yakalanma, şehir olayları.
 6. **Sonlar ve cila:** Bitişler, epilog, tekrar ve tutarlılık taraması, arayüz cilası, son okuma turları.
@@ -98,10 +124,24 @@ Bir oyun yaklaşık 10–15 saat.
 
 ## Açık sorular
 
-- Pilot karakter Defne mi olsun? (Kullanıcı onayı bekleniyor; itiraz olmazsa Defne.)
+- Yok.
 
 ## Nerede kaldık
 
-**Son durum (1. oturum):** 1. adım tamamlandı. Temel belgeler yazıldı: dünya, takvim, oyuncu, altı karakter, karşılaştırma tablosu, omurga, yazım rehberi, ses testi. Belgeler tutarlılık için baştan okundu ve düzeltildi.
+**1. oturum:** 1. adım tamamlandı. Temel belgeler yazıldı: dünya, takvim, oyuncu, altı karakter, karşılaştırma tablosu, omurga, yazım rehberi, ses testi.
 
-**Sıradaki:** 2. adım, iskelet ve okuma aracı (büyük). Kullanıcının "devam" demesi bekleniyor.
+**2. oturum:** 2. adım tamamlandı.
+- **Motor:**
+  - Zaman, mesaj akışı (gecikme, yazıyor, okundu, zaman aşımı), sahne, eylem, telefona bakma, rehber, kayıt, onarım.
+- **Ekranlar:**
+  - Giriş, kilit, telefon (liste, sohbet, rehber, ayarlar), sahne.
+  - Kayıt kodu, hata raporu.
+  - Servis çalışanı ile internetsiz çalışma, ikonlar.
+- **Araçlar:**
+  - Okuma aracı, oyun robotu, ekran görüntüsü aracı, içerik denetimi.
+  - 25 otomatik test.
+- **İçerik:** 15–16 Eylül dilimi yazıldı. Okuma aracıyla 22 yoldan okundu.
+- **Ekran görüntüleri:** iPhone boyutunda alınıp kontrol edildi. Bulunan kusurlar düzeltildi: kayan başlık, tırnaklar, bildirim gruplama, kontrast, tekrarlanan tepki, ev konumu.
+- **Kullanıcıya düşen:** GitHub Pages'i açmak (sohbette adım adım anlatıldı). Sonra telefonda Safari'den "Ana Ekrana Ekle".
+
+**Sıradaki:** 3. adım, pilot karakter Defne (büyük). Kullanıcının "devam" demesi bekleniyor.

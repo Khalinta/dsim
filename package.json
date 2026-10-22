@@ -1,0 +1,10 @@
+{
+  "name": "dsim",
+  "private": true,
+  "type": "module",
+  "description": "Pırnallı: Türkçe, metin ağırlıklı bir ilişki oyunu",
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "oku": "node araclar/oku.mjs"
+  }
+}

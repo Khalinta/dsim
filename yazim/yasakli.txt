@@ -1,0 +1,16 @@
+# İçerikte hiç geçmemesi gereken çeviri ve dublaj kalıpları (bkz. yazim/rehber.md, 2.1).
+# Her satır bir kalıp; küçük harfle yazılır, metnin içinde aranır.
+# "re:" ile başlayan satırlar düzenli ifadedir.
+heyecanlıyım
+heyecanlıydım
+harika bir fikir
+seni düşünüyordum
+vay canına
+aman tanrım
+aman tanrı'm
+kahretsin
+lanet olsun
+bekle, ne
+re:(^|[\s"—])biliyor musun,
+re:(^|[\s,"—])dostum([\s,.!?]|$)
+bunu duyduğuma üzüldüm

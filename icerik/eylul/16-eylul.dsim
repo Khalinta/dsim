@@ -1,0 +1,179 @@
+# 16 Eylül, Salı. Taş Mahalle'ye taşınma.
+# Not: Saniye Hanım'ın oyuncuyu eczaneye yollaması (Ilgın'la tanışma) 4. adımda bu sahneye eklenecek.
+
+=== tasinma
+tür: eylem
+kişi: saniye
+başlık: Taş Mahalle'ye taşın
+tarih: 16 Eylül
+pencere: 09:00-21:00
+yer: Taş Mahalle, Saniye Hanım'ın evi
+süre: 30dk
+
+Bütün yazın bir bavul ve bir sırt çantası. Taş Mahalle'nin merdivenli sokağında bavulun tekerlekleri her basamakta tökezliyor; sonunda bavulu kucaklayıp taşıyorsun.
+>> eğer saat < 10
+  Ev iki katlı ve taştan; kapısının yeşil boyası yer yer kabarmış. Kapı kilitli. Önünde boş bir plastik sandalye, sandalyenin altında bir kedi.
+  Karşı evin penceresinden bir kadın sesleniyor.
+  @yabanci(Komşu kadın): Saniye Hanım'ı mı arıyorsun? Kordona indi. Ondan önce gelmez. Gelse de kızar, erken geldin diye.
+  Bavulun üstüne oturup bekliyorsun. Kedi sandalyenin altından çıkıp bavulu kokluyor, beğenmiyor, geri giriyor.
+  >> zaman 16 Eylül 10:40
+  Saniye Hanım yokuşun başında görünüyor. Elinde bir file, adımları kısa ve kararlı. Seni görünce hızlanmıyor.
+  Sandalyeye oturuyor, fileden katlanmış bir gazete ve kırmızı bir kalem çıkarıyor.
+>> yoksa eğer saat >= 14
+  Ev iki katlı ve taştan; kapısının yeşil boyası yer yer kabarmış. Kapıyı çalıyorsun. Bir daha. Üçüncüsünde içeriden bir terlik sesi yaklaşıyor.
+  Kapıyı açan yaşlı kadının yanağında yastık izi var.
+  [saniye.uyandirdi]
+  @saniye: Onur sana öğleden sonra uyuduğumu söylemedi mi?
+  Cevap beklemeden dışarı çıkıp kapının önündeki plastik sandalyeye oturuyor. Koltuğunun altında bir gazete, elinde kırmızı bir kalem var; uyurken de yanında duruyormuş gibi.
+>> yoksa
+  Ev iki katlı ve taştan; kapısının yeşil boyası yer yer kabarmış. Önünde, plastik bir sandalyede yaşlı bir kadın oturuyor; dizinde açık bir gazete, elinde kırmızı bir kalem.
+  Gazetenin bir köşesinde bir kelimenin üstünü çiziyor, yanına bir şey yazıyor. Sonra başını kaldırıyor.
+Sandalyenin yanındaki taburede bir bardak su ve avuç içi kadar, siyah bir ölçüm aleti duruyor.
+@saniye: Sen Onur'un dediği çocuksun.
+Soru sormuyor.
+@saniye: Bugünkü gazetede üç hata var. Dün beşti. Düzeliyorlar.
+* "Ne hatası?"
+  @saniye: "Herkez" yazmışlar. Bir de "yalnış". Üçüncüsü bir virgül, onu anlatsam anlamazsın.
+* "Merhaba, Saniye Hanım."
+  @saniye: Merhaba. "Hanım"ı da bilerek söyledin. Onur tembihlemiş.
+  [saniye.hanim_dedi]
+* (Bavulu yere bırak.)
+  Bavul taşın üstüne biraz fazla sesli iniyor. Kedi kaçıyor.
+
+Bavula, sonra sırt çantasına, sonra sana bakıyor. Yavaş, ödev okur gibi.
+@saniye: Bir yaz için fazla, bir kış için az.
+* "Kış için değil."
+  [saniye.yalan_yakaladi]
+  @saniye: Değil mi?
+  Gözlüğünün üstünden bakıyor.
+  @saniye: Onur kış için dedi.
+* "Gerisini sonra getiririm."
+  @saniye: Herkes öyle der. Gerisi hiç gelmez, insan da az eşyayla yaşamayı öğrenir.
+* "Bütün eşyam bu."
+  @saniye: İyi. Merdiven dar, fazlası sığmazdı zaten.
+
+@saniye: Sen gidecek birine benzemiyorsun.
+Cümleyi bitirmeden önce kalemin kapağını kapatıyor.
+@saniye: Kalacak birine de benzemiyorsun. İlginç.
+* "Neye benziyorum peki?"
+  @saniye: Daha karar vermedim. Kırk yıl öğretmenlik yaptım, ilk derste kimseye not vermem.
+* "Siz kalmışsınız ama."
+  @saniye: Ben doğduğum evde oturuyorum oğlum. Bu kalmak sayılmaz.
+* (Gülümse, bir şey deme.)
+  @saniye: Gülümsemen de güzel. Bir önceki hiç gülümsemezdi.
+
+@saniye: Üst kat senin. Merdiven gıcırdar, ben de duyarım. Bunu bil, ona göre gel git.
+@saniye: Çöp salı ve cuma. Kedilere yemek verme; verirsen bir daha gitmezler. Ben verdim, bak.
+Önlüğünün cebinden bir ipe bağlı anahtar çıkarıp uzatıyor.
+@saniye: Anahtar. İkincisi yok, ikincisini bir önceki götürdü.
+@saniye: Bir de numaramı yaz. Bir şey olursa diye. Ben ölürsem değil; su kesilirse falan.
+Numarayı tek tek söylüyor, sen yazarken her rakamı bir kez daha tekrarlıyor.
+>> rehber saniye: Saniye Hanım | Ev sahibi | Saniye Teyze
+>> eğer saniye.uyandirdi
+  @saniye: Şimdi çık, yerleş. Ben uykuma dönüyorum. Belki dönemem.
+>> yoksa
+  @saniye: Yukarı çık. Kapı biraz sıkışır, omzunla it.
+Kapı gerçekten sıkışıyor. Omzunla itince açılıyor; içeriden bir haftalık bulaşığın, kızarmış ekmeğin ve Onur'un deodorantının kokusu geliyor.
+Senin odan koridorun sonunda: bir yatak, bir dolap, bir sandalye. Pencereden deniz, karşı evin çatısıyla bir çam ağacının arasından çeyrek kadar görünüyor.
+Bavulu yatağın üstüne koyuyorsun. Açmıyorsun.
+>> yer Taş Mahalle, ev
+>> ev Taş Mahalle, ev
+-> son
+
+:: telefon
+@saniye: Telefona bakarken dinlemeyi ben de bilirim. Kırk yıl sınıfta gördüm.
+@saniye: Sonra "hocam, duymadım" dersin.
+-> geri
+
+
+=== onur_geldin_mi
+tür: mesaj
+kişi: onur
+zaman: 16 Eylül 11:15
+
+@onur: geldin mi
+@onur: saniye hanımla tanıştın mı
+@onur: yaşıyo musun
+* yaşıyorum
+  @onur: güzel. ilk gün herkes yaşıyo zaten
+* {gördü(tasinma)} tanıştım. anahtarı aldım
+  @onur: helal. bende bile ilk gün anahtar yoktu, üç gün kapının önünde bekledim
+* {değil gördü(tasinma)} geliyorum birazdan
+  @onur: tamam. 2'den sonra gelme ama, uyuyo
+* (Cevap verme.)
+  >> okudu
+
+
+=== onur_neredesin
+tür: mesaj
+kişi: onur
+zaman: 16 Eylül 13:30
+koşul: değil gördü(tasinma)
+
+@onur: kanka neredesin
+@onur: saniye hanım iki kere sordu
+@onur: üçüncüde vazgeçer, sonra seni hiç sevmez. bak söyliyim
+
+
+=== onur_durum
+tür: mesaj
+kişi: onur
+zaman: 16 Eylül 21:40
+koşul: gördü(tasinma)
+
+@onur: eve 11 gibi gelicem
+@onur: dürüm alayım mı sana
+* al. acılı olsun
+  [onur.durum = "acılı"]
+  @onur: adamsın. acısızı ben de sevmem zaten
+* acısız olsun
+  [onur.durum = "acısız"]
+  @onur: tamam
+  >> bekle 1dk
+  @onur: yargılamıyorum
+  @onur: ama not aldım
+* gerek yok, yedim
+  @onur: kendine dürüm almayan adamla aynı evde yaşıyorum
+  @onur: peki
+
+
+=== onur_gelmedin
+tür: mesaj
+kişi: onur
+zaman: 16 Eylül 21:10
+koşul: değil gördü(tasinma)
+
+@onur: kanka gelmiyo musun
+@onur: saniye hanım kapıyı kilitledi, anahtar onda. sabah ilk iş gel istersen
+* sabah gelirim
+  @onur: tamam. 9dan önce gelme, yürüyüşte olur
+* bu gece kalacak yer buldum
+  @onur: tamam. yarın görüşürüz o zaman
+* (Cevap verme.)
+  >> okudu
+
+
+=== mahalle_aksam
+tür: eylem
+başlık: Mahallede dolaş
+tarih: 16 Eylül
+pencere: 17:30-19:15
+koşul: gördü(tasinma)
+yer: Taş Mahalle
+süre: 30dk
+
+Taş Mahalle akşamüstü yokuşlarını gölgeye bırakıyor. Bir balkondan hortumla saksı sulayan bir kadın, suyu senin geçeceğin yere denk getirmemek için hortumu bir an havaya kaldırıyor.
+Sokaklar birbirine merdivenlerle bağlanıyor. Bir merdiven seni bir çeşmeye, çeşme başka bir merdivene çıkarıyor; en sonunda tepedeki taş binaya varıyorsun.
+>> zaman 16 Eylül 19:20
+Kapısında "Kültür Evi" yazıyor. Eski bir kilise olduğu, çan kulesinin boş kalan yuvasından belli.
+* (İçeri gir.)
+  İçerisi dışarıdan serin. Raflar alçak, kitapların çoğu ciltli ve sırtları solmuş. Apsiste, sıvası dökülmüş bir duvarda soluk bir fresk var: bir azizin yarım yüzü, kaldırılmış bir elin silueti.
+  Masada gözlüklü bir kadın bir defterin sayfalarını çeviriyor. Seni görünce saate bakıyor ama bir şey demiyor.
+  @gonul: Kapatıyoruz. Ama acele etme.
+  @gonul: Ben kapatırken insanlar daha dikkatli bakıyor.
+  Fresktekinin yüzünün öbür yarısı yok; yine de sana bakıyormuş gibi duruyor. Birkaç dakika sonra kadın ışıklardan birini söndürüyor, sen de çıkıyorsun.
+* (Merdivene otur.)
+  Basamağın taşı ılık. Aşağıda çarşının ışıkları birer birer yanıyor; daha aşağıda, kordonun bittiği yerde Uzunkum karanlığa karışıyor.
+  Bir yerden akşam ezanı başlıyor, sonra başka bir camiden, biraz geriden, aynı cümleler.
+Eve dönerken yolu bir kez şaşırıyorsun. İkinci kez şaşırmıyorsun.
+>> yer Taş Mahalle, ev

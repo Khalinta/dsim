@@ -1,0 +1,5 @@
+# Oyunun okuduğu içerik dosyaları, okunma sırasıyla.
+# Yeni bir .dsim dosyası eklenince buraya da yazılmalı (testler bunu denetler).
+gecmis.dsim
+eylul/15-eylul.dsim
+eylul/16-eylul.dsim

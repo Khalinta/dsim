@@ -82,4 +82,22 @@ Karakter belgesi karakteri kısıtlamak için değil, her sahnede aynı insan ol
 
 ## Teknik
 
-2\. adımda doldurulacak: klasör yapısı, içerik biçimi, testleri ve okuma aracını çalıştırma komutları.
+- Sade HTML, CSS ve JavaScript (ES modülleri). Kütüphane yok, build adımı yok.
+- **Klasörler:**
+  - `index.html`, `manifest.webmanifest`, `sw.js` (internetsiz çalışma), `.nojekyll`
+  - `css/stil.css`: bütün görünüm
+  - `js/motor/`: oyunun motoru, ekrandan bağımsız (Node'da da çalışır). `tarih`, `ifade` (koşullar), `ayristirici` (.dsim okuyucu), `oyun` (zaman, mesaj, sahne, eylem), `kayit` (kayıt kodu), `yukleme`, `denetim`
+  - `js/arayuz/`: ekranlar. `uygulama` (giriş noktası), `giris`, `kilit`, `telefon`, `sahne`, `ayarlar`, `katman`, `hata`, `gok`, `dom`
+  - `icerik/`: oyunun metni (`.dsim`), `kisiler.json`, `oyun.json`, `hava.json`, `dizin.txt`. **Biçimin tarifi: `icerik/BICIM.md`**
+  - `fontlar/` (Inter, Literata; OFL lisanslı), `ikonlar/`
+  - `araclar/`: Node araçları. `oku.mjs` (okuma aracı), `bot.mjs` (oyunu oynayan robot), `ekran.mjs` (ekran görüntüleri), `sunucu.mjs`, `hava-uret.mjs`, `ortak.mjs`
+  - `test/`: otomatik testler
+- **Komutlar:**
+  - `npm test`: bütün testler (motor, içerik denetimi, robotla oynanış, yayın listesi)
+  - `node araclar/oku.mjs [N]`: okuma aracı. `okuma/` klasörüne her yolun dökümünü ve `ozet.md`'yi yazar. Her büyük içerik adımında çalıştır ve dökümleri baştan sona oku.
+  - `node araclar/ekran.mjs`: iPhone boyutunda ekran görüntüleri `ekran/` klasörüne (Playwright gerekir; yoksa `/opt/node-tools/node_modules/` denenir)
+  - `node araclar/sunucu.mjs`: http://localhost:8080
+- **Yayın:** GitHub Pages, çalışma dalının kök klasöründen. Her push yayını günceller.
+- **Sürüm:** Kod ya da içerik değişip yayınlanacaksa `js/surum.js` ve `sw.js` içindeki `SURUM` birlikte artırılır (test denetler). Artırılmazsa telefondaki eski önbellek kalır.
+- Yeni `.dsim` dosyası → `icerik/dizin.txt`. Yeni js/css/font/ikon dosyası → `sw.js` listesi (test denetler).
+- **Kayıt:** `localStorage` `pirnalli.kayit` (+ `pirnalli.kayit.yedek`). İçerik değişince yarım kalan akış ya da sahne bulunamazsa motor kaydı onarır (`Oyun._onar`) ve hata raporuna yazar.

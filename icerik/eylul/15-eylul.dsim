@@ -1,0 +1,317 @@
+# 15 Eylül, Pazartesi. Sezonun kapandığı gecenin sabahı.
+# Not: 14 Eylül gecesi (Lagün'ün kapanışı, Defne) 3. adımda bu dosyanın önüne eklenecek.
+# Oyuncu o gece Defne'de kalırsa açılış sahnesine bir koşul eklenecek.
+
+=== acilis_sabah
+tür: sahne
+kişi: emre
+zaman: 15 Eylül 08:10
+yer: Lagün, personel evi
+süre: 10dk
+
+Altı yataklı odada üç yatak çoktan soyulmuş. Çıplak şiltelerin dikiş yerlerinde bir yazın kumu kalmış.
+Saat daha sekiz ama oda ısınmış bile. Dışarıdan, tahta platformun üstünde sürüklenen bir şeyin sesi geliyor; arada Burak'ın telefonda birine "abi bir dakika" deyişi.
+Emre karşı ranzanın altında, dizini bavula bastırmış, fermuarla uğraşıyor. Fermuar her seferinde aynı köşede takılıyor.
+@emre: Günaydın. Bu bavul beni öldürecek.
+Bir kez daha asılıyor. Fermuar kapanıyor ama bir havlunun ucu dışarıda kalıyor. Emre ona bir süre bakıyor, sonra vazgeçiyor.
+@emre: Kalsın. Hatıra.
+@emre: Otobüs on buçukta. Sen ne zaman gidiyorsun, belli oldu mu?
+* "Haftaya herhalde. Önce şu sökümü bitirelim."
+  [acilis.cevap = "haftaya"]
+  @emre: Burak sana da mı "üç gün sürer" dedi? Geçen yıl bana da öyle demiş. Dokuz gün sürmüş.
+  @emre: İstanbul'a dönünce yaz ama. Kadıköy'e yolum düşerse bir bira.
+* "Gitmiyorum."
+  [acilis.cevap = "gitmiyorum"]
+  Emre bavulu bırakıp doğruluyor.
+  @emre: Nasıl yani? Kışın burada ne yapacaksın?
+  * "Buradaki üniversiteye geçtim. Makine'ye."
+    [itiraf.emre]
+    Söyleyince cümle odada beklediğinden fazla yer kaplıyor. İlk kez yüksek sesle söylüyorsun.
+    @emre: Sen? İstanbul'dan buraya mı?
+    @emre: Oha. Ciddisin.
+    Emre bir süre sana bakıyor, sonra gülüyor.
+    @emre: Kafayı yemişsin. Ama galiba iyi yemişsin.
+  * "Bakarız. Belki burada bir iş bulurum."
+    [acilis.bakariz]
+    @emre: Kışın burada iş yok ki. Yazın şehir, kışın köy burası. Burak'a sorsana, o bile kaçıyor.
+* "Bilmiyorum daha."
+  [acilis.cevap = "bilmiyorum"]
+  @emre: Bilmiyormuş.
+  Bavulun kulpunu çekip tekerlekleri deniyor. Tekerleklerden biri gıcırdıyor.
+  @emre: Sende bu hep var zaten. Geçen ay da "bilmiyorum" diye diye üç vardiyanı benimle değiştirdin.
+* (Cevap verme. Kalkıp pencereyi aç.)
+  [acilis.cevap = "pencere"]
+  Pencereyi itiyorsun. İçeri deniz değil, mazot kokusu doluyor; Burak'ın kamyoneti kapının önünde rölantide bekliyor.
+  @emre: Peki. Pencereyi açmak da bir cevap.
+
+>> bekle 10dk
+Kapı vurulmadan açılıyor. Burak'ın güneş gözlüğü saçının üstünde, telefon hâlâ kulağında.
+@burak: Abi tamam, ararım seni. Tamam. Tamam!
+Telefonu kapatıp odaya bakıyor: soyulmuş yataklara, kapanmış bavula, sana.
+@burak: Günaydın beyler. Emre, otobüs on buçuk mu? Kamyonet aşağıda, seni otogara ben atarım.
+@burak: Sen de toparlan kral. Onda sökümdeyiz, şemsiyeler kendi kendine sökülmüyor.
+>> eğer acilis.cevap == "gitmiyorum"
+  @emre: Bu gitmiyormuş, Burak. Kışın burada kalacakmış.
+  Burak gözlüğünü indiriyor, sonra geri kaldırıyor.
+  @burak: Kışın burada mı? Kral, kışın burada köpekler bile İzmir'e gidiyor.
+* "Onda oradayım."
+  @burak: Aslansın.
+* "Aşağıda kahve var mı?"
+  @burak: Kahve makinesini dün gece biri kırdı. Kim kırdı bilmiyorum. Bilmek de istemiyorum.
+* (Başını salla, ayakkabılarını ara.)
+  Ayakkabının teki yatağın altında, öbürü kapının arkasında. Burak sen eğilip doğrulana kadar bekliyor, sonra sabrı tükeniyor.
+  @burak: Onda, kral. On.
+
+Emre bavulunu merdivene doğru sürüklüyor. Kapıda durup odaya son bir kez bakıyor: soyulmuş yataklar, duvarda bant izleri, pencerenin pervazında unutulmuş yarım bir güneş kremi.
+>> eğer acilis.cevap == "gitmiyorum"
+  @emre: Kremi sana bırakıyorum. Kışın lazım olur mu bilmem.
+>> yoksa
+  @emre: Kremi sana bırakıyorum. İstanbul'da lazım olmaz ama.
+Merdivenden bavulun tekerlekleri basamak basamak iniyor. Sonra kamyonetin kapısı. Sonra hiçbir şey.
+-> son
+
+:: telefon
+@emre: Annen mi? Benimki yedi buçuktan beri üç kere aradı, bavul hazır mı diye.
+-> geri
+
+
+=== onur_tasinma_saati
+tür: mesaj
+kişi: onur
+zaman: 15 Eylül 08:20
+
+@onur: kanka günaydın
+@onur: yarın taşınıyosun di mi, saniye hanım sordu
+@onur: sordu derken pencereden seslendi. ben de evet dedim. yanlış mı dedim
+>> zaman_aşımı 5sa -> sessiz
+* doğru dedin, yarın geliyorum
+  @onur: süper
+* saat kaçta gelmem lazım
+* 👍
+@onur: 11 gibi gel
+@onur: sabah yürüyüşe çıkıyo, öğleden sonra uyuyo. arası senin
+-> son
+:: sessiz
+@onur: neyse yarın 11 gibi gel
+@onur: saniye hanım beklemeyi sevmez. ben de sevmem ama benim sevmemem kimsenin umrunda değil
+
+
+=== burak_neredesin
+tür: mesaj
+kişi: burak
+zaman: 15 Eylül 10:25
+koşul: değil gördü(sokum_ilk_gun)
+
+@burak: kral neredesin
+@burak: şemsiyeler seni bekliyo. ben de bekliyom ama şemsiyeler daha sabırlı
+* geliyorum abi, beş dakika
+  [burak.bes_dakika]
+  @burak: senin beş dakikanı bilirim. on beş diyelim
+* bugün gelemiyorum abi
+  [burak.gelmedi]
+  @burak: hayırdır
+  >> bekle 2dk
+  @burak: tamam kral. yevmiye de gelemiyo o zaman haberin olsun 🙂
+* (Cevap verme.)
+  >> okudu
+
+
+=== sokum_ilk_gun
+tür: eylem
+kişi: burak
+başlık: Lagün'e in, sökümde çalış
+tarih: 15 Eylül
+pencere: 08:30-12:30
+yer: Lagün
+
+>> zaman 15 Eylül 10:00
+Kumsal sabahları başka bir yer. Dün gece burada iki yüz kişi vardı; şimdi devrilmiş bir buz kovası, kuma gömülmüş bir avuç pipet ve tek bir terlik.
+Burak'ın planı basit: önce şemsiyeler, sonra minderler, en son tabela. Kamyonetin şoförü Hakkı Abi gölgede oturuyor ve planın hiçbir aşamasına katılmıyor.
+Şemsiyeleri kumdan çektikçe arkalarında derin, nemli delikler kalıyor. Öğleye kadar kırk iki tane sayıyorsun, sonra saymayı bırakıyorsun.
+>> zaman 15 Eylül 13:00
+Öğleden sonra sıra tabelada. Tahta harfleri teker teker söküyorsunuz: L, A, G. Ü'yü indirirken noktalarından biri parmaklarının arasından kayıp kuma düşüyor.
+Burak on dakika boyunca dizlerinin üstünde kumu eşeliyor. Bulamıyor.
+@burak: Neyse. Seneye "Lagun" açarız, kimse fark etmez.
+>> zaman 15 Eylül 17:30
+Akşamüstü Burak iki bira açıp birini sana uzatıyor. Sökülmüş platformun kenarına oturuyorsunuz. Deniz şemsiyesiz olunca olduğundan büyük görünüyor.
+@burak: Kışın Moda'da bir yer açıyoruz, biliyorsun. Küçük bir bar. Gel bizde çalış. İstanbul'a dönüyorsun nasılsa.
+* "Düşünürüm abi."
+  @burak: Düşün kral. Ama ekime kadar düşün, sonra başkasını alırım.
+* {acilis.cevap == "gitmiyorum"} "Dedim ya abi, kalıyorum."
+  -> burak_kaldi
+* {acilis.cevap != "gitmiyorum"} "Dönmüyorum aslında. Burada kalıyorum."
+  >> eğer acilis.cevap == "haftaya"
+    Burak birayı dizine indiriyor.
+    @burak: Sabah Emre'ye "haftaya" diyordun.
+    @burak: Bana mı yalan söylüyorsun, ona mı? Neyse, söyleme. İkisi de olur.
+  -> burak_kaldi
+* "Moda'da kim beach club açar abi?"
+  @burak: Beach club değil kral, bar. Deniz yok, kum yok, sadece bar.
+  Biraz düşünüyor.
+  @burak: Aslında sadece kum yok. Deniz yine karşıda.
+-> aksam
+
+:: burak_kaldi
+[burak.kaldigini_biliyor]
+Burak bir süre bir şey demiyor. Denizde bir balıkçı teknesi limana dönüyor; motorunun sesi ancak çok sonra geliyor.
+@burak: Ben de ilk yaz kalacaktım. On yıl önce.
+@burak: Eylülün sonunda bir sabah uyandım, kordonda kimse yok. Otogara kadar yürüdüm. Bavulu bile toplamamıştım, sonra annem gönderdi.
+@burak: Senin bavul toplu mu?
+* "Toplu."
+  @burak: İyi. Toplu bavulla kalmak daha zor ama. Her sabah bakıyorsun.
+* "Toplamadım hiç."
+  @burak: Hah. O zaman belki sen kalırsın.
+* (Birayı iç, bir şey deme.)
+  Burak da içiyor. Bir şey demiyorsunuz; deniz kendi başına yeterince gürültü yapıyor.
+
+:: aksam
+>> zaman 15 Eylül 18:00
+Saat altıda Burak cebinden katlanmış banknotları çıkarıp sayıyor, saydıklarını sana uzatıyor. Bir tanesini geri alıp yeniden sayıyor, sonra yine veriyor.
+[sokum.yevmiye_1]
+@burak: Yarın yok kral. Kamyonet servise giriyor. Perşembe devam.
+-> son
+
+
+=== burak_aksam
+tür: mesaj
+kişi: burak
+zaman: 15 Eylül 20:40
+koşul: bitti(sokum_ilk_gun)
+
+@burak: kral bugün eyvallah
+@burak: ü'nün noktasını bulan iki yevmiye alır, haberin olsun
+* o nokta gitti abi
+  @burak: gitti 😔
+  @burak: her şey gidiyo zaten bu mevsimde
+* sabah bakarım
+  @burak: sen bakma. kumu karıştırma, belki kendi çıkar
+* 👍
+
+
+=== burak_yevmiye_yok
+tür: mesaj
+kişi: burak
+zaman: 15 Eylül 18:40
+koşul: değil gördü(sokum_ilk_gun)
+
+@burak: bugün yevmiye yok kral, haberin olsun 🙂
+@burak: perşembe söküm devam. gelirsen gel, gelmezsen de kalanı ben sökerim, sökemezsem kalsın
+
+
+=== kordon_aksam_15
+tür: eylem
+başlık: Kordona in
+tarih: 15 Eylül
+pencere: 17:30-19:15
+yer: Kordon
+süre: 30dk
+
+Kordonda yaz hâlâ bitmemiş gibi yapıyor. Dondurmacının camına elle yazılmış bir kâğıt yapışık: SEZON SONU, HER ŞEY YARI FİYAT. Dondurmacı ise sandalyeleri çoktan içeri taşımaya başlamış.
+İskelede bir aile son bir fotoğraf için diziliyor. Fotoğrafı çeken baba üç kez "bir daha" diyor; dördüncüde çocuklardan biri ağlamaya başlıyor, fotoğraf onunla çekiliyor.
+>> zaman 15 Eylül 19:20
+Güneş Fener Burnu'nun arkasına iniyor. Kordonun bittiği yerden ötede, Uzunkum'un ortasında Lagün'ün iskeleti duruyor: tabelasız, mindersiz, birkaç direk.
+* (Bir banka otur.)
+  Bankın tahtası günün sıcağını hâlâ tutuyor. Önünden iki yaşlı adam geçiyor; biri ötekine "bunlar da gitti" diyor. Kimi kastettiğini bilmiyorsun. Belki seni.
+* (Kordonun sonuna kadar yürü.)
+  Kordon, Uzunkum'un başında bir anda bitiyor: beton biter, kum başlar. Ayakkabılarının içine kum doluyor ama yürümeye devam ediyorsun.
+  >> eğer gördü(sokum_ilk_gun)
+    Lagün'ün direklerine yaklaşınca, noktayı arasan bulur muydun diye düşünüyorsun. Aramıyorsun.
+  >> yoksa
+    Lagün'ün önünde birkaç minder hâlâ yığılı duruyor. Üstlerine biri bir branda atmış, brandanın bir köşesi rüzgârda kalkıp iniyor.
+Lambalar yanıyor. Dondurmacı kepengi indiriyor; kepengin sesi bütün kordon boyunca gidiyor.
+
+
+=== annem_cevap_kapanis
+tür: mesaj
+kişi: annem
+başlatan: oyuncu
+başlık: iyiyim anne, dün kapanış vardı. geç bitti
+tarih: 15 Eylül - 16 Eylül
+koşul: değil annem.yazdi
+
+[annem.yazdi]
+@annem: Kapanış derken, iş bitti mi yani?
+@annem: Odanı havalandırdım bu arada. Perdeleri de yıkadım, sararmış, fark etmemişim.
+* biraz daha kalıcam burada anne. kışın da iş var
+  [annem.kaliyor_dedi]
+  >> bekle 3dk
+  @annem: Kalacağım derken?
+  >> bekle 1dk
+  @annem: Tamam. Ben babana söylerim.
+  @annem: Ya da sen söyle. Yok, ben söylerim.
+  * ben söylerim anne
+    [babam.ben_soylerim]
+    @annem: Tamam oğlum. 🙂
+  * sen söyle
+    @annem: Peki.
+  * (Cevap verme.)
+    >> okudu
+* söküm bitsin, geliyorum
+  [annem.gelecek_sandi]
+  @annem: Tamam. Gelince haber ver, baban otogara gelir.
+* sonra anlatırım, işteyim şimdi
+  @annem: Tamam. Akşam ararım.
+  >> başlat annem_aksam_arama sonra 3sa
+
+
+=== annem_cevap_selam
+tür: mesaj
+kişi: annem
+başlatan: oyuncu
+başlık: babam gerçekten selam söyledi mi
+tarih: 15 Eylül - 16 Eylül
+koşul: değil annem.yazdi
+
+[annem.yazdi]
+@annem: Söyledi tabii.
+>> bekle 2dk
+@annem: Yani söyleyecekti. Ben söyledim. Aynı şey.
+* aynı şey değil anne
+  >> bekle 4dk
+  @annem: Biliyorum.
+  @annem: Telefon iki taraflı çalışıyor bu arada. Sen de onu arayabilirsin.
+* tamam anne, sen de söyle
+  @annem: Söylerim. 🙂
+* (Cevap verme.)
+  >> okudu
+
+
+=== annem_cevap_sessiz
+tür: mesaj
+kişi: annem
+başlatan: oyuncu
+başlık: telefon sessizdeydi
+tarih: 15 Eylül - 16 Eylül
+koşul: değil annem.yazdi
+
+[annem.yazdi]
+@annem: Bütün yaz sessizdeydi zaten.
+>> bekle 1dk
+@annem: Şaka yapıyorum. Yarı şaka.
+@annem: İyi misin?
+* iyiyim anne
+  @annem: İyi o zaman. Yemek ye ama, "iyiyim" diyen çocuk yemek yemez.
+* yorgunum biraz. sezon bitti, herkes gidiyor
+  @annem: Sen de gel o zaman.
+  >> bekle 2dk
+  @annem: Ya da gelme. Bilmiyorum oğlum, sen bilirsin. Baban da öyle diyor.
+
+
+=== annem_ses_ver
+tür: mesaj
+kişi: annem
+zaman: 15 Eylül 20:30
+koşul: değil annem.yazdi
+
+@annem: [Cevapsız arama]
+>> bekle 2dk
+@annem: Bir ses ver, yeter. Merak ettiğimden değil.
+
+
+=== annem_aksam_arama
+tür: mesaj
+kişi: annem
+
+@annem: [Cevapsız arama]
+>> bekle 3dk
+@annem: Uyudun herhalde. Yarın ararım. İyi geceler oğlum.

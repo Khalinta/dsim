@@ -1,0 +1,80 @@
+# Oyun başlamadan önce telefonda duran mesajlar.
+# Oyuncu kendi geçmişini bu eski yazışmalardan, kimse anlatmadan öğrenir.
+
+=== gecmis_babam
+tür: geçmiş
+kişi: babam
+
+>> zaman 9 Haziran 18:02
+@babam: Ulaştığında haber ver.
+>> zaman 9 Haziran 23:47
+@ben: ulaştım
+>> zaman 9 Haziran 23:48
+@babam: Tamam.
+>> zaman 21 Ağustos 01:13
+@ben: baba bir dönem kayıt donduruyorum. bölümle konuştum, sorun yok. biraz kafamı toplamam lazım. baharda dönücem
+>> zaman 21 Ağustos 09:30
+@babam: Annenle konuştum.
+@babam: Bahar.
+
+=== gecmis_annem
+tür: geçmiş
+kişi: annem
+
+>> zaman 30 Ağustos 20:15
+@annem: Oğlum, sen kışlık bir şey götürmedin. Orası kışın da sıcak mı?
+>> zaman 30 Ağustos 22:40
+@ben: ılık anne
+@ben: lazım olursa alırım
+>> zaman 30 Ağustos 22:41
+@annem: Alırım deme, gönderirim. Adresini yaz.
+>> zaman 7 Eylül 21:03
+@annem: Pazar yemeğinde seni andık. Baban "o şimdi denizdedir" dedi. 🙂
+>> zaman 7 Eylül 23:15
+@ben: denizdeydim valla
+>> okunmadı
+>> zaman 14 Eylül 21:47
+@annem: Aradım, açmadın. Yoğun muydun? Baban da selam söylüyor.
+
+=== gecmis_ezgi
+tür: geçmiş
+kişi: ezgi
+
+>> zaman 22 Ağustos 14:20
+@ezgi: annem aradı. kayıt mı dondurdun?
+@ezgi: iyi misin gerçekten, yoksa "iyiyim" mi
+>> zaman 22 Ağustos 23:58
+@ben: iyiyim abla
+>> zaman 23 Ağustos 08:05
+@ezgi: tamam, "iyiyim" o zaman
+@ezgi: buradayım bu arada. saat farkı bir saat, bahanen yok
+
+=== gecmis_onur
+tür: geçmiş
+kişi: onur
+
+>> zaman 10 Eylül 16:22
+@ben: selam, numaranı emre'den aldım. oda için yazıyorum
+>> zaman 10 Eylül 16:31
+@onur: kanka selam
+@onur: oda duruyor. ev sahibi saniye hanım, alt katta oturuyor. kira yarı yarıya, faturalar da
+@onur: tek şart var: saniye hanım'a teyze deme. bir önceki dedi, üç ay sonra gitti
+>> zaman 10 Eylül 16:33
+@ben: ciddi misin
+@onur: yok ya. yarı ciddi. gel bi gör
+>> zaman 11 Eylül 19:05
+@ben: gördüm. tamamdır alıyorum
+@onur: helal. ama anahtar saniye hanım'da, o vermeden giremezsin. sistem böyle
+
+=== gecmis_burak
+tür: geçmiş
+kişi: burak
+
+>> zaman 13 Eylül 11:40
+@burak: kanka pazar kapanış, akşam 6da herkes burda
+@burak: pazartesi 10da söküm. 3 gün sürer max. yevmiye akşam elden
+>> zaman 13 Eylül 12:02
+@ben: tamamdır abi
+>> okunmadı
+>> zaman 14 Eylül 03:12
+@burak: bu yaz için eyvallah kral 🙏 sen olmasan o bar batardı

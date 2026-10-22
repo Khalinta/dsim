@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <title>Pırnallı</title>
+  <meta name="description" content="Ege kıyısında bir sezon sonu.">
+  <meta name="theme-color" content="#14182a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Pırnallı">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="ikonlar/ikon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="ikonlar/ikon-180.png">
+  <link rel="preload" href="fontlar/literata-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fontlar/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/stil.css">
+</head>
+<body>
+  <main id="uygulama" aria-live="polite">
+    <section id="ekran-yukleniyor" class="ekran aktif">
+      <div class="yukleniyor-yazi">Pırnallı</div>
+    </section>
+    <section id="ekran-giris" class="ekran" aria-label="Giriş"></section>
+    <section id="ekran-kilit" class="ekran" aria-label="Şimdi"></section>
+    <section id="ekran-telefon" class="ekran" aria-label="Telefon"></section>
+    <section id="ekran-sahne" class="ekran" aria-label="Sahne"></section>
+  </main>
+  <div id="katman"></div>
+  <noscript>Bu oyun JavaScript ile çalışır.</noscript>
+  <script type="module" src="js/arayuz/uygulama.js"></script>
+</body>
+</html>
