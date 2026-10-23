@@ -39,12 +39,13 @@ Telefonunun notlarında, kilitli bir notta, numaralı bir liste var. Başlığı
 1. Puanım ancak buraya yetti. (Kayseri'ye de yetiyordu.) — Temmuz
 ...
 14. Bölümden bir asistan. (Değil. Kampüste kaybolmuş biri.) — 22 Eylül
-15. Dilan'ın teyzesine gittik. (Gitmedik.) — 4 Ekim
+15. Genç asistanlar olur. (Olur mu, bilmiyorum.) — 22 Eylül
+16. Dilan'ın teyzesine gittik. (Gitmedik.) — 4 Ekim
 ...
 ```
 
 - **Neden tutuyor:** Hayatı boyunca yalan söylemedi; yalanların birbirini tutması gerektiğini bilmiyordu, birinde yakalandı ve korktu. Bir de: yalanları yazınca onları bir gün geri alabileceğine inanıyor. "Bir gün hepsini anneme okuyacağım. Sırayla."
-- **Ne anlatıyor:** Defter Sude'nin gelişimini taşır. Sayı büyüdükçe o da değişir: Eylülde on dört, Kasımda elliyi geçer. Bazı satırlar oyuncuyla ilgilidir ve oyuncunun kendisi hakkında öğrendiği en dürüst şeyler bu satırlardadır: "38. Kütüphanedeydim. (Biriyle Kırık Koy'daydım.)" Duygusunu söyleyemediği yerde defter söyler.
+- **Ne anlatıyor:** Defter Sude'nin gelişimini taşır. Sayı büyüdükçe o da değişir: Eylülde on beş, Kasımda elliyi geçer. Bazı satırlar oyuncuyla ilgilidir ve oyuncunun kendisi hakkında öğrendiği en dürüst şeyler bu satırlardadır: "38. Kütüphanedeydim. (Biriyle Kırık Koy'daydım.)" Duygusunu söyleyemediği yerde defter söyler.
 - **Oyuncunun aynası:** Oyuncunun tek bir büyük yalanı var ve onu hiçbir yere yazmadı. Sude'ninkiler küçük ve elli tane, ve hepsi yazılı. İkisi bunu ancak bir kere, açıkça konuşur.
 - **Oyuncu defteri** ancak yakınlaşınca görür: önce varlığını (Ekim), sonra ilk sayfasını (Kasım).
 - **İstekleri** (gece denize girmek, sabaha kadar dışarıda kalmak, bir yabancıyla iki saat konuşmak, saçını kısa kestirmek, alkolü bir kere denemek) hiçbir yerde yazılı değil. Hikâyede yaşanır; Sude onları yaşadıktan sonra fark eder, bazen de deftere bir yalan olarak girer: o gece için annesine söylediği yalan.

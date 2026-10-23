@@ -1,5 +1,5 @@
 // Oyunun içindeki telefon: sohbet listesi, sohbet, rehber, ayarlar.
-// Romanda iki hâli var: arşiv (her an açılır, okumak hikâyeyi etkilemez) ve canlı yazışma
+// İki hâli var: arşiv (her an açılır, okumak hikâyeyi etkilemez) ve canlı yazışma
 // (akış bir ">> yazışma"ya gelince sahne.js telefonu öne çıkarır; mesajlar "yazıyor…" ile tek tek gelir).
 
 import { el, ikon, bekle, ilkHarf } from './dom.js';
@@ -18,8 +18,6 @@ export class Telefon {
     this.sayfa = 'liste';
     this.kisi = null;
     this.cizilenN = new Map();
-    this.canliYaziyor = null;
-    this.dongude = false;
     this.canli = null; // { kisi, gosterN, gosterT, yaziyor, secim, kapat }
   }
 
@@ -28,11 +26,6 @@ export class Telefon {
     if (kisi) { this.sayfa = 'sohbet'; this.kisi = kisi; }
     else if (this.sayfa === 'sohbet' && !this.kisi) this.sayfa = 'liste';
     this.ciz();
-    this.canliDongu();
-  }
-
-  kapan() {
-    this.canliYaziyor = null;
   }
 
   ciz() {
@@ -62,7 +55,6 @@ export class Telefon {
     this.kisi = kisi;
     this.ciz();
     this.app.kaydet();
-    this.canliDongu();
   }
 
   // ---------- Sohbet listesi ----------
@@ -75,11 +67,10 @@ export class Telefon {
     for (const s of oyun.sohbetler()) {
       const k = oyun.kisi(s.kisi);
       const ad = oyun.gorunenAd(s.kisi);
-      const yaziyor = s.yaziyor || this.canliYaziyor === s.kisi;
-      const onizleme = yaziyor ? 'yazıyor…' : (s.son.k === 'b' ? `Sen: ${kisaMetin(s.son.m)}` : kisaMetin(s.son.m));
+      const onizleme = s.son.k === 'b' ? `Sen: ${kisaMetin(s.son.m)}` : kisaMetin(s.son.m);
       liste.append(el(`button.sohbet-satiri${s.okunmamis ? '.okunmamis' : ''}`, { onclick: () => this.git('sohbet', s.kisi) },
         this.avatar(s.kisi, k),
-        el('div.orta', {}, el('b', {}, ad), el(`span.onizleme${yaziyor ? '.yaziyor' : ''}`, {}, onizleme)),
+        el('div.orta', {}, el('b', {}, ad), el('span.onizleme', {}, onizleme)),
         el('div.sag', {}, el('time', {}, listeZamani(s.son.t, oyun.t)), s.okunmamis ? el('span.rozet', {}, s.okunmamis) : null)));
     }
     sayfa.append(liste);
@@ -101,9 +92,7 @@ export class Telefon {
       sekme('liste', 'Mesajlar', 'mesaj', () => this.git('liste'), okunmamis),
       sekme('rehber', 'Rehber', 'rehber', () => this.git('rehber')),
       sekme('ayarlar', 'Ayarlar', 'ayarlar', () => this.git('ayarlar')),
-      oyun.sahne
-        ? sekme('kilit', oyun.icerik.roman ? 'Hikâyeye dön' : 'Sahneye dön', 'geri', () => { this.sayfa = 'liste'; this.app.devam(); })
-        : sekme('kilit', 'Kilitle', 'kilit', () => { this.sayfa = 'liste'; this.app.git('kilit'); }));
+      sekme('kilit', 'Hikâyeye dön', 'geri', () => { this.sayfa = 'liste'; this.app.devam(); }));
   }
 
   // ---------- Sohbet ----------
@@ -116,7 +105,7 @@ export class Telefon {
 
     const c = this.canli && this.canli.kisi === kisi ? this.canli : null;
     const simdi = c ? c.gosterT : oyun.t;
-    const yaziyor = c ? c.yaziyor : oyun.yaziyor(kisi) || this.canliYaziyor === kisi;
+    const yaziyor = Boolean(c && c.yaziyor);
     sayfa.append(el('header.sohbet-basligi', {},
       c ? el('span') : el('button.geri', { onclick: () => this.git('liste'), 'aria-label': 'Geri' }, ikon('geri')),
       this.avatar(kisi, k),
@@ -145,8 +134,7 @@ export class Telefon {
     if (yaziyor) kutu.append(el('div.balon.gelen.yeni.grup-yeni', { degisken: { '--k': k.renk || '#8a8f98' } }, el('span.yaziyor-balonu', {}, el('i'), el('i'), el('i'))));
     this.cizilenN.set(kisi, mesajlar.reduce((a, m) => Math.max(a, m.n), 0));
     sayfa.append(kutu);
-    const alan = c ? this.canliYazmaAlani(c) : oyun.icerik.roman ? null : this.yazmaAlani(kisi, yaziyor);
-    if (alan) sayfa.append(alan);
+    if (c) sayfa.append(this.canliYazmaAlani(c));
     return sayfa;
   }
 
@@ -182,72 +170,7 @@ export class Telefon {
     return `son görülme ${gun.split(' ').slice(0, 2).join(' ')}`;
   }
 
-  yazmaAlani(kisi, yaziyor) {
-    const oyun = this.app.oyun;
-    const s = oyun.secenekler(kisi);
-    const alan = el('div.yazma-alani');
-    if (s.tur === 'yok' || !s.secenekler.length) {
-      if (!yaziyor) alan.append(el('div.bos', {}, 'Şu an yazacak bir şeyin yok.'));
-      return alan;
-    }
-    if (s.tur === 'rehber') {
-      alan.append(el('div.ipucu', {}, `Kişiyi kaydet · ${oyun.kisi(s.kisi).numara || ''}`));
-      for (const sec of s.secenekler) {
-        alan.append(el('button.cevap.rehber-cevabi', { onclick: () => this.cevapla(kisi, sec.i) }, sec.metin));
-      }
-      return alan;
-    }
-    if (s.tur === 'açılış') alan.append(el('div.ipucu', {}, 'Yaz'));
-    for (const sec of s.secenekler) {
-      const eylem = sec.tip === 'eylem';
-      alan.append(el(`button.cevap${eylem ? '.eylem-cevabi' : ''}`, { onclick: () => this.cevapla(kisi, sec.i) },
-        eylem ? sec.metin.replace(/^\((.*)\)$/, '$1') : sec.metin));
-    }
-    return alan;
-  }
-
-  cevapla(kisi, i) {
-    const app = this.app;
-    app.calistir(() => app.oyun.cevapla(kisi, i), `cevap:${kisi}`);
-    app.kaydet();
-    if (app.oyun.sahne) { app.git('sahne'); return; }
-    this.ciz();
-    this.canliDongu();
-  }
-
-  // Ekran açıkken yakındaki mesajlar kendiliğinden gelir: "yazıyor…", sonra mesaj.
-  async canliDongu() {
-    if (this.dongude) return;
-    this.dongude = true;
-    const app = this.app;
-    try {
-      for (let tur = 0; tur < 400; tur++) {
-        if (app.ekran !== 'telefon' || !app.oyun) break;
-        const y = app.oyun.yakinOlay(300);
-        if (!y) break;
-        const acik = this.sayfa === 'sohbet' && this.kisi === y.kisi;
-        if (y.yaziyor) {
-          this.canliYaziyor = y.kisi;
-          this.ciz();
-          const sure = acik ? Math.min(2600, Math.max(900, 650 + (y.metin || '').length * 22)) : 1400;
-          await bekle(sure);
-        } else {
-          await bekle(acik ? 700 : 400);
-        }
-        this.canliYaziyor = null;
-        if (app.ekran !== 'telefon') break;
-        app.calistir(() => app.oyun.ilerle(y.t), 'canlı akış');
-        app.kaydet();
-        if (app.oyun.sahne) { app.git('sahne'); break; }
-        this.ciz();
-      }
-    } finally {
-      this.canliYaziyor = null;
-      this.dongude = false;
-    }
-  }
-
-  // ---------- Canlı yazışma (romanda) ----------
+  // ---------- Canlı yazışma ----------
 
   // gosterN: ekranda gösterilecek son mesajın numarası (motor bütün mesajları önceden ekler; ekran tek tek açar).
   canliBasla(kisi, gosterN, gosterT) {

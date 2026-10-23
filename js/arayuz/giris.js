@@ -18,7 +18,7 @@ export class Giris {
     const app = this.app;
     const dugmeler = app.oyun
       ? [
-        el('button.dugme.birincil', { onclick: () => (app.oyun.icerik.roman ? app.git('kilit') : app.devam()) }, 'Devam et'),
+        el('button.dugme.birincil', { onclick: () => app.git('kilit') }, 'Devam et'),
         el('button.dugme.ikincil', { onclick: () => this.yeniOyunSor() }, 'Yeni oyun'),
       ]
       : [el('button.dugme.birincil', { onclick: () => this.adSor() }, 'Başla')];

@@ -3,11 +3,10 @@
 import { ifadeCoz } from './ifade.js';
 import { tarihCoz, sureCoz, saatCoz } from './tarih.js';
 
-const BASLIKLAR = new Set(['tür', 'kişi', 'zaman', 'pencere', 'tarih', 'koşul', 'öncelik', 'tekrar',
-  'başlık', 'başlatan', 'süre', 'yer', 'kesme', 'zaman_aşımı', 'gecikme', 'ton', 'not', 'grup', 'bölüm', 'perde']);
-const TURLER = new Set(['bölüm', 'sahne', 'mesaj', 'eylem', 'geçmiş']);
-const KOMUTLAR = new Set(['bekle', 'zaman', 'saat', 'yer', 'ev', 'başlat', 'randevu', 'iptal', 'bitir', 'rehber', 'tanış', 'okudu', 'okunmadı',
-  'son', 'zaman_aşımı', 'eğer', 'yoksa', 'yazışma', 'oyna', 'geç']);
+const BASLIKLAR = new Set(['tür', 'kişi', 'zaman', 'başlık', 'yer', 'ton', 'not', 'bölüm', 'perde']);
+const TURLER = new Set(['bölüm', 'sahne', 'geçmiş']);
+const KOMUTLAR = new Set(['bekle', 'zaman', 'saat', 'yer', 'bitir', 'rehber', 'tanış', 'okudu', 'okunmadı',
+  'son', 'eğer', 'yoksa', 'yazışma', 'oyna', 'geç']);
 const AD = /^[\p{Ll}_][\p{Ll}\p{N}_]*$/u;
 const DEGISKEN = /^[\p{L}_][\p{L}\p{N}_.]*$/u;
 
@@ -87,34 +86,6 @@ function baslikCoz(parca, satir, hata) {
     parca.zaman = tarihCoz(b['zaman']);
     if (parca.zaman === null) hata(satir, `"${ad}": zaman anlaşılmadı (${b['zaman']}). Örnek: 15 Eylül 08:10`);
   }
-  if (b['tarih'] !== undefined) {
-    const [bas, son] = b['tarih'].split(/\s+-\s+/);
-    parca.tarihBas = tarihCoz(bas);
-    parca.tarihSon = son === undefined ? parca.tarihBas : tarihCoz(son);
-    if (parca.tarihBas === null || parca.tarihSon === null) hata(satir, `"${ad}": tarih aralığı anlaşılmadı (${b['tarih']}).`);
-    else parca.tarihSon += 86399;
-  }
-  if (b['pencere'] !== undefined) {
-    const m = b['pencere'].split(/\s*-\s*/);
-    const bas = saatCoz(m[0]);
-    const son = saatCoz(m[1] ?? '');
-    if (bas === null || son === null) hata(satir, `"${ad}": pencere anlaşılmadı (${b['pencere']}). Örnek: 07:00-21:00`);
-    else parca.pencere = [bas, son];
-  }
-  if (b['koşul'] !== undefined) {
-    try { parca.kosul = ifadeCoz(b['koşul']); } catch (e) { hata(satir, `"${ad}": koşul hatalı: ${e.message}`); }
-  }
-  for (const [anahtar, alan] of [['süre', 'sure'], ['zaman_aşımı', 'zamanAsimi'], ['gecikme', 'gecikme']]) {
-    if (b[anahtar] !== undefined) {
-      parca[alan] = sureCoz(b[anahtar]);
-      if (parca[alan] === null) hata(satir, `"${ad}": ${anahtar} anlaşılmadı (${b[anahtar]}). Örnek: 45dk, 2sa`);
-    }
-  }
-  parca.oncelik = b['öncelik'] !== undefined ? Number(b['öncelik']) : 0;
-  parca.tekrar = b['tekrar'] === 'evet';
-  parca.kesme = b['kesme'] === 'evet';
-  parca.baslatan = b['başlatan'] || null;
-  parca.grup = b['grup'] || null;
   if (b['bölüm'] !== undefined) {
     parca.bolum = Number(b['bölüm']);
     if (!Number.isInteger(parca.bolum) || parca.bolum < 1) hata(satir, `"${ad}": bölüm numarası pozitif bir tam sayı olmalı (${b['bölüm']}).`);
@@ -124,7 +95,6 @@ function baslikCoz(parca, satir, hata) {
 
 function blokOku(parca, satirlar, durum, girinti, listeNo, hata) {
   const liste = parca.listeler[listeNo];
-  let bekleyenZamanAsimi = null;
 
   while (durum.i < satirlar.length) {
     const s = satirlar[durum.i];
@@ -138,7 +108,6 @@ function blokOku(parca, satirlar, durum, girinti, listeNo, hata) {
 
     if (c.startsWith('* ') || c === '*') {
       const secim = { t: 'seçim', secenekler: [], no: s.no };
-      if (bekleyenZamanAsimi) { secim.zamanAsimi = bekleyenZamanAsimi; bekleyenZamanAsimi = null; }
       while (durum.i < satirlar.length && satirlar[durum.i].girinti === girinti && satirlar[durum.i].icerik.startsWith('*')) {
         const ss = satirlar[durum.i];
         const m = ss.icerik.match(/^\*\s+(?:\{([^}]*)\}\s*)?(.*)$/);
@@ -230,9 +199,7 @@ function blokOku(parca, satirlar, durum, girinti, listeNo, hata) {
       }
 
       const komut = komutCoz(ad, arg, s.no, hata);
-      if (!komut) continue;
-      if (ad === 'zaman_aşımı') { bekleyenZamanAsimi = komut; continue; }
-      liste.push(komut);
+      if (komut) liste.push(komut);
       continue;
     }
 
@@ -248,7 +215,6 @@ function blokOku(parca, satirlar, durum, girinti, listeNo, hata) {
 
     liste.push({ t: 'anlatı', metin: c, no: s.no });
   }
-  if (bekleyenZamanAsimi) hata(bekleyenZamanAsimi.no, '"zaman_aşımı" komutundan sonra seçenek gelmeli.');
 }
 
 function dalEkle(parca, dugum, kosulMetni, satirlar, durum, girinti, no, hata) {
@@ -287,38 +253,9 @@ function komutCoz(ad, arg, no, hata) {
       if (k.saat === null) hata(no, `Saat anlaşılmadı: ${arg}. Örnek: >> saat 01:15`);
       return k;
     }
-    case 'yer':
-    case 'ev': {
+    case 'yer': {
       if (!arg) hata(no, `"${ad}" komutu bir yer adı ister.`);
       k.yer = arg;
-      return k;
-    }
-    case 'başlat':
-    case 'randevu': {
-      let govde = arg;
-      if (ad === 'randevu') {
-        const b = arg.split('|');
-        govde = b[0].trim();
-        k.yer = (b[1] || '').trim();
-        if (!k.yer) hata(no, 'randevu biçimi: >> randevu kimlik 19 Eylül 22:00 | Yer');
-      }
-      const m = govde.match(/^([\p{Ll}_][\p{Ll}\p{N}_]*)(?:\s+(.*))?$/u);
-      if (!m) { hata(no, `"${ad}" bir parça kimliği ister: ${arg}`); return null; }
-      k.hedef = m[1];
-      const zaman = (m[2] || '').trim();
-      if (ad === 'randevu' && !zaman) hata(no, 'randevunun bir zamanı olmalı');
-      const gunlu = zaman.match(/^(bugün|yarın|öbür gün)\s+(.+)$/u);
-      if (zaman.startsWith('sonra')) {
-        k.sonra = sureCoz(zaman.slice(5).trim());
-        if (k.sonra === null) hata(no, `Süre anlaşılmadı: ${zaman}`);
-      } else if (gunlu) {
-        k.gun = { 'bugün': 0, 'yarın': 1, 'öbür gün': 2 }[gunlu[1]];
-        k.saat = saatCoz(gunlu[2]);
-        if (k.saat === null) hata(no, `Saat anlaşılmadı: ${zaman}`);
-      } else if (zaman) {
-        k.zaman = tarihCoz(zaman);
-        if (k.zaman === null) hata(no, `Zaman anlaşılmadı: ${zaman}`);
-      }
       return k;
     }
     case 'rehber': {
@@ -329,7 +266,6 @@ function komutCoz(ad, arg, no, hata) {
       if (k.adlar.length < 2) hata(no, 'Rehber için en az iki ad seçeneği yaz.');
       return k;
     }
-    case 'iptal':
     case 'oyna':
     case 'geç': {
       if (!AD.test(arg)) hata(no, `"${ad}" bir parça kimliği ister: ${arg}`);
@@ -339,13 +275,6 @@ function komutCoz(ad, arg, no, hata) {
     case 'tanış': {
       if (!AD.test(arg)) hata(no, `"tanış" bir kişi kimliği ister: ${arg}`);
       k.kisi = arg;
-      return k;
-    }
-    case 'zaman_aşımı': {
-      const m = arg.match(/^(\S+)(?:\s*->\s*(\S+))?$/);
-      k.sure = m ? sureCoz(m[1]) : null;
-      if (k.sure === null) hata(no, `zaman_aşımı biçimi: >> zaman_aşımı 3sa -> etiket`);
-      k.etiket = m && m[2] ? m[2] : null;
       return k;
     }
     case 'okudu':

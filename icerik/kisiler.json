@@ -27,7 +27,7 @@
   "ilgin": { "ad": "Ilgın", "tanimsiz": "Eczacı", "numara": "0535 742 19 08", "renk": "#3e6b53", "yazmaHizi": 1.4, "okumaGecikmesi": 20 },
   "sude": { "ad": "Sude", "tanimsiz": "Kız", "numara": "0539 108 66 21", "renk": "#8e7cc3", "yazmaHizi": 1.0, "okumaGecikmesi": 30 },
   "ceren": { "ad": "Ceren", "tanimsiz": "Doktor", "numara": "0530 417 25 93", "renk": "#8a3346", "yazmaHizi": 1.1, "okumaGecikmesi": 120 },
-  "defne": { "ad": "Defne", "tanimsiz": "Kadın", "numara": "0538 260 47 15", "renk": "#c2643f", "yazmaHizi": 1.5, "okumaGecikmesi": 40, "uyku": "05:00-11:00" },
+  "defne": { "ad": "Defne", "tanimsiz": "Kadın", "numara": "0538 260 47 15", "renk": "#c2643f", "yazmaHizi": 1.5, "okumaGecikmesi": 40 },
   "ela": { "ad": "Ela", "tanimsiz": "Hoca", "numara": "0531 905 38 42", "renk": "#2c6ca6", "yazmaHizi": 1.8, "okumaGecikmesi": 15 },
   "lara": { "ad": "Lara", "tanimsiz": "Kız", "numara": "0532 111 70 70", "renk": "#b39255", "yazmaHizi": 1.3, "okumaGecikmesi": 600 }
 }

@@ -40,17 +40,11 @@ const app = {
     if (onceki !== ad && this.ekranlar[onceki] && this.ekranlar[onceki].kapan) this.ekranlar[onceki].kapan();
   },
 
-  // Oyunun bir sonraki doğal ekranı: sahne varsa sahne, yoksa kilit ekranı.
-  // Romanda başlamamış bir bölüm önce perdesiyle (kilit ekranı) açılır.
+  // Oyunun bir sonraki doğal ekranı: süren bölüm sayfada açılır; başlamamış bölüm önce perdesiyle (kilit ekranı).
+  // Roman bittiyse de kilit ekranı (son sayfası).
   devam() {
-    const oyun = this.oyun;
-    if (oyun && oyun.icerik.roman) {
-      const b = oyun.bolumBilgisi();
-      this.git(b && b.basladi ? 'sahne' : 'kilit');
-      return;
-    }
-    if (oyun && oyun.sahne) this.git('sahne');
-    else this.git('kilit');
+    const b = this.oyun && this.oyun.bolumBilgisi();
+    this.git(b && b.basladi ? 'sahne' : 'kilit');
   },
 
   kaydet() {

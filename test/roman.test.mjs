@@ -6,14 +6,14 @@ import { icerikDerle, Oyun } from '../js/motor/oyun.js';
 import { denetle } from '../js/motor/denetim.js';
 import { tarihCoz, saatYaz } from '../js/motor/tarih.js';
 import { diskIcerik } from '../araclar/ortak.mjs';
-import { romanOyna } from '../araclar/bot.mjs';
+import { oyna } from '../araclar/bot.mjs';
 
 const KISILER = {
   ben: { ad: 'Sen' },
   ada: { ad: 'Ada', tanimsiz: 'Kadın', numara: '0500 000 00 00', yazmaHizi: 1, okumaGecikmesi: 30 },
   nil: { ad: 'Nil', numara: '0500 000 00 01', rehberde: 'Nil', biliniyor: true, yazmaHizi: 1, okumaGecikmesi: 60 },
 };
-const AYAR = { 'başlangıç': '14 Eylül 20:00', 'içerik_sonu': '7 Ocak 06:00', 'ilk_yer': 'Ev' };
+const AYAR = { 'başlangıç': '14 Eylül 20:00', 'ilk_yer': 'Ev' };
 const derle = (metin) => icerikDerle([{ ad: 'r.dsim', metin }], { kisiler: KISILER, ayar: AYAR, hava: [] });
 
 function kur(metin) {
@@ -83,12 +83,10 @@ perde: Kış
   assert.ok(ayristir('=== x\ntür: bölüm\nbölüm: 1\n\n>> yazışma ada\nboş\n', 'r.dsim').hatalar.length, 'boş yazışma hata');
 });
 
-test('roman: oyun ilk bölümle başlar; eylem menüsü yoktur', () => {
+test('roman: oyun ilk bölümle başlar', () => {
   const oyun = kur(IKI_BOLUM);
-  assert.ok(oyun.icerik.roman);
   assert.equal(oyun.sahne.kimlik, 'b1');
   assert.equal(saatYaz(oyun.t), '22:00');
-  assert.deepEqual(oyun.eylemler(), []);
   const b = oyun.bolumBilgisi();
   assert.equal(b.no, 1);
   assert.equal(b.baslik, 'Bir');
@@ -121,7 +119,6 @@ test('roman: yazışma telefonda oynar; mesajlar zamanla gelir, kanal blokları 
   assert.ok(oyun.okunduMu(oyun.durum.sohbet.ada.find((m) => m.k === 'b')));
   assert.equal(cikis.kisi, null);
   assert.equal(cikis.onceki, 'ada');
-  assert.ok(b3.at(-1).bolumSonu);
   assert.deepEqual(b3.at(-1).sonraki, { no: 2, baslik: 'İki' });
   assert.equal(oyun.durum.d['ada.yakin'], 1);
 });
@@ -285,7 +282,7 @@ başlık: Eski usul
 
 Olmaz.
 `);
-  for (const parca of ['anlatı olmaz', 'yalnızca @ada', 'tırnaksız', '"zaman" kullanılmaz', 'yalnızca sahne parçasına', 'Sahne seçeneği', 'iki kez', 'başlığı olmalı', 'eylem parçası kullanılmaz']) {
+  for (const parca of ['anlatı olmaz', 'yalnızca @ada', 'tırnaksız', '"zaman" kullanılmaz', 'yalnızca sahne parçasına', 'Sahne seçeneği', 'iki kez', 'başlığı olmalı', 'tür eksik ya da bilinmiyor']) {
     assert.ok(kotu.some((h) => h.includes(parca)), `beklenen hata yok: ${parca}\n${kotu.join('\n')}`);
   }
 });
@@ -294,11 +291,11 @@ test('roman: deneme romanı her yoldan sonuna kadar oynanır; özenli oyuncu Ada
   const icerik = await diskIcerik('test/ornek');
   assert.deepEqual(denetle(icerik).hatalar, []);
   for (const k of [{ strateji: 'ilk' }, { strateji: 'son' }, ...[1, 2, 3, 4, 5].map((tohum) => ({ strateji: 'rastgele', tohum }))]) {
-    const { oyun } = romanOyna(icerik, k);
+    const { oyun } = oyna(icerik, k);
     assert.ok(oyun.bittiMi(), JSON.stringify(k));
     assert.ok(oyun.durum.oyunBitti);
   }
-  const { oyun } = romanOyna(icerik, { strateji: 'özenli', ilgi: 'ada' });
+  const { oyun } = oyna(icerik, { strateji: 'özenli', ilgi: 'ada' });
   assert.equal(oyun.durum.d['ada.yakin'], 2);
   assert.equal(oyun.durum.d.gece, 'ada');
 });

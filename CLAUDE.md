@@ -83,14 +83,12 @@ Karakter belgesi karakteri kısıtlamak için değil, her sahnede aynı insan ol
 
 ## Teknik
 
-> **İki yapı (geçici).** İçerikte `tür: bölüm` varsa oyun roman yapısında çalışır: bölümler sırayla akar, yazışmalar bölümün içinde (`>> yazışma`), kilit ekranı bölüm perdesidir. Yoksa eski takvim yapısı çalışır. Eski yapı ve onun kodu (eylem menüsü, "Bekle", kendiliğinden mesajlar, randevular) 6. adımda, I. Perde oyuna girince kaldırılacak. Biçim: `icerik/BICIM.md`, "Roman yapısı".
-
 - Sade HTML, CSS ve JavaScript (ES modülleri). Kütüphane yok, build adımı yok.
 - **Klasörler:**
   - `index.html`, `manifest.webmanifest`, `sw.js` (internetsiz çalışma), `.nojekyll`
   - `css/stil.css`: bütün görünüm
-  - `js/motor/`: oyunun motoru, ekrandan bağımsız (Node'da da çalışır). `tarih`, `ifade` (koşullar), `ayristirici` (.dsim okuyucu), `oyun` (bölüm akışı, yazışma, sahne, zaman; eski yapının mesaj ve eylemleri), `kayit` (kayıt kodu), `yukleme`, `denetim`
-  - `js/arayuz/`: ekranlar. `uygulama` (giriş noktası), `giris`, `kilit` (romanda bölüm perdesi), `telefon` (arşiv ve canlı yazışma), `sahne` (bölümün sayfası; akışı o yönetir), `ayarlar`, `katman`, `hata`, `gok`, `dom`
+  - `js/motor/`: oyunun motoru, ekrandan bağımsız (Node'da da çalışır). `tarih`, `ifade` (koşullar), `ayristirici` (.dsim okuyucu), `oyun` (bölüm akışı, alt sahneler, yazışma, zaman), `kayit` (kayıt kodu), `yukleme`, `denetim`
+  - `js/arayuz/`: ekranlar. `uygulama` (giriş noktası), `giris`, `kilit` (bölüm perdesi ve romanın sonu), `telefon` (arşiv ve canlı yazışma), `sahne` (bölümün sayfası; akışı o yönetir), `ayarlar`, `katman`, `hata`, `gok`, `dom`
   - `icerik/`: oyunun metni (`.dsim`), `kisiler.json`, `oyun.json`, `hava.json`, `dizin.txt`. **Biçimin tarifi: `icerik/BICIM.md`**
   - `fontlar/` (Inter, Literata; OFL lisanslı), `ikonlar/`
   - `araclar/`: Node araçları. `oku.mjs` (okuma aracı), `bot.mjs` (oyunu oynayan robot), `ekran.mjs` (ekran görüntüleri), `sunucu.mjs`, `hava-uret.mjs`, `ortak.mjs`
@@ -98,9 +96,9 @@ Karakter belgesi karakteri kısıtlamak için değil, her sahnede aynı insan ol
 - **Komutlar:**
   - `npm test`: bütün testler (motor, içerik denetimi, robotla oynanış, yayın listesi)
   - `node araclar/oku.mjs [N] [--icerik klasör]`: okuma aracı. `okuma/` klasörüne her yolun dökümünü ve `ozet.md`'yi yazar (romanda her kadın için bir özenli okuma, bölüm başına kelime sayısı). Her büyük içerik adımında çalıştır ve dökümleri baştan sona oku.
-  - `node araclar/ekran.mjs [roman]`: iPhone boyutunda ekran görüntüleri `ekran/` klasörüne; `roman` ile deneme romanını oynar (`ekran/roman/`). Playwright gerekir; yoksa `/opt/node-tools/node_modules/` denenir
+  - `node araclar/ekran.mjs [N | roman]`: iPhone boyutunda ekran görüntüleri `ekran/` klasörüne; romanın ilk N bölümünü (varsayılan 2) ilk seçeneklerle okur. `roman` ile deneme romanını baştan sona oynar (`ekran/roman/`). Playwright gerekir; yoksa `/opt/node-tools/node_modules/` denenir
   - `node araclar/sunucu.mjs`: http://localhost:8080
 - **Yayın:** GitHub Pages, çalışma dalının kök klasöründen. Her push yayını günceller.
 - **Sürüm:** Kod ya da içerik değişip yayınlanacaksa `js/surum.js` ve `sw.js` içindeki `SURUM` birlikte artırılır (test denetler). Artırılmazsa telefondaki eski önbellek kalır.
 - Yeni `.dsim` dosyası → `icerik/dizin.txt`. Yeni js/css/font/ikon dosyası → `sw.js` listesi (test denetler).
-- **Kayıt:** `localStorage` `pirnalli.kayit` (+ `pirnalli.kayit.yedek`). İçerik değişince yarım kalan akış ya da sahne bulunamazsa motor kaydı onarır (`Oyun._onar`) ve hata raporuna yazar. Romanda bozulan bölüm baştan başlar. Roman yapısından önceki bir kayıt sürdürülemez (`uyumsuz`): giriş ekranı açıklar, yeni oyun önerir.
+- **Kayıt:** `localStorage` `pirnalli.kayit` (+ `pirnalli.kayit.yedek`). İçerik değişince yarım kalan akış ya da sahne bulunamazsa motor kaydı onarır (`Oyun._onar`) ve hata raporuna yazar. Bozulan bölüm baştan başlar; yazılmış son bölüm bitmişken yeni bölüm eklenirse oradan sürer. Roman yapısından önceki bir kayıt sürdürülemez (`uyumsuz`): giriş ekranı açıklar, yeni oyun önerir.

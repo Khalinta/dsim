@@ -11,7 +11,7 @@ export function denetle(icerik, { yasakliKaliplar = [] } = {}) {
   const hatalar = icerik.hatalar.map((h) => `${h.dosya}:${h.satir} ${h.mesaj}`);
   const uyarilar = [];
   const { parcalar, kisiler, ayar } = icerik;
-  const baslatilanlar = new Set();
+  const cagrilanlar = new Set();
 
   const metinDenetle = (p, metin, no) => {
     for (const m of metin.matchAll(YER_TUTUCU)) {
@@ -37,7 +37,7 @@ export function denetle(icerik, { yasakliKaliplar = [] } = {}) {
   // Bölümler: numaralar tek ve sıralı, zaman ilerler.
   const bolumNo = new Map();
   let oncekiBolum = null;
-  for (const p of icerik.bolumler || []) {
+  for (const p of icerik.bolumler) {
     const yer = `${p.dosya}:${p.satir} "${p.kimlik}"`;
     if (bolumNo.has(p.bolum)) hatalar.push(`${yer}: bölüm ${p.bolum} iki kez var (öbürü "${bolumNo.get(p.bolum)}")`);
     bolumNo.set(p.bolum, p.kimlik);
@@ -52,25 +52,17 @@ export function denetle(icerik, { yasakliKaliplar = [] } = {}) {
     const yer = `${p.dosya}:${p.satir} "${p.kimlik}"`;
     const tur = p.tur;
     const yazisma = yazismaListeleri(p);
-    if (icerik.roman) {
-      if (tur === 'eylem' || tur === 'mesaj') hatalar.push(`${yer}: roman yapısında ${tur} parçası kullanılmaz (yazışmalar bölümün içinde ">> yazışma" ile yazılır)`);
-      if (tur === 'sahne' && p.zaman != null) hatalar.push(`${yer}: roman yapısında sahne kendi saatinde başlamaz; bir bölümden ">> oyna" ile çağrılır`);
-    }
-    if (['mesaj', 'geçmiş'].includes(tur) && !p.kisi) hatalar.push(`${yer}: ${tur} parçasının kişisi olmalı`);
+    if (tur === 'geçmiş' && !p.kisi) hatalar.push(`${yer}: geçmiş parçasının kişisi olmalı`);
     if (p.kisi && !kisiler[p.kisi]) hatalar.push(`${yer}: kişi "${p.kisi}" kisiler.json'da yok`);
-    if (tur === 'eylem' && !p.baslik['başlık']) hatalar.push(`${yer}: eylemin başlığı olmalı`);
-    if (p.baslatan && p.baslatan !== 'oyuncu') hatalar.push(`${yer}: başlatan yalnızca "oyuncu" olabilir`);
-    if (p.baslatan && !p.baslik['başlık']) hatalar.push(`${yer}: oyuncunun başlattığı mesajın başlığı (göndereceği ilk mesaj) olmalı`);
     if (p.zaman !== undefined && p.zaman !== null) {
-      if (!['sahne', 'mesaj', 'bölüm'].includes(tur)) hatalar.push(`${yer}: "zaman" yalnızca bölüm, sahne ve mesaj parçalarında kullanılır`);
+      if (tur !== 'bölüm') hatalar.push(`${yer}: başlıkta "zaman" yalnızca bölümlerde olur; sahne bir bölümden ">> oyna" ile çağrılır, saati orada ">> zaman" ile verilir`);
       if (p.zaman < ayar.baslangic) hatalar.push(`${yer}: zaman oyunun başlangıcından önce`);
       if (p.zaman > TAKVIM_SONU) hatalar.push(`${yer}: zaman oyunun bitişinden sonra`);
     }
-    kosulDenetle(p, p.kosul, p.satir);
 
     p.listeler.forEach((liste, listeNo) => {
       const yz = yazisma.get(listeNo) || null; // bu liste bir yazışmanın içindeyse kiminle
-      const mesajGibi = tur === 'mesaj' || tur === 'geçmiş' || yz;
+      const mesajGibi = tur === 'geçmiş' || yz;
       const sohbetKisisi = yz || p.kisi;
       for (const d of liste) {
         const no = d.no;
@@ -89,21 +81,18 @@ export function denetle(icerik, { yasakliKaliplar = [] } = {}) {
         if (d.t === 'yazışma') {
           if (!kisiler[d.kisi] || d.kisi === 'ben') hatalar.push(`${p.dosya}:${no} yazışma: böyle bir kişi yok: ${d.kisi}`);
           if (yz) hatalar.push(`${p.dosya}:${no} Yazışmanın içinde başka bir yazışma açılmaz`);
-          if (tur !== 'bölüm' && tur !== 'sahne') hatalar.push(`${p.dosya}:${no} yazışma yalnızca bölüm ve sahne parçalarında kullanılır`);
+          if (tur === 'geçmiş') hatalar.push(`${p.dosya}:${no} geçmiş parçasında yazışma açılmaz`);
         }
         if (d.t === 'seçim') {
-          if (tur === 'geçmiş') hatalar.push(`${p.dosya}:${no} ${tur} parçasında seçim olmaz`);
-          if (d.zamanAsimi && d.zamanAsimi.etiket && p.etiketler[d.zamanAsimi.etiket] === undefined) {
-            hatalar.push(`${p.dosya}:${no} zaman aşımı etiketi yok: ${d.zamanAsimi.etiket}`);
-          }
+          if (tur === 'geçmiş') hatalar.push(`${p.dosya}:${no} geçmiş parçasında seçim olmaz`);
           if (d.secenekler.length > 5) uyarilar.push(`${p.dosya}:${no} 5'ten fazla seçenek`);
           for (const s of d.secenekler) {
             kosulDenetle(p, s.kosul, s.no);
             metinDenetle(p, s.metin, s.no);
-            if (!mesajGibi && (tur === 'sahne' || tur === 'eylem' || tur === 'bölüm') && s.tip === 'düz') {
+            if (!mesajGibi && s.tip === 'düz') {
               hatalar.push(`${p.dosya}:${s.no} Sahne seçeneği ya "tırnak içinde söz" ya da "(parantez içinde eylem)" olmalı: ${s.metin}`);
             }
-            if ((tur === 'mesaj' || yz) && s.tip === 'söz') hatalar.push(`${p.dosya}:${s.no} Mesaj seçeneğini tırnaksız yaz; yazıldığı gibi gönderilir.`);
+            if (yz && s.tip === 'söz') hatalar.push(`${p.dosya}:${s.no} Mesaj seçeneğini tırnaksız yaz; yazıldığı gibi gönderilir.`);
           }
         }
         if (d.t === 'git' && !['son', 'geri'].includes(d.hedef) && p.etiketler[d.hedef] === undefined) {
@@ -112,35 +101,24 @@ export function denetle(icerik, { yasakliKaliplar = [] } = {}) {
         if (d.t === 'eğer') for (const dal of d.dallar) kosulDenetle(p, dal.kosul, no);
         if (d.t === 'komut') {
           const k = d;
-          if (k.ad === 'randevu' || k.ad === 'iptal') {
-            if (k.ad === 'randevu') baslatilanlar.add(k.hedef);
-            const h = parcalar.get(k.hedef);
-            if (!h) hatalar.push(`${p.dosya}:${no} ${k.ad}: parça yok: ${k.hedef}`);
-            else if (k.ad === 'randevu' && h.tur !== 'sahne') hatalar.push(`${p.dosya}:${no} randevu yalnızca sahneye kurulur: ${k.hedef}`);
-          }
           if (k.ad === 'oyna' || k.ad === 'geç') {
-            baslatilanlar.add(k.hedef);
+            cagrilanlar.add(k.hedef);
             const h = parcalar.get(k.hedef);
             if (!h) hatalar.push(`${p.dosya}:${no} ${k.ad}: parça yok: ${k.hedef}`);
             else if (h.tur !== 'sahne') hatalar.push(`${p.dosya}:${no} ${k.ad} yalnızca sahne parçasına gider: ${k.hedef}`);
             if (yz) hatalar.push(`${p.dosya}:${no} Yazışmanın içinden ${k.ad} kullanılmaz`);
           }
-          if (k.ad === 'başlat') {
-            baslatilanlar.add(k.hedef);
-            if (!parcalar.has(k.hedef)) hatalar.push(`${p.dosya}:${no} başlatılacak parça yok: ${k.hedef}`);
-          }
           if (k.ad === 'rehber' && !(kisiler[k.kisi] && kisiler[k.kisi].numara)) hatalar.push(`${p.dosya}:${no} rehber: "${k.kisi}" kişisinin numarası yok`);
           if (k.ad === 'tanış' && !kisiler[k.kisi]) hatalar.push(`${p.dosya}:${no} tanış: böyle bir kişi yok: ${k.kisi}`);
-          if (k.ad === 'okudu' && tur !== 'mesaj' && !yz) hatalar.push(`${p.dosya}:${no} "okudu" yalnızca yazışmalarda ve mesaj parçalarında kullanılır`);
-          if (yz && ['zaman', 'saat', 'yer', 'ev', 'başlat', 'randevu', 'bitir'].includes(k.ad)) hatalar.push(`${p.dosya}:${no} Yazışmanın içinde "${k.ad}" kullanılmaz (zaman için "bekle")`);
+          if (k.ad === 'okudu' && !yz) hatalar.push(`${p.dosya}:${no} "okudu" yalnızca yazışmalarda kullanılır`);
+          if (yz && ['zaman', 'saat', 'yer', 'bitir'].includes(k.ad)) hatalar.push(`${p.dosya}:${no} Yazışmanın içinde "${k.ad}" kullanılmaz (zaman için "bekle")`);
           if (k.ad === 'okunmadı' && tur !== 'geçmiş') hatalar.push(`${p.dosya}:${no} "okunmadı" yalnızca geçmiş parçalarında kullanılır`);
-          if ((k.ad === 'zaman' || k.ad === 'saat') && tur === 'mesaj') hatalar.push(`${p.dosya}:${no} Mesaj parçalarında zaman atlanmaz; "bekle" kullan`);
-          if ((k.ad === 'yer' || k.ad === 'ev') && (tur === 'mesaj' || tur === 'geçmiş')) hatalar.push(`${p.dosya}:${no} Mesaj parçasında yer değişmez`);
+          if (['yer', 'bitir', 'rehber', 'oyna', 'geç'].includes(k.ad) && tur === 'geçmiş') hatalar.push(`${p.dosya}:${no} geçmiş parçasında "${k.ad}" kullanılmaz`);
         }
       }
-      // Romanda bir etiketin üstündeki kısım ya bir atlamayla biter ya da hiç bitmez; yoksa akış farkında olmadan
+      // Bir etiketin üstündeki kısım ya bir atlamayla biter ya da hiç bitmez; yoksa akış farkında olmadan
       // bir sonraki etiketin sahnesine düşer (ilk taslakta "iyi geceler" diyen oyuncu Defne'nin yatak odasına düşüyordu).
-      if (listeNo === 0 && icerik.roman && (tur === 'bölüm' || tur === 'sahne')) {
+      if (listeNo === 0 && tur !== 'geçmiş') {
         liste.forEach((d, i) => {
           if (d.t !== 'etiket' || i === 0) return;
           if (!hepAtlar(p, liste[i - 1])) hatalar.push(`${p.dosya}:${d.no} "${d.ad}" etiketinin üstündeki kısım bir atlamayla (-> etiket ya da -> son) bitmiyor; akış bu etikete düşer`);
@@ -152,14 +130,9 @@ export function denetle(icerik, { yasakliKaliplar = [] } = {}) {
     });
   }
 
-  // Erişilebilirlik: her parça bir yoldan açılabilmeli.
+  // Her sahne bir bölümden (ya da başka bir sahneden) çağrılmalı.
   for (const p of parcalar.values()) {
-    const acilir = p.tur === 'geçmiş' || p.tur === 'eylem' || p.tur === 'bölüm'
-      || (p.zaman !== undefined && p.zaman !== null)
-      || p.baslatan === 'oyuncu'
-      || (p.tur === 'mesaj' && (p.tarihBas !== undefined || p.pencere !== undefined))
-      || baslatilanlar.has(p.kimlik);
-    if (!acilir) hatalar.push(`${p.dosya}:${p.satir} "${p.kimlik}" hiçbir yerden açılmıyor (zaman, eylem, başlatan, >> başlat ya da >> oyna yok)`);
+    if (p.tur === 'sahne' && !cagrilanlar.has(p.kimlik)) hatalar.push(`${p.dosya}:${p.satir} "${p.kimlik}" hiçbir yerden çağrılmıyor (>> oyna ya da >> geç yok)`);
   }
 
   return { hatalar, uyarilar };

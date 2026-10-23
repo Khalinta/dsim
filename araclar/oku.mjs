@@ -19,14 +19,7 @@ const cikti = new URL('okuma/', KOK);
 rmSync(cikti, { recursive: true, force: true });
 mkdirSync(cikti, { recursive: true });
 
-// Özenli oyuncu: o karakterin en iyi yolunu dener (yakınlık ve önemli anlar puan getirir, kaçışlar götürür).
-const defnePuani = (d) => (d['defne.yakinlik'] || 0) - 0.5 * (d['defne.kis'] || 0)
-  + 3 * ['defne.sevgili', 'defne.kurallar', 'defne.kalan_gece', 'defne.firtina_yardim', 'defne.yanindaydi', 'defne.kal_dedi',
-    'defne.kalacak_dedi', 'defne.sir', 'defne.kontrat', 'karar.kaldi', 'son.defne_kaldi'].filter((k) => d[k]).length
-  - 5 * ['defne.uzak', 'defne.bitti', 'defne.kotu_gece_yalniz', 'defne.kapatiyor'].filter((k) => d[k]).length
-  - 2 * (d['defne.kurtarici'] || 0);
-
-// Romanda her kişi için bir özenli okuma: içerikte değişkeni olan ("ada.yakin") her kişi.
+// Her kadın için bir özenli okuma: içerikte değişkeni olan ("ada.yakin") her kişi.
 const ilgiler = () => {
   const adlar = new Set();
   for (const p of icerik.parcalar.values()) {
@@ -38,16 +31,10 @@ const ilgiler = () => {
   return (kadinlar.length ? kadinlar : Object.keys(icerik.kisiler)).filter((k) => adlar.has(k));
 };
 
-const kosular = icerik.roman ? [
+const kosular = [
   ...ilgiler().map((ilgi) => ({ ad: `ozenli-${ilgi}`, strateji: 'özenli', ilgi, tohum: 1 })),
   { ad: 'hep-ilk', strateji: 'ilk', tohum: 1 },
   { ad: 'hep-son', strateji: 'son', tohum: 1 },
-  ...Array.from({ length: rastgeleSayisi }, (_, i) => ({ ad: `rastgele-${String(i + 1).padStart(2, '0')}`, strateji: 'rastgele', tohum: i + 1 })),
-] : [
-  { ad: 'ozenli-defne', strateji: 'özenli', ilgi: 'defne', puan: defnePuani, tohum: 1 },
-  { ad: 'hep-ilk', strateji: 'ilk', tohum: 1 },
-  { ad: 'hep-son', strateji: 'son', tohum: 1 },
-  ...Array.from({ length: 4 }, (_, i) => ({ ad: `tembel-${i + 1}`, strateji: 'rastgele', tohum: 101 + i, eylemIstegi: 0.05 })),
   ...Array.from({ length: rastgeleSayisi }, (_, i) => ({ ad: `rastgele-${String(i + 1).padStart(2, '0')}`, strateji: 'rastgele', tohum: i + 1 })),
 ];
 

@@ -1,9 +1,9 @@
 // Sahne ekranı: kitap sayfası gibi akan anlatı, söz ve seçimler.
-// Romanda bütün bölüm bu sayfada akar. Akış bir yazışmaya gelince telefon ekranı öne çıkar (telefon.js, canlı kip);
+// Bütün bölüm bu sayfada akar. Akış bir yazışmaya gelince telefon ekranı öne çıkar (telefon.js, canlı kip);
 // yazışma bitince sayfaya dönülür ve yazışmanın küçük bir izi sayfada kalır.
 
 import { el, ikon, bekle } from './dom.js';
-import { karanlikMi, tarihYaz, saatYaz, goreliZaman, gunBilgisi } from '../motor/tarih.js';
+import { karanlikMi, tarihYaz, saatYaz, gunBilgisi } from '../motor/tarih.js';
 
 const VARSAYILAN_RENK = '#2c5f7a';
 
@@ -12,77 +12,14 @@ export class Sahne {
     this.app = app;
     this.kok = document.getElementById('ekran-sahne');
     this.mesgul = false;
-    this.kimlik = null;
     this.ilkParagrafVar = false;
     this.mod = 'kitap'; // ya da yazışılan kişi
     this.iz = null; // süren yazışmanın sayfada kalacak izi
   }
 
-  async ac() {
-    const oyun = this.app.oyun;
-    if (oyun && oyun.icerik.roman) { this.romanAc(); return; }
-    const s = oyun && oyun.sahne;
-    if (!s) { this.app.devam(); return; }
-    const yeniSahne = this.kimlik !== `${s.kimlik}@${s.baslangic}`;
-    this.kimlik = `${s.kimlik}@${s.baslangic}`;
+  ac() { this.romanAc(); }
 
-    const k = s.kisi ? oyun.kisi(s.kisi) : null;
-    this.kok.style.setProperty('--k', (k && k.renk) || VARSAYILAN_RENK);
-    this.kok.classList.toggle('gece', s.ton === 'gece' || (s.ton !== 'gündüz' && karanlikMi(s.baslangic)));
-
-    this.icerik = el('div.sahne-icerik');
-    this.kaydirma = el('div.sahne-kaydirma', {}, this.icerik);
-    this.telefonDugmesi = el('button.sahne-telefon-dugmesi', { onclick: () => this.telefonuAc(), 'aria-label': 'Telefonu aç' }, ikon('telefon'));
-    this.perde = el('div.perde', {}, el('div.yer', {}, s.yer || ''), el('div.zaman', {}, `${tarihYaz(s.baslangic)} · ${saatYaz(s.baslangic)}`));
-    this.kok.replaceChildren(this.kaydirma, this.telefonDugmesi, this.perde);
-
-    this.icerik.append(el('header.sahne-ust', {},
-      el('span.yer', {}, s.yer || ''),
-      el('span.zaman', {}, `${tarihYaz(s.baslangic)}, ${saatYaz(s.baslangic)}`)));
-    this.ilkParagrafVar = false;
-
-    // Daha önce oynanmış kısım (kayıttan dönüş) sessizce yerine konur.
-    const kayit = s.kayit.slice();
-    const sonSecim = !s.bitti && s.akis.secim ? kayit.pop() : null;
-    for (const b of kayit) if (b.t !== 'seçim' && b.t !== 'rehber') this.blokEkle(b, false);
-
-    if (!kayit.length && yeniSahne) {
-      this.perde.classList.add('acik');
-      await bekle(1700);
-      this.perde.classList.remove('acik');
-      await bekle(250);
-    }
-
-    if (s.bitti) { this.blokEkle({ t: 'son' }, true); return; }
-    if (sonSecim) {
-      this.blokEkle(sonSecim, true);
-      this.telefonGuncelle();
-      if (!yeniSahne) this.kaydirma.scrollTop = this.kaydirma.scrollHeight; // telefondan dönüş
-      return;
-    }
-    const yeni = this.app.calistir(() => oyun.sahneDevam(), 'sahne') || [];
-    this.app.kaydet();
-    await this.goster(yeni);
-  }
-
-  ciz() { /* sahne kendi akışını yönetir */ }
-
-  async goster(bloklar) {
-    this.mesgul = true;
-    const oncedenIcerikVar = this.icerik.querySelectorAll('p, .soz').length > 0;
-    let ilk = null;
-    for (const b of bloklar) {
-      const d = this.blokEkle(b, true);
-      if (!ilk && d) ilk = d;
-      if (b.t === 'anlatı' || b.t === 'söz' || b.t === 'ben') await bekle(110);
-    }
-    if (ilk && oncedenIcerikVar) {
-      const hedef = ilk.offsetTop - 70;
-      if (hedef > this.kaydirma.scrollTop + 20) this.kaydirma.scrollTo({ top: hedef, behavior: 'smooth' });
-    }
-    this.telefonGuncelle();
-    this.mesgul = false;
-  }
+  ciz() { /* sayfa kendi akışını yönetir */ }
 
   blokEkle(b, animasyonlu) {
     let d = null;
@@ -104,13 +41,6 @@ export class Sahne {
         break;
       case 'yer':
         break;
-      case 'telefon':
-        d = el('div.sahne-telefon', {},
-          el('div.ust-satir', {}, ikon('telefon'), 'Telefonuna bakıyorsun'),
-          ...(b.bildirimler.length
-            ? b.bildirimler.map((x) => el('div.bil', {}, el('b', {}, x.ad), el('time', {}, goreliZaman(x.t, this.app.oyun.t)), el('span', {}, kisalt(x.m))))
-            : [el('div.bil', {}, el('span', {}, 'Yeni bir şey yok.'))]));
-        break;
       case 'kaydedildi':
         d = el('div.kaydedildi', {}, `Rehbere “${b.ad}” olarak kaydedildi.`);
         break;
@@ -130,7 +60,7 @@ export class Sahne {
         }));
         break;
       case 'son': {
-        const yazi = !b.bolumSonu ? 'Devam' : b.sonraki ? 'Sonraki bölüm' : b.oyunBitti ? 'Son' : 'Devam';
+        const yazi = b.sonraki ? 'Sonraki bölüm' : b.oyunBitti ? 'Son' : 'Devam';
         d = el('div.sahne-son', {}, el('div.susler', {}, '· · ·'),
           el('button.dugme', { onclick: () => this.bitir() }, yazi));
         break;
@@ -159,11 +89,10 @@ export class Sahne {
     await bekle(220);
     kap.remove();
     this.mesgul = false;
-    if (oyun.icerik.roman) await this.oynat(yeni);
-    else await this.goster(yeni);
+    await this.oynat(yeni);
   }
 
-  // Telefona bakmak sahneyi değiştirmez: telefon açılır, "Sahneye dön" ile kalınan yere dönülür.
+  // Telefona bakmak hikâyeyi değiştirmez: telefon açılır, "Hikâyeye dön" ile kalınan yere dönülür.
   telefonuAc() {
     if (this.mesgul) return;
     this.app.git('telefon');
@@ -179,14 +108,11 @@ export class Sahne {
     if (gorunur && okunmamis > 0) this.telefonDugmesi.append(el('span.rozet', {}, okunmamis));
   }
 
-  // ---------- Roman ----------
-
   romanAc() {
     const app = this.app;
     const oyun = app.oyun;
     const s = oyun.sahne;
     if (!s) { app.devam(); return; }
-    this.kimlik = `${s.kimlik}@${s.baslangic}`;
     const k = s.kisi ? oyun.kisi(s.kisi) : null;
     this.kok.style.setProperty('--k', (k && k.renk) || VARSAYILAN_RENK);
     this.kok.classList.toggle('gece', s.ton === 'gece' || (s.ton !== 'gündüz' && karanlikMi(s.baslangic)));
@@ -350,7 +276,6 @@ export class Sahne {
     const app = this.app;
     app.calistir(() => app.oyun.sahneKapat(), 'sahne kapanışı');
     app.kaydet();
-    this.kimlik = null;
     app.devam();
   }
 }

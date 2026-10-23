@@ -184,9 +184,19 @@ Her karar ve nedeni burada. Bir karar değişirse eskisinin ~~üstü çizilir~~ 
       - *Neden:* İlk denemede telefon, oyuncu yeni paragrafları okuyamadan ekrana geliyordu (ekran görüntülerinde fark edildi).
     - **Telefonun arşivi:** Sayfada seçim beklenirken telefon açılabilir; eski yazışmalar okunur, kimseye yazılmaz, hikâye değişmez (karar 36 geçerli).
     - Uygulama yazışmanın ortasında kapanırsa, açılınca telefon aynı cevap bekleyen hâliyle gelir.
-46. **Eski yapı 6. adıma kadar yaşıyor.** Kod iki yapıyı birden taşıyor: içerikte bölüm varsa roman, yoksa eski takvim yapısı. Oyunda şu an hâlâ eski içerik var; yeni yapı `test/ornek/`'teki küçük bir deneme romanıyla test ediliyor (testler, okuma aracı, ekran görüntüleri). I. Perde oyuna girince eski içerik ve eski yapının kodu (eylem menüsü, "Bekle", kendiliğinden mesajlar, randevular) kaldırılacak.
+46. ~~**Eski yapı 6. adıma kadar yaşıyor.**~~ → 6. adımda kalktı (karar 48). Eski metin: **Eski yapı 6. adıma kadar yaşıyor.** Kod iki yapıyı birden taşıyor: içerikte bölüm varsa roman, yoksa eski takvim yapısı. Oyunda şu an hâlâ eski içerik var; yeni yapı `test/ornek/`'teki küçük bir deneme romanıyla test ediliyor (testler, okuma aracı, ekran görüntüleri). I. Perde oyuna girince eski içerik ve eski yapının kodu (eylem menüsü, "Bekle", kendiliğinden mesajlar, randevular) kaldırılacak.
     - *Neden:* Karar 43'teki söz: yeni metin yazılana kadar oyun oynanabilir kalır. Kullanıcıya 4. oturumun sonunda "Bekle" ile menünün 5. adımda kalkacağı söylenmişti; romanda yoklar, ama oyundan 6. adımda kalkıyorlar.
 47. **Eski kayıt romana taşınamaz.** Roman oyuna girince eski kayıt açılmaz; giriş ekranı bunu açıklar ve yeni oyun önerir. Eski kayıt, yeni oyun başlayana kadar silinmez.
+
+### I. Perde (6. adım)
+
+48. **Oyun yalnızca roman.** Eski takvim yapısının içeriği (`eylul/`, `defne/`, `hayat/`, `son/`) ve kodu (eylem menüsü, "Bekle", "Uyu", kendiliğinden ve oyuncunun açtığı mesaj parçaları, randevular, zaman aşımı) kaldırıldı. Parça türleri artık `bölüm`, `sahne`, `geçmiş`. Biçim `icerik/BICIM.md`'de baştan yazıldı.
+    - *Neden:* Karar 46'daki söz. İki yapıyı birlikte taşımak motoru iki katına çıkarıyordu (1.130 satırdan 595'e indi).
+    - Eski içerik git geçmişinde duruyor; fikirleri II–V. perdelerde kullanılabilir (karar 43).
+49. **Bölüm dosyaları:** `icerik/bolum/NN-ad.dsim`, her bölüm bir dosya. Bölüm parçası `bNN`, dalları `bNN_ad` (sahne). Yol ayrımı seçenekleri bir değişken bırakır (`gece6`, `sabah7`, `tekne9`, `gece11`); seçilmeyen kişi o gece mesajla görünür.
+50. **Değişkenler:** `<kadın>.yakin` (sayı, gizli ölçü) ve hafıza işaretleri (`defne.ilk_gece`, `sude.durust`…). Kapı açan işaretler: `davet.<kadın>`, `<kadın>.numara`, `kirik.*`, `bom.kafa`. Oyuncu bunların hiçbirini görmez.
+51. **Etiket kuralı (denetim):** Bir etiketin üstündeki kısım bir atlamayla bitmeli. *Neden:* İlk taslakta "İyi geceler" diyen oyuncu, farkında olmadan bir sonraki etiketteki yatak sahnesine düşüyordu.
+52. **Yeni bölüm eklenince kayıt sürer.** Yazılmış son bölümü bitiren oyuncu, yeni bölümler yayınlanınca uygulamayı açtığında oradan devam eder.
 
 ## Yol haritası
 
@@ -204,7 +214,7 @@ Her karar ve nedeni burada. Bir karar değişirse eskisinin ~~üstü çizilir~~ 
    - *Neden değişti:* Bir romanda altı kadın ilk perdeden itibaren birlikte yaşamalı. Karakterleri tek tek eklemek her seferinde öncekileri yeniden yazmak demekti.
 4. **Bölüm planı.** ✅ (4. oturum) Omurga baştan yazıldı; 41 bölümün planı; karakter belgeleri, takvim, rehber güncellendi.
 5. **Motor ve ekranlar bölüm yapısına.** ✅ (karar 45–47)
-6. **I. Perde (Bölüm 1–11)** (büyük). Bütün tanışmalarla; okuma aracıyla baştan sona okunup düzeltilir. Eski içerik ve eski yapının kodu bu adımda kalkar (karar 46).
+6. **I. Perde (Bölüm 1–11).** ✅ (karar 48–52) Bütün tanışmalarla; okuma aracıyla baştan sona okunup düzeltildi. Eski içerik ve eski yapının kodu kalktı.
 7. **II–V. Perdeler,** perde perde (her biri büyük).
 8. **Sonlar, Şubat ve cila** (büyük). Tutarlılık taraması, son okuma turları.
 
@@ -214,6 +224,8 @@ Her karar ve nedeni burada. Bir karar değişirse eskisinin ~~üstü çizilir~~ 
 - *Hesap:* 115 gün × günde ortalama 5–8 dakika; sakin günler hızlı geçer.
 - Kesin değil; pilot karakterle ölçülecek.
 - *Pilot ölçümü (3. adım):* Defne'ye özen gösteren bir oyunda okunacak metin yaklaşık 17 bin kelime; okuma ve seçimlerle 1,5–2 saat tutuyor. Altı karakter ve kesişmelerle hedefin alt ucu (10 saat civarı) gerçekçi. Gerçek bir oyuncuyla ölçülmedi.
+- **I. Perde ölçümü (6. adım) — hedefin altında.** Tek okuyuşta bölüm başına **1.100–1.450 kelime** (24 yol; I. Perde toplam 12–16 bin kelime). Karar 41'deki 2.500–4.000'in yarısı kadar. Bölüm başına okuma ve seçimlerle yaklaşık 7–10 dakika. Bu hızla 41 bölüm **5–6 saat** eder, 8–12 değil. Bütün dallarıyla yazılan metin 28 bin kelime (bir okuyuşta yarısı görülüyor).
+  - Kullanıcıya bildirildi; nasıl kapatılacağı onun kararı (öneri: II. Perde'den itibaren bölüm başına tek okuyuşta 2.000–3.000 kelime; I. Perde'nin kısa kalan bölümleri, 4, 5, 8 ve 10, cila adımında genişletilir).
 
 ## Açık sorular
 
@@ -271,4 +283,18 @@ Her karar ve nedeni burada. Bir karar değişirse eskisinin ~~üstü çizilir~~ 
 - **Testler:** 41 (11'i roman yapısı). Eski içerik de tarayıcıda hatasız oynanıyor.
 - Oyunda hâlâ eski içerik var (sürüm 0.4.0); telefonda görünen bir değişiklik yok.
 
-**Sıradaki:** 6. adım, I. Perde (Bölüm 1–11) (büyük). Kullanıcının "devam" demesi bekleniyor.
+**4. oturum, devamı (6. adım):** I. Perde yazıldı ve oyuna girdi (karar 48–52). Sürüm 0.6.0.
+- **Metin:** 11 bölüm (`icerik/bolum/`), 57 parça: lagünün son gecesinden ilk yağmura. Altı kadının hepsiyle tanışma; yol ayrımları (6, 7, 9, 11. bölüm geceleri), Defne ile iki cinsel sahne (oyuncu adım adım yönetiyor, "sadece kal / uyuyalım" her an açık), yazışmalar bölümlerin içinde.
+- **Okuma:** Okuma aracıyla 24 yoldan (her kadın için özenli, hep ilk, hep son, 16 rastgele) dökümler baştan sona okundu. Bulunup düzeltilenler:
+  - Oyuncunun adını bilmediği kişilerin adıyla anılması (Defne, Saadet, Nuri, Hasan Bey, Ilgın, Cemal, Tarık, Lara, Hatice, Ceren).
+  - Oyuncunun duymadığı bilgiye cevap veren karakterler ("bankanın evi", Onur'un daveti, Tarık'ın hatırladığı gülüş, Ela'nın "anlattığı" defter).
+  - Anlatıyla uyuşmayan mesaj saatleri, takvim kaymaları (perşembe/yarın, akşam/sabah, "ekimi görmez" eylülde).
+  - Müdür'ün, Lara'nın kadehinin, Sude'nin günlüğünün sürekliliği; Ceren'in meslek bilgisi.
+  - Etikete düşen akış (karar 51), bölüm 1'de Defne'yle yatan oyuncunun numarasını hiç alamaması.
+  - İki dalda birebir aynı satırlar, "ya da / hangisiyse" diye kaçamak satırlar.
+- **Kod:** Eski yapı kalktı (motor 1.130 → 595 satır); ayrıştırıcı, denetim, robot, okuma aracı, ekran görüntüsü aracı (artık gerçek romanı okuyor), testler (31) sadeleşti. Kullanılmayan görünüm kuralları silindi.
+- **Ekran görüntüleri:** İlk iki bölüm tarayıcıda baştan sona oynandı: perde, sayfa, "Telefonuna bak", canlı yazışma, yazışmanın ortasında kapatıp açma, sayfada rehber, gün ayracı, arşiv. Tarayıcı hatası yok.
+- **Ölçüm:** Bölümler planın yarısı uzunlukta (bkz. "Oynanış süresi hedefi"). Kullanıcıya bildirildi.
+- **Kullanıcıya düşen:** Telefonda oyun kendiliğinden güncellenir. Eski kayıt açılmaz; giriş ekranı "yeni oyun" önerir.
+
+**Sıradaki:** 7. adım, II. Perde (Bölüm 12–19) (büyük). Kullanıcının "devam" demesi ve uzunluk konusundaki kararı bekleniyor.

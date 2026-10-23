@@ -45,15 +45,15 @@ test('içerik: hava bütün oyun günlerini kapsıyor', () => {
   icerik.hava.forEach((g, i) => assert.equal(g.gun, i));
 });
 
-test('oynanış: farklı yollardan oynanınca takılmadan içerik sonuna varır', () => {
+test('oynanış: farklı yollardan oynanınca takılmadan romanın yazılmış sonuna varır', () => {
   const kosular = [
     { strateji: 'ilk' }, { strateji: 'son' },
     ...Array.from({ length: 12 }, (_, i) => ({ strateji: 'rastgele', tohum: i + 1 })),
-    ...Array.from({ length: 4 }, (_, i) => ({ strateji: 'rastgele', tohum: 50 + i, eylemIstegi: 0.05 })),
   ];
   for (const k of kosular) {
-    const { oyun } = oyna(icerik, k);
+    const { oyun, uyarilar } = oyna(icerik, k);
     assert.ok(oyun.bittiMi(), JSON.stringify(k));
+    assert.deepEqual(uyarilar, [], JSON.stringify(k));
   }
 });
 
