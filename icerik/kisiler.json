@@ -19,7 +19,7 @@
   "hatice": { "ad": "Hatice Hemşire", "tanimsiz": "Hemşire", "renk": "#7a5a62" },
   "rahmi": { "ad": "Rahmi Usta", "tanimsiz": "Fırıncı", "renk": "#8a7356" },
   "rasim": { "ad": "Rasim Efendi", "tanimsiz": "Yaşlı adam", "renk": "#6e6a58" },
-  "dilan": { "ad": "Dilan", "tanimsiz": "Kıvırcık kız", "renk": "#7c6b8f" },
+  "dilan": { "ad": "Dilan", "tanimsiz": "Kıvırcık kız", "numara": "0541 287 33 60", "renk": "#7c6b8f", "yazmaHizi": 1.1, "okumaGecikmesi": 30 },
   "husnu": { "ad": "Hüsnü Kaptan", "tanimsiz": "Yaşlı denizci", "renk": "#4f6d86" },
   "sarp": { "ad": "Sarp", "tanimsiz": "Barmen", "renk": "#5d6066" },
   "kaptan": { "ad": "Kaptan", "tanimsiz": "Kaptan", "biliniyor": true, "renk": "#5f7a86" },
