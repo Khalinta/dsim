@@ -49,7 +49,7 @@ Perşembe akşamı ve cuma akşamı Mendirek; ellerin artık tepsinin ağırlı�
 >> zaman 26 Eylül 22:40
 Servis aralığında telefon titriyor.
 >> yazışma onur
-  @onur: kanka unutmadın di mi. bu gece kırık koy
+  @onur: kanka bu gece kırık koy. sana söylemeyi unuttum, şimdi söylüyorum, aynı şey
   @onur: vardiyandan sonra. 1.30 gibi uzunkum'un ucunda buluşuyoruz. tuna ile cansu da geliyo
   @onur: el feneri getir. keçi yolu karanlık, geçen sene cansu bir keçiye sarıldı, keçi sandığı şey bir kayaymış
   @onur: bi de ekip topladım. yelkencileri de çağırdım. herkesi çağırdım aslında
@@ -171,7 +171,7 @@ Bir süre yan yana tekne yıkıyorsunuz. Ela bir şarkı mırıldanıyor, bir İ
   Bir ara Ela kızağın başında duruyor, hortumu bırakıp sağ omzunu sol eliyle tutuyor; birkaç saniye, kimse görmüyormuş gibi. Sonra seni görüyor, eli iniyor.
   @ela: Ne bakıyon? Yıka.
 Saat on bire geliyor. Ela son tekneyi kızağa itip havlusunu katlıyor.
-@ela: Yarın da gel. Perşembe ders var zaten. Cumartesi çocuklar var, gel izle, gülersin.
+@ela: Yarın ders var zaten, gel. Cumartesi de çocuklar var, gel izle, gülersin.
 @ela: Cuma gece bir şey varmış bu arada. Onur denen çocuk bütün kulübü çağırdı, Kırık Koy. Gece yüzmesi. Ben gece yüzmesine hayır demem. Sen?
 * "Gelirim."
   [ela.kirik_soz]
@@ -262,7 +262,7 @@ Sude istatistik çalışıyor; sen de bir şey çalışıyormuş gibi yapıyorsu
   @sude: Puanım buraya yetti.
   Bunu söylerken sana bakmıyor; kahvesine bakıyor. Bir şey eksik bu cevapta, ikiniz de biliyorsunuz.
 Saate bakıyor: on iki on. Bir an donuyor.
-@sude: İki saati geçmişiz. On dakika. Ben hiç bir şeyi geçirmem. Geçirdim.
+@sude: İki saati on dakika geçmişiz. Ben hiçbir şeyi geçirmem. Geçirdim.
 @sude: Bu bir randevu muydu? Sormak istemiyordum ama sordum. Cevap verme, ya da ver. Ne dersen not alacağım, onu söyleyeyim.
 * "Bilmiyorum. Bir dahakini randevu yapalım, karşılaştırırız."
   [sude.yakin +1]
@@ -368,7 +368,7 @@ Hasan Bey seni gösteriyor; neyi bilmesini istediğini söylemiyor. Ilgın poşe
   @ilgin: Ders mi veriyordu? Herkese verir. Kimse dinlemez.
   @ilgin: Sen dinliyormuşsun. Tamam.
 Ilgın babasının koluna giriyor; Hasan Bey bastonu öbür eline alıp kalkıyor. Yürümeye başlıyorlar, yavaş; kordonun karşısına, eczanenin önündeki hasır sandalyeye. Yolun ortasında Hasan Bey duruyor, dönüp sana bir şey söylüyor; ses kordonun gürültüsünde kayboluyor. Ilgın tekrar ediyor, bağırmadan, ama sesi geliyor.
-@ilgin: Perşembe yine gel diyor. Saat on. Benden değil, ondan.
+@ilgin: Haftaya yine gel diyor. Çarşamba, saat on. Benden değil, ondan.
 
 === b07_ders
 tür: sahne
@@ -377,7 +377,10 @@ tür: sahne
 >> yer Kabaktepe Yerleşkesi
 Termodinamik. Tarık Hoca tahtaya bir silindir çiziyor, içine bir piston, pistonun üstüne bir ok. Sinan yanında, uyuyor; gözleri açık uyumayı öğrenmiş.
 Hoca bir soru soruyor: bir sistemden çıkan ısı nereye gider? Sınıf susuyor. Hocanın markeri havada, birini arıyor; seni buluyor.
-@tarik: Sen. Bir şakama gülmüştün, hatırlıyorum. Cevap ver.
+>> eğer tarik.gulen
+  @tarik: Sen. Bir şakama gülmüştün, hatırlıyorum. Cevap ver.
+>> yoksa
+  @tarik: Sen. Arka sıra, pencere kenarı. Cevap ver.
 * "Çevreye. Isı kaybolmaz, yer değiştirir."
   [tarik.not +1]
   Hoca markeri indiriyor. Bir an, kendi cümlesini birinin ağzından duymanın tuhaflığıyla, sana bakıyor.

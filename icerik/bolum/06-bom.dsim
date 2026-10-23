@@ -280,7 +280,7 @@ Kıvırcık kız seni tepeden tırnağa süzüyor; Diyarbakır'ın ağzıyla, ke
   [sude.yakin +1]
   @sude: Korktum. Sonra korkmadım. Sonra güldüm. Üçü de beş saniyede oldu.
   @sude: Annem olsa önce korkardı, sonra bana kızardı, sonra korkmaya devam ederdi. Bende sıra değişik.
-* "Deniz günlüğü tutuyormuşsun. Ela dedi, defterin vardı."
+* "Sabah Ela'ya bir defter verdin. Deniz günlüğü mü o?"
   @sude: O başka. O deniz günlüğü değil.
   Hızlı söylüyor. Sonra yavaşlıyor.
   @sude: Deniz günlüğünü telefonla tutuyorum. Her sabah pencereden aynı açıdan fotoğraf. Bugün yedinci gün. Bugün denizin içinden fotoğraf çekemedim, telefonu Ela'ya verdim. Günlükte bir delik var.
@@ -346,7 +346,7 @@ Pencere kapanıyor. Arkada, bir dolabın kapağı; bir buzdolabının sesi. Penc
 * "Sen hep böyle sorar mısın?"
   @ilgin: Sorarım. Sormazsam babam sorar. O sorarsa daha uzun sürer.
 Parayı uzatıyorsun; Ilgın alıyor, üstünü sayıyor, pencereden geri veriyor. Sonra pencereyi kapatmıyor. Gazete hâlâ önünde; kurşun kalem parmaklarının arasında dönüyor.
-@ilgin: Sezonluklar genelde ekimi görmez. Sen niye hâlâ buradasın? Bir şey mi unuttun?
+@ilgin: Sezonluklar genelde eylülün sonunu görmez. Sen niye hâlâ buradasın? Bir şey mi unuttun?
 * "Okula yazıldım. Burada okuyorum."
   [ilgin.yakin +1]
   [ilgin.okul_biliyor]
@@ -378,7 +378,7 @@ Gazeteyi göstermiyor; kutulara bakarak söylüyor, sana değil, sanki kendine.
 * "Bulmacayı sana sormam gerekmez mi? Eczacı sensin."
   @ilgin: Eczacıyım, sözlük değil.
   Kalemi bir kez gazeteye vuruyor.
-  @ilgin: Sonra bulurum. Babam bulur. Akşam karşılaştırırız, kim bulduysa o kazanır. Bu gece ben kaybediyorum galiba.
+  @ilgin: Sonra bulurum. Babam bulur. Sabah karşılaştırırız, kim bulduysa o kazanır. Bu gece ben kaybediyorum galiba.
 Bir müşteri geliyor: elinde bir reçete, yüzü uykusuz, arkasında bir arabanın motoru çalışıyor. Ilgın pencereyi ona çeviriyor; sesi bir anda başka bir şey oluyor: düz, hızlı, kesin.
 Kenara çekiliyorsun. Adam gidince Ilgın sana dönüyor.
 @ilgin: Numaranı yaz. Saniye Hanım'ın insülini perşembe gelecek, haber veririm. Saniye Hanım telefonu açmaz, açarsa kapatmaz, yarım saat konuşur.
@@ -441,10 +441,14 @@ kişi: sude
 >> yazışma sude
   @sude: Kapı kapandı. Yetiştim. Dilan'la tur attık, sen gelmedin.
   @sude: Bu bir sitem değil. Bir rapor. Yani sitem de olabilir, raporun içine sitem karışmış olabilir, ayırt etmeye çalışıyorum.
-  * bom yüzünden. kafam/bacağım beni bıraktı
+  * {bom.kafa} bom yüzünden. kafam beni bıraktı
     >> bekle 1dk
-    @sude: Anladım. Bu geçerli bir sebep. Kayıt altına alındı.
-    @sude: İyi geceler. Yarın görüşürüz belki. Perşembe kesin, yelken var.
+    @sude: Kafa. Anladım. Geçerli bir sebep. Kayıt altına alındı.
+    @sude: Uyumadan önce biri sana adını sorsun. Kafa vurunca öyle yapılıyormuş, okumuştum. Onur sorsun. İyi geceler. Perşembe kesin, yelken var.
+  * {değil bom.kafa} bacağım beni bıraktı. morardı
+    >> bekle 1dk
+    @sude: Bacak. Anladım. Geçerli bir sebep. Kayıt altına alındı.
+    @sude: Bacağını yastığın üstüne koy, yukarıda kalsın. Bunu da okumuştum. İyi geceler. Perşembe kesin, yelken var.
   * bir dahakine gelirim
     [sude.bir_dahakine]
     >> bekle 2dk

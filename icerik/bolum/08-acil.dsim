@@ -22,7 +22,7 @@ Gece üçte salonda başka iki kişi var: başında sargıyla uyuklayan bir adam
   Ela kapıda kalıyor. İçeri girip girmemeyi tartıyor gibi; sonra giriyor, en uzaktaki sandalyeye oturuyor, kapıya en yakın olana.
 >> eğer kirik.sude
   Sude ile Dilan sizin arkanızdan giriyor; Sude çantasını kucağında tutuyor, etrafa bakıyor, her şeyi kaydediyor: tavandaki lekeyi, çay makinesini, kâğıttaki iki ayrı el yazısını.
-Triyaj masasında elli yaşlarında, kısa saçlı, gözlüğü başının üstünde bir hemşire. Önlüğünün cebinde üç kalem, biri bir gözlükle karışmış.
+Triyaj masasında elli yaşlarında, kısa saçlı, gözlüğü başının üstünde bir hemşire. Önlüğünün cebinde üç kalem, biri bir gözlükle karışmış; yakasında bir isim kartı: HATİCE.
 @hatice: Kırık Koy mu? Deniz kestanesi mi? Gelin bakalım.
 @hatice: Her yıl eylülün son cuma gecesi. Takvime bakmadan bilirim, kapıdan girenin ayakkabısından bilirim.
 >> tanış hatice
@@ -56,11 +56,10 @@ Sedyeye, ayağa, sonra size bakıyor; sırayla, bir liste okur gibi.
   Her dikende ayağın kendi kendine çekilmek istiyor; doktorun eli bırakmıyor. Bir noktada nefesini tutuyorsun; doktor başını kaldırmadan "nefes al," diyor, "nefes tutmak hiçbir şeyi çıkarmaz."
 @ceren: On bir. On iki.
 @ceren: Bir tanesi derinde, kalsın. Vücut onu kendisi atar, bir haftada. Biz vücuttan daha iyi değiliz, sadece daha hızlıyız.
->> tanış ceren
 >> eğer kirik.sude
   Sude perdenin kenarında, Dilan'ın omzunun üstünden izliyor; doktorun ellerini, cımbızı, küveti. Gözünü ayırmıyor.
   @sude: Kaç yıl okudunuz?
-  @ceren: Altı. Sonra bir yıl intörnlük, sonra burada. Yani yedi, sekiz. Saymayı bıraktım, sayınca daha uzun geliyor.
+  @ceren: Altı. Sonra burası. Yedi oluyor. Saymayı bıraktım, sayınca daha uzun geliyor.
   @sude: Ben de Tıp istiyordum.
   Doktor ilk kez başını kaldırıp Sude'ye bakıyor; bir saniye, dikkatle, bir hastaya bakar gibi değil.
   @ceren: İyi ki olmamış.
@@ -82,7 +81,9 @@ Sedyeye, ayağa, sonra size bakıyor; sırayla, bir liste okur gibi.
 Hatice Hemşire ayağı sıcak suya yatırıyor. Su önce yakıyor, sonra iyi geliyor. Doktor eldivenlerini çıkarıp çöpe atıyor, ellerini uzun uzun yıkıyor; ellerini yıkarken aynada kendi yüzüne bakmıyor.
 @ceren: Yarım saat suda. Sonra tentürdiyot, sargı. İki gün sonra pansuman, iki günde bir. Kızarırsa, şişerse, ateş yaparsa gelin. Gelmeyin diye söylüyorum aslında.
 Perdeyi aralayıp çıkıyor. Hatice Hemşire arkasından bakıyor, sonra size dönüyor.
-@hatice: Ceren Hanım. Bu gece yirmi saattir ayakta. Ona çay ısmarlayacak biri olsa iyi olurdu ama makine bozuk. İki yıldır.
+@hatice: Ceren Hanım. Doktorumuz. Bu gece yirmi saattir ayakta.
+>> tanış ceren
+@hatice: Ona çay ısmarlayacak biri olsa iyi olurdu ama makine bozuk. İki yıldır.
 
 >> zaman 27 Eylül 03:50
 Yarım saatin ortasında bekleme salonu fazla dar geliyor. Tuvaleti sorup koridorun sonuna yürüyorsun; koridorun sonunda bir kapı, kapının üstünde yeşil bir ÇIKIŞ ışığı. Kapı aralık; dışarıdan serin hava ve sigara.

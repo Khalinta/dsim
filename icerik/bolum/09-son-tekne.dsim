@@ -242,15 +242,10 @@ Dilan arkada gözlerini açmadan "siz konuşun, ben yokum" diyor.
 * "Siz daha güzeldi. Asistan gibi hissediyordum."
   Sude gülüyor.
   @sude: Asistanlığın bitti. Yeni bir unvan lazım sana. Düşüneceğim. Bu bir ödev.
-* {kirik.sude} "Kırık Koy'da 'dur' dedin. Sonra 'devam'. Hiç böyle biriyle karşılaşmamıştım."
+* {kirik.sudeyle} "Kırık Koy'da 'dur' dedin. Sonra 'devam'. Hiç böyle biriyle karşılaşmamıştım."
   [sude.yakin +1]
-  >> eğer kirik.sudeyle
-    @sude: Kural koymam lazımdı. Yoksa ya hiç girmezdim ya da korkudan boğulurdum. Kural ortası.
-    @sude: Kurala uyduğun için teşekkür ederim. Kurala uymayan insanlar tanıyorum, çoğu akrabam.
-  >> yoksa
-    Sude kaşlarını çatıyor.
-    @sude: Ben sana "dur" demedim. Kıyıdaydın sen. Dilan'a dedim.
-    @sude: Ya da beni izliyordun. Bu bir gözlem miydi? Ne gözlemledin?
+  @sude: Kural koymam lazımdı. Yoksa ya hiç girmezdim ya da korkudan boğulurdum. Kural ortası.
+  @sude: Kurala uyduğun için teşekkür ederim. Kurala uymayan insanlar tanıyorum, çoğu akrabam.
 Bir dalga teknenin burnuna çarpıyor, serpintisi ikinizi birden ıslatıyor. Sude telefonunu göğsüne bastırıyor; kendisi ıslanıyor, telefon kuru kalıyor. Gülüyor.
 @sude: Telefon kurtuldu. Önceliklerim belli.
 @sude: Yarın sabah pencereden yine çekeceğim. Ama artık biliyorum, yukarıdan bakıyorum. Bilerek bakmak başka.

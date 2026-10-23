@@ -55,7 +55,7 @@ Servisin sonuna doğru, mutfağın yanındaki dar koridorda, telefonun cebinde t
     @defne: fırın da bu gece açılıyor. ilk yağmurla fırın aynı gece
     @defne: bu bir işaret. neye işaret bilmiyorum
     >> eğer defne.termostat
-      @defne: ayrıca fırın ilk kez doğru dereceye çıktı. teşekkür etmiyorum, kupayla ödedim. ama bil
+      @defne: ayrıca fırın ilk kez doğru dereceye çıktı. teşekkür etmiyorum, kupayla ödeyeceğim. ama bil
     @defne: saçaktayım. kapı açık
     * vardiyam 1de bitiyor
       >> okudu
@@ -124,7 +124,7 @@ Bu gece tek bir yerde olabilirsin.
   >> oyna b11_lara_gece
 >> yoksa eğer gece11 != "ela" ve davet.ela
   >> oyna b11_ela_gece
-Yağmur sabaha kadar dinmiyor. Pırnallı'da bütün pencereler ilk kez kapalı; sabah, kordonun okaliptüs yaprakları ıslak taşlara yapışmış olacak, dondurmacının camındaki kâğıt yağmurda erimiş olacak, kimse ona bakmayacak. Kış başladı. Saadet Abla öyle diyor.
+Yağmur sabaha kadar dinmiyor. Pırnallı'da pencereler ilk kez kapanıyor; sabah, kordonun okaliptüs yaprakları ıslak taşlara yapışmış olacak, dondurmacının camındaki kâğıt yağmurda erimiş olacak, kimse ona bakmayacak. Kış başladı; sabah Saadet Abla bunu söyleyecek, her yıl ilk yağmurda söylediği gibi.
 
 === b11_defne
 tür: sahne
@@ -243,8 +243,8 @@ Bir süre sonra nefesi ağırlaşıyor.
 :: firin_basi
 Söylüyorsun. Defne bir an şaşırıyor; sonra fırının önüne, yere, battaniye seriyor. Fırının kapağı aralık, sıcak dalga dalga geliyor; kapıdan yağmurun serinliği.
 @defne: Fırın başı. Bunu kimse istemedi bugüne kadar. Herkes yukarı çıkmak ister.
-Battaniyenin üstüne oturuyorsunuz, sırtınız tezgâhın ayağına dayalı. Defne başını omzuna koyuyor. Müdür kapıdan içeri giriyor, ikinizin ayağının dibine kıvrılıyor; ilk kez kapının içinde.
-@defne: Müdür içeri girdi. Bu bir onay. Ondan onay almak benden onay almaktan zor.
+Battaniyenin üstüne oturuyorsunuz, sırtınız tezgâhın ayağına dayalı. Defne başını omzuna koyuyor. Müdür kapıdan ıslak giriyor, silkiniyor, fırının önündeki yerine bakıyor; orada siz varsınız. Bir an düşünüyor, sonra ikinizin ayağının dibine kıvrılıyor.
+@defne: Fırının önü onun yeri. Kimseye vermez. Sizi yerine kabul etti; bu bir onay. Ondan onay almak benden onay almaktan zor.
 Bir süre konuşuyorsunuz, alçak sesle. Sonra konuşmuyorsunuz. Fırının göstergesi 80, 70, 60. Defne omzunda uyuyor; uyurken bir kez "kahvaltı yok" diye mırıldanıyor, uyandığında söylediğini hatırlamıyor.
 -> son
 
@@ -300,7 +300,7 @@ Saat üçe doğru şişe bitiyor. Lara bardağını cam sehpaya koyuyor.
   [lara.yakin +1]
   @lara: Zorunda değilim. Biliyorum.
   Bir süre havuza bakıyor.
-  @lara: Bu ev benim değil. Bunu biliyorsun, herkes biliyor. Ama ben hâlâ burada oturuyorum çünkü başka nereye gideceğimi bilmiyorum. Annem "biraz orada kal" dedi. Biraz ne kadar, söylemedi.
+  @lara: Bu ev benim değil. Bankanın. Bunu hep şaka gibi söylüyorum; şaka değil. Ama ben hâlâ burada oturuyorum çünkü başka nereye gideceğimi bilmiyorum. Annem "biraz orada kal" dedi. Biraz ne kadar, söylemedi.
   [lara.ilk_cumle]
 * "Neden buradasın? Kış geliyor."
   @lara: Neden buradayım.
@@ -395,10 +395,10 @@ Bir süre konuşmadan içiyorsunuz. Yağmur camda; dışarıda dalgakıranın ü
 Nuri Abi başını kaldırıp fotoğrafa bakıyor.
 @nuri: Gülsüm. Teknenin adı. Annemin adı.
 @nuri: Yirmi yıl önce sattım. Balık bitti dediler, ben de inandım. Balık bitmedi. Ben bittim sandım.
-Bunu söyledikten sonra uzun bir süre bir şey söylemiyor. Dört kelimeyle iş veren adam az önce kaç kelime söyledi, saymıyorsun.
+Bunu söyledikten sonra uzun bir süre bir şey söylemiyor; söylediği ona fazla gelmiş gibi, geri almak ister gibi kadehini çeviriyor.
 * "Pişman mısın?"
   @nuri: Pişman olmak için para lazım. Yeni tekne alacak para. Yok. O yüzden pişman değilim.
-  Kadehini kaldırıp fotoğrafa doğru bir kez kaldırıyor, sonra içiyor.
+  Kadehini fotoğrafa doğru bir kez kaldırıyor, sonra içiyor.
 * (Bir şey söyleme. Kadehini fotoğrafa kaldır.)
   [nuri.not +2]
   [nuri.gulsum]

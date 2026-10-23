@@ -103,11 +103,12 @@ Kız masanın başına oturuyor; on iki sandalyeden birine, en uçtakine. Sana b
   @lara(Eşofmanlı kız): Gelmedim. Lagün de yok artık zaten.
 @lara(Eşofmanlı kız): Lara bu arada. Bunu bilmiyordun herhalde. Herkes "Berkmenlerin kızı" diyor, adımı kimse kullanmıyor; ben de unutacaktım az kalsın.
 >> tanış lara
-* "Bankanın evinde oturan kız mı?"
+* "Babası kaçan kız mı?"
   [lara.yakin -1]
   Lara'nın yüzü bir an kapanıyor. Sonra gülümsüyor, gülümsemesi keskin.
   @lara: Onu da duydun demek. Kasaba çalışıyor.
-  @lara: Evet. Bu ev teknik olarak bankanın. Ben de bankanın evinde oturan bir kızım. Çok edebi, biliyorum. Bunu ben söyleyince komik, başkası söyleyince değil. Kaydet.
+  @lara: Kaçmadı. İş için gitti. Bunu her sorana söylüyorum; her seferinde biraz daha az inanıyorum.
+  @lara: Bir de şunu duyacaksın, benden duy: bu ev teknik olarak bankanın. Ben de bankanın evinde oturan bir kızım. Çok edebi, biliyorum. Bunu ben söyleyince komik, başkası söyleyince değil. Kaydet.
 * "{ad}."
   [lara.yakin +1]
   [lara.adini_bildi]
