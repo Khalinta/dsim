@@ -1,4 +1,6 @@
 // Oyunun içindeki telefon: sohbet listesi, sohbet, rehber, ayarlar.
+// Romanda iki hâli var: arşiv (her an açılır, okumak hikâyeyi etkilemez) ve canlı yazışma
+// (akış bir ">> yazışma"ya gelince sahne.js telefonu öne çıkarır; mesajlar "yazıyor…" ile tek tek gelir).
 
 import { el, ikon, bekle, ilkHarf } from './dom.js';
 import { karanlikMi, saatYaz, gunNo, goreliGun, tarihYaz } from '../motor/tarih.js';
@@ -18,9 +20,11 @@ export class Telefon {
     this.cizilenN = new Map();
     this.canliYaziyor = null;
     this.dongude = false;
+    this.canli = null; // { kisi, gosterN, gosterT, yaziyor, secim, kapat }
   }
 
   ac(kisi = null) {
+    this.canli = null;
     if (kisi) { this.sayfa = 'sohbet'; this.kisi = kisi; }
     else if (this.sayfa === 'sohbet' && !this.kisi) this.sayfa = 'liste';
     this.ciz();
@@ -98,7 +102,7 @@ export class Telefon {
       sekme('rehber', 'Rehber', 'rehber', () => this.git('rehber')),
       sekme('ayarlar', 'Ayarlar', 'ayarlar', () => this.git('ayarlar')),
       oyun.sahne
-        ? sekme('kilit', 'Sahneye dön', 'geri', () => { this.sayfa = 'liste'; this.app.devam(); })
+        ? sekme('kilit', oyun.icerik.roman ? 'Hikâyeye dön' : 'Sahneye dön', 'geri', () => { this.sayfa = 'liste'; this.app.devam(); })
         : sekme('kilit', 'Kilitle', 'kilit', () => { this.sayfa = 'liste'; this.app.git('kilit'); }));
   }
 
@@ -110,19 +114,21 @@ export class Telefon {
     const k = oyun.kisi(kisi);
     const sayfa = el('div.sayfa', { degisken: { '--k': k.renk || '#8a8f98' } });
 
-    const yaziyor = oyun.yaziyor(kisi) || this.canliYaziyor === kisi;
+    const c = this.canli && this.canli.kisi === kisi ? this.canli : null;
+    const simdi = c ? c.gosterT : oyun.t;
+    const yaziyor = c ? c.yaziyor : oyun.yaziyor(kisi) || this.canliYaziyor === kisi;
     sayfa.append(el('header.sohbet-basligi', {},
-      el('button.geri', { onclick: () => this.git('liste'), 'aria-label': 'Geri' }, ikon('geri')),
+      c ? el('span') : el('button.geri', { onclick: () => this.git('liste'), 'aria-label': 'Geri' }, ikon('geri')),
       this.avatar(kisi, k),
-      el('div', {}, el('b', {}, oyun.gorunenAd(kisi)), el(`small${yaziyor ? '.canli' : ''}`, {}, this.durumSatiri(kisi, yaziyor)))));
+      el('div', {}, el('b', {}, oyun.gorunenAd(kisi)), el(`small${yaziyor ? '.canli' : ''}`, {}, this.durumSatiri(kisi, yaziyor, simdi)))));
 
     const kutu = el('div.mesajlar');
-    const mesajlar = oyun.durum.sohbet[kisi] || [];
+    const mesajlar = (oyun.durum.sohbet[kisi] || []).filter((m) => !c || m.n <= c.gosterN);
     const oncekiN = this.cizilenN.get(kisi) ?? Infinity;
     let onceki = null;
     for (const m of mesajlar) {
       if (!onceki || gunNo(onceki.t) !== gunNo(m.t)) {
-        kutu.append(el('div.gun-ayraci', {}, goreliGun(m.t, oyun.t)));
+        kutu.append(el('div.gun-ayraci', {}, goreliGun(m.t, simdi)));
         onceki = null;
       }
       const yeni = m.n > oncekiN;
@@ -133,21 +139,23 @@ export class Telefon {
         continue;
       }
       const grupIci = onceki && onceki.k === m.k && m.t - onceki.t < GRUP_ARALIGI;
-      kutu.append(this.balon(m, k, { grupIci, yeni }));
+      kutu.append(this.balon(m, k, { grupIci, yeni, simdi }));
       onceki = m;
     }
     if (yaziyor) kutu.append(el('div.balon.gelen.yeni.grup-yeni', { degisken: { '--k': k.renk || '#8a8f98' } }, el('span.yaziyor-balonu', {}, el('i'), el('i'), el('i'))));
     this.cizilenN.set(kisi, mesajlar.reduce((a, m) => Math.max(a, m.n), 0));
-    sayfa.append(kutu, this.yazmaAlani(kisi, yaziyor));
+    sayfa.append(kutu);
+    const alan = c ? this.canliYazmaAlani(c) : oyun.icerik.roman ? null : this.yazmaAlani(kisi, yaziyor);
+    if (alan) sayfa.append(alan);
     return sayfa;
   }
 
-  balon(m, k, { grupIci, yeni }) {
-    const oyun = this.app.oyun;
+  balon(m, k, { grupIci, yeni, simdi }) {
     const giden = m.k === 'b';
+    const okundu = m.okundu !== null && m.okundu !== undefined && m.okundu <= simdi;
     const sinif = `div.balon.${giden ? 'giden' : 'gelen'}${grupIci ? '.grup-ici' : '.grup-yeni'}${yeni ? '.yeni' : ''}`;
     const zaman = el('span.zaman', {}, saatYaz(m.t),
-      giden ? ikon(oyun.okunduMu(m) ? 'ciftTik' : 'tik', `tik${oyun.okunduMu(m) ? ' okundu' : ''}`) : null);
+      giden ? ikon(okundu ? 'ciftTik' : 'tik', `tik${okundu ? ' okundu' : ''}`) : null);
     const foto = m.m.match(FOTO);
     if (foto) {
       return el(`${sinif}.foto`, { degisken: { '--k': k.renk || '#8a8f98' } },
@@ -157,13 +165,18 @@ export class Telefon {
     return el(sinif, { degisken: { '--k': k.renk || '#8a8f98' } }, m.m, zaman);
   }
 
-  durumSatiri(kisi, yaziyor) {
+  durumSatiri(kisi, yaziyor, simdi = this.app.oyun.t) {
     const oyun = this.app.oyun;
     if (yaziyor) return 'yazıyor…';
-    if (oyun.cevrimici(kisi)) return 'çevrimiçi';
+    if (this.canli && this.canli.kisi === kisi) {
+      // Canlı yazışmada "son görülme" ekranın gösterdiği ana göre: son gelen mesaj ya da okuma.
+      const son = (oyun.durum.sohbet[kisi] || []).filter((m) => m.n <= this.canli.gosterN)
+        .reduce((a, m) => Math.max(a, m.k === 'o' ? m.t : (m.okundu !== null && m.okundu <= simdi ? m.okundu : -Infinity)), -Infinity);
+      if (simdi - son < 120) return 'çevrimiçi';
+    } else if (oyun.cevrimici(kisi)) return 'çevrimiçi';
     const son = oyun.sonGorulme(kisi);
     if (son === undefined || son === null || son === -Infinity) return oyun.durum.rehber[kisi] ? '' : 'Rehberde kayıtlı değil';
-    const gun = goreliGun(son, oyun.t);
+    const gun = goreliGun(Math.min(son, simdi), simdi);
     if (gun === 'Bugün') return `son görülme bugün ${saatYaz(son)}`;
     if (gun === 'Dün') return `son görülme dün ${saatYaz(son)}`;
     return `son görülme ${gun.split(' ').slice(0, 2).join(' ')}`;
@@ -232,6 +245,99 @@ export class Telefon {
       this.canliYaziyor = null;
       this.dongude = false;
     }
+  }
+
+  // ---------- Canlı yazışma (romanda) ----------
+
+  // gosterN: ekranda gösterilecek son mesajın numarası (motor bütün mesajları önceden ekler; ekran tek tek açar).
+  canliBasla(kisi, gosterN, gosterT) {
+    this.canli = { kisi, gosterN, gosterT, yaziyor: false, secim: null, kapat: null };
+    this.sayfa = 'sohbet';
+    this.kisi = kisi;
+  }
+
+  // Sahnenin oynattığı bir yazışma bloğunu canlandırır; bitince döner.
+  async canliBlok(b) {
+    const c = this.canli;
+    if (!c) return;
+    switch (b.t) {
+      case 'mesaj':
+        if (b.k === 'o') {
+          if (b.okunduAn !== null && b.okunduAn !== undefined) { await bekle(450); c.gosterT = b.okunduAn; this.ciz(); await bekle(700); }
+          if (b.yazma > 0) {
+            c.yaziyor = true;
+            this.ciz();
+            await bekle(Math.min(2600, Math.max(900, 600 + b.metin.length * 24)));
+            c.yaziyor = false;
+          } else await bekle(200);
+        }
+        c.gosterN = Math.max(c.gosterN, b.n);
+        c.gosterT = b.an;
+        this.ciz();
+        await bekle(b.k === 'b' ? 500 : 350);
+        return;
+      case 'okundu':
+        await bekle(500);
+        c.gosterT = b.an;
+        this.ciz();
+        await bekle(600);
+        return;
+      case 'ara':
+        await bekle(800);
+        c.gosterT = b.an;
+        this.ciz();
+        return;
+      case 'seçim':
+      case 'rehber':
+        c.secim = b;
+        this.ciz();
+        return;
+      case 'kaydedildi':
+        this.ciz();
+        await bekle(300);
+        return;
+      default:
+        await bekle(200);
+    }
+  }
+
+  // Yazışma bitti: "Telefonu bırak"a dokunulunca söz sayfaya döner.
+  canliBitir() {
+    return new Promise((coz) => {
+      if (!this.canli) { coz(); return; }
+      this.canli.secim = null;
+      this.canli.kapat = () => { this.canli = null; coz(); };
+      this.ciz();
+    });
+  }
+
+  canliYazmaAlani(c) {
+    const oyun = this.app.oyun;
+    const alan = el('div.yazma-alani.canli-alan');
+    if (c.kapat) {
+      alan.append(el('button.telefonu-birak', { onclick: () => c.kapat() }, 'Telefonu bırak'));
+      return alan;
+    }
+    if (!c.secim) return alan;
+    if (c.secim.t === 'rehber') {
+      alan.append(el('div.ipucu', {}, `Kişiyi kaydet · ${oyun.kisi(c.secim.kisi).numara || ''}`));
+      for (const sec of c.secim.secenekler) alan.append(el('button.cevap.rehber-cevabi', { onclick: () => this.canliSec(sec.i) }, sec.metin));
+      return alan;
+    }
+    for (const sec of c.secim.secenekler) {
+      const eylem = sec.tip === 'eylem';
+      alan.append(el(`button.cevap${eylem ? '.eylem-cevabi' : ''}`, { onclick: () => this.canliSec(sec.i) },
+        eylem ? sec.metin.replace(/^\((.*)\)$/, '$1') : sec.metin));
+    }
+    return alan;
+  }
+
+  canliSec(i) {
+    const c = this.canli;
+    if (!c || !c.secim) return;
+    c.secim = null;
+    this.ciz();
+    this.app.ekranlar.sahne.secimYap(i);
   }
 
   // ---------- Rehber ----------

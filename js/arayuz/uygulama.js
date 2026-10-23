@@ -32,9 +32,24 @@ const app = {
     }
   },
 
+  // Ekranı açmadan yalnızca görünür yapar (akış ekranlar arasında geçerken, ekran kendini baştan kurmasın diye).
+  gorunur(ad) {
+    for (const s of document.querySelectorAll('.ekran')) s.classList.toggle('aktif', s.id === `ekran-${ad}`);
+    const onceki = this.ekran;
+    this.ekran = ad;
+    if (onceki !== ad && this.ekranlar[onceki] && this.ekranlar[onceki].kapan) this.ekranlar[onceki].kapan();
+  },
+
   // Oyunun bir sonraki doğal ekranı: sahne varsa sahne, yoksa kilit ekranı.
+  // Romanda başlamamış bir bölüm önce perdesiyle (kilit ekranı) açılır.
   devam() {
-    if (this.oyun && this.oyun.sahne) this.git('sahne');
+    const oyun = this.oyun;
+    if (oyun && oyun.icerik.roman) {
+      const b = oyun.bolumBilgisi();
+      this.git(b && b.basladi ? 'sahne' : 'kilit');
+      return;
+    }
+    if (oyun && oyun.sahne) this.git('sahne');
     else this.git('kilit');
   },
 
@@ -77,6 +92,8 @@ const app = {
 
   kayitYukle(durum) {
     const oyun = new Oyun(this.icerik, durum);
+    // Roman yapısından önceki bir kayıt sürdürülemez: giriş ekranı açıklar, yeni oyun önerir. Kayıt, yeni oyun başlayana kadar silinmez.
+    if (oyun.uyumsuz) { this.oyun = null; this.eskiKayit = true; return; }
     this.oyun = oyun;
     this.kaydet();
     if (oyun.onarimlar.length) hata.kaydet(new Error(`Kayıt onarıldı: ${oyun.onarimlar.join(' | ')}`), 'kayıt', true);

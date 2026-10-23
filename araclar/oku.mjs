@@ -1,16 +1,20 @@
 // Okuma aracı: oyunu farklı yollardan otomatik oynatır, ortaya çıkan bütün metni
 // okuma/ klasörüne okunabilir dosyalar olarak döker ve bir özet çıkarır.
 //
-// Çalıştırma:  node araclar/oku.mjs            (10 rastgele oyun + "hep ilk" + "hep son")
+// Çalıştırma:  node araclar/oku.mjs            (10 rastgele oyun + "hep ilk" + "hep son" + özenli okumalar)
 //              node araclar/oku.mjs 40          (40 rastgele oyun)
+//              node araclar/oku.mjs --icerik test/ornek   (başka bir içerik klasörü)
 
 import { mkdirSync, writeFileSync, rmSync } from 'node:fs';
 import { diskIcerik, yasakliKaliplar, KOK } from './ortak.mjs';
 import { oyna } from './bot.mjs';
 import { denetle } from '../js/motor/denetim.js';
 
-const rastgeleSayisi = Number(process.argv[2] || 10);
-const icerik = await diskIcerik();
+const argumanlar = process.argv.slice(2);
+const klasorSirasi = argumanlar.indexOf('--icerik');
+const klasor = klasorSirasi >= 0 ? argumanlar.splice(klasorSirasi, 2)[1] : 'icerik';
+const rastgeleSayisi = Number(argumanlar[0] || 10);
+const icerik = await diskIcerik(klasor);
 const cikti = new URL('okuma/', KOK);
 rmSync(cikti, { recursive: true, force: true });
 mkdirSync(cikti, { recursive: true });
@@ -22,7 +26,23 @@ const defnePuani = (d) => (d['defne.yakinlik'] || 0) - 0.5 * (d['defne.kis'] || 
   - 5 * ['defne.uzak', 'defne.bitti', 'defne.kotu_gece_yalniz', 'defne.kapatiyor'].filter((k) => d[k]).length
   - 2 * (d['defne.kurtarici'] || 0);
 
-const kosular = [
+// Romanda her kişi için bir özenli okuma: içerikte değişkeni olan ("ada.yakin") her kişi.
+const ilgiler = () => {
+  const adlar = new Set();
+  for (const p of icerik.parcalar.values()) {
+    for (const liste of p.listeler) {
+      for (const d of liste) if (d.t === 'işlem') for (const x of d.islemler) adlar.add(x.ad.split('.')[0]);
+    }
+  }
+  return Object.keys(icerik.kisiler).filter((k) => adlar.has(k));
+};
+
+const kosular = icerik.roman ? [
+  ...ilgiler().map((ilgi) => ({ ad: `ozenli-${ilgi}`, strateji: 'özenli', ilgi, tohum: 1 })),
+  { ad: 'hep-ilk', strateji: 'ilk', tohum: 1 },
+  { ad: 'hep-son', strateji: 'son', tohum: 1 },
+  ...Array.from({ length: rastgeleSayisi }, (_, i) => ({ ad: `rastgele-${String(i + 1).padStart(2, '0')}`, strateji: 'rastgele', tohum: i + 1 })),
+] : [
   { ad: 'ozenli-defne', strateji: 'özenli', ilgi: 'defne', puan: defnePuani, tohum: 1 },
   { ad: 'hep-ilk', strateji: 'ilk', tohum: 1 },
   { ad: 'hep-son', strateji: 'son', tohum: 1 },
@@ -44,7 +64,10 @@ for (const k of kosular) {
     const sayac = new Map();
     for (const s of gorulenSatirlar) sayac.set(s, (sayac.get(s) || 0) + 1);
     const tekrarlar = [...sayac].filter(([s, n]) => n > 1 && s.length > 12);
-    ozet.push(`- **${k.ad}**: ${Object.keys(oyun.durum.gorulen).length} parça görüldü, ${gorulenSatirlar.length} satır metin` +
+    const kelime = dokum.replace(/[*#>`_-]/g, ' ').split(/\s+/).filter(Boolean).length;
+    const bolumSayisi = (dokum.match(/^# Bölüm /gm) || []).length;
+    const bolumBasina = bolumSayisi ? ` (bölüm başına ${Math.round(kelime / bolumSayisi)})` : '';
+    ozet.push(`- **${k.ad}**: ${Object.keys(oyun.durum.gorulen).length} parça görüldü, ${gorulenSatirlar.length} satır, yaklaşık ${kelime} kelime${bolumBasina}` +
       (tekrarlar.length ? `, **${tekrarlar.length} tekrar**: ${tekrarlar.map(([s, n]) => `"${s}" ×${n}`).join('; ')}` : ''));
   } catch (e) {
     hatalar.push(`${k.ad}: ${e.message}`);

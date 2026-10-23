@@ -33,12 +33,15 @@ export function icerikDerle(dosyalar, veri) {
   if (ayar.icerikSonu === null) hatalar.push({ dosya: 'oyun.json', satir: 0, mesaj: 'içerik_sonu anlaşılmadı' });
 
   const sabitZamanlilar = [...parcalar.values()]
-    .filter((p) => p.zaman !== undefined && p.zaman !== null && p.tur !== 'geçmiş')
+    .filter((p) => p.zaman !== undefined && p.zaman !== null && p.tur !== 'geçmiş' && p.tur !== 'bölüm')
     .sort((a, b) => a.zaman - b.zaman || b.oncelik - a.oncelik);
   const kendiliginden = [...parcalar.values()].filter((p) => p.tur === 'mesaj' && p.zaman === undefined
     && p.baslatan !== 'oyuncu' && (p.tarihBas !== undefined || p.pencere !== undefined));
 
-  return { parcalar, hatalar, kisiler: veri.kisiler, ayar, hava: veri.hava || [], sabitZamanlilar, kendiliginden };
+  // Roman yapısı: içerikte bölüm varsa oyun bölümden bölüme akar (eylem menüsü, bekleme, takvimden gelen mesaj yok).
+  const bolumler = [...parcalar.values()].filter((p) => p.tur === 'bölüm').sort((a, b) => a.bolum - b.bolum);
+
+  return { parcalar, hatalar, kisiler: veri.kisiler, ayar, hava: veri.hava || [], sabitZamanlilar, kendiliginden, bolumler, roman: bolumler.length > 0 };
 }
 
 // Günlük pencere: 07:00-21:00 ya da gece yarısını aşan 22:00-03:00.
@@ -82,6 +85,7 @@ export class Oyun {
       sayac: 0,
       gunluk: [],
     };
+    if (this.icerik.roman) this.durum.roman = true;
     for (const [kisi, k] of Object.entries(this.icerik.kisiler)) {
       if (k.rehberde) this.durum.rehber[kisi] = k.rehberde;
       if (k.biliniyor) this.durum.bilinen[kisi] = true;
@@ -90,6 +94,7 @@ export class Oyun {
     // Başlangıçtan önceye düşen sabit zamanlı parçalar hiç çalışmaz.
     for (const p of this.icerik.sabitZamanlilar) if (p.zaman < ayar.baslangic) this.durum.atlanan[p.kimlik] = true;
     this._gunlukYaz(`oyun başladı (${oyuncuAdi})`);
+    if (this.icerik.roman) { this._bolumBaslat(this.icerik.bolumler[0]); return; }
     this.ilerle(this.durum.t);
   }
 
@@ -214,14 +219,18 @@ export class Oyun {
     return { kimlik: parca.kimlik, kisi: parca.kisi, mod, yigin: [{ l: baslangicListesi, i: baslangicI }], uyanma: t, secim: null, ilk: true };
   }
 
+  // Akışın yığını çerçevelerden oluşur: { p: parça (yoksa akışın kendi parçası), l: liste, i: sıra }.
+  // ">> oyna" başka bir parçayı yığına koyar, bitince kalınan yere dönülür; ">> geç" o anki parçanın yerine geçer.
+  // ">> yazışma kişi" bloğunun çerçevesinde y: kişi durur; yığında böyle bir çerçeve varken akış telefondadır.
   // Bir sonraki çıktıyı üretir: anlatı, söz, seçim, komut ya da son.
   _sonraki(akis) {
-    const parca = this.parca(akis.kimlik);
     for (let koruma = 0; koruma < 10000; koruma++) {
       const ust = akis.yigin[akis.yigin.length - 1];
       if (!ust) return { t: 'son' };
+      const pk = ust.p || akis.kimlik;
+      const parca = this.parca(pk);
       const liste = parca.listeler[ust.l];
-      if (!liste || ust.i >= liste.length) { akis.yigin.pop(); continue; }
+      if (!liste || ust.i >= liste.length) { this._cerceveCikar(akis); continue; }
       const d = liste[ust.i++];
       switch (d.t) {
         case 'anlatı': return { t: 'anlatı', metin: this._yerlestir(d.metin) };
@@ -231,41 +240,66 @@ export class Oyun {
           if (akis.etiketteDur) return { t: 'son' };
           continue;
         case 'git':
-          if (d.hedef === 'son' || d.hedef === 'geri') return { t: 'son' };
-          akis.yigin = [{ l: 0, i: parca.etiketler[d.hedef] + 1 }];
+          this._parcadanCik(akis, pk);
+          if (d.hedef !== 'son' && d.hedef !== 'geri') akis.yigin.push({ p: ust.p, l: 0, i: parca.etiketler[d.hedef] + 1, taban: true });
           continue;
         case 'eğer': {
           let govde = d.yoksa;
           for (const dal of d.dallar) {
             if (this.kosulDogru(dal.kosul)) { govde = dal.govde; break; }
           }
-          if (govde !== undefined) akis.yigin.push({ l: govde, i: 0 });
+          if (govde !== undefined) akis.yigin.push({ p: ust.p, l: govde, i: 0 });
           continue;
         }
+        case 'yazışma':
+          akis.yigin.push({ p: ust.p, l: d.govde, i: 0, y: d.kisi });
+          continue;
         case 'seçim': {
           const secenekler = d.secenekler
             .map((s, i) => ({ i, metin: this._yerlestir(s.metin), tip: s.tip }))
             .filter((s) => this.kosulDogru(d.secenekler[s.i].kosul));
           if (!secenekler.length) continue;
-          akis.secim = { l: ust.l, i: ust.i - 1 };
+          akis.secim = { p: ust.p, l: ust.l, i: ust.i - 1 };
           return { t: 'seçim', secenekler, zamanAsimi: d.zamanAsimi || null };
         }
         case 'komut':
           if (d.ad === 'son') return { t: 'son' };
+          if (d.ad === 'oyna' || d.ad === 'geç') {
+            if (d.ad === 'geç') this._parcadanCik(akis, pk);
+            akis.yigin.push({ p: d.hedef, l: 0, i: 0, taban: true });
+            this.durum.gorulen[d.hedef] = (this.durum.gorulen[d.hedef] || 0) + 1;
+            continue;
+          }
           return { t: 'komut', d };
       }
     }
     throw new Error(`${akis.kimlik}: akış sonsuz döngüye girdi`);
   }
 
+  _cerceveCikar(akis) {
+    const c = akis.yigin.pop();
+    if (c && c.taban && c.p) this.durum.biten[c.p] = (this.durum.biten[c.p] || 0) + 1;
+  }
+
+  // "-> son", "-> etiket" ve ">> geç": o anki parçanın bütün çerçevelerini kaldırır (çağıran parçaya dönülür).
+  _parcadanCik(akis, pk) {
+    while (akis.yigin.length && (akis.yigin[akis.yigin.length - 1].p || akis.kimlik) === pk) this._cerceveCikar(akis);
+  }
+
+  // Akış şu an kiminle yazışıyor (telefonda mı)? Yoksa null.
+  _kanal(akis) {
+    for (let i = akis.yigin.length - 1; i >= 0; i--) if (akis.yigin[i].y) return akis.yigin[i].y;
+    return null;
+  }
+
   _secenegiUygula(akis, i) {
-    const parca = this.parca(akis.kimlik);
+    const parca = this.parca(akis.secim.p || akis.kimlik);
     const dugum = parca.listeler[akis.secim.l][akis.secim.i];
     const secenek = dugum.secenekler[i];
     if (!secenek || !this.kosulDogru(secenek.kosul)) throw new Error(`${akis.kimlik}: geçersiz seçenek ${i}`);
-    akis.secim = null;
     akis.zamanAsimi = null;
-    akis.yigin.push({ l: secenek.govde, i: 0 });
+    akis.yigin.push({ p: akis.secim.p, l: secenek.govde, i: 0 });
+    akis.secim = null;
     return { ...secenek, metin: this._yerlestir(secenek.metin) };
   }
 
@@ -602,7 +636,7 @@ export class Oyun {
     const akis = this.durum.akislar[kisi];
     if (akis && akis.secim) {
       if (akis.secim.rehber) return { tur: 'rehber', kisi: akis.secim.rehber, secenekler: akis.secim.adlar.map((metin, i) => ({ i, metin, tip: 'rehber' })) };
-      const dugum = this.parca(akis.kimlik).listeler[akis.secim.l][akis.secim.i];
+      const dugum = this.parca(akis.secim.p || akis.kimlik).listeler[akis.secim.l][akis.secim.i];
       const secenekler = dugum.secenekler
         .map((s, i) => ({ i, metin: this._yerlestir(s.metin), tip: s.tip }))
         .filter((s) => this.kosulDogru(dugum.secenekler[s.i].kosul));
@@ -743,24 +777,45 @@ export class Oyun {
   }
 
   // Sahneyi bir sonraki seçime ya da sona kadar oynatır; yeni blokları döndürür.
+  // Yazışma sürerken üretilen bloklar "kanal: kişi" taşır (telefonda gösterilir); kanal değişince bir "kanal" bloğu gelir.
   sahneDevam() {
     const s = this.durum.sahne;
     if (!s || s.akis.secim || s.bitti) return [];
+    const d = this.durum;
     const bloklar = [];
-    const ekle = (b) => { bloklar.push(b); s.kayit.push(b); };
+    const ekle = (b) => { if (s.kanal) b.kanal = s.kanal; bloklar.push(b); s.kayit.push(b); return b; };
     for (let koruma = 0; koruma < 2000; koruma++) {
       const o = this._sonraki(s.akis);
+      const kanal = o.t === 'son' ? null : this._kanal(s.akis);
+      if (kanal !== (s.kanal || null)) {
+        const onceki = s.kanal || null;
+        s.kanal = null;
+        ekle({ t: 'kanal', kisi: kanal, onceki, an: d.t });
+        s.kanal = kanal;
+        s.yz = kanal ? { oyuncuYazdiT: null, ilk: true } : null;
+      }
       if (o.t === 'anlatı') { ekle({ t: 'anlatı', metin: o.metin }); continue; }
       if (o.t === 'söz') {
-        if (o.kisi === 'ben') ekle({ t: 'ben', metin: o.metin });
+        if (s.kanal) ekle(o.kisi === 'ben' ? this._yzGiden(o.metin) : this._yzGelen(o.metin));
+        else if (o.kisi === 'ben') ekle({ t: 'ben', metin: o.metin });
         else ekle({ t: 'söz', kisi: o.kisi, ad: o.ad || this.sahneAdi(o.kisi), metin: o.metin });
         continue;
       }
       if (o.t === 'seçim') { ekle({ t: 'seçim', secenekler: o.secenekler }); return bloklar; }
       if (o.t === 'komut') {
         const k = o.d;
-        if (k.ad === 'bekle') { this._zamaniIslet(this.durum.t + k.sure, true); continue; }
-        if (k.ad === 'okudu' || k.ad === 'okunmadı') continue;
+        const gun = gunNo(d.t);
+        if (k.ad === 'bekle') {
+          if (s.kanal) { d.t += k.sure; ekle({ t: 'ara', sure: k.sure, an: d.t }); continue; }
+          this._zamaniIslet(d.t + k.sure, true);
+          if (s.bolum !== undefined && gunNo(d.t) !== gun) ekle({ t: 'gün', an: d.t });
+          continue;
+        }
+        if (k.ad === 'okudu') {
+          if (s.kanal) ekle(this._yzOkudu());
+          continue;
+        }
+        if (k.ad === 'okunmadı') continue;
         if (k.ad === 'rehber') {
           s.akis.secim = { rehber: k.kisi, adlar: k.adlar };
           ekle({ t: 'rehber', kisi: k.kisi, numara: this.kisi(k.kisi).numara, secenekler: k.adlar.map((metin, i) => ({ i, metin, tip: 'rehber' })) });
@@ -768,15 +823,103 @@ export class Oyun {
         }
         this._ortakKomut(k);
         if (k.ad === 'yer') ekle({ t: 'yer', yer: k.yer });
+        if (s.bolum !== undefined && !s.kanal && gunNo(d.t) !== gun) ekle({ t: 'gün', an: d.t });
         continue;
       }
       if (o.t === 'son') {
         this._sahneyiBitir();
-        ekle({ t: 'son' });
+        if (s.bolum !== undefined) {
+          const sonraki = this._sonrakiBolum();
+          ekle({ t: 'son', bolumSonu: true, sonraki: sonraki ? { no: sonraki.bolum, baslik: sonraki.baslik['başlık'] || '' } : null, oyunBitti: Boolean(d.oyunBitti) });
+        } else ekle({ t: 'son' });
         return bloklar;
       }
     }
     throw new Error(`${s.kimlik}: sahne bitmedi`);
+  }
+
+  // ---------- Yazışma (hikâyenin içinde, telefonda) ----------
+
+  // Karşıdakinin mesajı: oyuncu yazdıysa önce okur ("görüldü"), sonra yazar ("yazıyor…").
+  // Yazışmanın ilk mesajı telefon açılırken çoktan gelmiştir; beklemesi yoktur.
+  _yzGelen(metin) {
+    const d = this.durum;
+    const s = d.sahne;
+    const kisi = s.kanal;
+    const yz = s.yz;
+    let okunduAn = null;
+    let bekleme = 0;
+    if (yz.oyuncuYazdiT !== null) {
+      const okuma = Math.max(d.t, yz.oyuncuYazdiT + this._okumaGecikmesi(kisi));
+      d.t = okuma;
+      this._oyuncuMesajlariniOku(kisi, okuma);
+      okunduAn = okuma;
+      yz.oyuncuYazdiT = null;
+      bekleme = 1;
+    }
+    const yazma = !yz.ilk || bekleme ? this._yazmaSuresi(kisi, metin) : 0;
+    yz.ilk = false;
+    d.t += yazma;
+    const m = this._mesajEkle(kisi, { k: 'o', m: metin, t: d.t, okundu: d.t });
+    d.sonGorulme[kisi] = d.t;
+    return { t: 'mesaj', k: 'o', metin, an: d.t, n: m.n, yazma, okunduAn };
+  }
+
+  // Oyuncunun gönderdiği mesaj (seçimle ya da @ben ile).
+  _yzGiden(metin) {
+    const d = this.durum;
+    const s = d.sahne;
+    d.t += Math.round(4 + metin.length * 0.25);
+    const m = this._mesajEkle(s.kanal, { k: 'b', m: metin, t: d.t, okundu: null });
+    s.yz.oyuncuYazdiT = d.t;
+    s.yz.ilk = false;
+    return { t: 'mesaj', k: 'b', metin, an: d.t, n: m.n };
+  }
+
+  // ">> okudu": karşıdaki, oyuncunun mesajlarını okudu ama (henüz) yazmıyor.
+  _yzOkudu() {
+    const d = this.durum;
+    const s = d.sahne;
+    if (s.yz.oyuncuYazdiT !== null) {
+      d.t = Math.max(d.t, s.yz.oyuncuYazdiT + this._okumaGecikmesi(s.kanal));
+      this._oyuncuMesajlariniOku(s.kanal, d.t);
+      s.yz.oyuncuYazdiT = null;
+    }
+    return { t: 'okundu', an: d.t };
+  }
+
+  // ---------- Bölümler ----------
+
+  _bolumBaslat(p) {
+    const d = this.durum;
+    if (p.zaman !== undefined && p.zaman !== null && p.zaman > d.t) d.t = p.zaman;
+    this._sahneBaslat(p);
+    const s = d.sahne;
+    s.bolum = p.bolum;
+    s.kanal = null;
+    s.yz = null;
+  }
+
+  _sonrakiBolum() {
+    const s = this.durum.sahne;
+    if (!s || s.bolum === undefined || this.durum.oyunBitti) return null;
+    return this.icerik.bolumler.find((p) => p.bolum > s.bolum) || null;
+  }
+
+  // Bölüm perdesi (kilit ekranı) için: bölümün numarası, adı, perde adı, zamanı.
+  bolumBilgisi() {
+    const s = this.durum.sahne;
+    if (!s || s.bolum === undefined) return null;
+    const p = this.parca(s.kimlik);
+    const perdeler = this.icerik.bolumler.filter((b) => b.baslik.perde && b.bolum <= s.bolum);
+    return {
+      no: s.bolum,
+      baslik: p.baslik['başlık'] || '',
+      perde: p.baslik.perde ? { no: perdeler.length, ad: p.baslik.perde } : null,
+      baslangic: s.baslangic,
+      yer: s.yer,
+      basladi: s.kayit.length > 0,
+    };
   }
 
   _sahneyiBitir() {
@@ -793,6 +936,12 @@ export class Oyun {
   sahneKapat() {
     const d = this.durum;
     if (d.sahne && !d.sahne.bitti) throw new Error('Sahne henüz bitmedi');
+    if (d.sahne && d.sahne.bolum !== undefined) {
+      const sonraki = this._sonrakiBolum();
+      d.sahne = null;
+      if (sonraki) this._bolumBaslat(sonraki);
+      return;
+    }
     d.sahne = null;
     while (d.sahneKuyrugu.length) {
       const p = this.parca(d.sahneKuyrugu.shift());
@@ -809,13 +958,18 @@ export class Oyun {
       const ad = s.akis.secim.adlar[i];
       this.durum.rehber[kisi] = ad;
       const iz = { t: 'kaydedildi', kisi, ad };
+      if (s.kanal) iz.kanal = s.kanal;
       s.kayit.push(iz);
       s.akis.secim = null;
       this._gunlukYaz(`rehbere kaydedildi ${kisi}: ${ad}`);
       return [iz, ...this.sahneDevam()];
     }
     const secenek = this._secenegiUygula(s.akis, i);
-    const iz = secenek.tip === 'söz' ? { t: 'ben', metin: secenek.metin } : { t: 'seçildi', metin: secenek.metin };
+    let iz;
+    if (s.kanal) {
+      iz = secenek.tip === 'eylem' ? { t: 'seçildi', metin: secenek.metin } : this._yzGiden(secenek.metin);
+      iz.kanal = s.kanal;
+    } else iz = secenek.tip === 'söz' ? { t: 'ben', metin: secenek.metin } : { t: 'seçildi', metin: secenek.metin };
     s.kayit.push(iz);
     return [iz, ...this.sahneDevam()];
   }
@@ -826,7 +980,7 @@ export class Oyun {
   // Böylece tekrarlanan işlerin (vardiya, ders) her seferi ayrı yazılabilir; yazılanlar bitince sessiz yedek kalır.
   eylemler() {
     const d = this.durum;
-    if (d.sahne || this.bittiMi()) return [];
+    if (d.sahne || this.bittiMi() || this.icerik.roman) return [];
     const adaylar = [...this.icerik.parcalar.values()]
       .filter((p) => p.tur === 'eylem' && p.zaman === undefined && (p.tekrar || !d.gorulen[p.kimlik]) && this._zamanUygun(p) && this.kosulDogru(p.kosul))
       .sort((a, b) => b.oncelik - a.oncelik);
@@ -918,7 +1072,9 @@ export class Oyun {
     if (p.sure) this.bekle(p.sure);
   }
 
+  // Romanda sahne (bölüm) yoksa oyun bitmiştir: ya ">> bitir" ile ya da yazılmış son bölümün sonunda.
   bittiMi() {
+    if (this.icerik.roman) return !this.durum.sahne;
     return !this.durum.sahne && (Boolean(this.durum.oyunBitti) || this.durum.t >= this.icerik.ayar.icerikSonu);
   }
 
@@ -931,12 +1087,17 @@ export class Oyun {
   // Kayıttaki parça ve konumlar içerikte artık yoksa (içerik değişmişse) oyunu bozmadan temizle.
   _onar() {
     const d = this.durum;
+    // Romana geçmeden önceki bir kayıt yeni yapıda sürdürülemez; arayüz yeni oyun önerir.
+    if (this.icerik.roman && !d.roman) { this.uyumsuz = true; return; }
     const gecerli = (akis) => {
-      const p = this.parca(akis.kimlik);
-      if (!p) return false;
-      for (const c of akis.yigin) if (!p.listeler[c.l] || c.i > p.listeler[c.l].length) return false;
+      if (!this.parca(akis.kimlik)) return false;
+      for (const c of akis.yigin) {
+        const p = this.parca(c.p || akis.kimlik);
+        if (!p || !p.listeler[c.l] || c.i > p.listeler[c.l].length) return false;
+      }
       if (akis.secim && !akis.secim.rehber) {
-        const n = p.listeler[akis.secim.l] && p.listeler[akis.secim.l][akis.secim.i];
+        const p = this.parca(akis.secim.p || akis.kimlik);
+        const n = p && p.listeler[akis.secim.l] && p.listeler[akis.secim.l][akis.secim.i];
         if (!n || n.t !== 'seçim') return false;
       }
       return true;
@@ -945,8 +1106,12 @@ export class Oyun {
       if (!gecerli(akis)) { delete d.akislar[kisi]; this.onarimlar.push(`Yarım kalan mesaj akışı kaldırıldı: ${akis.kimlik}`); }
     }
     if (d.sahne && !gecerli(d.sahne.akis)) {
+      const no = d.sahne.bolum;
       this.onarimlar.push(`Yarım kalan sahne kaldırıldı: ${d.sahne.kimlik}`);
       d.sahne = null;
+      // Romanda bölüm değiştiyse o bölüm (ya da yerine gelen) baştan başlar.
+      const yerine = no !== undefined ? this.icerik.bolumler.find((p) => p.bolum >= no) : null;
+      if (yerine) { this._bolumBaslat(yerine); this.onarimlar.push(`Bölüm ${yerine.bolum} baştan başlatıldı`); }
     }
     d.kuyruk = d.kuyruk.filter((k) => this.parca(k.kimlik));
     d.randevular = (d.randevular || []).filter((r) => this.parca(r.kimlik));

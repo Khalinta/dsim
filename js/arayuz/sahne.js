@@ -1,7 +1,9 @@
 // Sahne ekranı: kitap sayfası gibi akan anlatı, söz ve seçimler.
+// Romanda bütün bölüm bu sayfada akar. Akış bir yazışmaya gelince telefon ekranı öne çıkar (telefon.js, canlı kip);
+// yazışma bitince sayfaya dönülür ve yazışmanın küçük bir izi sayfada kalır.
 
 import { el, ikon, bekle } from './dom.js';
-import { karanlikMi, tarihYaz, saatYaz, goreliZaman } from '../motor/tarih.js';
+import { karanlikMi, tarihYaz, saatYaz, goreliZaman, gunBilgisi } from '../motor/tarih.js';
 
 const VARSAYILAN_RENK = '#2c5f7a';
 
@@ -12,10 +14,13 @@ export class Sahne {
     this.mesgul = false;
     this.kimlik = null;
     this.ilkParagrafVar = false;
+    this.mod = 'kitap'; // ya da yazışılan kişi
+    this.iz = null; // süren yazışmanın sayfada kalacak izi
   }
 
   async ac() {
     const oyun = this.app.oyun;
+    if (oyun && oyun.icerik.roman) { this.romanAc(); return; }
     const s = oyun && oyun.sahne;
     if (!s) { this.app.devam(); return; }
     const yeniSahne = this.kimlik !== `${s.kimlik}@${s.baslangic}`;
@@ -124,10 +129,18 @@ export class Sahne {
           return dugme;
         }));
         break;
-      case 'son':
+      case 'son': {
+        const yazi = !b.bolumSonu ? 'Devam' : b.sonraki ? 'Sonraki bölüm' : b.oyunBitti ? 'Son' : 'Devam';
         d = el('div.sahne-son', {}, el('div.susler', {}, '· · ·'),
-          el('button.dugme', { onclick: () => this.bitir() }, 'Devam'));
+          el('button.dugme', { onclick: () => this.bitir() }, yazi));
         break;
+      }
+      case 'gün': {
+        const g = gunBilgisi(b.an);
+        d = el('div.gun-ayraci-kitap', {}, `${g.gunAdi}, ${g.tarih}`);
+        this.ilkParagrafVar = false;
+        break;
+      }
     }
     if (!d) return null;
     if (animasyonlu) d.classList.add('blok-gel');
@@ -146,7 +159,8 @@ export class Sahne {
     await bekle(220);
     kap.remove();
     this.mesgul = false;
-    await this.goster(yeni);
+    if (oyun.icerik.roman) await this.oynat(yeni);
+    else await this.goster(yeni);
   }
 
   // Telefona bakmak sahneyi değiştirmez: telefon açılır, "Sahneye dön" ile kalınan yere dönülür.
@@ -159,10 +173,177 @@ export class Sahne {
     const oyun = this.app.oyun;
     const s = oyun.sahne;
     const okunmamis = oyun.toplamOkunmamis();
-    const gorunur = Boolean(s && !s.bitti && s.akis.secim && !s.akis.secim.rehber);
+    const gorunur = Boolean(s && !s.bitti && s.akis.secim && !s.akis.secim.rehber && !s.kanal);
     this.telefonDugmesi.classList.toggle('gorunur', gorunur);
     this.telefonDugmesi.querySelector('.rozet')?.remove();
     if (gorunur && okunmamis > 0) this.telefonDugmesi.append(el('span.rozet', {}, okunmamis));
+  }
+
+  // ---------- Roman ----------
+
+  romanAc() {
+    const app = this.app;
+    const oyun = app.oyun;
+    const s = oyun.sahne;
+    if (!s) { app.devam(); return; }
+    this.kimlik = `${s.kimlik}@${s.baslangic}`;
+    const k = s.kisi ? oyun.kisi(s.kisi) : null;
+    this.kok.style.setProperty('--k', (k && k.renk) || VARSAYILAN_RENK);
+    this.kok.classList.toggle('gece', s.ton === 'gece' || (s.ton !== 'gündüz' && karanlikMi(s.baslangic)));
+
+    this.icerik = el('div.sahne-icerik');
+    this.kaydirma = el('div.sahne-kaydirma', {}, this.icerik);
+    this.telefonDugmesi = el('button.sahne-telefon-dugmesi', { onclick: () => this.telefonuAc(), 'aria-label': 'Telefonu aç' }, ikon('telefon'));
+    this.kok.replaceChildren(this.kaydirma, this.telefonDugmesi);
+    const b = oyun.bolumBilgisi();
+    this.icerik.append(el('header.bolum-ust', {},
+      el('span.bolum-no', {}, `Bölüm ${b.no}`),
+      el('h1', {}, b.baslik),
+      el('span.zaman', {}, `${tarihYaz(s.baslangic)}, ${saatYaz(s.baslangic)}${b.yer ? ` · ${b.yer}` : ''}`)));
+    this.ilkParagrafVar = false;
+    this.mod = 'kitap';
+    this.iz = null;
+
+    // Bölümün okunmuş kısmı sessizce yerine konur.
+    const kayit = s.kayit;
+    const bekleyen = !s.bitti && s.akis.secim ? kayit[kayit.length - 1] : null;
+    for (const blok of kayit) {
+      if (blok === bekleyen) break;
+      if (blok.t !== 'seçim' && blok.t !== 'rehber') this.kitabaEkle(blok, false);
+    }
+    if (kayit.length) requestAnimationFrame(() => { this.kaydirma.scrollTop = this.kaydirma.scrollHeight; });
+    if (s.bitti) return;
+    if (bekleyen) {
+      if (bekleyen.kanal) {
+        // Yazışmanın ortasında kalınmış: telefon, cevap bekleyen hâliyle açılır.
+        const telefon = app.ekranlar.telefon;
+        this.mod = bekleyen.kanal;
+        telefon.canliBasla(bekleyen.kanal, oyun.durum.sayac, oyun.t);
+        telefon.canliBlok(bekleyen);
+        app.gorunur('telefon');
+        telefon.ciz();
+        return;
+      }
+      this.blokEkle(bekleyen, false);
+      this.telefonGuncelle();
+      return;
+    }
+    const yeni = app.calistir(() => oyun.sahneDevam(), 'sahne') || [];
+    app.kaydet();
+    this.oynat(yeni);
+  }
+
+  // Blok kitapta görünür ya da süren yazışmanın izine eklenir. Kanal blokları izi açar ve kapatır.
+  kitabaEkle(b, animasyonlu) {
+    if (b.t === 'kanal') {
+      let d = null;
+      if (this.iz) { d = this.izCiz(this.iz, animasyonlu); this.iz = null; }
+      if (b.kisi) this.iz = { kisi: b.kisi, an: b.an, bloklar: [] };
+      return d;
+    }
+    if (b.kanal) {
+      if (this.iz) this.iz.bloklar.push(b);
+      return null;
+    }
+    return this.blokEkle(b, animasyonlu);
+  }
+
+  // Yeni blokları sırayla oynatır: anlatı sayfada, yazışma telefonda.
+  async oynat(bloklar) {
+    this.mesgul = true;
+    const app = this.app;
+    const telefon = app.ekranlar.telefon;
+    let ilk = null;
+    let okunacak = false; // sayfaya okunacak yeni metin geldi mi (seçimin izi sayılmaz)
+    let oncedenIcerikVar = this.icerik.querySelectorAll('p, .soz').length > 0;
+    try {
+      for (let n = 0; n < bloklar.length; n++) {
+        const b = bloklar[n];
+        if (b.t === 'kanal') {
+          if (b.kisi) {
+            const sonraki = bloklar.slice(n + 1).find((x) => x.t === 'mesaj' && x.kanal === b.kisi);
+            if (this.mod === 'kitap') {
+              // Sayfaya yeni metin geldiyse telefon kendiliğinden öne çıkmaz: oyuncu okuyup telefona kendisi bakar.
+              if (okunacak) { this.kaydir(ilk); await this.telefonTitre(); } else await bekle(250);
+              ilk = null;
+              okunacak = false;
+            } else await bekle(900);
+            telefon.canliBasla(b.kisi, sonraki ? sonraki.n - 1 : app.oyun.durum.sayac, b.an);
+            if (this.mod === 'kitap') app.gorunur('telefon');
+            telefon.ciz();
+            await bekle(450);
+          } else {
+            await telefon.canliBitir();
+            app.gorunur('sahne');
+            oncedenIcerikVar = true;
+          }
+          this.mod = b.kisi || 'kitap';
+          const d = this.kitabaEkle(b, true);
+          if (!ilk && d) ilk = d;
+          continue;
+        }
+        if (b.kanal) {
+          this.kitabaEkle(b, true);
+          await telefon.canliBlok(b);
+          continue;
+        }
+        const d = this.kitabaEkle(b, true);
+        if (!ilk && d) ilk = d;
+        if (b.t === 'anlatı' || b.t === 'söz' || b.t === 'gün') okunacak = true;
+        if (b.t === 'anlatı' || b.t === 'söz' || b.t === 'ben') await bekle(110);
+      }
+      if (this.mod === 'kitap' && oncedenIcerikVar) this.kaydir(ilk);
+      this.telefonGuncelle();
+    } finally {
+      this.mesgul = false;
+    }
+  }
+
+  telefonTitre() {
+    return new Promise((coz) => {
+      const d = el('button.telefon-titriyor.blok-gel', { onclick: () => { d.remove(); coz(); } },
+        ikon('telefon'), el('span', {}, 'Telefonuna bak'));
+      this.icerik.append(d);
+    });
+  }
+
+  kaydir(hedefDugum) {
+    if (!hedefDugum) return;
+    const hedef = hedefDugum.offsetTop - 70;
+    if (hedef > this.kaydirma.scrollTop + 20) this.kaydirma.scrollTo({ top: hedef, behavior: 'smooth' });
+  }
+
+  // Telefondaki seçim: telefon ekranı cevabı gösterir, akış buradan sürer.
+  async secimYap(i) {
+    if (this.mesgul) return;
+    const app = this.app;
+    const yeni = app.calistir(() => app.oyun.sahneSec(i), 'yazışma seçimi') || [];
+    app.kaydet();
+    await this.oynat(yeni);
+  }
+
+  // Yazışmanın sayfada kalan izi: kimle, saat kaçta, ne yazışıldı. Dokununca o sohbet açılır.
+  izCiz(iz, animasyonlu) {
+    const oyun = this.app.oyun;
+    const k = oyun.kisi(iz.kisi);
+    const satirlar = [];
+    for (const b of iz.bloklar) {
+      if (b.t === 'mesaj') satirlar.push(el(`div.iz-m.${b.k === 'b' ? 'giden' : 'gelen'}`, {}, kisalt(b.metin)));
+      else if (b.t === 'seçildi') satirlar.push(el('div.iz-not', {}, tipografi(b.metin.replace(/^\((.*)\)$/, '$1'))));
+      else if (b.t === 'ara' && b.sure >= 600) satirlar.push(el('div.iz-not', {}, sureYaz(b.sure)));
+    }
+    if (!satirlar.length) return null;
+    const d = el('button.yazisma-izi', { degisken: { '--kk': k.renk || '#8a8f98' }, onclick: () => this.arsivAc(iz.kisi) },
+      el('div.iz-ust', {}, ikon('mesaj'), el('b', {}, oyun.gorunenAd(iz.kisi)), el('time', {}, saatYaz(iz.an))),
+      ...satirlar);
+    if (animasyonlu) d.classList.add('blok-gel');
+    this.icerik.append(d);
+    return d;
+  }
+
+  arsivAc(kisi) {
+    if (this.mesgul) return;
+    this.app.git('telefon', kisi);
   }
 
   bitir() {
@@ -181,6 +362,13 @@ function tipografi(metin) {
     .replace(/"/g, '”')
     .replace(/(\p{L})'(\p{L})/gu, '$1’$2')
     .replace(/'/g, '’');
+}
+
+function sureYaz(sn) {
+  const dk = Math.round(sn / 60);
+  if (dk < 60) return `${dk} dakika sonra`;
+  const sa = Math.round(dk / 60);
+  return sa === 1 ? 'Bir saat sonra' : `${sa} saat sonra`;
 }
 
 function kisalt(m) {

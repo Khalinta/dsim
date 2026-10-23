@@ -79,7 +79,7 @@ Her karar ve nedeni burada. Bir karar değişirse eskisinin ~~üstü çizilir~~ 
     - Sahneler için **Literata** (e-kitap okumak için tasarlanmış). Telefon için **Inter**.
 20. **İçerik biçimi:** `.dsim`. Senaryo gibi okunan, girintiyle dallanan bir biçim (Ink'ten esinlenildi). Tarifi `icerik/BICIM.md`'de.
     - *Neden:* Yazarken diyalog düz yazı gibi okunuyor. Denetim aracı biçim hatasını, kopuk bağlantıyı ve yasaklı kalıbı satır numarasıyla yakalıyor.
-21. **Üç ekran:** *(Kilit ekranının görevi 5. adımda yeniden belirlenecek: "Ne yapacaksın?" menüsü kalkıyor; bölüm geçişlerinde tarih ve saati gösteren bir perdeye dönüşebilir. Bkz. karar 38.)*
+21. **Üç ekran:** ~~*(Kilit ekranının görevi 5. adımda yeniden belirlenecek: "Ne yapacaksın?" menüsü kalkıyor; bölüm geçişlerinde tarih ve saati gösteren bir perdeye dönüşebilir. Bkz. karar 38.)*~~ → 5. adımda belirlendi: romanda kilit ekranı **bölüm perdesi** (karar 45).
     - **Kilit ekranı:** "şimdi". Saat, gök, bildirimler, "Ne yapacaksın?".
     - **Telefon:** Mesajlar, Rehber, Ayarlar.
     - **Sahne:** kitap sayfası.
@@ -138,7 +138,7 @@ Her karar ve nedeni burada. Bir karar değişirse eskisinin ~~üstü çizilir~~ 
     - Kötü gecede kapıyı ilk çalan Ilgın sahnesi eklenecek (reçeteyi biliyor).
     - Defne'nin Berkmen villasına gidişi bir mesajda anlatılıyor; Lara yazılınca sahneye dönüşebilir.
     - Fabrika'daki son film gecesine Defne dalı eklenebilir; Sude'nin cumartesi dersi henüz yok.
-35. ~~**Zaman tek düğmeyle akar: "Bekle".**~~ → Romanda bekleme yok; zamanı bölümler ilerletir (karar 38). "Bekle" 5. adımda kalkacak.
+35. ~~**Zaman tek düğmeyle akar: "Bekle".**~~ → Romanda bekleme yok; zamanı bölümler ilerletir (karar 38). ~~"Bekle" 5. adımda kalkacak.~~ → Roman yapısında yok; eski yapıyla birlikte 6. adımda koddan kalkacak (karar 46).
     - *Eski karar:* **Zaman tek düğmeyle akar: "Bekle".** ~~"Biraz oyalan" ve "Saat 11/16/21'e kadar oyalan"~~ kaldırıldı.
     - "Bekle" ilk anlamlı şeye kadar gider: yeni mesaj, yeni açılan bir şey (vardiya saati gibi), sahne ya da randevu, ya da cevap bekleyen mesajın süresinin dolmasına 15 dakika kalması. Hiçbir şey olmazsa gündüz 21:00'de, gece iki saat sonra durur. Gece "Uyu" da var.
     - Nereye kadar gideceği yazmaz; yazsa geleceği söylemiş olurdu.
@@ -172,6 +172,22 @@ Her karar ve nedeni burada. Bir karar değişirse eskisinin ~~üstü çizilir~~ 
     - Kod tarafında mesaj motoru, sahne ekranı, kayıt, hata raporu, okuma aracı ve testler korunur; zaman akışı, eylem menüsü ve "Bekle" bölüm akışına dönüşür (5. adım).
 44. **Bölüm planı romanın yol haritasıdır** (`hikaye/bolumler.md`). Yazarken değişebilir; değişirse orada üstü çizilip nedeni yazılır.
 
+### Roman motoru (5. adım)
+
+45. **Motor ve ekranlar romana göre.** Ayrıntısı `icerik/BICIM.md`, "Roman yapısı".
+    - **Bölüm** bir parçadır (`tür: bölüm`, numara, başlık, gerekirse perde adı, başlangıç zamanı). Bölümler sırayla akar; saati yalnızca hikâye ilerletir. Uzun bölümler alt sahnelere bölünebilir (`>> oyna`: oynar ve döner, `>> geç`: yerine geçer).
+    - **Kilit ekranı bölüm perdesidir:** perde adı, bölüm numarası ve adı, o günün göğü ve havası, tarih, saat, yer. Her bölüm onunla açılır; uygulamaya dönülünce de "Kaldığın yerden" onunla.
+    - **Sahne ekranı bütün bölümü** kitap sayfası gibi akıtır; gün değişince bir gün ayracı çıkar.
+    - **Yazışma bölümün içinde yaşanır** (`>> yazışma kişi`). Akış oraya gelince telefon öne çıkar; mesajlar "görüldü", "yazıyor…" ile tek tek gelir; oyuncu cevabını telefonda seçer; bitince "Telefonu bırak" ile sayfaya dönülür. Sayfada yazışmanın küçük bir izi kalır; dokununca o sohbet açılır.
+      - *Neden iz:* Bölüm geri okunduğunda yazışma metinden kopmasın; okur ne yazıldığını sayfada da görsün.
+    - **"Telefonuna bak":** Sayfaya yeni paragraflar geldiyse telefon kendiliğinden öne çıkmaz; sayfanın sonunda bu düğme çıkar, oyuncu dokununca açılır. Yazışma bir seçimin hemen ardından başlıyorsa ("Ona yaz.") telefon doğrudan açılır.
+      - *Neden:* İlk denemede telefon, oyuncu yeni paragrafları okuyamadan ekrana geliyordu (ekran görüntülerinde fark edildi).
+    - **Telefonun arşivi:** Sayfada seçim beklenirken telefon açılabilir; eski yazışmalar okunur, kimseye yazılmaz, hikâye değişmez (karar 36 geçerli).
+    - Uygulama yazışmanın ortasında kapanırsa, açılınca telefon aynı cevap bekleyen hâliyle gelir.
+46. **Eski yapı 6. adıma kadar yaşıyor.** Kod iki yapıyı birden taşıyor: içerikte bölüm varsa roman, yoksa eski takvim yapısı. Oyunda şu an hâlâ eski içerik var; yeni yapı `test/ornek/`'teki küçük bir deneme romanıyla test ediliyor (testler, okuma aracı, ekran görüntüleri). I. Perde oyuna girince eski içerik ve eski yapının kodu (eylem menüsü, "Bekle", kendiliğinden mesajlar, randevular) kaldırılacak.
+    - *Neden:* Karar 43'teki söz: yeni metin yazılana kadar oyun oynanabilir kalır. Kullanıcıya 4. oturumun sonunda "Bekle" ile menünün 5. adımda kalkacağı söylenmişti; romanda yoklar, ama oyundan 6. adımda kalkıyorlar.
+47. **Eski kayıt romana taşınamaz.** Roman oyuna girince eski kayıt açılmaz; giriş ekranı bunu açıklar ve yeni oyun önerir. Eski kayıt, yeni oyun başlayana kadar silinmez.
+
 ## Yol haritası
 
 1. ~~Temel belgeler~~ → **Temel belgeler + ses testi.** ✅
@@ -187,8 +203,8 @@ Her karar ve nedeni burada. Bir karar değişirse eskisinin ~~üstü çizilir~~ 
    - ~~4. Diğer beş karakter, tek tek. 5. Kesişmeler. 6. Sonlar ve cila.~~ → Roman kararıyla (38) yol haritası değişti.
    - *Neden değişti:* Bir romanda altı kadın ilk perdeden itibaren birlikte yaşamalı. Karakterleri tek tek eklemek her seferinde öncekileri yeniden yazmak demekti.
 4. **Bölüm planı.** ✅ (4. oturum) Omurga baştan yazıldı; 41 bölümün planı; karakter belgeleri, takvim, rehber güncellendi.
-5. **Motor ve ekranlar bölüm yapısına** (orta). Bölüm akışı, yol ayrımları, hikâyenin içinde yaşanan yazışmalar, kilit ekranının yeni görevi, okuma aracının yeni yapıya uyarlanması.
-6. **I. Perde (Bölüm 1–11)** (büyük). Bütün tanışmalarla; okuma aracıyla baştan sona okunup düzeltilir.
+5. **Motor ve ekranlar bölüm yapısına.** ✅ (karar 45–47)
+6. **I. Perde (Bölüm 1–11)** (büyük). Bütün tanışmalarla; okuma aracıyla baştan sona okunup düzeltilir. Eski içerik ve eski yapının kodu bu adımda kalkar (karar 46).
 7. **II–V. Perdeler,** perde perde (her biri büyük).
 8. **Sonlar, Şubat ve cila** (büyük). Tutarlılık taraması, son okuma turları.
 
@@ -247,4 +263,12 @@ Her karar ve nedeni burada. Bir karar değişirse eskisinin ~~üstü çizilir~~ 
 - Takvim (yeni tarihli olaylar), şehir (Fabrika'nın geçidini Ilgın ile Lara buldu), yazım rehberi (romanın iki dili, bölüm yazmak, bu romana özel klişeler).
 - Oyundaki içerik değişmedi; eski hâliyle oynanabilir (sürüm 0.3.1).
 
-**Sıradaki:** 5. adım, motor ve ekranlar bölüm yapısına (orta). Kullanıcının "devam" demesi bekleniyor.
+**4. oturum, devamı (5. adım):** Motor ve ekranlar roman yapısına geçti (karar 45–47).
+- **Motor:** bölüm akışı, perdeler, alt sahneler (`oyna`, `geç`), bölümün içinde yaşanan yazışma (görüldü, yazıyor, bekleme), sayfada gün ayracı, kayıt onarımı (bozulan bölüm baştan başlar), eski kaydın uyumsuz sayılması.
+- **Ekranlar:** kilit ekranı bölüm perdesi; sahne bütün bölümü akıtır; "Telefonuna bak", canlı yazışma, "Telefonu bırak", sayfada yazışma izi; telefon arşivi ("Hikâyeye dön").
+- **Denetim:** bölüm numaraları ve zamanları, yazışmanın içinde olmayacaklar, alt sahne hedefleri, roman yapısında kullanılmayan parça türleri.
+- **Araçlar:** robot ve okuma aracı roman yapısını oynuyor (her kadın için özenli okuma, bölüm başına kelime sayısı, `--icerik` ile başka klasör); ekran görüntüsü aracının `roman` kipi deneme romanını tarayıcıda baştan sona oynuyor (yazışmanın ortasında kapatıp açmak dahil). Bulunup düzeltilenler: telefonun paragraflar okunmadan açılması, yeniden açılınca mesajların "yazıyor…" olmadan topluca gelmesi, sayfa yeniden kurulunca eski rehber kutusunun tekrar çizilmesi, seçimden hemen sonra gereksiz "Telefonuna bak".
+- **Testler:** 41 (11'i roman yapısı). Eski içerik de tarayıcıda hatasız oynanıyor.
+- Oyunda hâlâ eski içerik var (sürüm 0.4.0); telefonda görünen bir değişiklik yok.
+
+**Sıradaki:** 6. adım, I. Perde (Bölüm 1–11) (büyük). Kullanıcının "devam" demesi bekleniyor.

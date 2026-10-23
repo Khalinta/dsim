@@ -1,0 +1,6 @@
+{
+  "ben": { "ad": "Sen" },
+  "babam": { "ad": "Murat", "tanimsiz": "Baban", "sahnede": "Baban", "numara": "0532 655 09 34", "rehberde": "Babam", "biliniyor": true, "renk": "#6b737d", "yazmaHizi": 0.6, "okumaGecikmesi": 600 },
+  "ada": { "ad": "Ada", "tanimsiz": "Kısa saçlı kadın", "numara": "0535 410 22 87", "renk": "#b4653a", "yazmaHizi": 1.4, "okumaGecikmesi": 45 },
+  "nil": { "ad": "Nil", "tanimsiz": "Nil", "numara": "0542 118 60 03", "rehberde": "Nil", "biliniyor": true, "renk": "#3f7d74", "yazmaHizi": 0.9, "okumaGecikmesi": 120 }
+}

@@ -2,6 +2,8 @@
 
 Oyunun bütün metni `icerik/` altındaki `.dsim` dosyalarındadır. Her dosya `icerik/dizin.txt`'de listelenir (testler eksik olanı yakalar). Bu belge biçimin tam tarifidir.
 
+> **İki yapı.** İçerikte `tür: bölüm` parçası varsa oyun **roman yapısında** çalışır (PROJE.md karar 38–45): bölümler sırayla akar, yazışmalar bölümün içinde yaşanır. Yoksa eski, takvime bağlı yapı çalışır (eylem menüsü, "Bekle", kendiliğinden gelen mesajlar). Eski yapı, I. Perde yazılıp oyuna girince (6. adım) kalkacak. Roman yapısının tarifi aşağıda, "Roman yapısı" başlığında; geri kalan her şey (gövde, seçenekler, koşullar, değişkenler) iki yapıda da aynıdır.
+
 ## Parça
 
 Her parça `=== kimlik` satırıyla başlar. Hemen altında başlık satırları gelir, sonra **bir boş satır**, sonra gövde.
@@ -25,7 +27,8 @@ Kimlikler küçük harf, rakam ve `_` ile yazılır (Türkçe harfler olur).
 
 | tür | Ne | Nasıl açılır |
 |---|---|---|
-| `sahne` | Tam ekran, kitap gibi akan sahne | `zaman` gelince ya da `>> başlat` ile |
+| `bölüm` | Romanın bir bölümü (roman yapısı) | Sırayla; ilk bölüm oyun başlarken |
+| `sahne` | Tam ekran, kitap gibi akan sahne. Romanda bir bölümün alt sahnesi | `zaman` gelince ya da `>> başlat` ile; romanda `>> oyna`/`>> geç` ile |
 | `mesaj` | Bir kişiyle yazışma parçası | `zaman`, `tarih`/`pencere` (kendiliğinden), `başlatan: oyuncu` ya da `>> başlat` |
 | `eylem` | Kilit ekranındaki "Ne yapacaksın?" seçeneği | `tarih`, `pencere`, `koşul` tutunca listede görünür; anlatı varsa sahne olarak oynar |
 | `geçmiş` | Oyun başlamadan önce telefonda duran mesajlar | Oyun başlarken bir kez |
@@ -35,6 +38,8 @@ Kimlikler küçük harf, rakam ve `_` ile yazılır (Türkçe harfler olur).
 | Başlık | Örnek | Anlamı |
 |---|---|---|
 | `tür` | `sahne` | Zorunlu |
+| `bölüm` | `4` | Roman: bölüm numarası |
+| `perde` | `Sezon Sonu` | Roman: perdeyi açan bölümde perdenin adı |
 | `kişi` | `defne` | Mesajda sohbetin sahibi; sahnede renk ve o an yanında olunan kişi |
 | `zaman` | `15 Eylül 08:10` | O an kendiliğinden başlar (koşul tutarsa; tutmazsa hiç başlamaz) |
 | `tarih` | `15 Eylül - 21 Eylül` | Geçerli olduğu günler |
@@ -52,6 +57,102 @@ Kimlikler küçük harf, rakam ve `_` ile yazılır (Türkçe harfler olur).
 | `ton` | `gece`, `gündüz` | Sahnenin kâğıt rengini saatten bağımsız belirler |
 | `grup` | `vardiya` | Eylem: aynı gruptan kilit ekranında yalnızca biri görünür (önceliği en yüksek olan). Tekrarlanan işlerin (vardiya, ders) her seferi ayrı yazılır; yazılanlar bitince `tekrar: evet` olan sessiz yedek kalır |
 | `not` | serbest | Yazara not, oyunda görünmez |
+
+## Roman yapısı
+
+### Bölüm
+
+```
+=== b04_firin
+tür: bölüm
+bölüm: 4
+başlık: Fırın
+perde: Sezon Sonu
+zaman: 18 Eylül 17:40
+yer: Mendirek
+kişi: defne
+
+Gövde: bütün bölüm, baştan sona.
+```
+
+- `bölüm`: numara. Oyun 1'den başlar, her bölüm bitince numarası bir sonraki olana geçer. Numaralar tek olmalı; zamanları geriye gitmemeli (denetim).
+- `başlık`: bölümün adı (perdede ve sayfanın başında).
+- `perde`: yalnızca bir perdeyi açan bölümde; perdenin adı. Numarası kendiliğinden sayılır (I, II, III…).
+- `zaman`: bölümün başladığı an. Saat ileri alınır (geri alınmaz).
+- `yer`, `ton`, `kişi`: sahnedeki gibi (kişi yalnızca sayfanın vurgu rengini verir).
+- Bölüm bitince oyuncu "Sonraki bölüm"e dokunur; sıradaki bölüm önce **perdesiyle** açılır (kilit ekranı: perde adı, bölüm numarası ve adı, o günün göğü, tarih, saat, yer).
+- Son bölüm bittiğinde ya da bir yerde `>> bitir` geçtiyse roman biter.
+
+### Alt sahneler: `>> oyna`, `>> geç`
+
+Uzun bir bölüm, yol ayrımlarının dalları ayrı parçalara (`tür: sahne`, zamansız) bölünebilir.
+
+| Komut | Anlamı |
+|---|---|
+| `>> oyna kimlik` | O sahneyi oynar, bitince kalınan yerden sürer (Ink'teki "tünel") |
+| `>> geç kimlik` | O anki parçayı bırakır, onun yerine bu sahne oynar; o da bitince çağıran parçaya dönülür |
+| `-> son` | O anki parçayı bitirir (bir alt sahnedeyse çağırana döner; bölümdeyse bölüm biter) |
+
+`gördü(kimlik)` ve `bitti(kimlik)` alt sahneler için de çalışır.
+
+### Yazışma: `>> yazışma kişi`
+
+Altındaki satırlar (iki boşluk içeride) telefonda, o kişiyle yaşanır. Akış yazışmaya gelince:
+1. Sayfaya okunacak yeni metin geldiyse sayfanın sonunda **"Telefonuna bak"** çıkar; oyuncu dokununca telefon açılır. (Yazışma bir seçimin hemen ardından başlıyorsa, örneğin "(Ona yaz.)", telefon doğrudan açılır.)
+2. Mesajlar telefonda tek tek gelir: oyuncu yazdıysa önce "görüldü", sonra "yazıyor…", sonra mesaj.
+3. Yazışma bitince **"Telefonu bırak"** çıkar; sayfaya dönülür. Sayfada yazışmanın küçük bir izi kalır (dokununca o sohbet açılır).
+
+```
+Odanın ışığını kapatmışsın ki telefon titriyor.
+>> yazışma defne
+  @defne: sezon bitti, sen gitmedin.
+  @defne: bu bir hata mı, tercih mi? fiş istiyorum
+  * tercih
+    [defne.tercih]
+    >> okudu
+    >> bekle 4dk
+    @defne: hmm
+  * (Cevap verme.)
+Telefonu yüzüstü bırakıyorsun.
+```
+
+Yazışmanın içinde:
+
+| Satır | Anlamı |
+|---|---|
+| `@kişi: metin` | O kişinin mesajı. Yazışmanın ilk mesajı telefon açılırken çoktan gelmiştir; sonrakiler kişinin yazma hızıyla gelir |
+| `@ben: metin` | Oyuncunun kendiliğinden gönderdiği mesaj (seçimsiz) |
+| `* metin` | Oyuncunun gönderebileceği mesaj (tırnaksız, yazıldığı gibi gider) |
+| `* (Eylem.)` | Gönderilmeyen bir davranış: "(Cevap verme.)", "(Yazıp sil.)" |
+| `>> okudu` | Karşıdaki oyuncunun mesajlarını okudu ("görüldü"), ama yazmıyor |
+| `>> bekle 20dk` | Zaman geçer; mesaj saatlerinde görünür. Uzun beklemeler sayfadaki izde "20 dakika sonra" diye kalır |
+| `>> rehber kişi: Ad 1 \| Ad 2` | Numarayı rehbere kaydetme |
+| `[işlem]`, `>> eğer` | Her yerdeki gibi |
+
+Yazışmanın içinde anlatı, başka kişinin sözü, tırnaklı seçenek, `zaman`, `saat`, `yer`, `ev`, `başlat`, `randevu`, `bitir`, `oyna`, `geç` ve iç içe yazışma olmaz (denetim yakalar). Anlatıya dönmek için yazışmayı kapat (girintiyi bitir), anlatıyı yaz, gerekirse yeni bir yazışma aç.
+
+**Oyuncunun başlattığı yazışma** bir sahne seçimidir:
+
+```
+Telefon elinde. Kime yazacaksın?
+* {tanıdı(ilgin)} (Ilgın'a yaz.)
+  >> yazışma ilgin
+    * eczane açık mı hâlâ
+      ...
+* (Kimseye yazma.)
+```
+
+**Aynı gece iki kişi:** Bir yazışma bitip hemen başka biriyle başlarsa telefon kapanmadan öbür sohbete geçer.
+
+**Telefonun arşivi:** Sayfada bir seçim beklenirken telefon düğmesi telefonu açar; eski yazışmalar okunur, kimseye yazılmaz, hikâye değişmez. "Hikâyeye dön" ile sayfaya dönülür.
+
+### Zaman
+
+Saati yalnızca hikâye ilerletir: bölümün `zaman`'ı, `>> zaman`, `>> saat`, `>> bekle` ve yazışmadaki mesajların yazılma süreleri. Sayfada gün değişince bir gün ayracı çıkar ("Çarşamba, 17 Eylül").
+
+### Roman yapısında kullanılmayanlar
+
+`tür: eylem`, `tür: mesaj` (yazışmalar bölümün içinde), kendi saatinde başlayan sahne (`zaman` başlıklı `tür: sahne`), randevu kartları, "Bekle" ve "Uyu". Denetim bunları roman yapısında hata sayar. `tür: geçmiş` (oyun başlamadan telefonda duran mesajlar) aynen kullanılır.
 
 ## Gövde
 
@@ -121,7 +222,7 @@ Değişkene bugünün gün numarası yazılabilir: `[defne.gitti_gun = bugün]`,
 - `<parça>.<seçim>`: o sahnede verilen cevap ("acilis.cevap").
 - `sahne.` ile başlayanlar her sahne başında silinir.
 
-## Zamanlama nasıl işler
+## Zamanlama nasıl işler (eski yapı)
 
 - Oyun saati yalnızca oyuncu bir şey yaptığında ilerler.
 - Bir mesaj parçasının ilk mesajı başladığı anda gelir. Sonrakiler kişinin yazma hızına göre (`kisiler.json`: `yazmaHizi`) gecikir. Oyuncu cevap verdiyse önce okuma gecikmesi (`okumaGecikmesi`, saniye) eklenir.

@@ -1,0 +1,96 @@
+# Deneme romanı: bölüm akışı, yol ayrımı, yazışma, alt sahne. Motor ve ekran testleri kullanır.
+
+=== b1
+tür: bölüm
+bölüm: 1
+başlık: Liman
+perde: Deneme
+zaman: 14 Eylül 22:40
+yer: Liman
+
+Son vapur iskeleden ayrılırken halatı çözen adam sana bakıp başını sallıyor, sanki kaçırdığın bir şeyi onaylıyor.
+Bankın öbür ucunda kısa saçlı bir kadın ayakkabılarını çıkarmış, tabanlarındaki kumu birbirine vurarak döküyor.
+@ada: Sen de mi kaçırdın?
+* "Kaçırmadım. Binmedim."
+  [ada.yakin +1]
+  @ada: Ha. O başka.
+  Kadın ayakkabılarını yanına koyuyor, ilk kez dönüp yüzüne bakıyor.
+* (Omuz silk.)
+  @ada: Anladım. Konuşmak yok.
+>> tanış ada
+@ada: Ada. Numaramı yaz, sabah altıdaki vapura beni uyandıracak biri lazım.
+>> rehber ada: Ada | Ada Vapur | İskele
+Ada ayakkabılarını eline alıp çıplak ayakla yokuşa yürüyor. Arkasından bakarken saatin geç olduğunu fark ediyorsun.
+>> saat 23:50
+Odanın ışığını kapatmışsın ki telefon titriyor.
+>> yazışma ada
+  @ada: eve vardın mı
+  * vardım. sen?
+    [ada.yakin +1]
+    >> okudu
+    >> bekle 3dk
+    @ada: ben de
+    @ada: 05:40'ta ara. açmazsam bir daha ara
+  * (Cevap verme.)
+Telefonu yüzüstü bırakıp tavana bakıyorsun.
+
+=== b2
+tür: bölüm
+bölüm: 2
+başlık: İki kapı
+zaman: 16 Eylül 19:00
+yer: Çarşı
+
+Pazartesi bir şey olmadan geçiyor. Salı akşamı iki davet aynı saate düşüyor.
+>> eğer ada.yakin >= 1
+  Ada iskelede, elinde iki çay.
+Nil'in atölyesinin ışığı yanık; kapı aralık.
+* {ada.yakin >= 1} (İskeleye in.)
+  >> oyna b2_ada
+* (Atölyenin kapısını it.)
+  >> oyna b2_nil
+Gece bir yerde bitiyor.
+>> zaman 17 Eylül 08:30
+Sabah, çarşıda kepenkler tek tek açılıyor.
+
+=== b2_ada
+tür: sahne
+
+Ada çayın birini uzatıyor, öbürünü iki eliyle tutuyor.
+@ada: Sabah aradın. Kimse beni bu kadar ciddiye almamıştı.
+[gece = "ada"]
+
+=== b2_nil
+tür: sahne
+
+Nil başını kaldırmadan "Kapıyı kapat, toz giriyor," diyor.
+[gece = "nil"]
+>> geç b2_nil_son
+
+=== b2_nil_son
+tür: sahne
+
+Saat dokuzda hâlâ oradasın; elinde zımpara, parmakların bembeyaz.
+
+=== b3
+tür: bölüm
+bölüm: 3
+başlık: Bahar
+zaman: 18 Eylül 20:00
+yer: Oda
+
+>> eğer gece == "ada"
+  Ada'nın çayının tadı hâlâ ağzında.
+>> yoksa
+  Parmaklarında hâlâ toz var.
+Telefon bu kez babandan.
+>> yazışma babam
+  @babam: Okul ne zaman başlıyor?
+  * pazartesi
+    >> okudu
+  * baba bir şey söylemem lazım
+    [itiraf]
+    >> bekle 20dk
+    @babam: Söyle.
+>> bitir
+Telefonu bırakıyorsun.

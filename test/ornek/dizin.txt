@@ -1,0 +1,3 @@
+# Motor ve ekran testleri için küçük bir deneme romanı. Oyunun kendisi kullanmaz.
+gecmis.dsim
+roman.dsim

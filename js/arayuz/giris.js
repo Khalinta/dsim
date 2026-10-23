@@ -18,13 +18,17 @@ export class Giris {
     const app = this.app;
     const dugmeler = app.oyun
       ? [
-        el('button.dugme.birincil', { onclick: () => app.devam() }, 'Devam et'),
+        el('button.dugme.birincil', { onclick: () => (app.oyun.icerik.roman ? app.git('kilit') : app.devam()) }, 'Devam et'),
         el('button.dugme.ikincil', { onclick: () => this.yeniOyunSor() }, 'Yeni oyun'),
       ]
       : [el('button.dugme.birincil', { onclick: () => this.adSor() }, 'Başla')];
     this.kok.append(
       el('div.giris-baslik', {}, el('h1', {}, 'Pırnallı'), el('p', {}, 'Sezon bitiyor.')),
-      el('div.giris-dugmeler', {}, ...dugmeler),
+      el('div.giris-dugmeler', {},
+        !app.oyun && app.eskiKayit
+          ? el('p.giris-not', {}, 'Oyun bir romana dönüştü. Eski kaydın bu yapıda sürmüyor; hikâyeye baştan başlaman gerekiyor.')
+          : null,
+        ...dugmeler),
     );
   }
 

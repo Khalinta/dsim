@@ -286,6 +286,8 @@ svg.ikon { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12
 .ad-sor input::placeholder { color: rgba(255, 240, 225, .3); }
 .ad-sor .not { font-size: 14px; color: rgba(255, 240, 225, .55); line-height: 1.5; margin: -8px 0 0; }
 
+.giris-not { margin: 0 0 4px; font-size: 14.5px; line-height: 1.5; color: rgba(255, 240, 225, .75); text-align: center; }
+
 /* ---------- Kilit ekranı ---------- */
 
 #ekran-kilit {
@@ -457,6 +459,41 @@ svg.ikon { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12
   letter-spacing: -.02em;
 }
 .avatar svg { width: 55%; height: 55%; opacity: .9; }
+
+/* Romanda kilit ekranı: bölüm perdesi */
+
+.perde-kart {
+  position: relative; z-index: 1;
+  flex: 1;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center;
+  gap: 6px;
+  animation: belir 1.1s .2s var(--yumusak) both;
+}
+.perde-adi { font-size: 11.5px; font-weight: 650; letter-spacing: .2em; text-transform: uppercase; opacity: .75; margin-bottom: 26px; }
+.bolum-no { font-size: 12.5px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; opacity: .8; }
+.bolum-adi {
+  margin: 4px 0 18px;
+  font-family: var(--yazi-kitap);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(40px, 13vw, 58px);
+  line-height: 1.05;
+  letter-spacing: -.01em;
+  font-variation-settings: 'opsz' 60;
+  text-wrap: balance;
+}
+.perde-zaman { font-size: 16px; font-weight: 540; opacity: .92; display: flex; gap: 10px; justify-content: center; }
+.perde-zaman .saat { font-variant-numeric: tabular-nums; opacity: .75; }
+.perde-kart .kilit-bilgi { margin-top: 4px; }
+.perde-not { margin: 0; max-width: 22rem; font-size: 16px; line-height: 1.55; opacity: .82; }
+.perde-son .bolum-adi { margin-bottom: 10px; }
+.perde-alt {
+  position: relative; z-index: 1;
+  display: flex; flex-direction: column; gap: 10px;
+  animation: belir 1s .9s var(--yumusak) both;
+}
+.perde-alt .dugme { display: flex; align-items: center; justify-content: center; gap: 6px; }
 
 /* ---------- Telefon ---------- */
 
@@ -704,6 +741,19 @@ svg.ikon { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12
 .cevap.rehber-cevabi { align-self: stretch; text-align: center; border-radius: 14px; }
 .yazma-alani .bos { text-align: center; font-size: 13.5px; color: var(--soluk); padding: 6px 0 2px; }
 
+.yazma-alani.canli-alan { min-height: calc(var(--alt) + 64px); justify-content: flex-end; }
+.telefonu-birak {
+  align-self: stretch;
+  padding: 13px 16px;
+  border-radius: 16px;
+  background: var(--yuzey);
+  border: 1px solid var(--ayirac);
+  font-size: 16px; font-weight: 560;
+  color: var(--vurgu);
+  animation: belir .4s var(--yumusak) both;
+}
+.telefonu-birak:active { transform: scale(.98); }
+
 /* Rehber ve ayarlar */
 
 .bolum-baslik { padding: 18px 20px 6px; font-size: 13px; font-weight: 600; color: var(--soluk); letter-spacing: .04em; text-transform: uppercase; }
@@ -918,6 +968,71 @@ svg.ikon { width: 1em; height: 1em; display: inline-block; vertical-align: -0.12
 .perde.acik { opacity: 1; pointer-events: auto; }
 .perde .yer { font-family: var(--yazi-kitap); font-style: italic; font-size: 30px; line-height: 1.2; }
 .perde .zaman { font-size: 13px; letter-spacing: .14em; text-transform: uppercase; opacity: .6; }
+
+/* Romanda sayfa: bölüm başlığı, gün ayracı, yazışma izi */
+
+.bolum-ust {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 6px;
+  margin: 10px 0 34px;
+  font-family: var(--yazi-arayuz);
+}
+.bolum-ust .bolum-no { font-size: 11.5px; font-weight: 650; letter-spacing: .2em; text-transform: uppercase; color: var(--k); opacity: 1; }
+#ekran-sahne.gece .bolum-ust .bolum-no { color: color-mix(in srgb, var(--k) 55%, #fff); }
+.bolum-ust h1 {
+  margin: 0;
+  font-family: var(--yazi-kitap);
+  font-weight: 400; font-style: italic;
+  font-size: 38px; line-height: 1.1;
+  font-variation-settings: 'opsz' 48;
+}
+.bolum-ust .zaman { font-size: 12.5px; color: var(--soluk); letter-spacing: .02em; }
+.bolum-ust::after { content: ''; width: 28px; height: 2px; margin-top: 14px; background: var(--k); border-radius: 2px; opacity: .8; }
+
+.gun-ayraci-kitap {
+  display: flex; align-items: center; gap: 14px;
+  margin: 2.2em 0 1.6em;
+  font-family: var(--yazi-arayuz);
+  font-size: 11.5px; font-weight: 620; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--soluk);
+}
+.gun-ayraci-kitap::before, .gun-ayraci-kitap::after { content: ''; flex: 1; height: 1px; background: var(--cizgi); }
+
+.yazisma-izi {
+  --kk: #8a8f98;
+  display: flex; flex-direction: column; gap: 4px;
+  width: 100%;
+  margin: .4em 0 1.5em;
+  padding: 12px 14px 14px;
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--murekkep) 6%, var(--kagit));
+  border: 1px solid var(--cizgi);
+  font-family: var(--yazi-arayuz);
+  text-align: left;
+  font-size: 14.5px;
+  line-height: 1.35;
+}
+.yazisma-izi:active { transform: scale(.99); }
+.iz-ust { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; font-size: 11.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--soluk); }
+.iz-ust b { font-weight: 650; color: color-mix(in srgb, var(--kk) 70%, var(--murekkep)); }
+.iz-ust time { margin-left: auto; font-variant-numeric: tabular-nums; letter-spacing: .02em; }
+.iz-m { max-width: 86%; padding: 6px 11px; border-radius: 15px; }
+.iz-m.gelen { align-self: flex-start; background: color-mix(in srgb, var(--kk) 14%, var(--kagit)); border-bottom-left-radius: 5px; }
+.iz-m.giden { align-self: flex-end; background: color-mix(in srgb, var(--murekkep) 12%, var(--kagit)); border-bottom-right-radius: 5px; }
+.iz-not { align-self: center; font-size: 12.5px; font-style: italic; color: var(--soluk); padding: 2px 0; }
+
+.telefon-titriyor {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  width: 100%;
+  margin: 1.4em 0 0;
+  padding: 15px 18px;
+  border-radius: 18px;
+  background: var(--murekkep);
+  color: var(--kagit);
+  font-family: var(--yazi-arayuz);
+  font-size: 16px; font-weight: 560;
+}
+.telefon-titriyor svg { font-size: 21px; animation: titre 2.4s .6s ease-in-out infinite; }
+.telefon-titriyor:active { transform: scale(.98); }
 
 /* ---------- Katman: alt pencere, bildirim balonu ---------- */
 

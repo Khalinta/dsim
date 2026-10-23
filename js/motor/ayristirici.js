@@ -4,10 +4,10 @@ import { ifadeCoz } from './ifade.js';
 import { tarihCoz, sureCoz, saatCoz } from './tarih.js';
 
 const BASLIKLAR = new Set(['tür', 'kişi', 'zaman', 'pencere', 'tarih', 'koşul', 'öncelik', 'tekrar',
-  'başlık', 'başlatan', 'süre', 'yer', 'kesme', 'zaman_aşımı', 'gecikme', 'ton', 'not', 'grup']);
-const TURLER = new Set(['sahne', 'mesaj', 'eylem', 'geçmiş']);
+  'başlık', 'başlatan', 'süre', 'yer', 'kesme', 'zaman_aşımı', 'gecikme', 'ton', 'not', 'grup', 'bölüm', 'perde']);
+const TURLER = new Set(['bölüm', 'sahne', 'mesaj', 'eylem', 'geçmiş']);
 const KOMUTLAR = new Set(['bekle', 'zaman', 'saat', 'yer', 'ev', 'başlat', 'randevu', 'iptal', 'bitir', 'rehber', 'tanış', 'okudu', 'okunmadı',
-  'son', 'zaman_aşımı', 'eğer', 'yoksa']);
+  'son', 'zaman_aşımı', 'eğer', 'yoksa', 'yazışma', 'oyna', 'geç']);
 const AD = /^[\p{Ll}_][\p{Ll}\p{N}_]*$/u;
 const DEGISKEN = /^[\p{L}_][\p{L}\p{N}_.]*$/u;
 
@@ -115,6 +115,11 @@ function baslikCoz(parca, satir, hata) {
   parca.kesme = b['kesme'] === 'evet';
   parca.baslatan = b['başlatan'] || null;
   parca.grup = b['grup'] || null;
+  if (b['bölüm'] !== undefined) {
+    parca.bolum = Number(b['bölüm']);
+    if (!Number.isInteger(parca.bolum) || parca.bolum < 1) hata(satir, `"${ad}": bölüm numarası pozitif bir tam sayı olmalı (${b['bölüm']}).`);
+  }
+  if (parca.tur === 'bölüm' && b['bölüm'] === undefined) hata(satir, `"${ad}": bölümün numarası yok (bölüm: 4).`);
 }
 
 function blokOku(parca, satirlar, durum, girinti, listeNo, hata) {
@@ -213,6 +218,16 @@ function blokOku(parca, satirlar, durum, girinti, listeNo, hata) {
         continue;
       }
       if (ad === 'yoksa') { hata(s.no, '"yoksa" öncesinde bir "eğer" yok.'); continue; }
+
+      // Hikâyenin içinde yaşanan yazışma: altındaki satırlar telefonda, o kişiyle olur.
+      if (ad === 'yazışma') {
+        if (!AD.test(arg)) hata(s.no, `"yazışma" bir kişi kimliği ister: ${c}`);
+        const dugum = { t: 'yazışma', kisi: arg, govde: parca.listeler.push([]) - 1, no: s.no };
+        blokOku(parca, satirlar, durum, girinti + 2, dugum.govde, hata);
+        if (!parca.listeler[dugum.govde].length) hata(s.no, 'Boş yazışma: altına iki boşluk içeride mesajlar yaz.');
+        liste.push(dugum);
+        continue;
+      }
 
       const komut = komutCoz(ad, arg, s.no, hata);
       if (!komut) continue;
@@ -314,8 +329,10 @@ function komutCoz(ad, arg, no, hata) {
       if (k.adlar.length < 2) hata(no, 'Rehber için en az iki ad seçeneği yaz.');
       return k;
     }
-    case 'iptal': {
-      if (!AD.test(arg)) hata(no, `"iptal" bir parça kimliği ister: ${arg}`);
+    case 'iptal':
+    case 'oyna':
+    case 'geç': {
+      if (!AD.test(arg)) hata(no, `"${ad}" bir parça kimliği ister: ${arg}`);
       k.hedef = arg;
       return k;
     }

@@ -1,0 +1,7 @@
+[
+  { "gun": 0, "durum": "açık", "gunduz": 27, "gece": 21 },
+  { "gun": 1, "durum": "az bulutlu", "gunduz": 26, "gece": 20 },
+  { "gun": 2, "durum": "rüzgârlı", "gunduz": 24, "gece": 19 },
+  { "gun": 3, "durum": "yağmurlu", "gunduz": 21, "gece": 17 },
+  { "gun": 4, "durum": "bulutlu", "gunduz": 22, "gece": 17 }
+]

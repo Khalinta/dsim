@@ -6,8 +6,9 @@ import { icerigiYukle } from '../js/motor/yukleme.js';
 
 export const KOK = new URL('../', import.meta.url);
 
-export function diskIcerik() {
-  return icerigiYukle((yol) => readFile(new URL(`icerik/${yol}`, KOK), 'utf8'));
+// klasor: içeriğin klasörü (kök klasöre göre). Varsayılan oyunun kendi içeriği; testler test/ornek/ kullanır.
+export function diskIcerik(klasor = 'icerik') {
+  return icerigiYukle((yol) => readFile(new URL(`${klasor.replace(/\/$/, '')}/${yol}`, KOK), 'utf8'));
 }
 
 // yazim/yasakli.txt → [{ metin } | { desen }]
