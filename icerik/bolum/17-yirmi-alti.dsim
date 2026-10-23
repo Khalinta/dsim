@@ -1,0 +1,1111 @@
+# Bölüm 17 — Yirmi altı
+# 24 Ekim Cuma. Defne'nin doğum günü (26). Lodos bitiyor.
+# Sabah 06:10: Ela, lodostan sonra soğuk su (bağ varsa).
+# Akşam Mendirek: Sarp'ın daveti; Saadet Abla geçen yılı hatırlıyor.
+# Yol ayrımı (vardiyadan sonra, 01:10): Defne, Kuyu (market keki, tek mum; çok sarhoş; cinsel seçenek çıkmaz; oyuncu onu yukarı çıkarır) / Ceren, sahil yolu ve Manzara seyir yeri / Lara, havuz kenarı, babasının aradığı numara / eve dönmek.
+# Gece ve ertesi gün: Defne'nin mesajı (gidip gitmediğine ve bilip bilmediğine göre).
+# Soru: Kutlanmak istemeyen birini kutlamak.
+
+=== b17
+tür: bölüm
+bölüm: 17
+başlık: Yirmi altı
+zaman: 24 Ekim 06:10
+yer: Taş Mahalle, ev
+
+Cuma sabahı sessizlik uyandırıyor. Üç gündür pencereyi zorlayan rüzgâr gece bir ara gitmiş; gittiğini kimse duymamış. Cam kımıldamıyor. Aşağıda deniz hâlâ kabarık ama yorgun; dalgalar duvara vuruyor, köpük çıkarmıyor artık, yalnızca vuruyor, bir alışkanlıkla.
+>> eğer ela.yakin >= 5 ve kayıtlı(ela)
+  Telefon titriyor. Saat altıyı on geçiyor.
+  >> yazışma ela
+    @ela: uyan ⛵
+    @ela: lodos bitti. deniz yorgun ama temiz. 6.40ta iskelenin ucundayım
+    @ela: soğuk su. lodostan sonra su bi derece düşer. ben girerim. sen bakarsın ya da girersin
+    * geliyorum
+      [ela.sabah17]
+      >> bekle 1dk
+      @ela: 🔥 havlu getir. benimkini vermem
+    * saat altı ela
+      >> bekle 1dk
+      @ela: altı on. altı değil. hassas ol
+      @ela: gelmiyosan gelme. ben girerim yine 😭
+    * (Uyu.)
+      [ela.uyan_cevapsiz17]
+  >> eğer ela.sabah17
+    >> oyna b17_ela_sabah
+
+>> zaman 24 Ekim 13:15
+>> yer Kabaktepe Yerleşkesi
+Öğle arasında kampüs ışıl ışıl. Lodostan sonraki ilk açık gün; herkes çimenlerde, montlar çıkarılmış, biri gitar çalıyor, kötü, kimse şikâyet etmiyor. Türbinler tepede yavaş dönüyor; rüzgâr yok, dönmeleri bir alışkanlık.
+Telefonunda bir şey yok. Defne sabah on birden önce yazmaz; on birden sonra da yazmamış. Sarı kapının arkasında, yokuşun ortasında, bir gün başlıyor, kimsenin kutlamaması istenen bir gün.
+>> eğer defne.dogum_biliyor ve kayıtlı(defne)
+  * (Defne'ye yaz.)
+    >> yazışma defne
+      * bugün nasılsın
+        >> bekle 40dk
+        @defne: bugün her gün gibiyim.
+        @defne: bu nokta "her gün gibi" noktası. özel bir nokta değil. özel günlerde başka nokta kullanırım, bugün onu kullanmıyorum.
+      * iyi ki doğdun
+        [defne.kutladi]
+        >> bekle 1sa
+        @defne: onur.
+        @defne: onur söyledi. onur her şeyi söyler. yarısı yanlış. hangi yarısı?
+        @defne: neyse. teşekkür etmiyorum. etmeyeceğim. bu bir tavır.
+        @defne: 🙂
+      * müdür nasıl
+        [defne.yakin +1]
+        >> bekle 20dk
+        @defne: müdür bugün bir kediyle göz göze geldi ve kazandı. ilk kez. kutlama yapmadık, müdür de kutlanmak istemiyor. ortak noktamız.
+    Telefonu cebine koyuyorsun. Gitarcı aynı akoru yirminci kez çalıyor; bu sefer doğru.
+  * (Yazma. İstemediğini söyledi.)
+    [defne.yazmadi17]
+    Yazmıyorsun. Telefonu cebine koyuyorsun. Gitarcı aynı akoru yirminci kez çalıyor; bu sefer doğru.
+
+>> zaman 24 Ekim 18:00
+>> yer Kordon, Mendirek
+Mendirek'te lodostan sonraki ilk cuma; kasaba üç gün evde kalmış, şimdi bir anda dışarıda. Dış masalar yeniden kurulmuş, naylon sökülmüş, sandalyeler ıslak, Cemal her birini bir bezle kuruluyor, her birine bir küfür.
+Saadet Abla mutfak kapısında; elleri önlüğünde, kordona bakıyor. Bir süre sonra konuşuyor; sana değil, kordona.
+@saadet: Seramikçinin doğum günü bugün.
+@saadet: Geçen yıl bugün tek başına geldi buraya. Kuyu kapalıydı, Sarp İzmir'deydi. Şu masaya oturdu, en uçtakine. Bir rakı içti. Bir tane daha. Üçüncüyü Nuri vermedi. "Eve git kızım" dedi. Gitti.
+@saadet: Kimseye "doğum günüm" demedi. Ben biliyordum; kimliğini görmüştüm, bir kere, cüzdanı düşmüştü. Ben de bir şey demedim. Bir tatlı koydum önüne; yemedi.
+@saadet: Bu yıl Sarp burada. İyi. Ama Sarp barda. Bu gece onu eve biri bıraksın.
+Mutfağa dönüyor. Kapıda duruyor.
+@saadet: Bunu sana söylemedim.
+@saadet: Gel. Mutfağa. On dakika. Cemal idare eder; idare etmezse de etmez.
+Mutfak sıcak; ızgaranın dumanı, kızgın yağ, limon. Saadet Abla ocağın başında, geniş, dibi kararmış bir tencere; içinde tereyağı eriyor. Yanında bir kâse irmik, bir kâse çam fıstığı, bir tencerede şerbet, ılık.
+@saadet: İrmik helvası. Karıştır. Ben söyleyene kadar durma.
+Tahta kaşığı eline veriyor. İrmiği tereyağına döküyor; bir hışırtı, bir koku, ilk anda hiçbir şey, sonra bütün mutfak. Karıştırıyorsun. İrmik yavaş yavaş renk değiştiriyor; beyazdan sarıya, sarıdan açık kahveye. Kolun yanıyor.
+@saadet: Durma.
+@saadet: Helva sabır ister. Aceleci adamın helvası çiğ kalır, korkak adamınki yanar. Ortası. Ortasını bulacaksın.
+Fıstıkları atıyor; bir avuç, saymadan. Kokusu değişiyor; yağın içinde fıstık, kızarıyor. Saadet Abla tencereye bakmıyor; senin kolunun hareketine bakıyor.
+* (Yavaş karıştır. Dibinden.)
+  [saadet.not +1]
+  Yavaş karıştırıyorsun; kaşığı dibe kadar indirip, kenarlardan ortaya. Saadet Abla başını sallıyor.
+  @saadet: Hah. Dibinden. Nuri kırk yılda öğrenemedi. Nuri üstünden karıştırır; üstü pişer, dibi yanar. Nuri'nin hayatı bu.
+* (Hızlı karıştır. Kolun yansın, bitsin.)
+  Hızlı karıştırıyorsun. İrmik kenarlardan sıçrıyor. Saadet Abla elini senin elinin üstüne koyuyor; yavaşlatıyor.
+  @saadet: Bitmek için karıştırırsan biter. Ama helva olmaz.
+@saadet: Şimdi. Şerbet. Geri çekil.
+Şerbeti döküyor. Tencere bir an kükrüyor; buhar yüzüne çarpıyor, tatlı, sıcak. Saadet Abla kapağı kapatıyor, ateşi kısıyor.
+@saadet: On dakika demlensin.
+Önlüğünün ucuyla alnını siliyor. Bir sandalyeye oturuyor; mutfağın içinde, ilk kez oturduğunu görüyorsun.
+@saadet: Bizde ölüye de helva yapılır, doğuma da. Sünnete, askere, eve. Helva her şeye gider. Ne olduğunu söylemez. Önüne koyarsın; o anlar.
+@saadet: Geçen yıl kıza bir tatlı koydum; yemedi. Bu yıl helva. Helva tatlı değil. Helva bir şey söyler.
+Kapağı açıyor. Helva kabarmış, fıstıklar yüzeyde. Bir kaşıkla bir tasa dolduruyor; küçük bir tas, kenarında Mendirek'in ayıplı tabaklarından biri, çatlak, kullanılmayan. Üstünü bir tabakla kapatıyor; bir bez, bir düğüm.
+@saadet: Al. Ona ver. Benden demeden. Sen verdin.
+@saadet: Vermezsen birine ver. Helva boşa gitmez. Birinin ağzına girer. Kimin olduğu önemli değil; helva önemli.
+Bez düğümlü tası eline veriyor; sıcak, ağır.
+[helva17]
+>> zaman 24 Ekim 20:30
+Saat sekiz buçukta kapıda bir baston. Önce baston, sonra bir ayak, sonra Hasan Bey; ceketi ütülü, kravatsız ama gömleğinin yakası iliklenmiş, kolunda Gülay Hanım. Arkalarında, kapıyı tutan, Ilgın; önlüksüz, kotlu, yüzünde bir ifade, hiçbir şey olmamış gibi yapmaya çalışan.
+Mendirek bir an susuyor. Masalar değil; mutfak. Saadet Abla kapıda beliriyor, elinde kepçe. Nuri Abi ızgaranın başından başını kaldırıyor; dumanın arkasından, uzun.
+@saadet: Hasan.
+@saadet: Hasan Bey geldi. İnmeden beri ilk. Bir buçuk yıl.
+Bunu kimseye söylemiyor; söylemesine gerek yok, bütün mutfak duydu.
+Ilgın babasını pencerenin yanındaki masaya oturtuyor; denize bakan, köşedeki. Bastonu sandalyenin arkasına asıyor. Gülay Hanım ceketini düzeltiyor, Hasan Bey'inkini de. Ilgın seni görüyor; bir an, sonra menüye.
+>> eğer hasan.ciddi veya hasan.sordu
+  @hasan: Tavlacı!
+  @hasan: Burada da mı çalışıyorsun? Her yerdesin. Gülay, bu tavlacı.
+  @yabanci(Gülay Hanım): Biliyorum Hasan. Çorba içtik birlikte. Yani o içti, Ilgın içti. Ben koydum.
+>> yoksa
+  Hasan Bey seni süzüyor; menüyü değil, seni, garsonu, kırk yıl bu masada kim garsonluk yaptıysa onunla karşılaştırarak.
+Masaya gidiyorsun. Hasan Bey menüye bakmıyor.
+@hasan: Rakı. Tek. Bir de beyaz peynir, kavun yoksa domates. Palamut var mı? Var. Palamut.
+@yabanci(Gülay Hanım): Hasan.
+@ilgin: Baba.
+@hasan: Kırk yıl bu masada rakı içtim. Doktor "bir tek" dedi.
+@ilgin: Doktor "hiç" dedi.
+@hasan: Doktor "hiç" dedi ama gözleri "bir tek" dedi. Ben gözlere bakarım. Kırk yıl eczacılık yaptım, doktorların gözlerini okurum.
+Üçü sana bakıyor. Gülay Hanım, Ilgın, Hasan Bey. Bir garsona bakar gibi değil; bir hakeme.
+* (Rakıyı getir. Tek, küçük kadehte, bol su.)
+  [ilgin.raki_getirdi]
+  Mutfağa gidiyorsun. Nuri Abi sana bakıyor; kadehi senden alıyor, kendisi dolduruyor. Küçük kadeh; yarısı rakı, yarısı su, bir buz. Bir kere bakıyor kadehe; bir kere de sana.
+  @nuri: Ben götürürüm.
+  Kendisi götürüyor. Masaya koyuyor. Hasan Bey'in omzuna elini koyuyor; bir saniye, iki adam, kırk yıl.
+  @nuri: Benden, Hasan. Bir tek. Bir daha istersen Saadet'e sor, Saadet vermez.
+  Hasan Bey kadehi kaldırıyor; Nuri Abi'ye, sonra denize. Bir yudum. Gözlerini kapatıyor. Ilgın bakmıyor; bakmamak için bütün yüzünü menüye gömüyor.
+* (Su getir. "Doktor ne dediyse.")
+  [ilgin.yakin +1]
+  [ilgin.su_getirdi]
+  Su getiriyorsun; bir sürahi, üç bardak. Hasan Bey sürahiye bakıyor, sonra sana.
+  @hasan: Su.
+  @hasan: Kızımın tarafını tuttun. Hm. Gülay, bu tavlacı kızımın tarafını tutuyor.
+  @yabanci(Gülay Hanım): Gördüm Hasan.
+  Ilgın bir şey demiyor. Ama menüyü kapatıyor; sana bakıyor, bir an, uzun. Sonra babasına bir bardak su dolduruyor.
+* (Ilgın'a bak. O karar versin.)
+  [ilgin.yakin +1]
+  Ilgın'a bakıyorsun. Ilgın sana bakıyor; sonra babasına. Babası ona bakıyor. Bir süre, masanın üstünde, üç bakış.
+  @ilgin: Tek. Küçük kadeh. Bol su.
+  @ilgin: Bir. Bu gece. İnmeden beri ilk kez dışarıdasın; bir tek. Bir daha bir buçuk yıl sonra.
+  Hasan Bey kızına bakıyor. Bir şey söylemiyor; elini masanın üstünde, Ilgın'ın elinin yanına koyuyor. Dokunmuyor.
+Gece boyunca o masa sessiz. Hasan Bey palamudunu yavaş yiyor, her lokmada denize bakıyor. Gülay Hanım konuşuyor; çarşıyı, Necla Teyze'nin tansiyonunu, bir komşunun kızının nişanını. Ilgın babasının balığını ayıklıyor; kılçıkları, tek tek, sormadan, babası fark etmeden.
+Onda kalkıyorlar. Bastonu sandalyenin arkasından sen alıp veriyorsun. Hasan Bey kapıda duruyor; Mendirek'e, mutfağa, Nuri Abi'ye bakıyor.
+@hasan: Bir buçuk yıl.
+@hasan: Değişmemiş. Ben değiştim. Burası değişmemiş. İyi.
+Ilgın babasının koluna giriyor. Kapıdan çıkarken dönmüyor. Kordona çıkınca dönüyor; camın arkasından, bir saniye, sana.
+Gece kalabalık. Masa masa; palamut, çupra, rakı, rakı. Lodosun üç günü bir gecede ödeniyor; herkes biraz fazla gülüyor, biraz fazla içiyor, biraz fazla bahşiş bırakıyor. Cemal'in yüzünde bir kere bir gülümseme, bir kere, kendisi de şaşırıyor.
+>> eğer sude.yakin >= 5 ve kayıtlı(sude)
+  >> oyna b17_sude_gece
+>> zaman 24 Ekim 23:40
+>> eğer defne.yakin >= 4
+  [davet17.defne]
+  [defne.dogum_biliyor]
+  >> tanış sarp
+  Saat on bire yirmi kala bar tezgâhının ucunda Sarp beliriyor; kolları dövmeli, ceketi siyah, elinde bir poşet, poşetin içinde plastik bir kutu. Kutunun içinde bir kek; market keki, kakaolu, ortası çökük.
+  @sarp: Sen. Mendirek.
+  @sarp: Bir buçukta Kuyu. Arda, ben, bir kek, bir mum. Kendisi gelecek; "kapanıştan sonra bir bira" dedim, "tamam" dedi. Bilmiyormuş gibi yapıyor, biliyor. Biz de bilmiyormuş gibi yapıyoruz. Herkes bilmiyor. Böyle bir parti.
+  >> eğer değil defne.subat_dedi
+    @sarp: Bugün yirmi altısına giriyor. Onur'a "otuz" demişim, öyle duymuş. Ben "sıfır" demedim. Onur'un kulakları yarısını duyar.
+  @sarp: Gelirsen gel. Gelmezsen bir şey demem. O da bir şey demez. Ama ben görürüm. O da görür.
+  Kutuyu tezgâhın altına, buzdolabının yanına koyuyor.
+  @sarp: Burada dursun. Kuyu'da sakladığım her şeyi buluyor. Burada bulamaz.
+>> zaman 25 Ekim 01:00
+Saat bir. Kepengi indiriyorsun. Nuri Abi zinciri tutuyor; Saadet Abla ışıkları söndürüyor, birer birer, en son mutfağınkini.
+>> eğer davet17.defne
+  Sarp'ın kutusunu tezgâhın altından alıyorsun. Kakao kokuyor, bir de plastik.
+>> eğer ceren.yakin >= 5 ve kayıtlı(ceren)
+  [davet17.ceren]
+  >> zaman 25 Ekim 01:04
+  >> yazışma ceren
+    @ceren: Uyanıksan araba var.
+    @ceren: İzinliyim. Dün nöbetten çıktım, bütün gün uyudum, şimdi uyuyamıyorum. Mendirek'in önünden bir buçukta geçeceğim. Kepenk inikse ve sen kaldırımdaysan, dururum. Değilsen durmam. Bunu bir soru olarak okuma; bir trafik bilgisi.
+    * kaldırımda olacağım
+      >> bekle 2dk
+      @ceren: Tamam. Bir buçuk.
+    * nereye gideceğiz
+      >> bekle 3dk
+      @ceren: Bilmiyorum. Bir yere. Bir yer olmasın diye bir yere.
+    * (Cevap verme.)
+      [ceren.sessiz17]
+>> eğer lara.yakin >= 4 ve kayıtlı(lara)
+  [davet17.lara]
+  >> zaman 25 Ekim 01:08
+  >> yazışma lara
+    @lara: uyanık mısın
+    >> bekle 1dk
+    @lara: havuz yeşil. iki şezlong var. biri boş
+    @lara: bu bir davet değil. bir envanter
+    * geliyorum
+      >> bekle 2dk
+      @lara: dolmuş yok bu saatte
+      @lara: rasim efendi kapıyı açık bırakır. yürü
+    * iyi misin
+      >> bekle 3dk
+      @lara: bilinmeyen bir numara aradı. +30 ile başlıyor
+      @lara: açmadım
+    * (Cevap verme.)
+      [lara.cevapsiz17]
+>> zaman 25 Ekim 01:10
+Kordon boş. Bir sokak lambası yanıp sönüyor; lodos bir kablosunu gevşetmiş. Denizin üstünde bir ışık yok, gökyüzünde var; lodostan sonra hava yıkanmış, yıldızlar fazla.
+Cebinde telefon. Elinde, belki, bir kek kutusu.
+* {davet17.defne} (Kuyu. Bir mum.)
+  [gece17 = "defne"]
+  >> oyna b17_defne
+* {davet17.ceren} (Kaldırımda bekle. Bir buçuk.)
+  [gece17 = "ceren"]
+  >> oyna b17_ceren
+* {davet17.lara} (Fener Burnu. Yürü.)
+  [gece17 = "lara"]
+  >> oyna b17_lara
+* (Eve git.)
+  [gece17 = "ev"]
+  >> oyna b17_ev
+
+>> eğer gece17 != "ceren" ve davet17.ceren ve değil ceren.sessiz17
+  >> oyna b17_gece_ceren
+>> eğer gece17 != "lara" ve davet17.lara ve değil lara.cevapsiz17
+  >> oyna b17_gece_lara
+>> eğer gece17 != "defne" ve kayıtlı(defne) ve defne.yakin >= 2
+  >> oyna b17_gece_defne
+>> eğer gece17 == "ev"
+  >> oyna b17_nuri
+>> eğer gece17 == "defne"
+  >> oyna b17_defne_sabah
+>> eğer defne.kanepe ve sude.yakin >= 5
+  >> oyna b17_sude_kapi
+>> eğer değil defne.kanepe ve sude.yakin >= 5 ve kayıtlı(sude)
+  >> oyna b17_sude_mesaj
+>> eğer ilgin.yakin >= 5 ve kayıtlı(ilgin)
+  >> oyna b17_ilgin_nobet
+
+=== b17_ela_sabah
+tür: sahne
+kişi: ela
+
+>> zaman 24 Ekim 06:40
+>> yer Marina
+İskelenin ucunda Ela; mayo, üstünde bir kulüp sweatshirtü, ayakları çıplak. Nilüfer'in iki halatı gece boyunca tutmuş; tekne hâlâ sallanıyor ama yerinde. Ela ona bir kere bakıyor, başını sallıyor, kendine.
+@ela: Tuttu.
+@ela: Hadi. Su on yedi. Lodostan önce on dokuzdu. İki derece. İki derece çok. Vücut bilir.
+Sweatshirtü çıkarıp iskelenin tahtasına atıyor. Sol omzunda, köprücük kemiğinin altında, ince, beyaz bir iz; uzun, düz, bir cerrahın çizgisi. Bunu saklamıyor; göstermiyor da. Orada.
+Kenara yürüyor. Durmuyor; düşünmüyor, saymıyor, atlıyor. Su kapanıyor üstüne. Bir saniye. İki. Sonra başı çıkıyor, on metre ötede, saçı yüzüne yapışmış, nefesi bir çığlık gibi.
+@ela: SİKTİR. SOĞUK.
+@ela: Gel! Gel lan! Düşünme. Düşünürsen girmezsin. Ben düşünmem.
+* (Atla. Düşünmeden.)
+  [ela.yakin +2]
+  [ela.soguk_su]
+  Atlıyorsun. Su bir duvar gibi; göğsüne, kafana, her yere aynı anda. Nefesin kesiliyor, sonra geri geliyor, bir çığlıkla, Ela'nınkinin aynısı. Ela gülüyor; suyun içinde, sesli, kafası geriye.
+  @ela: Hah! Bak! Yaşıyorsun!
+  @ela: Bu his. Bu. Bunun için giriyorum. Bir saniye ölüyorsun, sonra yaşıyorsun. Her sabah bir kere. İlaç gibi. Ilgın'a söyleme, reçete ister.
+  İki dakika. Daha fazla değil; Ela sayıyor. Sonra iskelenin merdivenine yüzüyor, çıkıyor, sana elini uzatıyor. Sol eliyle değil; sağ eliyle. Seni çekiyor.
+* (Merdivenden in. Yavaş.)
+  [ela.yakin +1]
+  Merdivenden iniyorsun; basamak basamak, su bileğinde, dizinde, belinde. Her basamakta bir küfür, içinden. Ela izliyor, ağzı açık.
+  @ela: Merdivenden. Merdivenden giriyor bu. Tanrım. Yavaş ölüm.
+  @ela: Tamam. Girdin. Saymıyorum nasıl girdiğini. Girdin.
+  Göğsüne kadar girince nefesin kesiliyor. Ela yanına yüzüyor; suyu yüzüne sıçratıyor, bir kere.
+  @ela: Kafayı da sok. Kafası girmeyen girmiş sayılmaz.
+* (İskelede kal. Havluyu tut.)
+  Havluyu tutuyorsun. Ela suyun içinde bir tur atıyor; iskelenin altından, Nilüfer'in burnuna kadar, geri. İki dakika. Çıkıyor; mavi dudaklarla, titreyerek, gülerek.
+  @ela: Havlu. Ver. Hah.
+  @ela: Bakan da bir şey yapıyor aslında. Biri bakmazsa girmek başka. Ben tek başıma da girerim ama. Bunu bil. Bakman iyiydi. Bunu da bil.
+Sonra iskelenin ucunda, iki havlu, iki titreme. Güneş Keçi Adası'nın arkasından çıkıyor; denizin üstünde, düz, altın bir yol. Ela havluyu omuzlarına almış; sol omzunu sağ eliyle ovuyor, saklamadan.
+>> eğer ela.omuz_duydu
+  @ela: Soğuk suyu doktor söyledi. İlk ameliyattan sonra. "Soğuk iyi gelir" dedi. Sonra ikinci sakatlıktan sonra başka bir şey söyledi. Onu dinlemedim.
+  Bunu söyleyip susuyor. Bir şey söyledi; ne söylediğini söylemedi. Kendi cümlesinin ucunda durup aşağı bakan biri gibi.
+  * "Ne dedi ikincisinde?"
+    @ela: Bir şey dedi işte.
+    @ela: Herkese söylediğimi dedi. Olimpik seviyeyi unut. Hikâye bu kadar kısa. Uzatan başka biri hakkında konuşuyordur.
+    Gözlerini denizden ayırmıyor. Söylediği cümleyi daha önce çok kere söylemiş; bir ezber gibi, bir halat gibi, elleri bağlıyor, kafası başka yerde.
+    [ela.omuz_hikaye]
+  * (Bir şey sorma. Havlunu onun omzuna da at.)
+    [ela.yakin +1]
+    Kendi havlunu onun omzuna, kendi havlusunun üstüne atıyorsun. Ela bakıyor; iki havlu, bir omuz.
+    @ela: Bu acımak mı?
+    @ela: Değil. Biliyorum değil. Bu… neyse. Sıcak. Tamam.
+>> yoksa
+  Omzundaki ize bakıyorsun; bakmamaya çalışırken. Ela görüyor.
+  @ela: Eski. Bir yarış. Bir ameliyat. Soğuk su iyi gelir. Her şeye.
+  @ela: Başka bir şey sorma. Sabahın altısında hiç.
+@ela: Bugün seramikçinin doğum günüymüş. Kordon biliyor. Kuyu'da bir şey yapacaklarmış.
+@ela: Ben gitmem. Tanımıyorum onu. Bir kere Mendirek'te gördüm; bana "yelkenci" dedi, ben ona "seramikçi" dedim, kimse kimsenin adını sormadı. Dengeli bir ilişki.
+@ela: Sen gidersen git. Ben bişey demem. Dedim zaten.
+
+=== b17_ev
+tür: sahne
+
+>> zaman 25 Ekim 01:20
+>> yer Taş Mahalle, ev
+Yokuşu çıkıyorsun. Taş Mahalle uyuyor; bir pencere yanık, bir kedi bir duvarın üstünde, bir de yokuşun ortasında, sarı bir kapı. Kapı kapalı. Işık yok. Müdür kapının önünde değil; içeride, ya da Kuyu'da, sahibiyle.
+Sarı kapının önünden geçiyorsun. Durmuyorsun; ya da duruyorsun, bir saniye, sonra yürüyorsun.
+>> eğer helva17
+  Elinde Saadet Abla'nın bez düğümlü tası; soğumuş, ağır.
+  * (Tası kapının eşiğine bırak.)
+    [defne.helva_esik]
+    Tası eşiğe bırakıyorsun. Bez, düğüm, çatlak tabak. Sabah bulacak. Saadet Abla'nın düğümünü tanıyacak; kimin bıraktığını bilmeyecek, ya da bilecek.
+  * (Tası eve götür. Sabah Saadet Abla'ya geri ver.)
+    Tası koltuğunun altına alıp yürüyorsun. Helva boşa gitmez, demişti; birinin ağzına girer.
+>> eğer davet17.defne
+  Kek kutusu hâlâ elinde. Sarp'ın keki; kakao, plastik, bir mum, yanmamış. Kutuyu sarı kapının eşiğine bırakıyorsun ya da bırakmıyorsun.
+  * (Kutuyu eşiğe bırak.)
+    [defne.kek_esik]
+    Kutuyu eşiğe bırakıyorsun. Bir not yok; kutunun üstünde yalnızca Sarp'ın el yazısıyla bir kelime, keçeli kalemle: KUYU. Sabah bulacak. Ya da Müdür bulacak, gece, ve sabah yalnızca kutu kalacak.
+  * (Kutuyu Kuyu'ya götür. Kapıdan ver, girme.)
+    [defne.kek_kapi]
+    Çarşıya geri iniyorsun. Kuyu'nun merdivenlerinin başında Sarp sigara içiyor; kutuyu alıyor, bir şey sormuyor.
+    @sarp: Gelmiyor musun?
+    @sarp: Tamam. Kek geldi. Kek yeter. Söylerim geldiğini; kek getiren gelmiş sayılır. Sayılmaz. Söylemem.
+    Kapı aralığından, merdivenin dibinden, bir kahkaha yükseliyor; Defne'nin, yüksek, fazla yüksek. Sarp başını çeviriyor, kahkahanın geldiği yere bakıyor, bir şey ölçüyor.
+    @sarp: Üçüncü rakıdaymış geldiğinde. Evde başlamış. Neyse. Ben buradayım.
+Saniye Hanım'ın ışığı sönük. Merdivenin gıcırdayan basamağına basmadan çıkıyorsun. Onur'un kapısının altından ışık yok; Onur uyuyor, ya da bir yerde, Kuyu'da, haber topluyor.
+>> eğer saniye.aytmatov
+  Komodinin üstünde Saniye Hanım'ın verdiği ince kitap. Kırmızı yazmalı bir kız, solmuş. Açıyorsun; ilk sayfa, ikinci, onuncu. Asel konuşmuyor; bir kamyoncu konuşuyor, bir yol konuşuyor, bir rüzgâr. Saniye Hanım haklı; susan kadın daha çok söylüyor.
+  Saat ikide kitabın yarısındasın. Uyuyorsun; kitap göğsünde, ışık açık.
+>> yoksa
+  Pencereyi açıyorsun. Lodostan sonraki ilk sessiz gece; deniz yorgun, yıldızlar fazla. Fener Burnu'nda fener dönüyor; her dönüşünde körfezin bir parçası bir saniye aydınlanıyor.
+  Uykuya dalarken aklında bir mum; bir yerde, bir bodrumda, bir cam zeminin üstünde, yanıyor ya da yanmıyor.
+>> zaman 25 Ekim 02:10
+Kapı. Merdiven; gıcırdayan basamak, iki kere, Onur her zaman ona basar. Mutfakta bir dolap kapağı, bir bardak, musluk. Sonra kapında bir vuruş; hafif, Onur'un hafifi.
+@onur: Kanka. Uyuyor musun? Uyuyorsun. Tamam. Anlatıyorum.
+Kapıyı aralıyor; başını sokuyor, karanlıkta, yüzü telefonunun ışığında.
+@onur: Kuyu'daydım. Doğum günü. Seramikçinin. Davetli değildim; ben hiçbir yere davetli değilim, her yere giderim.
+@onur: Mumu üflemedi. Kek orada durdu, mum eridi, kekin içine aktı. Sarp en son söndürdü, parmaklarıyla. Kimse şarkı söylemedi. Arda başlayacaktı, Sarp baktı.
+>> eğer defne.helva_esik
+  @onur: Bir de kapısında helva varmış. Dönerken gördüm. Bezle bağlı bir tas. Kim bıraktı kimse bilmiyor. Ben de bilmiyorum. İlk kez bir şeyi bilmiyorum kanka, iki hafta içinde ikinci kez. Bu kasaba değişiyor.
+@onur: Çok içti. Sarp götürdü onu eve, kolundan. Yokuşta bir şey söyledi, Sarp'a; Sarp sonra bana söylemedi. Sarp hiçbir şey söylemez. Ben de onu sevmiyorum bu yüzden. Seviyorum aslında.
+@onur: Neyse. Doğum günü. Yirmi altı. Otuz değilmiş. Yarısını yanlış söyledim; her zamanki gibi. Gene de doğru yarısı doğruydu.
+Kapıyı kapatıyor. Merdivenin dibinde bir şey daha söylüyor, kendine, duyulmuyor.
+
+=== b17_defne
+tür: sahne
+kişi: defne
+
+>> zaman 25 Ekim 01:25
+>> yer Çarşı, Kuyu
+>> tanış sarp
+Kuyu'nun merdivenlerinden inerken müzik yok. Kapı yarı açık; içeride ışıkların yarısı sönük, sandalyeler masaların üstünde, barın arkasında Sarp, bir bezle bir şey silmeden siliyor. Cam zeminin altında kuyu; ışıklandırılmış taş duvarlar, dipte kara su.
+Bir masa indirilmiş. Masada Arda; önünde bir kahve, gece birde, kendi getirdiği termostan. Masanın ucunda Müdür, bir sandalyenin üstünde, oturmuş, bekliyor; bir köpeğin bir sandalyede oturabileceğini kimse ona söylememiş, o da sormamış.
+Kek kutusunu Sarp'a veriyorsun. Sarp kutuyu açıyor; keki bir tabağa koyuyor, ortasındaki çukura bir mum dikiyor. Tek. Beyaz. Bir paketin içinden çıkmış, paketin kalanı tezgâhta.
+@sarp: Geliyor. Merdivende. Sesini duydum. Üçüncü rakıdaymış geldiğinde, Arda'ya yazmış, "üç" diye. Evde başlamış.
+@yabanci(Arda): Ben söyledim, yazma ona, gel dedim. Gelmedi, yazdı. Defne böyledir; gelmeden yazar.
+Merdivenden bir ses; bir topuk, sonra bir topuk daha, ikincisi yanlış basamakta. Defne kapıda.
+Siyah bir elbise; üstünde çamurlu kazağı, bilerek. Saçı açık. Yüzünde hiçbir şey yok; sonra keki görüyor, mumu, Sarp'ın elindeki çakmağı, sana. Yüzüne bir şey geliyor; hızla, sonra gidiyor.
+>> eğer defne.subat_dedi
+  @defne: Ben sana şubat dedim.
+  @defne: Şubat. Açık açık. Kötü bir filmin ortasında. Bir yalanı neden bu kadar kötü söyledim, bilmiyorum; reklamcılıkta daha iyi yalan söylerdim.
+>> yoksa
+  @defne: Kim söyledi?
+  @defne: Onur. Tabii. Onur söyler. Sarp Onur'a söyler, Onur herkese. Ben kimseye söylemedim, herkes biliyor. Bu kasabanın sistemi bu.
+@defne: Yapmayın dedim. Yapmasınlar dedim. Yaptınız. Kek. Bir mum. Market keki.
+@defne: Kampanya: "Yirmi altı." Altına küçük puntoyla: "Hiç kimse istemedi."
+Sarp çakmağı yakıyor. Mum yanıyor; kuyunun cam zemininin üstünde, ışıklandırılmış taşların ve kara suyun üstünde, küçük, titrek.
+Defne masaya oturuyor. Keke bakıyor. Mum yanıyor. Kimse şarkı söylemiyor; Arda bir an ağzını açıyor, Sarp ona bakıyor, Arda kapatıyor.
+@defne: Üflemiyorum.
+@defne: Üflersem bir yıl geçer. Ben bu yılı istemedim. Geçen yılı da istemedim. Bırakın yansın. Bitsin kendi kendine.
+Eriyen mum kekin kakaosuna damlıyor.
+@sarp: Hediye varsa şimdi.
+Herkes sana bakıyor. Müdür bile.
+* {defne.lugat} (Kâğıt torbayı uzat. Lügat.)
+  [defne.hediye = "lugat"]
+  [defne.yakin +2]
+  Torbayı uzatıyorsun. Defne açmıyor önce; ağırlığını tartıyor, kâğıdın üstünden kenarlarını yokluyor.
+  @defne: Kitap. Saniye Hanım'ın ilacı. Kitap şeklinde.
+  Torbadan çıkarıyor. Bez kapak, yırtık bez, sırtı dökülmüş. Lügat. Açıyor. Sayfalar kendiliğinden bir yerde açılıyor; kitabın en çok açıldığı yerde.
+  Mahzun. Mavi kalemle, cetvelle çizilmiş gibi düz. Yanında küçük bir harf: S.
+  Defne susuyor. Uzun.
+  @defne: Mahzun.
+  @defne: Biri birine mahzun demiş. Kırk yıl önce. Altını çizmiş. Bir harf bırakmış. S.
+  @defne: Kim bu?
+  * "Halit Bey. Saniye Hanım'ın kocası. S, Saniye."
+    [defne.halit_bildi]
+    Defne sayfaya bakıyor; mavi çizgiye, S'ye.
+    @defne: Saniye Hanım bir gün mahzunmuş. Kocası görmüş. Söylememiş; çizmiş.
+    @defne: Bu… bu çok iyi bir kampanya. Bu kampanya değil. Bu…
+    Cümleyi bitirmiyor. Kitabı kapatıyor; iki eliyle tutuyor, göğsüne yakın.
+  * "Bilmiyorum. Eski bir el."
+    @defne: Eski bir el. Peki. Bilmediğin bir el. Bilmediğin bir S. Ve sen bunu bana aldın.
+    Kitabı kapatıyor. İki eliyle tutuyor.
+  @defne: Teşekkür etmiyorum. Etmeyeceğim. Bu bir tavır.
+  @defne: Ama okuyacağım. Her gün bir kelime. Kış uzun, kelime çok.
+* {defne.harita} (Kâğıt torbayı uzat. Harita.)
+  [defne.hediye = "harita"]
+  [defne.yakin +1]
+  Defne torbadan katlanmış kâğıdı çıkarıyor. Açıyor; masanın üstüne, kekin yanına, Arda kahvesini kaldırıyor. Pırnallı, 1950'lerden. Kordon yok, kordonun yerinde kayalar; Fabrika'nın yerinde FABRİKA, bacasıyla; Taş Mahalle'nin yokuşu, aynı, yetmiş yıldır aynı.
+  Defne'nin parmağı haritanın üstünde geziyor; Taş Mahalle, yokuş, yokuşun ortası. Sonra aşağı; kıyıya, Uzunkum'a. Orada duruyor. Uzun.
+  Bir şey söylemiyor. Uzunkum'un üstünde parmağı; kumun, denizin, bir kıyı çizgisinin üstünde.
+  @defne: Burada bir şey yok o zaman.
+  @defne: Kum. Bir de deniz. Kimse yok.
+  Haritayı katlıyor; iki hareket, kusursuz, reklamcılıktan kalma.
+  @defne: Teşekkür etmiyorum. Ama bunu duvara asacağım. Neden olduğunu sorma.
+  [defne.harita_bakti]
+* (Bir Mendirek adisyonu çıkar. Üstüne yaz.)
+  [defne.hediye = "adisyon"]
+  [defne.yakin +1]
+  Önlüğün cebinde bir adisyon kalmış; boş, Mendirek'in damgası köşede. Barın kalemiyle yazıyorsun, Defne'nin önüne koyuyorsun.
+  "1 adet doğum günü — ödendi."
+  Defne okuyor. Bir kere. Bir daha. Gülüyor; burnundan, sonra ağzından, sonra bütün yüzüyle, kuyunun içinde yankılanan bir kahkaha.
+  @defne: Kampanya. Bu bir kampanya. Bunu ben yazmalıydım.
+  @defne: Ödendi. Kim ödedi? Sormuyorum. Ödenmiş.
+  Adisyonu katlayıp cüzdanına koyuyor; kimliğinin arkasına, saklı yere.
+* (Eğil. Mumu sen üfle.)
+  [defne.hediye = "mum"]
+  [defne.yakin +2]
+  Eğilip mumu üflüyorsun. Alev titriyor, eğiliyor, sönüyor; ince bir duman, kuyunun karanlığına doğru, düz, kıvrılmadan.
+  Defne dumana bakıyor.
+  @defne: Benim yerime üfledin.
+  @defne: Benim yerime bir yıl geçirdin. Bu yılı sen geçirdin, ben geçirmedim. Kayıtlara öyle geçsin.
+  @defne: Sana borçlandım. Bunu söylemem gerekmezdi. Söyledim. Rakı.
+* (Hiçbir şey verme. Otur.)
+  [defne.hediye = "yok"]
+  Oturuyorsun. Defne sana bakıyor; ellerine, boş.
+  @defne: Hediye yok. İyi.
+  @defne: Kural dört: hediye yok. Şimdi koydum. Kimse uymaz ama sen uydun.
+  Mum yanmaya devam ediyor; erimiş mum kekin ortasındaki çukura doluyor.
+>> eğer helva17
+  Bez düğümlü tası masaya koyuyorsun. Defne bakıyor; düğüme, beze, tasın kenarındaki çatlağa.
+  @defne: Bu ne?
+  Düğümü çözüyor. Helva. Fıstıklı, hâlâ ılık. Kokusu kuyunun üstünde, kekin plastik kokusunun üstünde.
+  @defne: Helva.
+  @defne: Saadet Abla.
+  Soru değil. Tası tanıyor; çatlaktan. Kaşık yok; parmağıyla bir parça alıyor, ağzına koyuyor. Gözlerini kapatıyor.
+  @defne: Geçen yıl bana bir tatlı koydu. Yemedim. Bu yıl helva yolladı.
+  @defne: Helva ölüye de yapılır. Biliyor musun? Biliyor. Saadet Abla biliyor. Bir şey söylüyor.
+  Bir parça daha alıyor. Bir daha. Kekin mumu yanmaya devam ediyor; kimse ona bakmıyor artık.
+Sarp bir rakı koyuyor; Defne'nin önüne, sonra kendi önüne, sonra sana. Arda'ya koymuyor; Arda kahve içiyor. Müdür'e su.
+Bir saat geçiyor. Arda Etiyopya'daki kooperatifi anlatıyor; Defne üç yerde düzeltiyor, Arda üçünde de "haklısın" diyor, dördüncüde Defne yanlış düzeltiyor, Arda yine "haklısın" diyor. Sarp bir şarkı açıyor; bir metal şarkısı, çok kısık, sonra kapatıyor, "yakışmadı" diyor.
+Defne içiyor. Dördüncü. Beşinci. Altıncıyı Sarp bir süre tutuyor, şişe elinde, bekliyor; Defne bakıyor, Sarp koyuyor, yarısını.
+Defne'nin cümleleri uzuyor. Sonra kısalıyor. Sonra yarıda kalıyor. Bir benzetmeye başlıyor, kupalarla ilgili, bitiremiyor; gülüyor, ne söyleyeceğini unuttuğu için, sonra unuttuğuna üzülüyor, yüzünden geçiyor.
+>> eğer defne.hediye == "lugat"
+  Lügat masanın üstünde, elinin altında. Bir ara açıyor, bir kelime okuyor, sesli: "Hasbelkader." Kapatıyor. Gülüyor. Yeniden açıyor.
+* "Defne. Su iç."
+  [defne.yakin +1]
+  @defne: Su.
+  @defne: Kampanya: "Su." Altına küçük puntoyla: "İçen yok."
+  Bardağı alıyor; yarısını içiyor. Yarısını. Sarp başını sallıyor sana, küçük, bir onay.
+* (Bir şey söyleme. Onun rakısını yavaşça kendine çek.)
+  Rakıyı kendine çekiyorsun. Defne görüyor; gözleri bir an keskinleşiyor, bir an eski Defne.
+  @defne: Hırsız.
+  @defne: Bırak. Al. Ben zaten… bitti. Bitti o. Al.
+* (Bir şey yapma.)
+  Bir şey yapmıyorsun. Defne yedinciyi kendisi koyuyor. Sarp bakıyor; sana, sonra Defne'ye, sonra şişeye. Şişeyi barın arkasına götürüyor.
+  @sarp: Bitti.
+  @defne: Bitmedi.
+  @sarp: Bitti, dedim. Benim barım.
+>> zaman 25 Ekim 02:40
+Sarp barın arkasından çıkıyor; ceketi elinde. Sana yaklaşıyor; Defne'yi duymadan.
+@sarp: Eve götür. Ben kapatacağım. Arda'nın arabası yok, benimki İzmir'de. Yürüyerek. Yokuş.
+@sarp: Kapıya kadar. Kapıdan içeri, yukarı. Bırak. Su koy. Bir kova. Bilirsin.
+Bilmiyorsan da Sarp öyle sanıyor.
+Yokuş gece yarısından sonra başka bir yokuş. Taşlar ıslak; lodos gitmiş, nemini bırakmış. Defne bir kolunda; Müdür önde, dönüp dönüp bakarak, bir rehber gibi. Defne'nin botlarının topukları taşlara takılıyor; ikinci takılmada botları çıkarıyor, eline alıyor, çorapla yürüyor, taş soğuk ve ıslak, bir şey demiyor.
+Yokuşun ortasında duruyor. Sarı kapının on adım aşağısında. Denize dönüyor; aşağıda körfez, karanlık, Fener Burnu'nda fener dönüyor.
+@defne: Bu kış kötü geçecek.
+@defne: Biliyorum. Şimdiden biliyorum.
+Sesi değişmiş; sarhoşluğun altından başka bir ses, ayık, çok ayık, çok eski. Bir an. Sonra yine sarhoş.
+* "Geçecek ama."
+  @defne: Geçecek.
+  @defne: Geçer. Her şey geçer. Kampanya. "Her şey geçer." Altına… altına bir şey yazamıyorum. Yazamıyorum.
+* (Bir şey söyleme. Koluna daha sıkı tut.)
+  [defne.yakin +1]
+  Kolunu daha sıkı tutuyorsun. Defne bunu fark ediyor; ya da fark etmiyor, ama ağırlığını biraz daha sana veriyor.
+* "Bu kış yalnız geçmeyecek."
+  [defne.kis_soz]
+  Defne sana dönüyor. Gözleri bulanık; bir an netleşiyor.
+  @defne: Böyle söyleme.
+  @defne: Kalanlar böyle söyler. Sonra kalırlar. Sonra bir gün… Böyle söyleme.
+Sarı kapı. Defne anahtarı arıyor; çantada, kazağın cebinde, elbisenin cebi yok. Müdür kapının dibine oturmuş, bekliyor. Anahtar botun içinden çıkıyor; neden orada olduğunu kimse bilmiyor, Defne de.
+Kapıyı açıyorsun. Defne eşikte dönüyor. Bir eliyle yakanı tutuyor; çekiyor. Yüzü yüzüne çok yakın; rakı, kakao, gece. Gözleri açık ama sana bakmıyor, senin arkana, bir yere, karanlığa.
+@defne: Kal.
+Kelimeyi söylerken dili sürçüyor. Elinin kavrayışı gevşek; bir yakayı tutuyor ama tutmayı unutuyor, bir an, sonra hatırlıyor, yine çekiyor. Kapı kasasına yaslanmış; yaslanmasa düşecek.
+Bu gece bu yokuşun üstünde, bu kapının önünde, Defne bir şeye evet diyecek durumda değil. Hayır diyecek durumda da değil. Bunu ikiniz de biliyorsunuz; o, bir yerde, sarhoşluğun altında; sen burada.
+* (Ellerini yakandan nazikçe çöz. "Yukarı çıkalım.")
+  Ellerini yakandan çözüyorsun; parmaklarını tek tek, nazikçe. Defne direnmiyor; elleri kendiliğinden iniyor, ağır.
+  @defne: Yukarı.
+  @defne: Tamam. Yukarı. Sen bilirsin.
+* ("Defne. Çok sarhoşsun. Bu gece değil.")
+  Defne bir an sana bakıyor; gerçekten, bir an, gözleri netleşiyor.
+  @defne: Bu gece değil.
+  @defne: Haklısın. Haklı olman sinir bozucu. Yukarı.
+* (Bir şey söyleme. Kolunu omzuna al, içeri gir.)
+  Kolunu omzuna alıyorsun. Defne'nin eli yakandan kendiliğinden düşüyor; yakanın tutulduğunu unutmuş. İçeri giriyorsunuz.
+Atölyenin içi karanlık; fırının kokusu, soğumuş kil, sır. Merdiven dar, dik. Defne her basamakta duruyor; bir kere gülüyor, bir kere bir şey söylüyor, anlaşılmıyor. Müdür önden çıkıyor, tepede bekliyor.
+Yukarısı tek oda. Yatak alçak; karyola demiri. Defne'yi yatağın kenarına oturtuyorsun. Oturur oturmaz yan yatıyor; kazağıyla, elbisesiyle.
+Botları kapının dibinde; eşikte, düşürdüğü yerde, biri yatık. Ayaklarında çorap, ıslak, taşın tozu. Çoraplarını çıkarıyorsun; ayakları buz gibi. Battaniyeyi üstüne çekiyorsun.
+Mutfaktan bir bardak su; komodinin üstüne. Banyodan bir kova; yatağın dibine, onun tarafına. Botlarını aşağıdan, eşikten alıp getiriyorsun; yan yana diziyorsun, yatağın ayakucuna, uçları kapıya dönük.
+Defne gözlerini açıyor. Seni görüyor; ya da birini görüyor, sen olduğunu biliyor mu bilmiyorsun.
+@defne: Kahvaltı yok.
+@defne: Kural iki.
+Gözlerini kapatıyor. Nefesi ağırlaşıyor, düzleşiyor. Müdür yatağın ayakucuna çıkıyor; kıvrılıyor, bir göz açık.
+* (Aşağıda, kanepede kal. Sabaha kadar.)
+  [defne.kanepe]
+  [defne.yakin +2]
+  Aşağı iniyorsun. Atölyenin köşesinde bir kanepe; üstünde kil tozu, bir yastık, bir battaniye, katlı. Uzanıyorsun. Kanepe kısa; ayakların kolçaktan sarkıyor. Yukarıda Defne'nin nefesi; merdivenden aşağı, düzenli. Arada bir dönüyor; yatak demiri inliyor, sonra yine nefes.
+  Uyumuyorsun. Sonra uyuyorsun.
+* (Kapıyı arkandan çek. Git.)
+  [defne.gitti17]
+  Bir süre kapının eşiğinde duruyorsun. Nefesi düzenli. Su, kova, ayakkabılar. Kapıyı arkandan çekiyorsun; kilitlemiyorsun, kilitleyemezsin, anahtar içeride, botların yanında.
+  Yokuş. Gece. Bir kedi. Saat üçe çeyrek var.
+
+=== b17_defne_sabah
+tür: sahne
+kişi: defne
+
+>> eğer defne.kanepe
+  >> zaman 25 Ekim 10:50
+  >> yer Taş Mahalle, Çatlak Seramik
+  Kanepede uyanıyorsun; boynun bir yöne kilitlenmiş, ayakların uyuşmuş. Atölyenin camından güneş; kil tozunun içinde, havada, bir ışık sütunu. Mutfakta bir ses; bir cezve, bir kaşık, bir dolap kapağı.
+  Defne mutfak kapısında. Kazak, eşofman altı, saçı toplanmış, yüzü bembeyaz. İki elinde iki kupa.
+  @defne: Kanepe rahat mı?
+  @defne: Değil. Biliyorum. Kısa. Ben üstünde hiç uyumadım; bir kere denedim, ayaklarım kolçaktan sarktı, kalktım.
+  Kupalardan birini uzatıyor. Kahve; sade, koyu, kupanın sırrı yeşil, kulpu yamuk. Fabrika'daki kupa.
+  @defne: Kahve. Kahvaltı değil. Kural.
+  Mutfak kapısına yaslanıyor. Kendi kupasından içiyor; yüzünü buruşturuyor, kahveden değil.
+  @defne: Botlarımı yan yana dizmişsin. Uçları kapıya dönük.
+  @defne: Ben öyle dizmem. Ben fırlatırım. Sabah ilk gördüğüm şey yan yana dizilmiş iki bot oldu. Bir an başka birinin evinde uyandım sandım.
+  @defne: Kova kullanılmadı. Bilgin olsun.
+  Bir süre bir şey söylemiyor. Kupasının kenarındaki bir kabarcığa bakıyor.
+  @defne: Sen durdun.
+  Düz. Sorusuz. Teşekkür etmeden; teşekkür bu cümlenin içinde de yok, altında da.
+  @defne: Ben hatırlamıyorum çoğunu. Kapıyı hatırlıyorum. Yakanı hatırlıyorum. Sonrası yok. Ama sen durdun. Bunu biliyorum, çünkü botlar yan yana.
+  * (Bir şey söyleme. Kahveni iç.)
+    [defne.yakin +1]
+    Kahveni içiyorsun. Defne bunu izliyor; bir şey söylememeni.
+    @defne: İyi. Konuşmayalım. Konuşursak bir şey olur. Olmasın.
+  * "Durmamak diye bir seçenek yoktu."
+    Defne bakıyor. Uzun.
+    @defne: Biliyorum.
+    @defne: Ben onu bilmeyen adamları tanıdım. İstanbul'da. Reklamcılıkta. Neyse. Biliyorum. Bilmen gereken bir şeyi bilmen bir şey değil. Ama herkes bilmiyor.
+  * "Nasılsın?"
+    @defne: Başım. Midem. Ruhum. Sırayla.
+    @defne: Bir de utanç. O sırada değil, hepsinin altında. Geçer. Kampanya: "Geçer." Dün gece altına bir şey yazamamıştım. Şimdi yazdım: "Bir sonraki yıla kadar."
+  @defne: Git şimdi. Vardiyan yok ama git. Müdür seni uğurlasın. Ben uğurlamam; ayakta zor duruyorum.
+  Kapıda Müdür; seni kokluyor, bir kere, eşiğe kadar geliyor, eşikte duruyor. Yokuş. Güneş. Cumartesi.
+>> yoksa
+  >> zaman 25 Ekim 11:20
+  >> yer Taş Mahalle, ev
+  Saat on biri yirmi geçe telefon titriyor. Defne on birden önce yazmaz.
+  >> yazışma defne
+    @defne: sen durdun.
+    >> bekle 2dk
+    @defne: botlarımı yan yana dizmişsin. uçları kapıya dönük. ben öyle dizmem. ben fırlatırım
+    @defne: sabah ilk gördüğüm şey yan yana iki bot oldu. bir an başka birinin evinde uyandım sandım
+    @defne: kova kullanılmadı. bilgin olsun.
+    * nasılsın
+      >> bekle 4dk
+      @defne: başım. midem. ruhum. sırayla.
+      @defne: bir de utanç. hepsinin altında. geçer.
+    * su içtin mi
+      [defne.yakin +1]
+      >> bekle 6dk
+      @defne: komodindeki bardağı içtim. sonra bir tane daha. sonra bir tane daha. şu an bir su kampanyasının yüzüyüm.
+    * (Cevap verme.)
+      >> bekle 20dk
+      @defne: tamam.
+      @defne: bu nokta teşekkür noktası değil. teşekkür etmiyorum. ama nokta.
+
+=== b17_ceren
+tür: sahne
+kişi: ceren
+
+>> zaman 25 Ekim 01:30
+Kaldırımda bekliyorsun. Bir buçuk. Kordonun öbür ucundan iki far; hızlı, fazla hızlı, sonra yavaşlıyor, Mendirek'in önünde duruyor. Beyaz Egea. Yolcu camı iniyor.
+Ceren. Saçı açık; omuzlarında. Bir kazak, bir kot, ayağında spor ayakkabı; acilin hiçbir şeyi yok üstünde, yalnızca gözlerinin altında, iki gölge, nöbetin bıraktığı.
+@ceren: Bin.
+@ceren: Kemer. Ben hızlı sürerim; sen kemer takarsın. İş bölümü.
+Biniyorsun. Araba kiralık; içi temiz, boş, kimseye ait değil gibi. Torpidoda bir şey yok; dikiz aynasında bir şey yok. Yalnızca konsolda bir paket sakız, yarısı bitmiş, bir de telefonu, ekranı aşağı.
+Ceren vitesi takıyor. Kordonun ucundan sahil yoluna; İzmir yönü. Kasaba arkada kalıyor; sokak lambaları seyrek, sonra yok. Asfalt, far, beyaz şerit. Sağda karanlıkta deniz; görünmüyor, ama orada, kokusundan.
+Kadran yükseliyor. Seksen. Yüz. Yüz yirmi. Viraj yok; uzun bir düzlük, zeytinlikler, bir benzin istasyonu, kapalı. Yüz kırk.
+Ceren'in elleri direksiyonda; saat on ve iki. Sakin. Yüzü sakin. Yüz kırkta sakin.
+* "Yavaşla."
+  [ceren.yakin +1]
+  Ayağını gazdan çekiyor. Hemen; tartışmadan. Kadran düşüyor; yüz, seksen.
+  @ceren: Haklısın.
+  @ceren: Acilde bu hızla gelenleri ben dikiyorum. Gelenleri. Gelemeyenleri başkası.
+  @ceren: Bazen unutuyorum, ben de birinin acilinde olabilirim. Hatırlattığın için teşekkür ederim. Kibar bir teşekkür değil, gerçek.
+* (Bir şey söyleme. Kemerini sıkı tut.)
+  Bir şey söylemiyorsun. Ceren bir süre daha yüz kırkta gidiyor. Sonra, virajdan önce, kendiliğinden yavaşlıyor; ayağını gazdan çekip, frene dokunmadan.
+  @ceren: Bir şey demedin.
+  @ceren: İnsanlar ya "yavaşla" der ya "daha hızlı". Sen bir şey demedin. Bunu kaydettim.
+* "Daha hızlı."
+  @ceren: Hayır.
+  @ceren: Bu kadar. Ben hızı ölümün hemen altından seçerim. Meslek. Bir fazlası istatistik.
+  Yavaşlıyor; virajdan önce, seksene.
+Yol yükseliyor. Kıyıdan ayrılıyor, tepeye tırmanıyor; virajlar, kayalar, bir kayanın üstünde boyayla yazılmış bir isim, bir kalp. Bir virajın dışında, yolun deniz tarafında, bir genişleme; toprak, birkaç taş, alçak bir duvar, duvarın önünde kırık bir bank. Bir tabela, tek kelime, yarısı paslı: MANZARA.
+Ceren arabayı duvarın önüne çekiyor. Motoru kapatıyor. Farları söndürüyor.
+Karanlık. Sonra gözler alışıyor.
+Aşağıda körfez. Pırnallı'nın ışıkları; kordonun sarı çizgisi, Taş Mahalle'nin yokuşunda dağınık pencereler, çarşının birkaç lambası, kampüsün tepede soğuk beyaz ışıkları. Fener Burnu'nda fener dönüyor; her dönüşünde denizin bir dilimi gümüş. Keçi Adası kapkara, bir siluet. Yıldızlar; lodostan sonra, yıkanmış, fazla.
+@ceren: Burası.
+@ceren: Martta geldiğim ilk hafta buldum. Nöbetten çıkmıştım, eve gitmek istemedim, yola çıktım, durdum. O günden beri izin gecelerimde geliyorum. Kimse gelmez. Bir kere bir çift geldi; beni görünce gittiler, ayıp ettim.
+@ceren: Kimsenin görmediği bir yer. Ben burada… bir şey değilim. Doktor değilim, nişanlı değilim, kızı değilim. Bir arabanın içinde biriyim.
+>> eğer helva17
+  Kucağında Saadet Abla'nın bez düğümlü tası. Ceren bakıyor.
+  @ceren: O ne?
+  * (Düğümü çöz. Uzat.)
+    [ceren.helva]
+    [ceren.yakin +1]
+    Düğümü çözüyorsun. Helva; soğumuş, fıstıklı, kokusu arabanın içini dolduruyor. Ceren bakıyor; sonra eliyle bir parça alıyor, kaşıksız, bir cerrahın titizliğiyle.
+    @ceren: İrmik helvası. Annem sınavlardan önce yapardı. Her sınavdan önce. Tıpta altı yıl; çok helva.
+    @ceren: Bu daha iyi. Anneme söyleme.
+    @ceren: Bir parça daha. Tatlıya bakarak salon seçen biri olarak, bu gece tatlıya hak kazandım.
+  * "Birinin doğum günü için. Gitmedim."
+    @ceren: Gitmedin. Buradasın.
+    @ceren: Bunu kaydettim. Sorgulamıyorum. Kaydettim.
+Pencereyi indiriyor. Gece soğuk; çam kokuyor, aşağıdan tuz. Konsoldaki telefonu çeviriyor; ekran yanıyor, bir mesaj, bir isim: Kerem. Saat 21:04. Ceren mesajı açmıyor; ekranı yine aşağı çeviriyor.
+@ceren: Kerem dokuzda yazdı. "İyi geceler, yarın konuşalım." Nöbetten çıktı, uyudu. Ben de öyle yazdım. Sonra uyuyamadım.
+@ceren: Bunu sana anlatmamın bir sakıncası yok. Kerem'i kötülemiyorum. Kerem iyi bir adam. Bunu her seferinde söylüyorum, çünkü doğru, ve çünkü söylemeden durursam bir şey söylemiş olurum.
+Uzun bir sessizlik. Fener dönüyor. Aşağıda kordonda bir araba; farları kordon boyunca kayıyor, çarşıda kayboluyor.
+>> eğer ceren.psikiyatri
+  @ceren: Martta sınav. TUS. Psikiyatri yazacağım. Söylemiştim.
+  @ceren: Anneme söylemedim. Kerem'e söyledim. "Tabii" dedi. Sonra kardiyoloji asistanlarının nöbet listesinden konuştu, yirmi dakika. "Tabii" bir cevap mı? Bir sindirim. Yuttu, devam etti.
+>> eğer ceren.avize
+  @ceren: Annem ikinci salonu tuttu. Tatlılı olanı. Kapora verdi. Haziran.
+  @ceren: Avizenin altında duracağım. Bunu düşünmüyorum. Şu an düşünmüyorum. Şu an buradayım.
+Sonra Ceren sana dönüyor. Bir kere; yüzünü değil, bütün gövdesini, koltuğun içinde, kapıya sırtını vererek.
+@ceren: Bu yaptığımız şeyin bir adı var ve ben o adı sevmiyorum.
+* "Ne yapıyoruz ki? Konuşuyoruz."
+  @ceren: Gece ikide. Kiralık bir arabada. Nişanlımın uyuduğu bir saatte. Kimsenin görmediği bir yerde. Konuşuyoruz.
+  @ceren: Konuşmanın da bir adı var bazen. Bu da onlardan.
+  @ceren: Ben iyi yalan söylerim. Bütün gün söylüyorum; "acımayacak", "az kaldı", "her şey yolunda". Kendime söylemeye başladığımda bunu fark etmek istiyorum. Şu an fark ediyorum.
+* "Adını koymayalım."
+  [ceren.yakin +1]
+  @ceren: Ad koymamak da bir ad.
+  @ceren: Ama güzel bir ad. Tıpta da böyle; bazen teşhis koymazsın, izlersin. "Takip." Bu da takip.
+* (Bir şey söyleme. Onun gibi, karşıya, ışıklara bak.)
+  [ceren.yakin +1]
+  Bir şey söylemiyorsun. Ceren bir süre yüzüne bakıyor, sonra senin baktığın yere; ışıklara. Fener dönüyor.
+  @ceren: Sessizliğe dayanabiliyorsun. Az insan dayanır. Acilde sessizlik demek kötü haber demek; herkes konuşur, doldurur. Sen doldurmuyorsun.
+>> eğer ceren.yakin >= 10
+  Ceren'in eli konsolun üstünde; telefonun yanında, telefona değmeden. Sonra kalkıyor. Yavaş. Senin yüzüne doğru; bir yarayı muayene eder gibi değil, hiç öyle değil.
+  Yanağına bir parmak kala duruyor.
+  @ceren: Dur.
+  Kendine söylüyor. Eli havada, bir parmak; ne geri gidiyor ne ileri. Gözleri gözlerinde.
+  @ceren: Ben durdum. Sen bir şey yapmadın. Bunu bil. Bu benim kararım, benim elim.
+  * (Kımıldama.)
+    [ceren.durdu17]
+    [ceren.yakin +1]
+    Kımıldamıyorsun. Ceren'in eli bir süre daha orada; sonra iniyor, konsolun üstüne, telefonun yanına.
+    @ceren: Teşekkürler.
+    @ceren: Kibar ve gerçek; ikisi birden. Nadiren olur.
+  * "Tamam."
+    [ceren.durdu17]
+    Ceren başını sallıyor. Eli iniyor.
+    @ceren: Tamam.
+    @ceren: Bir kelimeyle her şeyi doğru yaptın. Bu sinir bozucu. Bunu bir iltifat olarak al; benden çıkan en iyisi bu.
+>> yoksa
+  @ceren: Bir şey olmayacak. Bunu baştan söylüyorum ki aklında bir yer açmasın.
+  @ceren: Buraya seni getirdim çünkü burayı birine göstermek istedim. Bir kere. Göstermeden bilen tek kişi bensem, burası benim uydurduğum bir yer gibi geliyor.
+Bir süre ikiniz de bir şey söylemiyorsunuz. Fener iki kere dönüyor.
+@ceren: Bir şey soracağım. Sen bana sormadın, ben soracağım. Adil değil ama soracağım.
+@ceren: Neden buradasın? Pırnallı'da. Mühendislik okuyorsun, garsonluk yapıyorsun, ekimde. Gerçek cevap. Ben gerçek cevaptan anlarım; bütün gün yalan dinliyorum, "iki tane içtim" diyen dört tane içmiştir.
+* "İTÜ'deydim. Kaydımı sildirdim. Babam bilmiyor. Dondurdum sanıyor."
+  [itiraf.ceren]
+  [ceren.yakin +2]
+  Ceren dinliyor. Hiç kımıldamadan; bir anamnez alır gibi değil, hiç öyle değil.
+  @ceren: Babana yalan söyledin. Büyük bir yalan. Uzun bir yalan; her gün devam eden.
+  @ceren: Ben de anneme söylüyorum. Her gün. "İyiyim." "Yorgunum sadece." "Haziran güzel." İyi yalan söyleyenler birbirini tanır.
+  @ceren: Bir gün söyleyeceksin. Ben de. İkimiz de biliyoruz bunu. Ne zaman olduğu önemli değil; nasıl olduğu önemli. Kâğıttan öğrenmesin. Kâğıttan öğrenmek en kötüsü. Ben bunu hastalarda gördüm.
+* "Deniz kenarında okumak istedim."
+  @ceren: Deniz kenarında okumak.
+  @ceren: Bu bir cevap. Gerçek değil ama bir cevap. Kibar bir cevap. Sana kibar bir cevap verme hakkı tanıyorum; ben de veriyorum.
+* "Kaçtım. Detayı başka gün."
+  [ceren.yakin +1]
+  @ceren: Kaçtın.
+  @ceren: Bu gerçek. Detayı yok ama gerçek. Kabul ediyorum. Detaylar nasılsa bir gün gelir; kaçanların detayı hep gelir.
+Konsoldan bir paket çıkarıyor; sigara, yarısı dolu. Bir tane yakıyor. Pencereden dışarı üflüyor; duman fenerin ışığında bir an görünüyor, sonra yok.
+@ceren: Sigara içmem. Nöbette içerim. Bu gece nöbet sayılır.
+Sigara bitiyor. Ceren izmariti arabanın küllüğüne bastırıyor; küllük boş, temiz, bir kiralık arabanın küllüğü, ilk izmarit.
+@ceren: Kiralık şirketi bunu görünce ceza keser. Kesmesin diye yarın temizlerim. Bunu düşünüyorum şu an. İnsan zihni.
+Dönüş yolunda Ceren altmışla gidiyor. Bütün yol. Bir kamyon arkadan selektör yapıyor; Ceren yol veriyor, kamyon geçiyor, Ceren altmışta kalıyor.
+>> zaman 25 Ekim 02:55
+>> yer Taş Mahalle
+Taş Mahalle'nin yokuşunun dibinde duruyor. Motoru kapatmıyor.
+@ceren: Uyuyorsan uyu. Uyumuyorsan da uyu. İkisi de doktor tavsiyesi.
+@ceren: Bu geceyi kimseye anlatma. Anlatacak bir şey yok zaten. Bunu da anlatma.
+Kapıyı kapattığında Egea hemen gitmiyor. Yokuşun ortasına kadar çıkıyorsun; arkanda motor sesi, rölantide, bekliyor. Sonra gidiyor. Hızlı değil.
+[ceren.manzara]
+
+=== b17_lara
+tür: sahne
+kişi: lara
+
+>> zaman 25 Ekim 01:40
+>> yer Fener Burnu, Berkmen villası
+Fener Burnu'nun yolu gece yarısından sonra başka bir yol. Lodos dinmiş; kayalara vuran dalga artık sıçramıyor, yalnızca vuruyor, çekiliyor. Fener tepede dönüyor; her dönüşünde yolu bir saniye aydınlatıyor, sonra karanlık, sonra yine.
+Villanın kapısı aralık. Bahçedeki küçük evin penceresi karanlık; Rasim Efendi uyuyor ya da uyuyormuş gibi yapıyor, kapıyı aralık bırakarak.
+Havuz. Yeşil. Gece daha da yeşil; dipteki lambaların biri hâlâ yanıyor, kimse kapatmamış, faturası ödenmemiş bir ışık, suyun içinden yukarı, bulanık, akvaryum gibi. Kenarda iki şezlong. Birinde Lara; bir battaniyeye sarılmış, kaşmir, krem rengi, bankanın. Öbürü boş.
+Lara seni görüyor. Kımıldamıyor.
+@lara: Envanteri okudun.
+@lara: Boş olan senin. Teknik olarak bankanın. Ama bu gece senin.
+Boş şezlonga oturuyorsun. Şezlongun minderi yok; plastik, soğuk, ıslak. Lara battaniyesinin bir ucunu kaldırıp sana atıyor; bir uç, yetişiyor, yetmiyor.
+Aranızda, yerde, Lara'nın telefonu. Ekranı yukarı. Bir cevapsız arama: +30 ile başlayan bir numara. 23:47.
+@lara: Yunanistan.
+@lara: Babam. Biliyorum. Başka kimse Yunanistan'dan aramaz. Annemin arkadaşları Mykonos'ta yazlık tutardı ama ekimde kimse Mykonos'ta olmaz.
+@lara: Açmadım.
+* "Neden açmadın?"
+  @lara: Açsam ne olacaktı?
+  @lara: "Kızım." "Baba." Sonra sessizlik. Sonra "her şey yoluna girecek". Sonra ben "araba gitti" derim. O "biliyorum" der. Bilir, çünkü her şeyi bilir. Sonra yine sessizlik. Sonra kapatır.
+  @lara: Bu konuşmayı yapmadan biliyorum. Yapmama gerek yok.
+* "Açsaydın ne derdin?"
+  [lara.yakin +1]
+  Lara uzun süre bir şey söylemiyor. Havuzun yeşil ışığı yüzünde.
+  @lara: "Neredesin."
+  @lara: Soru değil. Soru işareti koymazdım. Çünkü… neyse. Herkes Selanik diyor. Selanik büyük bir şehir.
+  Bir şey daha var cümlenin altında; Lara oraya inmiyor.
+  [lara.nerede_sordu]
+* (Bir şey söyleme. Telefona bakma.)
+  [lara.yakin +1]
+  Telefona bakmıyorsun. Havuza bakıyorsun; yeşile, ışığa. Lara bunu görüyor; bakmamanı.
+  @lara: Bakmadın. Herkes bakar. Rasim Efendi bile baktı; akşam, ben bahçedeyken çaldı, Rasim Efendi ekrana baktı, sonra bana, sonra gitti.
+>> eğer helva17
+  Kucağındaki bez düğümlü tası görüyor.
+  @lara: O ne? Bir şey getirmişsin. Kimse bana bir şey getirmez artık; banka bile almaya geliyor.
+  * (Düğümü çöz. Uzat.)
+    [lara.helva]
+    [lara.yakin +1]
+    Düğümü çözüyorsun. Helva. Lara bakıyor; bilmiyor ne olduğunu, ya da biliyor ama hiç böyle görmemiş, bir tasta, bir bezin altında.
+    @lara: İrmik helvası. Hayriye Hanım yapar. Dedem öldüğünde yapmıştı. Ondan beri yemedim.
+    Bir parça alıyor; parmağıyla, Ceren'in ya da Defne'nin yapacağı gibi değil, kendi gibi, çekinerek. Ağzına koyuyor.
+    @lara: Kim yaptı?
+    @lara: Saadet Abla. Söyleme. Biliyorum. Hayriye Hanım'ın tadı değil ama Hayriye Hanım'ın tadının yanında bir tat.
+    Bir parça daha alıyor. Bu gece ilk yediği şey. Bunu söylemiyor; sen anlıyorsun.
+  * "Başkası için. Kısmet sana."
+    @lara: Kısmet. Hm. Benim payıma düşen başkasının. Bu benim hayatım şu an, literally.
+    Gülüyor ama tası alıyor. Yemiyor; kucağında tutuyor, sıcak olsun diye, sıcak değil ama.
+@lara: Havuzun suyu ekimde yeşile döner. Babam her ekim temizletirdi. Bir adam gelirdi, bir makine, iki gün. Bu ekim kimse gelmedi.
+@lara: İlk hafta iğrenç buldum. Şimdi seviyorum. Yeşil bir şey benim olsun. Kimse istemez, kimse haczetmez.
+Battaniyeden ayaklarını çıkarıyor. Şezlongun ucuna, havuzun kenarına kayıyor. Ayaklarını suya sokuyor; bileğine kadar. Nefesi kesiliyor bir an.
+@lara: Buz. Literally buz.
+@lara: Gel. Ayaklarını sok. Bu bir davet değil. Bir… neyse. Davet. Bu sefer davet.
+* (Ayakkabılarını çıkar. Ayaklarını suya sok.)
+  [lara.yakin +1]
+  [lara.havuz17]
+  Ayakkabılarını çıkarıyorsun. Su; bir an hiçbir şey, sonra her şey, bilekten yukarı, keskin. Lara gülüyor; ilk kez bu gece.
+  @lara: Değil mi? Değil mi! Kimse bunu bilmiyor. Bir havuzu yeşile döndürürsün, içine ayaklarını sokarsın, hayatında hiç bu kadar uyanık olmamışsındır.
+* (Kenarda otur. Ayaklarını sokma.)
+  Kenara oturuyorsun; ayakların taşın üstünde, kuru. Lara bakıyor.
+  @lara: Korkak.
+  @lara: Hayır. Akıllı. Biri kuru kalmalı. Ben donarsam sen çekersin.
+Telefon titriyor. Yerde, aranızda. Ekran yanıyor: +30 ile başlayan aynı numara. 02:31.
+Lara kımıldamıyor. Telefona bakıyor; telefon titriyor, taşın üstünde yavaş yavaş kayıyor, havuzun kenarına doğru.
+* "Aç."
+  >> eğer lara.yakin >= 10
+    [lara.baba_acti]
+    Lara sana bakıyor. Sonra telefona. Uzanıyor; alıyor; açıyor. Kulağına götürüyor. Bir şey söylemiyor.
+    Öbür taraftan bir şey; buradan duyulmuyor, bir ses, bir erkek sesi, tek bir kelime belki.
+    Lara dinliyor. Bir şey söylemiyor. On saniye. Yirmi. Nefes alıyor; telefonun içine, duyulsun diye.
+    Sonra kapatıyor.
+    @lara: Nefes aldı.
+    @lara: Ben de. Bu kadar. İkimiz de nefes aldık. Yaşıyoruz. Konuşmadık.
+    @lara: Bu bir konuşma sayılır mı? Sayılır. Bizim ailede sayılır.
+  >> yoksa
+    @lara: Hayır.
+    Telefon titremeyi bırakıyor. Ekran kararıyor.
+    @lara: Açmam için daha çok şey lazım. Ne olduğunu bilmiyorum. Bir gün bilirim.
+* "Açma."
+  Lara başını sallıyor; bir kere, kısa.
+  @lara: Açmayacaktım zaten. Ama sen "açma" deyince açmamak daha kolay. Paylaştık.
+  Telefon titremeyi bırakıyor.
+* (Bir şey söyleme.)
+  Bir şey söylemiyorsun. Telefon titriyor, titriyor, taşın kenarına geliyor; Lara uzanıp alıyor, düşmesin diye, açmadan, ekranı aşağı çeviriyor. Titremeyi elinin altında bırakıyor.
+  @lara: Düşmesin. Havuza. Açmayayım ama düşmesin de. İkisi.
+Bir süre konuşmuyorsunuz. Fener dönüyor. Havuzun yeşil ışığı titriyor; dipteki lamba bir kere sönüp yanıyor, elektriği de borçlu.
+@lara: Seninki ne yaptı?
+@lara: Baban. Herkesin bir babası var ve herkesin babası bir şey yaptı. Seninki ne yaptı? Garsonluk yapan bir mühendislik öğrencisisin, ekimde, bir sahil kasabasında. Bir hikâye var.
+* "Babama yalan söyledim. İTÜ'den kaydımı sildirdim. Dondurdum sanıyor."
+  [itiraf.lara]
+  Lara bir süre bakıyor. Havuzun ışığı yüzünde.
+  @lara: Babanla sorunun olması seni ilginç yapmıyor.
+  Bunu soğuk söylüyor; bir kapının ağzında durup içeri girmeyen biri gibi. Sonra bir şey değişiyor yüzünde.
+  @lara: Pardon. Bu benim cümlem değil, annemin cümlesi. Annem bana söylemişti, on yedi yaşımda. Ben de sana söyledim, ilk fırsatta. Kalıtsal.
+  @lara: Aslında… ilginç değil ama… cesur. Sildirdin. Ben imzaladım. Okumadan. Sen okuyup sildirdin. Fark var.
+  Ne imzaladığını söylemiyor. Cümlenin içinde bir kapı açılıp kapanıyor; Lara kapıyı hemen kapatıyor.
+  [lara.imza_ipucu]
+* "Benimki bir şey yapmadı. Ben yaptım."
+  [lara.yakin +1]
+  @lara: Sen yaptın.
+  @lara: Bu daha iyi bir cümle. Bunu ben de söylemek isterdim. Söyleyemem. Benimki yaptı. Ben… ben de yaptım ama. Neyse. Senin cümlen güzeldi.
+* "Başka gece."
+  @lara: Başka gece. Tamam. Gece çok. Bankanın değil, gece.
+>> eğer lara.yakin >= 12
+  Lara şezlongundan kalkıyor; battaniyeyi omzunda, seninkinin kenarına oturuyor. Şezlong ikinize dar; plastik inliyor. Başını omzuna koyuyor; ağırlığını değil, varlığını.
+  @lara: Bu bir şey değil.
+  @lara: Bu gece bir şey saymıyorum. Ama bunu sayıyorum galiba. Bilmiyorum. Sayma.
+  Bir süre öyle. Nefesi düzleşiyor. Uyuyor mu bilmiyorsun.
+  Sonra, uykudan çıkmış gibi, kısık:
+  @lara: Uyanık mısın?
+  * "Uyanığım."
+    @lara: İyi.
+    @lara: Hep ben soruyorum bunu. Gece üçte. Mesajla. İlk kez birinin yüzüne sordum.
+    [lara.uyanik_yuz]
+  * (Cevap verme. Gözlerini kapat.)
+    Gözlerini kapatıyorsun. Lara bir süre bekliyor; cevap gelmiyor.
+    @lara: Uyumuşsun.
+    @lara: Tamam. Ben uyanığım. Biri uyanık olsun.
+>> yoksa
+  @lara: Uyanık mısın?
+  @lara: Hep ben soruyorum bunu. Mesajla. Gece üçte. Saat daha üç değil ama, sordum. Yüzüne. Tuhafmış.
+>> zaman 25 Ekim 03:15
+Bahçede bir fener ışığı. Küçük evin kapısı açılıyor; Rasim Efendi, terlikleriyle, elinde bir el feneri, bir tur atıyor, havuzun yanından geçiyor, size bakmıyor.
+@rasim: Kapıyı kilitliyorum. Dördü çeyrek geçe. Çıkacak olan çıksın.
+Gidiyor. Lara gülüyor; battaniyenin içinde, sesi boğuk.
+@lara: Rasim Efendi otuz yıldır kapıyı dördü çeyrek geçe kilitler. Ben on altı yaşındayken de. Çıkacak olan çıkardı.
+@lara: Git. Dolmuş yok. Yürü. Fener yolu gösterir. Göstermez aslında; bir saniye gösterir, sonra karanlık. Sen o bir saniyede yürü.
+[lara.havuz]
+
+=== b17_gece_ceren
+tür: sahne
+kişi: ceren
+
+>> zaman 25 Ekim 03:40
+>> yazışma ceren
+  @ceren: Bir buçukta geçtim. Kaldırım boştu. Kepenk inikti.
+  @ceren: Doğru karar. Benim için de. Ben bir yere gittim, tek başıma; her zamanki gibi. Kimse yoktu. Her zamanki gibi.
+  @ceren: Bunu yazmamın sebebi şu: "durmadım" demek istedim. Yavaşladım ama durmadım. Fark var.
+  * yarın uyu
+    >> bekle 3dk
+    @ceren: Bu benim cümlem. Çaldın. Kabul.
+  * bir dahakine kaldırımda olurum
+    [ceren.yakin +1]
+    >> bekle 6dk
+    @ceren: Bir dahakine. Tamam.
+    @ceren: Bunu yazdığın için cevap vermemem gerekirdi. Verdim. Not al.
+  * (Cevap verme.)
+
+=== b17_gece_lara
+tür: sahne
+kişi: lara
+
+>> zaman 25 Ekim 03:50
+>> yazışma lara
+  @lara: rasim efendi uyudu. ben uyumadım
+  @lara: o numara bir daha aradı. 02:31. açmadım
+  @lara: boşver
+  * buradayım
+    [lara.yakin +1]
+    >> bekle 2dk
+    @lara: biliyorum. yazdın
+    @lara: bu yeter. iyi geceler. gerçekten
+  * kim aradı
+    >> bekle 4dk
+    @lara: biri
+    @lara: neyse
+  * (Cevap verme.)
+    [lara.ghost17]
+
+=== b17_gece_defne
+tür: sahne
+kişi: defne
+
+>> zaman 25 Ekim 04:05
+>> eğer defne.dogum_biliyor
+  >> yazışma defne
+    @defne: onur söylemiş sana. sarp söyledi onur'a söylediğini
+    @defne: gelmedin.
+    >> bekle 3dk
+    @defne: iyi. gelmemen iyiydi.
+    @defne: 🙂
+    * iyi ki doğdun
+      >> bekle 10dk
+      @defne: dündü.
+      @defne: saat dört. artık dündü. "iyi ki doğdun" geçmiş zaman kipinde söylenmez. "iyi ki doğmuştun" olur. kulağa ölü gibi geliyor. neyse. teşekkür etmiyorum.
+    * gelmek istedim
+      >> bekle 6dk
+      @defne: isteyip gelmemek. en sevdiğim tür.
+      @defne: bu bir iltifat. ya da değil. saat dört, ayıramıyorum.
+    * (Cevap verme.)
+>> yoksa
+  >> yazışma defne
+    @defne: bugün doğum günümdü. dündü. saat dört, artık dündü
+    @defne: kimse bilmiyordu. iyi ki kimse bilmiyordu
+    >> bekle 4dk
+    @defne: bunu sana neden yazdım. şarap yazdı. sabah boşver dersin
+    * iyi ki doğdun
+      >> bekle 8dk
+      @defne: dündü dedim.
+      @defne: ama tamam. dün de olsa. tamam.
+    * neden kimseye söylemedin
+      >> bekle 5dk
+      @defne: çünkü bir mum üflersin ve bir yıl geçer.
+      @defne: uyu. ben de uyuyorum. yalan, uyumuyorum. ama sen uyu
+    * (Cevap verme.)
+      >> bekle 1sa
+      @defne: boşver dün geceyi. şarap yazdı onu 🙂
+
+=== b17_nuri
+tür: sahne
+
+>> zaman 25 Ekim 06:20
+>> yer Taş Mahalle, ev
+Telefon. Altıyı yirmi geçiyor. Dört saat uyumuşsun; telefonun ekranında bir isim, bir arama, açıyorsun, gözlerin kapalı.
+@nuri: Ağ kaldırıyoruz. Lodostan sonra. Cemal gelmedi, kızı hasta. Gel.
+@nuri: Yedide iskele. Geç kalma. Balık beklemez.
+Kapatıyor. Soru sormadı. Sen de cevap vermedin; ama kalkıyorsun.
+>> zaman 25 Ekim 07:00
+>> yer Liman
+Balıkçı barınağı. Mendirek'in arkasında, marinanın öbür ucunda; yatlar yok burada, ahşap tekneler, boyaları dökülmüş, adları elle yazılmış. Nuri Abi'ninki küçük, mavi, kıçında beyaz harflerle: SAADET.
+Nuri Abi teknede, motorun başında; bir eli kolda, öbürü cebinde. Seni görünce başını sallıyor, bir kere.
+@nuri: Bin. Şuraya otur. Ağa dokunma, ben söyleyince dokun.
+Motor öksürüyor, sonra tutuyor. Tekne barınaktan çıkıyor; dalgakıranın ucundan, açığa. Deniz lodostan sonra yorgun; uzun, ağır dalgalar, köpüksüz, bir şeyin nefesi gibi inip kalkıyor. Su bulanık; dipteki kum lodosla yukarı çıkmış, deniz bir çay rengine dönmüş.
+Nuri Abi hiçbir şey söylemiyor. Yirmi dakika. Bir şamandıra; turuncu, üstünde bir bayrakçık. Motoru rölantiye alıyor.
+@nuri: Çek.
+Ağ. Ağır, ıslak, soğuk; her çekişte bir metre, her metrede yosun, lodosun getirdiği, ağın gözlerine takılmış. Bir yengeç. Bir taş, nasıl girdiyse. Sonra bir pırıltı; bir çipura, gözleri açık, şaşkın. Sonra bir tane daha. Sonra hiçbir şey, yirmi metre.
+Nuri Abi ağı senin çektiğin yerden alıyor; ellerin yanıyor, yosun kokuyor, tuz.
+@nuri: Lodostan sonra az olur. Balık kaçar, derine. Biz de az buluruz. Az bulduğumuz gün de çıkarız.
+* "Neden? Az olacağını biliyorsan."
+  @nuri: Çıkmasak ağ çürür. Yosun girer, yırtılır. Balık için değil, ağ için çıkıyoruz bugün.
+  @nuri: Bazı günler balık için çıkarsın, bazı günler ağ için. İkisi de iş.
+* (Bir şey sorma. Çekmeye devam et.)
+  [nuri.not +1]
+  Çekmeye devam ediyorsun. Nuri Abi bir şey demiyor; ama ağı senden almayı bırakıyor. Sen çekiyorsun, o ayıklıyor. Bir sistem.
+Ağın sonu. Kasada yedi çipura, bir levrek, üç yengeç, bir kova yosun. Nuri Abi kasaya bakıyor; bir hesap yapıyor, söylemiyor.
+Motoru stop ediyor. Tekne sessizlikte sallanıyor. Nuri Abi cebinden bir termos çıkarıyor; çay, iki bardak, plastik. Birini sana veriyor.
+@nuri: Saadet koydu. Sana da koydu. Bilmiyordu geleceğini. Koydu.
+Çay. Teknenin içinde, yorgun denizin üstünde, kasabanın arkasında güneş doğarken. Pırnallı buradan küçük; kordon bir çizgi, Taş Mahalle bir yamaç, sarı bir nokta yokuşun ortasında, bir kapı.
+@nuri: Seramikçi kız.
+@nuri: Dün gece Kuyu'da doğum günü yapmışlar. Sarp söyledi; sabah beşte fırında. Kız çok içmiş. Biri eve bırakmış.
+>> eğer gece17 == "ev"
+  Sana bakmıyor. Sormuyor.
+  @nuri: Sen değildin. Biliyorum. Sen eve gittin; Onur söyledi, Onur her şeyi söyler.
+@nuri: Geçen yıl kimse bırakmadı. Ben bıraktım. Yokuşun başına kadar. Kapıya kadar gitmedim; kapı başka şey. Yokuşun başında "git kızım" dedim. Gitti.
+@nuri: Kutlanmak istemeyeni kutlamak zordur. Kutlamazsan da zor. Ortası yok. Ben ortasını ararım; bulamam. Saadet bulur. Bir tatlı koyar önüne, bir şey demez.
+Çayını bitiriyor. Bardağı denize çalkalıyor, termosa geri koyuyor.
+@nuri: Kalacak mısın?
+Soru öyle geliyor; havadan, denizden, termosun kapağından. Nuri Abi sana bakmıyor.
+* "Bilmiyorum."
+  [nuri.not +1]
+  @nuri: Bilmiyorsun. İyi.
+  @nuri: Bilen yalan söyler. Bilmeyen düşünür.
+* "Kalacağım."
+  @nuri: Kalacaksın. Hm.
+  @nuri: Bunu herkes söyler, ekimde. Kasımda yarısı gider. Aralıkta yarısının yarısı. Ocakta bakarız.
+  [nuri.kalacagim_dedi]
+* "Neden soruyorsun?"
+  @nuri: Sormuyorum.
+  @nuri: Daha sormuyorum. Bir gün soracağım. O gün cevap ver. Bugün çay iç.
+Motor yeniden öksürüyor. Dönüyorsunuz. Barınakta Saadet Abla bekliyor; bir kova, bir bıçak, bir önlük. Kasaya bakıyor.
+@saadet: Yedi çipura. Bir levrek.
+@saadet: Levrek senin. Akşam pişiririm. Bir şey deme; levrek senin.
+[nuri.ag]
+
+=== b17_sude_kapi
+tür: sahne
+kişi: sude
+
+>> zaman 25 Ekim 11:15
+>> yer Taş Mahalle
+>> tanış dilan
+Sarı kapıdan çıkıyorsun. Müdür eşikte kalıyor. Yokuş güneşli; taşlar kurumuş, bir kedi bir basamakta uyuyor.
+Yokuşun aşağısından iki kişi çıkıyor. Biri kıvırcık, elinde bir poşet, poşetin içinde bir şey, kâğıda sarılı. Öbürü düz saçlı, atkuyruğu; elinde bir defter.
+Sude ve Dilan.
+Sude seni görüyor. Önce yüzünü; sonra arkandaki sarı kapıyı, eşikteki köpeği; sonra yine yüzünü. Saçın dağınık; dünkü gömleğin, kırışık, Mendirek'in önlüğünden kalma bir leke yakasında.
+Sude duruyor. Dilan da duruyor; bir adım arkasında, bir şey anlamış, bir şey söylememiş.
+@sude: Günaydın.
+@sude: Bugün ilk seramik dersim. On bir buçuk. Dün gece yazmıştım. Dilan'la.
+Defterini iki eliyle tutuyor.
+@sude: Siz… sen. Burada mıydın? Yani… şimdi buradan mı çıkıyorsun?
+* "Dün gece Defne'nin doğum günüydü. Çok sarhoştu. Eve bıraktım. Kanepede uyudum."
+  [sude.yakin +1]
+  [sude.defne_durust]
+  Sude dinliyor. Her kelimeyi; bir sınav sorusunu okur gibi, iki kere.
+  @sude: Doğum günü. Sarhoş. Eve bıraktın. Kanepe.
+  @sude: Tamam. Anladım. Dört bilgi. Hepsi net.
+  @sude: Bunu sormak zorunda değildim. Sordum. Sen de söylemek zorunda değildin. Söyledin. Bu… bunu not ediyorum. İyi bir not.
+  Dilan arkadan Sude'nin koluna dokunuyor; hafifçe, "hadi" der gibi. Sude bir şey daha söylemek istiyor; söylemiyor.
+  @sude: Ders. Geç kalıyoruz. Defne Hanım geç kalanı sevmezmiş.
+* "Bir arkadaşa uğradım."
+  [sude.kacamak17]
+  Sude bakıyor. Uzun.
+  @sude: Bir arkadaşa.
+  @sude: Tamam.
+  Tamam. Noktalı. Sude'nin "tamam"ı Defne'ninkine benzemiyor; Defne'ninki bir nokta, Sude'ninki bir kapı.
+  @sude: Kaçamak cevaplar beni yoruyor. Bunu söylemem gerekiyordu. Söyledim. Şimdi derse gidiyorum.
+* "Seninle ilgisi yok, Sude."
+  [sude.sinir17]
+  Sude'nin yüzü değişmiyor. Sadece bir şey, gözlerinin arkasında, bir kapı, yavaşça, kapanıyor.
+  @sude: Haklısın. Yok.
+  @sude: Benimle ilgisi olan bir şey sormadım zaten. Senin nerede uyuduğun benimle ilgili değil. Bunu biliyorum. Sormamam gerekirdi.
+  @sude: Sorduğum için özür dilemiyorum ama. Sormak bir hak. Cevap vermemek de bir hak. İkimiz de hakkımızı kullandık.
+Sude yanından geçiyor; sarı kapıya. Müdür onu kokluyor; kuyruğunu sallıyor, ilk kez birine, ilk görüşte.
+Dilan senin hizanda bir an duruyor. Sesini alçaltmadan, ama yalnızca sana:
+@dilan: Kızım dün gece "yarın seramik" diye üç kere uyandı. Üç kere. Heyecandan.
+@dilan: Bilgin olsun. Başka bir şey demiyorum. Taraf değilim. Tarafım ama.
+Kapıdan içeri giriyorlar. İçeriden Defne'nin sesi, kısık, uykulu, "Hoş geldiniz, çamura dokunmayın, önce önlük," diyor. Kapı kapanıyor.
+[sude.gordu17]
+
+=== b17_sude_mesaj
+tür: sahne
+kişi: sude
+
+>> zaman 25 Ekim 14:10
+>> yazışma sude
+  @sude: İyi günler. Bugün ilk seramik dersimdi. Defne Hanım'ın atölyesi. Dilan'la.
+  @sude: Defne Hanım bugün çok solgundu. Dün doğum günüymüş, Dilan öğrendi. Ama bana çok nazikti. Herkese değil; Dilan'a "çamur senden korkuyor" dedi. Bana nazikti.
+  @sude: Bir kâse yaptım. Çöktü. "Çöksün" dedi. "Bu kaçıncı?" dedim. "Benim için kırk üçüncü" dedi. Anlamadım. Sonra anlatırsın belki, sen tanıyorsun onu.
+  * kırk ikiye kadar saymış. sonra bırakmış
+    >> eğer defne.fabrika
+      [sude.yakin +1]
+      >> bekle 3dk
+      @sude: Kırk iki. Sonra bırakmış. Sonra bugün yeniden saymaya başlamış. Benim kâsemle.
+      @sude: Bunu yazacağım. Hangi deftere bilmiyorum. Teşekkürler.
+    >> yoksa
+      >> bekle 3dk
+      @sude: Nereden biliyorsun? Neyse. Sormuyorum. Bu hafta çok soru sordum.
+  * kâse çökünce ne hissettin
+    [sude.yakin +1]
+    >> bekle 4dk
+    @sude: Önce utandım. Sonra Defne Hanım "çöksün" dedi ve utanmadım. Bir kelime yetti.
+    @sude: Annem olsa "dikkat etseydin" derdi. Bunu karşılaştırmak istemedim ama karşılaştırdım.
+  * (Cevap verme.)
+    [sude.cevapsiz17]
+
+=== b17_ilgin_nobet
+tür: sahne
+kişi: ilgin
+
+>> zaman 25 Ekim 22:30
+>> yer Taş Mahalle, ev
+Cumartesi gecesi. Telefon titriyor.
+>> yazışma ilgin
+  @ilgin: nöbetteyim bu gece. hasta değilsen gelme
+  >> bekle 3dk
+  @ilgin: bulmacada bi kelime var. 7 harf. bilemiyorum
+  * hasta değilim. geliyorum
+    [ilgin.nobet17]
+    >> bekle 1dk
+    @ilgin: hasta değilsen gelme dedim
+    @ilgin: tmm
+  * soru ne
+    >> bekle 2dk
+    @ilgin: "gizli tutulan". 7 harf. ikinci harfi e
+    * mestur
+      >> bekle 3dk
+      @ilgin: 6 harf o
+      @ilgin: ama güzeldi. olmadı ama güzeldi
+    * bilmiyorum. gelip bakayım
+      [ilgin.nobet17]
+      >> bekle 2dk
+      @ilgin: bakmak bi şey değiştirmez
+      @ilgin: gel
+  * (Cevap verme.)
+    [ilgin.cevapsiz17]
+>> eğer değil ilgin.nobet17
+  -> son
+>> zaman 25 Ekim 22:50
+>> yer Çarşı, Yeni Eczane
+Çarşı karanlık. Kepenkler inik; bir tek Yeni Eczane'nin kepengi yarıya kadar açık, arkasında cam, camın ortasında küçük bir pencere, pencerenin arkasında ışık. Hasır sandalye kapının dibinde, katlı.
+Pencereye vuruyorsun. Pencere açılıyor; bir avuç sıcak, bir de Ilgın'ın yüzü, floresanın altında, gözlüğü burnunun ucunda. Gözlük; ilk kez görüyorsun.
+@ilgin: Gelme dedim.
+@ilgin: Geldin. Tamam. Gözlüğe bakma. Gece takıyorum. Gündüz takmıyorum çünkü gündüz babam görüyor; "kızım gözlük takıyor" diye üzülüyor. Kırk yıl gözlüksüz yaşamış adam, üzülmeye bahane arıyor.
+Pencereden gazeteyi çeviriyor. Bulmaca; köşesinde boş kutular, kurşun kalem.
+@ilgin: Gizli tutulan. Yedi harf. İkincisi E. Sonu… sonu bilmiyorum.
+* "Mektum."
+  [ilgin.yakin +1]
+  [ilgin.mektum]
+  Ilgın harfleri sayıyor; parmağıyla, kutuların üstünde. M-E-K-T-U-M. Altı.
+  @ilgin: Altı.
+  @ilgin: Ama. Dur. Mektûm. Şapkalı. Yine altı. Olmuyor.
+  Kalemini bırakıyor. Sana bakıyor; gözlüğün üstünden.
+  @ilgin: Olmadı. Ama aklına mektum geldi. Kim bilir mektum? Babam bilir. Bir de sen. İkinci adam.
+* "Bilmiyorum."
+  @ilgin: Bilmiyorsun. İyi. Bilmeyen birini görmek iyi. Herkes her şeyi biliyor bu kasabada.
+* "Saklı."
+  @ilgin: Beş. Saklı beş. Gizli dört. Her şey kısa. Benim kutum yedi.
+  @ilgin: Yedi harfli bir sır. Gizli tutulan. Bu kasabada yedi harfli sır çok.
+Ilgın bir şey yazmıyor; kalemi kutuların üstünde tutuyor, bir süre, sonra bırakıyor.
+@ilgin: Babam bu bulmacanın cevaplarını gazetede pazartesi okur. Ben okumam. Boş kalsın. Bazı kutular boş kalsın.
+Pencereden bir esinti; çarşının sokağından, kordondan, tuz. Ilgın gözlüğünü çıkarıyor, önlüğünün cebine koyuyor.
+@ilgin: Nermin Abla'ya salı borçluydum, ödedim. Bu cumartesi benim. Kimseye borcum yok bu gece.
+@ilgin: Bu güzel bir his. Uzun zamandır yoktu.
+Bir müşteri; bir genç, ateşli bir bebek için şurup. Ilgın pencereden uzatıyor, ölçeği anlatıyor, iki kere, bir kere daha. Genç gidiyor. Ilgın pencerenin pervazına dirseklerini koyuyor.
+@ilgin: Lara'yı gördüm. Bugün. Kordonda. Dolmuştan indi. Tek başına.
+@ilgin: Dolmuştan. Berkmen kızı. Kordonun ortasında. Bir simit aldı.
+Sesinde bir şey yok. Bir şey olmaması bir şey.
+>> eğer lara.dolmus
+  Sana bakıyor.
+  @ilgin: Ona birinin dolmuşu öğrettiğini söylüyorlar. Çarşı söylüyor. Necla Teyze gördü.
+  @ilgin: Bir şey demiyorum. Dedim zaten.
+  * "Ben öğrettim."
+    [ilgin.lara_ogretti]
+    @ilgin: Biliyorum.
+    @ilgin: İyi yapmışsın. Bunu söylemem gerekmiyordu. Söyledim. Kimseye söyleme.
+  * (Bir şey söyleme.)
+    @ilgin: Söylemedin. Söylemene gerek yok. Necla Teyze söyledi.
+>> yoksa
+  @ilgin: Tek başına. Hiç tek başına dolmuşa binmezdi. On beş yaşında bile. Biri hep götürürdü onu.
+  Kimin götürdüğünü söylemiyor.
+@ilgin: Yattım demeyeceğim. Nöbetteyim. Git sen. Uyu. Hasta değilsin, hasta olma.
+Pencere kapanıyor; yarıya kadar, sonra bir an duruyor, sonra tamamen.
+[ilgin.pencere17]
+
+=== b17_sude_gece
+tür: sahne
+kişi: sude
+
+>> zaman 24 Ekim 23:15
+Servis arasında, mutfak kapısının yanında, telefon.
+>> yazışma sude
+  @sude: İyi geceler. Yurttayım. Yorganın altındayım. Dilan uyuyor.
+  @sude: Yarın ilk seramik dersim. Taş Mahalle'de bir atölye. Defne Hanım. Kayıt yaptırdım, Lodos Kahve'nin panosunda ilan vardı.
+  @sude: Onu tanıyor musun? Nasıl biri? Bunu sormak garip olabilir. Ama bir insana çamurla dokunacaksam önce onu bilmek istiyorum.
+  * komik. keskin. iyi. üçü birden
+    [sude.defne_anlatti]
+    >> bekle 2dk
+    @sude: Üçü birden. Zor bir kombinasyon. Annemde ikisi var, keskin ve iyi. Komik değil.
+    @sude: Tamam. Hazırlıklıyım. Teşekkürler.
+  * tanıyorum. biraz
+    >> bekle 3dk
+    @sude: Biraz. Anladım.
+    @sude: "Biraz" bir ölçü birimi değil ama bunu kabul ediyorum. Ben de seni biraz tanıyorum. Biraz da çok bir şey olabilir.
+  * kendin gör. ben söylersem bozarım
+    [sude.yakin +1]
+    >> bekle 2dk
+    @sude: Kendim göreyim. Bu iyi bir cevap. Önyargı oluşturmamak. Psikoloji'de buna… bir adı var. Bulunca yazacağım.
+    @sude: Bulamazsam da yazacağım. İyi geceler. Uyu. Sen uyumuyorsun, çalışıyorsun. O zaman iyi çalışmalar. Bu doğru mu? Doğru.
