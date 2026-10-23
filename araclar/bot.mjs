@@ -185,8 +185,11 @@ export function romanOyna(icerik, { tohum = 1, strateji = 'rastgele', ad = 'Kaan
   const rng = rastgeleUretici(tohum);
   const sec = (n) => (strateji === 'ilk' ? 0 : strateji === 'son' ? n - 1 : Math.floor(rng() * n));
   const ozenli = strateji === 'özenli';
-  const puanla = puan || ((d) => Object.entries(d).filter(([k]) => k.startsWith(`${ilgi}.`))
-    .reduce((t, [, v]) => t + (typeof v === 'number' ? v : v ? 1 : 0), 0));
+  // Eşitlikte, başka kadınlara yakınlaştıran seçenek biraz geride kalır (o kişiye özen gösteren oyuncu öbür kapıları seçmez).
+  const KADINLAR = ['ilgin', 'sude', 'ceren', 'defne', 'ela', 'lara'];
+  const deger = (d, kisi) => Object.entries(d).filter(([k]) => k.startsWith(`${kisi}.`))
+    .reduce((t, [, v]) => t + (typeof v === 'number' ? v : v ? 1 : 0), 0);
+  const puanla = puan || ((d) => deger(d, ilgi) - 0.1 * KADINLAR.filter((k) => k !== ilgi).reduce((t, k) => t + deger(d, k), 0));
   const oyun = new Oyun(icerik);
   oyun.basla(ad);
 
@@ -205,6 +208,7 @@ export function romanOyna(icerik, { tohum = 1, strateji = 'rastgele', ad = 'Kaan
 
   const dokum = [];
   const gorulenSatirlar = [];
+  const uyarilar = [];
   const yaz = (s) => dokum.push(s);
   const bloklariYaz = (bloklar) => {
     for (const b of bloklar) {
@@ -216,6 +220,8 @@ export function romanOyna(icerik, { tohum = 1, strateji = 'rastgele', ad = 'Kaan
         case 'seçildi': yaz(b.kanal ? `- *→ ${b.metin}*` : `*→ ${b.metin}*`); if (!b.kanal) yaz(''); break;
         case 'gün': yaz(`*— ${tarihYaz(b.an)} —*`); yaz(''); break;
         case 'kanal':
+          // İlk kez yazan birini oyuncu yazışmanın içinde kaydedebilir; yazışma bittiğinde hâlâ kayıtsızsa sorun var.
+          if (b.onceki && !oyun.durum.rehber[b.onceki]) uyarilar.push(`bölüm ${oyun.sahne && oyun.sahne.bolum}: ${b.onceki} rehbere kaydedilmeden yazışma bitti`);
           if (b.kisi) yaz(`**📱 ${oyun.gorunenAd(b.kisi)}** *(${tarihYaz(b.an, false)} ${saatYaz(b.an)})*`);
           else yaz('');
           break;
@@ -257,5 +263,5 @@ export function romanOyna(icerik, { tohum = 1, strateji = 'rastgele', ad = 'Kaan
     bloklariYaz(oyun.sahneSec(secilen.i));
   }
   if (!oyun.bittiMi()) throw new Error(`Adım sınırına ulaşıldı: bölüm ${sonBolum}`);
-  return { oyun, dokum: dokum.join('\n'), gorulenSatirlar };
+  return { oyun, dokum: dokum.join('\n'), gorulenSatirlar, uyarilar };
 }

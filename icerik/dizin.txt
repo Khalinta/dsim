@@ -4,3 +4,7 @@ gecmis.dsim
 bolum/01-son.dsim
 bolum/02-bavul.dsim
 bolum/03-kaldin.dsim
+bolum/04-firin.dsim
+bolum/05-siz.dsim
+bolum/06-bom.dsim
+bolum/07-kirik-koy.dsim

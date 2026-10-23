@@ -133,6 +133,7 @@ Bavulu yukarı taşırken kadın yine kapıda; elinde bu sefer kitap değil, bir
 @saniye: Madem merdiveni çıkacak bacağın var, bir de çarşıya in. Yeni Eczane, kordonun köşesi. Kıza bunu ver. Saniye Hanım'ın her zamankisi de.
 @saniye: Parası benden. Defterime yazar.
 Kâğıtta titrek bir el yazısıyla iki ilaç adı ve bir not: "Ilgın, bu çocuk yeni. Fazla koyma."
+>> tanış ilgin
 
 >> zaman 16 Eylül 12:20
 >> yer Çarşı, Yeni Eczane
@@ -177,6 +178,7 @@ Kordona çıkarken camdan bir kez bakıyorsun. Sandalyedeki adam içeriyi izliyo
 Poşeti Saniye Hanım'a veriyorsun. Kapının önünde, poşetin içine bakıyor; vitamini görüyor, çıkarıp ışığa tutuyor.
 @saniye: Yine koymuş.
 @saniye: Hasan'ın kızı. Fazla koyar, sonra sormaz. Babası da öyleydi; o da şimdi sormuyor, ama başka sebepten.
+>> tanış hasan
 Şişeyi cebine koyuyor. Kapıyı kapatmadan önce bir kâğıda, kitabının arka kapağına, bir şey yazıyor. Görmeni istemiyor ama saklamıyor da.
 
 >> zaman 16 Eylül 21:30
@@ -275,8 +277,13 @@ Peyniri bölerken sana bakmıyor.
     @defne: Unutmak için önce kaydetmek lazım. Ben kaydettim.
     @defne: Ama sen unutabilirsin. Senin için kolay, yarın İstanbul'dasın.
 Aşağıda, atölyede, rafların arasından geçerken omzun bir kupaya değiyor. Kupa sallanıyor, düşmüyor. Defne nefesini tuttuğunu ancak bıraktığında fark ediyor.
-Kapıda Müdür sizden önce davranıp eşiğe yatıyor.
-@defne: Kapıyı çarpma. Müdür kapı çarpınca küsüyor. İki gün yüzüme bakmıyor, ben de dayanamıyorum.
+Kapıda Müdür sizden önce davranıp eşiğe yatıyor. Defne elini uzatıyor, avucu yukarıda.
+@defne: Telefonun.
+Telefonunu veriyorsun. Numarasını yazıyor, kaydetmeden geri veriyor.
+@defne: İsmimi sen yaz. Ben yazarsam yanına bir de slogan eklerim.
+>> rehber defne: Defne | Sarı Kapı | Müdür'ün Sahibi
+[defne.numara]
+@defne: Bir de: kapıyı çarpma. Müdür kapı çarpınca küsüyor. İki gün yüzüme bakmıyor, ben de dayanamıyorum.
 Kapıyı çarpmadan çıkıyorsun. Yokuşun başında dönüp bakınca sarı kapı kapanmış; Müdür önünde, başı patilerinde.
 
 === b02_personel_sabah

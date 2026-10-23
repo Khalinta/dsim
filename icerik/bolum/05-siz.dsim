@@ -1,0 +1,168 @@
+# Bölüm 5 — Siz
+# 22 Eylül, Pazartesi. Okulun ilk günü; Sude ile tanışma; "bölümden bir asistan" yalanı.
+# Soru: İlk yalanını söylemek nasıl bir şey?
+
+=== b05
+tür: bölüm
+bölüm: 5
+başlık: Siz
+zaman: 22 Eylül 08:05
+yer: Kabaktepe Yerleşkesi
+kişi: sude
+
+Kampüs dolmuşu Liman'dan dolu kalkıyor, Çarşı'da bir daha doluyor, Hastane durağında hiç durmadan geçiyor; şoför aynaya bakıp "doluyuz" diye bağırıyor, durakta bekleyen üç öğrenci aynı anda telefonlarına bakıyor.
+İçeride on dokuz yaşında yüzler, yeni ayakkabılar, yeni defterler. Biri annesiyle telefonda "geldim anne, geldim" diyor; daha gelmedi. Yokuş yukarı çıktıkça körfez açılıyor, en sonunda bütün ufuk; arkadaki sırtta rüzgâr türbinleri ağır ağır dönüyor.
+Mühendislik binasının kapısı açılmıyor. Kilitli değil; rüzgâr öbür taraftan itiyor. Üç kişi omuz verince açılıyor, içeri girenlerin saçları bir anda aynı yöne yatıyor.
+Makine Elemanları'nın sınıfı ikinci katta. Arka sıraların birine oturuyorsun. Yanındaki çocuk bir kalemi çenesinde döndürüyor.
+@sinan: Sen de mi tekrar alıyorsun? Yüzünden belli. Tekrar alanların yüzü yorgun olur, ilk kez alanlarınki korkmuş.
+@sinan: Sinan. Üçüncü kez alıyorum. Tarık Hoca'yı tanırım, her derste aynı şakayı yapar. Bekle.
+>> tanış sinan
+>> tanış tarik
+Hoca giriyor: altmışına yakın, gri ceketli, elinde tebeşir değil kalın bir marker. Tahtaya kocaman bir ok çiziyor, okun iki ucuna iki kutu.
+@tarik: Isı kaybolmaz.
+@tarik: Sadece yer değiştirir.
+Kimse gülmüyor. Hoca kimsenin gülmediğini fark etmiyor ya da her yıl fark ediyor, artık önemsemiyor. Sinan sana dönüp iki parmağını kaldırıyor: ikinci kez, bu derste.
+* (Gül.)
+  [tarik.gulen]
+  Gülüyorsun; sesli değil, ama hoca bunu görüyor. Bir an duruyor, markerini kaldırıp seni gösteriyor.
+  @tarik: Bir. Bu yıl bir kişi. İyi bir yıl olacak.
+  Sinan sırasında yarı yarıya kayıyor.
+* (Gülme. Not al: "Isı kaybolmaz, yer değiştirir.")
+  Defterinin ilk sayfasına yazıyorsun. Sinan defterine bakıyor.
+  @sinan: Onu yazma. Sınavda sormaz. Sınavda bunun tam tersini sorar.
+* (Pencereden körfeze bak.)
+  Pencereden körfez görünüyor; Keçi Adası, onun ötesinde Fener Burnu. Burnun sırtındaki büyük beyaz villa öğle ışığında bir diş gibi parlıyor.
+
+>> zaman 22 Eylül 12:40
+Öğle arasında yerleşkenin içinde yürüyorsun. Kantinin önünde tost kuyruğu, Yüz Basamak'ta oturup güneşlenen öğrenciler, bir ağacın gölgesinde bir masa kurmuş, kulüplere üye toplayan üç kişi; biri bir hoparlörden dağcılık kulübünün tanıtım şarkısını çalıyor.
+Bir ok tabelasının altında bir kız duruyor. Elinde katlanmış bir kâğıt, sırtında yeni bir sırt çantası; çantanın fermuarına takılı etiket hâlâ duruyor. Kâğıda, sonra tabelaya, sonra yeniden kâğıda bakıyor; tabela ve kâğıt anlaşamıyor.
+Seni görünce iki adım atıyor, durup bir kez daha düşünüyor, sonra kararını verip geliyor.
+@sude: Pardon. Siz burada okuyor musunuz, yoksa çalışıyor musunuz?
+@sude: Yaşınızdan çıkaramadım. Yani üçüncü sınıf da olabilirsiniz, genç bir hoca da. İkisine de aynı soruyu sormak istiyorum ama hitap farklı.
+* "Okuyorum. Ama burayı ben de bilmiyorum."
+  [sude.yakin +1]
+  [sude.durust_ilk]
+  @sude: Ah. O zaman ikimiz de kayıp sayılırız. Kayıp iki kişi, kayıp bir kişiden daha iyi. İstatistiksel olarak.
+* "Hangi sınıf olsam, ne sorardınız?"
+  @sude: Hoca olsaydınız "Fen-Edebiyat nerede, hocam?" derdim. Öğrenci olsaydınız "Fen-Edebiyat nerede?" derdim, hocamsız.
+  @sude: Şimdi ikisini birden söyledim. Kalanı size kalmış.
+* "Nereye gidiyorsunuz?"
+  @sude: Fen-Edebiyat Fakültesi. Psikoloji. İlk dersim on dört yirmide ve ben on bir buçuktan beri arıyorum.
+  @sude: Bu tabela bana yalan söylüyor. Ya da ben tabela okumayı bilmiyorum. İkincisi daha kötü olur, birincisini tercih ediyorum.
+Kâğıdı sana uzatıyor. Kampüsün bir krokisi; birisi, belki kendisi, kurşun kalemle bazı binaların adlarını yazmış, bazılarının üstünü çizmiş.
+@sude: Şu bina. Bu kâğıda göre şu bina. Ama şu bina kapalı.
+Gösterdiği bina kütüphane. Doğru bina iki yüz metre ilerde; ama sen de bilmiyorsun. Birlikte yürümeye başlıyorsunuz. İlk girdiğiniz bina Rektörlük; danışmadaki görevli başını kaldırmadan "burası değil" diyor, nereye gideceğinizi söylemiyor.
+@sude: Burası değilmiş. Ben de bunu biliyordum aslında. Ama birisinin söylemesi iyi oldu, şimdi kesin.
+Çıkarken kızın telefonu çalıyor. Ekrana bakıyor ve yüzü değişiyor; değişmesini engellemeye çalışıyor, beceremiyor.
+@sude: Annem. Görüntülü. Bir dakika. Lütfen bir dakika durur musunuz, yani yanımdan gitmeyin, ama görüntüye de girmeyin. Ya da girin. Bilmiyorum. Bir dakika.
+Telefonu açıyor. Ekranda başörtülü, gözlüklü bir kadın; arkasında bir mutfak dolabı, dolabın üstünde plastik bir saat.
+@yabanci(Telefondaki kadın): Sude? Kızım, yemek yedin mi? Neredesin? Arkandaki ne, bina mı? Kimle konuşuyordun, bir ses duydum.
+Kız ekrana bakıyor, sonra sana; bir saniyenin içinde bir karar veriyor ve bu kararın büyüklüğünden kendisi korkuyor.
+@sude: Anne, bölümden bir asistan. Fakülteyi gösteriyor. Hocam, annem.
+Telefonu sana çeviriyor. Ekranda kadının yüzü, yakından; gözlüğünün arkasından sana bakıyor, bir şeyi kontrol eder gibi.
+@yabanci(Telefondaki kadın): Merhaba hocam. Kusura bakmayın. Bizim kız yeni, ilk kez evden uzak. Kaybolur, söylemez.
+* "Merhaba efendim. Fakülteye götürüyorum, merak etmeyin."
+  [sude.asistan]
+  [sude.yakin +1]
+  [yalan.sude]
+  @yabanci(Telefondaki kadın): Allah razı olsun. Kayseri'den arıyorum, siz nerelisiniz?
+  "İstanbul," diyorsun. Kadın başını sallıyor; İstanbul'u onaylamıyor ama kabul ediyor.
+  @yabanci(Telefondaki kadın): Sude, hocana teşekkür et. Akşam dokuzda ararım.
+* (Ekrana gülümse, elini kaldır. Bir şey söyleme.)
+  [sude.asistan_sessiz]
+  Kadın da gülümsüyor; kısa, kontrol eden bir gülümseme.
+  @yabanci(Telefondaki kadın): Hocam konuşmuyor mu?
+  @sude: Anne, hocamın dersi var. Acelesi var. Akşam ararsın.
+  Telefonu kendine çeviriyor. "Akşam dokuzda," diyor kadın; "dokuzda," diyor kız.
+* "Ben asistan değilim aslında. Ben de öğrenciyim."
+  [sude.ele_verdi]
+  Kız bir an donuyor. Ekrandaki kadın kaşlarını kaldırıyor.
+  @yabanci(Telefondaki kadın): Asistan değil mi? Sude?
+  @sude: Anne, bölümden dedim. Bölümden bir öğrenci. Ağabey yani. Üçüncü sınıf. Fakülteyi gösteriyor.
+  Kız bunu ilk yalanın üstüne, ikinci bir yalan olarak, nefes almadan söylüyor; telefonu kendine çevirip kapatıyor. Sana bakmıyor.
+Telefon kapanıyor. Kız ekrana bakmaya devam ediyor, kararmış ekrana.
+@sude: Bunu neden söyledim?
+@sude: Ben yalan söylemem. Söylemezdim. Asistan. Neden asistan? Asistan bile değil, düpedüz… bir ünvan uydurdum.
+>> eğer sude.ele_verdi
+  @sude: Siz de düzelttiniz. Haklısınız. Düzeltmeniz gerekiyordu. Ama keşke düzeltmeseydiniz. İkisi birden doğru, bunu nasıl yapıyorum bilmiyorum.
+>> yoksa
+  @sude: Siz de oynadınız. Neden oynadınız? Hayır, teşekkür ederim, oynamasaydınız daha kötü olurdu. Ama neden oynadınız?
+Telefonunu açıyor, bir nota hızlı hızlı bir şey yazıyor; ekran senin tarafına dönük değil ama notun ilk satırı bir an görünüyor: "14."
+* "On dört mü? Ne on dördü?"
+  [sude.defter_gordu]
+  Kız telefonu göğsüne bastırıyor.
+  @sude: Hiçbir şey. Bir liste. Kişisel. Psikoloji bölümünde herkes liste tutar, ödev. Bu da bir yalan oldu, değil mi? Tamam. Bunu da sayıyorum.
+  Ekranı tekrar açıp bir şey daha yazıyor. Sonra kapatıyor, telefonu çantasının en dibine koyuyor.
+* "Bir dakika önce asistandım, şimdi kayıp bir öğrenciyim. Terfi mi bu, tenzil mi?"
+  [sude.yakin +1]
+  Kız sana bakıyor; cümlenin bir şaka olduğunu bir saniye sonra anlıyor. Sonra gülüyor, kısa ve şaşkın, sanki gülmeyi beklemiyormuş.
+  @sude: Tenzil. Kesinlikle tenzil. Ama maaşınız aynı kalıyor, yani sıfır.
+* (Bir şey söyleme. Yürümeye devam et.)
+  [sude.yakin +1]
+  Kız yanında yürüyor, telefonunu sıkıca tutarak. Bir süre sonra konuşuyor, sana değil, kaldırım taşlarına:
+  @sude: Teşekkür ederim. Bir şey sormadığınız için.
+
+Fen-Edebiyat'ı sonunda buluyorsunuz; kütüphanenin arkasında, bir duvarın gölgesinde, tabelası tam ters yöne bakıyor.
+@sude: İşte. Tabela yalan söylüyormuş. Ben okumayı biliyormuşum. Bu iyi haber.
+Kapının önünde duruyor, çantasının askısını iki eliyle tutuyor.
+@sude: Ben Sude bu arada. Sude Aydemir. Psikoloji, birinci sınıf. Kayseri. Annemi gördünüz zaten.
+>> tanış sude
+@sude: Size bir şey soracağım ve bu tuhaf gelebilir. Numaranızı alabilir miyim? Annem akşam dokuzda "asistanın adı ne" diye sorarsa bir isim söylemem gerekiyor. Ve isim söylersem o ismin bir numarası olmalı, annem öyle düşünür. Tutarlılık.
+* (Numaranı ver.)
+  [sude.numara]
+  [sude.yakin +1]
+  Telefonunu uzatıyor. Numaranı yazıyorsun; kız adını kendi telefonunda yazarken bir harfi yanlış yazıyor, siliyor, doğrusunu yazıyor. Sonra sana bir boş mesaj atıyor: yalnızca bir nokta. "Bu ben," diyor.
+  >> rehber sude: Sude | Sude Psikoloji | Fen-Edebiyat
+* "Adımı söyleyeyim, numara gerekmez."
+  @sude: Gerekir. Annem ismi aratır. Yani belki aratmaz ama ben aratır diye düşünürüm, o da aynı şey.
+  Gülümsüyor; bu gülümsemenin bir kısmı özür.
+  Numaranı veriyorsun. Kız sana bir nokta atıyor: "Bu ben."
+  [sude.numara]
+  >> rehber sude: Sude | Sude Psikoloji | Fen-Edebiyat
+* {sude.defter_gordu} "Annene söylediğimi o listeye de yazacak mısın?"
+  [sude.defter_sordu]
+  [sude.yakin +1]
+  Kızın yüzü bir an kızarıyor, sonra kızarmamaya karar veriyor gibi.
+  @sude: Liste değil. Not. Ve evet. Yazacağım. Doğru yazmam için numaranız lazım.
+  Numaranı söylüyorsun. Kız rakamları tek tek, yüksek sesle tekrar ederek yazıyor; sonra sana bir nokta atıyor ve ekranını gösteriyor: gitti mi?
+  [sude.numara]
+  >> rehber sude: Sude | Sude Psikoloji | Fen-Edebiyat
+@sude: Teşekkür ederim. Tekrar. Yarın görüşebiliriz belki. Yani görüşmek zorunda değiliz. Ama belki.
+Kapıdan giriyor. Kapı rüzgârla arkasından çarpıyor; kız camın arkasından dönüp bakıyor, kapının sesinden özür diler gibi bir el hareketi yapıyor, sonra koridorda kayboluyor.
+
+>> zaman 22 Eylül 21:40
+>> yer Taş Mahalle, ev
+Pazartesi Mendirek kapalı. Akşam evin içi boş; Onur "kütüphanedeyim" diye mesaj atmış, arkasından bir dürüm fotoğrafı.
+Masaya Makine Elemanları'nın ders notlarını açıyorsun. İlk sayfada, kendi el yazınla, sabahki cümle duruyor ya da durmuyor; ikinci sayfada bir dişli çark, dişlerinden biri kırık çizilmiş. Kim çizdi, hatırlamıyorsun.
+Saniye Hanım'ın radyosu aşağıda alçak sesle bir şarkı çalıyor; şarkı bitince radyo kapanıyor, ışık sönüyor.
+>> zaman 22 Eylül 23:20
+Telefon, yatağın kenarında, bir kez titriyor. Ardından bir kez daha.
+>> yazışma sude
+  @sude: İyi akşamlar.
+  @sude: Bugün yol gösterdiğiniz için tekrar teşekkür ederim. Siz olmasanız hâlâ Fen-Edebiyat'ın etrafında dönüyor olurdum :)
+  @sude: Pardon, bir de: sizi asistan yaptım. Bunun için ayrıca özür dilerim.
+  @sude: Annem akşam sordu. "Asistanın adı ne?" dedi. Adınızı söyledim. Doğru adınızı. Yalanın içinde doğru bir şey olsun istedim.
+  @sude: Yarın yelkende misiniz? Listede adınızı gördüm. Yani gördüm sanıyorum.
+  * evet. sen de mi yelkendesin
+    [sude.yakin +1]
+    [sude.sen_dedi]
+    >> bekle 1dk
+    @sude: Evet. Seçmeli. Programıma uyan tek ders oydu. Bir de denizi hiç bilmiyorum, bilmediğim bir şeyi seçmek istedim.
+    @sude: Bir saniye. "Sen" dediniz.
+    @sude: Dedin.
+    @sude: Tamam. Deniyorum. Yarın görüşürüz :)
+  * evet. özür dileme, asistanlık güzeldi. maaşsız ama
+    [sude.yakin +1]
+    >> bekle 1dk
+    @sude: Hahahaha.
+    @sude: Ciddiyim, güldüm. Yorganın altındayım, oda arkadaşlarım uyuyor, sesli güldüm. Dilan uyandı. Size kızdı.
+    @sude: Yarın görüşürüz o zaman. Teknede. Ben hiç teknede olmadım. Bunu yarın siz de görürsünüz zaten.
+  * yelkendeyim. annen başka bir şey sordu mu
+    [sude.anne_sordu]
+    >> bekle 2dk
+    @sude: Sordu. Asistanların ne kadar maaş aldığını sordu. Bilmiyorum dedim.
+    @sude: Sonra "çok genç görünüyordu" dedi. "Genç asistanlar olur" dedim. Bu ikinci yalan oldu. Yani on beşinci.
+    @sude: Pardon, bunu yazmamalıydım. Unutun. Yarın görüşürüz.
+  * (Cevap verme.)
+    [sude.cevapsiz]
+Ekran kararıyor. Pencerenin dışında, iki binanın arasındaki çeyrek denizde, Fener Burnu'nun ışığı dönüp duruyor; bir yanıp bir sönüyor, kimseye bir şey söylemeden.

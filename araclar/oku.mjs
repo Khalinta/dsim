@@ -57,7 +57,8 @@ const hatalar = [];
 
 for (const k of kosular) {
   try {
-    const { oyun, dokum, gorulenSatirlar } = oyna(icerik, { ...k, ad: 'Kaan' });
+    const { oyun, dokum, gorulenSatirlar, uyarilar: oyunUyarilari = [] } = oyna(icerik, { ...k, ad: 'Kaan' });
+    for (const u of new Set(oyunUyarilari)) hatalar.push(`${k.ad}: ${u}`);
     writeFileSync(new URL(`dokum-${k.ad}.md`, cikti), `# Döküm: ${k.ad}\n${dokum}\n`);
     for (const id of Object.keys(oyun.durum.gorulen)) gorulenParcalar.set(id, (gorulenParcalar.get(id) || 0) + 1);
 
