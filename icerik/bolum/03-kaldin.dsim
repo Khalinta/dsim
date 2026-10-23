@@ -1,0 +1,278 @@
+# Bölüm 3 — Kaldın
+# 17 Eylül, Çarşamba. Mendirek'te iş; Defne'yle yeniden karşılaşma (önceki iki bölüme göre); Saniye Hanım'ın merdiveni.
+# Soru: Biri seni yalanınla yakaladığında ne olur?
+
+=== b03
+tür: bölüm
+bölüm: 3
+başlık: Kaldın
+zaman: 17 Eylül 09:40
+yer: Taş Mahalle, ev
+
+Sabah evin bütün sesleri tek tek geliyor. Onur'un alarmı üç kez çalıyor, üçünde de susturuluyor. Aşağıda Saniye Hanım radyoyu açıyor, kapatıyor, açıyor; bir haber spikeri yarım cümle konuşup susuyor. Bir kedi pencerenin önünde, camın öbür yüzünde, bir sineği izliyor.
+Telefon titriyor.
+>> yazışma burak
+  @burak: kral günaydın
+  @burak: mendirek'te garson arıyolar. kışlık iş. nuri abi'yi tanırım, öğlen git benden selam söyle
+  @burak: limanın ucu, dalgakıranın dibi. ağ asılı tavanda, kaçırmazsın
+  * gidiyorum. eyvallah abi
+    [mendirek.burak_selam]
+    >> bekle 1dk
+    @burak: 👌 bir şey diyim mi
+    @burak: nuri abi soru sormaz. sorarsa bi kere sorar. düzgün cevap ver
+  * kışlık mı? emin misin
+    [mendirek.burak_selam]
+    >> bekle 2dk
+    @burak: sen kalıyon dedin di mi. ben de duyduğumu söylüyom kral
+    @burak: limanın ucu. git bak, beğenmezsen moda var
+  * sen nereden biliyorsun kaldığımı
+    >> bekle 1dk
+    @burak: bilmiyom. bavul hala burda ama. personel evinin önünde senin bi çorap var bu arada
+    @burak: git konuş nuri abiyle. öğlen. selam söyle
+
+>> eğer defne.kaliyor_dedi ve değil defne.cevap ve değil defne.ilk_gece
+  >> oyna b03_firin
+
+>> zaman 17 Eylül 12:50
+>> yer Liman, Mendirek
+Mendirek limanın en ucunda, dalgakıranın dibinde; denize o kadar yakın ki dış masaların ayakları ıslak taşın üstünde. Kapı açık ama içerisi kapalı: sandalyeler masaların üstünde, ters.
+Tavandan eski bir balık ağı sarkıyor. Duvarda bir teknenin siyah-beyaz fotoğrafı; teknenin adı fotoğrafta okunmuyor, yalnızca baş tarafındaki beyaz harflerin kıvrımı.
+Mutfakla salonu ayıran tezgâhta bıyıklı, iri elli bir adam bir levrek temizliyor. Bıçak pullara ters giriyor, pullar ışıkta sıçrıyor; birkaçı adamın kolunda kalmış, umursamıyor.
+@nuri: Kapalıyız.
+* "Burak gönderdi. Garson aranıyormuş."
+  [mendirek.burak_dedi]
+  Adam bıçağı bir saniye durduruyor; Burak'ın adını tartıyor gibi. Sonra devam ediyor.
+* "Kordondaki dondurmacı söyledi, garson arıyormuşsunuz."
+  [mendirek.yalanla_girdi]
+  Adam başını kaldırmadan "dondurmacı" diyor, bir şey eklemiyor. Dondurmacının bunu bilip bilmediğini sorgulamıyor; ya da sorgulayıp sana söylemiyor.
+* (Bekle. Balık bitene kadar bir şey söyleme.)
+  [nuri.not +1]
+  Balığı bitiriyor. Musluğu açıyor, ellerini uzun uzun yıkıyor, bir beze kuruluyor. Sonra ancak sana bakıyor; sanki bekleyip beklemeyeceğini görmek istemiş.
+Mutfağın kapısından, buharın arasından, beyaz başörtülü bir kadının yüzü görünüyor; bir an, sonra kayboluyor.
+@nuri: Ne kadar kalacaksın?
+* "Kış boyu."
+  [nuri.not +1]
+  @nuri: Kış uzun.
+  Bunu bir uyarı gibi söylemiyor. Bir hava raporu gibi.
+* "Bilmiyorum."
+  @nuri: Bilmeyen çok.
+  Bıçağı yıkıyor, yavaşça, iki yüzünü.
+* "Ne kadar lazımsa."
+  [nuri.not +1]
+  Adam ilk kez dikkatle bakıyor; yüzüne, ellerine.
+  @nuri: Lazım olan sen değilsin. Kış.
+  Ne demek istediğini anlamıyorsun. O da açıklamıyor.
+Mutfaktan, buharın arasından, yaşlıca bir kadın sesi geliyor; Ege'nin içinden, ağır.
+@saadet: Nuri. Çocuğu korkutma. Gel otur hele oğlum, çay koyayım.
+>> tanış nuri
+@saadet: Ben Saadet. Abla de, herkes der. Bu adam dört kelimeyle iş verir, beş kelimeyle kovar. Sayıyorum ben, kırk yıldır sayıyorum.
+>> tanış saadet
+Adam balığı bir tabağa koyup üstüne bir tutam tuz atıyor. Sonra sana dönüyor.
+@nuri: Perşembe. Altıda. Geç kalma.
+Saadet Abla mutfak kapısında, elinde bir çay bardağı, parmaklarıyla sayıyor; dört parmağı havada.
+@saadet: Gördün mü? Dört.
+Çayı içiyorsun. Mutfaktan soğan, defne yaprağı ve deniz kokusu geliyor. Nuri Abi bir kez daha duvardaki fotoğrafa bakıyor, kimse görmüyor sanarak.
+
+>> eğer defne.cevap
+  >> oyna b03_atolye_davet
+>> yoksa eğer defne.kaliyor_dedi ve değil defne.ilk_gece
+  >> oyna b03_atolye_firindan
+>> yoksa
+  >> oyna b03_sari_kapi
+
+>> zaman 17 Eylül 22:15
+>> yer Taş Mahalle, ev
+Eve döndüğünde Saniye Hanım dış merdivenin üçüncü basamağında oturuyor. Yanında, basamağın üstünde, iki ince belli bardak; birinin buharı hâlâ çıkıyor, öbürü soğumuş. Etrafında kediler: biri kucağında, biri ayağının dibinde, biri iki basamak yukarıda, ikinize birden tepeden bakıyor.
+@saniye: Otur. Merdiven gıcırdar; oturunca gıcırdamaz. Bunu kimse bilmiyor, sana söylüyorum.
+Oturuyorsun. Basamak gerçekten susuyor.
+@saniye: Bu Ferhan. Bu Ayşe Kadın. Yukarıdaki Hayri. Hayri'ye adını ben koymadım, bir önceki kiracı koydu. Gitti. Hayri kaldı.
+Sana soğumamış olan bardağı uzatıyor.
+@saniye: Bunu sana koymuştum. Yarım saat önce. Öbürünü ben içecektim, unuttum. Soğuk çay da çaydır.
+Bir süre konuşmadan oturuyorsunuz. Aşağıda, çarşıya inen sokağın başında bir sokak lambası yanıp sönüyor; Saniye Hanım lambayı izliyor, sayar gibi.
+@saniye: Sana bir şey soracağım. Bütün kiracılarıma sorarım. Cevabı yazarım. Yanlış cevap yok; ama kötü cevap var.
+@saniye: Sen neyden kaçıyorsun?
+* "Babamdan."
+  [saniye.not +2]
+  [saniye.baba]
+  Saniye Hanım başını çevirip sana bakıyor; hızlı bir cevap beklemiyormuş.
+  @saniye: Kısa ve doğru. İyi cümle.
+  @saniye: Babalar uzaktan büyük görünür. Yakınlaşınca da büyük görünür, orası değişmiyor. Ama yakınlaşınca yüzleri görünür.
+* "Hiçbir şeyden. Yazı sevdim, kaldım."
+  [saniye.not -1]
+  @saniye: Yazı sevmiş.
+  Hırkasının cebinden küçük bir defter çıkarıyor, kurşun kalemle bir şey yazıyor.
+  @saniye: Yazı herkes sever. Kalan olmaz. Bu cevap hikâye değil, kartpostal.
+* "Siz neden buradasınız peki?"
+  [saniye.not +1]
+  @saniye: Soruya soruyla. Eski numara.
+  @saniye: Kocam son yılını denize bakarak geçirmek istedi. Geçirdi. Ben de kaldım; bakkal yakın.
+  Bunu bir şaka gibi söylüyor, ama gülmüyor; sen de gülmüyorsun.
+  @saniye: Bir gün senin cevabını da alırım. Acelem yok. Benim yaşımda acele etmek kötü cevap.
+* (Çayını iç. Cevap verme.)
+  [saniye.not +1]
+  [saniye.sustu]
+  Çayını içiyorsun. Soğuk ve çok şekerli.
+  Saniye Hanım bir süre bekliyor. Sonra hırkasının cebinden küçük bir defter çıkarıyor, kurşun kalemle bir şey yazıyor.
+  @saniye: Susmak da cevap. Ama sınavda susan öğrenciye ben yarım puan verirdim. Tam değil.
+Kucağındaki kedi iniyor, merdivenden aşağı süzülüp sokak lambasının altına gidiyor. Saniye Hanım bardağını alıp kalkıyor; kalkarken trabzana tutunuyor, yavaşça.
+@saniye: Gece geç gelirsen merdiven gıcırdar. Unutma. Ben uyumam zaten, ama gıcırtıyı duymayı sevmem.
+Kapısı kapanıyor. Basamakta sen, iki boş bardak ve yukarıda, Hayri.
+
+=== b03_firin
+tür: sahne
+kişi: defne
+
+>> zaman 17 Eylül 11:40
+>> yer Çarşı, Sabahçı Fırını
+Öğleye doğru ekmek almak için çarşıya iniyorsun. Sabahçı Fırını'nın önünde altı yedi kişilik bir kuyruk; içeriden sıcak hamur ve susam kokusu. Tezgâhın arkasında un ellerine kadar beyaz, iri bir adam radyoyla tartışıyor.
+@rahmi: Yalan. Dolar düşmüyor. Sen düşüyorsun.
+Kuyrukta, önünde, çamurlu bir tişörtle bir kadın. Saçı bir kalemle tepesine tutturulmuş. Arkasını dönmeden konuşuyor; seni kuyruğa girerken camda görmüş.
+@defne: Ekmek kuyruğunda kimse kimseye bakamaz demiştim.
+@defne: Bakmıyorum, bak. Camdan konuşuyorum.
+* "Ben de camdan dinliyorum."
+  [defne.yakin +1]
+  @defne: İyi. Cam aramızda. Güvenli mesafe.
+* "Kalıyorum dedim ya. İşte, ekmek alıyorum."
+  [defne.yakin +1]
+  @defne: Kanıt. Ekmek kanıtı. Mahkemede geçerli.
+* (Bir şey söyleme. Sırayı bekle.)
+  Bir süre ikiniz de susuyorsunuz. Sıra yavaş ilerliyor. Defne'nin omzu bir kez seninkine değiyor, kuyruk sıkışınca; geri çekilmiyor.
+Sıra ona geliyor. "Yarım ekmek, bir de dünden kalan ne varsa," diyor. Fırıncı ona dünden kalan iki poğaçayı uzatıp para almıyor; Defne poğaçalardan birini, arkasını dönmeden, sana uzatıyor.
+@defne: Atölye bu akşam açık. Gel. Ekmek kuyruğunda konuşulmaz.
+@defne: Taş Mahalle, sarı kapı. Köpeğe selam ver; vermezsen içeri almaz, ben de alamam.
+
+=== b03_atolye_davet
+tür: sahne
+kişi: defne
+
+>> zaman 17 Eylül 19:30
+>> yer Taş Mahalle, Çatlak Seramik
+Akşam yokuşu çıkarken sarı kapı uzaktan seçiliyor; bütün mahallede maviye boyanmamış tek kapı.
+Önünde, eşikte, Müdür. Başını kaldırıyor, seni tanıyor ya da tanımıyor; bir kez kuyruğunu yere vuruyor, o kadar.
+Kapı aralık. İçeriden bir radyo; bir de suyun içinde dönen bir şeyin sesi, ıslak ve tekdüze.
+>> eğer defne.tercih
+  @defne: Fiş kesiliyor. Gir.
+  @defne: Tercih. Peki. Tercihlerin müşteri hizmetleri yok, biliyorsun değil mi? İade yok, değişim yok. Senin cümlendi.
+>> yoksa eğer defne.uzun_hikaye
+  @defne: Kısalttın mı?
+  @defne: Kısaltmadıysan otur, ben de çamurumu bitireyim, sonra uzun hikâye dinlerim. Uzun hikâyeler akşam yedi buçuktan sonra.
+>> yoksa
+  @defne: Bavulsuz gelmişsin. Bilgi alışverişi başlıyor.
+>> geç b03_atolye_ic
+
+=== b03_atolye_firindan
+tür: sahne
+kişi: defne
+
+>> zaman 17 Eylül 19:30
+>> yer Taş Mahalle, Çatlak Seramik
+Akşam yokuşu çıkarken sarı kapı uzaktan seçiliyor; bütün mahallede maviye boyanmamış tek kapı. Önünde, eşikte, iri sarı bir köpek. Başını kaldırıp sana bakıyor.
+* (Köpeğe selam ver.)
+  [defne.yakin +1]
+  "Selam," diyorsun, köpeğe, ciddi ciddi. Köpek seni bir süre süzüyor, sonra başını patilerine bırakıyor. İçeriden bir kahkaha.
+  @defne: Müdür. Adı Müdür. Selam verdin, kayda geçtin.
+* (Köpeğin yanından geç.)
+  Köpek homurdanmıyor ama kalkmıyor da; kapının tam önünde, eşiği kapatıyor. Üstünden adım atmak zorunda kalıyorsun.
+  @defne: Müdür'e selam vermedin. Not aldı. Ben de aldım.
+>> geç b03_atolye_ic
+
+=== b03_sari_kapi
+tür: sahne
+kişi: defne
+
+>> zaman 17 Eylül 19:20
+>> yer Taş Mahalle
+Akşam eve dönerken yokuşu başka bir sokaktan çıkıyorsun; Taş Mahalle'nin sokakları birbirine benziyor, hangisinin hangisi olduğunu henüz bilmiyorsun.
+Dördüncü dönemeçte sarı bir kapı. Önünde iri, sarı bir köpek yatıyor. Köpek başını kaldırıyor.
+Kapının iç tarafında bir kadın, kolları dirseklerine kadar çamurlu, elinde bir sünger. Senin yokuştan çıkışını seyrediyor; ne kadar zamandır seyrediyor, bilmiyorsun.
+@defne: Kaldın.
+Soru değil.
+>> eğer defne.ilk_gece ve defne.yalan_derin
+  @defne: Otobüs on ikideydi. Hangi on iki? Dün mü, bugün mü, gelecek yıl mı?
+  @defne: Bana "on ikide" dedin. Ben de sana kahve yaptım. Kahveyi geri isteyemem, biliyorum. İçtin.
+  Gülüyor ama gülüşünde bir kenar var; kesilmek üzere olan bir şeyin kenarı.
+  Sonra kapıyı sonuna kadar açıp içeri giriyor. Arkasından gelmeni bekliyor mu, belli değil.
+>> yoksa eğer defne.sabah_itiraf
+  @defne: Düşündüm. Uzun düşündüm. İki gün.
+  @defne: Hiçbir sonuca varmadım. Bu da bir sonuç.
+  @defne: Gir. Kapıda durunca Müdür seni müşteri sanıyor, müşteri sevmiyor.
+>> yoksa eğer defne.ilk_gece
+  @defne: Sabah "yetişirim" dedin. Yetişemedin galiba. Yokuş yukarı yetişemedin.
+  Kapıyı sonuna kadar açıyor. Başıyla içeriyi gösteriyor.
+>> yoksa
+  @defne: Neden kaldın? Hayır, cevap verme. Duymak istemiyorum.
+  @defne: Tamam, söyle. Ama içeride. Kapıda söylenen her şey sokağa kalıyor.
+  [sahne.soruldu]
+>> geç b03_atolye_ic
+
+=== b03_atolye_ic
+tür: sahne
+kişi: defne
+
+Atölye akşamın son ışığında; ışığın bittiği yerden sonrasını tavandaki çıplak ampul tutuyor. Tezgâhın üstünde dönen bir torna, tornanın üstünde yarım bir kâse; kâsenin ağzı Defne'nin parmaklarının altında inceliyor, inceliyor.
+Raflarda gri, pişmemiş kupalar. Bir rafta pişmiş olanlar: sırlı, parlak, her birinde bir yerde bir kusur. Biri yamuk, birinin kulpu ters takılmış, birinin dibinde sırrın akıp topladığı bir damla.
+@defne: Hiçbir şeye dokunma. Bu atölyede her şey ya kurumuyor ya kırılıyor. Arası yok.
+Defne tornayı durduruyor. Kâse bir an dönmeye devam ediyor, sonra duruyor.
+>> eğer değil sahne.soruldu
+  @defne: Kaldın. Neden kaldın?
+>> yoksa
+  @defne: Söyle bakalım.
+* "Okula yazıldım burada. Kimseye söylemedim."
+  [defne.yakin +1]
+  [defne.sir_biliyor]
+  Defne çamurlu ellerini önlüğüne siliyor. Silmesi uzun sürüyor.
+  @defne: Kimseye.
+  @defne: Ailene de mi?
+  Başını sallıyorsun. Defne kâseye bakıyor, sonra sana; yüzü bir an çok ciddi, sonra bunu fark edip bir espri arıyor.
+  @defne: Tamam. Benim de söylemediğim şeyler var. Sırlarımızı karşılaştırmayalım ama, ben kaybederim. Yani kazanırım. Hangisi kötüyse.
+* "Ü'nün noktasını arıyorum. Lagün'ün tabelasından düştü."
+  [defne.yakin +1]
+  @defne: Kumda.
+  @defne: Kumda bir nokta arıyorsun. Bütün kış. Bu çok güzel bir sebep, kimseye söyleme, çalarlar.
+* "Bilmiyorum."
+  @defne: Bilmiyorsun. Yine.
+  @defne: Tamam. Bilmeden de kalınıyormuş demek. Ben bilerek kaldım, bak ne oldu.
+  Etrafındaki rafları gösteriyor: çatlakları, yamukları.
+* "Kışın burada ne yapılıyor, merak ettim."
+  @defne: Kupa yapılıyor. Satılmıyor. Sonra kupalardan içiliyor.
+  @defne: Bunu öğrenmek için kaldıysan kötü haber: ben de daha bilmiyorum. Bu benim ikinci kışım. Birincisini saymıyorum. Onu ben yaşamadım, o beni yaşadı.
+  Sonra konuyu değiştirmek ister gibi tornanın düğmesine basıyor; torna dönmeye başlıyor, kâse onunla.
+Tezgâhın köşesinde, bir torbanın içinde, gri bir çamur yığını duruyor. Defne bir parça koparıp önüne bırakıyor.
+@defne: Yoğur. Ekmek hamuru gibi değil, tersine: içindeki havayı çıkaracaksın. Hava kalırsa fırında patlıyor. İnsan gibi.
+Avuçlarının dibiyle bastırıyorsun, katlıyorsun, yeniden bastırıyorsun. Çamur soğuk, sonra ellerinin ısısını alıyor. Defne bir süre seni izliyor; sonra kendi işini bırakıp izlemeye devam ediyor.
+@defne: Elin yatkın. Bunu herkese söylemem, çoğunun eli yatkın değil, bir şey kırmasınlar diye söylemem.
+@defne: Ne yapıyordun sen, garsonluktan önce?
+* "Mühendislik okuyordum. Makine."
+  [defne.muhendis]
+  @defne: Makine.
+  @defne: Fırınım bir makine. Kötü huylu bir makine. Bunu not alıyorum, ileride lazım olabilir. Tehdit değil, umut.
+* "Hiçbir şey. Uyuyordum."
+  [defne.yakin +1]
+  Defne gülüyor; bu sefer gerçekten, hazırlıksız.
+  @defne: Ben de. Reklam ajansında. Uyanıkken uyuyordum. Daha kötüsü.
+  Söylediğini fark ediyor. Bir an duruyor, sonra omuz silkiyor; söylendi artık.
+  [defne.reklam_acildi]
+Kapının önünde Müdür bir kez iç çekiyor, yerini değiştiriyor. Defne başıyla onu gösteriyor.
+@defne: Müdür'ün adını neden Müdür koyduğumu sormadın. Herkes sorar.
+@defne: İlk gün geldi, kapının önüne oturdu. Bütün gün. Kim girse süzdü, kim çıksa süzdü, öğlen bir kere esnedi, akşam gitti. Ertesi gün yine. Benim eski müdürüm de böyleydi. Ondan farkı, bu bana hiç toplantı yapmadı.
+Defne rafın en ucundan bir kupa alıyor; çatlak, kulpu ters. Sana uzatmıyor, sadece gösteriyor.
+@defne: Bunun adı "ilişkilerim". Satılmıyor. Kendime ayırdım.
+Raflardaki kupaların arasında yürürken omzun yine bir rafa yaklaşıyor; Defne'nin eli havaya kalkıyor, sonra iniyor. Bu sefer hiçbir şey sallanmıyor.
+@defne: Gelişme var.
+@defne: Cuma gecesi fırın açılıyor. Perşembe yüklüyorum, cuma gece açıyorum. Saat bilmiyorum, fırın bilir. Gel.
+@defne: Gelmezsen de olur. Ama gel.
+* "Gelirim. Mendirek'te işim var ama, bitince."
+  [defne.firin_soz]
+  [defne.yakin +1]
+  @defne: Mendirek. Nuri Abi.
+  @defne: Ona gerçekten iş bulmuşsun. İş bulan insan kalıyordur. Bu kötü haber, sana değil bana.
+* "Fırın açılınca ne oluyor?"
+  [defne.firin_soz]
+  @defne: Bilmiyorsun. İşte, o yüzden gel. İçinde ne var bilmiyorsun, kapağı açınca biliyorsun. Bazen pişmiş, bazen çatlamış, bazen hiçbir şey.
+  @defne: Hayatımda en sevdiğim an o. Kapağı açmadan önceki an.
+* "Bakarım."
+  [defne.yakin -1]
+  @defne: Bakarım.
+  Kelimeyi geri veriyor, tadı bozulmuş bir şey gibi.
+  @defne: Peki. Bak.
+Dışarıda hava kararmış. Kapıda Müdür kenara çekilip yol veriyor; bu sefer sen istemeden.

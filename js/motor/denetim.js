@@ -138,6 +138,14 @@ export function denetle(icerik, { yasakliKaliplar = [] } = {}) {
           if ((k.ad === 'yer' || k.ad === 'ev') && (tur === 'mesaj' || tur === 'geçmiş')) hatalar.push(`${p.dosya}:${no} Mesaj parçasında yer değişmez`);
         }
       }
+      // Romanda bir etiketin üstündeki kısım ya bir atlamayla biter ya da hiç bitmez; yoksa akış farkında olmadan
+      // bir sonraki etiketin sahnesine düşer (ilk taslakta "iyi geceler" diyen oyuncu Defne'nin yatak odasına düşüyordu).
+      if (listeNo === 0 && icerik.roman && (tur === 'bölüm' || tur === 'sahne')) {
+        liste.forEach((d, i) => {
+          if (d.t !== 'etiket' || i === 0) return;
+          if (!hepAtlar(p, liste[i - 1])) hatalar.push(`${p.dosya}:${d.no} "${d.ad}" etiketinin üstündeki kısım bir atlamayla (-> etiket ya da -> son) bitmiyor; akış bu etikete düşer`);
+        });
+      }
       if (listeNo === 0 && tur === 'geçmiş' && !liste.some((d) => d.t === 'komut' && d.ad === 'zaman')) {
         hatalar.push(`${yer}: geçmiş parçası "zaman" ile başlamalı`);
       }
@@ -155,6 +163,16 @@ export function denetle(icerik, { yasakliKaliplar = [] } = {}) {
   }
 
   return { hatalar, uyarilar };
+}
+
+// Bu düğümden sonra akış her durumda başka bir yere atlıyor mu?
+function hepAtlar(p, d) {
+  if (!d) return false;
+  if (d.t === 'git') return true;
+  const listeAtlar = (l) => hepAtlar(p, (p.listeler[l] || []).at(-1));
+  if (d.t === 'eğer') return d.yoksa !== undefined && listeAtlar(d.yoksa) && d.dallar.every((dal) => listeAtlar(dal.govde));
+  if (d.t === 'seçim') return d.secenekler.every((s) => !s.kosul && listeAtlar(s.govde));
+  return false;
 }
 
 // Bir parçada yazışma bloklarının içinde kalan listeler: liste no → kişi.

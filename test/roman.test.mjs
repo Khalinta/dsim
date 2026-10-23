@@ -302,3 +302,16 @@ test('roman: deneme romanı her yoldan sonuna kadar oynanır; özenli oyuncu Ada
   assert.equal(oyun.durum.d['ada.yakin'], 2);
   assert.equal(oyun.durum.d.gece, 'ada');
 });
+
+test('roman: yazılmış son bölüm bitince yeni bölüm eklenirse oyun oradan sürer', () => {
+  const ilk = IKI_BOLUM.slice(0, IKI_BOLUM.indexOf('=== b2'));
+  const oyun = kur(ilk);
+  oyun.sahneDevam();
+  oyun.sahneSec(1);
+  oyun.sahneSec(1);
+  oyun.sahneKapat();
+  assert.ok(oyun.bittiMi());
+  const devam = new Oyun(derle(IKI_BOLUM), JSON.parse(oyun.disaVer()));
+  assert.equal(devam.sahne.kimlik, 'b2');
+  assert.ok(!devam.bittiMi());
+});

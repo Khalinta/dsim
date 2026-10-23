@@ -938,6 +938,7 @@ export class Oyun {
     if (d.sahne && !d.sahne.bitti) throw new Error('Sahne henüz bitmedi');
     if (d.sahne && d.sahne.bolum !== undefined) {
       const sonraki = this._sonrakiBolum();
+      d.sonBolum = d.sahne.bolum;
       d.sahne = null;
       if (sonraki) this._bolumBaslat(sonraki);
       return;
@@ -1116,6 +1117,11 @@ export class Oyun {
     d.kuyruk = d.kuyruk.filter((k) => this.parca(k.kimlik));
     d.randevular = (d.randevular || []).filter((r) => this.parca(r.kimlik));
     d.sahneKuyrugu = d.sahneKuyrugu.filter((k) => this.parca(k));
+    // Romanın yazılmış kısmı bitmişti, sonra yeni bölümler eklendi: kalınan yerden, sıradaki bölümle sürer.
+    if (this.icerik.roman && !d.sahne && !d.oyunBitti && d.sonBolum !== undefined) {
+      const yeni = this.icerik.bolumler.find((p) => p.bolum > d.sonBolum);
+      if (yeni) this._bolumBaslat(yeni);
+    }
     for (const [kisi, sira] of Object.entries(d.bekleyen)) {
       d.bekleyen[kisi] = sira.filter((k) => this.parca(k));
       if (!d.bekleyen[kisi].length) delete d.bekleyen[kisi];

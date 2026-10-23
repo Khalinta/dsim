@@ -1,7 +1,7 @@
 // Servis çalışanı: oyunu internetsiz çalıştırmak için bütün dosyaları önbelleğe alır.
 // SURUM, js/surum.js ile aynı olmalı; değişince yeni önbellek kurulur.
 
-const SURUM = '0.4.0';
+const SURUM = '0.5.0';
 const ONBELLEK = `pirnalli-${SURUM}`;
 
 const DOSYALAR = [

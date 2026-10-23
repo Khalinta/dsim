@@ -34,7 +34,8 @@ const ilgiler = () => {
       for (const d of liste) if (d.t === 'işlem') for (const x of d.islemler) adlar.add(x.ad.split('.')[0]);
     }
   }
-  return Object.keys(icerik.kisiler).filter((k) => adlar.has(k));
+  const kadinlar = ['ilgin', 'sude', 'ceren', 'defne', 'ela', 'lara'].filter((k) => icerik.kisiler[k]);
+  return (kadinlar.length ? kadinlar : Object.keys(icerik.kisiler)).filter((k) => adlar.has(k));
 };
 
 const kosular = icerik.roman ? [
