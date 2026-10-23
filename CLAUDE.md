@@ -6,7 +6,7 @@ Bu dosya her oturumda geçerli olan kalıcı kurallardır. Planın, kararların 
 
 1. `PROJE.md`'yi baştan sona oku. Özellikle en alttaki "Nerede kaldık" bölümünü.
 2. O adımda dokunacağın karakterlerin belgelerini (`karakterler/`) ve `yazim/rehber.md`'yi oku.
-3. Metin yazacaksan `hikaye/omurga.md`'de o karakterin yayını, `dunya/takvim.md`'de o günün havasını ve şehir olaylarını kontrol et.
+3. Metin yazacaksan `hikaye/bolumler.md`'de o bölümün planını, `hikaye/omurga.md`'de karakterlerin yayını, `dunya/takvim.md`'de o günün havasını, şehir olaylarını ve nöbetleri kontrol et.
 
 ## Kullanıcı
 
@@ -51,7 +51,7 @@ Bu dosya her oturumda geçerli olan kalıcı kurallardır. Planın, kararların 
 
 ## Yazım: oyunun kendisi
 
-Metin her şeyden önemlidir. Kararsız kalınca yazının lehine karar ver. Ayrıntılı ilkeler, yasaklı kalıplar ve denetim listesi `yazim/rehber.md`'dedir. Kısaca:
+Oyun etkileşimli bir romandır: anlatıcı anlatır, oyuncu seçer; zamanı bölümler ilerletir. Metin her şeyden önemlidir. Kararsız kalınca yazının lehine karar ver. Ayrıntılı ilkeler, yasaklı kalıplar ve denetim listesi `yazim/rehber.md`'dedir. Kısaca:
 
 - Her cümle o karaktere ve o ana özeldir. Başka bir karakterin ağzında da çalışan replik yanlış yazılmıştır.
 - Doğal, gerçek Türkçe. Çeviri kalıbı yok. Mesajlaşma dili kişiden kişiye değişir (karakter belgeleri).
@@ -74,13 +74,16 @@ Oyuncu karakterleri yalnızca tanıdıkça öğrenir. Bilgi kartı, puan, "ilgi 
 | `karakterler/00-karsilastirma.md` | Altı karakterin yan yana tablosu, benzerlik denetimi |
 | `karakterler/oyuncu.md` | Oyuncu karakteri |
 | `karakterler/<isim>.md` | Altı ana karakter |
-| `hikaye/omurga.md` | Yaylar, büyük anlar, kesişmeler, sonlar |
+| `hikaye/omurga.md` | Romanın biçimi, perdeler, yaylar, kesişmeler, sonlar |
+| `hikaye/bolumler.md` | 41 bölümün planı |
 | `yazim/rehber.md` | Yazım ilkeleri, yasaklı kalıplar, denetim listesi |
 | `yazim/ses-testi.md` | Altı karakterin aynı duruma cevapları |
 
 Karakter belgesi karakteri kısıtlamak için değil, her sahnede aynı insan olarak kalması için vardır. Yazarken bir sahne belgeye ters düşüyorsa ya sahne yanlıştır ya da karakter değişmiştir. İkincisiyse bunu belgenin "Değişim" bölümüne işle.
 
 ## Teknik
+
+> 5. adımda motor bölüm yapısına geçiyor (PROJE.md karar 38–43); bu bölüm o adımda güncellenecek.
 
 - Sade HTML, CSS ve JavaScript (ES modülleri). Kütüphane yok, build adımı yok.
 - **Klasörler:**

@@ -54,7 +54,9 @@ Hiçbir karakter ona yalnızca hayranlık duymaz. Her biri onun bir kusurunu gö
 - **Mesajlaşma:** Çoğunlukla küçük harf, az nokta, çok az emoji. Seçeneklerde noktalama da anlam taşır.
 - **Buluşma sahnelerinde:** Anlatı ikinci tekil şahıs ve şimdiki zaman kullanır. Oyuncunun iç sesi seyrektir; ne hissettiğini seçimleri gösterir.
 
-## Gündelik hayatı (hafif tutulur)
+## Gündelik hayatı (geri planda)
+
+Romanda neredeyse görünmez (PROJE.md, karar 38). Bölüm başlarında birkaç cümlelik doku olarak durur; ancak hikâyeye bir şey kattığı an sahneye çıkar.
 
 - **Dersler:** Pazartesi–çarşamba sabah ve öğle. Makine Elemanları ve Termodinamik II. Hocası Doç. Dr. Tarık Bey'in söylediği tek şaka "Isı kaybolmaz, sadece yer değiştirir." Bunu her derste söyler.
 - **Yelken seçmeli dersi:** Salı ve perşembe öğleden sonra. Dersi seçmesinin sebebi programına uyan tek ders olması.

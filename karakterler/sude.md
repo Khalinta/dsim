@@ -4,7 +4,7 @@
 
 ## Kısaca (yazara)
 
-Kayseri'den gelen, iki yıl sınava hazırlanıp Psikoloji'ye giren 20 yaşında bir birinci sınıf öğrencisi. Zeki, titiz ve kuralcı bir ailede büyüdü; ilk kez evden uzakta. Telefonunda bir "yapılacaklar listesi" var. Listeyi hayattan, hayatı listeden ayırmayı öğrenecek. Espri yapamaz, ama söylediği her doğru cümle komik çıkar.
+Kayseri'den gelen, iki yıl sınava hazırlanıp Psikoloji'ye giren 20 yaşında bir birinci sınıf öğrencisi. Zeki, titiz ve kuralcı bir ailede büyüdü; ilk kez evden uzakta. Hayatı boyunca dürüst olmuş biri; ilk kez yalan söylemeyi öğreniyor ve annesine söylediği her yalanı numaralayıp bir deftere yazıyor ki birbirini tutsun. Bir gün hepsini annesine okuyacak. Espri yapamaz, ama söylediği her doğru cümle komik çıkar.
 
 ## Temel
 
@@ -27,26 +27,27 @@ Kayseri'den gelen, iki yıl sınava hazırlanıp Psikoloji'ye giren 20 yaşında
 - **Aile:** Sevginin de kontrolün de olduğu bir aile. Kötü bir yer değil: Nermin Hanım kızını seviyor ve onun için korkuyor.
 - **Okul:** Kayseri'de iyi bir Anadolu lisesinde sınıf birincisiydi.
 - **Sınav:** Tıp istedi; aslında annesi istedi, o da kendisinin istediğini sandı. İlk sınavda Tıp'a yetmedi. Bir yıl dershaneye gitti, ikinci sınavda yine olmadı. Üçüncü kez girmek istemedi: hayatındaki ilk büyük "hayır" buydu.
-- **Tercih:** Listenin en üstüne Kayseri'deki üniversiteleri değil, en uzaktakileri yazdı. Annesine "puanım buraya yetti" dedi. Puanı buraya yetiyordu, ama Kayseri'ye de yetiyordu. Bunu kimse bilmiyor. (Annesi Kasım'da öğrenebilir.)
+- **Tercih:** Tercih listesinin en üstüne Kayseri'deki üniversiteleri değil, en uzaktakileri yazdı. Annesine "puanım buraya yetti" dedi. Puanı buraya yetiyordu, ama Kayseri'ye de yetiyordu. Bunu kimse bilmiyor. (Annesi Kasım'da öğrenebilir.)
 - **Psikoloji:** Neden seçtiği sorulunca "İnsanları anlamak istiyorum" der. Gerçekte kendi ailesini anlamak istiyor.
-- **Deneyim:** İki yıllık hazırlık döneminde hayatı ders, dershane ve evden ibaretti. Hiç sevgilisi olmadı. Lisede bir çocukla üç hafta mesajlaştı; annesi mesajları okudu ve her şey bitti. Hiç alkol içmedi, bir gece bile dışarıda kalmadı. Bunların hepsi listede.
+- **Deneyim:** İki yıllık hazırlık döneminde hayatı ders, dershane ve evden ibaretti. Hiç sevgilisi olmadı. Lisede bir çocukla üç hafta mesajlaştı; annesi mesajları okudu ve her şey bitti. Hiç alkol içmedi, bir gece bile dışarıda kalmadı, hiç gece denize girmedi. Bunların hiçbirini bir yere yazmadı.
 
-## Liste
+## Yalan defteri
 
-Telefonunun notlarında "Üniversitede yapılacaklar" başlıklı bir liste var. Sıra da dil de onun:
+Telefonunun notlarında, kilitli bir notta, numaralı bir liste var. Başlığı yok. Her satırda annesine söylediği bir yalan, tarihi ve bazen parantez içinde gerçeği:
 
-1. Denize gece girmek
-2. Bir partide sabaha kadar kalmak (yurt 23:00'te kapandığı için zor)
-3. Alkol denemek (sadece denemek)
-4. Yelken (seçmeli olarak aldım)
-5. Bir yabancıyla uzun bir konuşma (en az iki saat)
-6. Saçımı kısa kestirmek
-7. Annem görmeden bir yere gitmek
-8. Dövme?
-9. Âşık olmak. (Bu madde silinmiş, tekrar yazılmış ve en alta taşınmış.)
-10. Seramik atölyesi
+```
+1. Puanım ancak buraya yetti. (Kayseri'ye de yetiyordu.) — Temmuz
+...
+14. Bölümden bir asistan. (Değil. Kampüste kaybolmuş biri.) — 22 Eylül
+15. Dilan'ın teyzesine gittik. (Gitmedik.) — 4 Ekim
+...
+```
 
-Liste Sude'nin gelişimini taşır: maddeler çizildikçe ya da anlamları değiştikçe o da değişir. Ekimde listeye kendisi bir madde ekleyebilir: "11. Bir şeyi yarım bırakmak." Oyuncu listeyi ancak yakınlaşınca görür.
+- **Neden tutuyor:** Hayatı boyunca yalan söylemedi; yalanların birbirini tutması gerektiğini bilmiyordu, birinde yakalandı ve korktu. Bir de: yalanları yazınca onları bir gün geri alabileceğine inanıyor. "Bir gün hepsini anneme okuyacağım. Sırayla."
+- **Ne anlatıyor:** Defter Sude'nin gelişimini taşır. Sayı büyüdükçe o da değişir: Eylülde on dört, Kasımda elliyi geçer. Bazı satırlar oyuncuyla ilgilidir ve oyuncunun kendisi hakkında öğrendiği en dürüst şeyler bu satırlardadır: "38. Kütüphanedeydim. (Biriyle Kırık Koy'daydım.)" Duygusunu söyleyemediği yerde defter söyler.
+- **Oyuncunun aynası:** Oyuncunun tek bir büyük yalanı var ve onu hiçbir yere yazmadı. Sude'ninkiler küçük ve elli tane, ve hepsi yazılı. İkisi bunu ancak bir kere, açıkça konuşur.
+- **Oyuncu defteri** ancak yakınlaşınca görür: önce varlığını (Ekim), sonra ilk sayfasını (Kasım).
+- **İstekleri** (gece denize girmek, sabaha kadar dışarıda kalmak, bir yabancıyla iki saat konuşmak, saçını kısa kestirmek, alkolü bir kere denemek) hiçbir yerde yazılı değil. Hikâyede yaşanır; Sude onları yaşadıktan sonra fark eder, bazen de deftere bir yalan olarak girer: o gece için annesine söylediği yalan.
 
 ## Bugünkü hayatı
 
@@ -63,7 +64,7 @@ Liste Sude'nin gelişimini taşır: maddeler çizildikçe ya da anlamları deği
 - Çok zeki, çok gözlemci, çok dürüst. Sosyal kuralları sanki bir kitaptan öğrenmiş.
 - Hazırlıklı olmayı sever. Bilmediği bir durumda önce soru sorar, sonra not alır.
 - **Saf değil:** Deneyimsiz ama aptal değil. Yalanı çok çabuk yakalar ve bunu yüksek sesle söyler.
-- **Çelişki:** Özgürlük istiyor ama özgürlüğü de bir liste gibi, bir ders gibi yaşıyor. Kontrolden kaçarken kendi üstüne kontrol kuruyor.
+- **Çelişki:** Özgürlük istiyor ama özgürlüğü de bir ödev gibi yaşıyor. Kontrolden kaçarken kendi üstüne kontrol kuruyor: yalanlarının bile defteri var.
 - **Annesiyle:** Sevgi ve öfke iç içe. Annesini kırmaktan ölesiye korkuyor, ama ona her gün yalan söylüyor. Yalanı hayatında ilk kez burada öğreniyor. Başta beceremiyor, sonra beceriyor ve bundan korkuyor.
 - İlk kez şakalara gülmeyi öğreniyor. Kendi şakaları sanki önceden planlanmış.
 
@@ -86,7 +87,7 @@ Liste Sude'nin gelişimini taşır: maddeler çizildikçe ya da anlamları deği
 
 ## Takıntıları, zaafları, yaraları
 
-- **Takıntı:** Liste. Not almak. "Doğru" yapmak.
+- **Takıntı:** Defter. Not almak. "Doğru" yapmak, yalanı bile.
 - **Zaaf:** İlgi görmek. Biri onu gerçekten dinlerse çok hızlı bağlanır. Bunu bildiği için kendini durdurur.
 - **Yara:** Lisedeki mesajlarını annesinin okuması ve okuduklarını akşam yemeğinde babasına anlatması. Mahremiyet onun için daha önce ihlal edilmiş bir şey.
 - **Yara:** "Tıp olmadı" dendiğinde annesinin yüzündeki ifade.
@@ -103,7 +104,7 @@ Liste Sude'nin gelişimini taşır: maddeler çizildikçe ya da anlamları deği
 
 - "Pardon, siz burada okuyor musunuz, yoksa çalışıyor musunuz? Yaşınızdan çıkaramadım."
 - "Bence sende kaçınmacı bağlanma var. Bunu ikinci hafta öğrendik. Yanlış da olabilir, slaytta öyle yazıyordu."
-- "Listemde 'denize gece girmek' var. Bunu söylüyorum çünkü şu an gece ve deniz orada. Bilgin olsun."
+- "Hiç gece denize girmedim. Bunu söylüyorum çünkü şu an gece ve deniz orada. Bilgin olsun."
 - "Annem şu an beni kütüphanede sanıyor. Teknik olarak telefonum kütüphanede. Yani yalan sayılmaz. Sayılır mı?"
 - "Bana ilgi mi duyuyorsun, yoksa kibar mı davranıyorsun? Ayırt edemiyorum. Bunu sormak istemiyordum ama sordum."
 - (Kızınca) "Tamam. Hayır, tamam değil. Ama şu an doğru cümleyi bulamıyorum. Bulunca söyleyeceğim."
@@ -161,8 +162,8 @@ Derslere çekilir: "Vize haftası." Bahane gerçektir, ama ders çalışmayı s�
 ## Neyle çekilir
 
 - Dürüstlük ve net cevap. Sorusunun gerçekten cevaplanması.
-- Ona yetişkin gibi davranılması. Listesine gülünmemesi ama sorgulanması.
-- Gerçekten dinlenmek: bir konuşmanın iki saat sürmesi (listede var).
+- Ona yetişkin gibi davranılması. Defterine gülünmemesi ama sorgulanması: "Bunları neden yazıyorsun, gerçekten?"
+- Gerçekten dinlenmek: bir konuşmanın iki saat sürmesi.
 - Bir şeyi ilk kez yaparken yanında olmak ama onu yönetmemek.
 - Annesi meselesinde taraf tutmadan yanında durmak.
 
@@ -170,14 +171,15 @@ Derslere çekilir: "Vize haftası." Bahane gerçektir, ama ders çalışmayı s�
 
 - Belirsizlik ve kaçamak cevap. Oyuncunun temel kusuru bu; Sude ile ilişki oyuncuyu en çok zorlayan ilişki olur.
 - Çocuk muamelesi, "çok tatlısın".
-- Listeyi bir fırsat gibi kullanmak ("listende olduğu için…").
+- Defteri bir koz gibi kullanmak; bir yalanını annesine söylemekle şakadan bile tehdit etmek.
+- Ona yeni bir yalan önermek ("annene şöyle de"). Yalanlarını kendisi seçer.
 - Yalan, özellikle başka bir kızla ilgili.
 - Alkol için zorlanmak.
 
 ## Cinsellik
 
 - **Deneyim:** Hiç yok. Bunu ilk ciddi konuşmada kendisi, net bir şekilde söyler: "Hiç kimseyle birlikte olmadım. Bunu bilmeni istiyorum ki ona göre davran." Sonra ekler: "Yani ona göre davran ama abartma."
-- **İsteği:** Kendisinin; listeden değil. Bu önemli, çünkü listede "âşık olmak" yazıyor, seks yazmıyor; onu yazmamış.
+- **İsteği:** Kendisinin. Kimseye, kendine bile bir şey kanıtlamak için değil. O gece için annesine söylediği yalan deftere yazılır; gecenin kendisi yazılmaz.
 - **Sahnede:** Sorar, söyler, durur, güler, utanır, yönlendirir ("Bekle. Tamam. Devam."). Acı ya da rahatsızlık gerçekçi yazılır ve saklanmaz. Sahneyi mizah ve şefkat taşır.
 - **Oyuncunun seçimleri:** Oyuncu yavaş ve dikkatli olmayı seçebilir. Aceleci seçenekler gerçek sonuç doğurur.
 - **Mekân:** Yurtta mümkün değil. Oyuncunun evi olabilir (Onur yokken; Saniye Hanım'ın merdiveni gıcırdar) ya da başka bir yer.
@@ -195,15 +197,15 @@ Derslere çekilir: "Vize haftası." Bahane gerçektir, ama ders çalışmayı s�
 
 ## Değişim
 
-- **Açılırsa:** Espri yapmayı öğrenir, listeyi bırakır, annesine "hayır" demeyi öğrenir.
-- **Kapanırsa:** Oyuncu yalan söyleyip onu kırarsa daha da kuralcı olur. Listesine "bir daha" diye başlayan maddeler ekler.
+- **Açılırsa:** Espri yapmayı öğrenir, annesine "hayır" demeyi öğrenir. Defteri annesine okur; ya da okumadan siler, çünkü artık yalan söylemeye ihtiyacı yoktur.
+- **Kapanırsa:** Oyuncu yalan söyleyip onu kırarsa daha da kuralcı olur. Deftere bir satır ekler; annesine değil, kendine söylenmiş bir yalan: "Önemli değildi."
 - **Annesi krizi (Kasım):** Annesi konumu sabah beşte Lara'nın villasında ya da oyuncunun evinde görür ve gelir. Sude ya teslim olur ve bahar dönemi için Kayseri'ye yatay geçiş başvurusu yapar (son gün 9 Ocak), ya da ilk kez karşı çıkar. Oyuncunun rolü küçük ama belirleyicidir: orada olmak ya da olmamak; annesinin karşısında kim olarak durduğu.
 - **Ayna:** Sude ile oyuncu aynanın iki yüzü gibidir. İkisi de ailesine yalan söylüyor, ikisi de ocakta kalmakla gitmek arasında karar veriyor. Bu paralellik sahnelerde ancak bir kez açıkça söylenir; o da Sude'nin ağzından.
 
 ## Diğer karakterlerle
 
 - **Ela:** Yelken hocası. Sude ona hayran; Ela ona "çaylak" diyor ve onu kardeşi gibi koruyor. Oyuncu ikisiyle aynı anda bir şey yaşıyorsa en sert tepkiyi Ela verir, kendi için değil Sude için.
-- **Defne:** Listedeki "seramik atölyesi" maddesi için Kasım'da Defne'nin cumartesi dersine gider. Defne'yi çok havalı bulur. Defne de şaşırtıcı biçimde onunla dalga geçmez.
+- **Defne:** Kasımda, annesinin gelişinden sonra, ellerinin bir şey yapması için Defne'nin cumartesi dersine gider. Defne'yi çok havalı bulur. Defne de şaşırtıcı biçimde onunla dalga geçmez.
 - **Ceren:** Yelkende bileğini burkar ve acile gider; onu Ceren sarar. Sude ona "Ben de Tıp istiyordum" der. Ceren'in cevabı onu etkiler: "İyi ki olmamış. Bak bana."
 - **Ilgın:** Eczanede tuhaf, fazla dürüst sorular sorar. Ilgın onu sever.
 - **Lara:** Villa partisinde Lara ona "çok tatlısın" der ve Sude bundan nefret eder.
@@ -219,7 +221,7 @@ Derslere çekilir: "Vize haftası." Bahane gerçektir, ama ders çalışmayı s�
 1. Kayseri, Psikoloji, ilk yıl; annesinin telefonu. (Tanışmada annesi arar.)
 2. Konum paylaşımı.
 3. İki yıl sınav, Tıp.
-4. Listenin varlığı; sonra içeriği, parça parça.
+4. Yalan defterinin varlığı; sonra ilk sayfası.
 5. Deneyimsizliği.
 6. Uzak üniversiteyi bilerek seçtiği.
 7. Kaçış parası.

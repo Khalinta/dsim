@@ -4,7 +4,7 @@
 
 ## Oyun bir cümlede
 
-Pırnallı, Ege kıyısında hayalî bir üniversite kasabası. Oyun burada, yaz sezonunun kapandığı gece başlıyor ve ocağın ilk haftasında bir otobüs saatinde bitiyor. Mesajlaşma ve buluşmalardan oluşan, Türkçe, metin ağırlıklı bir ilişki oyunu.
+Pırnallı, Ege kıyısında hayalî bir üniversite kasabası. Oyun burada, yaz sezonunun kapandığı gece başlıyor ve ocağın ilk haftasında bir otobüs saatinde bitiyor. ~~Mesajlaşma ve buluşmalardan oluşan, Türkçe, metin ağırlıklı bir ilişki oyunu.~~ Altı kadının merkezde olduğu, Türkçe, oynanan bir roman: hikâyeyi anlatıcı anlatır, oyuncu seçer; buluşmalar ve yazışmalar hikâyenin iki dili (karar 38).
 
 ## Belgeler
 
@@ -16,7 +16,8 @@ Pırnallı, Ege kıyısında hayalî bir üniversite kasabası. Oyun burada, yaz
 | `karakterler/00-karsilastirma.md` | Altı karakter yan yana ve benzerlik denetimi |
 | `karakterler/oyuncu.md` | Oyuncu karakteri |
 | `karakterler/ilgin.md`, `sude.md`, `ceren.md`, `defne.md`, `ela.md`, `lara.md` | Altı ana karakter |
-| `hikaye/omurga.md` | Tema, perdeler, tanışmalar, yaylar, kesişmeler, çoklu ilişki, sonlar, epilog |
+| `hikaye/omurga.md` | Romanın neyi nasıl anlattığı: tema, biçim, bölüm anatomisi, perdeler, oyuncu ve altı kadının yayları, kesişmeler, çoklu ilişki, sonlar, epilog |
+| `hikaye/bolumler.md` | 41 bölümün planı: tarih, soru, sabit sahneler, yol ayrımları, gece, değişen, dikkat |
 | `yazim/rehber.md` | Yazım ilkeleri, yasaklı kalıplar, iki ekranın yazısı, denetim listesi |
 | `yazim/ses-testi.md` | Altı karakterin aynı durumlara verdiği cevaplar |
 
@@ -51,11 +52,12 @@ Her karar ve nedeni burada. Bir karar değişirse eskisinin ~~üstü çizilir~~ 
 7. **Anlatım:** Buluşma sahneleri ikinci tekil şahıs, şimdiki zaman ("Kapıyı itiyorsun.").
    - *Neden:* Oyuncuyu sahnenin içine koyuyor, Türkçede doğal akıyor, seçeneklerle çakışmıyor.
 8. **İsimler:** Oyuncunun adını oyuncu klavyeyle yazar (öneri: Kaan). Rehbere kaydedilecek ad, o ana uygun 3–4 seçenekten seçilir. Hiçbir replik oyuncunun adına bağlı espri içermez.
-9. **Zaman:** Yalnızca oyuncu bir şey yaptığında ilerler; uygulama kapalıyken durur. Gerçek telefon bildirimi yok (sunucu gerektirir); oyun içindeki telefon kendi bildirimlerini gösterir.
+9. ~~**Zaman:** Yalnızca oyuncu bir şey yaptığında ilerler; uygulama kapalıyken durur. Gerçek telefon bildirimi yok (sunucu gerektirir); oyun içindeki telefon kendi bildirimlerini gösterir.~~ → Zamanı bölümler ilerletir (karar 38). Gerçek telefon bildirimi yine yok.
 10. **Cinsellik sınırı:** Eylem, sıra, zamanlama ve pozisyon açıkça anlatılır; anatomik yakın plan yoktur. Bilinci yerinde olmayan bir karakterle cinsellik yoktur.
     - *Neden:* Kullanıcıyla netleşti (1. oturum).
 11. **Repo herkese açık kalıyor, yayın GitHub Pages'te.** Kullanıcı onayladı (1. oturum).
-12. **Pilot karakter: Defne.** (1. oturumda önerildi; kullanıcı itiraz etmedi, 2. oturumda kesinleşti.)
+12. ~~**Pilot karakter: Defne.**~~ → Pilot yaklaşımı bırakıldı (karar 38): bir romanda altı kadın ilk perdeden itibaren hikâyenin içinde olmalı. Defne'nin pilotu taslak olarak duruyor (karar 43).
+    - *Eski karar:* **Pilot karakter: Defne.** (1. oturumda önerildi; kullanıcı itiraz etmedi, 2. oturumda kesinleşti.)
     - *Neden:* Oyunun ilk sahnesinde tanışılıyor, tek başına baştan sona oynanabiliyor, mesajlaşması zengin, kış yayı erken başlıyor, diğer karakterlere en az bağımlı olan o. Gerekçenin ayrıntısı `hikaye/omurga.md`'de.
     - *Alternatif:* Ilgın. Şehirle en iç içe olan o, ama kesişmeleri (Lara, Ceren) çok fazla; pilot olarak tek başına eksik kalır.
 
@@ -68,7 +70,8 @@ Her karar ve nedeni burada. Bir karar değişirse eskisinin ~~üstü çizilir~~ 
     - *Alternatif:* YAML.
 15. **Motor ekrandan ayrı.** Saat, hafıza, ilişki durumu ve sahne seçimi tarayıcısız da çalışacak.
     - *Neden:* Otomatik testler ve okuma aracı bunu gerektiriyor.
-16. **Storylet bağlantısı.** Her sahne parçasının bir "giriş kapısı" olacak: hangi sohbet akışından ya da hangi olaydan sonra açılabileceği. Hiçbir yerden bağlanmayan parça test hatası sayılacak.
+16. ~~**Storylet bağlantısı.**~~ → Parçalar artık takvimden değil, bölüm akışından açılır (karar 38). "Ne alaka?" hissini bölüm yapısı engeller. Hiçbir yerden bağlanmayan parça yine test hatası.
+    - *Eski karar:* **Storylet bağlantısı.** Her sahne parçasının bir "giriş kapısı" olacak: hangi sohbet akışından ya da hangi olaydan sonra açılabileceği. Hiçbir yerden bağlanmayan parça test hatası sayılacak.
     - *Neden:* "Ne alaka?" hissini yapısal olarak engellemek.
 17. **Kayıt:** Telefonda otomatik kayıt, ayrıca kopyalanabilir bir "kayıt kodu". Hata olursa kopyalanabilir bir hata raporu.
 18. **Testler ve kontrol:** Node'un kendi test aracı, kurulum gerektirmez. Görsel kontrol için iPhone boyutunda ekran görüntüsü.
@@ -76,12 +79,12 @@ Her karar ve nedeni burada. Bir karar değişirse eskisinin ~~üstü çizilir~~ 
     - Sahneler için **Literata** (e-kitap okumak için tasarlanmış). Telefon için **Inter**.
 20. **İçerik biçimi:** `.dsim`. Senaryo gibi okunan, girintiyle dallanan bir biçim (Ink'ten esinlenildi). Tarifi `icerik/BICIM.md`'de.
     - *Neden:* Yazarken diyalog düz yazı gibi okunuyor. Denetim aracı biçim hatasını, kopuk bağlantıyı ve yasaklı kalıbı satır numarasıyla yakalıyor.
-21. **Üç ekran:**
+21. **Üç ekran:** *(Kilit ekranının görevi 5. adımda yeniden belirlenecek: "Ne yapacaksın?" menüsü kalkıyor; bölüm geçişlerinde tarih ve saati gösteren bir perdeye dönüşebilir. Bkz. karar 38.)*
     - **Kilit ekranı:** "şimdi". Saat, gök, bildirimler, "Ne yapacaksın?".
     - **Telefon:** Mesajlar, Rehber, Ayarlar.
     - **Sahne:** kitap sayfası.
     - *Neden:* Kullanıcı mesajlaşmanın ve buluşmanın iki ayrı ekran olmasını istedi. Kilit ekranı ikisinin arasındaki "cebindeki telefon" ânı. Oyunun saati ve havası burada en güzel görünüyor.
-22. **Zaman akışı:**
+22. ~~**Zaman akışı:**~~ → Karar 38. Eski hâli:
     - Oyuncu bir şey seçince ilerler.
     - Telefon açıkken 5 dakika içindeki mesajlar "yazıyor…" ile kendiliğinden gelir.
     - "Biraz oyalan" yarım saat, "Uyu" ertesi sabah 08:00. Uyuyunca oyuncu evine döner.
@@ -103,10 +106,13 @@ Her karar ve nedeni burada. Bir karar değişirse eskisinin ~~üstü çizilir~~ 
 
 ### Pilot adımında alınan kararlar (3. adım)
 
+> 29–37 arasındaki kararların çoğu, 4. oturumda roman yapısına geçilince geçerliliğini yitirdi (karar 38). Tek tek üstleri çizildi; nedenleri 38–44'te.
+
 27. **Oyun 14 Eylül 23:05'te, Lagün'ün kapanış gecesinde başlar.** (`oyun.json`) Önceki başlangıç 15 Eylül sabahıydı; 26. kararda bildirildiği gibi değişti.
 28. **Simge: pırnal yaprağı.** ~~Gün batımı~~ → koyu deniz yeşili zemin üstünde krem rengi, dikenli kenarlı bir pırnal meşesi yaprağı.
     - *Neden değişti:* Kullanıcı istedi. Şehrin adı bu ağaçtan geliyor; küçük boyutta da tanınan, gün batımı fotoğraflarına benzemeyen bir şekil.
-29. **Oyuncunun kendi hayatı, karakterlerden bağımsız bir omurga olarak yazıldı.**
+29. ~~**Oyuncunun kendi hayatı, karakterlerden bağımsız bir omurga olarak yazıldı.**~~ → Gündelik hayat geri plana çekildi (karar 38). Baba ipliği ve Mendirek'in önemli anları romanda kalıyor.
+    - *Eski karar:* **Oyuncunun kendi hayatı, karakterlerden bağımsız bir omurga olarak yazıldı.**
     - Mendirek vardiyaları (perşembe–pazar, her biri ayrı yazılmış, bitince sessiz yedek), okul, aile, mahalle (Saniye Hanım, Onur, kordon).
     - Babanın ipliği: itiraf ya da İTÜ'den gelen yazı, 26 Kasım'daki arama, 13 Aralık'taki ziyaret, 6 Ocak 23:15 bileti.
     - *Neden:* Hiçbir karakterle ilerlemeyen oyuncu da 115 günü dolu yaşamalı; karakter sahneleri bu hayatın arasına düşüyor.
@@ -117,19 +123,23 @@ Her karar ve nedeni burada. Bir karar değişirse eskisinin ~~üstü çizilir~~ 
     - ~~"Saat X'e kadar oyalan" yeni bir şey yapılabilir olunca durur.~~ → 35. karara bakın.
     - Aile sahnede "Baban", "Annen" diye görünür.
     - ~~Telefona bakınca karakterin tepkisi (Defne: önce şaka, sonra kendi telefonuna döner, sonra sigaraya çıkar; ciddi sahnelerde hiçbiri).~~ → 36. karara bakın.
-31. **Defne'nin yolu ölçülerle değil, olaylarla ilerler.** Gizli iki ölçü var: yakınlık ve kış (karanlık). Belirleyici olaylar:
+31. ~~**Defne'nin yolu ölçülerle değil, olaylarla ilerler.**~~ → İlke kalıyor ve altı kadına genişliyor; olaylar ve tarihler artık `hikaye/bolumler.md`'de (kötü gece 11 Aralık'a taşındı, Ceren'in nöbetine denk gelsin diye).
+    - *Eski karar:* **Defne'nin yolu ölçülerle değil, olaylarla ilerler.** Gizli iki ölçü var: yakınlık ve kış (karanlık). Belirleyici olaylar:
     - Fırtına gecesi (4 Aralık) Defne'nin yanına mı, karanlıkta yalnız kalan Saniye Hanım'ın yanına mı gidildiği.
     - Kötü gece (10 Aralık): kış ölçüsü yüksekse yaşanır; oyuncu gelirse acile birlikte gidilir, gelmezse Defne'yi komşusu bulur. Kış düşükse kötü gece yerine Defne ilaçlarını oyuncuya emanet eder.
     - Kontrat (31 Aralık): Defne ancak yakınlık yüksekse ya da oyuncu kalacağını söyleyip gerçekten yanında olduysa kalır. Kötü gece yalnız geçtiyse ya da Defne uzaklaştıysa atölyeyi kapatır ve 6 Ocak'ta aynı otobüsle İstanbul'a döner.
     - Tuzaklar: erken "biz neyiz?" (Defne bir haftalığına İstanbul'a kaçar; üçüncü denemede konuşur), kurtarıcılık, soğuk kalmak (Kasım'da bir yabancı).
-32. **Sonlar şimdilik Defne'ye ve yalnızlığa göre yazıldı** (`icerik/son/son.dsim`): kalmak ("Kaldın."), uğurlanmak, birlikte gitmek, onu uğurlamak, aynı otobüste yabancı gibi, kimseye söylemeden gitmek, yalnız kalmak. Ardından kısa bir Şubat epilogu. Diğer karakterler 4. adımda bu dosyaya kendi dallarıyla eklenecek.
+32. ~~**Sonlar şimdilik Defne'ye ve yalnızlığa göre yazıldı**~~ → Sonlar romanın bütününe göre yeniden yazılacak (omurga, bölüm 8; plan, bölüm 41).
+    - *Eski karar:* **Sonlar şimdilik Defne'ye ve yalnızlığa göre yazıldı** (`icerik/son/son.dsim`): kalmak ("Kaldın."), uğurlanmak, birlikte gitmek, onu uğurlamak, aynı otobüste yabancı gibi, kimseye söylemeden gitmek, yalnız kalmak. Ardından kısa bir Şubat epilogu. Diğer karakterler 4. adımda bu dosyaya kendi dallarıyla eklenecek.
 33. **Okuma aracına "özenli oyuncu" eklendi.** Bir karakterin en iyi yolunu dener (her seçimde seçenekleri kopyada oynatıp en iyisini seçer). Böylece en iyi sonun gerçekten ulaşılabilir olduğu her okumada denetleniyor.
-34. **Diğer karakterlere dokunan yerler şimdilik adsız ya da yarım bırakıldı; 4. adımda doldurulacak (önceden bildiriliyor):**
+34. ~~**Diğer karakterlere dokunan yerler şimdilik adsız ya da yarım bırakıldı; 4. adımda doldurulacak (önceden bildiriliyor):**~~ → Bunların hepsi bölüm planında yerini buldu (Ceren ve Ilgın kötü gecede, Lara'nın villası ve atölye, Sude'nin cumartesi dersi).
+    - *Eski karar:*
     - Kötü gecedeki doktor "Doktor" diye geçiyor; Ceren yazılınca o olacak.
     - Kötü gecede kapıyı ilk çalan Ilgın sahnesi eklenecek (reçeteyi biliyor).
     - Defne'nin Berkmen villasına gidişi bir mesajda anlatılıyor; Lara yazılınca sahneye dönüşebilir.
     - Fabrika'daki son film gecesine Defne dalı eklenebilir; Sude'nin cumartesi dersi henüz yok.
-35. **Zaman tek düğmeyle akar: "Bekle".** ~~"Biraz oyalan" ve "Saat 11/16/21'e kadar oyalan"~~ kaldırıldı.
+35. ~~**Zaman tek düğmeyle akar: "Bekle".**~~ → Romanda bekleme yok; zamanı bölümler ilerletir (karar 38). "Bekle" 5. adımda kalkacak.
+    - *Eski karar:* **Zaman tek düğmeyle akar: "Bekle".** ~~"Biraz oyalan" ve "Saat 11/16/21'e kadar oyalan"~~ kaldırıldı.
     - "Bekle" ilk anlamlı şeye kadar gider: yeni mesaj, yeni açılan bir şey (vardiya saati gibi), sahne ya da randevu, ya da cevap bekleyen mesajın süresinin dolmasına 15 dakika kalması. Hiçbir şey olmazsa gündüz 21:00'de, gece iki saat sonra durur. Gece "Uyu" da var.
     - Nereye kadar gideceği yazmaz; yazsa geleceği söylemiş olurdu.
     - *Neden değişti:* Kullanıcı oynarken "ne kadar bekleyeyim?" diye sormanın garip hissettirdiğini söyledi.
@@ -137,7 +147,30 @@ Her karar ve nedeni burada. Bir karar değişirse eskisinin ~~üstü çizilir~~ 
     - Sahnede seçim beklenirken telefon düğmesi telefonu açar. Mesajlar okunur, o an yanında olunan kişi dışında herkese cevap yazılabilir. "Sahneye dön" ile kalınan yere dönülür. Kimse tepki vermez, gizli bir puan da düşmez.
     - Defne'nin telefon tepkileri ve 15–16 Eylül sahnelerindeki iki telefon tepkisi silindi; motordan da bu düzenek çıkarıldı.
     - *Neden değişti:* Kullanıcı oynarken hikâyenin akışını bozduğunu söyledi.
-37. **Mesajı oyuncunun başlatması 4. adımda genişleyecek.** Şu an yalnızca iki yerde var (babaya itiraf, Defne'ye "biz neyiz?"). Her karaktere o ana uygun, elle yazılmış açılış mesajları eklenecek ("eve vardın mı", "atölye nasıl" gibi); Defne'ninkiler de o sırada.
+37. ~~**Mesajı oyuncunun başlatması 4. adımda genişleyecek.**~~ → Karar 40'a katıldı.
+    - *Eski karar:* **Mesajı oyuncunun başlatması 4. adımda genişleyecek.** Şu an yalnızca iki yerde var (babaya itiraf, Defne'ye "biz neyiz?"). Her karaktere o ana uygun, elle yazılmış açılış mesajları eklenecek ("eve vardın mı", "atölye nasıl" gibi); Defne'ninkiler de o sırada.
+
+### Roman kararı (4. oturum)
+
+38. **Oyun bir etkileşimli roman.** Hikâyeyi anlatıcı anlatır, oyuncu seçer. Oyuncu "bekle, uyu, şuraya git" demez; zamanı bölümler ilerletir. Gündelik hayat (vardiya, ders, ev) neredeyse görünmez; yalnızca hikâyeye bir şey kattığı an sahneye çıkar. Merkezde altı kadın.
+    - *Neden:* Kullanıcı oynayınca oyun "günlük hayat ve arada gelen olaylar" gibi hissettirdi. Oysa bu bir dating sim; merkezde kadınlar olmalı. En önemlisi kurgu kalitesi: anlatıyı yönetmek ritim, sezdirme, geri dönüş ve sessizlik imkânı veriyor. Eski yapıda her parça "koşulu tutunca" açıldığı için her an okunabilecek gibi yazılmak zorundaydı; bu da kopukluk getiriyordu.
+    - *Değiştirdiği kararlar:* 9, 12, 16, 22, 29, 32, 35 (üstleri çizildi).
+39. **Bölüm anatomisi:** açılış, sabit sahne, yol ayrımı, gece. Ayrıntısı `hikaye/omurga.md`, bölüm 2.
+    - **Yol ayrımı:** Aynı gece iki ile dört kadının hayatında bir şey olur; oyuncu ancak birinin yanında olabilir. Seçenekler hikâyenin içinden, davetle gelir. Seçilmeyen gece de yaşanır ve iz bırakır.
+    - **Aynı anda birden fazla ilişki serbest;** bedeli zaman, küçük şehir ve yalanlar. (Kullanıcı onayladı.)
+40. **Mesajlaşma hikâyenin içinde yaşanır.** Yazışma bir sahnedir: anlatı bir yazışmaya gelince telefon ekranı açılır, "yazıyor…", bekleme ve "görüldü"yle oynar, bitince anlatı sürer. Oyuncu bazı gecelerde kendisi başlatır ("Kime yazacaksın?"), açılış mesajları elle yazılır. Takvimden gelen rastgele mesaj yok. Telefon her an açılıp okunabilir; okumak hikâyeyi etkilemez (karar 36 geçerli).
+41. **41 bölüm, beş perde.** Tek okuyuşta bölüm başına 2.500–4.000 kelime (15–25 dakika). Kullanıcı bölümlerin kısa olmamasını istedi.
+42. **Karakterlerde klişeye kayan yerler değişti** (belgeler güncellendi):
+    - **Sude:** "Üniversitede yapılacaklar listesi" (romantik komedi kalıbı) yerine **yalan defteri**: annesine söylediği her yalanı numaralayıp yazıyor ki birbirini tutsun; bir gün hepsini annesine okuyacak. Oyuncunun tek, hiçbir yere yazılmamış yalanının aynası.
+    - **Ela:** Omzu bahaneydi. İkinci sakatlık hafifti; Mert'in kazandığı yarışı kıyıdan izledikten sonra kampa dönmedi. "Kararsızlık"tan nefreti buradan. En derin sırrı: "Ben bıraktım."
+    - **Ilgın:** İş teklifi eski sevgilisi üzerinden değil, kendi gizli başvurusundan geliyor. Bazı geceler Clio'yla şehir tabelasına kadar gidip dönüyor.
+    - **Lara:** On dokuz yaşında okumadan attığı imza; adı babasının şirketlerinden birinin yönetim kurulunda. 2 Aralık'ta İzmir'de ifade. Babasının yerini söyleyecek mi?
+    - **Defne:** Kültür Evi'nde kendi sergisi (20 Aralık; metinleri Lara yazıyor). Korkunca acımasızlaşması saklanmıyor.
+    - **Ceren:** 6 Ocak'ta nöbetçi; otogara gelemez, nöbet takası da yapmaz.
+    - *Neden:* Kullanıcı klişelerden uzak, karakterleri nefes alan bir roman istedi. Bu değişikliklerin her biri karakteri daha çelişkili ve romanın temasına daha bağlı yapıyor.
+43. **3. adımda yazılan içerik taslak sayılıyor.** Prolog, Defne'nin sahneleri, hayat parçaları ve sonlar yeni yapıya göre tek bir sesle baştan yazılacak. Fikirler ve iyi anlar alınabilir; cümleler yeniden yazılır. Yeni metin yazılana kadar oyun eski hâliyle oynanabilir kalır.
+    - Kod tarafında mesaj motoru, sahne ekranı, kayıt, hata raporu, okuma aracı ve testler korunur; zaman akışı, eylem menüsü ve "Bekle" bölüm akışına dönüşür (5. adım).
+44. **Bölüm planı romanın yol haritasıdır** (`hikaye/bolumler.md`). Yazarken değişebilir; değişirse orada üstü çizilip nedeni yazılır.
 
 ## Yol haritası
 
@@ -150,14 +183,18 @@ Her karar ve nedeni burada. Bir karar değişirse eskisinin ~~üstü çizilir~~ 
    - GitHub Pages yayını; kullanıcıya düşen adımlar.
    - Tasarım bu adımda da özenli olacak.
    - *Not:* Okuma aracı iskeletle birlikte kuruluyor, çünkü pilot yazılırken hazır olması gerekiyor.
-3. **Pilot karakter: Defne.** Baştan sona eksiksiz: tanışma, mesajlaşmalar, buluşmalar, büyük anlar, cinsellik, sonlar. Okuma aracıyla defalarca kontrol.
-4. **Diğer beş karakter,** tek tek. Her biri pilot kadar derin; oyun her adımda oynanabilir kalacak.
-5. **Kesişmeler:** Karakterler arası bağlar, çoklu ilişki, yakalanma, şehir olayları.
-6. **Sonlar ve cila:** Bitişler, epilog, tekrar ve tutarlılık taraması, arayüz cilası, son okuma turları.
+3. **Pilot karakter: Defne.** ✅ (yapıldı; sonra yapı değişti, taslak olarak duruyor: karar 43)
+   - ~~4. Diğer beş karakter, tek tek. 5. Kesişmeler. 6. Sonlar ve cila.~~ → Roman kararıyla (38) yol haritası değişti.
+   - *Neden değişti:* Bir romanda altı kadın ilk perdeden itibaren birlikte yaşamalı. Karakterleri tek tek eklemek her seferinde öncekileri yeniden yazmak demekti.
+4. **Bölüm planı.** ✅ (4. oturum) Omurga baştan yazıldı; 41 bölümün planı; karakter belgeleri, takvim, rehber güncellendi.
+5. **Motor ve ekranlar bölüm yapısına** (orta). Bölüm akışı, yol ayrımları, hikâyenin içinde yaşanan yazışmalar, kilit ekranının yeni görevi, okuma aracının yeni yapıya uyarlanması.
+6. **I. Perde (Bölüm 1–11)** (büyük). Bütün tanışmalarla; okuma aracıyla baştan sona okunup düzeltilir.
+7. **II–V. Perdeler,** perde perde (her biri büyük).
+8. **Sonlar, Şubat ve cila** (büyük). Tutarlılık taraması, son okuma turları.
 
 ## Oynanış süresi hedefi
 
-Bir oyun yaklaşık 10–15 saat.
+~~Bir oyun yaklaşık 10–15 saat.~~ → Roman yapısında, tek okuyuşta 41 bölüm × 2.500–4.000 kelime: yaklaşık 100–160 bin kelime, **8–12 saat** (tahmin). I. Perde yazılınca ölçülecek.
 - *Hesap:* 115 gün × günde ortalama 5–8 dakika; sakin günler hızlı geçer.
 - Kesin değil; pilot karakterle ölçülecek.
 - *Pilot ölçümü (3. adım):* Defne'ye özen gösteren bir oyunda okunacak metin yaklaşık 17 bin kelime; okuma ve seçimlerle 1,5–2 saat tutuyor. Altı karakter ve kesişmelerle hedefin alt ucu (10 saat civarı) gerçekçi. Gerçek bir oyuncuyla ölçülmedi.
@@ -203,4 +240,11 @@ Bir oyun yaklaşık 10–15 saat.
 
 **3. oturumun sonu (ara düzeltme):** Kullanıcının oynayıp söylediği iki şey düzeltildi: "Bekle" (karar 35) ve etkisiz telefon (karar 36). Testler, okuma aracı ve ekran görüntüleri yeniden geçti. Sürüm 0.3.1.
 
-**Sıradaki:** 4. adım, diğer beş karakter (büyük). Önerilen sıra: Ilgın, Ceren, Sude, Ela, Lara. Her birine açılış mesajları da yazılacak (karar 37). Kullanıcının "devam" demesi bekleniyor.
+**4. oturum:** Oyun etkileşimli romana dönüştü (karar 38–44). Kod yazılmadı.
+- `hikaye/omurga.md` baştan yazıldı: tema, biçim, bölüm anatomisi, yol ayrımları, hikâyenin içindeki yazışmalar, perdeler, oyuncunun ipliği, altı kadının yayları ve kendi kararları, kesişmeler, çoklu ilişki, sonlar.
+- `hikaye/bolumler.md` yazıldı: 41 bölüm, beş perde; her bölümün tarihi, sorusu, sabit sahneleri, yol ayrımları, gecesi, değiştirdiği şey. Nöbet takvimleriyle çapraz denetlendi.
+- Karakter belgeleri: Sude (yalan defteri), Ela (omuz bahaneydi), Ilgın (kendi başvurusu, tabela), Lara (imza, ifade), Defne (sergi, korkunca acımasızlık), Ceren (6 Ocak nöbeti), karşılaştırma tablosu (en derin sırlar), oyuncu (gündelik hayat geri planda).
+- Takvim (yeni tarihli olaylar), şehir (Fabrika'nın geçidini Ilgın ile Lara buldu), yazım rehberi (romanın iki dili, bölüm yazmak, bu romana özel klişeler).
+- Oyundaki içerik değişmedi; eski hâliyle oynanabilir (sürüm 0.3.1).
+
+**Sıradaki:** 5. adım, motor ve ekranlar bölüm yapısına (orta). Kullanıcının "devam" demesi bekleniyor.

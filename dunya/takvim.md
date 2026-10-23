@@ -14,7 +14,9 @@ Türkiye'de saat değişmediği için kışın sabahlar karanlık başlar.
 | Aralık başı | 08:10 | 17:50 | 17 °C | 15 / 8 °C |
 | Ocak başı | 08:25 | 17:55 | 15 °C | 13 / 6 °C |
 
-## Gün dilimleri (taslak, 2. adımda kesinleşecek)
+## Gün dilimleri
+
+Romanda gündelik düzen geri plandadır (PROJE.md, karar 38); bu dilimler sahnelerin saatini tutarlı kılmak için durur.
 
 - **Sabah** 07–11: ders, iş, kahvaltı. Ela'nın saatleri.
 - **Öğle** 11–16: kampüs, eczane, atölye.
@@ -23,6 +25,8 @@ Türkiye'de saat değişmediği için kışın sabahlar karanlık başlar.
 - **Geç gece** 02–07: Ceren'in nöbet mesajları, Lara'nın "uyanık mısın"ı, Defne'nin kötü geceleri, Sabahçı Fırını.
 
 ## Tekrarlayan düzenler
+
+Bu düzenler sahnede görünmek zorunda değil; ama bir sahne bunlara ters düşmez.
 
 | Kim | Ne | Ne zaman |
 |---|---|---|
@@ -96,6 +100,7 @@ Lagün'ün kapanış gecesi. Sezonun son sıcak gecesi: 26 °C, rüzgâr yok, de
 ### 8. hafta: 3–9 Kasım — Hava kırılıyor
 - Poyraz esiyor. Mendirek dış masalarını kaldırıyor.
 - Yazlık sitelerde son ışıklar da sönüyor; Mavi Kent'te bir tek Ceren'in balkonu yanıyor.
+- Haftanın başında: İrem'den bir mesaj.
 - 8–9 Kasım (cumartesi–pazar): **Kerem'in ziyareti.** Ceren 7 Kasım nöbetinden cumartesi sabahı çıkıyor; Kerem o sabah geliyor.
 
 ### 9. hafta: 10–16 Kasım — Siren ve zeytin
@@ -103,7 +108,7 @@ Lagün'ün kapanış gecesi. Sezonun son sıcak gecesi: 26 °C, rüzgâr yok, de
 - Vize haftası başlıyor (10–21 Kasım). Kütüphane gece de açık.
 - 12 Kasım: Ilgın'a İstanbul'dan iş teklifi geliyor (2 Şubat'ta başlamak üzere, cevap yılbaşına kadar).
 - 12 Kasım civarı: Ceren'in annesi düğünü 17 Ocak'a çekmeyi öneriyor.
-- 14 Kasım Cuma gecesi: **Lara'nın villa partisi.** "Son zengin gece." Sude listesindeki "sabaha kadar parti" maddesini burada yapar.
+- 14 Kasım Cuma gecesi: **Lara'nın villa partisi.** "Son zengin gece." Sude ilk kez sabaha kadar dışarıda kalır.
 - 15 Kasım Cumartesi sabahı 05:00: Sude'nin annesi konumu villada görüyor.
 - 15–16 Kasım: **Tezcanların zeytin hasadı.** Bütün aile, komşular, kocaman branda, sırık, soğuk eller.
 
@@ -111,22 +116,27 @@ Lagün'ün kapanış gecesi. Sezonun son sıcak gecesi: 26 °C, rüzgâr yok, de
 - 17 Kasım Pazartesi: **Sude'nin annesi Pırnallı'da** (17–20 Kasım).
 - Taş Mahalle'de ilk soba dumanı.
 - 18 Kasım: Ilgın nöbetçi.
-- Lara'nın parası bitiyor; Defne'nin atölyesinde çalışmaya başlıyor (en erken bu hafta).
+- Lara'nın parası bitiyor; Defne'nin atölyesinde çalışmaya başlıyor.
+- Gönül Hanım Defne'ye Kültür Evi'nde bir kış sergisi teklif ediyor.
 
 ### 11. hafta: 24–30 Kasım — Doğum günü
 - Yağmurlu bir hafta. Lodos Kahve kışın en kalabalık yeri.
 - Saniye Hanım'ın evindeki klima bozuluyor; oyuncunun evi soğuk.
 - 24 Kasım civarı: İTÜ'den eve yazı gidiyor (oyuncu daha önce itiraf etmediyse).
 - 26 Kasım Çarşamba: **Oyuncunun doğum günü** (22 yaşına giriyor). Babası arar. Ilgın nöbetçi.
+- Kasım sonu: Lara'ya savcılıktan ifade yazısı.
 
 ### 12. hafta: 1–7 Aralık — Büyük Lodos
-- 1 Aralık civarı: Ela'ya İstanbul'dan antrenörlük teklifi (12 Ocak'ta başlamak üzere).
+- 1 Aralık Pazartesi: Ela'ya İstanbul'dan antrenörlük teklifi (12 Ocak'ta başlamak üzere).
+- 2 Aralık Salı: Lara İzmir'de savcılıkta ifade veriyor (adı babasının şirketlerinden birinin yönetim kurulunda).
 - 4 Aralık Perşembe gecesi – 5 Aralık: **Büyük Lodos.** Kordon su altında. Taş Mahalle'de 14 saat elektrik yok. Acil dolu. Marinada iki tekne batıyor; haczedilmiş "Nilüfer" halatlarını koparıyor. Kordonda bir okaliptüs devriliyor. Ilgın nöbetçi, Ceren nöbetçi, Mendirek erkenden kapanıyor.
 - 5 Aralık sabahı: kıyıda yosun yığınları, devrik ağaç, tuz kokusu, sessizlik.
 
 ### 13. hafta: 8–14 Aralık — Toparlanma
 - Şehirde dayanışma var: kordon temizliği, Mendirek'te herkese çorba.
 - Defne'nin atölyesinin alt katını su basmış olabilir (fırın odası).
+- 10 Aralık akşamı: Ilgın Defne'nin erken gelen reçetesini vermiyor.
+- 11 Aralık, 02:50: Defne'nin kötü gecesi ya da zor gecesi (kışın ne kadar ağır geçtiğine bağlı). Ceren nöbetçi (10 Aralık nöbeti).
 - 11–14 Aralık: İzmir'de kış kupası; Ela dört gün yok.
 - 12 Aralık: Ilgın nöbetçi.
 - 13 Aralık Cumartesi: **Oyuncunun babası Pırnallı'da.** Mendirek. 6 Ocak 23:15 için alınmış otobüs bileti.
@@ -135,6 +145,8 @@ Lagün'ün kapanış gecesi. Sezonun son sıcak gecesi: 26 °C, rüzgâr yok, de
 ### 14. hafta: 15–21 Aralık — Kısa günler
 - Güneş 17:45'te batıyor. Hava soğuk, 6–12 °C.
 - 15–16 Aralık: Mert (Ela'nın eski sevgilisi) kupadan dönerken Pırnallı'ya uğruyor.
+- 17 Aralık: Rıfat Bey Defne'yi arıyor: kira iki katı ya da satış, 31 Aralık'a kadar.
+- 20 Aralık Cumartesi: **Defne'nin sergisi, "Çatlak", Kültür Evi.** Duvar metinleri Lara'nın.
 - Okulda son dersler. 20 Aralık: Ilgın nöbetçi.
 
 ### 15. hafta: 22–28 Aralık — İhale

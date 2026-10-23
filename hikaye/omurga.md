@@ -1,290 +1,217 @@
-# Hikâyenin Omurgası
+# Romanın Omurgası
 
-## 1. Tema
+> Bu belge romanın neyi, nasıl anlattığını söyler. Bölüm bölüm plan `hikaye/bolumler.md`'de. Bir bölüm yazılmadan önce ikisi birlikte okunur.
+>
+> 4. oturumda baştan yazıldı. Eski omurga, takvimin aktığı bir hayatın içine serpiştirilmiş parçalar üstüne kuruluydu; o yapı terk edildi (PROJE.md, karar 38). Eski metin git geçmişinde duruyor.
 
-**Kalmak ve gitmek.** Eylülde bir kalabalık gider, öbürü gelir. Oyuncu herkes giderken kalan kişidir, ama hayatında hiçbir şeyin sonuna kadar kalmamıştır. Altı kadının her biri kendi hayatında bu soruyla uğraşır:
+## 1. Roman ne anlatıyor
 
-- Ilgın gitmek istiyor ama mahsur kalmış.
-- Sude kaçtı ama geri çağrılıyor.
-- Ceren gitmek zorunda ama kalmak istemeye başlıyor.
-- Defne kalanlardan korkuyor.
-- Ela kendi teknesinden indi.
-- Lara'nın evi elinden gidiyor.
+**Bir kış, bir kasaba, altı kadın ve kalmayı hiç öğrenmemiş bir çocuk.**
 
-Oyun bir cevap vermez. Oyuncunun seçimleri kendi cevabını yazar.
+Eylülde bir kalabalık gider, öbürü gelir. Oyuncu herkes giderken kalan kişidir; ama hayatında hiçbir şeyin sonuna kadar kalmamıştır. Okulu, ilişkiyi, babasıyla konuşmayı hep yarıda bırakmıştır. Kalmayı da bir yalanın üstüne kurdu: ailesi onu "bir dönem dinleniyor" sanıyor.
 
-**Ton:** Yetişkin, gerçekçi, romantik-dramatik, dozunda mizahlı. Normal People'ın sessizlikleri, Before Sunrise'ın konuşmaları, Aşk-ı Memnu'nun gerilimi (dozunda).
+Altı kadının her biri aynı kış, kendi hayatında aynı soruyla uğraşıyor: **kalmak mı, gitmek mi?** Hepsinin cevabı ocağın ilk haftalarına düşüyor. Oyuncunun cevabı en sona, 6 Ocak 23:15'teki İstanbul otobüsüne düşüyor. Roman bu yedi kararın yan yana verilişidir.
 
-## 2. Yapı
-
-Oyun tek uzun bir ağaç değildir. Yüzlerce küçük, elle yazılmış sahne parçasından (storylet) ve araya serpiştirilmiş büyük, dallanan, elle yazılmış anlardan oluşur. Takvim bir iskelet sağlar: bazı olaylar sabittir (fırtına, ihale, yılbaşı), bazıları oyuncunun yaptıklarına göre açılır.
-
-| Perde | Tarih | Ne olur |
+| Kim | Sorusu | Kararın tarihi |
 |---|---|---|
-| I. Sezon sonu | 14 Eylül – 5 Ekim | Tanışmalar. Şehir değişiyor. Oyuncu yeni hayatını kuruyor. İlk yağmurla perde kapanır. |
-| II. Yakınlaşma | 6 Ekim – 2 Kasım | Merak ve ilk eşikler. Fabrika'daki son film, Defne'nin doğum günü, 29 Ekim. Herkesin kendi derdi görünür olmaya başlar. |
-| III. Çatlaklar | 3 Kasım – 30 Kasım | Hava kırılır. Kerem gelir, Sude'nin annesi gelir. Zeytin hasadı, iş teklifi, oyuncunun yalanı çatırdar, doğum günü gelir. Çoklu ilişkiler burada en çok tehlikededir. |
-| IV. Fırtına | 1 – 21 Aralık | Büyük Lodos. Kırılmalar, kötü geceler. Babanın ziyareti ve bilet. |
-| V. Karar | 22 Aralık – 6 Ocak | İhale, yılbaşı, kontrat, düğün tarihi, son günler. 6 Ocak gecesi 23:15. |
+| Lara | Evi elinden gidiyor. Kimin olacak? | 23 Aralık, ihale |
+| Defne | Kalanlardan korkuyor. Bu kış kalabilecek mi? | 31 Aralık, kontrat |
+| Ilgın | Mahsur kaldığı yerden gidebilecek mi; gitmek isterken kalmayı seçebilir mi? | Yılbaşı, iş teklifine cevap |
+| Ela | Kendi teknesinden indi. Yeniden binecek mi? | Ocak başı, 12 Ocak'taki iş |
+| Sude | İlk kez özgür. Geri çağrılıyor. | 9 Ocak, yatay geçiş başvurusu |
+| Ceren | Planın içinde boğuluyor. Kendi hayatını seçebilecek mi? | 17 Ocak, öne çekilen düğün |
+| Oyuncu | Bu sefer kalabilecek mi? Kalırsa kimin için, kimin yanında, ne pahasına? | 6 Ocak, 23:15 |
 
-## 3. Oyuncunun ana ipliği
+Roman cevap vermez. Oyuncunun seçimleri kendi cevabını yazar. Kadınlar da kendi cevaplarını verir: oyuncu onlara dokunur, ama kararları onun için değildir.
 
-1. **Eylül:** Lagün kapanır. Oyuncu Saniye Hanım'ın evine taşınır (16 Eylül), Mendirek'te işe başlar (18 Eylül), okul başlar (22 Eylül). Pazar akşamları annesi arar; oyuncu "dinleniyorum" der.
-2. **Ekim–Kasım:** Oyuncu yalanı istediği an itiraf edebilir: annesine, Ezgi'ye ya da doğrudan babasına. İtiraf etmezse 24 Kasım civarında İTÜ'den eve bir yazı gider ve babası 26 Kasım'da, oyuncunun doğum gününde arar: "Doğum günün kutlu olsun. Bir de İTÜ'den bir yazı geldi."
-   - İtirafın zamanlaması ve kime yapıldığı, babanın tepkisini ve karakterlerin oyuncuya bakışını değiştirir. Ilgın yalanı yakalanmadan itiraf edeni sayar. Sude kendi yalanını bu itirafın aynasında görür.
-3. **Kasım:** İrem'den bir mesaj gelebilir: "Merhaba. Aylar oldu. Sadece neden diye sormak istiyorum, kızgın değilim artık." Oyuncu cevap verebilir, vermeyebilir, yalan söyleyebilir. Bu küçük iplik oyuncunun kaçma alışkanlığının aynasıdır ve sonla bağlantılıdır.
-4. **13 Aralık:** Babası Pırnallı'ya gelir ve Mendirek'e oturur. Oğluna tepsiyle servis yaptırır, ya da oyuncu servis yapmayı reddeder. Hesap faslında konuşurlar. Babası bir otobüs bileti bırakır: 6 Ocak, 23:15, İstanbul. "Gel konuşalım. Gelmezsen kendi başınasın." (Babanın sesi: bağırmaz, susar. Kötü adam değil.)
-5. **Aralık–Ocak:** Oyuncu kalmanın maddi yolunu da düşünmek zorunda kalır: Mendirek'te tam zamana geçmek, kira, burs. Hafif tutulur, ama gerçektir. Nuri Abi'nin "Kalacaksan söyle, ona göre adam ararım" cümlesi bir karar anıdır.
-6. **6 Ocak, 23:15:** Otogar. Oyuncu otobüse biner ya da binmez. Kimin yanında olduğu, kimden mesaj geldiği, kimin otogarda olduğu bütün oyunun toplamıdır.
+**Ton:** Yetişkin, gerçekçi, sıcak, yer yer çok komik, yer yer çok karanlık. Sessizliğe güvenen bir roman. Normal People'ın sessizlikleri, Before Sunrise'ın konuşmaları; ama Ege'de, kışın, Türkçe.
 
-## 4. Tanışmalar
+## 2. Biçim: oynanan bir roman
 
-Her tanışma o karakterin dünyasından doğar. Biri film gibi, biri çok sade; ikisi aynı tonda değil.
+Oyuncu "bekle, uyu, şuraya git" demez. Hikâyeyi anlatıcı anlatır; oyuncu seçer. Zamanı bölümler ilerletir.
 
-- **Defne — 14 Eylül, Lagün'ün kapanış gecesi (film gibi ama küçük).** Oyunun ilk sahnesi. Defne'nin yaz arkadaşları erken gider, o sonuna kadar kalır. Sandalyeleri istiflerken yardım eder; bir yandan kapanış gecesine reklam sloganları uydurur. Oyuncunun ertesi gün gideceğini sanır. Oyuncu ona yalan söyleyebilir ("yarın gidiyorum") ya da doğruyu söyleyebilir; bu seçim haftalar sonra geri döner. İlk gece mümkündür ama zorunlu değildir.
-  - Aynı gece barda gece elbisesiyle tek başına içen bir kız vardır: Lara. Konuşulmayabilir, sadece görülür. Ekimde villada karşılaştıklarında biri bunu hatırlar ya da hatırlamaz.
-- **Ilgın — 16 Eylül, Yeni Eczane (çok sade).** Saniye Hanım oyuncuyu eczaneye yollar: "Kıza söyle, Saniye Hanım'ın her zamankisi." Ilgın tek kelime sormadan doğru kutuları koyar: insülin kalemi iğneleri ve ölçüm çubukları. Sonra sorar: "Sen kimsin?" / "Yeni kiracı." / "Bir öncekisi üç ay dayandı." Sezonluk lafı burada başlar.
-- **Sude — 22 Eylül, Kabaktepe (komik).** İlk ders günü ikisi de kaybolur. Sude oyuncuyu görevli sanıp "siz" diye yol sorar. Birlikte yanlış binaya girerler. Ortasında annesi görüntülü arar ve Sude oyuncuyu annesine refleksle "bölümden bir asistan" diye tanıtır. Sonra kendi yalanından dehşete düşer. Bu, hayatındaki ilk ekran üstü yalandır.
-- **Ela — 23 Eylül, Yelken Kulübü (fiziksel, gürültülü).** Dersin ilk günü. Ela, "İlk ders: düzgün düşmeyi öğreneceğiz," der ve ekibi suya sokar. Oyuncu ile Sude aynı iki kişilik teknededir. Bom oyuncunun kafasına gelir ya da gelmez; tekne devrilir.
-- **Ceren — Eylülün son haftası ya da ekim başı, gece acil (sade ve gece).** Üç yoldan biriyle:
-  1. Onur, Kırık Koy'u anlatır. Oyuncu gece giderse deniz kestanesine basar. Saat üçte acile gider. Ceren: "Deniz kestanesi. Gece üçte. Ayağını ben mi tutayım, sen mi tutacaksın?"
-  2. Mendirek'te bir kaza olur: kırık bardakla kesik ya da ızgaradan yanık.
-  3. **Güvence:** Bunlar olmazsa ekimin ortasında, Ceren'in nöbet gecelerinden birinde Saniye Hanım'ın şekeri düşer. Oyuncu onu acile götürür. En ağır ve en güzel tanışma budur, çünkü oyuncu kendisi için değil başkası için oradadır.
-- **Lara — 2 Ekim Perşembe, Fener Burnu (film gibi).** Rasim Efendi Mendirek'i arar: "Kız aç. Berkmen'in kızı." Nuri Abi oyuncunun eline bir poşet meze ve balık tutuşturur: "Götür. Para isteme, ayıptır. Verirse al."
-  - Villa karanlıktır, havuz yeşile dönmüştür. Lara gece elbisesiyle değil, eşofmanla kapıyı açar.
-  - Kart geçmez, bir kere daha geçmez. Lara her seferinde başka bir bahane uydurur. Oyuncunun ne yaptığı (gitmek, ödemek, kalmak, "boşver" demek) Lara'nın onu nasıl kaydedeceğini belirler.
+- **Bölüm:** Romanın birimi. 41 bölüm, beş perde. Her bölümün bir tarihi, bir adı, bir sorusu vardır. Okuması 15–25 dakika sürer. Bir bölüm bir gün de olabilir, bir hafta da.
+- **Anlatıcı:** İkinci tekil şahıs, şimdiki zaman ("Kapıyı itiyorsun"). Zamanı sıkıştırabilir ("Üç gün böyle geçiyor."), geri dönebilir, bir anı açabilir. Ama oyuncunun seçeceği duyguyu onun yerine söylemez. Ayrıntısı `yazim/rehber.md`'de.
+- **Gündelik hayat:** Neredeyse görünmez. Vardiyalar, dersler, ev işleri, ancak hikâyeye bir şey kattıkları an görünür: bir kadın Mendirek'e müşteri olarak geldiğinde, Tarık Hoca bir soru sorduğunda, Saniye Hanım merdivende oturduğunda. Gerisi bölüm başlarındaki birkaç cümlede, bir dokuda kalır.
 
-## 5. Karakter yayları
+### Bir bölümün anatomisi
 
-Her yay **evreler** hâlinde ilerler. Evreler takvime değil, oyuncunun yaptıklarına bağlıdır. Takvim yalnızca bazı kapıları belli günlerde açar ya da kapatır.
+Her bölüm aynı kalıba dökülmez; ama çoğu şu parçalardan oluşur:
 
-**Ortak evreler:**
-- Yabancı → Tanıdık → Merak → Yakınlık → İlk eşik (öpüşme ya da itiraf) → Birliktelik (açık ya da gizli) → Büyük kırılma ya da sınav → Karar → Son
-- Her evrede yol ayrılabilir: **soğuma**, **red**, **kırılma** ya da **karakterin başka birini seçmesi**.
+1. **Açılış.** Tarih, yer, hava. Geçen günler birkaç cümlede. Sahne dışında olanlar: oyuncunun tanıdığı kadınların hayatında bu arada ne değişti, şehir ne konuşuyor.
+2. **Sabit sahne.** O bölümde herkesin yaşadığı olay: bir tanışma, bir şehir olayı, babanın telefonu, fırtına. İçinde seçimler vardır; seçimler sahnenin içeriğini değiştirir, varlığını değiştirmez.
+3. **Yol ayrımı.** Romanın kalbi. "Aynı gece" ya da "aynı gün" iki ile dört kadının hayatında bir şey oluyor. Oyuncu ancak birinin yanında olabilir. Seçenekler menü gibi değil, hikâyenin içinden sunulur: kim çağırdı, kim çağırmadı ama orada olduğunu bildiğin biri, kimin kapısı açık. Seçilen yol tam bir sahne olur; seçilmeyenlerde hayat sürer ve iz bırakır.
+4. **Gece.** Telefon. Yazışmalar burada yaşanır: gelen mesajlar, oyuncunun kendisinin yazmak istediği kişi. Bir bölümün kapanışı çoğu zaman bir yazışmadır.
 
-### Ilgın
+Her bölüm bir şeyi değiştirir. Bölüm bittiğinde ya bir ilişki, ya oyuncu, ya bir kadının hayatı eskisi gibi değildir. Hiçbir şeyi değiştirmeyen bölüm yazılmaz.
 
-| Dönem | Olası anlar |
-|---|---|
-| Eylül | Eczane tanışması. Saniye Hanım'ın ilaçlarını almaya gidildikçe kısa laf atışmaları. 23 Eylül nöbet gecesi: küçük pencere. |
-| Ekim | Clio ve sahil yolu; sıkışık CD. Bulmaca soruları mesajla gelir. Hasan Bey'le tavla (çay bahçesi). İlk yağmurda (3 Ekim) eczane saçağının altında. Fabrika gecesi: nöbetini devreder mi? |
-| Kasım | 12 Kasım iş teklifi. **Zeytin hasadı (15–16 Kasım)**: ailenin içinde bir gün. Hasan Bey oyuncuya bir şey sorar. Ilgın'ın katında ilk gece. Lara'nın villasındaki parti kasabada konuşulur. |
-| Aralık | **Fırtına gecesi:** Ilgın nöbetçi, evde elektrik yok. Oyuncu yanındaysa ya da Hasan Bey'in yanındaysa yol değişir. Lara'yla yüzleşme (ihale civarı). Teklife cevap. |
-| Ocak | Kalmak ya da gitmek: ikisinin kararı birbirinden bağımsız ama birbirine değerek verilir. |
+### Yol ayrımları nasıl kurulur
 
-**Büyük anlar:** Nöbet penceresi • Clio ve CD • Zeytin hasadı • İlk gece (sessiz olmak zorunda) • Fırtına gecesi • Lara'yla yüzleşme • Telefonun sessizde olduğu gece (en derin itiraf) • Karar.
+- **Davet hikâyeden gelir.** Bir seçenek ancak hikâyede gerçek bir sebebi varsa görünür: Defne "fırın açılıyor" yazdıysa, Ilgın o gece nöbetçiyse ve eczanenin küçük penceresi açıksa, Ela "tekneler 😭 gel" diye yazdıysa.
+- **Tanımadığın kapı açılmaz.** Kadınla oyuncunun arasındaki mesafe hangi davetin geleceğini belirler. Bir kadın hiç çağırmıyorsa oyuncu onun gecesine ancak kendi bir bahanesiyle girebilir: eczaneye gece ilaç almaya gitmek gibi.
+- **Seçilmeyen gece de yaşanır.** Lara'nın arabası haczedildiğinde oyuncu oradaysa sahneyi yaşar. Orada değilse olayı Onur'dan duyar ve Lara bir sonraki karşılaşmada başka biridir. Defne'nin doğum gününe gitmeyen, ertesi gece saat üçte bir mesaj alır.
+- **Zaman bölünür.** Bir gece tek bir yerde olunur. Romanın en büyük gecelerinde (ilk yağmur, Fabrika, fırtına, yılbaşı) bu seçim gerçekten acıtır.
+- **Doğru cevap belli değildir.** Fırtına gecesi Defne'nin atölyesine gitmek ile karanlıkta yalnız kalan Saniye Hanım'ın yanında kalmak arasında doğru yoktur, yalnızca bedel vardır.
 
-**Red ve soğuma yolları:**
-- Yakalanan yalan; müşteri muamelesi.
-- "Bence gitmelisin" baskısı.
-- Lara'ya erken yakınlık.
-- Kasabayı küçümsemek.
-- Ilgın kendi kararını verip oyuncuyu o kararın dışında bırakabilir.
+### Mesajlaşma: hikâyenin içinde yaşanan yazışmalar
 
-### Sude
+Telefon romanın ikinci dili. Bazı ilişkiler en çok orada yaşanır: Defne'nin gece üçteki seri mesajları, Ceren'in nöbetten yazdığı paragraflar, Lara'nın "uyanık mısın"ı, Ilgın'ın "yattım"ı.
 
-| Dönem | Olası anlar |
-|---|---|
-| Eylül | Kampüste kaybolmak. Yelken teknesi. Lodos Kahve'de "Bu bir randevu muydu?" |
-| Ekim | Konum taktikleri: Dilan'ın telefonundan mesajlar. Fabrika gecesi. **Gece denize girmek** (liste 1); ekimin sıcak bir gecesi, en geç pastırma yazı. İki saatlik konuşma (liste 5). İlk alkol (liste 3). Listenin varlığı açılır. |
-| Kasım | **14 Kasım villa partisi:** Sabaha kadar kalmak (liste 2). Konum yakalanır. **17–20 Kasım anne:** Oyuncu annesiyle tanışabilir: asistan yalanının devamı ya da doğrusu. Saç kestirmek (liste 6). Defne'nin atölyesi (liste 10). İlk gece, ilk kez dışarıda kalmak. |
-| Aralık | Kaçış parasının farkına varmak. Yatay geçiş formu. Annesine "hayır" demek ya da dememek. Listeyi silmek ya da yeniden yazmak. |
-| Ocak | Final haftası. Kendi kararı; oyuncunun kararıyla aynalı. |
+- **Yazışma bir sahnedir.** Anlatı bir yazışmaya geldiğinde telefon ekranı açılır. Yazışma "yazıyor…"suyla, beklemesiyle, "görüldü"süyle orada oynar. Oyuncu cevaplarını seçer. Yazışma bitince anlatı kaldığı yerden sürer.
+- **Saat ve gecikme yazışmanın parçasıdır.** Bir yazışma birkaç saate yayılabilir ("üç saat sonra"); kim ne zaman yazar, karakterin kendisidir.
+- **Oyuncu da başlatır.** Bazı gecelerde anlatı telefonu oyuncunun eline verir: "Kime yazacaksın?" Bu da bir yol ayrımıdır. Açılış mesajları elle, o ana ve o kişiye özel yazılır ("eve vardın mı", "atölye nasıl").
+- **Aynı gece birden çok kişiyle yazışmak mümkündür.** Çoklu ilişkinin dokusu buradadır: birine "evdeyim" yazarken öbürünün yanında olmak.
+- **Takvimden gelen rastgele mesaj yok.** Her mesaj romanın bir yerine bağlıdır. Telefon her an açılıp eski yazışmalar okunabilir; okumak hikâyeyi etkilemez.
 
-**Büyük anlar:** Kampüste kaybolmak • "Bu bir randevu muydu?" • Gece denize girmek • Listenin açılması • Villa partisi ve sabah beşte konum • Annenin gelişi • İlk gece • Annesine "hayır" (ya da teslim) • Karar.
+### Hafıza
 
-**Red ve soğuma yolları:**
-- Kaçamak cevaplar birikir; Sude sakin bir sınır çizer.
-- Başka bir kızla ilgili bir yalanı yakalar.
-- Listeyi fırsat gibi kullanmak.
-- Sude oyuncuyu sevip yine de Kayseri'yi seçebilir: oyuncu için değil, annesi için de değil, kendi hesabıyla.
+Karakterler hatırlar, insan gibi: önemli olanı ya da tuhaf bir ayrıntıyı. Yalanlar, sözler, gelinmeyen geceler, bir kez söylenmiş bir cümle. Hafıza yalnızca hikâye oraya gidince kullanılır. Oyuncuya puan, ölçü ya da bilgi kartı gösterilmez.
 
-### Ceren
+## 3. Perdeler
 
-| Dönem | Olası anlar |
-|---|---|
-| Eylül/Ekim | Acil tanışması. Nöbet sonrası Sabahçı Fırını, sabah 06:00. Gece mesajları (03:12). "Nişanlıyım." erken söylenir. Kırık Koy'da gece yüzmesi (ekim; deniz hâlâ 21 °C). |
-| Kasım | **Kerem'in ziyareti (8–9 Kasım):** Kerem ile Ceren Mendirek'e gelir ve oyuncu onlara servis yapar. Aşk-ı Memnu gerilimi: bir bakış, bir hesap, Kerem'in iyi bir adam olması. Annesi düğünü 17 Ocak'a çekmeyi önerir. İlk gece: arabada, ya da Mavi Kent'te balkon kapısı açık. "Bunu yapmamamız lazım." |
-| Aralık | **Fırtına gecesi:** acil. Oyuncu bir yaralı getirir ya da gönüllü olur. Ceren'i işinde görmek. Davetiyeler basılmadan önce bir karar. Arabada ağlamak. Defne'nin kötü gecesi (Ceren nöbetçi). Kerem'in öğrenmesi ihtimali. |
-| Ocak | 31 Aralık ve 6 Ocak nöbetleri. Otogara gelmesi için nöbet takası yapması gerekir; takas yaparsa bu bir şey demektir. |
-
-**Büyük anlar:** Acil • Fırın, 06:00 • Kırık Koy gecesi • "Nişanlıyım." • Kerem'e servis • İlk gece ve "Bunu yapmamamız lazım." • Fırtına aciline birlikte girmek • Düğün kararı • Arabada ağlamak.
-
-**Red ve soğuma yolları:**
-- Ceren sınırını korur ve hiçbir şey olmaz. Bu da bir son: yakın ama dokunulmamış.
-- Kıskançlık sahnesi ya da baskı yapılırsa "çocuk" damgası kesinleşir.
-- Kerem'i kötülemek.
-- Ceren planına döner ve oyuncuyu nazikçe, kesin bir şekilde dışarıda bırakır.
-
-### Defne (pilot karakter önerisi)
-
-| Dönem | Olası anlar |
-|---|---|
-| Eylül | **Lagün kapanışı (14 Eylül).** Ertesi hafta: "sezon bitti, sen gitmedin." Yalanın varsa ortaya çıkar. Kuralların yeniden konuşulması: sezonluk mu, değil mi? |
-| Ekim | Fırın açılışları (cuma geceleri). Termostat tamiri. Kötü film geceleri. Berkmen borcu ve villaya gidiş (Lara). **24 Ekim doğum günü:** Kutlanmak istemez, kutlanmazsa kırılır; oyuncu bunu nereden öğrendiği önemlidir. Kış yaklaşıyor; ilk karanlık espriler. |
-| Kasım | Lara atölyede. Sude cumartesi dersinde. Habersiz İstanbul kaçışı (ilişki kötü gidiyorsa). Bir yabancıyla görülmek (oyuncu soğuduysa). Kalan biriyle sevişmek, yavaş. |
-| Aralık | Fırtınada atölyenin alt katını su basar ve fırın tehlikeye girer. **Kötü gece** (alkol ve uyku ilacı; olabilir ya da olmayabilir, oyuncunun yakınlığına ve dikkatine bağlıdır): acil, Ceren, Ilgın'ın kapıyı çalması. On iki yaşındaki tatilin sırrı. |
-| Ocak | 31 Aralık kontrat: yenilemek ya da kapatmak. Oyuncu giderse otogarda uğurlamak; en iyi bildiği şey. |
-
-**Büyük anlar:** Kapanış gecesi • "Kaldın." • Fırının açılışı • Doğum günü • Kalan biriyle ilk sevişme • Kötü gece • On iki yaşındaki yaz • Kontrat ya da otogar.
-
-**Red ve soğuma yolları:**
-- Erken "Biz neyiz?" sorusu.
-- Kurtarıcılık.
-- Sıkıcılık.
-- Defne sezonluk refleksiyle başka birine kayabilir ya da İstanbul'a dönebilir.
-
-**Pilot önerisinin gerekçesi:**
-- Oyunun ilk sahnesinde tanışılıyor; pilot tek başına baştan sona oynanabilir.
-- Mesaj biçimi zengin.
-- Cinsellik, kırılma ve kış yayı erkenden başlıyor.
-- Diğer karakterlere en az bağımlı olan o; kesişmeleri (Lara, Sude, Ceren) sonradan eklenebilir.
-- Kalmak/gitmek temasını en doğrudan o taşıyor.
-
-### Ela
-
-| Dönem | Olası anlar |
-|---|---|
-| Eylül | Yelken dersi; ilk devrilme. "Uyan ⛵" mesajları. Sabah 06:30 meydan okuması: soğuk suya gir. |
-| Ekim | Çay bahçesinde emeklilerle tavla ("Şampiyon"). Kuyu. Haczedilmiş "Nilüfer"in güvertesine gece izinsiz çıkmak. Açık itiraf: "Hoşuma gidiyorsun." 29 Ekim kalabalığı. |
-| Kasım | Kordonda açık kavga (kıskançlık ya da "bakarız"). Omuz: Ilgın'dan ya da Ceren'den duyulur. Kulüp binasında ilk gece. Sude meselesi (oyuncu ikisiyle birden bir şey yaşıyorsa). |
-| Aralık | **Teklif (1 Aralık).** Fırtınada marinada tekneleri kurtarmak; Nilüfer halatlarını koparır. İzmir kupası (11–14 Aralık). **Mert'in uğraması (15–16 Aralık).** Poyrazda tek başına tekneye binmek. |
-| Ocak | İstanbul'a gitmek ya da gitmemek. 6 Ocak otobüsünde Ela da olabilir. |
-
-**Büyük anlar:** İlk ders • Soğuk su • Nilüfer'in güvertesi • Kordonda kavga • Omzun açılması ve ilk gece • Fırtına marinası • Mert • Poyrazda tek başına • Karar.
-
-**Red ve soğuma yolları:**
-- "Bakarız" birikir.
-- Bir yalan; tek hak.
-- Sude'yi üzmek.
-- Mert'i seçmesi.
-- Teklifi kabul edip gitmesi; oyuncuyu çağırmadan.
-
-### Lara
-
-| Dönem | Olası anlar |
-|---|---|
-| Ekim | Villaya meze (2 Ekim). Elektrik faturası; oyuncu sigortayı düzeltir. **22 Ekim: Mini haczedilirken** oyuncu orada mı? Defne'nin alacağı. Çamaşır makinesi ve yumurta dersleri. Kültür Evi freski: Lara'nın gerçek yeteneği ilk kez görünür. |
-| Kasım | **14 Kasım villa partisi:** "Son zengin gece." Herkes gelir: Sude, Ela, belki Defne; Ilgın gelmez. Gece üçte havuz kenarında dürüstlük. Para biter, atölyede çalışmaya başlar. Babasının telefonunu açar. |
-| Aralık | **Fırtına gecesi:** Villada elektrik yok, Lara yalnız. Oyuncu gelirse mum ışığı ve gözyaşı. Ilgın'a özür (ihale öncesi ya da sonrası). **23 Aralık ihale:** Anahtarın teslimi. Lara'nın gidecek yeri. |
-| Ocak | İstanbul'a annesine dönmek, Pırnallı'da kalmak ya da oyuncuyla otobüse binmek. |
-
-**Büyük anlar:** Meze ve geçmeyen kart • Haciz • Fresk • Villa partisi • Fırtına gecesi • Ilgın'a özür • Anahtar • Karar.
-
-**Red ve soğuma yolları:**
-- Acımak ya da para teklif etmek.
-- Kurtarıcılık.
-- Başka birini seçtiğini görmesi; o zaman önce o gider.
-- Annesiyle İstanbul'a dönmesi; mesajlarının seyrelip bitmesi.
-
-## 6. Şehir olayları ve kesişme sahneleri
-
-Kalabalık sahneler birden fazla karakteri aynı yere toplar. Çoklu ilişkilerin en tehlikeli anları buralardır.
-
-| Tarih | Olay | Kim orada olabilir | Not |
+| Perde | Tarih | Bölüm | Ne olur |
 |---|---|---|---|
-| 14 Eylül | Lagün kapanışı | Defne, Lara (uzaktan) | Açılış |
-| 30 Eylül | Keçi Adası'na son tekne | Ela (kulüp motoruyla), Defne, Sude | Veda gezisi |
-| 3 Ekim | İlk yağmur | Kim nerede yakalanırsa | Saçak altı sahneleri |
-| 17 Ekim | Fabrika'da son film | Sude, Ela, Defne; Ilgın ve Ceren o gece nöbette (biri nöbetini devrederse bu bir şey demektir) | İlk büyük kalabalık sahnesi |
-| 24 Ekim | Defne'nin doğum günü | Defne; Kuyu'da küçük kutlama | |
-| 29 Ekim | Fener alayı, havai fişek | Herkes | Kordonda görülme riski en yüksek |
-| 8–9 Kasım | Kerem'in ziyareti | Ceren, Kerem, Mendirek | Servis |
-| 14 Kasım | Villa partisi | Lara, Sude, Ela, Defne | Sabah beşte konum |
-| 15–16 Kasım | Zeytin hasadı | Ilgın ailesi; komşular | |
-| 17–20 Kasım | Sude'nin annesi | Sude, annesi; belki Ela | |
-| 26 Kasım | Oyuncunun doğum günü | Kim biliyorsa | Babanın telefonu |
-| 4–5 Aralık | Büyük Lodos | Herkes ayrı yerlerde | Oyuncu tek bir yerde olabilir. O gece kimin yanında olduğu bir seçimdir ve diğerleri bunu bilir. |
-| 13 Aralık | Babanın ziyareti | Mendirek; müşteri olarak kim gelirse | |
-| 23 Aralık | İhale | Lara; belki Ilgın, Defne | |
-| 31 Aralık | Yılbaşı | Mendirek'te oyuncu çalışıyor. Ceren nöbette. Kuyu'da parti. Defne'nin kontratının son günü. | İkinci büyük yakalanma riski |
-| 6 Ocak | Otogar, 23:15 | Kim gelirse | Son |
+| **I. Sezon Sonu** | 14 Eylül – 3 Ekim | 1–11 | Kalabalık gider, oyuncu kalır. Altı tanışma. Hepsi bir yalanın üstüne kurulan yeni bir hayatın ilk günleri. İlk yağmurla kapanır. |
+| **II. Yakınlaşma** | 6 Ekim – 2 Kasım | 12–19 | Merak yakınlığa döner. İlk eşikler: öpüşmeler, ilk geceler, ilk itiraflar. Kasaba oyuncuyu tanımaya başlar. Herkesin derdi görünür olur. Pastırma yazıyla, son deniz gününde kapanır. |
+| **III. Çatlaklar** | 3 – 30 Kasım | 20–28 | Hava kırılır. Yalanlar çatırdar: oyuncununki, Sude'ninki, Ceren'inki, Lara'nınki. Kerem gelir, Sude'nin annesi gelir, İTÜ'den yazı gelir. Çoklu ilişkiler en çok burada sınanır. Bir şey kırılarak kapanır. |
+| **IV. Fırtına** | 1 – 21 Aralık | 29–35 | Büyük Lodos. Kötü geceler, acil, kayıplar. Babanın ziyareti ve bilet. Herkes neyin kendisi için gerçekten önemli olduğunu görür. |
+| **V. Karar** | 22 Aralık – 6 Ocak | 36–41 | İhale, yılbaşı, kontrat, cevaplar. Vedalar ya da kalışlar. 6 Ocak 23:15. Ardından Şubat. |
 
-**Karakterler arası ana bağlar:**
-- **Ilgın ↔ Lara:** Bilezik, sekiz yıllık sessizlik. Oyunun en büyük kesişme ipliği.
-- **Defne ↔ Lara:** Borç → iş → tuhaf dostluk.
-- **Ilgın ↔ Ceren:** Gece eczanesi arkadaşlığı.
-- **Sude ↔ Ela:** Öğrenci ve hoca; Ela onu korur.
-- **Ela ↔ Lara:** Tekne "Nilüfer" ve Selim Berkmen.
-- **Ceren ↔ Ela:** Omuz.
-- **Ceren ↔ Sude:** Burkulan bilek, "Tıp istiyordum."
+Perdelerin ritmi: I hafif, duyusal, komik; yaz hâlâ havada. II sıcak ve meraklı. III gergin; şehir küçülür. IV karanlık ve büyük. V sessiz ve yalın.
+
+## 4. Oyuncunun ipliği
+
+Oyuncunun hikâyesi altı kadının hikâyesini taşıyan zemindir. Öne az çıkar, ama hiç kaybolmaz.
+
+- **Yalan.** Babasına "kayıt dondurup dinleneceğim, baharda döneceğim" dedi; aslında İTÜ'den kaydını sildirip buraya geçti. Yalan ilk bölümlerde yalnızca telefonda, eski bir yazışmada görünür; kimse anlatmaz.
+  - **İtiraf kapıları:** Pazar akşamı annesinin araması (Bölüm 4), Ezgi'nin "bir şey mi oldu" mesajı (Bölüm 14), bir kadına anlatmak, babaya yazmak. İtiraf etmezse 24 Kasım'da İTÜ'den eve yazı gider (Bölüm 26).
+  - Kime, ne zaman itiraf ettiği karakterlerin gözünü değiştirir. Ilgın yalanı yakalanmadan söyleyeni sayar. Sude kendi yalan defterinin aynasında görür. Lara "babanla sorunun olması seni ilginç yapmıyor" der.
+- **Baba.** Murat bağırmaz, susar. 26 Kasım'da, doğum gününde arar (Bölüm 27). 13 Aralık'ta Mendirek'e gelir ve oğlunun ona tepsiyle servis yaptığını görür. Bir bilet bırakır: 6 Ocak, 23:15, koltuk 17. "Gel konuşalım. Gelmezsen kendi başınasın." (Bölüm 33)
+- **İrem.** Lisedeki kız arkadaşı. Ona ayrılmak istediğini söyleyemedi, yazmayı bıraktı; ilişki bitmeden bitti. Kasımın ilk haftası bir mesaj gelir: "Aylar oldu. Sadece neden diye sormak istiyorum, kızgın değilim artık." (Bölüm 20) Oyuncunun kaçma alışkanlığının aynası. Cevap verip vermemesi, yalan söyleyip söylememesi finalde geri döner.
+- **Mendirek.** Nuri Abi, Saadet Abla, Cemal. Oyuncunun kasabada "biri" olmaya başladığı yer. Vardiyalar görünmez; Mendirek'te bir şey olunca görünür. Kadınlar müşteri olarak gelir, Kerem gelir, baba gelir, yılbaşı orada geçer. Nuri Abi'nin "Kalacaksan söyle, ona göre adam aramam"ı bir karar anıdır (Bölüm 28).
+- **Ev.** Saniye Hanım, yetmiş sekiz yaşında emekli edebiyat öğretmeni; kiracılarını roman karakteri gibi okur ve not verir. Onur, yedinci yılındaki iktisatçı; şehrin dedikodu merkezi, yarısı yanlış. Onur bilgiyi taşır; yakalanmaların çoğu ondan geçer.
+- **Okul.** Yalnızca üç an: ilk gün (Sude), 10 Kasım'daki siren, final sınavında Tarık Hoca'nın "Baharda burada mısın?" sorusu.
+
+**Oyuncunun değişim yönleri:** kalmayı öğrenmek, kaçmaya devam etmek, ya da gitmek ama bu sefer arkasında bir açıklama bırakmak; İrem'e yapmadığını yapmak.
+
+## 5. Altı kadın
+
+Her kadının oyuncudan bağımsız bir hayatı ve kararı var. Oyuncu yokken de o hayat sürer. Aşağıda her birinin yayı; tarihli olaylar `dunya/takvim.md`'de, bölüm yerleşimi `hikaye/bolumler.md`'de.
+
+Her yayda dört şey yazılı: kendi hikâyesi, oyuncuyla yaşanabilecek büyük anlar, oyuncunun dokunabileceği yer, ve kendi kararı.
+
+### Defne — kalanlardan korkan
+
+- **Kendi hikâyesi:** Kış geliyor ve geçen kış neredeyse onu bitirdi. Parası yok, Berkmenlerin borcunu ödemesini bekliyor, kira kontratı 31 Aralık'ta bitiyor. Bir yandan ilk ciddi işini hazırlıyor: Gönül Hanım ona Kültür Evi'nde bir kış sergisi teklif eder (Kasım). Sergiyi kendi kazancı, kendi iddiası olarak ister; şirin bir atölye sahibi olmaktan yorgun. Korkunca acımasızlaşabilir; en keskin cümlelerini en çok sevdiklerine söyler.
+- **Büyük anlar:** Kapanış gecesi • "Kaldın." • Fırının açılışı • İlk yağmurda üç kural • Doğum günü ve durmak • Soba gecesi, kalan biriyle • Fırtınada atölye • Kötü gece • Otogardaki sır (on iki yaşındaki yaz) • Sergi • "Yarın gidiyor musun?"
+- **Oyuncunun dokunabileceği yer:** Kalmak ama onu sıkıştırmamak. Kötü gecesinde soru sormadan yanında olmak. "Biz neyiz?" sorusu ve kurtarıcılık onu kaçırır.
+- **Kendi kararı (31 Aralık):** Kontratı yeniler ya da atölyeyi kapatıp 6 Ocak'ta aynı otobüsle İstanbul'a, annesine döner. Sergi, kötü gecenin nasıl geçtiği ve kışı yalnız geçirip geçirmediği belirler; oyuncu bunlardan yalnızca birine dokunur.
+
+### Ilgın — mahsur kalmış
+
+- **Kendi hikâyesi:** Babası inme geçirdi; "birkaç aylığına" döndü, on dört ay oldu. Yazın, bir gece, kimseye söylemeden İstanbul'daki bir ilaç firmasına başvurdu ve başvurduğunu unutmaya çalıştı. 12 Kasım'da teklif gelir. Bazı geceler Clio'yla İzmir yoluna çıkar, şehir tabelasının kırmızı çizgili arkasına kadar gider ve döner; her seferinde. Sekiz yıl önce Lara'yla aralarında bir bilezik meselesi geçti; o günden beri konuşmuyorlar.
+- **Büyük anlar:** Eczanede tanışma • Nöbet penceresi • Clio ve tabela • Zeytin hasadı, ailesinin içinde bir gün • Kendi katında ilk gece, aşağıda ailesi uyurken • Fırtına gecesi (Hasan Bey karanlıkta) • Lara'yla yüzleşme • Babasının düştüğü gece telefonunun sessizde olduğu (en derin sırrı) • Karar
+- **Oyuncunun dokunabileceği yer:** Dürüstlük, özellikle yakalanmadan itiraf edilen yalan. Kasabayı küçümsememek. Hasan Bey'le tavla. Ona ne yapması gerektiğini söylemek onu kaçırır.
+- **Kendi kararı (yılbaşı):** Gider ya da kalmayı seçer; mahsur kalmak olarak değil, seçmek olarak. Fırtına gecesi babasına bir şey olup olmaması, en derin sırrını birine anlatıp anlatmaması ve Lara'yla neyin çözüldüğü bu kararı biçimlendirir.
+
+### Sude — ilk kez özgür
+
+- **Kendi hikâyesi:** Kayseri'den kaçtı ama kaçtığını kimseye söylemedi; annesi telefonunun konumunu görüyor. Hayatı boyunca dürüst olmuş biri ilk kez yalan söylemeyi öğreniyor ve her yalanını numaralayıp tarihiyle bir deftere yazıyor ki birbirini tutsun; bir gün hepsini annesine okuyacak. Annesi 15 Kasım sabah beşte konumu Lara'nın villasında görür ve 17 Kasım'da Pırnallı'ya gelir.
+- **Büyük anlar:** Kampüste kaybolmak ve "bölümden bir asistan" yalanı • Yelken teknesi • Gece denize girmek • Yalan defterinin açılması • Siz'den sen'e geçmek • Villa partisi ve sabah beşte konum • Annesinin gelişi; oyuncunun annesinin karşısında kim olduğu • İlk gece • Annesine "hayır" (ya da teslim) • Karar
+- **Oyuncunun dokunabileceği yer:** Net cevap. Gerçekten dinlemek. Onu çocuk yerine koymamak. Kaçamak cevaplar onu en çok yoran şeydir; sakin bir sınır çizer.
+- **Kendi kararı (9 Ocak):** Bahar dönemi için Kayseri'ye yatay geçiş başvurusu yapar ya da yapmaz. Defterin son sayfası.
+
+### Ceren — planın içinde boğulan
+
+- **Kendi hikâyesi:** Acilde mecburi hizmet. Nişanlı; Kerem iyi bir adam, kimse kötü değil, bitirememesinin sebebi de bu. İntörnlükte on dokuz yaşında bir kızı kaybettiler ve o gece kendi hayatının ne kadar "sırada" olduğunu gördü. Psikiyatri istiyor, ailesi "rahat bir branş" diyor. 12 Kasım'da annesi düğünü 17 Ocak'a çekmeyi önerir: evlenirse eş durumuyla Ankara'ya tayin. İyi yalan söyler ve bu becerisinin özel hayatına sızmasından korkar.
+- **Büyük anlar:** Acil, gece üç • Nöbet çıkışı fırın • "Nişanlıyım." (kendisi, erken söyler) • Kırık Koy'da gece yüzmek • Kerem'e servis • "Bunu yapmamamız lazım." • Fırtına acili • Defne'nin gecesi • On dokuz yaşındaki kız • Arabada, motor çalışırken ağlamak • Karar
+- **Oyuncunun dokunabileceği yer:** Ona doktor gibi değil kendisi gibi davranmak. Sessizliğe dayanabilmek. "Ondan ayrıl" baskısı, Kerem'i kötülemek, kıskançlık sahnesi onu kapatır.
+- **Kendi kararı (Aralık sonu):** Nişanı bozar, mart sınavında psikiyatri yazar ve mecburi hizmetini burada bitirir; ya da plana döner: 17 Ocak, Ankara. Oyuncu için değil; ama oyuncu onun "görülmeyen yeri" olmuşsa bu karar başka türlü acır. 6 Ocak'ta nöbetçidir; otogara gelemez. Vedası acilden ya da bir mesajdan olur.
+
+### Ela — kendi teknesinden inen
+
+- **Kendi hikâyesi:** Milli takım adayıydı; omzu sakatlandı, ameliyat oldu, döndü, ikinci kez sakatlandı. Herkese doktorun "olimpik seviyeyi unut" dediğini söyler. **Gerçek:** İkinci sakatlık hafifti. Doktor öyle demedi. Ela, Mert'in kazandığı bir yarışı kıyıdan izledikten sonra kampa dönmedi. Omzu bir bahane oldu; korkuyu bir hikâyeye çevirdi. Bunu kimse bilmiyor; Mert seziyor. "Kararsızlık"tan bu kadar nefret etmesinin sebebi de bu. 1 Aralık'ta İstanbul'dan bir antrenörlük teklifi gelir; Mert'in eski hocası ayarlamıştır.
+- **Büyük anlar:** İlk ders ve bom • Sabah altı buçukta soğuk su • Optimist çocukları • Haczedilmiş Nilüfer'in güvertesine gece çıkmak • Kordonda kavga • Fırtınada marina • Mert • Poyrazda tek başına kendi teknesine binmek • "Ben bıraktım." • Karar
+- **Oyuncunun dokunabileceği yer:** Meydan okumayı kabul etmek, karar vermek, "bakarız" dememek. Omzu hakkında acımadan konuşmak. Yalan ve Sude'yi üzmek tek hakkı bitirir.
+- **Kendi kararı (Ocak başı):** Teklifi kabul edip gider ya da reddeder; Mert'e döner ya da dönmez. Gerçeği birine söyleyip söylemediği her şeyi değiştirir.
+
+### Lara — düşen
+
+- **Kendi hikâyesi:** Babasının şirketi çöktü; babası "iş için" Selanik'e gitti ve dönmüyor. Lara ailenin Fener Burnu'ndaki villasında yalnız. **Ayrıca:** On dokuz yaşındayken babasının uzattığı kâğıtları okumadan imzaladı; adı şirketlerden birinin yönetim kurulunda yazıyor. Kasımda savcılık ifadeye çağırır. Babasının nerede olduğunu biliyor. Söyleyecek mi? 22 Ekim'de araba haczedilir, 14 Kasım'da "son zengin gece" partisini verir, parası bitince Defne'nin atölyesinde çalışmaya başlar, 23 Aralık'ta villa ihaleyle satılır. Sekiz yıl önce bilezik olayında Ilgın'ı savunmadı; bu utanç taşıdığı en ağır şey.
+- **Büyük anlar:** Meze ve geçmeyen kart • Haciz • Kültür Evi'nin freski • Villa partisi • İfade (İzmir) • Atölyede ilk tabak • Fırtınada mum • Ilgın'a özür • Anahtarın teslimi • Karar
+- **Oyuncunun dokunabileceği yer:** Acımamak ama yok da saymamak. Ona bir şey öğretmek: yumurta, çamaşır. Ghostlandığında kızmadan beklemek ama ezilmemek. Para teklif etmek ve kurtarıcılık onu en çok kıran şeydir.
+- **Kendi kararı (23 Aralık ve sonrası):** Annesinin yanına, eski hayatın kırıntılarına döner (en hüzünlü son); ya Pırnallı'da kalır, ilk kez kendi kirasını öder; ya da Londra'ya kendi parasıyla dönmenin yolunu arar.
+
+## 6. Kesişmeler
+
+Roman tek tek ilişkilerden değil, bir kasabanın kışından oluşur. Kadınlar birbirlerinin hayatına değer; oyuncu yokken de konuşurlar, birbirlerini oyuncudan duyarlar ya da oyuncuyu birbirlerinden duyarlar.
+
+**Ana bağlar:**
+- **Ilgın ↔ Lara:** Bilezik. Sekiz yıllık sessizlik. Fabrika'nın arka duvarındaki gizli geçidi çocukken ikisi bulmuştu. Romanın en büyük kesişme ipliği. Barışma mümkün ama ancak Lara bedelini öderse; bir konuşmayla değil, bir eylemle.
+- **Defne ↔ Lara:** Borç → iş → tuhaf bir dostluk. Lara sanat tarihçisi gözüyle Defne'nin sergisini kurar.
+- **Ilgın ↔ Ceren:** Gece eczanesi arkadaşlığı. Ilgın Ceren'in el yazısını tanır.
+- **Sude ↔ Ela:** Öğrenci ve hoca. Ela onu korur, oyuncuya karşı da.
+- **Ela ↔ Lara:** Nilüfer, babasının teknesi. Ela babasını sever; Lara buna şaşırır.
+- **Ceren ↔ Ela:** "Omuz?"
+- **Ceren ↔ Sude:** Kırık Koy gecesi acilde: "Ben de Tıp istiyordum." / "İyi ki olmamış. Bak bana."
 - **Ceren ↔ Defne:** Kötü gece.
-- **Ilgın ↔ Defne:** Reçete. Arkasından konuşmalar, ama kapıyı ilk çalan Ilgın.
-- **Sude ↔ Defne:** Cumartesi atölyesi.
+- **Ilgın ↔ Defne:** Reçete. Arkasından "Hemşire Ratched" der; ama kötü gecede kapıyı ilk çalan Ilgın'dır.
+- **Sude ↔ Defne:** Cumartesi atölye dersi. Defne ona şaşırtıcı biçimde naziktir.
 
-Bu bağlar oyuncu yokken de işler. Karakterler birbirleriyle konuşur ve oyuncu hakkında bilgi paylaşır; bazen doğru, bazen eksik bilgi.
+**Kalabalık bölümler.** Birden çok kadının aynı yerde olduğu, çoklu ilişkinin en tehlikeli olduğu geceler: Keçi Adası'na son tekne (9), Fabrika'da son film (15), fener alayı (18), villa partisi (23), fırtına (30; herkes ayrı yerde, oyuncu bir yerde), sergi (35), yılbaşı (38), otogar (41).
 
 ## 7. Çoklu ilişki, yalan ve yakalanma
 
-- **Serbesttir.** Oyuncu aynı anda birden fazla kişiyle flört edebilir ve gizli ilişkiler yaşayabilir.
-- **Şehir küçüktür.** Görülme riski mekâna göre değişir:
-  - **Yüksek:** Kordon, Mendirek (Saadet Abla), Kuyu (öğrenciler, yani Sude ve Ela), Taş Mahalle (Saniye Hanım her şeyi görür), çay bahçesi.
-  - **Düşük:** Villa, Mavi Kent, Kırık Koy, Clio, sahil yolu, gece atölye.
-- **Bilgi gecikmeli yayılır.** Bir görülme hemen değil, günler sonra ortaya çıkabilir. Bazen yanlış kişiyle yanlış anlaşılarak çıkar: Onur'un yarım doğruları.
-- **Her karakterin yakalanınca tepkisi kendi belgesindedir:**
-  - Ilgın: müşteri muamelesi.
-  - Sude: sakin sınır.
-  - Ceren: kendi durumu yüzünden sitem hakkı yok, ama nazikçe kapanır.
-  - Defne: şakayla örter, sonra kaybolur.
-  - Ela: kordonda kavga; ikinci hakkı yok.
-  - Lara: önce kendisi gider.
-- **Açık ilişki:** Nadiren mümkün olabilir; ancak karakterin kişiliği izin veriyorsa ve oyuncu dürüstse. Defne'nin sezonluk anlayışı bir kapı aralayabilir; Lara'nınki bir güç oyunu olarak. Diğerleri için değil.
-- ~~**Telefona bakmak:** Buluşmada telefona bakmak, başka birinden gelen mesajı o anda okumak demektir. Karşıdaki hem bunu fark eder hem de ekrana bakmaya çalışabilir.~~
-  - **Yeni (karar 36):** Telefona bakmak sahneyi etkilemez. *Neden:* Oynarken hoş gelmedi; hikâyenin akışını bölüyordu. Yakalanma için başka yollar düşünülecek (5. adım).
+- **Serbesttir.** Oyuncu aynı anda birden fazla kadınla flört edebilir, gizli ilişkiler yaşayabilir. Roman bunu yargılamaz; sonuçlarını gösterir.
+- **Bedeli vardır ve romanın içinden gelir:**
+  - **Zaman:** Bir gece tek yerde olunur. Kaçırılan gece hatırlanır.
+  - **Şehir küçüktür:** Kordon, Mendirek (Saadet Abla), Kuyu (öğrenciler), Taş Mahalle (Saniye Hanım her şeyi görür) yüksek risklidir. Villa, Mavi Kent, Kırık Koy, Clio, sahil yolu düşük risklidir.
+  - **Bilgi gecikmeli ve eğri yayılır:** Bir görülme hemen değil, günler sonra ortaya çıkar; bazen Onur'un yarım doğrularıyla yanlış kişiye, yanlış biçimde.
+  - **Telefon:** Aynı gece iki kişiye "evdeyim" yazmak mümkündür. Yalanlar birbirini tutmak zorundadır.
+- **Yakalanınca herkes kendi gibi tepki verir:** Ilgın müşteri muamelesi yapar. Sude sakin bir sınır çizer. Ceren'in sitem hakkı yoktur, ama nazikçe kapanır. Defne şakayla örter, sonra kaybolur. Ela kordonda kavga eder; ikinci hak tanımaz. Lara önce kendisi gider.
+- **Açık ilişki** nadiren mümkündür: Defne'nin sezonluk anlayışı bir kapı aralayabilir, Lara'nınki bir güç oyunu olarak. Diğerleri için değil.
 
 ## 8. Sonlar
 
-Oyunun sonu, 6 Ocak gecesi 23:15'teki otobüstür. Son, oyuncunun kararının ve ilişkilerinin toplamıdır. Her son elle yazılır; aşağıdaki liste bir iskelettir, her biri birden fazla varyant taşır.
+Roman 6 Ocak 23:15'te, otogarda biter. Son, oyuncunun kararının ve ilişkilerinin toplamıdır; kadınların kendi kararları da bu toplama girer. Her son elle yazılır. Aşağıdaki liste bir iskelettir.
+
+**Son gün (Bölüm 41).** 6 Ocak'ın gündüzü bir yol ayrımıdır: son günü kiminle geçireceğin. Akşam otogar. Otogara kimin geleceğini, oyuncunun kimden ve nasıl ayrıldığı, kime ne söylediği belirler. Ceren nöbetçidir; gelemez, ama yazar.
 
 ### A. Kalış sonları (oyuncu otobüse binmez)
-
-- **Ilgın ile, "İki kalan":** Ilgın teklifi reddeder ya da erteler. 7 Ocak sabahı çay bahçesinde ilk çay.
-  - Varyant: Ilgın gider, oyuncu kalır. Mesafeli, açık uçlu bir son.
-- **Sude ile:** Sude de kalır ve annesine "hayır" der. İki yalancı birbirine karşı dürüst olur. Liste.
-  - Varyant: Sude Kayseri'ye geçer. Deniz günlüğü durur, son fotoğraf.
-- **Ceren ile:** Nişan bozulmuştur. Ceren mecburi hizmetinin geri kalanını Pırnallı'da tamamlayacak. Haziranda ev sahibi evi geri isteyecek; belirsiz ama açık bir son.
-  - Varyant: Ceren evlenip Ankara'ya gider, oyuncu kalır. Gece üçte son bir uzun mesaj gelir.
-- **Defne ile:** Atölye açık. Kış devam ediyor. Hayatında ilk kez biri kaldı.
-- **Ela ile:** Ela teklifi reddeder.
-  - Varyant: Ela kabul eder ve gider, oyuncu kalır. Ayrılık, ya da mesafeyle süren bir ilişki.
-- **Lara ile:** Lara kalır ve hayatında ilk kez kendi kirasını öder.
-- **Yalnız, "Kendi sezonu":** Kimseyle değil, ama Pırnallı'da biri olarak. Nuri Abi, Saniye Hanım, Onur.
+- **Bir kadınla:** Kadının kendi kararı da kalmaksa. "Kaldın." (Defne), "İki kalan" (Ilgın, 7 Ocak sabahı çay bahçesinde ilk çay), Sude'yle iki yalancının birbirine dürüst kalışı, Ceren'in nişanı bozup mecburi hizmetini burada bitirmesi, Ela'nın teklifi reddedip poyrazda kendi teknesine binmesi, Lara'nın ilk kirası.
+- **O gitti, sen kaldın:** Kadın kendi yolunu seçmiştir. Oyuncu onu uğurlar ya da uğurlamaz.
+- **Kendi sezonu:** Kimseyle değil, ama Pırnallı'da biri olarak. Nuri Abi, Saniye Hanım, Onur.
 
 ### B. Gidiş sonları (oyuncu otobüse biner)
-
-- **Birlikte gitmek:**
-  - Lara İstanbul'a dönüyorsa onunla.
-  - Ela teklifi kabul ettiyse onunla.
-  - Defne atölyeyi kapattıysa onunla.
-  - Ilgın: "sen önden git, ben şubatta gelirim."
-- **Yalnız gitmek:** Otogarda kim uğurlar? (Defne uğurlamayı iyi bilir.) Otobüste gelen mesajlar.
-- **Kaçış:** Kimseye söylemeden gitmek, İrem'e yaptığının tekrarı. En karanlık son. Telefona sırayla gelen mesajlarla biter.
+- **Birlikte gitmek:** Kadın da gidiyorsa ve ikisi de bunu istiyorsa: Defne atölyeyi kapattıysa, Lara annesine dönüyorsa, Ela teklifi kabul ettiyse. Ilgın: "Sen önden git, ben şubatta gelirim."
+- **Yalnız gitmek:** Otogarda kim uğurlar? Otobüste gelen mesajlar.
+- **Kaçış:** Kimseye söylemeden gitmek; İrem'e yaptığının tekrarı. En karanlık son. Telefona sırayla gelen mesajlarla biter.
 
 ### C. Çoklu ilişki sonları
-
-- **Yakalanmadan:** Oyuncu kalır ya da gider ve yalan sürer. Son ekranda iki kişiden aynı anda "neredesin" mesajı gelir. Açık uçlu, rahatsız edici.
-- **Yakalanmış:** Yılbaşı gecesi ya da başka bir an her şeyi açığa çıkarır. Otogara kimse gelmez, ya da biri gelir ama başka bir şey söylemek için.
-- **Bilinen ve kabul edilmiş:** Nadirdir ve yalnızca karakterlerin izin verdiği durumlarda olur.
+- **Yakalanmadan:** Yalan sürer. Son ekranda iki kişiden aynı anda "neredesin" gelir. Açık uçlu, rahatsız edici.
+- **Yakalanmış:** Yılbaşı gecesi ya da başka bir an her şeyi açığa çıkarmıştır. Otogara kimse gelmez, ya da biri gelir ama başka bir şey söylemek için.
+- **Bilinen ve kabul edilmiş:** Nadir; yalnızca karakterlerin izin verdiği yerde.
 
 ### D. Reddedilme sonları
+Oyuncu birini istedi ama o kendi yolunu seçti: Ceren düğününü, Ela Mert'i ya da İstanbul'u, Sude Kayseri'yi, Lara annesini, Defne bir yabancıyı ya da İstanbul'u, Ilgın kendini. Bu sonlar cezalandırıcı değildir; gerçekçidir ve özenle yazılır.
 
-Oyuncu birini istedi ama o kendi yolunu seçti: Ceren düğününü, Ela Mert'i ya da İstanbul'u, Sude Kayseri'yi, Lara annesini, Defne bir yabancıyı ya da İstanbul'u, Ilgın kendini. Bu sonlar cezalandırıcı değildir. Gerçekçidir ve özenle yazılır.
+## 9. Şubat
 
-## 9. Epilog: Şubat
+Her sonun ardından kısa bir epilog: birkaç sahne parçası, birkaç mesaj. Oyuncunun ilişkisi olmayanlar dahil herkesin hayatı sürer.
 
-Her sonun ardından kısa bir epilog gelir: birkaç mesaj ya da birkaç cümlelik sahneler. Oyuncunun ilişkisi olmayanlar dahil herkesin hayatı devam eder:
-
-- **Ilgın:** Eczanenin camında yeni bir tabela ya da İstanbul'dan bir fotoğraf.
-- **Sude:** Deniz günlüğünün 150. günü ya da Kayseri'den bir mesaj.
-- **Ceren:** TUS sonucu ya da bir düğün fotoğrafı.
+- **Ilgın:** Eczanenin camında yeni bir tabela, ya da İstanbul'dan bir fotoğraf.
+- **Sude:** Deniz günlüğünün yüz ellinci günü, ya da Kayseri'den bir mesaj. Defterin son sayısı.
+- **Ceren:** Mart sınavına kalan günler, ya da bir düğün fotoğrafı.
 - **Defne:** Instagram'da yeni bir kupa, kulpu ters.
-- **Ela:** İstanbul'da çocuklarla bir fotoğraf ya da poyrazda bir yelken.
-- **Lara:** Kapanmış bir Instagram ya da Kültür Evi'nde bir sergi.
+- **Ela:** Poyrazda bir yelken, ya da İstanbul'da çocuklarla bir fotoğraf.
+- **Lara:** Kapanmış bir Instagram, ya da Kültür Evi'nde bir sergi metni.
 - **Pırnallı:** Nuri Abi, Saniye Hanım ve Onur'dan birer cümle.
 
 ## 10. Değişmeyecek ilkeler
 
-- Hiçbir karakter yalnızca oyuncuyu sevmek için var değildir. Her birinin oyuncudan bağımsız bir final ipliği var.
-- Oyuncu her ilişkiyi kazanamaz. Bazı yollar, iyi oynansa bile, karakterin kendi seçimi yüzünden kapanır.
-- Büyük kararlar (Ceren'in düğünü, Ilgın'ın teklifi, Ela'nın teklifi, Sude'nin geçişi, Defne'nin kontratı, Lara'nın gidişi) oyuncuya bağlı ama oyuncu için değildir.
-- Sonlar ceza ya da ödül değildir. Seçimlerin dürüst sonucudur.
+- **Kadınlar oyuncuyu sevmek için var değildir.** Her birinin oyuncudan bağımsız bir derdi, bir işi, bir kararı vardır. Oyuncu onların hikâyesinde önemli biri olabilir; hikâyenin sebebi olamaz.
+- **Kimse kurtarılmaz.** Oyuncunun yardımı varlıktır, çözüm değil. Kadınlar kendi sorunlarını kendileri çözer ya da çözemez. Kurtarıcılık ödüllendirilmez.
+- **Oyuncu her ilişkiyi kazanamaz.** Bazı yollar iyi oynansa bile karakterin kendi seçimi yüzünden kapanır.
+- **Kötü adam yok.** Kerem iyi bir adam. Sude'nin annesi kızını seviyor. Murat kötü değil, memnun edilemez. Nilüfer Berkmen bile kendi korkusuyla hareket ediyor.
+- **Sonlar ceza ya da ödül değildir.** Seçimlerin dürüst sonucudur.
+- **Roman bir bütündür.** Tek bir sesle yazılır. Bir sahne eski bir taslaktan kalma gibi durmamalı; gerekirse baştan yazılır.

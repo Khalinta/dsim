@@ -75,33 +75,68 @@ Mesaj dili konuşma dilinden de farklıdır: kısaltma, harf yutma, büyük-kü�
 
 ---
 
-## 3. İki ekranın yazısı
+## 3. Romanın iki dili: anlatı ve yazışma
 
-### 3.1 Mesajlaşma
+### 3.1 Yazışma
 - Kısa. Telefon ekranında rahat okunur. Ceren dışında kimse paragraf yazmaz.
 - Ritim: ardışık mesajların arası, gecikmeler, "yazıyor…" görünüp kaybolması da yazının parçasıdır. Her mesaj parçası için gecikme bilinçli seçilir.
 - Fotoğraf anlatımı köşeli parantez içinde, kısa ve görsel: `[Fotoğraf: Havuz. Suyu yeşil. Kenarda bir şezlong, üstünde tek bir havlu.]` Fotoğrafı karakter çekmiştir: ne çektiği ve nasıl çektiği onu anlatır.
 - Saat: Mesajın geldiği saat içeriğe uygun olmalı. Gece üçte gelen mesaj gündüzkü gibi yazılmaz.
+- Yazışma bir sahnedir: bir başı, bir ortası, bir sonu vardır. Anlatının içinden açılır ve kapanınca anlatı kaldığı yerden sürer. Bir yazışma bir sahnenin işini görebilir; bazı ilişkiler en çok burada yaşar.
+- Yazışmanın içindeki zaman: "üç saat sonra" bir boşluk olarak görünür. Cevabın gecikmesi de bir replik.
 
-### 3.2 Buluşma
+### 3.2 Anlatı
 - Anlatım ikinci tekil şahıs, şimdiki zaman: "Kapıyı itiyorsun. İçerisi sobadan sıcak."
 - Her sahnenin başında mekân, ışık, ses, hava, saat birkaç cümleyle, ama her seferinde farklı bir duyudan. Ege klişeleri (martı, iyot kokusu, begonvil, gün batımı) sayılı kullanılır; kullanılmışsa bir sonraki sahnede başka bir ayrıntı.
 - Mekân sahnenin içeriğini değiştirir: Ilgın kendi Clio'sunda başka, eczanenin tezgâhı arkasında başka konuşur.
 - Karakterin rengi metinde belli belirsiz hissedilir (ışığın tonu, bir eşya) ama renk adı her sahnede anılmaz.
 - Diyalog ve anlatım iç içe; uzun diyalog blokları arasına küçük eylemler, bakışlar, sesler.
-- Oyuncunun iç sesi seyrek. Oyuncu ne hissettiğini seçimleriyle gösterir; anlatı onun yerine hissetmez.
+- Oyuncunun iç sesi seyrek. Oyuncu ne hissettiğini seçimleriyle gösterir; anlatı onun yerine hissetmez. Anlatı oyuncunun gördüğünü, duyduğunu, bedenini ve hatırladığını verebilir (bir an babanın sessizliği aklına gelir); bir duyguyu adlandıramaz ("üzülüyorsun" yazılmaz).
 
 ### 3.3 Seçenekler
 - Her an için 3–5 seçenek. Hepsi o anda gerçekten söylenebilecek, o ana özel cümleler.
 - "Nazik / soğuk / şakacı" üçlüsü yasak. Seçenekler tonla değil **istekle** ayrılır: konuyu değiştirmek, üstüne gitmek, kaçmak, dürüst olmak, yalan söylemek, susmak.
 - Bazen bir seçenek hiçbir şey dememektir: "(Bir şey söyleme.)"
-- Eylem seçenekleri parantez içinde: "(Elini tut.)", "(Telefona bak.)".
+- Eylem seçenekleri parantez içinde: "(Elini tut.)", "(Yokuşu çık.)".
 - "Doğru cevap" belli olmamalı. En sevimli seçenek bazen en yanlışıdır.
 - Kısa: telefonda iki satırı geçmez.
 
 ---
 
-## 4. Hafıza ve göndermeler
+## 4. Roman: bölüm yazmak
+
+### 4.1 Bölüm
+- Bir bölüm bir soruyu taşır (`hikaye/bolumler.md`). Bölüm bittiğinde o soruya bir cevap verilmiştir, bazen "henüz değil".
+- Her bölüm bir şeyi değiştirir. Hiçbir şeyi değiştirmeyen bölüm yazılmaz; sahne güzel olsa bile.
+- **Açılış:** Tarih, yer, hava; her bölümde başka bir duyudan. Geçen günler birkaç cümlede. "Üç gün geçiyor" gibi zaman kalıpları her bölümde kullanılmaz; zaman bir imgeyle de geçebilir (masalar içeri alındı, balkonda bir ışık söndü).
+- **Sahne dışında olanlar** bir özet olarak değil, insanlar üzerinden gelir: Onur'un yarım doğrusu, Saadet Abla'nın fısıltısı, bir mesaj, bir fotoğraf.
+- **Bölüm sonu:** Bir görüntü, bir cümle ya da bir mesaj. Her bölüm bir çengelle bitmez; romanın ritmi nefes de ister.
+- **Uzunluk:** Tek okuyuşta 2.500–4.000 kelime. Kısa bölüm yazılmaz; ama uzunluk dolgu ile değil, sahneyle gelir.
+
+### 4.2 Yol ayrımları
+- Seçenekler hikâyenin içinden sunulur, menü gibi değil: kim çağırdı, kimin penceresi açık, kimin mesajı ekranda. "(Defne'ye git.)" yerine Defne'nin mesajı ve "(Yokuşu çık.)".
+- Her seçenek bir sahne. Seçilmeyen sahne yazıldığı kadar özenle yazılır; çoğu oyuncu onu hiç görmeyecek olsa da.
+- Seçilmeyen gecenin izi bir sonraki bölümde bir cümle, bir mesaj ya da bir sessizlik olarak görünür. Ceza gibi değil, hayat gibi.
+
+### 4.3 Kalabalık bölümler
+- Oyuncunun yanındaki kişi sahnenin merkezidir; diğerleri kenarda, kısa, ama kendi gibi yaşar.
+- Herkes aynı anda konuşmaz. Kalabalığın sesi bir iki ayrıntıyla verilir.
+
+### 4.4 Tek ses
+- Roman tek bir elden çıkmış gibi okunmalı. Bir bölüm yazılınca bir önceki bölümle yan yana okunur; ritim, kelime seçimi, anlatıcının mesafesi tutarlı mı?
+- Eski taslaklardan (3. adımın sahneleri) fikir alınabilir; cümle alınmaz, yeniden yazılır.
+
+### 4.5 Bu romana özel klişeler
+Genel klişelerin (1.6) yanında, bu oyunun kendi tuzakları:
+- **Kurtarıcı:** Oyuncu bir kadının sorununu çözmez. Fırını tamir eder, mum bulur, ambulans çağırır; ama kadının hayatını o düzeltmez.
+- **Hayat dersi veren kadın:** Defne "yaşamayı öğreten tuhaf sanatçı", Sude "dünyayı ilk kez keşfeden saf kız", Lara "yumuşak kalpli zengin kız", Ela "aslında kırılgan sert kız" kalıplarına düşmez. Her birinin sevimsiz bir yanı vardır ve saklanmaz.
+- **Rakip kadınlar:** Kadınlar oyuncu yüzünden birbirleriyle kavga etmez. Birbirlerini oyuncudan bağımsız tanırlar, severler ya da sevmezler.
+- **Büyük jest:** Otogara koşmak, otobüsün önüne geçmek, yağmurda bağırmak, kapıda beklemek. Yok.
+- **Tek gecede iyileşme:** Bir sevişme, bir itiraf ya da bir fırtına kimseyi iyileştirmez.
+- **Kötü üçüncü kişi:** Kerem, Mert, Barış, anneler ve babalar kötü değildir.
+- **Açıklayan diyalog:** Bir kadın geçmişini paragraf paragraf anlatmaz; sırlar bir yerde ve bir eylemle açılır (tabela, otogar, tekne, defter).
+
+## 5. Hafıza ve göndermeler
 
 Karakterler hatırlar ama insan gibi:
 - Her şeyi değil; önemli olanı, ya da tuhaf biçimde önemsiz bir ayrıntıyı.
@@ -111,7 +146,7 @@ Karakterler hatırlar ama insan gibi:
 
 ---
 
-## 5. Denetim listesi (her metin parçası için)
+## 6. Denetim listesi (her metin parçası için)
 
 Bir parçayı bitmiş saymadan önce sırayla:
 
@@ -123,13 +158,14 @@ Bir parçayı bitmiş saymadan önce sırayla:
 6. **Alt metin:** Duygu söylenmiş mi, gösterilmiş mi? Bilgi dökümü var mı?
 7. **Tekrar:** Son birkaç günün metninde aynı kalıp, aynı imge, aynı tepki var mı?
 8. **Seçenekler:** Gerçekten farklı istekler mi, yoksa aynı şeyin üç tonu mu? Her biri bu ana özel mi?
-9. **Yeniden yaz.** Gerekirse ikinci, üçüncü tur. Her bölümün üzerinden en az iki kez geç.
+9. **Bölüm:** Bu bölüm sorusuna cevap verdi mi? Bir şey değişti mi? Bir önceki bölümle aynı sesle mi yazılmış?
+10. **Yeniden yaz.** Gerekirse ikinci, üçüncü tur. Her bölümün üzerinden en az iki kez geç.
 
 Ayrıca her büyük içerik adımında **okuma aracı** ile oyun farklı yollardan otomatik oynatılır, dökümün tamamı okunur ve düzeltilir.
 
 ---
 
-## 6. İçerik
+## 7. İçerik
 
 `CLAUDE.md`'deki esnemez kural ve içerik kuralları geçerlidir. Cinsel sahnelerde ek olarak:
 - Sahne o karakterin kişiliğiyle yazılır (her belgede "Cinsellik" bölümü). Altı sahne birbirine benzemez.

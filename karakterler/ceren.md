@@ -183,6 +183,7 @@ Bir kere, net ve yetişkince özür diler: "Dün yanlış yaptım. Sana öyle ko
 - **Kendi hayatını seçerse:** Aralıkta nişanı bozar; oyuncu için değil, kendisi için. Oyuncu bunu ona baskıyla değil, varlığıyla düşündürür. Mecburi hizmetini Pırnallı'da bitirir, mart TUS'unda psikiyatri yazar.
 - **Planına dönerse:** 17 Ocak'taki düğün, eş durumu tayini, Ankara. Oyuncuyla son bir gece olur ya da hiç olmaz.
 - **Açığa çıkarsa:** Kerem ilişkiyi öğrenir; ya Kasım ziyaretinde görülen bir mesajdan ya da Aralık'ta. Bu durumda Ceren ya yalan söyler ve iyi söyler (karanlık yol), ya da itiraf eder.
+- **Son gün (6 Ocak):** Nöbetçidir; otogara gelemez. Takas yapmaz, çünkü takas yapmak bir şeyi itiraf etmek olur. Vedası ya acilde, gündüz, beş dakikalık bir arada olur ya da 23:14'te bir mesajla.
 - **Fırtına gecesi (4 Aralık):** Acil dolar. Oyuncu bir yaralı getirebilir ya da gönüllü olabilir. Ceren'in işte gerçekte nasıl biri olduğunu gördüğü an budur.
 
 ## Diğer karakterlerle

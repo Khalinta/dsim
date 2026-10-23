@@ -31,7 +31,9 @@ Pırnallı'da doğmuş, İzmir'de okumuş, babası inme geçirince eve dönmüş
 - **Akşamları:** Clio'yla sahil yolunda dolaşmak (benzin parası dert), kordonda bir bira, Efe'nin ödevi, uyku.
 - **Arkadaşları:** Lise arkadaşı Burcu (24) evli, bir bebeği var, kordonda bir butik işletiyor. Ilgın onu seviyor ama bebek konuşmalarından sıkılıyor. İzmir'deki arkadaşlarıyla grup sohbeti giderek sessizleşiyor.
 - **Kasabanın sırları:** Eczacı olduğu için kimin ne ilaç aldığını biliyor: kim antidepresan kullanıyor, kim gebelik testi aldı, kim uyku ilacına başladı. Hiçbirini söylemez. Bu onun sessiz gururu ve yükü. (Defne'nin uyku ilacını o veriyor. Ceren'in imzası şehirdeki reçetelerin yarısında.)
-- **Dert:** 12 Kasım'da Barış'ın firmasından bir iş teklifi geliyor: 2 Şubat'ta başlayacak, cevap yılbaşına kadar verilecek. Babası "git" diyor; demek istediği "gitme".
+- **Başvuru:** Yazın, babasının düşüşünün yıl dönümünden bir hafta sonra, bir gece saat ikide İstanbul'daki bir ilaç firmasının ruhsatlandırma bölümüne başvurdu. Kimseye söylemedi; sabah başvurduğunu unutmaya karar verdi. (Barış'ın firması değil; Barış'tan bağımsız, kendi başvurusu.)
+- **Dert:** 12 Kasım'da teklif geliyor: 2 Şubat'ta başlayacak, cevap yılbaşına kadar verilecek. Babası "git" diyor; demek istediği "gitme".
+- **Tabela:** Bazı geceler Clio'yla İzmir yoluna çıkar, şehir tabelasının kırmızı çizgili arkasına kadar gider, arabayı durdurur, motoru kapatmaz ve döner. Her seferinde. Kimseye söylemez; bir gün yanında biri olur.
 
 ## Kişilik ve çelişkiler
 
@@ -201,6 +203,7 @@ Dolaylı yoldan laf sokar: kızı tarif eder, şemsiyesinden ya da kahkahasında
 3. CD.
 4. İzmir'deki hayatı ve "birkaç aylığına" dönüşü.
 5. Barış: biri yazdığında, ekranda ismi göründüğünde.
-6. İş teklifi.
-7. Lara'yla geçmişi. Önce Ilgın'dan, eksik olarak; sonra Lara'dan, başka türlü.
-8. Babasının düştüğü gece telefonunun sessizde olması. En derin sırrı; ancak çok yakınken öğrenilir.
+6. Tabela: neden orada durduğu. (Göstererek açılır, anlatarak değil.)
+7. İş teklifi ve kendisinin başvurduğu.
+8. Lara'yla geçmişi. Önce Ilgın'dan, eksik olarak; sonra Lara'dan, başka türlü.
+9. Babasının düştüğü gece telefonunun sessizde olması. En derin sırrı; ancak çok yakınken öğrenilir.

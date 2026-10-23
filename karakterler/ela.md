@@ -32,7 +32,9 @@
 - **Sakatlık:**
   - On dokuz yaşında sağ omzunda labrum yırtığı oluştu ve ameliyat oldu.
   - Geri dönmeyi denedi; ikinci kez sakatlandı.
-  - Doktor "olimpik seviyeyi unut" dedi. Ela "unuttum" dedi. Unutmadı.
+  - Herkese doktorun "olimpik seviyeyi unut" dediğini söyler. Ela "unuttum" dedi. Unutmadı.
+- **Gerçek (kimse bilmiyor):** İkinci sakatlık hafifti. Doktor öyle demedi; altı ay sonra dönebileceğini söyledi. O altı ayın içinde Ela, Mert'in kazandığı bir yarışı kıyıdan izledi ve bir daha kampa dönmedi. Kaybetmekten değil, bir daha denemekten korktu; omzu bu korkuya bir hikâye oldu. Bunu kimseye söylemedi. Mert seziyor ("Doktor öyle demedi, Ela.") ve Ela'nın ondan kaçmasının yarısı bu.
+  - "Kararsızlık"tan bu kadar nefret etmesinin, "bakarız" diyenlere bu kadar sert olmasının sebebi de bu: en büyük kararsızlığı kendisi yaşadı ve buna sakatlık adını verdi.
 - **Mert (24):** Milli takımdan sevgilisi. Hâlâ yarışıyor ve bir sonraki olimpiyata gidiyor. Sakatlıktan sonra ilişkiyi Ela bitirdi: "Senin yanında durup senin yarışını izleyemem." Mert'in yarış videoları Instagram'da duruyor ve Ela onları izliyor.
 - **Babasının cümlesi:** Sakatlıktan sonra babası "Kızım, zaten okul da önemli," dedi. İyi niyetliydi ve yıkıcıydı.
 - **Pırnallı:** Puanı Spor Bilimleri'ne yetti, kulüp de ona iş verdi. Denizden kopmak istemedi. Ama kendi teknesine artık nadiren biniyor.
@@ -80,6 +82,7 @@
 - **Takıntı:** Hava durumu ve rüzgâr uygulaması.
 - **Zaaf:** Meydan okuma. Kim ona meydan okursa ona bağlanır.
 - **Yara:** Omzu. Kaybedilen gelecek. Dokuzuncu olduğu o yarışa kadar yaşadığı hayat.
+- **Yara:** Kendi kendine söylediği yalan: omzu.
 - **Yara:** Babasının cümlesi.
 
 ## Konuşma (yüz yüze)
@@ -192,6 +195,7 @@ Bağırmayı keser; bu en kötüsüdür. Sessizce gidip denize girer. Sonra "Tam
 ## Değişim
 
 - **Açılırsa:**
+  - Gerçeği birine söyler: "Ben bıraktım." Bu, onun romandaki en büyük anıdır; ağlamaz, söyler.
   - Omzu hakkında konuşur ve bir kere ağlar.
   - Mert'in videolarını izlemeyi bırakır.
   - Kendi teknesine biner: tek başına, poyrazda. Oyuncu bunu görür; büyük bir andır.
@@ -222,3 +226,4 @@ Bağırmayı keser; bu en kötüsüdür. Sessizce gidip denize girer. Sonra "Tam
 5. Olimpiyat hedefi.
 6. Babasının cümlesi.
 7. İstanbul teklifi.
+8. Omzun bahane olduğu: "Ben bıraktım." En derin sırrı; ancak çok yakınken, bir teknede ya da bir teknenin dönüşünde.

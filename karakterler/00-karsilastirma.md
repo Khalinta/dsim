@@ -38,6 +38,8 @@ Bu tablo, karakterlerin birbirine benzemediğini denetlemek için tutulur. Yeni 
 | Uzaklaşma | İş, baba, nöbet | Ders, vize | Nöbet, Ankara, TUS | Habersiz İstanbul; yeni biri | Deniz, yarış | Ghost, parti |
 | Telefona bakınca (kullanılmıyor, karar 36) | "Bekleyen biri mi var?" | "Kim yazıyor? Merak ettim." | Kendi telefonunu yanına koyar | "Daha iyi bir teklif mi geldi?" | Telefonu alıp ters çevirir | Kendi telefonuna daha uzun bakar |
 | Asıl yara | Bilezik; sessizdeki telefon | Okunan mesajlar; annesinin yüzü | 19 yaşındaki kız; seçilmemiş hayat | Dağılan aile; ilk kış | Omuz; babasının cümlesi | Korkaklığı; babası |
+| En derin sırrı | Babası düştüğü gece telefonu sessizdeydi | Uzak üniversiteyi bilerek seçti; yalan defteri | On dokuz yaşındaki kız | On iki yaşındaki son yaz, bu otobüs | "Ben bıraktım." Omuz bahaneydi | Okumadan attığı imza; Ilgın'ı savunmaması |
+| Sırrın açıldığı yer | Clio, tabela | Kütüphane, telefonun kilitli notu | Acilin arka kapısı, sabah altı | Otogar, bank | Poyrazda tekne dönüşü | Havuz kenarı, gece üç |
 | Oyuncunun kusuruna bakışı | Yalanını koklar | Kaçamaklığını adlandırır | Çocukluğunu görür | Kalmasından korkar | Kararsızlığından sıkılır | Kendine acımasına güler |
 | Cinsellikte | Kontrol; bırakabilmek dönüm noktası | İlk kez; soran, güler, yönlendiren | Klinik dürüstlük, pervasız mekânlar, suçluluk | Oyunbaz; kalanla yavaşlamak | Fiziksel, rekabetçi; omuz | Yöneten görünür; "kal" demek |
 

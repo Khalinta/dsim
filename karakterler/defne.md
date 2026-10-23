@@ -19,6 +19,7 @@
   - Kışın neredeyse hiç gelir yok.
 - **Ev sahibi:** Rıfat Bey (70) İzmir'de yaşıyor. Kira kontratı 31 Aralık'ta bitiyor; ya zam istiyor ya evi satmak.
 - **Alacak:** Berkmenlerin villası için altmış parçalık bir yemek takımı yaptı ve temmuzda teslim etti. Kaporayı aldı ama kalan para hâlâ ödenmedi. Nilüfer Hanım "eylülde" demişti.
+- **Sergi:** Kasımda Gönül Hanım ona Kültür Evi'nde bir kış sergisi teklif eder (20 Aralık). Defne kimseye söylemez, sonra Lara'ya söyler. Sergiyi kendi iddiası olarak ister: "Şirin bir atölye sahibi olmaktan yoruldum." Çatlakları altınla değil, ham bırakan bir seri hazırlar. Kötü gece sergiyi neredeyse iptal ettirir.
 
 ## Geçmiş
 
@@ -56,7 +57,7 @@
 - Fiziksel olarak rahattır; flörtü açık ve hızlıdır.
 - **Çelişki:** "Yavaş hayat" için geldi, ama hâlâ tanıdığı en hızlı insan. Huzur arıyor, sessizlikten korkuyor.
 - **Çelişki:** Terk edilmekten korktuğu için sonu belli ilişkileri seçiyor. Ama sonunda gidenler hep onu terk etmiş oluyor. Kalan biri onu daha çok korkutuyor.
-- Kendine karşı acımasız, başkalarına şefkatli.
+- Kendine karşı acımasız, başkalarına şefkatli. **Ama korkunca acımasızlaşır:** en keskin cümlelerini en çok sevdiklerine söyler ve sonra hiçbir şey olmamış gibi davranır. Bu onun sevimli olmayan yanıdır ve yazılırken saklanmaz.
 - **Kış:** Ekim sonundan itibaren ışık azaldıkça içi kararır; bunu espriyle örter. Kış ilerledikçe daha çok içer.
 - **Ciddiyete alerji:** Ciddi bir an gelince espri yapar. Espri tutmazsa konuyu değiştirir. O da tutmazsa öper. Yani kaçış yolu çekimdir.
 
@@ -218,7 +219,7 @@ Kaybolur. İki üç gün telefonu kapalıdır, atölyenin kapısı kapalıdır, 
   - **Çözüm:** Lara borcu ödemek için atölyede çalışmaya başlar.
   - İki keskin dil karşılaşır ve zamanla tuhaf bir dostluk doğar. Defne Lara'ya kille çalışmayı öğretir. Lara ise Defne'nin işlerine sanat tarihçisi gözüyle bakar ve Instagram'ını düzeltir; satışlar artar.
 - **Ilgın:** Ilgın onu sevmez. Defne ona arkasından "Hemşire Ratched" der. Ama Defne'nin kötü gecesinde kapıyı ilk çalan Ilgın olur, çünkü reçeteyi bilir.
-- **Sude:** Sude cumartesi atölyesine gelir. Defne ona karşı şaşırtıcı derecede naziktir; Sude'nin listesinde kendini görür.
+- **Sude:** Sude cumartesi atölyesine gelir. Defne ona karşı şaşırtıcı derecede naziktir; Sude'nin her şeyi doğru yapma çabasında yirmi bir yaşındaki kendini görür.
 - **Ceren:** Aralıkta acilde karşılaşırlar.
 - **Ela:** Kuyu'da birlikte bira içer, bir kere bilardo oynarlar; yüzeysel bir arkadaşlık. Ela, Defne'yi "fazla konuşuyor ama komik" bulur.
 

@@ -24,6 +24,7 @@
 - **Ilgın:** Lara yedi, Ilgın sekiz yaşındayken başlayan bir yaz arkadaşlığı; her yaz birlikteydiler. Bilezik olayında Lara annesine karşı çıkmadı. On beş yaşındaydı ve korktu; sonra ne diyeceğini bilemedi; sonra çok geç oldu. Sekiz yıldır her yaz Ilgın'ı kordonda görüyor ve gözünü kaçırıyor. Hayatında taşıdığı en ağır şey bu utanç; kimse bilmiyor.
 - **Londra:** İki yıl partilerle ve iyi notlarla geçti. Sanat tarihinde gerçekten iyi: Bizans mozaikleri üzerine yazdığı bir ödev için hocası "bunu yayımla" dedi. Kimseye söylemedi.
 - **İlişkiler:** Ciddi bir sevgilisi olmadı. Yazlık flörtleri oldu. Londra'da İngiliz bir çocukla, Oliver'la bir yıl birlikte oldu; babasının skandalından sonra Oliver'ın mesajları seyreldi.
+- **İmza:** On dokuz yaşındayken babası ona birkaç kâğıt uzattı: "Formalite, kızım." Okumadan imzaladı. Adı, babasının şirketlerinden birinin (Berkmen Turizm) yönetim kurulunda yazıyor. Bunu kendisi de unutmuştu.
 - **Ağustos:** Babasının ofisine polis baskını yapıldı, haberlere çıktı, sosyal medyada linç başladı. Arkadaşlarının yarısı gitti. Lara Instagram'ını kapatmadı; eski fotoğrafları paylaşmaya devam ediyor. "Her şey yolunda" performansı.
 
 ## Bugünkü hayatı (oyuncu yokken de sürer)
@@ -41,7 +42,8 @@
   - Londra'da kayıp abisi.
   - Pırnallı.
 - **Annesi:** Telefonlarda soğuk ve pratiktir: "Haberlere bakma."
-- **Babası:** Ara sıra bilinmeyen bir numaradan arar. Lara açmaz. Bir kere açar, Kasım'da.
+- **Babası:** Ara sıra bilinmeyen bir numaradan arar. Lara açmaz. Bir kere açar, Kasım'da. Babasının Selanik'te nerede olduğunu o konuşmadan bilir.
+- **İfade:** Kasımın sonunda savcılıktan bir yazı gelir; adı yönetim kurulunda olduğu için ifadeye çağrılır (İzmir, 2 Aralık). Babasının nerede olduğunu soracaklar. Söyleyecek mi? Bu, romanda Lara'nın kendi başına verdiği ilk büyük karardır; oyuncu onu yönlendiremez, yalnızca yanında olabilir. Arabası yok; İzmir'e nasıl gideceği de bir sahne.
 
 ## Kişilik ve çelişkiler
 
@@ -75,7 +77,7 @@
 - **Takıntı:** Görüntü. Instagram'daki "iyi" hayat. Saçı her zaman düzgündür; ta ki Aralık'a kadar.
 - **Zaaf:** Gece üçteki dürüstlük; yalnızlık.
 - **Yara:** Ilgın, bilezik, kendi korkaklığı.
-- **Yara:** Babası. Sevdiği adamın bir dolandırıcı olabileceği ve bütün hayatının bu paranın üstüne kurulu olduğu.
+- **Yara:** Babası. Sevdiği adamın bir dolandırıcı olabileceği ve bütün hayatının bu paranın üstüne kurulu olduğu. Okumadan attığı imza: o da bu hayatın içindeydi.
 
 ## Konuşma (yüz yüze)
 
@@ -209,7 +211,8 @@ Keskin ve alaycı; sınıfa göndermeler yapar. Kendi düşüşüyle dalga geçe
 ## Diğer karakterlerle
 
 - **Ilgın:** Bilezik ve sekiz yıl. Lara Pırnallı'da kaldıkça karşılaşmaları kaçınılmaz olur. Barışma mümkün ama zor; ancak Lara bedelini öderse, yani gerçekten özür dilerse.
-- **Defne:** Borç işe dönüşür. Defne'nin iğneleri ile Lara'nın iğneleri karşılaşır; zamanla tuhaf bir dostluk doğar. Lara, Defne'nin Instagram'ını düzeltir ve satışları artırır.
+- **Defne:** Borç işe dönüşür. Defne'nin iğneleri ile Lara'nın iğneleri karşılaşır; zamanla tuhaf bir dostluk doğar. Lara, Defne'nin Instagram'ını düzeltir ve satışları artırır. Aralıkta Defne'nin Kültür Evi'ndeki sergisini kurar, duvar metinlerini yazar; ilk kez kendi yazdığı bir şey bir duvarda durur.
+- **Fabrika:** Fabrika'nın arka duvarındaki gizli geçidi çocukken Ilgın'la birlikte buldular. Ekimdeki son film gecesine o geçitten girer.
 - **Ela:** Tekne. "Nilüfer" babasının teknesiydi; Ela onun regattasında yarıştı. Ela'nın babasını sevmesi Lara'yı şaşırtır.
 - **Sude:** Villa partisine gelir. Lara ona "çok tatlısın" der; Sude bundan nefret eder.
 - **Ceren:** Neredeyse hiç kesişmezler.
@@ -229,3 +232,4 @@ Keskin ve alaycı; sınıfa göndermeler yapar. Kendi düşüşüyle dalga geçe
 5. Babası.
 6. Bilezik, Lara'nın anlatışıyla.
 7. Fresk, sanat tarihi, gerçek yeteneği.
+8. İmza ve ifade.
