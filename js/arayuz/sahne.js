@@ -27,7 +27,7 @@ export class Sahne {
 
     this.icerik = el('div.sahne-icerik');
     this.kaydirma = el('div.sahne-kaydirma', {}, this.icerik);
-    this.telefonDugmesi = el('button.sahne-telefon-dugmesi', { onclick: () => this.telefonaBak(), 'aria-label': 'Telefona bak' }, ikon('telefon'));
+    this.telefonDugmesi = el('button.sahne-telefon-dugmesi', { onclick: () => this.telefonuAc(), 'aria-label': 'Telefonu aç' }, ikon('telefon'));
     this.perde = el('div.perde', {}, el('div.yer', {}, s.yer || ''), el('div.zaman', {}, `${tarihYaz(s.baslangic)} · ${saatYaz(s.baslangic)}`));
     this.kok.replaceChildren(this.kaydirma, this.telefonDugmesi, this.perde);
 
@@ -49,7 +49,12 @@ export class Sahne {
     }
 
     if (s.bitti) { this.blokEkle({ t: 'son' }, true); return; }
-    if (sonSecim) { this.blokEkle(sonSecim, true); this.telefonGuncelle(); return; }
+    if (sonSecim) {
+      this.blokEkle(sonSecim, true);
+      this.telefonGuncelle();
+      if (!yeniSahne) this.kaydirma.scrollTop = this.kaydirma.scrollHeight; // telefondan dönüş
+      return;
+    }
     const yeni = this.app.calistir(() => oyun.sahneDevam(), 'sahne') || [];
     this.app.kaydet();
     await this.goster(yeni);
@@ -135,7 +140,6 @@ export class Sahne {
     this.mesgul = true;
     kap.classList.add('secildi-gitti');
     this.telefonDugmesi.classList.remove('gorunur');
-    this.bakildi = false;
     const oyun = this.app.oyun;
     const yeni = this.app.calistir(() => oyun.sahneSec(i), 'sahne seçimi') || [];
     this.app.kaydet();
@@ -145,26 +149,20 @@ export class Sahne {
     await this.goster(yeni);
   }
 
-  async telefonaBak() {
+  // Telefona bakmak sahneyi değiştirmez: telefon açılır, "Sahneye dön" ile kalınan yere dönülür.
+  telefonuAc() {
     if (this.mesgul) return;
-    const oyun = this.app.oyun;
-    const secimler = this.icerik.querySelector('.secimler');
-    const yeni = this.app.calistir(() => oyun.telefonaBak(), 'telefona bakma') || [];
-    if (!yeni.length) return;
-    this.app.kaydet();
-    if (secimler) secimler.remove();
-    this.bakildi = true;
-    await this.goster(yeni);
+    this.app.git('telefon');
   }
 
   telefonGuncelle() {
     const oyun = this.app.oyun;
     const s = oyun.sahne;
     const okunmamis = oyun.toplamOkunmamis();
-    const gorunur = Boolean(s && !s.bitti && s.akis.secim && !s.akis.secim.rehber && okunmamis > 0 && !this.bakildi);
+    const gorunur = Boolean(s && !s.bitti && s.akis.secim && !s.akis.secim.rehber);
     this.telefonDugmesi.classList.toggle('gorunur', gorunur);
     this.telefonDugmesi.querySelector('.rozet')?.remove();
-    if (gorunur) this.telefonDugmesi.append(el('span.rozet', {}, okunmamis));
+    if (gorunur && okunmamis > 0) this.telefonDugmesi.append(el('span.rozet', {}, okunmamis));
   }
 
   bitir() {

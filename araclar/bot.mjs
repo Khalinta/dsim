@@ -125,10 +125,6 @@ export function oyna(icerik, { tohum = 1, strateji = 'rastgele', ad = 'Kaan', ad
         continue;
       }
       const sonBlok = s.kayit[s.kayit.length - 1];
-      if (sonBlok && sonBlok.t === 'seçim' && oyun.toplamOkunmamis() > 0 && rng() < 0.12 && !oyun.durum.d['sahne.telefon']) {
-        bloklariYaz(oyun.telefonaBak());
-        continue;
-      }
       const secenekler = sonBlok.secenekler;
       const secilen = ozenli ? enIyi(secenekler, (k, x) => k.sahneSec(x.i)) : secenekler[sec(secenekler.length)];
       bloklariYaz(oyun.sahneSec(secilen.i));

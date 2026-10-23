@@ -187,6 +187,9 @@ Derslere çekilir: "Vize haftası." Bahane gerçektir, ama ders çalışmayı s�
 
 ## Telefona bakmaya tepkisi
 
+*Artık kullanılmıyor: telefona bakmak sahneyi etkilemiyor (PROJE.md, karar 36). Bu bölüm karakteri tanımak için duruyor; gerekirse ileride yakalanma sahnelerinde kullanılabilir.*
+
+
 - İlk seferde doğrudan sorar: "Kim yazıyor? Merak ettim, kıskançlık değil."
 - İkinci seferde: "Benimle konuşmak istemiyorsan söyleyebilirsin. Ciddiyim, kırılmam. Yani kırılırım ama söyleyebilirsin."
 

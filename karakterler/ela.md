@@ -182,6 +182,9 @@ Bağırmayı keser; bu en kötüsüdür. Sessizce gidip denize girer. Sonra "Tam
 
 ## Telefona bakmaya tepkisi
 
+*Artık kullanılmıyor: telefona bakmak sahneyi etkilemiyor (PROJE.md, karar 36). Bu bölüm karakteri tanımak için duruyor; gerekirse ileride yakalanma sahnelerinde kullanılabilir.*
+
+
 1. Telefonu elinden alır: "Ver şunu." Ekranı aşağı gelecek şekilde masaya koyar.
 2. İkinci kez: "Sıkıldıysan söyle, gideriz."
 3. Üçüncü kez: Gider.

@@ -159,9 +159,8 @@ Merhaba {ad}.
 Son satır.
 `);
   assert.equal(oyun.sahne, null);
-  oyun.eylemSec('_oyalan');
-  oyun.eylemSec('_oyalan');
-  assert.ok(oyun.sahne, 'sahne başlamalı');
+  oyun.eylemSec('_bekle');
+  assert.ok(oyun.sahne, 'beklerken sahnenin saati gelince durulur');
   assert.equal(saatYaz(oyun.t), '09:00');
   const b1 = oyun.sahneDevam();
   assert.equal(b1[0].metin, 'Merhaba Kaan.');
@@ -267,7 +266,7 @@ başlık: selam ali
   assert.equal(oyun.secenekler('ali').tur, 'yok', 'açılış bir kez kullanılır');
 });
 
-test('oyun: sahnede telefona bakmak tepkiyi oynatır ve seçimi yeniden sunar', () => {
+test('oyun: sahnedeyken telefondan başkasına cevap yazılır, yanındakine yazılmaz, sahne değişmez', () => {
   const oyun = kur(`
 === m
 tür: mesaj
@@ -275,6 +274,8 @@ kişi: veli
 zaman: 15 Eylül 08:05
 
 @veli: neredesin
+* buradayım
+  @veli: tamam
 
 === s
 tür: sahne
@@ -284,21 +285,15 @@ zaman: 15 Eylül 08:10
 @ali: Bir şey soracağım.
 * "Sor."
   @ali: Boşver.
--> son
-:: telefon
-@ali: Telefona mı bakıyorsun?
--> geri
 `);
   oyun.ilerle(tarihCoz('15 Eylül 08:10'));
   oyun.sahneDevam();
-  const b = oyun.telefonaBak();
-  assert.equal(b[0].t, 'telefon');
-  assert.equal(b[0].bildirimler[0].m, 'neredesin');
-  assert.equal(b[1].metin, 'Telefona mı bakıyorsun?');
-  assert.equal(b.at(-1).t, 'seçim');
-  assert.equal(oyun.durum.d['sahne.telefon'], 1);
+  assert.equal(oyun.secenekler('ali').tur, 'yok');
+  assert.equal(oyun.secenekler('veli').tur, 'cevap');
+  oyun.cevapla('veli', 0);
+  assert.equal(oyun.durum.sohbet.veli.at(-1).m, 'buradayım');
   const son = oyun.sahneSec(0);
-  assert.equal(son.at(-1).t, 'son');
+  assert.deepEqual(son.map((b) => b.t), ['ben', 'söz', 'son']);
 });
 
 test('oyun: eylemler pencere ve tarihe göre görünür; uyumak sabaha götürür', () => {
@@ -321,15 +316,15 @@ Yürüyorsun.
   oyun.sahneKapat();
   assert.equal(saatYaz(oyun.t), '10:15');
   assert.deepEqual(yazili(), []);
-  oyun.eylemSec('_kadar_11');
-  assert.equal(saatYaz(oyun.t), '11:00');
+  oyun.eylemSec('_bekle');
+  assert.equal(saatYaz(oyun.t), '21:00', 'hiçbir şey olmazsa akşam dokuzda durur');
   oyun.ilerle(tarihCoz('15 Eylül 23:00'));
   oyun.eylemSec('_uyu');
   assert.equal(gunBilgisi(oyun.t).tarih, '16 Eylül');
   assert.equal(saatYaz(oyun.t), '08:00');
 });
 
-test('oyun: "saat X\'e kadar oyalan" yeni bir eylemin saati gelince durur', () => {
+test('oyun: "Bekle" yeni eylemde, yeni mesajda ve cevap süresi dolmadan önce durur', () => {
   const oyun = kur(`
 === aksam
 tür: eylem
@@ -337,13 +332,26 @@ başlık: İşe git
 pencere: 16:30-19:30
 
 İşe gidiyorsun.
+
+=== m
+tür: mesaj
+kişi: veli
+zaman: 15 Eylül 17:10
+
+@veli: geliyor musun
+>> zaman_aşımı 2sa -> yok
+* geliyorum
+:: yok
 `);
   oyun.ilerle(tarihCoz('15 Eylül 16:00'));
-  oyun.eylemSec('_kadar_21');
+  oyun.eylemSec('_bekle');
   assert.equal(saatYaz(oyun.t), '16:30');
   assert.ok(oyun.eylemler().some((e) => e.kimlik === 'aksam'));
-  oyun.eylemSec('_kadar_21');
-  assert.equal(saatYaz(oyun.t), '21:00');
+  oyun.eylemSec('_bekle');
+  assert.equal(saatYaz(oyun.t), '17:10');
+  oyun.eylemSec('_bekle');
+  assert.equal(saatYaz(oyun.t), '18:55', 'cevap süresinin dolmasına 15 dakika kala');
+  assert.ok(!oyun.eylemler().some((e) => e.kimlik === '_kadar_21' || e.kimlik === '_oyalan'));
 });
 
 test('oyun: uyuyan kişi mesajı uyanınca okur ve cevaplar', () => {
@@ -403,7 +411,7 @@ Bir.
   assert.equal(ikinci.onarimlar.length, 1);
 });
 
-test('oyun: uyuyunca eve dönülür; ikinci bakışta aynı tepki tekrarlanmaz', () => {
+test('oyun: uyuyunca eve dönülür', () => {
   const oyun = kur(`
 === m
 tür: mesaj
@@ -421,15 +429,9 @@ yer: Kordon
 @ali: Bir şey soracağım.
 * "Sor."
   >> ev Yeni ev
--> son
-:: telefon
-@ali: Telefona mı bakıyorsun?
--> geri
 `);
   oyun.ilerle(tarihCoz('15 Eylül 08:10'));
   oyun.sahneDevam();
-  assert.equal(oyun.telefonaBak().filter((b) => b.t === 'söz').length, 1);
-  assert.equal(oyun.telefonaBak().filter((b) => b.t === 'söz').length, 0, 'tekrar etiketi yoksa tepki yok');
   oyun.sahneSec(0);
   oyun.sahneKapat();
   assert.equal(oyun.durum.yer, 'Kordon');

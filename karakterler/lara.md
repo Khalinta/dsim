@@ -187,6 +187,9 @@ Keskin ve alaycı; sınıfa göndermeler yapar. Kendi düşüşüyle dalga geçe
 
 ## Telefona bakmaya tepkisi
 
+*Artık kullanılmıyor: telefona bakmak sahneyi etkilemiyor (PROJE.md, karar 36). Bu bölüm karakteri tanımak için duruyor; gerekirse ileride yakalanma sahnelerinde kullanılabilir.*
+
+
 1. Kendi telefonunu çıkarır ve senden daha uzun süre bakar. Güç oyunu.
 2. Sonra: "Bitince haber ver."
 3. Kalkıp gidebilir.

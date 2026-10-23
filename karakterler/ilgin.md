@@ -166,6 +166,9 @@ Dolaylı yoldan laf sokar: kızı tarif eder, şemsiyesinden ya da kahkahasında
 
 ## Telefona bakmaya tepkisi
 
+*Artık kullanılmıyor: telefona bakmak sahneyi etkilemiyor (PROJE.md, karar 36). Bu bölüm karakteri tanımak için duruyor; gerekirse ileride yakalanma sahnelerinde kullanılabilir.*
+
+
 İlk seferde fark eder ve söyler: "Bekleyen biri mi var?" İkinci seferde hesabı ister ve kalkar.
 
 ## Değişim

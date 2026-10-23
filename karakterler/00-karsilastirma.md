@@ -36,7 +36,7 @@ Bu tablo, karakterlerin birbirine benzemediğini denetlemek için tutulur. Yeni 
 | Kırılma | Sertleşir; "Buyurun." | "Anladım." → numaralı mesaj | Kibarlaşır | Kaybolur | Susar, denize girer | Ghost |
 | Özür | Eylemle (çorba, çay) | Uzun, fazla açıklamalı | Bir kez, net | Espri + tek ciddi cümle | Hızlı, düz, "döner benden" | Beceriksiz; ilk kez sözle |
 | Uzaklaşma | İş, baba, nöbet | Ders, vize | Nöbet, Ankara, TUS | Habersiz İstanbul; yeni biri | Deniz, yarış | Ghost, parti |
-| Telefona bakınca | "Bekleyen biri mi var?" | "Kim yazıyor? Merak ettim." | Kendi telefonunu yanına koyar | "Daha iyi bir teklif mi geldi?" | Telefonu alıp ters çevirir | Kendi telefonuna daha uzun bakar |
+| Telefona bakınca (kullanılmıyor, karar 36) | "Bekleyen biri mi var?" | "Kim yazıyor? Merak ettim." | Kendi telefonunu yanına koyar | "Daha iyi bir teklif mi geldi?" | Telefonu alıp ters çevirir | Kendi telefonuna daha uzun bakar |
 | Asıl yara | Bilezik; sessizdeki telefon | Okunan mesajlar; annesinin yüzü | 19 yaşındaki kız; seçilmemiş hayat | Dağılan aile; ilk kış | Omuz; babasının cümlesi | Korkaklığı; babası |
 | Oyuncunun kusuruna bakışı | Yalanını koklar | Kaçamaklığını adlandırır | Çocukluğunu görür | Kalmasından korkar | Kararsızlığından sıkılır | Kendine acımasına güler |
 | Cinsellikte | Kontrol; bırakabilmek dönüm noktası | İlk kez; soran, güler, yönlendiren | Klinik dürüstlük, pervasız mekânlar, suçluluk | Oyunbaz; kalanla yavaşlamak | Fiziksel, rekabetçi; omuz | Yöneten görünür; "kal" demek |

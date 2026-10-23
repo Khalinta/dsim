@@ -71,9 +71,12 @@ async function sahneyiOyna(tercihler = [], ekranAl = {}, telefonaBak = false) {
     if (telefonaBak && (await sayfa.locator('.sahne-telefon-dugmesi.gorunur').count())) {
       telefonaBak = false;
       await tikla('.sahne-telefon-dugmesi');
-      await sayfa.waitForTimeout(1200);
-      await kaydir();
-      await cek('sahne-telefona-bakti');
+      await sayfa.waitForSelector('#ekran-telefon.aktif');
+      await cek('sahne-sirasinda-telefon');
+      await tikla('.sekme', 'Sahneye dön');
+      await sayfa.waitForSelector('#ekran-sahne.aktif');
+      await sayfa.waitForTimeout(600);
+      await cek('sahneye-donus');
       continue;
     }
     let secildi = false;
@@ -158,7 +161,7 @@ for (let adim = 0; adim < 90 && !randevuCekildi; adim++) {
     continue;
   }
   const eylemler = sayfa.locator('.eylem');
-  const yazili = eylemler.filter({ hasNotText: /oyalan|Uyu/ });
+  const yazili = eylemler.filter({ hasNotText: /^\s*(Bekle|Uyu)\s*$/ });
   if (await yazili.count()) { await yazili.first().click(); continue; }
   const uyu = sayfa.locator('.eylem', { hasText: 'Uyu' });
   if (await uyu.count()) { await uyu.first().click(); continue; }

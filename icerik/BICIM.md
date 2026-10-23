@@ -29,14 +29,13 @@ Kimlikler küçük harf, rakam ve `_` ile yazılır (Türkçe harfler olur).
 | `mesaj` | Bir kişiyle yazışma parçası | `zaman`, `tarih`/`pencere` (kendiliğinden), `başlatan: oyuncu` ya da `>> başlat` |
 | `eylem` | Kilit ekranındaki "Ne yapacaksın?" seçeneği | `tarih`, `pencere`, `koşul` tutunca listede görünür; anlatı varsa sahne olarak oynar |
 | `geçmiş` | Oyun başlamadan önce telefonda duran mesajlar | Oyun başlarken bir kez |
-| `tepki` | Sahnede telefona bakınca karakterin genel tepkisi | `kişi` + `olay: telefona_bakma` + `koşul` |
 
 ### Başlıklar
 
 | Başlık | Örnek | Anlamı |
 |---|---|---|
 | `tür` | `sahne` | Zorunlu |
-| `kişi` | `defne` | Mesajda sohbetin sahibi; sahnede renk ve telefon tepkisi |
+| `kişi` | `defne` | Mesajda sohbetin sahibi; sahnede renk ve o an yanında olunan kişi |
 | `zaman` | `15 Eylül 08:10` | O an kendiliğinden başlar (koşul tutarsa; tutmazsa hiç başlamaz) |
 | `tarih` | `15 Eylül - 21 Eylül` | Geçerli olduğu günler |
 | `pencere` | `22:00-03:00` | Günün hangi saatlerinde (gece yarısını aşabilir) |
@@ -51,7 +50,6 @@ Kimlikler küçük harf, rakam ve `_` ile yazılır (Türkçe harfler olur).
 | `zaman_aşımı` | `3sa` | Mesaj: cevap beklenen seçimler için varsayılan süre |
 | `gecikme` | `20dk` | Kendiliğinden mesaj: pencere açıldıktan ne kadar sonra |
 | `ton` | `gece`, `gündüz` | Sahnenin kâğıt rengini saatten bağımsız belirler |
-| `olay` | `telefona_bakma` | Tepki parçasının olayı |
 | `grup` | `vardiya` | Eylem: aynı gruptan kilit ekranında yalnızca biri görünür (önceliği en yüksek olan). Tekrarlanan işlerin (vardiya, ders) her seferi ayrı yazılır; yazılanlar bitince `tekrar: evet` olan sessiz yedek kalır |
 | `not` | serbest | Yazara not, oyunda görünmez |
 
@@ -61,7 +59,7 @@ Girinti **iki boşluktur** (sekme yok). Her satır bir paragraf ya da bir mesajd
 
 | Satır | Anlamı |
 |---|---|
-| `Düz metin.` | Anlatı (yalnızca sahne/eylem/tepkide) |
+| `Düz metin.` | Anlatı (yalnızca sahne/eylemde) |
 | `@defne: tamam.` | Konuşma ya da mesaj. `@ben:` oyuncunun kendisi |
 | `@yabanci(Komşu kadın): ...` | Ad parantezle değiştirilir |
 | `* "Söz."` | Sahnede oyuncunun söyleyeceği seçenek (tırnaklı) |
@@ -102,11 +100,7 @@ Girinti **iki boşluktur** (sekme yok). Her satır bir paragraf ya da bir mesajd
 
 ### Telefona bakmak
 
-Sahnede bir seçimin önünde okunmamış mesaj varsa oyuncu telefonuna bakabilir. O zaman:
-1. Parçada `:: telefon` etiketi varsa ilk bakışta orası oynar (`-> geri` ile biter); ikinci bakışta `:: telefon_tekrar` varsa o.
-2. Yoksa sahnenin kişisinin `tepki` parçalarından koşulu tutan, önceliği en yüksek olanı.
-3. Sayaçlar: `sahne.telefon` (bu sahnede kaçıncı bakış), `telefon.<kişi>` (o kişinin yanındayken toplam).
-`:: telefon` etiketinden önceki satır `-> son` olmalı; yoksa sahne oraya düşer (denetim yakalar).
+Sahnede seçim beklenirken telefon düğmesi telefonu açar; "Sahneye dön" ile kalınan yere dönülür. Telefona bakmak sahneyi değiştirmez, kimse tepki vermez. O an yanında olunan kişiye yazılamaz; başkalarına cevap yazılabilir.
 
 ### Koşul dili
 
@@ -136,6 +130,6 @@ Değişkene bugünün gün numarası yazılabilir: `[defne.gitti_gun = bugün]`,
 - Aynı kişiden ikinci bir mesaj parçası gelirse, önceki bitene kadar sıraya girer (`kesme: evet` değilse).
 - Kişi uyuyorsa (`kisiler.json`: `"uyku": "05:00-11:00"`) oyuncunun mesajını uyanınca okur ve cevaplar.
 - Sahne sürerken de mesaj gelir (sahnenin içindeki saat atlamasına denk gelenler kaybolmaz); yalnızca o an yanında olunan kişinin mesajları sahne bitince gelir.
-- Kilit ekranındaki hazır seçenekler: "Biraz oyalan" (30 dk), "Saat 11/16/21'e kadar oyalan" ve gece "Uyu" (sabah 08:00'e, eve). Oyalanırken yeni bir eylemin saati gelirse zaman orada durur; böylece vardiya gibi işler büyük atlamaların arasında kaybolmaz.
+- Kilit ekranındaki hazır seçenekler: "Bekle" ve gece "Uyu" (sabah 08:00'e, eve). "Bekle" zamanı ilk anlamlı şeye kadar akıtır: yeni mesaj, yeni açılan eylem, sahne ya da randevu, ya da cevap bekleyen bir mesajın süresinin dolmasına 15 dakika kalması. Hiçbir şey olmazsa gündüz 21:00'de, gece iki saat sonra durur. Nereye kadar gideceği önceden yazılmaz.
 - `kisiler.json` alanları: `ad`, `tanimsiz` (adı bilinmezken), `rehberde` (rehberde hazır kayıtlı adı), `sahnede` (sahnede hep bu adla: "Baban"), `numara`, `renk`, `yazmaHizi`, `okumaGecikmesi`, `uyku`, `biliniyor`.
 - `oyun.json`: `başlangıç`, `içerik_sonu`, `ilk_yer`, `ilk_ev`.

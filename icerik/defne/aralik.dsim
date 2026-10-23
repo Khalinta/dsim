@@ -209,7 +209,6 @@ koşul: defne.devam ve değil defne.bitti ve defne.kis >= 3
 yer: Taş Mahalle
 ton: gece
 
-[sahne.uzakta]
 Telefon titriyor. Bir kere, sonra bir daha. Ekranın ışığı karanlıkta: 02:50.
 Defne: "uyuyor musun"
 İki dakika sonra:
@@ -233,8 +232,6 @@ Defne: "müdür bana bakıyo. söyle bakmasın"
   -> gitmedi
 
 :: git
-[değil sahne.uzakta]
-[sahne.ciddi]
 Yokuş buz gibi. Fırtınadan beri sokakta yosun kokusu hiç gitmedi; gece daha da keskin. Taş Mahalle'de bir tek pencere yanık: atölyenin üstü.
 Sarı kapı kilitli değil. Müdür merdivenin tepesinde; havlamıyor, inliyor, ince bir ses, bu cüssede bir köpekten beklenmeyecek bir ses.
 Yukarıda lamba açık. Defne yerde, yatağın yanında, sırtı yatağa dayalı oturuyor. Yanında bir şarap şişesi, dibinde bir parmak. Yerde bir ilaç şeridi; folyonun dört yuvası boş.
@@ -369,7 +366,6 @@ kişi: defne
 yer: Hastane
 süre: 1sa
 
-[sahne.ciddi]
 Hastanenin gözlem odası; altı yatak, dördü dolu. Defne pencerenin yanındaki yatakta, oturuyor, giyinik; taburcu olmayı bekliyor.
 Seni görüyor. Gülümsüyor; geniş, hazırlanmış, bir müşteriye gülümser gibi.
 @defne: Ziyaretçi. Çiçek getirmedin. İyi. Çiçek bir yük, sonra suyunu değiştirmek gerekir.
@@ -505,7 +501,6 @@ yer: Otogar
 ton: gece
 süre: 40dk
 
-[sahne.ciddi]
 Otogar şehrin girişinde, İzmir yolunun başında; floresan ışıkları gecenin içinde bir akvaryum gibi. Pırnallı Turizm'in yazıhanesi açık, camında elle yazılmış bir kâğıt: "İSTANBUL 23:15."
 Bekleme bankları plastik, turuncu, yarısı kırık. Çaycı bir semaverin başında, gazete okuyor. Peronda bir otobüs, motoru çalışıyor; egzozunun dumanı soğukta beyaz.
 Defne en uçtaki bankta, ellerini kabanının ceplerine sokmuş, peronlara bakıyor. Müdür ayaklarının dibinde. Seni görünce kaymıyor, yer açmıyor; banka gelip oturmanı bekliyor.

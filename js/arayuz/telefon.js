@@ -97,7 +97,9 @@ export class Telefon {
       sekme('liste', 'Mesajlar', 'mesaj', () => this.git('liste'), okunmamis),
       sekme('rehber', 'Rehber', 'rehber', () => this.git('rehber')),
       sekme('ayarlar', 'Ayarlar', 'ayarlar', () => this.git('ayarlar')),
-      sekme('kilit', 'Kilitle', 'kilit', () => { this.sayfa = 'liste'; this.app.git('kilit'); }));
+      oyun.sahne
+        ? sekme('kilit', 'Sahneye dön', 'geri', () => { this.sayfa = 'liste'; this.app.devam(); })
+        : sekme('kilit', 'Kilitle', 'kilit', () => { this.sayfa = 'liste'; this.app.git('kilit'); }));
   }
 
   // ---------- Sohbet ----------

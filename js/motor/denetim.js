@@ -37,10 +37,9 @@ export function denetle(icerik, { yasakliKaliplar = [] } = {}) {
   for (const p of parcalar.values()) {
     const yer = `${p.dosya}:${p.satir} "${p.kimlik}"`;
     const tur = p.tur;
-    if (['mesaj', 'geçmiş', 'tepki'].includes(tur) && !p.kisi) hatalar.push(`${yer}: ${tur} parçasının kişisi olmalı`);
+    if (['mesaj', 'geçmiş'].includes(tur) && !p.kisi) hatalar.push(`${yer}: ${tur} parçasının kişisi olmalı`);
     if (p.kisi && !kisiler[p.kisi]) hatalar.push(`${yer}: kişi "${p.kisi}" kisiler.json'da yok`);
     if (tur === 'eylem' && !p.baslik['başlık']) hatalar.push(`${yer}: eylemin başlığı olmalı`);
-    if (tur === 'tepki' && !p.baslik.olay) hatalar.push(`${yer}: tepkinin olayı olmalı`);
     if (p.baslatan && p.baslatan !== 'oyuncu') hatalar.push(`${yer}: başlatan yalnızca "oyuncu" olabilir`);
     if (p.baslatan && !p.baslik['başlık']) hatalar.push(`${yer}: oyuncunun başlattığı mesajın başlığı (göndereceği ilk mesaj) olmalı`);
     if (p.zaman !== undefined && p.zaman !== null) {
@@ -49,13 +48,6 @@ export function denetle(icerik, { yasakliKaliplar = [] } = {}) {
       if (p.zaman > TAKVIM_SONU) hatalar.push(`${yer}: zaman oyunun bitişinden sonra`);
     }
     kosulDenetle(p, p.kosul, p.satir);
-    for (const etiket of ['telefon', 'telefon_tekrar']) {
-      if (p.etiketler[etiket] === undefined) continue;
-      const onceki = p.listeler[0][p.etiketler[etiket] - 1];
-      if (!onceki || !((onceki.t === 'git') || (onceki.t === 'komut' && onceki.ad === 'son'))) {
-        hatalar.push(`${yer}: ":: ${etiket}" etiketinden önce akış "->" ile bitmeli, yoksa sahne oraya düşer`);
-      }
-    }
 
     p.listeler.forEach((liste, listeNo) => {
       for (const d of liste) {
@@ -72,7 +64,7 @@ export function denetle(icerik, { yasakliKaliplar = [] } = {}) {
           metinDenetle(p, d.metin, no);
         }
         if (d.t === 'seçim') {
-          if (tur === 'tepki' || tur === 'geçmiş') hatalar.push(`${p.dosya}:${no} ${tur} parçasında seçim olmaz`);
+          if (tur === 'geçmiş') hatalar.push(`${p.dosya}:${no} ${tur} parçasında seçim olmaz`);
           if (d.zamanAsimi && d.zamanAsimi.etiket && p.etiketler[d.zamanAsimi.etiket] === undefined) {
             hatalar.push(`${p.dosya}:${no} zaman aşımı etiketi yok: ${d.zamanAsimi.etiket}`);
           }
@@ -108,7 +100,6 @@ export function denetle(icerik, { yasakliKaliplar = [] } = {}) {
           if (k.ad === 'okunmadı' && tur !== 'geçmiş') hatalar.push(`${p.dosya}:${no} "okunmadı" yalnızca geçmiş parçalarında kullanılır`);
           if ((k.ad === 'zaman' || k.ad === 'saat') && tur === 'mesaj') hatalar.push(`${p.dosya}:${no} Mesaj parçalarında zaman atlanmaz; "bekle" kullan`);
           if ((k.ad === 'yer' || k.ad === 'ev') && (tur === 'mesaj' || tur === 'geçmiş')) hatalar.push(`${p.dosya}:${no} Mesaj parçasında yer değişmez`);
-          if (k.ad === 'rehber' && tur === 'tepki') hatalar.push(`${p.dosya}:${no} Tepkide rehber kaydı olmaz`);
         }
       }
       if (listeNo === 0 && tur === 'geçmiş' && !liste.some((d) => d.t === 'komut' && d.ad === 'zaman')) {
@@ -119,7 +110,7 @@ export function denetle(icerik, { yasakliKaliplar = [] } = {}) {
 
   // Erişilebilirlik: her parça bir yoldan açılabilmeli.
   for (const p of parcalar.values()) {
-    const acilir = p.tur === 'geçmiş' || p.tur === 'tepki' || p.tur === 'eylem'
+    const acilir = p.tur === 'geçmiş' || p.tur === 'eylem'
       || (p.zaman !== undefined && p.zaman !== null)
       || p.baslatan === 'oyuncu'
       || (p.tur === 'mesaj' && (p.tarihBas !== undefined || p.pencere !== undefined))

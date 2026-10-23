@@ -591,7 +591,14 @@ export class Oyun {
   }
 
   // Bir kişiyle olan sohbetin şu anki seçenekleri (cevaplar ya da oyuncunun açabileceği konular).
+  // Sahne sürerken telefon açılabilir; yalnızca o an yanında olunan kişiye yazılmaz.
+  _sahneKisisi() {
+    const s = this.durum.sahne;
+    return s ? (this.parca(s.kimlik) || {}).kisi || null : null;
+  }
+
   secenekler(kisi) {
+    if (kisi === this._sahneKisisi()) return { tur: 'yok' };
     const akis = this.durum.akislar[kisi];
     if (akis && akis.secim) {
       if (akis.secim.rehber) return { tur: 'rehber', kisi: akis.secim.rehber, secenekler: akis.secim.adlar.map((metin, i) => ({ i, metin, tip: 'rehber' })) };
@@ -625,7 +632,7 @@ export class Oyun {
   // Oyuncu bir mesaj seçeneğine dokundu.
   cevapla(kisi, i) {
     const d = this.durum;
-    if (d.sahne) throw new Error('Sahne sürerken mesaj gönderilemez');
+    if (d.sahne && kisi === this._sahneKisisi()) throw new Error('Yanındaki kişiye mesaj gönderilemez');
     const akis = d.akislar[kisi];
     if (akis && akis.secim) {
       if (akis.secim.rehber) {
@@ -813,47 +820,6 @@ export class Oyun {
     return [iz, ...this.sahneDevam()];
   }
 
-  // Sahnenin ortasında telefona bakmak.
-  telefonaBak() {
-    const d = this.durum;
-    const s = d.sahne;
-    if (!s || !s.akis.secim || s.akis.secim.rehber) return [];
-    const bildirimler = this.bildirimler(3).map((b) => ({ kisi: b.kisi, ad: this.gorunenAd(b.kisi), m: b.m, t: b.t }));
-    d.d['sahne.telefon'] = (d.d['sahne.telefon'] || 0) + 1;
-    if (s.kisi) d.d[`telefon.${s.kisi}`] = (d.d[`telefon.${s.kisi}`] || 0) + 1;
-    const bloklar = [{ t: 'telefon', bildirimler }];
-    const parca = this.parca(s.kimlik);
-    let tepki = null;
-    const kacinci = d.d['sahne.telefon'];
-    const etiket = kacinci === 1 ? 'telefon' : 'telefon_tekrar';
-    if (parca.etiketler[etiket] !== undefined) {
-      tepki = this._akisOlustur(parca, d.t, 'tepki', 0, parca.etiketler[etiket] + 1);
-    } else if (s.kisi && parca.etiketler.telefon === undefined) {
-      const aday = [...this.icerik.parcalar.values()]
-        .filter((p) => p.tur === 'tepki' && p.kisi === s.kisi && p.baslik.olay === 'telefona_bakma' && this.kosulDogru(p.kosul))
-        .sort((a, b) => b.oncelik - a.oncelik)[0];
-      if (aday) tepki = this._akisOlustur(aday, d.t, 'tepki');
-    }
-    if (tepki) {
-      tepki.etiketteDur = true;
-      for (let koruma = 0; koruma < 500; koruma++) {
-        const o = this._sonraki(tepki);
-        if (o.t === 'son' || o.t === 'seçim') break;
-        if (o.t === 'anlatı') bloklar.push({ t: 'anlatı', metin: o.metin });
-        else if (o.t === 'söz') bloklar.push(o.kisi === 'ben' ? { t: 'ben', metin: o.metin } : { t: 'söz', kisi: o.kisi, ad: o.ad || this.sahneAdi(o.kisi), metin: o.metin });
-        else if (o.t === 'komut' && o.d.ad !== 'bekle') this._ortakKomut(o.d);
-      }
-    }
-    // Seçim yeniden sunulur.
-    const dugum = this.parca(s.kimlik).listeler[s.akis.secim.l][s.akis.secim.i];
-    const secenekler = dugum.secenekler
-      .map((x, i) => ({ i, metin: this._yerlestir(x.metin), tip: x.tip }))
-      .filter((x) => this.kosulDogru(dugum.secenekler[x.i].kosul));
-    bloklar.push({ t: 'seçim', secenekler });
-    s.kayit.push(...bloklar);
-    return bloklar;
-  }
-
   // ---------- Eylemler (kilit ekranındaki "ne yapacaksın?") ----------
 
   // Aynı gruptaki eylemlerden yalnızca biri görünür: önceliği en yüksek olan (eşitse dosyada önce gelen).
@@ -874,19 +840,41 @@ export class Oyun {
       liste.push({ kimlik: p.kimlik, baslik: this._yerlestir(p.baslik['başlık'] || p.kimlik) });
     }
     const b = gunBilgisi(d.t);
-    if (b.saat >= 21 || b.saat < 5) {
-      liste.push({ kimlik: '_oyalan', baslik: 'Biraz oyalan', yerlesik: true });
-      liste.push({ kimlik: '_uyu', baslik: 'Uyu', yerlesik: true });
-    } else {
-      liste.push({ kimlik: '_oyalan', baslik: 'Biraz oyalan', yerlesik: true });
-      const hedef = [11, 16, 21].find((s) => s > b.saat + (b.dakika >= 30 ? 0.5 : 0));
-      if (hedef) liste.push({ kimlik: `_kadar_${hedef}`, baslik: `Saat ${hedef}${hedef === 16 ? "'ya" : "'e"} kadar oyalan`, yerlesik: true });
-    }
+    liste.push({ kimlik: '_bekle', baslik: 'Bekle', yerlesik: true });
+    if (b.saat >= 21 || b.saat < 5) liste.push({ kimlik: '_uyu', baslik: 'Uyu', yerlesik: true });
     return liste;
+  }
+
+  // "Bekle": zaman, ilk anlamlı şey olana kadar akar. Yeni mesaj gelince, yeni bir eylem açılınca,
+  // sahne ya da randevu başlayınca, cevap bekleyen bir mesajın süresinin dolmasına 15 dakika kala durur.
+  // Hiçbir şey olmazsa gündüz 21:00'de, gece iki saat sonra durur. Nereye kadar gideceği önceden söylenmez.
+  bekleOlanaKadar() {
+    const d = this.durum;
+    const t0 = d.t;
+    const b = gunBilgisi(t0);
+    let hedef = b.saat >= 5 && b.saat < 21 ? gunNo(t0) * GUN + 21 * 3600 : t0 + 2 * 3600;
+    for (const akis of Object.values(d.akislar)) {
+      const z = akis.secim && !akis.secim.rehber && akis.zamanAsimi ? akis.zamanAsimi.t : null;
+      if (z !== null && z - 15 * 60 > t0) hedef = Math.min(hedef, z - 15 * 60);
+    }
+    const gelenSayisi = () => Object.values(d.sohbet).reduce((n, l) => n + l.filter((m) => m.k === 'o').length, 0);
+    const baslangicta = gelenSayisi();
+    const onceki = new Set(this.eylemler().filter((e) => !e.yerlesik).map((e) => e.kimlik));
+    while (d.t < hedef && !d.sahne && !this.bittiMi()) {
+      const ceyrek = (Math.floor(d.t / 900) + 1) * 900;
+      const olay = this.sonrakiOlayZamani();
+      const adim = Math.min(hedef, ceyrek, olay !== null && olay > d.t ? olay : Infinity);
+      const once = d.t;
+      this.ilerle(adim);
+      if (d.t === once) break;
+      if (gelenSayisi() > baslangicta) break;
+      if (this.eylemler().some((e) => !e.yerlesik && !onceki.has(e.kimlik))) break;
+    }
   }
 
   eylemSec(kimlik) {
     const d = this.durum;
+    if (kimlik === '_bekle') { this.bekleOlanaKadar(); return; }
     if (kimlik === '_oyalan') { this.bekle(30 * 60); return; }
     const kadar = kimlik.match(/^_kadar_(\d+)$/);
     if (kadar) {

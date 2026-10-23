@@ -172,6 +172,9 @@ Bir kere, net ve yetişkince özür diler: "Dün yanlış yaptım. Sana öyle ko
 
 ## Telefona bakmaya tepkisi
 
+*Artık kullanılmıyor: telefona bakmak sahneyi etkilemiyor (PROJE.md, karar 36). Bu bölüm karakteri tanımak için duruyor; gerekirse ileride yakalanma sahnelerinde kullanılabilir.*
+
+
 - İlk seferde fark eder ama bir şey demez; kendi telefonuna bakar. Sonra: "Ödeşelim mi? Benimki annem. Seninki?"
 - Sonraki seferde kalkar, hesabı öder: "Sonra konuşuruz."
 

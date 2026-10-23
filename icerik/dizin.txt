@@ -12,5 +12,4 @@ defne/eylul.dsim
 defne/ekim.dsim
 defne/kasim.dsim
 defne/aralik.dsim
-defne/tepki.dsim
 son/son.dsim

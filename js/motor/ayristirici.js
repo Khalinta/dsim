@@ -4,8 +4,8 @@ import { ifadeCoz } from './ifade.js';
 import { tarihCoz, sureCoz, saatCoz } from './tarih.js';
 
 const BASLIKLAR = new Set(['tür', 'kişi', 'zaman', 'pencere', 'tarih', 'koşul', 'öncelik', 'tekrar',
-  'başlık', 'başlatan', 'süre', 'yer', 'olay', 'kesme', 'zaman_aşımı', 'gecikme', 'ton', 'not', 'grup']);
-const TURLER = new Set(['sahne', 'mesaj', 'eylem', 'geçmiş', 'tepki']);
+  'başlık', 'başlatan', 'süre', 'yer', 'kesme', 'zaman_aşımı', 'gecikme', 'ton', 'not', 'grup']);
+const TURLER = new Set(['sahne', 'mesaj', 'eylem', 'geçmiş']);
 const KOMUTLAR = new Set(['bekle', 'zaman', 'saat', 'yer', 'ev', 'başlat', 'randevu', 'iptal', 'bitir', 'rehber', 'tanış', 'okudu', 'okunmadı',
   'son', 'zaman_aşımı', 'eğer', 'yoksa']);
 const AD = /^[\p{Ll}_][\p{Ll}\p{N}_]*$/u;

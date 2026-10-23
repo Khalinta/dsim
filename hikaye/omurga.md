@@ -229,7 +229,8 @@ Bu bağlar oyuncu yokken de işler. Karakterler birbirleriyle konuşur ve oyuncu
   - Ela: kordonda kavga; ikinci hakkı yok.
   - Lara: önce kendisi gider.
 - **Açık ilişki:** Nadiren mümkün olabilir; ancak karakterin kişiliği izin veriyorsa ve oyuncu dürüstse. Defne'nin sezonluk anlayışı bir kapı aralayabilir; Lara'nınki bir güç oyunu olarak. Diğerleri için değil.
-- **Telefona bakmak:** Buluşmada telefona bakmak, başka birinden gelen mesajı o anda okumak demektir. Karşıdaki hem bunu fark eder hem de ekrana bakmaya çalışabilir.
+- ~~**Telefona bakmak:** Buluşmada telefona bakmak, başka birinden gelen mesajı o anda okumak demektir. Karşıdaki hem bunu fark eder hem de ekrana bakmaya çalışabilir.~~
+  - **Yeni (karar 36):** Telefona bakmak sahneyi etkilemez. *Neden:* Oynarken hoş gelmedi; hikâyenin akışını bölüyordu. Yakalanma için başka yollar düşünülecek (5. adım).
 
 ## 8. Sonlar
 

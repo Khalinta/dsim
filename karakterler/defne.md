@@ -197,6 +197,9 @@ Kaybolur. İki üç gün telefonu kapalıdır, atölyenin kapısı kapalıdır, 
 
 ## Telefona bakmaya tepkisi
 
+*Artık kullanılmıyor: telefona bakmak sahneyi etkilemiyor (PROJE.md, karar 36). Bu bölüm karakteri tanımak için duruyor; gerekirse ileride yakalanma sahnelerinde kullanılabilir.*
+
+
 - **İlk seferde** şakayla karşılık verir: "Daha iyi bir teklif mi geldi? Bak, benim de numaram var. Sıfır beş yüz otuz iki, sonra bir sürü hayal kırıklığı."
 - **İkinci seferde** kendi telefonunu çıkarır ve sessizce Instagram'da gezinmeye başlar. Eğlence bitmiştir.
 

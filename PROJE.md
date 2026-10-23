@@ -114,9 +114,9 @@ Her karar ve nedeni burada. Bir karar değişirse eskisinin ~~üstü çizilir~~ 
     - `grup` (tekrarlanan işin her seferi ayrı yazılır), `>> randevu` (kilit ekranında kart; uykuyu da böler), `>> iptal`, `>> bitir`, `>> saat`, `>> ev`, `bugün`/`yarın` zamanları.
     - Kişilerin uyku saatleri: Defne sabah 05–11 arası uyur; o saatte yazılan mesajı 11'de okur ve cevaplar ("görüldü" de öyle).
     - Sahne sürerken de mesaj gelir; yalnızca yanında olunan kişinin mesajı sahne bitince gelir. (Önceden sahnenin içindeki saat atlamasına denk gelen mesajlar kayboluyordu; bulunup düzeltildi.)
-    - "Saat X'e kadar oyalan" yeni bir şey yapılabilir olunca durur. (Önceden 16:00'dan 21:00'e atlayan oyuncu vardiyayı hiç görmüyordu.)
+    - ~~"Saat X'e kadar oyalan" yeni bir şey yapılabilir olunca durur.~~ → 35. karara bakın.
     - Aile sahnede "Baban", "Annen" diye görünür.
-    - Telefona bakınca karakterin tepkisi (Defne: önce şaka, sonra kendi telefonuna döner, sonra sigaraya çıkar; ciddi sahnelerde hiçbiri).
+    - ~~Telefona bakınca karakterin tepkisi (Defne: önce şaka, sonra kendi telefonuna döner, sonra sigaraya çıkar; ciddi sahnelerde hiçbiri).~~ → 36. karara bakın.
 31. **Defne'nin yolu ölçülerle değil, olaylarla ilerler.** Gizli iki ölçü var: yakınlık ve kış (karanlık). Belirleyici olaylar:
     - Fırtına gecesi (4 Aralık) Defne'nin yanına mı, karanlıkta yalnız kalan Saniye Hanım'ın yanına mı gidildiği.
     - Kötü gece (10 Aralık): kış ölçüsü yüksekse yaşanır; oyuncu gelirse acile birlikte gidilir, gelmezse Defne'yi komşusu bulur. Kış düşükse kötü gece yerine Defne ilaçlarını oyuncuya emanet eder.
@@ -129,6 +129,15 @@ Her karar ve nedeni burada. Bir karar değişirse eskisinin ~~üstü çizilir~~ 
     - Kötü gecede kapıyı ilk çalan Ilgın sahnesi eklenecek (reçeteyi biliyor).
     - Defne'nin Berkmen villasına gidişi bir mesajda anlatılıyor; Lara yazılınca sahneye dönüşebilir.
     - Fabrika'daki son film gecesine Defne dalı eklenebilir; Sude'nin cumartesi dersi henüz yok.
+35. **Zaman tek düğmeyle akar: "Bekle".** ~~"Biraz oyalan" ve "Saat 11/16/21'e kadar oyalan"~~ kaldırıldı.
+    - "Bekle" ilk anlamlı şeye kadar gider: yeni mesaj, yeni açılan bir şey (vardiya saati gibi), sahne ya da randevu, ya da cevap bekleyen mesajın süresinin dolmasına 15 dakika kalması. Hiçbir şey olmazsa gündüz 21:00'de, gece iki saat sonra durur. Gece "Uyu" da var.
+    - Nereye kadar gideceği yazmaz; yazsa geleceği söylemiş olurdu.
+    - *Neden değişti:* Kullanıcı oynarken "ne kadar bekleyeyim?" diye sormanın garip hissettirdiğini söyledi.
+36. **Telefona bakmak sahneyi etkilemez.** ~~Sahnede telefona bakınca karşıdaki fark eder, tepki verir (omurga, bölüm 7; karakter belgelerindeki "Telefona bakmaya tepkisi").~~
+    - Sahnede seçim beklenirken telefon düğmesi telefonu açar. Mesajlar okunur, o an yanında olunan kişi dışında herkese cevap yazılabilir. "Sahneye dön" ile kalınan yere dönülür. Kimse tepki vermez, gizli bir puan da düşmez.
+    - Defne'nin telefon tepkileri ve 15–16 Eylül sahnelerindeki iki telefon tepkisi silindi; motordan da bu düzenek çıkarıldı.
+    - *Neden değişti:* Kullanıcı oynarken hikâyenin akışını bozduğunu söyledi.
+37. **Mesajı oyuncunun başlatması 4. adımda genişleyecek.** Şu an yalnızca iki yerde var (babaya itiraf, Defne'ye "biz neyiz?"). Her karaktere o ana uygun, elle yazılmış açılış mesajları eklenecek ("eve vardın mı", "atölye nasıl" gibi); Defne'ninkiler de o sırada.
 
 ## Yol haritası
 
@@ -192,4 +201,6 @@ Bir oyun yaklaşık 10–15 saat.
 - **Ekran görüntüleri:** Rehberdeki oval simgeler artık daire. Randevu kartı, telefona bakma tepkisi, Defne sohbeti kontrol edildi.
 - **Kullanıcıya düşen:** Yok. Telefonda oyun kendiliğinden güncellenir (sürüm 0.3.0). Eski kayıt yeni başlangıçla uyuşmaz; "Yeni oyun" önerilir.
 
-**Sıradaki:** 4. adım, diğer beş karakter (büyük). Önerilen sıra: Ilgın, Ceren, Sude, Ela, Lara. Kullanıcının "devam" demesi bekleniyor.
+**3. oturumun sonu (ara düzeltme):** Kullanıcının oynayıp söylediği iki şey düzeltildi: "Bekle" (karar 35) ve etkisiz telefon (karar 36). Testler, okuma aracı ve ekran görüntüleri yeniden geçti. Sürüm 0.3.1.
+
+**Sıradaki:** 4. adım, diğer beş karakter (büyük). Önerilen sıra: Ilgın, Ceren, Sude, Ela, Lara. Her birine açılış mesajları da yazılacak (karar 37). Kullanıcının "devam" demesi bekleniyor.
