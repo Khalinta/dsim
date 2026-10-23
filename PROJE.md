@@ -159,7 +159,7 @@ Her karar ve nedeni burada. Bir karar değişirse eskisinin ~~üstü çizilir~~ 
     - **Yol ayrımı:** Aynı gece iki ile dört kadının hayatında bir şey olur; oyuncu ancak birinin yanında olabilir. Seçenekler hikâyenin içinden, davetle gelir. Seçilmeyen gece de yaşanır ve iz bırakır.
     - **Aynı anda birden fazla ilişki serbest;** bedeli zaman, küçük şehir ve yalanlar. (Kullanıcı onayladı.)
 40. **Mesajlaşma hikâyenin içinde yaşanır.** Yazışma bir sahnedir: anlatı bir yazışmaya gelince telefon ekranı açılır, "yazıyor…", bekleme ve "görüldü"yle oynar, bitince anlatı sürer. Oyuncu bazı gecelerde kendisi başlatır ("Kime yazacaksın?"), açılış mesajları elle yazılır. Takvimden gelen rastgele mesaj yok. Telefon her an açılıp okunabilir; okumak hikâyeyi etkilemez (karar 36 geçerli).
-41. **41 bölüm, beş perde.** Tek okuyuşta bölüm başına 2.500–4.000 kelime (15–25 dakika). Kullanıcı bölümlerin kısa olmamasını istedi.
+41. **41 bölüm, beş perde.** Tek okuyuşta bölüm başına 2.500–4.000 kelime (15–25 dakika). Kullanıcı bölümlerin kısa olmamasını istedi. *(I. Perde ölçümde bunun yarısı çıktı; II. Perde'den itibaren 2.500–3.500 hedefleniyor: bkz. "Oynanış süresi hedefi".)*
 42. **Karakterlerde klişeye kayan yerler değişti** (belgeler güncellendi):
     - **Sude:** "Üniversitede yapılacaklar listesi" (romantik komedi kalıbı) yerine **yalan defteri**: annesine söylediği her yalanı numaralayıp yazıyor ki birbirini tutsun; bir gün hepsini annesine okuyacak. Oyuncunun tek, hiçbir yere yazılmamış yalanının aynası.
     - **Ela:** Omzu bahaneydi. İkinci sakatlık hafifti; Mert'in kazandığı yarışı kıyıdan izledikten sonra kampa dönmedi. "Kararsızlık"tan nefreti buradan. En derin sırrı: "Ben bıraktım."
@@ -225,7 +225,9 @@ Her karar ve nedeni burada. Bir karar değişirse eskisinin ~~üstü çizilir~~ 
 - Kesin değil; pilot karakterle ölçülecek.
 - *Pilot ölçümü (3. adım):* Defne'ye özen gösteren bir oyunda okunacak metin yaklaşık 17 bin kelime; okuma ve seçimlerle 1,5–2 saat tutuyor. Altı karakter ve kesişmelerle hedefin alt ucu (10 saat civarı) gerçekçi. Gerçek bir oyuncuyla ölçülmedi.
 - **I. Perde ölçümü (6. adım) — hedefin altında.** Tek okuyuşta bölüm başına **1.100–1.450 kelime** (24 yol; I. Perde toplam 12–16 bin kelime). Karar 41'deki 2.500–4.000'in yarısı kadar. Bölüm başına okuma ve seçimlerle yaklaşık 7–10 dakika. Bu hızla 41 bölüm **5–6 saat** eder, 8–12 değil. Bütün dallarıyla yazılan metin 28 bin kelime (bir okuyuşta yarısı görülüyor).
-  - Kullanıcıya bildirildi; nasıl kapatılacağı onun kararı (öneri: II. Perde'den itibaren bölüm başına tek okuyuşta 2.000–3.000 kelime; I. Perde'nin kısa kalan bölümleri, 4, 5, 8 ve 10, cila adımında genişletilir).
+  - ~~Kullanıcıya bildirildi; nasıl kapatılacağı onun kararı.~~ → **Kullanıcı öneriyi kabul etti (6. adımın sonu):** II. Perde'den itibaren bölümler çok daha uzun yazılır; hedef tek okuyuşta bölüm başına **2.500–3.500 kelime** (en az 2.000), kaliteden ödün vermeden. I. Perde'nin kısa bölümleri (4, 5, 8, 10) cila adımında genişler.
+  - *Kullanıcının notu:* "Giriş de kısa olmasa iyiydi ama hikâyeye hızlı girebilmek ve sürükleyicilik açısından iyi bile olabilir. Kaliteden kaybetmemen önemli."
+  - Bu hızla 41 bölüm yaklaşık 8–10 saat.
 
 ## Açık sorular
 
