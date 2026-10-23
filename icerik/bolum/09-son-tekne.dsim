@@ -1,0 +1,307 @@
+# Bölüm 9 — Son tekne
+# 29–30 Eylül, Pazartesi–Salı. Eczanede pansuman (Ilgın imzayı tanır); Keçi Adası'na son tekne (kalabalık).
+# Dönüşte yol ayrımı: kıçta Defne / başta Sude / yanda Ela'nın motoru / ortada Onur. Fener Burnu'nda dürbünlü bir kız.
+# Soru: Yaz biterken kimin yanında oturuyorsun?
+
+=== b09
+tür: bölüm
+bölüm: 9
+başlık: Son tekne
+zaman: 29 Eylül 10:40
+yer: Çarşı, Yeni Eczane
+
+Pazartesi sabahı çarşı serin. Gölgede kalan kaldırımlar hâlâ ıslak; dükkânların önünde birileri hortumla yıkama yapmış. Eylülün son haftası, ama yaz bir şeyi unutmuş gibi geri dönüp duruyor: öğleye doğru yirmi yedi derece, akşama doğru bir hırka.
+>> eğer kirik.yaralanan == "onur"
+  Onur'un ayağı sargıda; topallaması iki günde abartılı bir yürüyüşe dönüşmüş. Eczaneye onunla geliyorsun; tek başına gelirse "yolda bayılırım" diyor, bayılmayacağını ikiniz de biliyorsunuz.
+>> yoksa
+  Sargılı ayağınla çarşıya iniyorsun; ayakkabının arkasına basarak, topallamayı gizlemeye çalışarak, gizleyemeyerek.
+Hasır sandalyede Hasan Bey. Seni görünce bütün gövdesiyle dönüyor; sargıya bakıyor.
+İçeride Ilgın tezgâhın arkasından çıkıp sandalyeyi gösteriyor. Ayağı bir taburenin üstüne koyduruyor, sargıyı makasla kesiyor; makası tutuşu hızlı ve kesin, sargı tek hamlede açılıyor.
+Taburcu kâğıdını uzatıyorsun. Ilgın kâğıda bakıyor; bir saniye, imzanın üstünde duruyor.
+@ilgin: Uysal. Gece üç. Kırık Koy, değil mi?
+@ilgin: El yazısından tanırım. Doktor hanımın yazısı şehirdeki reçetelerin yarısında. Okunmuyor ama ben okurum, başka okuyan yok.
+>> eğer ceren.numara
+  Kâğıdın altına, imzanın altına bakıyor. Bir numara. Bakışı bir an orada kalıyor.
+  @ilgin: Numara yazmış.
+  @ilgin: Doktor hanım numara yazmaz. Bana bir kere verdi, nöbet geceleri için. Bir de sana, anlaşılan.
+  Kâğıdı katlayıp sana geri veriyor; bir şey söylemiyor, söylememesi bir şey söylüyor.
+  [ilgin.ceren_numara_gordu]
+Kapıdan, sandalyeden, tane tane bir ses.
+@hasan: Kırık Koy'a… gece… gidilmez.
+@ilgin: Gidilir baba. Sonra buraya gelinir.
+Hasan Bey bir şey diyecek gibi oluyor, vazgeçiyor; dönüp yeniden kordona bakıyor. Ilgın tentürdiyotu pamuğa döküyor; döküş miktarı, şişenin eğimi, her şey bir kez öğrenilmiş ve hiç unutulmamış gibi.
+>> eğer kirik.yaralanan == "onur"
+  @onur: Ilgın Hanım. Çok güzel sarıyorsunuz. Bir de akşam bir çay…
+  @ilgin: Ayağını uzat.
+  @onur: Uzattım.
+  @ilgin: Daha uzat. Ağzını da kapat, mikrop kaçıyor.
+  Onur ağzını kapatıyor. Sana bakıyor, gözleriyle "gördün mü" diyor, neyi gördüğünü bilmeden.
+>> yoksa
+  @ilgin: Bir tane içeride kalmış. Doktor hanım söyledi mi?
+  * "Söyledi. Vücut kendisi atarmış."
+    @ilgin: Atar. Doktor hanım vücuda güvenir. Ben güvenmem, takip ederim. Perşembe gel, bakayım.
+    [ilgin.persembe]
+  * "Çıkarabilir misin?"
+    @ilgin: Çıkarabilirim. Çıkarmam. Kendisi çıkacak, ben karıştırırsam iltihaplanır.
+    @ilgin: Her şeyi çıkarmak lazım sanıyor insanlar. Bazı şeyler içeride kalır, sonra kendiliğinden çıkar.
+  * (Bir şey söyleme. Pamuğun yanmasına katlan.)
+    [ilgin.yakin +1]
+    Tentürdiyot yakıyor. Ilgın bunu biliyor; senin bir şey söylemediğini de görüyor.
+    @ilgin: Ağlamadın. Bu sabah üç kişi ağladı. Biri sekiz yaşındaydı ama sayılır.
+Sargıyı sararken başını kaldırmadan konuşuyor.
+@ilgin: Yarın son tekne. Keçi Adası. Gidiyor musun?
+* "Gidiyorum. Herkes gidiyormuş."
+  @ilgin: Herkes gidiyor. Bütün yazlıkçılar son bir kere. Sonra nisana kadar adaya kimse uğramaz, keçiler hariç.
+* "Sen gidiyor musun?"
+  [ilgin.yakin +1]
+  @ilgin: Ben son tekneye binmem. Ben ilk tekneye binerim, nisanda. Yazlıkçılar gelmeden. Ada o zaman ada.
+  Bunu söyledikten sonra bir kez daha sargıyı çekip düzeltiyor, gereksiz yere.
+* "Bilmiyorum daha."
+  @ilgin: Bilmiyorsun. Peki.
+  Bir şey eklemeyecek gibi; sonra ekliyor.
+  @ilgin: Gidersen sol tarafa otur. Dönüşte güneş sağdan vurur.
+
+>> zaman 30 Eylül 10:45
+>> yer Liman, ada iskelesi
+Salı sabahı liman kalabalık; yaz bitmiş, ama son bir kez herkes buraya toplanmış gibi. Ada iskelesinde beyaz, yaşlı, boyası yer yer kalkmış bir tekne: ADA III. Kıçında bir Türk bayrağı, rengi solmuş, kenarları püskül.
+Teknenin kaptanı yetmişlerinde, güneşten kararmış, ağzında yanmamış bir sigara. Biletleri kendisi kesiyor, parayı kendisi alıyor, iskeleye atılan halatı kendisi çözüyor; yardım teklifini elinin bir hareketiyle reddediyor.
+@kaptan: Son sefer. Dönüş dörtte. Dörtte olmayan nisanda gelir.
+Kimse gülmüyor; kaptan zaten şaka yapmıyor.
+Yolcular: ellerinde son günün dondurmasıyla birkaç yazlıkçı aile, fotoğraf makineli emekli bir çift, bir grup öğrenci. Onur iskelede, her zamankinden daha çok topallayarak.
+>> eğer kirik.yaralanan == "onur"
+  @onur: Kanka. Ayağım bu teknede iyileşecek. Tuzlu su. Bilim.
+>> yoksa
+  @onur: Kanka, ayağın nasıl? Tuzlu su iyi gelir. Bilim. Ben kendi ayağımla deneyecektim ama benim ayağım sağlam, maalesef.
+Teknenin kıçında, korkuluğa yaslanmış, güneş gözlüklü bir kadın: Defne. Bir elinde termos, öbüründe sigara; sigarayı tekne kalkınca yakmayı bekliyor, kaptan izin vermiyor.
+>> eğer defne.yakin >= 3
+  Seni görünce gözlüğünü burnunun ucuna indiriyor.
+  @defne: Kim gelmiş. Kalanlar kulübünden bir üye. Son tekneye kalanlar binmez, bilgin olsun. Ben istisnayım.
+>> yoksa
+  Seni görüyor; başını hafifçe sallıyor, o kadar. Sonra yeniden denize dönüyor.
+>> eğer sude.yakin >= 2
+  [tekne.sude]
+  Teknenin başında, korkuluğun dibinde Sude ile Dilan. Sude'nin elinde telefon, telefonunu korkuluğa dayamış, bir açı arıyor; Dilan onun sırt çantasını tutuyor.
+  @sude: Deniz günlüğü için. Hep pencereden çekiyordum. Bugün teknenin başından. İlk kez başka bir açı.
+  >> eğer kirik.sude ve kirik.yaralanan == "ben"
+    @sude: Merhaba bu arada. Ayağın nasıl? Boyozdan beri merak ediyorum, yazmadım, yazmak fazla gibi geldi.
+  >> yoksa eğer kirik.sude
+    @sude: Merhaba bu arada. Onur'un ayağı nasıl? Az önce gördüm, iyi görünüyor ama abartıyor gibi.
+  >> yoksa
+    @sude: Merhaba bu arada. Bugün yelken yokmuş, Ela dersi iptal etti. Tekneye eşlik edecekmiş. Gelenekmiş. Bu kasabada çok gelenek var.
+Tekne iskeleden ayrılırken, limanın ağzında, beyaz bir kulüp motoru yanaşıyor; dümende Ela, tek başına, saçları rüzgârda.
+@ela: Kaptan Abi! Son sefere eşlik! Hüsnü Kaptan'ın emri! Gelenek!
+Kaptan elini kaldırıyor; selam mı, "git başımdan" mı, belli değil. Ela motoru teknenin yanına alıyor ve yanında gidiyor; tekne yavaş, motor kolay. Ela arada bir öne geçiyor, bir tur atıp yeniden yanına dönüyor; denizin üstünde bir köpek yavrusu gibi.
+
+>> zaman 30 Eylül 11:10
+>> yer Keçi Adası
+Keçi Adası yirmi dakika. İskelesi küçük, tahtaları yer yer çürümüş. İskeleden bir patika yukarı tırmanıyor; patikanın iki yanında yabani incir, böğürtlen, kurumuş otlar. Patikanın başında bir keçi duruyor, gelenlere bakıyor, kimseye yol vermiyor.
+Tepede bir kilise kalıntısı: üç duvar, bir apsisin yarısı, çatı yok. İçerisi güneş dolu. Duvarlarda eski bir sıvanın üstünde kazınmış isimler, tarihler, kalpler; bir tanesi 1974.
+Onur kalıntının ortasında durup elini duvara koyuyor.
+@onur: Burası Bizans. Ya da Ceneviz. İkisinden biri. Burada bir rahip yaşamış, adayı keçilerle paylaşmış, keçiler onu sevmiş, o da keçileri. Sonra korsanlar gelmiş.
+@onur: Ya da gelmemiş. Bizim fakültede bir çocuk anlattı.
+Emekli çift Onur'un anlattıklarını dinleyip fotoğraf çekiyor; adam Onur'a "bu bilgiyi nereden aldınız?" diye soruyor, Onur "bir kaynaktan" diyor.
+Tepenin öbür tarafında, kapanmak üzere olan kafe: dört masa, bir buzdolabı, bir adam. Adam sandalyeleri bir kayığa yüklüyor. Son gazozları satıyor, buzdolabını boşaltmak için yarı fiyatına.
+>> eğer defne.yakin >= 3
+  Defne kilise kalıntısının bir duvarına sırtını vermiş, termosundan kahve içiyor. Yanına gidiyorsun.
+  @defne: Her yıl buraya geliyorum. Son tekneyle. Gidenleri adadan uğurluyorum; yani kimseyi uğurlamıyorum, ada uğurluyor, ben de adanın yanında duruyorum.
+  @defne: Ritüel. Bir ritüel daha. Sende de olsun bir tane, yoksa günler birbirine karışır demiştim.
+  Duvardaki kazınmış isimlerden birine parmağıyla dokunuyor; dokunduğu yerde bir isim yok, yalnızca bir kazınma izi, okunmaz olmuş.
+  @defne: Bu da kimin, bilmiyorum. Her yıl dokunuyorum.
+>> eğer tekne.sude
+  Sude kalıntının apsisinde, gökyüzüne doğru telefonunu tutmuş; çatısız bir kiliseden gökyüzünün fotoğrafını çekiyor.
+  @sude: Burada bir tavan olmalıydı. Olmayınca bütün gökyüzü tavan oluyor. Bu bir metafor değil, gerçekten öyle. Ama metafor da olabilir.
+Ela tekneyi değil adayı da bırakmıyor; motoru iskeleye bağlamış, keçinin yanında oturmuş, keçiye bir şeyler anlatıyor. Keçi ikna olmuyor.
+
+>> zaman 30 Eylül 15:55
+>> yer Körfez, Ada III
+Dönüş saat dörtte. Kaptan dördü beş geçe kalkıyor; dördü dört geçe gelen iki öğrenciyi almak için, söylene söylene.
+Tekne körfezi geniş bir yayla dönüyor; Fener Burnu'nun önünden geçerken güneş sağdan vuruyor, tam Ilgın'ın dediği gibi. Burnun sırtında villalar; hepsinin panjurları kapalı, biri hariç. En büyüğü: beyaz, havuzlu, havuzun suyu buradan bile yeşilimsi.
+Villanın terasında, korkuluğa dayanmış biri. Bir kız; elinde bir dürbün. Dürbünü tekneye çevirmiş.
+@onur: Berkmenlerin kızı! Dürbünle bizi izliyor. Kanka, bize mi bakıyor?
+Kız dürbünü indirmiyor. El sallamıyor. Tekne geçip gidene kadar dürbün tekneyi izliyor, tekne gibi yavaş, tekneyle birlikte dönerek.
+>> eğer lara.lagun_raf veya lara.lagun_soru
+  Kadeh. Lagün'ün son gecesi, tezgâhın üstünde bıraktığı kadeh. Aynı kız.
+* (Sen de el salla.)
+  [lara.el_salladi]
+  El sallıyorsun. Dürbün bir an duruyor; sanki elini görmüş, sanki bir şeyi tartıyor. El sallamıyor. Ama dürbünü indirmiyor, tekne burnu dönene kadar.
+* (Bakma. Denize bak.)
+  Denize bakıyorsun. Onur bakmaya devam ediyor ve tekne burnu dönünce "indirmedi kanka, sonuna kadar baktı," diye rapor veriyor.
+Tekne limana yöneliyor. Güverte kalabalık; herkes bir yere yerleşmiş, yerini değiştirmek bir karar.
+Kıçta Defne, korkuluğun alt demirine oturmuş, ayaklarını sarkıtıp suya değdirmeye çalışıyor; ayakları yetişmiyor, her dalgada bir parmak kalıyor.
+>> eğer tekne.sude
+  Başta Sude, telefonuyla, dalgaların teknenin burnuna çarpışını çekiyor; Dilan arkada, gözleri kapalı, güneşte.
+Yanda, teknenin hemen yanında, Ela'nın motoru. Ela teknenin hızına uymuş; korkuluğa doğru bağırıyor.
+@ela: Çaylak! Atla! ATLA DEDİM! Motorda yer var, liman yarım saat, buradan on dakika!
+Kaptan dümenden bağırıyor: "Kimse atlamıyor benim teknemden!" Ela gülüyor.
+* (Kıça git. Defne'nin yanına otur.)
+  [tekne9 = "defne"]
+  [defne.yakin +1]
+  >> oyna b09_defne
+* {tekne.sude} (Başa git. Sude'nin yanına.)
+  [tekne9 = "sude"]
+  [sude.yakin +1]
+  >> oyna b09_sude
+* (Korkuluğa çık. Ela'nın motoruna atla.)
+  [tekne9 = "ela"]
+  [ela.yakin +1]
+  >> oyna b09_ela
+* (Ortada, Onur'un yanında kal.)
+  [tekne9 = "onur"]
+  >> oyna b09_onur
+
+>> zaman 30 Eylül 23:10
+>> yer Taş Mahalle, ev
+Gece, odada, saçında hâlâ tuz. Pencerenin çeyrek denizinde Keçi Adası görünmüyor; karanlığın içinde, nerede olduğunu biliyorsun.
+>> eğer tekne9 != "defne" ve defne.numara ve defne.yakin >= 2
+  Ekran yastığın yanında yanıyor.
+  >> yazışma defne
+    @defne: son tekne
+    @defne: her yıl biniyorum. her yıl ilk kez
+    @defne: [Fotoğraf: Teknenin kıçından köpüklü iz. Uzakta, küçülmüş, Keçi Adası. Çerçevenin köşesinde bir çift çıplak ayak, suya yetişmeyen.] ayaklarım bu yıl da yetişmedi. seneye
+    * seneye yetişir
+      [defne.yakin +1]
+      >> bekle 3dk
+      @defne: seneye. bir de sen söyleme. kimse söylemesin bunu
+      @defne: iyi geceler. bu bir slogan değil, gerçekten iyi geceler
+    * kıçta yer vardı. görmedim
+      >> bekle 2dk
+      @defne: vardı. görmedin. ikisi de doğru 🙂
+    * (Cevap verme.)
+>> yoksa eğer tekne9 != "sude" ve tekne.sude
+  Işığı kapattıktan sonra ekran bir kez yanıyor.
+  >> yazışma sude
+    @sude: İyi geceler.
+    @sude: [Fotoğraf: Teknenin burnundan deniz. Köpük. Ufukta Fener Burnu, küçük.] Deniz günlüğü, 14. gün. Bugün başka açı. İlk kez.
+    @sude: Pencereden değil. Teknenin üstünden. Fark ettim ki on üç gündür denize hep yukarıdan bakıyormuşum.
+    * bugünkü fotoğraf öbürlerinden güzel
+      [sude.yakin +1]
+      >> bekle 1dk
+      @sude: Teşekkür ederim. Bunu yazacağım. Yani hatırlayacağım. Yazmaya gerek yok.
+    * baş tarafa gelecektim
+      >> bekle 2dk
+      @sude: Gelmedin. Bunu bir sitem olarak söylemiyorum. Gözlem.
+      @sude: Yarın yelken var. Ayağın izin verirse.
+    * (Cevap verme.)
+>> yoksa
+  Telefon sessiz. Aşağıda Saniye Hanım'ın radyosu kapanıyor, sonra ışığı. Adada son kafenin sandalyeleri şimdi bir kayıkta, kayık şimdi bir yerde, karanlıkta.
+
+=== b09_defne
+tür: sahne
+kişi: defne
+
+Kıça yürüyorsun, sallanan güvertede. Defne seni görünce yerini değiştirmiyor; korkuluğun alt demirinde, yanında bir kişilik yer var, zaten vardı.
+Oturuyorsun. Ayakların suya yetişiyor; seninkiler daha uzun. Her dalgada topukların ıslanıyor.
+@defne: Haksızlık. Benim ayaklarım iki yıldır yetişmiyor, seninkiler ilk seferde.
+@defne: Bacakların uzunsa her şey kolay. Bunu bir slogan yapabilirim. Uzun bacak sigortası.
+Termosu uzatıyor; içinde kahve, soğumuş, şekerli.
+@defne: Ben sana kalan dedim ya. Kalanlar son tekneye binmez. Gidenler biner. Ben neden biniyorum biliyor musun?
+* "Neden?"
+  @defne: Bilmiyorum.
+  Gülüyor; gülüşün altında bir şey var, hemen kapatıyor.
+  @defne: Yani biliyorum. Ama sorunca bilmiyorum. Bir gün sormadan söylerim.
+  [defne.tekne_sorusu]
+* "Çünkü sen de gidenlerdensin aslında."
+  Defne kahveyi geri alıyor. Bir süre denize bakıyor.
+  @defne: Ay. Bu doğru olabilir. Bunu duymak istemedim.
+  @defne: Ben kalanlardan korkuyorum, gidenlerden değil. Belki ondan. Belki gidenlerden biriyim, kalanlar gibi yapıyorum.
+  [defne.yakin +1]
+  [defne.gidenlerden]
+* (Bir şey söyleme. Ayaklarını onunkilerin yanına koy, suya değdir.)
+  [defne.yakin +1]
+  Ayaklarını onunkilerin yanına koyuyorsun. Defne'ninkiler havada, seninkiler suda; bir dalga gelince ikinizinkini birden ıslatıyor, Defne'ninkini ilk kez. Defne bir an hiçbir şey söylemiyor.
+  @defne: Oldu.
+  @defne: İki yıldır olmuyordu. Senin ayakların suyu yukarı itti. Fizik. Ya da sen. Bilmiyorum.
+Fener Burnu arkada kalıyor. Defne başını çevirip villaya bakıyor; terastaki kız artık görünmüyor.
+@defne: O evin masasında benim tabaklarım var. Söylemiştim. Söylemiş miydim?
+@defne: Altmış parça. Temmuzda teslim ettim. Parasının yarısı hâlâ gelmedi.
+>> eğer defne.yakin >= 4
+  Bunu söyledikten sonra kendine kızıyor gibi; termosun kapağını fazla sıkı kapatıyor.
+  @defne: Bunu sana neden söyledim? Tekne. Tekneler insanı konuşturuyor. Bu yüzden ben bunlara yılda bir kere biniyorum.
+  [defne.borc_biliyor]
+>> yoksa
+  @defne: Neyse. Bunu bilme. Bilmesen daha iyi.
+Liman yaklaşıyor. Defne ayakkabılarını giyerken bir şey mırıldanıyor; sezonun son gecesi, Lagün'de, sözlerini yanlış söylediği şarkı.
+
+=== b09_sude
+tür: sahne
+kişi: sude
+
+Başa yürüyorsun. Sude seni görünce telefonunu indiriyor; sonra yeniden kaldırıyor, çünkü dalga tam o an teknenin burnuna çarpıyor ve bu fotoğrafı kaçırmak istemiyor.
+@sude: Pardon. Bir saniye. Bu dalga.
+Çekiyor. Ekrana bakıyor. Sana gösteriyor: köpük, deniz, ufukta küçük bir Fener Burnu.
+@sude: On dördüncü gün. On üç gündür hep pencereden çekiyorum, hep aynı açıdan, yukarıdan. Denize hep yukarıdan bakıyormuşum. Bugün fark ettim.
+Dilan arkada gözlerini açmadan "siz konuşun, ben yokum" diyor.
+>> eğer kirik.sude
+  @sude: Siz demeyi bıraktım bu arada. Fark ettin mi? Kırık Koy'dan beri. Suyun içinde "siz" demek garip geldi, sonra çıkınca da "siz" dönmedi.
+>> yoksa
+  @sude: Siz demeyi bıraktım bu arada. Fark ettin mi? Bir gün mesajda unuttum, sonra geri dönmedi. Kendi kendine oldu.
+* "Fark ettim."
+  [sude.yakin +1]
+  @sude: Bir şey söylemedin ama.
+  @sude: İyi ki söylemedin. Söyleseydin geri dönerdim galiba. Utanırdım.
+* "Siz daha güzeldi. Asistan gibi hissediyordum."
+  Sude gülüyor.
+  @sude: Asistanlığın bitti. Yeni bir unvan lazım sana. Düşüneceğim. Bu bir ödev.
+* {kirik.sude} "Kırık Koy'da 'dur' dedin. Sonra 'devam'. Hiç böyle biriyle karşılaşmamıştım."
+  [sude.yakin +1]
+  >> eğer kirik.sudeyle
+    @sude: Kural koymam lazımdı. Yoksa ya hiç girmezdim ya da korkudan boğulurdum. Kural ortası.
+    @sude: Kurala uyduğun için teşekkür ederim. Kurala uymayan insanlar tanıyorum, çoğu akrabam.
+  >> yoksa
+    Sude kaşlarını çatıyor.
+    @sude: Ben sana "dur" demedim. Kıyıdaydın sen. Dilan'a dedim.
+    @sude: Ya da beni izliyordun. Bu bir gözlem miydi? Ne gözlemledin?
+Bir dalga teknenin burnuna çarpıyor, serpintisi ikinizi birden ıslatıyor. Sude telefonunu göğsüne bastırıyor; kendisi ıslanıyor, telefon kuru kalıyor. Gülüyor.
+@sude: Telefon kurtuldu. Önceliklerim belli.
+@sude: Yarın sabah pencereden yine çekeceğim. Ama artık biliyorum, yukarıdan bakıyorum. Bilerek bakmak başka.
+
+=== b09_ela
+tür: sahne
+kişi: ela
+
+Korkuluğa çıkıyorsun. Kaptan bağırıyor; Onur "kanka yapma!" diyor ama sesi heyecanlı, yapmanı istiyor. Ela motoru teknenin dibine yanaştırıyor, iki gövde arasındaki su bir metre, bir metreden az.
+@ela: Şimdi!
+Atlıyorsun. Ayağın motorun ıslak zemininde kayıyor; Ela kolundan yakalayıp seni motorun ortasına çekiyor, sol eliyle.
+@ela: AHAHAHA. Atladı! Atladı lan! Kaptan Abi, atladı!
+Kaptan bir şey söylüyor, rüzgâr götürüyor. Ela gazı açıyor; motor tekneden ayrılıyor, burnu havaya kalkıyor, sonra suya iniyor. Yanından geçtiğiniz teknenin kıçında Defne korkuluğa yaslanmış, size bakıyor; güneş gözlüğünün arkasında ne var, görünmüyor.
+@ela: Tut. Dümeni tut.
+Dümen yekesini eline veriyor. Motor senin elinde bir anda sağa çekiyor; Ela elini senin elinin üstüne koyup düzeltiyor, sonra elini çekiyor.
+@ela: Hafif tut. Sıkma. Tekne sıkılınca kaçar, insan gibi.
+Bir süre sen sürüyorsun. Ela yanında oturmuş, rüzgâra karşı yüzünü kaldırmış, gözleri kapalı.
+@ela: Bu körfezi gözüm kapalı çizerim. Her şamandırayı, her kayayı. On dört yaşından beri. Yazları burada, kışları İzmir.
+@ela: Kış geliyor. Sen kalıyor musun? Kış boyu? Burada kışın kimse kalmaz. Kalanlar da yarısında gider.
+* "Kalıyorum."
+  [ela.yakin +1]
+  [ela.kaliyorum_dedi]
+  @ela: Hah. Net. Netliği severim.
+  @ela: Kaldığını göreceğiz ama. Söylemek kolay. Ocakta konuşuruz.
+* "Bilmiyorum. Bakarız."
+  [ela.yakin -1]
+  [ela.bakariz]
+  Ela gözlerini açıyor.
+  @ela: Bakarız ne lan.
+  Yekeyi elinden alıyor. Sert değil, ama kesin.
+  @ela: Ya kalırsın ya gidersin. Bakarız diye bir şamandıra yok, dönülmez. Neyse. Sen bilirsin.
+  Motorun gazını açıyor; bir süre konuşmuyor.
+* "Sen kalıyor musun?"
+  @ela: Ben mi? Ben buradayım. Bir de… neyse. Buradayım.
+  Bir şey söyleyecek gibi oluyor, rüzgârı bahane edip yüzünü çeviriyor. Sağ omzunu bir kez, belli belirsiz, döndürüyor; kontrol eder gibi.
+Liman yaklaşıyor. Ela yekeyi senden alıp motoru kulübün iskelesine yanaştırıyor; halatı atıyor, iskeledeki babaya tek hamlede sarıyor.
+@ela: Kaptan seni bir daha teknesine almaz bu arada. Bütün kasaba bilir yarın. "Ela'nın motoruna atlayan çocuk."
+@ela: Kötü bir şöhret değil. Daha kötüleri var.
+
+=== b09_onur
+tür: sahne
+
+Ortada, sıraların arasında, Onur'un yanında kalıyorsun. Onur ayağını öndeki sıraya uzatmış, kimse itiraz etmiyor.
+@onur: İyi yaptın. Kıçta Defne var, başta yelken kızı, yanda yelken hocası. Kim nereye gitse bir şey olur. Ortada hiçbir şey olmaz. Ortası güvenli.
+@onur: Ben hayatım boyunca ortada oturdum kanka. Yedi yıldır bu okuldayım. Ortada.
+Bunu bir espri gibi söylüyor ama sonunu getirmiyor; bir süre ikiniz de denize bakıyorsunuz. Kıçta Defne ayaklarını suya değdirmeye çalışıyor; başta Sude bir dalgayı çekiyor; yanda Ela'nın motoru bir tur atıp uzaklaşıyor, sonra geri geliyor, korkuluğa doğru bir şey bağırıyor, kimse duymuyor.
+@onur: Kanka. Bir şey sorucam. Sen gerçekten kalıyor musun? Kış boyu?
+* "Kalıyorum."
+  @onur: İyi. Ben de kalıyorum. Ben hep kalıyorum, ondan soruyorum. Biri de benimle kalsın istedim.
+* "Sen kalıyor musun peki? Yedinci yıl."
+  @onur: Ben kalmıyorum kanka. Ben gitmiyorum. Fark var. Kalmak bir karar, ben karar vermiyorum.
+  Bunu çok ciddi söylüyor; sonra fark edip gülüyor, ayağını öbür sıraya uzatıyor.
+* (Bir şey söyleme.)
+  Onur cevap beklemiyor. Başını teknenin direğine yaslıyor, gözlerini kapatıyor; liman yaklaşırken uyumuş gibi, uyumuyor.

@@ -1,0 +1,212 @@
+# Bölüm 10 — Meze
+# 2 Ekim, Perşembe. Vardiyada Rasim Efendi'nin telefonu; Nuri Abi'nin mezesi; Fener Burnu'ndaki villa; Lara. Gece 03:04.
+# Soru: Bir şeyi kaybederken nasıl iyi görünülür?
+
+=== b10
+tür: bölüm
+bölüm: 10
+başlık: Meze
+zaman: 2 Ekim 19:40
+yer: Liman, Mendirek
+kişi: lara
+
+Ekimin ilk perşembesi. Akşam serin; dış masalarda ilk kez hırkalar, sandalyelerin arkasına asılmış. Deniz karardıkça içerideki ağın gölgesi uzuyor, Nuri Abi'nin teknesinin fotoğrafı lambanın altında parlıyor.
+Palamut gelmemiş daha; Nuri Abi "haftaya" diyor, her sorana, aynı yüzle. Masalarda lüfer yok, levrek var, bir de Saadet Abla'nın enginar dolması, mevsimi değil ama "ben ne zaman istersem mevsim o," diyor.
+Servisin ortasında mutfaktaki telefon çalıyor. Eski, kablolu, duvara asılı bir telefon; çalınca bütün salon duyuyor. Nuri Abi açıyor. Dinliyor. Uzun dinliyor; dört kelimeyle iş veren adam bir dakika boyunca tek kelime etmiyor.
+@nuri: Tamam Rasim. Gönderiyorum.
+Telefonu kapatıp mutfağın kapısında duruyor. Saadet Abla tezgâhın başında, kaşığı havada, bekliyor.
+@nuri: Kız aç. Berkmen'in kızı.
+@saadet: Biliyorum. Hayriye söyledi pazarda. Bir haftadır doğru dürüst yemiyormuş. Hayriye yemek yapıyor, kız tabağa bakıyor, "sonra" diyor.
+@saadet: Sonra. Zengin çocuğu "sonra" der. Sonrası olmayınca da anlamaz.
+Nuri Abi bir poşete kap kap meze koyuyor: haydari, patlıcan, deniz börülcesi, bir kap enginar. Bir levrek, ızgaradan yeni çıkmış, kâğıda sarılı. Bir ekmek. Poşeti sana uzatıyor.
+@nuri: Götür. Fener Burnu. Büyük beyaz ev.
+@nuri: Para isteme, ayıptır. Verirse al.
+@cemal: Ben bakarım masalarına. Remzi'yi çağırdım, kapıda.
+Cemal sana göz kırpıyor; neye göz kırptığını bilmiyorsun, o da bilmiyor olabilir.
+>> eğer lara.lagun_raf veya lara.lagun_soru
+  Poşet elinde, kapıya yürürken aklına bir kadeh geliyor: Lagün'ün son gecesi, tezgâhın üstünde, haziranda getirilmiş bir kadeh.
+
+>> zaman 2 Ekim 20:25
+>> yer Fener Burnu, Berkmen Villası
+Fener Burnu'na giden yol kıvrıla kıvrıla tırmanıyor; Remzi Abi'nin taksisinin farları her virajda bir pırnal ağacına, bir kayaya, bir kapalı villanın kapısına vuruyor. Hepsinin panjurları kapalı. Biri hariç.
+Büyük beyaz evin bahçe kapısı demir, yarı açık. Kapının yanında küçük bir ev, bekçi evi; penceresinde sarı bir ışık, bir televizyonun mavisi. Kapıda yaşlı bir adam bekliyor, ince, yelek giymiş, elinde bir el feneri; feneri sana değil yola tutuyor.
+@rasim: Nuri gönderdi değil mi? Gel oğlum, gel. Yolu ben göstereyim, bahçe karanlık. Lambalar yanmıyor; ampul değil, başka şey.
+>> tanış rasim
+Bahçe karanlık. Patikanın iki yanında bakımsız kalmış çiçek tarhları; kurumuş lavanta, uzamış çimen. Evin önünde havuz: büyük, dikdörtgen, havuzun ışıkları yanık, ama su yeşil; ışık suyun içinden yeşil bir sis gibi çıkıyor. Havuzun kenarında bir şezlong, üstünde tek bir havlu.
+Rasim Efendi kapıya kadar gelmiyor; havuzun başında duruyor.
+@rasim: Ben buradan dönerim. Kapıyı çal. Açar. Açmazsa bir daha çal. Açar.
+Kapı büyük, ahşap. Zil çalıyor, içeride bir yerde, uzaktan; evin içi büyük ve boş olmalı ki ses bu kadar uzun gidiyor.
+Kapı açılıyor. Kapıyı açan kız gece elbiseli değil; gri bir eşofmanın içinde, çıplak ayak, saçı tepesinde gelişigüzel bir topuz. Ama topuzun gelişigüzelliği bile bir şekilde düzgün.
+Elindeki poşete bakıyor. Sonra sana.
+@lara(Eşofmanlı kız): Rasim Efendi mi gönderdi seni? Ben bir şey istemedim.
+@lara(Eşofmanlı kız): Yani istedim, ama Rasim Efendi'den değil. Kimden istediğimi de bilmiyordum. Neyse. Ver.
+Poşeti alıyor. İçine bakıyor; kokuyu alınca yüzünde bir şey değişiyor, bir saniye, saklıyor.
+@lara(Eşofmanlı kız): Ne kadar?
+Kapının yanındaki konsolun üstündeki deri bir cüzdandan bir kart çıkarıyor. Cebinden telefonunu çıkarıp bir yere bakıyor. Sonra sana kartı uzatıyor; Mendirek'in kart makinesi sende yok. Kızın yüzünde bir an şaşkınlık: makine yok.
+@lara(Eşofmanlı kız): Makine yok mu? Cidden mi? Herkesin makinesi var.
+* "Nuri Abi para istemedi. Hediye."
+  [lara.yakin -1]
+  [lara.hediye_dedi]
+  @lara(Eşofmanlı kız): Hediye.
+  Kelimeyi tekrarlıyor; içinde bir yerini acıtan bir şey var, ama gülümsemesi yerinde duruyor.
+  @lara(Eşofmanlı kız): Hediye almam ben. Nuri Abi'ye söyle, borcum olsun. IBAN ver, yarın atarım. Bankam random bir güvenlik şeyi yapıyor zaten, kart da bu akşam çalışmıyor olabilir.
+* "Makine yok. IBAN'a atabilirsiniz."
+  [lara.yakin +1]
+  @lara(Eşofmanlı kız): IBAN. Çok yerel bir çözüm. Bayıldım.
+  Telefonunu açıyor, bir uygulamaya giriyor; bir şey yazıyor, bir şey bekliyor. Ekran dönüyor, dönüyor. Kız bir daha deniyor. Ekran yine dönüyor.
+  @lara(Eşofmanlı kız): Bankam random bir güvenlik şeyi yapıyor. Akşamları böyle oluyor. Güvenlik. Herkes çok güvende, benim dışımda.
+* (Bir şey söyleme. Bekle.)
+  [lara.yakin +1]
+  [lara.bekledi]
+  Bekliyorsun. Kız telefonuna bir şey yazıyor, bekliyor, bir daha yazıyor. Bir süre ikiniz de kapının eşiğinde duruyorsunuz; kız telefonda, sen poşetin bıraktığı izle avucunda.
+  @lara(Eşofmanlı kız): Bankam random bir güvenlik şeyi yapıyor. Bu akşam. Sadece bu akşam.
+  Sana bakıyor; ikna olup olmadığını tartıyor.
+  @lara(Eşofmanlı kız): Sen bekledin. Kimse beklemez. Ya giderler ya ısrar ederler.
+Kız eşikte bir an daha duruyor. Sonra kapıyı sonuna kadar açıyor, bir adım geri çekiliyor.
+@lara(Eşofmanlı kız): Gir. Ya da girme. Ev büyük, bir kişi fark etmez. Ama mezeyi bir yere koymam lazım ve bu evde tabak nerede, bilmiyorum.
+* (Gir.)
+  [lara.girdi]
+* (Girme. "Nuri Abi bekliyor" de.)
+  [lara.girmedi]
+  @lara(Eşofmanlı kız): Nuri Abi bekliyor. Tabii. Herkesi biri bekliyor.
+  Kapıyı yarıya kadar kapatıyor, sonra yeniden açıyor.
+  -> kapi
+İçerisi büyük ve yarı karanlık. Salonun bir duvarı baştan sona cam; camın arkasında havuzun yeşil ışığı, ötesinde deniz, karanlık. Mobilyaların yarısının üstünde beyaz örtüler; yazlık evlerin kış uykusu, ama kış daha gelmedi. Uzun bir yemek masası, on iki sandalye, masanın üstünde hiçbir şey.
+Kız mutfağa geçiyor; dolapları sırayla açıp kapatıyor, tabakları arıyor. Dördüncü dolapta buluyor: beyaz, ağır, el yapımı tabaklar. Kenarlarında belli belirsiz bir kusur, sırrın bir yerde toplandığı bir damla.
+@lara(Eşofmanlı kız): Bunlar annemin. Bir seramikçiye yaptırdı, temmuzda. Altmış parça. Daha hiç kullanılmadı. Annem kullanmadan gitti.
+>> eğer defne.borc_biliyor
+  Altmış parça. Temmuz. Kıçta, termosun kapağını fazla sıkı kapatan bir el.
+>> yoksa eğer tanıdı(defne)
+  Tabağın kenarındaki damlaya bakıyorsun; bir yerden tanıdık.
+Kız mezeleri kutularından çıkarıp tabaklara koyuyor; acemice, ama özenle, bir tabağa bir kaşık, sonra düzeltip bir kaşık daha. Levreği kâğıdından çıkarıp büyük bir tabağa yatırıyor. Sonra telefonunu çıkarıp masaya, tabakların üstüne doğru tutuyor; ışığı ayarlıyor, bir mumu yakıp kadrajın kenarına koyuyor, bir peçeteyi katlayıp tabağın yanına bırakıyor.
+Fotoğrafı çekiyor. Ekrana bakıyor. Bir şey yazıyor. Paylaşıyor.
+@lara(Eşofmanlı kız): "Sessiz bir akşam yemeği." Kırk iki beğeni olur. Kırk iki kişi on iki kişilik bir masada bir kişilik bir yemek görecek ve kimse bunu fark etmeyecek.
+@lara(Eşofmanlı kız): Fark eden bir kişi var. Sen. Ama sen sayılmazsın, sen meze getiren kişisin.
+* "Kırk iki kişiye sessiz bir akşam yemeği. Bunu fark ettim, evet."
+  [lara.yakin +1]
+  Kız sana bakıyor; ilk kez gerçekten.
+  @lara(Eşofmanlı kız): Fark ettin ve söyledin. Cesur. Ya da kaba. Henüz karar vermedim.
+* "Yesene. Soğuyor."
+  [lara.yakin +1]
+  @lara(Eşofmanlı kız): Bana ne yapacağımı mı söylüyorsun?
+  Bir an duruyor. Sonra çatalı alıyor, levrekten bir parça koparıyor, ağzına götürüyor. Bir saniye gözlerini kapatıyor.
+  @lara(Eşofmanlı kız): Tamam. Haklısın. Bunu bir daha söylemem, kaydet.
+* "Fotoğraf güzel çıktı mı?"
+  @lara(Eşofmanlı kız): Fotoğraflar hep güzel çıkıyor. Sorun fotoğrafta değil.
+  Telefonu ekranı aşağı gelecek şekilde masaya koyuyor.
+Kız masanın başına oturuyor; on iki sandalyeden birine, en uçtakine. Sana bir sandalye göstermiyor ama yanındaki sandalyeyi ayağıyla biraz geri itiyor; oturmak istersen.
+@lara(Eşofmanlı kız): Seni bir yerden tanıyorum.
+@lara(Eşofmanlı kız): Son gece. Lagün. Garsondun. Ben bir masada oturuyordum, kadehim vardı, şampanya yoktu.
+@lara(Eşofmanlı kız): Sen beni gördün. Ben herkesi görmüştüm. Herkes beni gördüğünü belli etmemeye çalışıyordu, sen çalışmadın.
+>> eğer lara.lagun_raf
+  @lara(Eşofmanlı kız): Bir de kadehimi rafa koydun. Sildin. Sanki geri gelecekmişim gibi.
+  @lara(Eşofmanlı kız): Gelmedim. Lagün de yok artık zaten.
+@lara(Eşofmanlı kız): Lara bu arada. Bunu bilmiyordun herhalde. Herkes "Berkmenlerin kızı" diyor, adımı kimse kullanmıyor; ben de unutacaktım az kalsın.
+>> tanış lara
+* "Bankanın evinde oturan kız mı?"
+  [lara.yakin -1]
+  Lara'nın yüzü bir an kapanıyor. Sonra gülümsüyor, gülümsemesi keskin.
+  @lara: Onu da duydun demek. Kasaba çalışıyor.
+  @lara: Evet. Bu ev teknik olarak bankanın. Ben de bankanın evinde oturan bir kızım. Çok edebi, biliyorum. Bunu ben söyleyince komik, başkası söyleyince değil. Kaydet.
+* "{ad}."
+  [lara.yakin +1]
+  [lara.adini_bildi]
+  @lara: {ad}. Tamam. Seni rehbere "meze" diye kaydedecektim. Değiştirmem gerekecek.
+* (Bir şey söyleme. Mezeden bir parça al.)
+  Kendi önüne bir tabak çekmeden, onun tabağından bir parça enginar alıyorsun. Lara bunu izliyor; kaşı kalkıyor, sonra iniyor.
+  @lara: Benim tabağımdan yedin. Bunu kimse yapmaz. Bu evde kimse yapmazdı.
+  @lara: Bir daha yap.
+Kapının önünden, bahçeden, Rasim Efendi'nin fenerinin ışığı geçiyor; bir tur atıyor, uzaklaşıyor.
+@lara: Rasim Efendi bütün gün beni izliyor. Maaşını üç aydır alamadı. Gitmiyor. Ben olsam giderdim.
+@lara: Gitmezdim. Bilmiyorum.
+Bir süre konuşuyorsunuz; daha doğrusu Lara konuşuyor: Londra'nın yağmurundan, İngilizlerin dondurmayı kışın yemesinden, bir sergiden. Hiçbir şey anlatmıyor; çok şey anlatıyor. Babasının adı bir kez bile geçmiyor. Annesinin adı bir kez, tabaklarla birlikte.
+Saat dokuzu geçince telefonun cebinde titriyor; Cemal: "nuri abi soruyo, kız yedi mi". Lara mesajı yüzünden okuyor.
+@lara: Git. Seni bekliyorlar. Herkesi biri bekliyor; ben bekleyenim, bunu söyleyince garip oldu.
+-> kapi
+
+:: kapi
+>> eğer değil tanıdı(lara)
+  @lara(Eşofmanlı kız): Lara bu arada. Herkes "Berkmenlerin kızı" diyor. Adımı kimse kullanmıyor, sen kullan.
+  >> tanış lara
+Kapının eşiğinde Lara telefonunu çıkarıyor.
+@lara: Numaranı ver. Ya da IBAN'ını. İkisi de olur. Para yarın.
+>> eğer lara.adini_bildi
+  Numaranı söylüyorsun. Lara yazıyor, sonra bir an duruyor, yazdığını siliyor, yeniden yazıyor.
+>> yoksa
+  Numaranı söylüyorsun. Lara yazıyor; adını sormuyor.
+  @lara: Seni "meze" diye kaydettim. Değiştirirsem söylerim.
+[lara.numara_verdi]
+Kapı kapanmadan önce Lara'nın arkasında, salonun cam duvarında, havuzun yeşil ışığı titriyor. Kapı kapanıyor.
+Havuzun başında Rasim Efendi bekliyor. Seninle birlikte bahçe kapısına yürüyor; feneri yine yola tutuyor.
+@rasim: Yedi mi?
+* "Yedi."
+  >> eğer lara.girdi
+    Rasim Efendi başını sallıyor. Bir şey diyecek, demiyor; fenerini bir an kendi yüzüne tutup söndürüyor, sanki gözü yaşarmış da kimse görmesin.
+  >> yoksa
+    @rasim: Gördün mü yediğini?
+    Görmedin. Rasim Efendi bunu anlıyor.
+    @rasim: Yer. Kapıdan dönünce yer. Kapıda kimse yemez.
+* "Bilmiyorum."
+  @rasim: Bilmezsin. Kapıda kimse yemez. Kapı kapanınca yer, ya da yemez; onu da ben sabah tabaktan anlarım.
+@rasim: Hayriye her gün yemek yapıyor. Kız tabağa bakıyor, "sonra" diyor. Senin getirdiğini yedi ama. Nuri'nin balığını kimse geri çevirmez. Babası da çevirmezdi.
+@rasim: Selim Bey. İyi adamdı. Yani bana iyiydi. Başkalarına bilmem.
+Bahçe kapısında Remzi Abi'nin taksisi bekliyor, motor çalışıyor. Yokuştan aşağı inerken arka camdan bakıyorsun: beyaz ev, yeşil havuz, salonun cam duvarında tek bir mum.
+
+>> zaman 3 Ekim 01:10
+>> yer Taş Mahalle, ev
+Kapanıştan sonra eve dönüyorsun. Cemal "kız yedi mi" diye üç kez soruyor; Nuri Abi bir kez bile sormuyor, ama köşedeki masada kadehini kaldırırken sana bakıyor ve başını bir kez sallıyor.
+Yatağa uzandığında saat bir buçuk. Tavana bakıyorsun. Uyumuşsun.
+>> zaman 3 Ekim 03:04
+Telefon başucunda titriyor.
+>> yazışma lara
+  @lara: selam yabancı
+  @lara: meze iyiydi
+  @lara: para yarın
+  >> bekle 1dk
+  @lara: yani bugün. saat üç oldu
+  @lara: boşver
+  >> rehber lara: Lara | Berkmen | Fener Burnu
+  * uyanığım
+    [lara.yazisti]
+    [lara.yakin +1]
+    >> bekle 3dk
+    @lara: biliyordum
+    @lara: yani bilmiyordum. umuyordum. ikisi aynı şey değil ama saat üçte aynı
+    @lara: levrek çok iyiydi. nuri'ye söyle. söyleme. söyle
+    * söylerim
+      >> bekle 2dk
+      @lara: kimse bu evde bana yemek getirmedi. yani hayriye getiriyor. ama o başka. o işi o
+      @lara: neyse
+      @lara: yat artık yabancı
+    * kendin söyle. mendirek'e gel bir akşam
+      [lara.mendirek_davet]
+      [lara.yakin +1]
+      >> bekle 4dk
+      @lara: mendirek'e. ben. bir meyhaneye
+      @lara: belki. bunu "belki" diye kaydet, "hayır" diye değil
+      @lara: iyi geceler
+  * uyanığım. para önemli değil.
+    [lara.yazisti]
+    [lara.nokta]
+    >> bekle 1dk
+    @lara: nokta koydun
+    @lara: niye nokta koydun
+    @lara: kızgın mısın şu an
+    * değilim. alışkanlık
+      >> bekle 2dk
+      @lara: alışkanlık. tamam. bırak o alışkanlığı
+      @lara: para önemli. senin için değil benim için. yarın atacağım
+      @lara: iyi geceler yabancı
+    * biraz uykuluyum sadece
+      >> bekle 2dk
+      @lara: uykulu nokta. bunu bilmiyordum. not ettim
+      @lara: iyi geceler
+  * para yok mu bende? sen yarın atarsın, ben dün getirdim. ödeştik
+    [lara.yazisti]
+    >> bekle 5dk
+    @lara: ödeştik
+    @lara: hiç ödeşmedim kimseyle. hep ya ben ödedim ya babam
+    @lara: neyse. boşver bunu da. saat üç
+  * (Cevap verme. Sabah bakarsın.)
+    [lara.ghost_ilk]
+Ekran kararıyor. Pencerenin çeyrek denizinde, Fener Burnu'nun ışığı dönüyor; bu gece, ilk kez, o ışığın altında kimin uyumadığını biliyorsun.

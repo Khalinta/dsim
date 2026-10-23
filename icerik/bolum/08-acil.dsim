@@ -1,0 +1,184 @@
+# Bölüm 8 — Acil
+# 27 Eylül, Cumartesi; gece üçten sabaha. Devlet Hastanesi'nin acili; Ceren ile tanışma. Sabahçı Fırını.
+# Soru: Kim seni ilk kez yaralıyken görüyor?
+
+=== b08
+tür: bölüm
+bölüm: 8
+başlık: Acil
+zaman: 27 Eylül 03:05
+yer: Devlet Hastanesi, acil servis
+kişi: ceren
+ton: gece
+
+Taksi Remzi Abi'nin; Onur'un telefonunda "Taksi Remzi (her saat)" diye kayıtlı. Arka koltuğa sığışıyorsunuz, ıslak, tuzlu, kumlu. Remzi Abi aynadan bakıp "Kırık Koy," diyor, soru değil. Her eylül sonu aynı yolcular.
+>> eğer kirik.yaralanan == "onur"
+  Onur'un ayağı senin kucağında, havada; her virajda bir inilti, her inilti bir öncekinden daha tiyatral.
+>> yoksa
+  Ayağın Onur'un kucağında, havada; her virajda tabanında bir ateş. Onur ayağını tutarken telefonuyla fenerle tabanına bakıyor, her baktığında "oha" diyor, yardımcı olmuyor.
+Devlet Hastanesi'nin acili seksenlerden kalma bir bina; girişte bir rampa, rampanın başında sigara izmaritleri. Bekleme salonunda turuncu plastik sandalyeler, bir televizyon, sessiz, bir haber kanalı açık. Köşede bir çay makinesi; üstüne yapıştırılmış bir kâğıt, köşeleri sararmış: ARIZALI. Kâğıdın altında, tükenmezle, başka bir el yazısı: "2 yıldır."
+Gece üçte salonda başka iki kişi var: başında sargıyla uyuklayan bir adam, ve yanında, adamın başını omzuna yaslamış, gözleri açık bir kadın.
+>> eğer kirik.ela
+  Ela kapıda kalıyor. İçeri girip girmemeyi tartıyor gibi; sonra giriyor, en uzaktaki sandalyeye oturuyor, kapıya en yakın olana.
+>> eğer kirik.sude
+  Sude ile Dilan sizin arkanızdan giriyor; Sude çantasını kucağında tutuyor, etrafa bakıyor, her şeyi kaydediyor: tavandaki lekeyi, çay makinesini, kâğıttaki iki ayrı el yazısını.
+Triyaj masasında elli yaşlarında, kısa saçlı, gözlüğü başının üstünde bir hemşire. Önlüğünün cebinde üç kalem, biri bir gözlükle karışmış.
+@hatice: Kırık Koy mu? Deniz kestanesi mi? Gelin bakalım.
+@hatice: Her yıl eylülün son cuma gecesi. Takvime bakmadan bilirim, kapıdan girenin ayakkabısından bilirim.
+>> tanış hatice
+Muayene odası küçük ve fazla aydınlık; floresanın biri titriyor. Bir sedye, bir lavabo, bir dolap, dolabın camında bir kâğıt: EL HİJYENİ. Hatice Hemşire bir küvete ılık su dolduruyor.
+Perde açılıyor. İçeri giren kadın yirmili yaşlarının sonunda; yeşil bir önlük, saçı arkada sıkıca toplanmış, birkaç tel kaçmış. Yüzünde gecenin kaçıncı saati olduğunu söyleyen bir yorgunluk, ama gözleri bütünüyle açık. Boynunda, önlüğün yakasının içinde, ince bir zincir; zincirin ucunda bir şey, önlüğün içinde kaybolmuş.
+Sedyeye, ayağa, sonra size bakıyor; sırayla, bir liste okur gibi.
+@ceren: Deniz kestanesi. Gece üçte.
+@ceren: Ayağını ben mi tutayım, sen mi tutacaksın?
+>> eğer kirik.yaralanan == "onur"
+  Soruyu sana soruyor; Onur'a değil. Onur zaten ayağını tutacak hâlde değil, gözlerini kapatmış, dua ediyor.
+  * "Ben tutarım."
+    [ceren.yakin +1]
+    @ceren: İyi. Sıkı tut. Bilekten. Çekerse bırakma, o çeker, sen bırakmazsın. Anlaştık mı?
+    Onur'un bileğini tutuyorsun. Doktor bir iğneyle, bir cımbızla, tabanın üstüne eğiliyor.
+  * "Siz tutun, ben bakamam."
+    @ceren: Peki. Hatice Abla tutsun o zaman, ben çalışayım. Sen bakma.
+    Hatice Hemşire Onur'un bileğini alıyor. Sen başını çeviriyorsun; duvardaki EL HİJYENİ kâğıdını, sonra yeniden okuyorsun.
+>> yoksa
+  * "Ben tutarım."
+    @ceren: Kendi ayağını kendin tutamazsın. Denedim, olmuyor. Tıp fakültesinde ilk öğrendiğimiz şey bu, yalan.
+  * "Siz tutun."
+    [ceren.yakin +1]
+  @ceren: Peki. Ben tutuyorum. Bakma.
+  Ayak bileğini avucuna alıyor; eli soğuk, eldivenin içinde.
+@ceren: Hatice Abla, sıcak su. Bir de büyüteç, şu kırmızı saplı.
+@ceren: Bakma dedim.
+İğne tabanın derisine giriyor, çıkıyor; cımbız bir şey yakalıyor, bırakıyor, yeniden yakalıyor. Her çıkan dikeni metal bir küvetin kenarına bırakıyor; dikenler siyah, ince, küçük bir yığın oluyor.
+>> eğer kirik.yaralanan == "onur"
+  Onur her dikende bir şey söylüyor: önce "ah", sonra "ananı", sonra "pardon doktor hanım", sonra yeniden "ah". Doktor hiçbir şey söylemiyor, sayıyor.
+>> yoksa
+  Her dikende ayağın kendi kendine çekilmek istiyor; doktorun eli bırakmıyor. Bir noktada nefesini tutuyorsun; doktor başını kaldırmadan "nefes al," diyor, "nefes tutmak hiçbir şeyi çıkarmaz."
+@ceren: On bir. On iki.
+@ceren: Bir tanesi derinde, kalsın. Vücut onu kendisi atar, bir haftada. Biz vücuttan daha iyi değiliz, sadece daha hızlıyız.
+>> tanış ceren
+>> eğer kirik.sude
+  Sude perdenin kenarında, Dilan'ın omzunun üstünden izliyor; doktorun ellerini, cımbızı, küveti. Gözünü ayırmıyor.
+  @sude: Kaç yıl okudunuz?
+  @ceren: Altı. Sonra bir yıl intörnlük, sonra burada. Yani yedi, sekiz. Saymayı bıraktım, sayınca daha uzun geliyor.
+  @sude: Ben de Tıp istiyordum.
+  Doktor ilk kez başını kaldırıp Sude'ye bakıyor; bir saniye, dikkatle, bir hastaya bakar gibi değil.
+  @ceren: İyi ki olmamış.
+  @ceren: Bak bana.
+  Sude bir şey söylemiyor. Çantasından bir kalem çıkarıp elinin üstüne, bileğinin hemen üstüne, küçük harflerle bir şey yazıyor. Görmüyorsun ne yazdığını; ama defterine değil, kendi derisine yazıyor.
+  [sude.ceren]
+>> eğer kirik.ela
+  Ela bir ara perdenin arasından başını uzatıyor; durum nedir, bakmaya.
+  Doktor onu görüyor. Cımbız havada duruyor.
+  @ceren: Omuz?
+  @ela: İyi.
+  @ceren: MR?
+  @ela: Çektirdim.
+  @ceren: Çektirmedin.
+  Ela perdeyi bırakıyor; perde sallanıyor, sallanmaya devam ediyor. Bekleme salonundan sandalyenin plastiği gıcırdıyor, sertçe.
+  Doktor cımbızı yeniden indiriyor.
+  @ceren: Bu kasabada herkesin bir yarası var ve hiçbiri benim değil. Ama hepsini ben hatırlıyorum.
+  [ela.omuz_duydu]
+Hatice Hemşire ayağı sıcak suya yatırıyor. Su önce yakıyor, sonra iyi geliyor. Doktor eldivenlerini çıkarıp çöpe atıyor, ellerini uzun uzun yıkıyor; ellerini yıkarken aynada kendi yüzüne bakmıyor.
+@ceren: Yarım saat suda. Sonra tentürdiyot, sargı. İki gün sonra pansuman, iki günde bir. Kızarırsa, şişerse, ateş yaparsa gelin. Gelmeyin diye söylüyorum aslında.
+Perdeyi aralayıp çıkıyor. Hatice Hemşire arkasından bakıyor, sonra size dönüyor.
+@hatice: Ceren Hanım. Bu gece yirmi saattir ayakta. Ona çay ısmarlayacak biri olsa iyi olurdu ama makine bozuk. İki yıldır.
+
+>> zaman 27 Eylül 03:50
+Yarım saatin ortasında bekleme salonu fazla dar geliyor. Tuvaleti sorup koridorun sonuna yürüyorsun; koridorun sonunda bir kapı, kapının üstünde yeşil bir ÇIKIŞ ışığı. Kapı aralık; dışarıdan serin hava ve sigara.
+>> eğer kirik.yaralanan == "ben"
+  Sargısız ayağınla, ıslak çorabınla, topallayarak.
+Arka kapının önünde, bir rampanın kenarında, doktor oturuyor; önlüğünün üstünde bir hırka. Yanında Hatice Hemşire, iki parmağının arasında bir sigara. Doktorun elinde de bir sigara; yakmamış, parmaklarının arasında çeviriyor.
+Seni görünce Hatice Hemşire kaşlarını kaldırıyor; sonra sigarasını yere atıp ezip içeri giriyor. Geçerken sana değil, doktora bir şey söylüyor, alçak sesle: "Beş dakika."
+Doktor sigarasını yakıyor. Seni süzüyor; bir hastaya bakar gibi değil, bir yabancıya bakar gibi de değil.
+@ceren: Doktorum, biliyorum.
+Sigarayı gösteriyor. Söylemen gereken şeyi önceden söylemiş.
+@ceren: Kaç yaşındasın?
+* "Yirmi bir."
+* "Neden sordunuz?"
+  @ceren: Hasta bilgilerinde yazıyor ama bakmadım. Sana sormak daha kısa.
+  Söylüyorsun.
+* "Siz kaç yaşındasınız?"
+  @ceren: Soruya soruyla. Yirmi yedi. Bu ilişkide bir şey değiştirmiyor, ben doktorum, sen yaralısın.
+  Sonra senin yaşını bekliyor. Söylüyorsun.
+@ceren: Yirmi bir.
+Dumanı yukarı, ÇIKIŞ ışığına doğru üflüyor.
+@ceren: Ben yirmi bir yaşındayken anatomi sınavında bayılmamaya çalışıyordum. Sen garsonluk yapıyorsun. Kırık Koy'da gece yüzüyorsun.
+@ceren: Tamam. Seninki daha iyi.
+* "Garsonluk yaptığımı nereden biliyorsunuz?"
+  [ceren.yakin +1]
+  @ceren: Ellerin. Limon kokuyor, ıslakken bile. Bir de tırnaklarının kenarı, deterjandan. Ben de üniversitede bir yaz kafede çalıştım, bir yaz. Annem duyunca "ne gerek var" dedi.
+  Bunu söyledikten sonra, söylediğine biraz şaşırmış gibi, sigarasına bakıyor.
+* "Burayı seviyor musunuz?"
+  [ceren.yakin +1]
+  @ceren: Burası mı? Acil mi, Pırnallı mı?
+  @ceren: Acili seviyorum. Pırnallı'da mahkûmum. Mecburi hizmet. İyi hâlden iki yıl. Ankara'dan geldim, Ankaralılar denize bakmayı bilmez, ben de bilmiyordum. Öğreniyorum.
+* "Yirmi saattir ayaktaymışsınız. Hatice Hemşire söyledi."
+  @ceren: Yirmi bir. Şimdi yirmi bir oldu. Senin yaşın.
+  @ceren: Hatice Abla benim annem değil ama ondan daha çok anne. Bunu ona söyleme.
+* (Bir şey söyleme. Duvara yaslan, dumanın gidişine bak.)
+  [ceren.yakin +2]
+  [ceren.sessiz]
+  Bir şey söylemiyorsun. Doktor da söylemiyor. Bir süre yalnızca uzaktan bir ambulansın sireni, sonra o da yok. Hastanenin arkasında, yamaçta, bir köpek havlıyor.
+  Sigarasının yarısında doktor konuşuyor; sana değil, karanlığa.
+  @ceren: Bütün gece insanlar konuşuyor. Sen konuşmadın. Teşekkür ederim.
+Sigarasını söndürüp izmariti bir pet şişenin içine atıyor; şişe yarıya kadar dolu.
+@ceren: Beş dakika bitti. Ayağın suda olmalı. Hadi.
+
+>> zaman 27 Eylül 04:40
+Tentürdiyot, gazlı bez, bir sargı. Hatice Hemşire sararken bir yandan başka bir hastaya "geliyorum yavrum" diyor; hiç yavaşlamadan, hiç yanlış sarmadan.
+Doktor bir taburcu kâğıdı dolduruyor; tükenmez kalem, hızlı, okunmaz bir el yazısı. Altına bir imza: Dr. C. Uysal. İmza yazının geri kalanından daha okunaklı.
+Kâğıdı uzatırken bir an duruyor.
+@ceren: Pansuman iki günde bir. Eczanede yaptırırsınız. Bir sorunuz var mı?
+* "Enfeksiyon olursa ne yapayım?"
+  [ceren.numara]
+  [ceren.yakin +1]
+  Kâğıdı geri alıyor. İmzanın altına, aynı hızlı el yazısıyla, bir numara yazıyor.
+  @ceren: Enfeksiyon olursa. Acili değil, beni.
+  @ceren: Acil numarasından beni bulamazsınız, santral kapatır. Bu daha kısa.
+  Hatice Hemşire sargıyı bağlarken kaşlarını kaldırıyor; doktora değil, sargıya bakarak.
+  >> rehber ceren: Ceren | Dr. Uysal | Acil
+* "Pansumanı kim yapacak?"
+  @ceren: Yeni Eczane. Ilgın Hanım. Benden iyi sarar, benden az konuşur.
+  @ceren: Kâğıdı göster, imzamı tanır. Şehirdeki reçetelerin yarısı benim imzam.
+* "Teşekkür ederim. Gece üçte."
+  @ceren: Gece üç benim mesai saatim. Teşekküre gerek yok. Ama alındı.
+  Kâğıdı uzatıyor; bir an, kâğıdın öbür ucunu bırakmadan tutuyor, sonra bırakıyor.
+* (Bir şey sorma. Kâğıdı al.)
+  Kâğıdı alıyorsun. Doktor bir sonraki perdeye gidiyor; perdeyi açmadan önce bir an duruyor, saçının kaçmış tellerini kulağının arkasına iliştiriyor, sonra perdeyi açıyor.
+
+>> zaman 27 Eylül 05:30
+>> yer Çarşı, Sabahçı Fırını
+Hastaneden yokuş aşağı, taksisiz. Remzi Abi bir başka Kırık Koy yolcusuna gitmiş. Gökyüzü doğuda koyu mavi, batıda hâlâ siyah. Yokuşun sonunda çarşı, çarşının ortasında tek bir ışık: Sabahçı Fırını.
+>> eğer kirik.yaralanan == "onur"
+  Onur bir ayağı sargılı, kolu senin omzunda; her basamakta bir şikâyet, her şikâyetin arasında bir şaka.
+>> yoksa
+  Sargılı ayağınla topallayarak; Onur yanında, her basamakta bir şaka.
+>> eğer kirik.sude
+  Sude ve Dilan arkanızda. Sude saatine bakıyor: konumu Dilan'ın kuzeninin evinde uyuyor, telefonu şarjda; annesi yedide uyanacak, yedi buçukta "günaydın" yazacak. İki saati var. Bunu yüksek sesle hesaplıyor.
+Fırının kapısı açık, içeriden sıcak hamur ve susam kokusu sokağa taşmış. Tezgâhın arkasında unlu kollarıyla iri bir adam, yanında eski bir radyo; radyoda sabah haberleri.
+Spiker bir şey söylüyor. Fırıncı hamuru keserken başını kaldırmadan cevap veriyor.
+@rahmi: Yalan.
+Spiker bir şey daha söylüyor.
+@rahmi: Bu da yalan.
+Spiker hava durumunu okuyor: gün güneşli, yirmi altı derece, akşama doğru kuzeyden hafif rüzgâr.
+@rahmi: Bu doğru ama eksik. Akşama yağmur kokusu var. Ekimin ilk haftası. Söylemiyorlar.
+Fırıncı tepsiden dört boyoz alıp kâğıda sarıyor; size bakmadan uzatıyor.
+@rahmi: Kırık Koy. Belli. İlk boyoz bedava, her eylül. Sonrakiler parayla.
+>> tanış rahmi
+Fırının önündeki tek tahta bankta oturuyorsunuz. Boyoz sıcak, yağlı, katmanları ağızda dağılıyor.
+>> eğer kirik.sude
+  Sude ilk lokmayı alıyor ve duruyor.
+  @sude: Bu ne?
+  @sude: Boyoz mu bu? Boyozu neden kimse bana söylemedi? İki haftadır buradayım. İki hafta! Kimse!
+  @dilan: Sana söyledim. İki kere.
+  @sude: Söylemedin. Yani söyledin ama anlatmadın. Bu böyle anlatılmaz, yenir.
+  Bileğinin üstündeki mürekkep, yağlı parmaklarının altında hafifçe dağılmış. Sude bileğine bakıyor, kelimeyi kendi kendine tekrar ediyor, sonra Dilan'ın kolundan tutup kalkıyor: altı buçuk, iki saat bitiyor.
+  @sude: Bu gece… Bu gece hayatımın en tuhaf gecesiydi. Bunu iyi anlamda söylüyorum. Tamamen iyi anlamda. Hesaplamayı sonra yapacağım.
+>> eğer kirik.ela
+  Ela sizinle fırına gelmiyor; hastanenin önünde, sigara içmeyen biri olarak sigara içenlerin yanında bir süre duruyor, sonra bisikletine binip gidiyor. Bisikletin zinciri yokuşun yarısında çıkıyor; uzaktan, gecenin son karanlığında, Ela'nın küfrü geliyor, sonra zinciri takıp gidişi.
+Onur boyozunun yarısını yiyip öbür yarısını sana uzatıyor.
+@onur: Kanka. Bu gece tarih yazıldı. Ben destek ekibiydim ve yaralandım. Bunu kimse hatırlamayacak ama ben hatırlayacağım.
+>> eğer kirik.yaralanan == "ben"
+  @onur: Yani sen yaralandın. Ama ben de oradaydım. Tarih ikimizi yazacak.
+Gün ağarıyor. Fırının camında güneşin ilk ışığı; Rahmi Usta'nın radyosu bir şarkıya geçmiş, o da şarkıya itiraz etmiyor, bir kere bile.
