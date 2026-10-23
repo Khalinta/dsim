@@ -15,13 +15,45 @@ export function rastgeleUretici(tohum) {
   };
 }
 
-// strateji: 'rastgele' | 'ilk' | 'son'
+// strateji: 'rastgele' | 'ilk' | 'son' | 'özenli'
 // eylemIstegi: kilit ekranında yazılmış bir eylemi seçme olasılığı (düşükse robot "tembel" oynar).
-export function oyna(icerik, { tohum = 1, strateji = 'rastgele', ad = 'Kaan', adimSiniri = 5000, eylemIstegi = 0.7 } = {}) {
+// 'özenli': bir karaktere (ilgi) özen gösteren oyuncu. Her seçimde seçenekleri oyunun bir kopyasında
+// dener, puan(durum.d) en yüksek olanı seçer; mesajlara hep cevap verir, o karakterin eylemlerini önce seçer.
+export function oyna(icerik, { tohum = 1, strateji = 'rastgele', ad = 'Kaan', adimSiniri = 5000, eylemIstegi = 0.7, ilgi = null, puan = null } = {}) {
   const rng = rastgeleUretici(tohum);
   const sec = (n) => (strateji === 'ilk' ? 0 : strateji === 'son' ? n - 1 : Math.floor(rng() * n));
+  const ozenli = strateji === 'özenli';
+  const puanla = puan || ((d) => d[`${ilgi}.yakinlik`] || 0);
   const oyun = new Oyun(icerik);
   oyun.basla(ad);
+
+  // Bir seçimin hemen sonrasını kopyada oynatıp puanlar.
+  const kopyadaDene = (uygula) => {
+    const k = new Oyun(icerik, JSON.parse(oyun.disaVer()));
+    uygula(k);
+    for (let n = 0; n < 60; n++) {
+      if (k.sahne) {
+        const s = k.sahne;
+        if (s.bitti) { k.sahneKapat(); continue; }
+        if (!s.akis.secim) { k.sahneDevam(); continue; }
+        k.sahneSec(s.kayit[s.kayit.length - 1].secenekler[0].i);
+        continue;
+      }
+      const y = k.yakinOlay();
+      if (!y) break;
+      k.ilerle(y.t);
+    }
+    return puanla(k.durum.d);
+  };
+  const enIyi = (secenekler, uygula) => {
+    let iyi = secenekler[0];
+    let iyiPuan = -Infinity;
+    for (const x of secenekler) {
+      const p = kopyadaDene((k) => uygula(k, x));
+      if (p > iyiPuan) { iyiPuan = p; iyi = x; }
+    }
+    return iyi;
+  };
 
   const dokum = [];
   const gorulenSatirlar = [];
@@ -98,7 +130,8 @@ export function oyna(icerik, { tohum = 1, strateji = 'rastgele', ad = 'Kaan', ad
         continue;
       }
       const secenekler = sonBlok.secenekler;
-      bloklariYaz(oyun.sahneSec(secenekler[sec(secenekler.length)].i));
+      const secilen = ozenli ? enIyi(secenekler, (k, x) => k.sahneSec(x.i)) : secenekler[sec(secenekler.length)];
+      bloklariYaz(oyun.sahneSec(secilen.i));
       continue;
     }
 
@@ -110,10 +143,12 @@ export function oyna(icerik, { tohum = 1, strateji = 'rastgele', ad = 'Kaan', ad
     for (const { kisi } of oyun.sohbetler()) {
       const s = oyun.secenekler(kisi);
       if (s.tur === 'yok') continue;
-      if (s.tur === 'açılış' && rng() > 0.35) continue;
-      if (s.tur === 'cevap' && rng() > 0.8) continue;
+      if (s.tur === 'açılış' && (ozenli || rng() > 0.35)) continue;
+      if (s.tur === 'cevap' && !ozenli && rng() > 0.8) continue;
       oyun.oku(kisi);
-      const secilen = s.secenekler[sec(s.secenekler.length)];
+      const secilen = ozenli && s.tur === 'cevap'
+        ? enIyi(s.secenekler, (k, x) => k.cevapla(kisi, x.i))
+        : s.secenekler[sec(s.secenekler.length)];
       mesajlariYaz();
       gunBasligi();
       if (s.tur === 'rehber') yaz(`*→ ${oyun.gorunenAd(kisi)} rehbere "${secilen.metin}" olarak kaydedildi*`);
@@ -128,7 +163,9 @@ export function oyna(icerik, { tohum = 1, strateji = 'rastgele', ad = 'Kaan', ad
 
     const eylemler = oyun.eylemler();
     const icerikli = eylemler.filter((e) => !e.yerlesik);
-    const e = icerikli.length && rng() < eylemIstegi ? icerikli[sec(icerikli.length)] : eylemler[eylemler.length - 1];
+    const e = ozenli
+      ? (icerikli.find((x) => x.kimlik.startsWith(`${ilgi}_`)) || icerikli.find((x) => /^(vardiya|ders)/.test(x.kimlik)) || icerikli[0] || eylemler[eylemler.length - 1])
+      : icerikli.length && rng() < eylemIstegi ? icerikli[sec(icerikli.length)] : eylemler[eylemler.length - 1];
     gunBasligi();
     if (e.yerlesik) yaz(`\n*${saatYaz(oyun.t)} · ${e.baslik}*`);
     oyun.eylemSec(e.kimlik);

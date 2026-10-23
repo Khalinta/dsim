@@ -2,7 +2,7 @@
 
 import { ayristir } from './ayristirici.js';
 import { hesapla, dogru } from './ifade.js';
-import { tarihCoz, gunBilgisi, gunNo, saatYaz, tarihYaz, GUN } from './tarih.js';
+import { tarihCoz, saatCoz, gunBilgisi, gunNo, saatYaz, tarihYaz, GUN } from './tarih.js';
 
 export const DURUM_SURUMU = 1;
 const VARSAYILAN_ZAMAN_ASIMI = 24 * 3600;
@@ -27,6 +27,7 @@ export function icerikDerle(dosyalar, veri) {
     baslangic: tarihCoz(veri.ayar.başlangıç),
     icerikSonu: tarihCoz(veri.ayar.içerik_sonu),
     ilkYer: veri.ayar.ilk_yer,
+    ilkEv: veri.ayar.ilk_ev || veri.ayar.ilk_yer,
   };
   if (ayar.baslangic === null) hatalar.push({ dosya: 'oyun.json', satir: 0, mesaj: 'başlangıç zamanı anlaşılmadı' });
   if (ayar.icerikSonu === null) hatalar.push({ dosya: 'oyun.json', satir: 0, mesaj: 'içerik_sonu anlaşılmadı' });
@@ -62,7 +63,7 @@ export class Oyun {
       oyuncu: { ad: oyuncuAdi },
       t: ayar.baslangic,
       yer: ayar.ilkYer,
-      ev: ayar.ilkYer,
+      ev: ayar.ilkEv,
       d: {},
       gorulen: {},
       biten: {},
@@ -76,6 +77,8 @@ export class Oyun {
       sonGorulme: {},
       sahne: null,
       sahneKuyrugu: [],
+      randevular: [],
+      oyunBitti: false,
       sayac: 0,
       gunluk: [],
     };
@@ -147,6 +150,7 @@ export class Oyun {
   // Sahnede görünen ad: tanışıldıysa adı, değilse tarifi.
   sahneAdi(kisi) {
     const k = this.kisi(kisi);
+    if (k.sahnede) return k.sahnede; // aile: sahnede "Baban", "Annen"
     return this.durum.bilinen[kisi] ? k.ad : (k.tanimsiz || k.ad);
   }
 
@@ -159,6 +163,7 @@ export class Oyun {
       case 'gün': return b.gun;
       case 'an': return this.durum.t;
       case 'haftagünü': return b.haftagunu;
+      case 'hava': return (this.icerik.hava[b.gun] || {}).durum || 'açık';
       default: return this.durum.d[ad] ?? 0;
     }
   }
@@ -191,7 +196,8 @@ export class Oyun {
   _islemYap(islemler) {
     const d = this.durum.d;
     for (const { ad, op, v } of islemler) {
-      if (op === '=') d[ad] = v;
+      if (v && typeof v === 'object' && v.ozel === 'bugün') d[ad] = gunNo(this.durum.t);
+      else if (op === '=') d[ad] = v;
       else d[ad] = (Number(d[ad]) || 0) + (op === '+' ? v : -v);
     }
   }
@@ -284,7 +290,10 @@ export class Oyun {
         this._mesajAdimi(olay.kisi);
         continue;
       }
-      if (olay.tur === 'kuyruk') this.durum.kuyruk = this.durum.kuyruk.filter((k) => k !== olay.kayit);
+      if (olay.tur === 'kuyruk') {
+        this.durum.kuyruk = this.durum.kuyruk.filter((k) => k !== olay.kayit);
+        this.durum.randevular = (this.durum.randevular || []).filter((r) => r.kimlik !== olay.kimlik);
+      }
       if (olay.tur === 'sabit') {
         if (!this.kosulDogru(olay.parca.kosul)) { this.durum.atlanan[olay.parca.kimlik] = true; continue; }
         this.durum.atlanan[olay.parca.kimlik] = true;
@@ -315,8 +324,12 @@ export class Oyun {
       aday({ t: Math.max(p.zaman, d.t), tur: 'sabit', kimlik: p.kimlik, parca: p });
       break;
     }
-    if (!d.sahne) {
+    // Sahne sürerken de mesaj gelir (telefon cepte titrer); yalnızca o an yanında olunan kişininki sahne bitince gelir.
+    // Yoksa bir sahnenin içindeki saat atlamasına (vardiya 18:00 → 01:10) denk gelen mesajlar hiç gelmezdi.
+    const sahneKisisi = d.sahne ? (this.parca(d.sahne.kimlik) || {}).kisi : null;
+    {
       for (const p of this.icerik.kendiliginden) {
+        if (sahneKisisi && p.kisi === sahneKisisi) continue;
         if (!p.tekrar && d.gorulen[p.kimlik]) continue;
         if (d.akislar[p.kisi] || (d.bekleyen[p.kisi] || []).includes(p.kimlik)) continue;
         const t = this._acilmaZamani(p, d.t, hedef);
@@ -364,6 +377,20 @@ export class Oyun {
 
   _okumaGecikmesi(kisi) {
     return this.kisi(kisi).okumaGecikmesi ?? 40;
+  }
+
+  // Kişi uyuyorsa (kisiler.json "uyku": "05:00-11:00") mesajı uyanınca okur.
+  _uyanikZaman(kisi, t) {
+    const u = this.kisi(kisi).uyku;
+    if (!u) return t;
+    const [bas, son] = u.split('-').map((x) => saatCoz(x));
+    const gun = gunNo(t);
+    const sn = t - gun * GUN;
+    const uyuyor = bas < son ? sn >= bas && sn < son : sn >= bas || sn < son;
+    if (!uyuyor) return t;
+    let uyanis = gun * GUN + son;
+    if (uyanis <= t) uyanis += GUN;
+    return uyanis;
   }
 
   _mesajBaslat(parca, oyuncuYazdiT = null) {
@@ -439,7 +466,7 @@ export class Oyun {
         }
         let bekleme = 0;
         if (akis.oyuncuYazdiT !== null && akis.oyuncuYazdiT !== undefined) {
-          const okuma = Math.max(d.t, akis.oyuncuYazdiT + this._okumaGecikmesi(kisi));
+          const okuma = this._uyanikZaman(kisi, Math.max(d.t, akis.oyuncuYazdiT + this._okumaGecikmesi(kisi)));
           this._oyuncuMesajlariniOku(kisi, okuma);
           bekleme = okuma - d.t;
           akis.oyuncuYazdiT = null;
@@ -466,7 +493,16 @@ export class Oyun {
       if (o.t === 'komut') {
         const k = o.d;
         if (k.ad === 'bekle') { akis.uyanma = d.t + k.sure; akis.ilk = false; return; }
-        if (k.ad === 'okudu') { this._oyuncuMesajlariniOku(kisi, d.t); akis.oyuncuYazdiT = null; continue; }
+        if (k.ad === 'okudu') {
+          // "Görüldü" de kişinin okuma gecikmesine ve uykusuna uyar; akış okuduğu ana kadar bekler.
+          const okuma = akis.oyuncuYazdiT !== null && akis.oyuncuYazdiT !== undefined
+            ? this._uyanikZaman(kisi, Math.max(d.t, akis.oyuncuYazdiT + this._okumaGecikmesi(kisi)))
+            : d.t;
+          this._oyuncuMesajlariniOku(kisi, okuma);
+          akis.oyuncuYazdiT = null;
+          if (okuma > d.t) { akis.uyanma = okuma; akis.ilk = false; return; }
+          continue;
+        }
         if (k.ad === 'rehber') {
           akis.secim = { rehber: k.kisi, adlar: k.adlar };
           akis.zamanAsimi = null;
@@ -479,8 +515,19 @@ export class Oyun {
   }
 
   _oyuncuMesajlariniOku(kisi, t) {
-    for (const m of this.durum.sohbet[kisi] || []) if (m.k === 'b' && m.okundu === null) m.okundu = t;
-    this.durum.sonGorulme[kisi] = Math.max(this.durum.sonGorulme[kisi] || -Infinity, t);
+    const d = this.durum;
+    for (const m of d.sohbet[kisi] || []) if (m.k === 'b' && m.okundu === null) m.okundu = t;
+    // Okuma ileride olacaksa (kişi uyuyor) "son görülme" o ana kadar değişmez.
+    if (t <= d.t) d.sonGorulme[kisi] = Math.max(d.sonGorulme[kisi] || -Infinity, t);
+    else (d.gorulmeSirada || (d.gorulmeSirada = {}))[kisi] = t;
+  }
+
+  sonGorulme(kisi) {
+    const d = this.durum;
+    let s = d.sonGorulme[kisi];
+    const sirada = (d.gorulmeSirada || {})[kisi];
+    if (sirada !== undefined && sirada <= d.t) s = Math.max(s ?? -Infinity, sirada);
+    return s;
   }
 
   _ortakKomut(k) {
@@ -490,7 +537,7 @@ export class Oyun {
       case 'yer': d.yer = k.yer; if (d.sahne) d.sahne.yer = k.yer; return;
       case 'ev': d.ev = k.yer; return;
       case 'başlat': {
-        const t = k.zaman ?? (d.t + (k.sonra || 0));
+        const t = this._komutZamani(k);
         const p = this.parca(k.hedef);
         if (p && t <= d.t) {
           if (p.tur === 'mesaj') { this._mesajBaslat(p); return; }
@@ -499,10 +546,48 @@ export class Oyun {
         d.kuyruk.push({ t, kimlik: k.hedef });
         return;
       }
-      case 'zaman':
-        if (k.zaman > d.t) { if (d.sahne) this._zamaniIslet(k.zaman, true); else this.ilerle(k.zaman); }
+      case 'randevu': {
+        const t = this._komutZamani(k);
+        this._iptal(k.hedef);
+        const p = this.parca(k.hedef);
+        d.randevular.push({ kimlik: k.hedef, t, yer: k.yer, kisi: p ? p.kisi : null });
+        d.kuyruk.push({ t, kimlik: k.hedef });
         return;
+      }
+      case 'iptal': this._iptal(k.hedef); return;
+      case 'bitir': d.oyunBitti = true; this._gunlukYaz('oyun bitti'); return;
+      case 'zaman':
+      case 'saat': {
+        let hedef = k.zaman;
+        if (k.ad === 'saat') {
+          hedef = gunNo(d.t) * GUN + k.saat;
+          if (hedef <= d.t) hedef += GUN;
+        }
+        if (hedef > d.t) { if (d.sahne) this._zamaniIslet(hedef, true); else this.ilerle(hedef); }
+        return;
+      }
     }
+  }
+
+  // >> başlat / randevu: kesin tarih, "sonra 2sa" ya da "yarın 20:30".
+  _komutZamani(k) {
+    const d = this.durum;
+    if (k.zaman != null) return k.zaman;
+    if (k.gun != null) return (gunNo(d.t) + k.gun) * GUN + k.saat;
+    return d.t + (k.sonra || 0);
+  }
+
+  _iptal(kimlik) {
+    const d = this.durum;
+    d.kuyruk = d.kuyruk.filter((k) => k.kimlik !== kimlik);
+    d.sahneKuyrugu = d.sahneKuyrugu.filter((k) => k !== kimlik);
+    d.randevular = (d.randevular || []).filter((r) => r.kimlik !== kimlik);
+  }
+
+  // Kilit ekranındaki yaklaşan buluşmalar.
+  randevular(ufuk = 36 * 3600) {
+    const d = this.durum;
+    return (d.randevular || []).filter((r) => r.t >= d.t && r.t - d.t <= ufuk).sort((a, b) => a.t - b.t);
   }
 
   // Bir kişiyle olan sohbetin şu anki seçenekleri (cevaplar ya da oyuncunun açabileceği konular).
@@ -624,8 +709,8 @@ export class Oyun {
 
   cevrimici(kisi) {
     if (this.yaziyor(kisi)) return true;
-    const s = this.durum.sonGorulme[kisi];
-    return s !== undefined && this.durum.t - s < 120;
+    const s = this.sonGorulme(kisi);
+    return s !== undefined && this.durum.t - s >= 0 && this.durum.t - s < 120;
   }
 
   // ---------- Sahne ----------
@@ -668,6 +753,7 @@ export class Oyun {
       if (o.t === 'komut') {
         const k = o.d;
         if (k.ad === 'bekle') { this._zamaniIslet(this.durum.t + k.sure, true); continue; }
+        if (k.ad === 'okudu' || k.ad === 'okunmadı') continue;
         if (k.ad === 'rehber') {
           s.akis.secim = { rehber: k.kisi, adlar: k.adlar };
           ekle({ t: 'rehber', kisi: k.kisi, numara: this.kisi(k.kisi).numara, secenekler: k.adlar.map((metin, i) => ({ i, metin, tip: 'rehber' })) });
@@ -770,22 +856,52 @@ export class Oyun {
 
   // ---------- Eylemler (kilit ekranındaki "ne yapacaksın?") ----------
 
+  // Aynı gruptaki eylemlerden yalnızca biri görünür: önceliği en yüksek olan (eşitse dosyada önce gelen).
+  // Böylece tekrarlanan işlerin (vardiya, ders) her seferi ayrı yazılabilir; yazılanlar bitince sessiz yedek kalır.
   eylemler() {
     const d = this.durum;
     if (d.sahne || this.bittiMi()) return [];
-    const liste = [...this.icerik.parcalar.values()]
+    const adaylar = [...this.icerik.parcalar.values()]
       .filter((p) => p.tur === 'eylem' && p.zaman === undefined && (p.tekrar || !d.gorulen[p.kimlik]) && this._zamanUygun(p) && this.kosulDogru(p.kosul))
-      .sort((a, b) => b.oncelik - a.oncelik)
-      .map((p) => ({ kimlik: p.kimlik, baslik: this._yerlestir(p.baslik['başlık'] || p.kimlik) }));
+      .sort((a, b) => b.oncelik - a.oncelik);
+    const gruplar = new Set();
+    const liste = [];
+    for (const p of adaylar) {
+      if (p.grup) {
+        if (gruplar.has(p.grup)) continue;
+        gruplar.add(p.grup);
+      }
+      liste.push({ kimlik: p.kimlik, baslik: this._yerlestir(p.baslik['başlık'] || p.kimlik) });
+    }
     const b = gunBilgisi(d.t);
-    if (b.saat >= 22 || b.saat < 5) liste.push({ kimlik: '_uyu', baslik: 'Uyu', yerlesik: true });
-    else liste.push({ kimlik: '_oyalan', baslik: 'Biraz oyalan', yerlesik: true });
+    if (b.saat >= 21 || b.saat < 5) {
+      liste.push({ kimlik: '_oyalan', baslik: 'Biraz oyalan', yerlesik: true });
+      liste.push({ kimlik: '_uyu', baslik: 'Uyu', yerlesik: true });
+    } else {
+      liste.push({ kimlik: '_oyalan', baslik: 'Biraz oyalan', yerlesik: true });
+      const hedef = [11, 16, 21].find((s) => s > b.saat + (b.dakika >= 30 ? 0.5 : 0));
+      if (hedef) liste.push({ kimlik: `_kadar_${hedef}`, baslik: `Saat ${hedef}${hedef === 16 ? "'ya" : "'e"} kadar oyalan`, yerlesik: true });
+    }
     return liste;
   }
 
   eylemSec(kimlik) {
     const d = this.durum;
     if (kimlik === '_oyalan') { this.bekle(30 * 60); return; }
+    const kadar = kimlik.match(/^_kadar_(\d+)$/);
+    if (kadar) {
+      // Oyalanırken yeni bir şey yapılabilir hâle gelirse (bir eylemin saati gelirse) orada durulur;
+      // yoksa vardiya gibi işler büyük atlamaların arasında kaybolur.
+      const hedef = gunNo(d.t) * GUN + Number(kadar[1]) * 3600;
+      const onceki = new Set(this.eylemler().filter((e) => !e.yerlesik).map((e) => e.kimlik));
+      while (d.t < hedef && !d.sahne && !this.bittiMi()) {
+        const t0 = d.t;
+        this.ilerle(Math.min(hedef, (Math.floor(d.t / 900) + 1) * 900));
+        if (d.t === t0) break;
+        if (this.eylemler().some((e) => !e.yerlesik && !onceki.has(e.kimlik))) break;
+      }
+      return;
+    }
     if (kimlik === '_uyu') {
       const b = gunBilgisi(d.t);
       const sabah = (b.saat < 5 ? b.gun : b.gun + 1) * GUN + 8 * 3600;
@@ -815,7 +931,7 @@ export class Oyun {
   }
 
   bittiMi() {
-    return !this.durum.sahne && this.durum.t >= this.icerik.ayar.icerikSonu;
+    return !this.durum.sahne && (Boolean(this.durum.oyunBitti) || this.durum.t >= this.icerik.ayar.icerikSonu);
   }
 
   // ---------- Kayıt ----------
@@ -845,6 +961,7 @@ export class Oyun {
       d.sahne = null;
     }
     d.kuyruk = d.kuyruk.filter((k) => this.parca(k.kimlik));
+    d.randevular = (d.randevular || []).filter((r) => this.parca(r.kimlik));
     d.sahneKuyrugu = d.sahneKuyrugu.filter((k) => this.parca(k));
     for (const [kisi, sira] of Object.entries(d.bekleyen)) {
       d.bekleyen[kisi] = sira.filter((k) => this.parca(k));

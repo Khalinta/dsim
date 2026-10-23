@@ -1,5 +1,16 @@
 # Oyunun okuduğu içerik dosyaları, okunma sırasıyla.
 # Yeni bir .dsim dosyası eklenince buraya da yazılmalı (testler bunu denetler).
 gecmis.dsim
+eylul/14-eylul.dsim
 eylul/15-eylul.dsim
 eylul/16-eylul.dsim
+hayat/mendirek.dsim
+hayat/okul.dsim
+hayat/aile.dsim
+hayat/mahalle.dsim
+defne/eylul.dsim
+defne/ekim.dsim
+defne/kasim.dsim
+defne/aralik.dsim
+defne/tepki.dsim
+son/son.dsim

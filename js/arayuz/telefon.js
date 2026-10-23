@@ -159,7 +159,7 @@ export class Telefon {
     const oyun = this.app.oyun;
     if (yaziyor) return 'yazıyor…';
     if (oyun.cevrimici(kisi)) return 'çevrimiçi';
-    const son = oyun.durum.sonGorulme[kisi];
+    const son = oyun.sonGorulme(kisi);
     if (son === undefined || son === null || son === -Infinity) return oyun.durum.rehber[kisi] ? '' : 'Rehberde kayıtlı değil';
     const gun = goreliGun(son, oyun.t);
     if (gun === 'Bugün') return `son görülme bugün ${saatYaz(son)}`;

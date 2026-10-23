@@ -131,7 +131,18 @@ export function hesapla(agac, baglam) {
     case 'kıyas': {
       let a = hesapla(agac.sol, baglam);
       let b = hesapla(agac.sag, baglam);
-      // Sayıyla kıyaslanan metin bir tarihtir: tarih >= "16 Eylül", an < "16 Eylül 10:00".
+      // Sayıyla sıralama yapılan metin bir tarihtir: tarih >= "16 Eylül", an < "16 Eylül 10:00".
+      // Eşitlikte de tarih gibi okunan metin tarihtir (tarih != "13 Aralık"). Okunmuyorsa
+      // (henüz atanmamış değişken ile "gitmiyorum" gibi bir metin) sonuç "eşit değil"dir.
+      const karisik = (typeof a === 'string') !== (typeof b === 'string');
+      if (karisik && (agac.op === '==' || agac.op === '!=')) {
+        let cevrildi = null;
+        try { cevrildi = baglam.tarihCevir(typeof a === 'string' ? a : b); } catch { cevrildi = null; }
+        if (cevrildi === null) return agac.op === '!=';
+        if (typeof a === 'string') a = cevrildi; else b = cevrildi;
+        if (typeof a === 'boolean' || typeof b === 'boolean') return agac.op === '!=';
+        return agac.op === '==' ? a === b : a !== b;
+      }
       if (typeof a === 'string' && typeof b !== 'string') a = baglam.tarihCevir(a);
       if (typeof b === 'string' && typeof a !== 'string') b = baglam.tarihCevir(b);
       if (typeof a === 'boolean' || typeof b === 'boolean') { a = dogru(a); b = dogru(b); }

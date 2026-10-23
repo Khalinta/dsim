@@ -92,6 +92,12 @@ export function denetle(icerik, { yasakliKaliplar = [] } = {}) {
         if (d.t === 'eğer') for (const dal of d.dallar) kosulDenetle(p, dal.kosul, no);
         if (d.t === 'komut') {
           const k = d;
+          if (k.ad === 'randevu' || k.ad === 'iptal') {
+            if (k.ad === 'randevu') baslatilanlar.add(k.hedef);
+            const h = parcalar.get(k.hedef);
+            if (!h) hatalar.push(`${p.dosya}:${no} ${k.ad}: parça yok: ${k.hedef}`);
+            else if (k.ad === 'randevu' && h.tur !== 'sahne') hatalar.push(`${p.dosya}:${no} randevu yalnızca sahneye kurulur: ${k.hedef}`);
+          }
           if (k.ad === 'başlat') {
             baslatilanlar.add(k.hedef);
             if (!parcalar.has(k.hedef)) hatalar.push(`${p.dosya}:${no} başlatılacak parça yok: ${k.hedef}`);
@@ -100,7 +106,7 @@ export function denetle(icerik, { yasakliKaliplar = [] } = {}) {
           if (k.ad === 'tanış' && !kisiler[k.kisi]) hatalar.push(`${p.dosya}:${no} tanış: böyle bir kişi yok: ${k.kisi}`);
           if (['okudu'].includes(k.ad) && tur !== 'mesaj') hatalar.push(`${p.dosya}:${no} "okudu" yalnızca mesaj parçalarında kullanılır`);
           if (k.ad === 'okunmadı' && tur !== 'geçmiş') hatalar.push(`${p.dosya}:${no} "okunmadı" yalnızca geçmiş parçalarında kullanılır`);
-          if (k.ad === 'zaman' && tur === 'mesaj') hatalar.push(`${p.dosya}:${no} Mesaj parçalarında zaman atlanmaz; "bekle" kullan`);
+          if ((k.ad === 'zaman' || k.ad === 'saat') && tur === 'mesaj') hatalar.push(`${p.dosya}:${no} Mesaj parçalarında zaman atlanmaz; "bekle" kullan`);
           if ((k.ad === 'yer' || k.ad === 'ev') && (tur === 'mesaj' || tur === 'geçmiş')) hatalar.push(`${p.dosya}:${no} Mesaj parçasında yer değişmez`);
           if (k.ad === 'rehber' && tur === 'tepki') hatalar.push(`${p.dosya}:${no} Tepkide rehber kaydı olmaz`);
         }

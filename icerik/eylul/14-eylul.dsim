@@ -1,0 +1,256 @@
+# 14 Eylül, Pazar gecesi. Lagün'ün kapanışı. Oyunun ilk sahnesi.
+# Defne'yle tanışma. Oyuncu ona "yarın gidiyorum" diyebilir (yalan) ya da doğruyu söyleyebilir.
+# Bu yalanın izi haftalarca sürer (defne.gidiyor_dedi).
+
+=== prolog_kapanis
+tür: sahne
+kişi: defne
+zaman: 14 Eylül 23:05
+yer: Lagün
+ton: gece
+
+Gece on biri geçiyor ve Lagün'de son şarkı üçüncü kez çalıyor. DJ kabininin önünden Burak "bir daha!" diye bağırıyor; kabindeki çocuk da her seferinde sesi biraz daha açıyor, sanki yüksek çalarsa yaz biraz daha uzayacak.
+Kumdaki minderlerin yarısı boşalmış. Kalanlar ya dans ediyor ya da ayakkabıları elinde kıyıya doğru yürüyor. Sen bütün yaz durduğun yerdesin: buz makinesinin uğultusu, yapış yapış tezgâh, kasada birikmiş bozuklukların sesi.
+Barın ucunda, tezgâhın denize bakan köşesinde bir kadın oturuyor. Yanındaki üç kişi yarım saattir "hadi" deyip kalkmıyordu; sonunda kalkıyorlar. O kalkmıyor.
+Boş bardağını tezgâhın üstünden sana doğru itiyor. Bardak kenara bir parmak kala duruyor.
+@defne: Bir tane daha. Sonuncusu.
+@defne: Gerçekten sonuncusu. Bunu üç kere söyledim, sayıyorsun değil mi?
+* "Dört."
+  [defne.flort +1]
+  @defne: Dördüncüyü ben de saymadım. İyi. İkimiz de matematikte kötüyüz, bu bir başlangıç.
+* "Kapanış gecesi sonuncusu olmaz. Burak öyle diyor."
+  @defne: Burak her şeye öyle diyor. Geçen hafta bana "sezon bitmez" dedi.
+  Başıyla sahili gösteriyor: yarısı toplanmış şemsiyeler, kumun içine dikilmiş boş bir şişe.
+  @defne: Bitiyormuş.
+* (Bir şey deme, bardağını doldur.)
+  [defne.flort +1]
+  [defne.limonsuz]
+  Cin tonik; limonsuz. Bütün akşam iki kez limonu geri gönderdi, üçüncüde sen hiç koymadın.
+  Bardağa, sonra sana bakıyor.
+  @defne: Limonu unutmamışsın. Ya iyi bir barmensin ya da bütün akşam bana baktın.
+  @defne: İkincisi olsun. Benim için daha iyi bir hikâye.
+
+Hoparlörler susuyor. Kumsaldaki kalabalık bir an ne yapacağını bilemiyor, sonra alkışlıyor; kime alkışladığını bilmeden.
+@defne: Sezonun son gecesi, son müşteri, son garson.
+@defne: Kampanyanın adı belli: "Son." Altına küçük puntoyla: "Bir sonraki sezona kadar."
+* "Reklamcı mısın?"
+  @defne: Kötü bir slogan duyunca herkes reklamcı sanıyor. İyisini duyunca kimse sormuyor.
+  Cevap vermediğini fark ediyorsun. O da fark ettiğini fark ediyor; bardağını kaldırıp arkasına saklanıyor.
+* "Altına bir de 'iade yok' yaz."
+  [defne.flort +1]
+  Gülüyor; omuzlarıyla, bütün gövdesiyle gülüyor. Yanından geçen bir çift dönüp bakıyor.
+  @defne: Seni işe alırdım. Neyse ki artık kimseyi işe almıyorum.
+* "Bir sonraki sezona kim kalırsa."
+  @defne: Kimse kalmaz. Kalanlar da başka biri olur. Ben iki yıldır buradayım, iki kere başka biri oldum.
+  Bunu şaka gibi söylüyor ama gülmüyor.
+
+Bardağını iki eliyle tutuyor. Kumsaldan bir grup "Burak! Burak!" diye bağırıyor; Burak gözlüğünü havaya kaldırıp selam veriyor.
+@defne: Sen ne zaman gidiyorsun? Garsonların hepsi yarın sabahki otobüslerde olur, her yıl aynı.
+* "Yarın."
+  [defne.gidiyor_dedi]
+  [yalan.defne]
+  @defne: Güzel.
+  Bunu biraz fazla çabuk söylediğini fark ediyor gibi; düzeltmiyor.
+  @defne: Yani yolun açık olsun. Güzel olan o.
+* "Gitmiyorum. Kalıyorum."
+  [defne.kaliyor_dedi]
+  @defne: Kalıyor musun?
+  Bardağı indiriyor.
+  @defne: Eylülde? Kışın burada ne yapılır, bir fikrin var mı? Ben iki yıldır arıyorum.
+* "Bilmiyorum daha."
+  [defne.belirsiz]
+  [defne.flort +1]
+  @defne: En iyi cevap bu. Bilmeyen insanlarla anlaşırım. Bilenler beni yoruyor.
+
+Işıklar sırayla sönüyor: önce şemsiyelerin altındakiler, sonra DJ kabini. Geriye barın üstündeki sarı ampuller kalıyor.
+Uzaktaki bir masada gece elbiseli bir kız hâlâ oturuyor. Elinde boş bir şampanya kadehi var; Lagün'de şampanya yok. Burak yanından geçerken eğilip bir şey söylüyor, kız başını kaldırmıyor bile.
+Burak bara gelip anahtarı tezgâha bırakıyor. Kadının bakışını takip edip uzaktaki masaya bakıyor.
+@burak: Berkmenlerin kızı. Bırak, otursun. Ona "kapattık" diyecek adam daha doğmadı.
+@burak: Kilit sende kral. Sabah onda burdayız, unutma.
+Kamyonetin kapısı kapanıyor. Sonra motorun sesi, sonra o da yok.
+
+Sandalyeleri üst üste dizmeye başlıyorsun. Kadın kalkıp bir tanesini kaldırıyor, sonra bir tane daha.
+@defne: Yardım etmiyorum. Hareket ediyorum. Fark var; bahşiş istemem.
+@defne: Defne bu arada. Sen bütün yaz "garson"dun ama bir adın vardır herhalde.
+>> tanış defne
+* "{ad}."
+  @defne: {ad}. Tamam. Unutmam. Unutursam ikimiz de anlayışlı oluruz.
+* "Garson da olur."
+  [defne.flort +1]
+  @defne: Olmaz. Garsonla bir şey yaşanmaz, garsona hesap ödenir.
+  @defne: Adın ne?
+  Söylüyorsun. Bir kez tekrar ediyor, tadına bakar gibi.
+
+Son sandalye de yığına gidiyor. Uzaktaki kız ayağa kalkıyor, ayakkabıları elinde, Fener Burnu'na doğru yürüyor; elbisesinin eteği kumda iz bırakıyor.
+Defne denizin kenarına iniyor. Ayakkabılarını çıkarmıyor. Bir dalga gelince geri sıçrıyor, geç kalıyor; ayakkabının biri ıslanıyor.
+@defne: Her yıl yapıyorum bunu. Sezonun son gecesi ayağımı ıslatıyorum.
+@defne: Neden bilmiyorum. İnsanın bir ritüeli olmalı, yoksa günler birbirine karışıyor.
+* (Yanına git, ayakkabılarınla denize gir.)
+  [defne.flort +2]
+  Su eylül gecesi kadar ılık. Ayakkabın bir anda ağırlaşıyor, çorabın bileğine yapışıyor.
+  @defne: Delisin.
+  Gülüyor ve kolunu senin koluna takıyor; sanki bunu yıllardır yapıyormuşsunuz gibi, hiç düşünmeden.
+* "Ritüelin adı ne?"
+  [defne.flort +1]
+  @defne: Adı yok. Ad koyarsam slogan olur. Slogan olunca da ölür.
+* (Kuma otur, onu izle.)
+  @defne: İzleyici. Tamam. Her ritüele bir izleyici lazım.
+  Bir dalga daha geliyor. Bu sefer kaçmıyor.
+
+>> eğer defne.gidiyor_dedi ve defne.flort >= 3
+  -> opucuk
+>> yoksa eğer defne.flort >= 3
+  -> kalan_mesafe
+>> yoksa
+  -> vedalasma
+
+:: opucuk
+Kıyıdan döndüğünüzde barın ampulleri ikinizin yüzüne aynı sarıyı düşürüyor. Defne bir an sana bakıyor, bir şey söyleyecek gibi; söylemiyor. Sonra parmak uçlarında yükselip seni öpüyor. Ağzında tonik ve tuz var.
+Geri çekiliyor, ama çok değil.
+@defne: Yarın gidiyorsun. Bu çok iyi. Yani kötü, ama iyi.
+@defne: Atölyem Taş Mahalle'de. Yokuşu var, manzarası yok. Gelirsen kahve yaparım. Sabah. Belki.
+* (Git.)
+  [defne.ilk_gece]
+  -> atolye
+* (Bir daha öp. Sonra "bu gece burada bitsin" de.)
+  [defne.ilke_adami]
+  İkinci öpücük birincisinden uzun sürüyor. Bitince söylüyorsun. Defne kaşını kaldırıyor.
+  @defne: Ooo. Bir ilke adamı. Peki.
+  @defne: İlkeli adamlar da kahve içer ama. Ver telefonunu.
+  -> numara
+* "Sabah onda sökümdeyim."
+  @defne: Ben de sabah onda uyuyor olurum. Güzel. Kimse kimseyi beklemez.
+  @defne: Ama yine de ver telefonunu. Ben beklemem, sen beklersin belki.
+  -> numara
+
+:: kalan_mesafe
+Kıyıdan döndüğünüzde barın ampulleri ikinizin yüzüne aynı sarıyı düşürüyor. Defne sana bakıyor; bir adım yaklaşıyor, sonra yarım adım geri gidiyor.
+>> eğer defne.kaliyor_dedi
+  @defne: Sen kalıyorsun.
+  @defne: Kalan biriyle bu gece bir şey yaşarsam yarın fırında karşılaşırız. Ben fırında karşılaşmayı sevmem. Ekmek kuyruğunda kimse kimseye bakamaz.
+  [defne.ekmek_lafi]
+>> yoksa
+  @defne: Sen bilmiyorsun. Ben de bilmiyorum. İki bilmeyen bu saatte bir şey yaparsa sabah ikisi de bilir. Ben bilmeyi sevmem.
+* (Onu yine de öp.)
+  [defne.flort +1]
+  [defne.ilk_opucuk]
+  Öpüyorsun. Bir saniye karşılık veriyor; sonra elini göğsüne koyup hafifçe itiyor.
+  @defne: Tamam. Bu sayılmaz. Kapanış gecesi kural dışı.
+  -> numara
+* "Ben ekmek kuyruğunda bakarım."
+  [defne.flort +1]
+  @defne: Bakarsın, ben de görmezden gelirim. Ne güzel, plan yaptık bile.
+  -> numara
+* (Bir şey deme. Ona yolu göster.)
+  Kordona çıkan tahta iskeleyi işaret ediyorsun. Defne bir an duruyor, sonra gülümsüyor; teşekkür eder gibi değil, anladım der gibi.
+  -> numara
+
+:: vedalasma
+Kıyıdan döndüğünüzde Defne ıslak ayakkabısını çıkarıp elinde sallıyor.
+@defne: Ben gidiyorum. Bu gece birinin gitmesi lazımdı, bari ben gideyim.
+* "Telefonunu verir misin?"
+  @defne: Neden? Tamam, neden olsun. Ver bakalım.
+  -> numara
+* "İyi geceler, Defne."
+  @defne: İyi geceler, son garson.
+  Tahta iskeleden kordona çıkıyor. Bir kez dönüp el sallamıyor; sen yine de sallıyorsun.
+  -> kapanis_son
+
+:: numara
+Telefonunu alıyor, numarasını kendisi yazıyor. Kaydetmeden geri veriyor.
+@defne: Adını sen koy. Ben koyarsam reklam olur.
+>> rehber defne: Defne | Son müşteri | Defne Seramik
+[defne.numara]
+>> eğer defne.gidiyor_dedi
+  @defne: İstanbul'dan bir gün yazarsın. Ya da yazmazsın, o da güzel.
+>> yoksa
+  @defne: Çatlak Seramik. Taş Mahalle, sarı kapı. Herkes mavi boyuyor diye ben sarıya boyadım.
+Tahta iskeleden kordona çıkıyor. Ayakkabısının biri elinde, öbürü ayağında; yürüyüşü bu yüzden biraz eğri.
+-> kapanis_son
+
+:: kapanis_son
+Barın kepengini indiriyorsun. Kepenk yarıda takılıyor; omzunla itince iniyor. Sahilde artık yalnızca dalgaların sesi ve buz makinesinin, fişini çekene kadar süren uğultusu var.
+Fişi çekiyorsun.
+-> son
+
+:: atolye
+>> yer Taş Mahalle, Çatlak Seramik
+Taş Mahalle'nin yokuşu gece daha dik. Defne iki basamakta bir durup ıslak ayakkabısını yere vuruyor; ses taş duvarlarda yankılanıyor, bir pencere açılıp kapanıyor.
+Sarı bir kapı. Kapının önünde, sokak lambasının altında iri, sarı bir köpek yatıyor. Başını kaldırıp sana bakıyor, bir kez homurdanıyor, sonra başını yeniden patilerine koyuyor.
+@defne: Müdür. Seni denetledi, geçtin. Herkes geçemez.
+İçerisi kil kokuyor; ıslak toprak ve bir de ondan farklı, kuru, yanık bir şey. Raflarda henüz pişmemiş kupalar, tabaklar, gri ve mat.
+@defne: Dokunma. Kurumadılar. Dokunursan parmak izin kalır, sonsuza kadar. Seramik böyle, her şeyi hatırlıyor.
+Dar bir merdivenle üst kata çıkıyorsunuz. Merdivenin yarısında Defne duruyor, sana dönüyor.
+@defne: Bu arada ayığım. Üç cin tonik, dört saat. Matematiği sen yap.
+@defne: Ve bunu istiyorum. Sonra "içkiliydi" deme diye söylüyorum.
+Üst kat tek bir oda: alçak bir yatak, bir masa, balkona açılan bir kapı. Balkon kapısı açık; karşı damların arasından denizin ince bir şeridi görünüyor, ay ona tek bir çizgi çekmiş.
+Defne ıslak ayakkabısını balkona fırlatıyor. Sonra sana dönüyor.
+* (Onu öp.)
+  [defne.ilk_gece_atak]
+  Öpüyorsun. Bu sefer acele etmiyor; ellerini enseni, sonra saçlarını buluyor. Seni yatağın kenarına doğru geri geri itiyor.
+* "Yavaş."
+  [defne.ilk_gece_yavas]
+  Duruyor. Bir an şaşırmış gibi; sonra gülümsüyor, gerçekten şaşırmış.
+  @defne: Yavaş. Tamam. Bunu kimse söylemez.
+  Bu sefer o yavaş öpüyor; ağzının kenarından başlayarak, bekleyerek.
+* (Bir şey deme. Balkon kapısını kapat.)
+  Kapıyı kapatıyorsun. Oda bir anda daha küçük, daha sıcak. Defne arkandan gelip kollarını beline doluyor, alnını sırtına dayıyor.
+  @defne: İyi düşündün. Komşular zaten benim hakkımda yeterince konuşuyor.
+Elbisesinin fermuarı yanda. Bulamıyorsun; ikinci denemende gülüp elini çekiyor, kendisi açıyor. Elbise ayaklarının dibine düşüyor, adımını atıp içinden çıkıyor.
+Gömleğinin düğmelerine geçiyor. Parmakları hızlı ama birini atlıyor; geri dönmüyor, gömleği başından çıkarmanı bekliyor.
+* (Onu yatağa yatır.)
+  Yatağa uzanıyor ve seni de çekiyor. Yatak alçak; ikiniz de biraz fazla sert iniyorsunuz, yatak gıcırdıyor. Aşağıda Müdür bir kez havlıyor. Defne yüzünü boynuna gömüp gülüyor.
+  @defne: Kıskanıyor. Aldırma.
+* (Bırak o yönetsin.)
+  Seni yatağın kenarına oturtuyor, sonra kucağına oturuyor; dizleri iki yanında. Yatak gıcırdıyor, aşağıda Müdür bir kez havlıyor. Defne alnını alnına dayayıp gülüyor.
+  @defne: Kıskanıyor. Aldırma.
+Ellerini çıplak sırtında, belinde gezdiriyorsun. Teni denizden ve günden hâlâ ılık; omzunda kurumuş tuzun pürüzü var. O da seni çözüyor, kemerini açıyor, acele etmeden, her şeyi bir kez gözüyle de bakarak.
+Bir ara durup komodinin çekmecesini açıyor, prezervatifi çıkarıp sana uzatıyor.
+@defne: Bunu söylemek reklamdan kalma bir alışkanlık: önce güvenlik.
+Sonra üstüne çıkıyor. İlk anda ikiniz de duruyorsunuz; sadece nefes. Sonra kendi ritmini buluyor, ağır ağır, sonra daha hızlı; elini göğsüne bastırıp dengesini senden alıyor.
+* (Onun ritmine bırak.)
+  Bırakıyorsun. Gözlerini kapatıyor, açıyor, sana bakıyor; bakarken ritmi bozuluyor ve bunu umursamıyor. Bir şey fısıldıyor, anlamıyorsun; sonra anlıyorsun: "Böyle."
+* (Onu kendine çek, yerinizi değiştir.)
+  Belinden tutup yanına deviriyorsun; şimdi sen üstündesin. Bacaklarını beline doluyor, topuğu sırtına bastırıyor, ritmini oradan, topuğuyla söylüyor.
+  @defne: Böyle.
+* "İyi misin?"
+  Durmadan, gülümsüyor.
+  @defne: Çok iyiyim. Sus. Ama sormana bayıldım.
+Ne kadar sürüyor bilmiyorsun; yirmi dakika, belki biraz fazlası. Balkon kapısının camında ikinizin buğusu. Bir yerde Defne'nin nefesi kesiliyor, sesini yastığa bastırıyor; senin de bir süre sonra.
+Bitince yanına kıvrılıyor. Bir süre hiçbir şey söylemiyor. Bu kadar konuşan birinin susması, odada bir eşya gibi duruyor.
+@defne: Bu güzeldi.
+@defne: Sloganı yok. Ararım, bulamam. İyi bir şey.
+Kalkıp balkona çıkıyor, çıplak, bir sigara yakıyor. Karşı damlarda tek bir ışık bile yok.
+>> eğer defne.gidiyor_dedi
+  @defne: Otobüs kaçta?
+  * "On ikide."
+    [defne.yalan_derin]
+    @defne: Güzel. Bol vakit var. Sabah sana kahve yaparım, sonra sen gidersin, ben ağlamam. Anlaştık mı?
+    Sigarasını söndürüp yanına dönüyor. Birkaç dakika sonra nefesi ağırlaşıyor; uyuyor.
+  * "Aslında gitmiyorum."
+    [defne.ilk_gece_itiraf]
+    [değil defne.gidiyor_dedi]
+    [defne.kaliyor_dedi]
+    Sigara elinde, dönüp sana bakıyor. Uzun bir an.
+    @defne: Ha.
+    @defne: Tamam. Bunu sabah konuşalım. Ya da hiç konuşmayalım; o da bir seçenek.
+    İçeri giriyor, yatağın öbür ucuna uzanıyor, sırtı sana dönük. Bir süre sonra uyuyor. Sen uyuyamıyorsun.
+  * (Sus. Yanına git, sigarasından bir nefes iste.)
+    Sigarayı uzatıyor. Bir şey sormuyor bir daha. İkiniz de karanlık damlara bakıyorsunuz, deniz bir çizgi.
+    Sonra içeri girip uyuyorsunuz; o önce.
+>> yoksa
+  @defne: Kalan biriyle yatmışım. İki yıldır ilk.
+  Dumanı dışarı üflüyor.
+  @defne: Sabah bunu çok düşüneceğim. Şimdi düşünmüyorum.
+  İçeri girip yanına uzanıyor; bir dakika sonra uyuyor. Sen bir süre balkon kapısının camındaki buğunun kaybolmasını izliyorsun.
+>> zaman 15 Eylül 08:10
+-> son
+
+
+=== burak_gece_mesaji
+tür: mesaj
+kişi: burak
+zaman: 15 Eylül 03:12
+
+@burak: bu yaz için eyvallah kral 🙏 sen olmasan o bar batardı
+@burak: kilidi kapattın di mi

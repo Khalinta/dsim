@@ -1,0 +1,67 @@
+# Defne'nin yanındayken telefona bakmak.
+# telefon.defne: Defne'nin yanındayken toplam kaç kez bakıldı. sahne.ciddi: o sahnede şaka yeri yok.
+# Metinlerde "Defne" adı geçmez: prologda oyuncu adını henüz bilmiyor olabilir.
+
+=== defne_telefon_uzakta
+tür: tepki
+kişi: defne
+olay: telefona_bakma
+öncelik: 60
+koşul: sahne.uzakta
+
+Ekranda onun son mesajı duruyor. Altında başka bir şey yok; yazıyor da değil.
+
+
+=== defne_telefon_ciddi
+tür: tepki
+kişi: defne
+olay: telefona_bakma
+öncelik: 50
+koşul: sahne.ciddi
+
+Ekranın ışığı bir an aranıza giriyor. Görmüyor, ya da görmemiş gibi yapıyor.
+
+
+=== defne_telefon_ilk
+tür: tepki
+kişi: defne
+olay: telefona_bakma
+öncelik: 10
+koşul: telefon.defne <= 1
+
+Bakışını telefonuna, sonra yüzüne kaydırıyor.
+@defne: Daha iyi bir teklif mi geldi? Bak, benim de numaram var. Sıfır beş yüz otuz sekiz, sonra bir sürü hayal kırıklığı.
+
+
+=== defne_telefon_ikinci
+tür: tepki
+kişi: defne
+olay: telefona_bakma
+öncelik: 10
+koşul: telefon.defne == 2
+
+Bir şey demiyor. Kendi telefonunu çıkarıyor; başparmağı ekranda yukarı kayıyor, yukarı, yukarı. Kimsenin fotoğrafına bakmıyor, sadece kaydırıyor.
+[defne.yakinlik -1]
+
+
+=== defne_telefon_sonra
+tür: tepki
+kişi: defne
+olay: telefona_bakma
+öncelik: 10
+koşul: telefon.defne == 3
+
+Kendi telefonunu ekranı aşağı gelecek şekilde bırakıyor.
+@defne: Ben bir sigara içip geliyorum. Sen de onunla vedalaş, kim ise.
+Kapının önüne çıkıyor. Bir sigaranın yanması ne kadar sürerse o kadar sonra dönüyor; sekizinci bırakışı da sayılmadı.
+[defne.yakinlik -1]
+
+
+=== defne_telefon_artik
+tür: tepki
+kişi: defne
+olay: telefona_bakma
+öncelik: 10
+koşul: telefon.defne == 4
+
+Başını çevirmiyor bile. Bir şey söylemeye değmez artık; söylemese de belli.

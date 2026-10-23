@@ -1,0 +1,197 @@
+# Okul: Pırnallı Üniversitesi, Makine Mühendisliği. Dersler pazartesi–çarşamba sabahları.
+# Hafif tutulur. Her ders günü ayrı yazılmıştır ("ders" grubu); yazılanlar bitince sessiz yedek kalır.
+
+=== ders_ilk_gun
+tür: eylem
+grup: ders
+başlık: Kampüse çık, derse gir
+öncelik: 100
+koşul: tarih >= "22 Eylül" ve haftagünü <= 3
+pencere: 07:30-10:30
+yer: Kabaktepe Yerleşkesi
+
+>> saat 08:30
+[okul.son_gun = bugün]
+Kampüs dolmuşu Liman'dan dolu kalkıyor. Hastanenin önünde iki kişi daha biniyor; şoför "sıkışın gençler" diyor, kimse sıkışmıyor, yine de herkes biniyor.
+Kabaktepe'nin tepesinden körfez bir bütün olarak görünüyor; ilk kez bu kadar yukarıdan bakıyorsun. Uzunkum ince, sarı bir çizgi. Lagün'ün olduğu yer artık seçilmiyor.
+Mühendislik binası B Blok. Kapısı rüzgârda açılmıyor; ikinci denemede biri arkandan itiyor, kapı açılıyor ve ikiniz birden içeri savruluyorsunuz.
+@sinan(Sınıftan biri): Her sabah böyle. Kapı değil, karakter testi.
+Makine Elemanları dersinin sınıfı yarı dolu. En arkaya oturuyorsun. Ders başlamadan önce yanındaki çocuk, kapıdaki aynı çocuk, sana dönüyor.
+@sinan(Sınıftan biri): Sen yenisin. Yatay geçiş mi? Nereden?
+* "İstanbul'dan. İTÜ."
+  [okul.itu_dedi]
+  @sinan(Sınıftan biri): İTÜ'den buraya mı?
+  Sesini alçaltıyor, sanki bir hastalığı soruyormuş gibi.
+  @sinan(Sınıftan biri): Ne oldu?
+  * "Uzun hikâye."
+    @sinan(Sınıftan biri): Burada herkesin hikâyesi uzun. Ben Sinan. Benimki de uzun: Bandırma'dan geldim, puanım tutmadı. Bitti.
+  * "Deniz istedim."
+    @sinan(Sınıftan biri): Deniz. Tamam. Kışın görürsün denizi.
+* "İstanbul'dan. Bir yerden."
+  @sinan(Sınıftan biri): Bir yerden. Tamam, anladım, sorma diyorsun. Ben Sinan.
+>> tanış sinan
+Kapı açılıyor ve elinde kâğıt dolu bir file taşıyan, gözlüklü, altmışlarında bir adam giriyor. Fileyi masaya koyuyor, tahtaya dönüyor, bir şey yazmadan önce sınıfa dönüyor.
+@tarik(Hoca): Isı kaybolmaz. Sadece yer değiştirir.
+Kimse gülmüyor. Hoca bunu bekliyormuş gibi başını sallıyor, tahtaya dönüyor.
+@sinan(Sınıftan biri): Tarık Hoca. Her derse bununla başlıyor. Üçüncü yılım, bir kere bile güldüremedik.
+>> tanış tarik
+Ders bir buçuk saat sürüyor. Defterine yazdıklarının yarısı İTÜ'de ikinci sınıfta da gördüğün şeyler; o zaman da anlamamıştın. Şimdi anlıyorsun, ya da anladığını sanıyorsun; arada fark var mı, bilmiyorsun.
+Çıkışta öğrenci işlerine uğruyorsun. Kimlik kartın için fotoğraf çekiliyor; makinenin önünde "gülümse" diyorlar, gülümsediğini sanıyorsun. Kartta gülümsemiyorsun.
+>> saat 13:30
+>> yer Kabaktepe Yerleşkesi
+
+
+=== ders_kantin
+tür: eylem
+grup: ders
+başlık: Kampüse çık, derse gir
+öncelik: 90
+tarih: 23 Eylül - 8 Ekim
+koşul: gördü(ders_ilk_gun) ve haftagünü <= 3
+pencere: 07:30-10:30
+yer: Kabaktepe Yerleşkesi
+
+>> saat 08:30
+[okul.son_gun = bugün]
+Termodinamik II. Tahtada bir çevrim diyagramı, ok işaretleri, bir yerde Tarık Hoca'nın el yazısıyla "BURADA KAYIP VAR" yazıyor. Kayıp neden orada, kimse bilmiyor; hoca da söylemiyor, sınavda soracağını söylüyor.
+Öğlen Merkez Kantin'de Sinan'la tost yiyorsunuz. Tost yağlı, çay demli; masa sallanıyor, Sinan bir peçeteyi dörde katlayıp ayağın altına sokuyor.
+@sinan: İTÜ'de kantin nasıldı?
+* "Bunun aynısı. Daha pahalısı."
+  @sinan: İyi. Bir şeyi kaçırmamışım.
+* "Hatırlamıyorum. Pek gitmezdim."
+  [okul.itu_acildi]
+  @sinan: Derslere mi gitmezdin, kantine mi?
+  @sinan: Tamam, cevap verme. Yüzünden anladım.
+* "Bilmem, oranın kantinini hiç sevmedim."
+  @sinan: Burayı seveceksin ama. Burayı herkes sever, çünkü başka yer yok.
+Tepeden körfeze bakıyorsunuz. Bir yelkenli, rüzgârsız, yerinde sayıyor.
+@sinan: Ben burada dört yıl okuyup sonra Bandırma'ya döneceğim. Babamın tamirhanesi var. Sen?
+* "Bilmiyorum."
+  @sinan: Herkes biliyor sanıyordum. Bilmeyen bir ben sanıyordum.
+* "Kalırım herhalde."
+  @sinan: Burada? Mühendis olarak? Burada mühendis olarak ancak rüzgâr türbini tamir edersin.
+  Tepedeki türbinlere bakıyor. Üçü dönüyor, biri durmuş.
+  @sinan: O duranı mesela.
+>> saat 13:30
+
+
+=== ders_quiz
+tür: eylem
+grup: ders
+başlık: Kampüse çık, derse gir
+öncelik: 80
+tarih: 9 Ekim - 9 Kasım
+koşul: gördü(ders_ilk_gun) ve haftagünü <= 3
+pencere: 07:30-10:30
+yer: Kabaktepe Yerleşkesi
+
+>> saat 08:30
+[okul.son_gun = bugün]
+Tarık Hoca haber vermeden kısa sınav yapıyor. Tek soru: bir dişli kutusunun verimi. Kâğıtlar dağıtılırken sınıftan bir inilti yükseliyor; Tarık Hoca bunu da bekliyormuş gibi başını sallıyor.
+Soruya bakıyorsun. İTÜ'de bu soru seni yatağa, yorganın altına, gün ortasında uyumaya göndermişti. Şimdi kalem elinde, bir süre bekliyorsun.
+* (Baştan, yavaş yavaş çöz.)
+  [okul.quiz_cozdu]
+  Çözüyorsun. Bir yerde takılıyorsun; geri dönüp tekrar okuyorsun. Okurken fark ediyorsun: soru, sandığından daha basit; sen sandığından daha az korkuyorsun.
+  Kâğıdı verirken Tarık Hoca sonuca bakıyor, bir şey demiyor. Bir hafta sonra kâğıtlar dönüyor: köşede kırmızı kalemle 8/10. Altında küçük harflerle: "Kayıp nerede?" Bulamamışsın; yine de sekiz.
+* (Bir şey yazmadan kâğıdı ver.)
+  [okul.quiz_bos]
+  Kâğıdı ilk veren sensin. Tarık Hoca boş kâğıda bakıyor, sonra sana.
+  @tarik: Isı kaybolmaz.
+  @tarik: Sen nereye kayboldun?
+  Sınıf bu kez gülüyor. Hoca da hafifçe gülümsüyor, şaşırmış gibi; üç yılda ilk kez.
+>> saat 13:30
+
+
+=== ders_siren
+tür: eylem
+grup: ders
+başlık: Kampüse çık, vizeye gir
+öncelik: 95
+tarih: 10 Kasım
+koşul: gördü(ders_ilk_gun)
+pencere: 07:30-08:55
+yer: Kabaktepe Yerleşkesi
+
+>> saat 08:45
+[okul.son_gun = bugün]
+Vize haftasının ilk sınavı. Termodinamik. Sınıf kalabalık; haftada bir derse gelenler de bu sabah buradalar, ellerinde başkalarından alınmış fotokopiler.
+Kâğıtlar dağıtılıyor. Sorulara bakıyorsun; üçünü biliyorsun, birini bildiğini sanıyorsun, beşincisini Tarık Hoca'nın "kayıp" dediği yerin tam ortasından sormuş.
+Dokuzu beş geçe siren başlıyor.
+Bir an kimse ne yapacağını bilmiyor. Sonra Tarık Hoca kürsünün arkasında ayağa kalkıyor ve kollarını iki yanına bırakıyor. Sınıf onu izliyor. Teker teker herkes kalkıyor; sandalyeler gıcırdıyor, biri kalemini düşürüyor ve eğilip almıyor.
+Pencereden aşağıya, şehre bakıyorsun. Kampüs yolunda bir dolmuş durmuş; şoförü inmiş, kapının yanında duruyor. Daha aşağıda, kordonda, küçük siyah noktalar halinde insanlar; kımıldamıyorlar.
+Siren bitiyor. Tarık Hoca oturuyor. Kimse bir şey söylemiyor; kalemler yeniden kâğıda iniyor.
+* (Beşinci soruyla uğraş.)
+  [okul.vize_ugrasti]
+  Beşinci soruyla uğraşıyorsun. Kaybı buluyorsun, ya da bulduğunu sanıyorsun: borunun dirseğinde, sürtünmede, kimsenin bakmadığı yerde.
+* (Bildiklerini yaz, kalkıp çık.)
+  Dört soruyu yazıp çıkıyorsun. Koridorda Sinan seni bekliyor; o da erken çıkmış.
+  @sinan: Beşinciyi kimse yapamadı. Tarık Hoca da yapamaz bence.
+>> saat 12:00
+
+
+=== ders_karanlik_sabah
+tür: eylem
+grup: ders
+başlık: Kampüse çık, derse gir
+öncelik: 70
+tarih: 1 Aralık - 26 Aralık
+koşul: gördü(ders_ilk_gun) ve haftagünü <= 3
+pencere: 07:00-10:00
+yer: Kabaktepe Yerleşkesi
+
+>> saat 08:30
+[okul.son_gun = bugün]
+Saat sekiz ve hava hâlâ yarı karanlık. Kampüs dolmuşunun camları buğulu; biri parmağıyla bir kalp çizmiş, kalbin içinden sokak lambaları geçiyor.
+Kabaktepe'de rüzgâr başka. Türbinlerin dördü de dönüyor bugün. B Blok'un kapısı bu sefer kendiliğinden açılıyor, rüzgâr içeriden esiyor.
+Tarık Hoca derse geç geliyor; ilk kez. Fileyi masaya koyuyor, ceketini çıkarmıyor.
+@tarik: Isı kaybolmaz. Ama bu sabah bende kayboldu, kalorifer yanmıyor. Ceketlerle devam ediyoruz.
+Sınıf gülüyor. Hoca gülmüyor ama bıyığının bir yanı kalkıyor.
+@sinan: Duydun mu? Güldürdü. Üç yılda bir kere. Kayda geçsin.
+>> saat 13:30
+
+
+=== ders_final
+tür: eylem
+grup: ders
+başlık: Kampüse çık, finale gir
+öncelik: 96
+tarih: 29 Aralık - 5 Ocak
+koşul: gördü(ders_ilk_gun) ve haftagünü <= 5 ve değil okul.final
+pencere: 08:00-10:00
+yer: Kabaktepe Yerleşkesi
+
+>> saat 09:00
+[okul.son_gun = bugün]
+[okul.final]
+Final. Makine Elemanları. Salon soğuk, herkes montla. Tarık Hoca sınavı başlatmadan önce sınıfa bakıyor, sonra pencereden dışarı, körfeze.
+@tarik: Bu dönem bazılarınızı ilk kez gördüm. Bazılarınızı son kez görüyorum, biliyorum. Kim olduğunu siz de biliyorsunuz.
+@tarik: Başlayın.
+Sorular zor değil; ya da dönem boyunca o kadar zor olanlarla uğraştın ki bunlar zor gelmiyor. Bir saat sonra kâğıdı veriyorsun.
+Tarık Hoca kâğıdı alırken sana bakıyor.
+@tarik: Baharda burada mısın?
+* "Bilmiyorum, hocam."
+  @tarik: Bilmiyorsun. Peki.
+  Kâğıdı yığının üstüne koyuyor.
+  @tarik: Bilinmeyeni bulmak bizim işimiz. Kendi bilinmeyenini de bulursun herhalde.
+* "Buradayım."
+  [okul.bahar_burada]
+  @tarik: Güzel. Termodinamik III'te kayıp nerede, onu da gösteririm.
+* "Gidiyorum galiba."
+  @tarik: Gidiyorsun.
+  Başını sallıyor.
+  @tarik: Isı kaybolmaz. Gittiğin yerde de bir yerde durur. İyi şanslar.
+>> saat 12:00
+
+
+=== ders_sessiz
+tür: eylem
+grup: ders
+başlık: Kampüse çık, derse gir
+öncelik: -10
+tekrar: evet
+koşul: gördü(ders_ilk_gun) ve haftagünü <= 3 ve tarih <= "26 Aralık" ve okul.son_gun != tarih
+pencere: 07:30-10:30
+
+[okul.son_gun = bugün]
+>> saat 13:30
+>> yer Kabaktepe Yerleşkesi

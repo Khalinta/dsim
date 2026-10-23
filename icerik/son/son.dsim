@@ -1,0 +1,419 @@
+# Son: 5 Ocak'ta Defne'nin sorusu, 6 Ocak 23:15 otogar, sonlar ve Şubat epilogu.
+# Diğer karakterler 4. adımda bu dosyaya kendi dallarıyla eklenecek.
+# defne.son_cevap: "kaliyorum" | "gidiyorum" | "bilmiyorum" | "birlikte"
+
+# ---------- 5 Ocak: "Yarın gidiyor musun?" ----------
+
+=== defne_son_soru
+tür: sahne
+kişi: defne
+zaman: 5 Ocak 20:30
+koşul: defne.devam ve değil defne.bitti ve değil defne.uzak ve değil defne.kotu_gece_yalniz ve (defne.kontrat veya defne.kapatiyor)
+yer: Taş Mahalle, Çatlak Seramik
+ton: gece
+
+>> eğer defne.kontrat
+  Atölyede fırın yanıyor; kapağının kenarından turuncu bir çizgi. Pazartesi gecesi fırın yakılmaz; Defne yakmış.
+  Tezgâhın üstünde yan yana kupalar, sırlanmayı bekliyor. Müdür sobanın önünde, sırtüstü, ayakları havada; bir köpeğin en savunmasız hâli.
+  Defne fırının önünde, minderin üstünde. Yanında bir şişe şarap, açılmamış. İki bardak, ikisi de boş.
+  @defne: Açmadım. Açmayacağım da. Bardaklar dekor. Reklam çekimlerinde de böyleydi: kimse içmez, herkes tutar.
+>> yoksa
+  Atölye boş. Raflar çıplak; duvarda rafların yıllarca durduğu yerlerde açık renk izler. Fırın yok; yerinde tozdan bir dikdörtgen.
+  Koliler kapının yanında üst üste, üstlerinde Defne'nin el yazısı: "KUPA. KIRILIR." "KUPA. KIRILMAZ (YALAN)." "MÜDÜR'ÜN EŞYALARI." Sonuncusunun içinde tek bir tenis topu var, görünüyor.
+  Defne yerde, kolilerin arasında, bağdaş kurmuş. Elinde bir kalem; bir koliye bir şey yazıyor ve siliyor.
+  @defne: Her koliye ne olduğunu yazıyorum. Bu koliye ne yazacağımı bilmiyorum. İçinde ne olduğunu bilmiyorum. Hepsini tek tek sardım, şimdi bilmiyorum.
+Yanına oturuyorsun. Bir süre ikiniz de bir şey söylemiyorsunuz.
+Defne sana dönüyor. Yüzünde kapanış gecesinin o hızlı, her şeyi bilen gülümsemesi; ama gülümsemenin altında başka bir şey, onu tutan.
+@defne: Yarın gidiyor musun?
+Aynı cümle. Aynı ses. Sezonun son gecesinde, barın ucunda.
+* "Hayır."
+  [defne.son_cevap = "kaliyorum"]
+  -> hayir
+* "Evet."
+  [defne.son_cevap = "gidiyorum"]
+  -> evet
+* "Bilmiyorum."
+  [defne.son_cevap = "bilmiyorum"]
+  -> bilmiyorum
+* {defne.kapatiyor} "Seninle geliyorum."
+  [defne.son_cevap = "birlikte"]
+  -> birlikte
+
+:: hayir
+>> eğer defne.kontrat
+  Defne bir an bekliyor. Sonra gülüyor; bu sefer gülüş baştan başlıyor.
+  @defne: Güzel.
+  @defne: O zaman bu gece...
+  Durduruyor kendini. Cümleyi baştan kuruyor.
+  @defne: O zaman bu gece hiçbir şey. Bu gece fırın gecesi. Yarın da var.
+  @defne: Yarın. Bak. Söyleyebiliyorum.
+>> yoksa
+  Defne kaleminin kapağını kapatıyor.
+  @defne: Ben gidiyorum, sen kalıyorsun. Her şey tersine döndü. Çorabı ters giymişim gibi.
+  @defne: Kural üç'ü sen uygulayacaksın. Biri giderse öbürü otogara gelir.
+  @defne: Ben hep gelen taraftım. Hiç giden olmadım. Nasıl yapılır bilmiyorum.
+-> gece
+
+:: evet
+>> eğer defne.kontrat
+  Defne başını sallıyor.
+  @defne: Güzel.
+  @defne: O zaman bu gece...
+  Bitiremiyor. Bir süre fırının kapağından sızan ışığa bakıyor.
+  @defne: Bu cümleyi bitirmeyi unuttum. Eskiden çok iyi bitirirdim.
+  @defne: Kural üç. Gelirim. Bunu söylemem bile gerekmiyor, kural bu.
+>> yoksa
+  Defne kalemi bırakıyor.
+  @defne: Aynı otobüs.
+  >> eğer defne.bilet_biliyor
+    @defne: Koltuk on yedi. Ben on sekizi aldım. Yazıhanedeki çocuk Rahmi Usta'nın torunu, ona ekmek kuyruğunda yalvardım. Yan yana.
+  >> yoksa
+    @defne: Hangi koltuk? Söyleme. Sürpriz olsun. İstanbul otobüsü kırk koltuk, bir yerde karşılaşırız.
+-> gece
+
+:: bilmiyorum
+Defne uzun uzun yüzüne bakıyor.
+@defne: Bilmiyorsun.
+@defne: İlk gece "evet" demiştin. Ya da "hayır". Bir şey demiştin. Şimdi bilmiyorsun.
+@defne: Bu iyi bir işaret mi kötü mü, onu da bilmiyorum. İkimiz de bilmiyoruz. Bir ilk.
+>> eğer defne.kontrat
+  @defne: Ben buradayım yarın. Gece de. Otogarda da olabilirim, burada da. Hangisinde olduğumu ben de bilmiyorum.
+-> gece
+
+:: birlikte
+Defne kalemi bırakıyor. Uzun süre bir şey söylemiyor.
+@defne: Benim için gelme demiştim.
+* "Kendim için geliyorum."
+  [defne.yakinlik +1]
+  @defne: Kendin için.
+  @defne: Tamam. O zaman yolda kendin için otur, kendin için uyu, kendin için omzuma yaslan.
+* "Senin için geliyorum. Bunu da söylemem lazım."
+  @defne: Kural dört.
+  Gözleri doluyor; gülüyor, gözleri dolu gülüyor.
+  @defne: Yalan yok. Peki. Benim için gel. Ama sonra kendin için kal. İstanbul'da. Ya da her neredeysen.
+>> eğer defne.bilet_biliyor
+  @defne: Koltuk on yedi. Ben on sekizi aldım. Yazıhanedeki çocuğa ekmek kuyruğunda yalvardım. Yan yana.
+-> gece
+
+:: gece
+Gece geç saate kadar oturuyorsunuz. Konuşuyorsunuz; reklamcılık, Saniye Hanım'ın kedileri, Müdür'ün kendi kendine verdiği kararlar, kötü filmlerin kötülük dereceleri. İkiniz de yarından bahsetmiyorsunuz; yarın odanın ortasında oturuyor, kimse ona bakmıyor.
+Saat ikiye doğru Defne başını omzuna koyup uyuyor. Müdür kalkıp ayaklarınızın dibine, ikinizin arasına yatıyor.
+>> zaman 6 Ocak 08:30
+>> yer Taş Mahalle
+
+
+# ---------- 6 Ocak, son gece ----------
+
+=== son
+tür: sahne
+zaman: 6 Ocak 22:20
+ton: gece
+
+Altı Ocak. Saat onu yirmi geçiyor.
+>> eğer karar.bilet
+  Bilet cebinde; dört haftadır orada. Kâğıt cebin şeklini almış, kenarları yumuşamış. İstanbul, 23:15, koltuk 17.
+>> yoksa
+  Cebinde bilet yok. Yazıhanenin önünden her geçişinde camdaki kâğıdı okudun: "İSTANBUL 23:15." Bilet orada da alınır, son dakika da.
+Otogara yürümek yirmi dakika. Otobüs elli beş dakika sonra kalkıyor.
+* (Otogara git.)
+  -> otogar
+* (Gitme.)
+  -> gitmedi
+
+# ---------- Otogara gitmeyenler ----------
+
+:: gitmedi
+[karar.kaldi]
+>> eğer defne.kontrat ve değil defne.bitti
+  Gitmiyorsun. Pencereden bakıyorsun; Taş Mahalle'nin çatıları, aralarında bir şerit karanlık deniz.
+  Saat 23:16'da telefon titriyor.
+  Defne: "[Fotoğraf: Otogar. Peron boş. Uzakta, İzmir yolunda iki kırmızı arka ışık.] 23:15. kalktı"
+  Defne: "bakmaya geldim. kural değil. hobi"
+  Defne: "koltuk on yedi boş gitti. biliyorum çünkü yazıhanedeki çocuğa sordum. ona ekmek kuyruğunda borcum var artık"
+  Defne: "kaldın."
+  -> kaldin_son
+>> yoksa eğer defne.kapatiyor ve defne.son_cevap == "kaliyorum"
+  Gitmiyorsun. Kural üç'ü biliyorsun; Defne de biliyor ki biliyorsun.
+  Saat 23:20'de telefon titriyor.
+  Defne: "kalktık."
+  Defne: "otogarda kimse yoktu. çaycı vardı. çaycı her zaman var"
+  Defne: "kural üç. gelmedin. iyi. gelseydin ya binerdim inerdim, ya da ağlardım. ikisini de sevmem"
+  Defne: "ama bunu not ettim. iyi kışlar, kalan adam"
+  [son.defne_gitti_ugurlanmadi]
+  -> epilog
+>> yoksa eğer defne.kapatiyor
+  Gitmiyorsun. Bir yerde, şehrin girişinde, bir otobüs bekliyor; içinde bir koltuk Defne'nin.
+  Saat 23:20'de telefon titriyor.
+  Defne: "kalktık."
+  Defne: "senin koltuğun boştu. bir de otogarda kimse yoktu, çaycı hariç. çaycı her zaman var"
+  >> eğer defne.son_cevap == "birlikte" veya defne.son_cevap == "gidiyorum"
+    Defne: "dün gece "geliyorum" dedin."
+    Defne: "kural dört. yalan yok. sen koydun o kuralı"
+    Defne: "neyse. iyi kışlar."
+    [son.yalan]
+  >> yoksa
+    Defne: "kural üç. biri giderse öbürü otogara gelir. bu sefer kimse gelmedi"
+    Defne: "iyi. kimse gelmeyince ağlamıyorsun. iyi kışlar"
+  [son.defne_gitti_ugurlanmadi]
+  -> epilog
+>> yoksa
+  Gitmiyorsun. Saat 23:15'te pencereden bakıyorsun; buradan otogar görünmüyor, otobüs görünmüyor. Yalnızca İzmir yolunda, uzakta, bir çift ışık tepeyi dönüyor; o mu, değil mi, bilmiyorsun.
+  Aşağıdan Saniye Hanım'ın radyosu. Bir kedi merdivende, gıcırdayan basamakta oturmuş; gıcırdamaması için hiç kıpırdamıyor.
+  -> epilog
+
+# ---------- Otogar ----------
+
+:: otogar
+>> yer Otogar
+Omzunda sırt çantan. Dün gece içine bir şeyler koydun; ne koyduğunu tam hatırlamıyorsun, ama koydun.
+Otogar her gece olduğu gibi. Floresan ışık, turuncu banklar, semaver. Pırnallı Turizm'in camında elle yazılmış kâğıt. Peronda otobüs; motoru çalışıyor, egzozundan soğuk havaya beyaz bir duman.
+>> eğer değil karar.bilet
+  Yazıhaneye gidip bir bilet alıyorsun. Kâtip genç, uykulu; sana bakmadan bir koltuk veriyor. On yedi.
+  [karar.bilet]
+>> eğer defne.kapatiyor ve değil defne.bitti
+  -> defne_gidiyor
+>> yoksa eğer defne.kontrat ve değil defne.bitti
+  -> defne_kaliyor
+>> yoksa
+  -> kimse
+
+:: defne_kaliyor
+En uçtaki bankta Defne. Kabanının cepleri, Müdür ayaklarının dibinde. Her zamanki yer.
+Seni görüyor. Kalkmıyor.
+>> eğer defne.son_cevap == "kaliyorum"
+  @defne: Hobi. Kimin bindiğine bakıyorum. Kimin binmediğine de; söylemiştim.
+>> yoksa eğer defne.son_cevap == "gidiyorum"
+  @defne: Kural üç.
+  @defne: Geldim. Söylemiştim. Kural.
+>> yoksa
+  @defne: Bilmiyordum hangisinde olacağımı. Burada oldum. Sen de burada oldun.
+Çaycı iki çay getiriyor, bir şey sormadan. Defne'nin çayı ellerinin arasında, içmiyor.
+Peronda insanlar biniyor. Bir asker. Bir kadın, yanında bir çocuk; çocuk otobüsün camına burnunu dayıyor. İki öğrenci, ellerinde poşetler, finalleri bitmemiş yüzlerle.
+Şoför kapının yanında, saatine bakıyor.
+@yabanci(Şoför): İstanbul! Binecekler binsin!
+Defne sana bakmıyor. Peronlara bakıyor; on iki yaşındaki bir kız gibi, bir bankta.
+* (Kalk. Otobüse bin.)
+  -> defne_ugurluyor
+* (Otur. Binme.)
+  -> kaldin_otogar
+
+:: kaldin_otogar
+[karar.kaldi]
+Oturuyorsun.
+Şoför bir kere daha bağırıyor, kimseye değil. Kapı kapanıyor. Otobüs geri geri çıkıyor; ışıkları bekleme salonunun camını yalayıp geçiyor, Defne'nin yüzünden, senin yüzünden.
+Otobüs İzmir yoluna dönüyor ve gözden kayboluyor.
+Defne çayını içiyor. Soğumuş.
+@defne: Kaldın.
+Soru değil. Dört ay önce bir sokakta, sarı bir kapının önünde söylediği gibi; ama bu sefer bezi katlamıyor, kaçacak bir yer aramıyor. Sana bakıyor.
+@defne: Neden kaldın? Hayır, cevap verme.
+@defne: Tamam, verme. Gerçekten verme. Bu sefer bilmek istemiyorum. Kaldın, bu yeter.
+-> kaldin_son
+
+:: kaldin_son
+[son.defne_kaldi]
+>> eğer defne.yilbasi_kupa
+  Gece yarısından sonra, rafından kupayı alıyorsun. Kulpu ters. Ters tutuyorsun; elin bilmediği bir yerinden.
+  Çeviriyorsun. Altında, sırın altında, pişmiş, silinmez, Defne'nin küçük harfli el yazısı:
+  "seni seviyorum. düz yazdım. bir kere."
+-> epilog
+
+:: defne_ugurluyor
+[karar.gitti]
+[son.defne_ugurladi]
+Kalkıyorsun. Defne de kalkıyor; Müdür de.
+Otobüsün kapısına kadar yürüyorsunuz. Şoför çantanı bagaja koyuyor.
+Defne kabanının cebinden ellerini çıkarıyor. Bir şey söyleyecek; söylemiyor. Yerine yakandaki bir ipliği koparıyor, görünmeyen bir ipliği.
+@defne: Ben buna alışkınım. Uğurlamaya. En iyi bildiğim şey.
+@defne: Ama hep sezonluklara yaptım. Kalan birini uğurlamayı bilmiyorum. Kalan biri gitmiyor çünkü normalde. Sen kural dışısın.
+* (Onu öp.)
+  Öpüyorsun. Peronun floresanında, şoförün sabırsızlığında. Defne'nin elleri kabanının yakasında; bırakmıyor, bırakıyor.
+* (Sarıl.)
+  Sarılıyorsun. Defne yüzünü boynuna gömüyor; bir süre hiç kıpırdamıyor. Müdür ikinizin bacaklarına yaslanıyor.
+* "Gel benimle."
+  @defne: Gelemem. Kontratı imzaladım. İki katı. Bir kış. Kalmayı yeni öğrendim, hemen unutmayayım.
+  @defne: Sen git. Bunu sen yapmalısın. Babanla konuşmayı. Ben burada olacağım. Bu bir söz değil. Bu bir adres.
+>> eğer defne.yilbasi_kupa
+  @defne: Kupanın altına bak. Otobüste. Şimdi değil.
+Otobüse biniyorsun. Koltuk on yedi, cam kenarı. Camın arkasında Defne, peronda, Müdür'le. El sallamıyor. Kabanının cebinde elleri.
+Otobüs geri geri çıkıyor. Defne'nin yüzü ışıkta bir an, sonra karanlıkta. Ağlamıyor. Bir kere ağlar, demişti; o bir kere bu değil, belli.
+>> eğer defne.yilbasi_kupa
+  Otobüs İzmir yoluna dönünce çantandan kupayı çıkarıyorsun. Kulpu ters. Çeviriyorsun.
+  Altında, sırın altında, Defne'nin küçük harfli el yazısı:
+  "seni seviyorum. düz yazdım. bir kere."
+-> otobus
+
+:: defne_gidiyor
+>> eğer defne.kotu_gece_yalniz veya defne.uzak
+  Defne peronun yanında, bir bavulun üstüne oturmuş. Müdür yok; kamyonla gitmiş. Defne'nin ayaklarının dibi boş, garip biçimde boş.
+  Seni görüyor. Başını sallıyor; bir tanıdığa, bir komşuya.
+  @defne: Kural üç. Hatırlıyorsun demek. Ben unutmuştum.
+  @defne: Bilet var mı sende? Varmış. Biliyorum. Herkes biliyor bu şehirde, kimin bileti var.
+  * (Otobüse bin.)
+    Biniyorsunuz. Sen on yedide, o dokuzda. Yol boyunca bir kere arkaya dönüp sana bakıyor; sen uyuyormuş gibi yapıyorsun, o da yapıyor.
+    [karar.gitti]
+    [son.defneyle_ayni_otobus]
+    -> otobus
+  * (Binme. Onu uğurla.)
+    [karar.kaldi]
+    [son.defneyi_ugurladi]
+    Otobüs kalkarken camın arkasında Defne. Sana bakıyor ve bir şey yapıyor, hiç beklemediğin: elini cama koyuyor. Bir saniye. Sonra çekiyor.
+    -> epilog
+>> yoksa
+  Defne bir bavulun üstünde oturuyor, peronun yanında. Müdür yok; kamyonla, ön koltukta, şu an İstanbul yolunda bir yerde.
+  Seni görünce kalkıyor.
+  >> eğer defne.son_cevap == "birlikte" veya defne.son_cevap == "gidiyorum"
+    @defne: Geldin. Çantan var. Gerçekten geliyorsun.
+  >> yoksa eğer defne.son_cevap == "kaliyorum"
+    @defne: Kural üç. Uğurlamaya geldin. Ben hep uğurlayan taraftım. Ters oldu her şey.
+  >> yoksa
+    @defne: Geldin. Uğurlamaya mı, binmeye mi, söyleme. Otobüs söylesin.
+  @yabanci(Şoför): İstanbul! Binecekler binsin!
+  * (Çantanı bagaja ver. Otobüse bin.)
+    -> birlikte_gidis
+  * (Binme. Onu uğurla.)
+    -> ters_kural
+
+:: birlikte_gidis
+[karar.gitti]
+[son.defneyle_gitti]
+Çantanı bagaja veriyorsun. Defne onun yanına kendi bavulunu itiyor; şoför bir şey diyor, Defne bir şey diyor, şoför gülüyor.
+Otobüse biniyorsunuz. Koltuk on yedi, on sekiz. Defne cam kenarına oturuyor; cam kenarı senindi, bir şey demiyorsun.
+Otobüs geri geri çıkıyor. Defne camdan otogara bakıyor; banklara, semavere, en uçtaki banka. Boş.
+@defne: Bu sefer bankta kimse yok.
+@defne: Kimse binmemeyi seyretmiyor. Herkes bindi. Bu iyi bir şey. Galiba.
+Elini senin elinin üstüne koyuyor, avucunu çevirmeden.
+>> eğer defne.yilbasi_kupa
+  Kordonun ışıkları geride kalınca çantandan kupayı çıkarıyorsun. Defne görüyor.
+  @defne: Hayır. Şimdi değil. Bakma.
+  Bakıyorsun. Altında, sırın altında, onun küçük harfli el yazısı: "seni seviyorum. düz yazdım. bir kere."
+  Defne camdan dışarı bakıyor, karanlığa. Yanağında bir şey parlıyor; yol lambalarından biri, belki.
+  @defne: Bir kere. Okudun. Bir daha yazmam.
+-> otobus
+
+:: ters_kural
+[karar.kaldi]
+[son.defneyi_ugurladi]
+Şoför Defne'nin bavulunu bagaja koyuyor, sonra sana bakıyor, çantana. Çantanı omzundan indirmiyorsun.
+Defne bunu görüyor. Bir şey söylemiyor; başını sallıyor, bir kere, yavaş.
+@defne: Ters kural üç.
+@defne: Biri giderse öbürü otogara gelir. Bu sefer giden ben, gelen sen.
+@defne: Bu tarafını bilmiyordum. Uğurlanmak. Kötüymüş. Hep kötüymüş, kimse söylememiş.
+* (Sarıl.)
+  Sarılıyorsun. Defne'nin kollarının arasında kabanı hışırdıyor. Bırakmıyor; sonra bırakıyor.
+* (Onu öp.)
+  Öpüyorsun. Yavaş, otobüsün motoru ikinizin arasında titrerken.
+* "Gel. Kal."
+  @defne: Gelemem. Kalamam. Kontrat yok. Fırın İstanbul yolunda. Müdür İstanbul yolunda. Bir ben kaldım burada, o da on dakikalığına.
+>> eğer defne.yilbasi_kupa
+  @defne: Kupanın altına bak. Ben gidince. Şimdi değil.
+Otobüse biniyor. Cam kenarı. Otobüs geri geri çıkıyor; Defne'nin yüzü ışıkta. Elini cama koyuyor. Bir saniye. Sonra otobüs dönüyor ve gidiyor.
+Ağlıyor mu, göremiyorsun. Bir kere ağlar, demişti. Bunu bilmeyeceksin.
+>> eğer defne.yilbasi_kupa
+  O gece kupayı çeviriyorsun. Altında, sırın altında:
+  "seni seviyorum. düz yazdım. bir kere."
+-> epilog
+
+:: kimse
+Banklar boş. Çaycı semaverin başında; gazetesini katlıyor, sana bakıyor, bir çay koyup getiriyor, sormadan.
+@yabanci(Çaycı): İstanbul mu?
+* "Galiba."
+  @yabanci(Çaycı): Galiba'yla bilet kesilmez, ama otobüse binilir. Ben otuz yıldır burada çay veriyorum, galiba diyenlerin hepsi bindi.
+* "Bilmiyorum."
+  @yabanci(Çaycı): Kimse bilmiyor. Otobüs kalkınca bilirsin.
+* (Bir şey söyleme. Çayını iç.)
+Peronda insanlar biniyor. Bir asker. Bir anne, kızını uğurluyor. İki öğrenci, poşetlerle.
+@yabanci(Şoför): İstanbul! Binecekler binsin!
+* (Otobüse bin.)
+  [karar.gitti]
+  -> otobus
+* (Binme.)
+  [karar.kaldi]
+  Oturuyorsun. Otobüs kalkıyor; ışıkları camı yalayıp geçiyor. Çaycı semaverin altını kısıyor ve bir şey söylemiyor; söylenecek bir şey yok, ikiniz de biliyorsunuz.
+  -> epilog
+
+# ---------- Otobüste ----------
+
+:: otobus
+>> zaman 6 Ocak 23:40
+Otobüs İzmir yolunda. Pırnallı arkada; önce kordonun ışıkları, sonra Taş Mahalle'nin üç beş penceresi, sonra hiçbir şey. Tepeyi dönünce şehir bir anda yok.
+Telefon titriyor.
+>> eğer karar.soz_gelirim
+  Babam: "Bindin mi?"
+>> yoksa
+  Babam: "Otobüs kalktı mı?"
+>> eğer karar.anneme_gelecegim
+  Annem: "Sabah yedide otogardayım. Sen uyu, ben beklerim."
+>> yoksa
+  Annem: "Baban söyledi. Geliyorsun. Uyuyamadım, uyumayacağım. Gel."
+>> eğer karar.saniye_kira
+  Saniye Hanım: "Odan boş. Kirayı ödedin, kalacağım dedin. Kitap gibi bir son değil bu, evladım."
+  Saniye Hanım: "Ama hayat gibi. Ben ikisini de okudum."
+>> yoksa eğer saniye.firtina
+  Saniye Hanım: "Gittin. Kediler fark etti. Ben fark etmedim, onlar söyledi."
+>> eğer is.mendirek
+  >> eğer nuri.soru_sordu
+    Nuri Abi: "Gittin."
+    Nuri Abi: "Söyleseydin adam arardım."
+    Nuri Abi: "Neyse. Aradım zaten."
+  >> yoksa
+    Nuri Abi: "İyi yolculuklar."
+Onur: "kanka gittin mi lan"
+Onur: "odanı alabilir miyim. şaka. alabilir miyim"
+>> eğer son.defne_ugurladi
+  Defne: "kalktın."
+  Defne: "müdür otobüsün arkasından baktı. ben de. ikimiz de bakmayı biliriz"
+  Defne: "iyi yolculuklar"
+  Defne: "nokta koymadım. bilerek"
+>> yoksa eğer son.defneyle_gitti
+  Telefonu Defne alıyor elinden, ekrana bakıyor, ters çeviriyor, kucağına koyuyor.
+  @defne: Sonra. Hepsine sonra cevap verirsin. Şimdi yol.
+>> yoksa eğer son.defneyle_ayni_otobus
+  Dokuz numaralı koltuktan bir mesaj. Defne: "iyi yolculuklar, aynı otobüs. komik."
+>> yoksa eğer defne.kontrat veya (defne.devam ve değil defne.kapatiyor)
+  >> eğer değil defne.bitti
+    Defne: "otobüs kalkmış. sarp söyledi. sarp her şeyi söyler artık, onur'dan öğrenmiş"
+    Defne: "kural üç. haber vermedin. gelemedim"
+    Defne: "iyi yolculuklar, sezonluk."
+    [son.kacis]
+-> epilog
+
+# ---------- Şubat ----------
+
+:: epilog
+>> zaman 7 Ocak 05:00
+Şubat.
+>> eğer son.defne_kaldi
+  Atölyenin kapısı sarı, ama kapının üstüne yeni bir tabela asılmış; el yazısı, seramikten: "ÇATLAK SERAMİK. KIŞ DERSLERİ. KAHVALTI DAHİL (YALAN)."
+  Cumartesi dersine üç öğrenci geliyor; emekli bir öğretmen, iki öğrenci. Sen dördüncüsün. Kâsen her seferinde çöküyor. Defne her seferinde "Bunun adı 'ilişkilerim'" diyor ve bu şaka her seferinde biraz daha az şaka.
+  Müdür kapının önünde. Kapının önünde bir şey değişmedi; Müdür hâlâ gelen gideni denetliyor. Gideni artık daha az.
+  Kış devam ediyor. Ama Defne'nin balkonundan denizin bir şeridi görünüyor ve bir sabah, saat on birde, Defne o şeride bakarken "Bugün güneş beş elli ikide batacak," diyor. Şikâyet etmeden. Bir bilgi olarak.
+>> yoksa eğer son.defne_ugurladi
+  İstanbul'dasın. Babanla konuştun; iki kere, ikisinde de bağırmadınız. Bu bir şey.
+  Bir gece telefonuna bir fotoğraf düşüyor: Çatlak Seramik'in Instagram'ında yeni bir kupa. Kulpu ters. Altında tek kelime: "bekliyor."
+  Kupayı mı kastediyor, kendini mi, Müdür'ü mü, bilmiyorsun. Hepsini, galiba.
+>> yoksa eğer son.defneyle_gitti
+  İstanbul'dasınız. Moda'da, Defne'nin annesinin bodrumunda bir fırın; tavanı alçak, Defne her seferinde başını çarpıyor, her seferinde küfrediyor.
+  Annesi Müdür'ü sevmedi. Müdür de annesini. Anlaştılar; her sabah ikisi aynı pencereden, aynı martıya bakıyorlar.
+  Bir gün, otobüs durağında, Defne'nin dört yıl önce yazdığı cümlenin önünden geçiyorsunuz. "Yarın da buradayız." Defne duruyor, bakıyor, sonra cebinden bir kalem çıkarıp altına küçük harflerle bir şey yazıyor. Okumana izin vermiyor.
+>> yoksa eğer son.defneyi_ugurladi
+  Çatlak Seramik'in kapısı kapalı. Sarı boya kabarmaya başlamış. Kapının önünde Müdür yok; yerinde bir kedi, Saniye Hanım'ın Ferhan'ı, gelip gideni denetliyor, beceriksizce.
+  Instagram'da @catlakseramik'in yeni bir gönderisi: İstanbul'dan, bir bodrum, alçak bir tavan, bir fırın. Altında: "yeni atölye. yeni kış. eski müdür."
+  Bir gece 03:40'ta bir mesaj: "uyuyor musun." Sabah, başka bir mesaj yok. Boşver dün geceyi; bu sefer şarap yazmadı.
+>> yoksa eğer son.defne_gitti_ugurlanmadi veya son.defneyle_ayni_otobus
+  Çatlak Seramik'in kapısı kapalı. Yeni ev sahibi kapıyı griye boyatmış. Instagram'da @catlakseramik bir süre sessiz; sonra İstanbul'dan bir kupa. Kulpu ters. Altında bir şey yazmıyor.
+>> yoksa eğer defne.kontrat
+  Çatlak Seramik açık. Cumartesi dersleri devam ediyor. Bir gün kordonda Defne'yle karşılaşıyorsun ya da karşılaşmıyorsun; şehir küçük, ama bir kış boyunca iki insanın birbirini görmemesi için yeterince büyük.
+  Instagram'da yeni bir kupa. Kulpu ters.
+>> yoksa eğer defne.yabanci
+  Çatlak Seramik'in Instagram'ında yeni bir kupa, kulpu ters. Altında: "cape town'dan kartpostal geldi. bisiklet sağ, adam belirsiz." Kimse ne demek olduğunu sormuyor.
+>> yoksa
+  Taş Mahalle'de sarı bir kapı. Önünde iri, sarı, topal bir köpek, gelen gideni denetliyor. Önünden geçerken başını kaldırıp sana bakıyor; tanıyor mu, tanımıyor mu, bilmiyorsun.
+>> eğer karar.kaldi ve is.mendirek
+  Mendirek'te dış masalar hâlâ içeride. Nuri Abi bir akşam sana tepsiyi uzatırken "Nisanda dışarı çıkarırız," diyor. Nisan diyor. Gelecekten bahsediyor. Bunu ilk kez yapıyor.
+>> eğer karar.kaldi
+  Saniye Hanım merdivende oturuyor, akşamları. Bazen sen de. "Notun yükseldi," diyor bir akşam, hangi dersten olduğunu söylemeden.
+  Onur yedinci yılının bahar dönemine kaydını yeniletmeyi unutuyor. Sonra hatırlıyor. Sonra unutuyor.
+>> yoksa
+  Pırnallı'da Saniye Hanım yeni bir kiracı arıyor. Kapının camına bir kâğıt: "Kiralık oda. Gidecek birine benzemeyene."
+  Onur odanı alıyor. Pencereden deniz çeyrek görünüyor; Onur çeyreğin yetmediğini söylüyor, ama taşınıyor.
+>> bitir

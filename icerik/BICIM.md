@@ -52,6 +52,7 @@ Kimlikler küçük harf, rakam ve `_` ile yazılır (Türkçe harfler olur).
 | `gecikme` | `20dk` | Kendiliğinden mesaj: pencere açıldıktan ne kadar sonra |
 | `ton` | `gece`, `gündüz` | Sahnenin kâğıt rengini saatten bağımsız belirler |
 | `olay` | `telefona_bakma` | Tepki parçasının olayı |
+| `grup` | `vardiya` | Eylem: aynı gruptan kilit ekranında yalnızca biri görünür (önceliği en yüksek olan). Tekrarlanan işlerin (vardiya, ders) her seferi ayrı yazılır; yazılanlar bitince `tekrar: evet` olan sessiz yedek kalır |
 | `not` | serbest | Yazara not, oyunda görünmez |
 
 ## Gövde
@@ -81,12 +82,16 @@ Girinti **iki boşluktur** (sekme yok). Her satır bir paragraf ya da bir mesajd
 | `>> eğer KOŞUL` / `>> yoksa eğer KOŞUL` / `>> yoksa` | Koşullu bloklar (altları iki boşluk içeride) |
 | `>> bekle 5dk` | Mesajda: bir sonraki mesajdan önce bekleme. Sahnede: zaman geçer |
 | `>> zaman 16 Eylül 10:40` | Sahnede saati ileri alır (geçmişteyse etkisiz) |
+| `>> saat 18:00` | Saati o güne ait bu saate alır; geçmişteyse ertesi günün bu saatine |
 | `>> yer Kordon` | Oyuncunun konumunu değiştirir |
 | `>> ev Taş Mahalle, ev` | Oyuncunun evini değiştirir (uyuyunca oraya döner) |
 | `>> başlat kimlik` / `... sonra 2sa` / `... 17 Eylül 09:00` | Başka bir parçayı başlatır ya da zamanlar |
+| `>> randevu kimlik 20 Eylül 01:30 \| Yer` | Bir sahneyi o ana kurar ve kilit ekranında kart olarak gösterir. Zaman `sonra 25dk`, `bugün 22:30`, `yarın 19:30`, `öbür gün 11:00` da olabilir. Randevu uykuyu da böler |
+| `>> iptal kimlik` | Kurulmuş bir randevuyu ya da zamanlanmış parçayı kaldırır |
+| `>> bitir` | Oyunu bitirir ("Son." ekranı) |
 | `>> rehber kişi: Ad 1 \| Ad 2 \| Ad 3` | Oyuncu numarayı bu adlardan biriyle rehbere kaydeder |
 | `>> tanış kişi` | Oyuncu artık bu kişinin adını biliyor (sahnede adıyla görünür) |
-| `>> okudu` | Mesajda: karşı taraf oyuncunun mesajlarını okudu (görüldü) |
+| `>> okudu` | Mesajda: karşı taraf oyuncunun mesajlarını okudu (görüldü). Okuma gecikmesine ve kişinin uykusuna uyar; akış okuduğu ana kadar bekler |
 | `>> zaman_aşımı 3sa -> etiket` | Mesajda: hemen ardından gelen seçime süre koyar; cevap gelmezse etikete gider |
 | `>> okunmadı` | Geçmişte: bundan sonraki gelen mesajlar okunmamış durur |
 
@@ -113,6 +118,8 @@ Fonksiyonlar: `gördü(parça)`, `bitti(parça)`, `kaç(parça)`, `tanıdı(kiş
 
 Otomatik değişkenler: `<parça>.cevapsız` (mesaj seçimi cevapsız kaldıysa).
 
+Değişkene bugünün gün numarası yazılabilir: `[defne.gitti_gun = bugün]`, sonra `tarih > defne.gitti_gun + 2`. Eşitlikte de tarih gibi okunan metin tarihtir: `tarih != "13 Aralık"`, `tarih == "24 Ekim" ve saat >= 21`.
+
 ### Değişken adları (öneri)
 
 - `<kişi>.yakınlık`, `<kişi>.güven`, `<kişi>.gerilim`: ilişkinin gizli ölçüleri.
@@ -127,3 +134,8 @@ Otomatik değişkenler: `<parça>.cevapsız` (mesaj seçimi cevapsız kaldıysa)
 - Telefon açıkken 5 dakika içindeki mesajlar "yazıyor…" ile kendiliğinden gelir.
 - Cevap beklenen seçim, süresi dolunca (varsayılan 24 saat) kapanır.
 - Aynı kişiden ikinci bir mesaj parçası gelirse, önceki bitene kadar sıraya girer (`kesme: evet` değilse).
+- Kişi uyuyorsa (`kisiler.json`: `"uyku": "05:00-11:00"`) oyuncunun mesajını uyanınca okur ve cevaplar.
+- Sahne sürerken de mesaj gelir (sahnenin içindeki saat atlamasına denk gelenler kaybolmaz); yalnızca o an yanında olunan kişinin mesajları sahne bitince gelir.
+- Kilit ekranındaki hazır seçenekler: "Biraz oyalan" (30 dk), "Saat 11/16/21'e kadar oyalan" ve gece "Uyu" (sabah 08:00'e, eve). Oyalanırken yeni bir eylemin saati gelirse zaman orada durur; böylece vardiya gibi işler büyük atlamaların arasında kaybolmaz.
+- `kisiler.json` alanları: `ad`, `tanimsiz` (adı bilinmezken), `rehberde` (rehberde hazır kayıtlı adı), `sahnede` (sahnede hep bu adla: "Baban"), `numara`, `renk`, `yazmaHizi`, `okumaGecikmesi`, `uyku`, `biliniyor`.
+- `oyun.json`: `başlangıç`, `içerik_sonu`, `ilk_yer`, `ilk_ev`.

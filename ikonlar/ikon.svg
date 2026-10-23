@@ -1,25 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#191c40"/>
-      <stop offset=".34" stop-color="#46325f"/>
-      <stop offset=".54" stop-color="#b65e68"/>
-      <stop offset=".65" stop-color="#f1a874"/>
+    <linearGradient id="z" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f4c47"/>
+      <stop offset="1" stop-color="#0c2224"/>
     </linearGradient>
-    <linearGradient id="d" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#2a2b52"/>
-      <stop offset="1" stop-color="#14162e"/>
+    <radialGradient id="i" cx=".3" cy=".22" r=".85">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".09"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="y" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#e5d5b6"/>
+      <stop offset="1" stop-color="#f8f0de"/>
     </linearGradient>
-    <clipPath id="c"><rect width="512" height="512"/></clipPath>
   </defs>
-  <g clip-path="url(#c)">
-    <rect width="512" height="512" fill="url(#g)"/>
-    <circle cx="256" cy="330" r="92" fill="#fff1dd"/>
-    <rect y="330" width="512" height="182" fill="url(#d)"/>
-    <g stroke="#fff1dd" stroke-linecap="round" opacity=".55">
-      <path d="M176 362h160" stroke-width="7"/>
-      <path d="M206 392h100" stroke-width="6" opacity=".7"/>
-      <path d="M232 420h48" stroke-width="5" opacity=".5"/>
-    </g>
+  <rect width="512" height="512" fill="url(#z)"/>
+  <rect width="512" height="512" fill="url(#i)"/>
+  <g transform="rotate(32 256 270) translate(0 -14)">
+    <path d="M 256 470 Q 254 446 256 418" stroke="#e5d5b6" stroke-width="9" stroke-linecap="round" fill="none"/>
+    <path d="M 256 420 L 278 404 L 308 404 L 296 378 L 332 368 L 314 338 L 348 322 L 326 292 L 356 272 L 328 246 L 354 222 L 320 200 L 342 172 L 304 156 L 316 126 L 278 118 L 256 86 L 234 118 L 196 126 L 208 156 L 170 172 L 192 200 L 158 222 L 184 246 L 156 272 L 186 292 L 164 322 L 198 338 L 180 368 L 216 378 L 204 404 L 234 404 Z" fill="url(#y)" stroke="#f3e9d4" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M 256 414 Q 252 260 256 104" stroke="#1f4c47" stroke-opacity=".5" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <path d="M 256 412 Q 274.0 402 288.8 382 M 256 412 Q 238.0 402 223.2 382 M 256 372 Q 282.1 362 303.56 342 M 256 372 Q 229.9 362 208.44 342 M 256 326 Q 287.5 316 313.4 296 M 256 326 Q 224.5 316 198.6 296 M 256 280 Q 288.4 270 315.04 250 M 256 280 Q 223.6 270 196.96 250 M 256 234 Q 284.8 224 308.48 204 M 256 234 Q 227.2 224 203.52 204 M 256 190 Q 277.6 180 295.36 160 M 256 190 Q 234.4 180 216.64 160" stroke="#1f4c47" stroke-opacity=".26" stroke-width="3.2" stroke-linecap="round" fill="none"/>
   </g>
 </svg>

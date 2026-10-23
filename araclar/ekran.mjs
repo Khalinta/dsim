@@ -29,6 +29,8 @@ const sayfa = await baglam.newPage();
 const hatalar = [];
 sayfa.on('pageerror', (e) => hatalar.push(`sayfa: ${e.message}`));
 sayfa.on('console', (m) => { if (m.type() === 'error') hatalar.push(`konsol: ${m.text()}`); });
+sayfa.on('requestfailed', (r) => hatalar.push(`istek: ${r.url()} (${r.failure()?.errorText})`));
+sayfa.on('response', (r) => { if (r.status() >= 400) hatalar.push(`istek: ${r.url()} (${r.status()})`); });
 
 let sira = 0;
 const cek = async (ad) => {
@@ -41,7 +43,50 @@ const tikla = async (secici, metin) => {
   await hedef.click();
 };
 
+const kaydir = () => sayfa.locator('#ekran-sahne .sahne-kaydirma').evaluate((d) => { d.scrollTop = d.scrollHeight; });
+const aktif = (ekran) => sayfa.locator(`#ekran-${ekran}.aktif`).count();
+
+// Açık sahneyi sonuna kadar oynar: tercih listesindeki ilk eşleşen seçeneği, yoksa ilk seçeneği seçer.
+// ekranAl: { 'metin parçası': 'dosya-adı' } — o metin ekranda görününce görüntü alır.
+async function sahneyiOyna(tercihler = [], ekranAl = {}, telefonaBak = false) {
+  for (let adim = 0; adim < 60; adim++) {
+    await sayfa.waitForTimeout(700);
+    await kaydir();
+    const metin = await sayfa.locator('#ekran-sahne').innerText();
+    for (const [parca, ad] of Object.entries(ekranAl)) {
+      if (metin.includes(parca)) { await cek(ad); delete ekranAl[parca]; }
+    }
+    if (await sayfa.locator('.sahne-son .dugme').count()) {
+      await tikla('.sahne-son .dugme');
+      await sayfa.waitForTimeout(500);
+      return;
+    }
+    if (await sayfa.locator('.sahne-rehber .secim, .sahne-rehber button').count()) {
+      await sayfa.locator('.sahne-rehber .secim, .sahne-rehber button').first().click();
+      continue;
+    }
+    const secimler = sayfa.locator('#ekran-sahne .secim');
+    const n = await secimler.count();
+    if (!n) continue;
+    if (telefonaBak && (await sayfa.locator('.sahne-telefon-dugmesi.gorunur').count())) {
+      telefonaBak = false;
+      await tikla('.sahne-telefon-dugmesi');
+      await sayfa.waitForTimeout(1200);
+      await kaydir();
+      await cek('sahne-telefona-bakti');
+      continue;
+    }
+    let secildi = false;
+    for (const t of tercihler) {
+      const aday = sayfa.locator('#ekran-sahne .secim', { hasText: t });
+      if (await aday.count()) { await aday.first().click(); secildi = true; break; }
+    }
+    if (!secildi) await secimler.first().click();
+  }
+}
+
 await sayfa.goto(`http://localhost:${PORT}/`);
+await sayfa.waitForSelector('#ekran-giris.aktif');
 await sayfa.evaluate(() => localStorage.clear());
 await sayfa.reload();
 await sayfa.waitForSelector('#ekran-giris.aktif');
@@ -56,49 +101,27 @@ await sayfa.waitForTimeout(500);
 await cek('perde');
 await sayfa.waitForSelector('#ekran-sahne .secim', { timeout: 8000 });
 await sayfa.waitForTimeout(1200);
-await cek('sahne-acilis');
-await sayfa.locator('#ekran-sahne .sahne-kaydirma').evaluate((d) => { d.scrollTop = d.scrollHeight; });
-await cek('sahne-acilis-secimler');
-await tikla('#ekran-sahne .secim', 'Gitmiyorum');
-await sayfa.waitForTimeout(1500);
-await cek('sahne-gitmiyorum');
-await tikla('#ekran-sahne .secim', 'üniversiteye');
-await sayfa.waitForTimeout(2200);
-await sayfa.locator('#ekran-sahne .sahne-kaydirma').evaluate((d) => { d.scrollTop = d.scrollHeight; });
-await cek('sahne-burak');
-if (await sayfa.locator('.sahne-telefon-dugmesi.gorunur').count()) {
-  await tikla('.sahne-telefon-dugmesi');
-  await sayfa.waitForTimeout(1500);
-  await sayfa.locator('#ekran-sahne .sahne-kaydirma').evaluate((d) => { d.scrollTop = d.scrollHeight; });
-  await cek('sahne-telefona-bakti');
-}
-await tikla('#ekran-sahne .secim', 'Onda');
-await sayfa.waitForSelector('.sahne-son .dugme', { timeout: 8000 });
-await sayfa.locator('#ekran-sahne .sahne-kaydirma').evaluate((d) => { d.scrollTop = d.scrollHeight; });
-await cek('sahne-son');
-await tikla('.sahne-son .dugme');
-await sayfa.waitForSelector('#ekran-kilit.aktif');
+await cek('prolog-acilis');
+
+// Prolog: kalan yolu (öpüşmeden, numara alarak), telefona bir kez bakılır.
+await sahneyiOyna(
+  ['Dört', 'iade yok', 'Gitmiyorum', 'Kaan', 'Ritüelin adı', 'ekmek kuyruğunda bakarım'],
+  { 'Sen ne zaman gidiyorsun': 'prolog-soru', 'Yeni kişi': 'rehber-kaydi' },
+  true,
+);
+// Ertesi sabahın sahnesi (açılış) kendiliğinden gelir.
+if (await aktif('sahne')) { await sayfa.waitForTimeout(800); await cek('sabah-sahnesi'); await sahneyiOyna(); }
+await sayfa.waitForSelector('#ekran-kilit.aktif', { timeout: 8000 });
 await cek('kilit-sabah');
 await tikla('.telefon-dugmesi');
 await sayfa.waitForSelector('#ekran-telefon.aktif');
 await cek('telefon-liste');
 await tikla('.sohbet-satiri', 'Onur');
 await cek('sohbet-onur');
-await tikla('.cevap', 'saat kaçta');
-await sayfa.waitForTimeout(4500);
-await cek('sohbet-onur-cevap');
 await tikla('.geri');
-await tikla('.sohbet-satiri', 'Babam');
-await cek('sohbet-babam');
-await tikla('.geri');
-await tikla('.sohbet-satiri', 'Annem');
-await cek('sohbet-annem');
-await tikla('.cevap', 'selam');
-await sayfa.waitForTimeout(1600);
-await cek('sohbet-annem-yaziyor');
-await sayfa.waitForTimeout(7000);
-await cek('sohbet-annem-cevap');
-await tikla('.geri');
+await tikla('.sekme', 'Rehber');
+await sayfa.waitForTimeout(400);
+await cek('rehber');
 await tikla('.sekme', 'Ayarlar');
 await cek('ayarlar');
 await tikla('.kutu-satiri', 'Kayıt kodunu al');
@@ -109,58 +132,41 @@ await sayfa.waitForTimeout(500);
 await tikla('.sekme', 'Kilitle');
 await sayfa.waitForSelector('#ekran-kilit.aktif');
 
-// Söküm eylemi: uzun bir sahne, sonra akşam.
-await tikla('.eylem', 'sökümde');
-await sayfa.waitForSelector('#ekran-sahne .secim', { timeout: 8000 });
-await sayfa.waitForTimeout(1500);
-await cek('sokum');
-await tikla('#ekran-sahne .secim', 'kalıyorum');
-await sayfa.waitForTimeout(1500);
-await tikla('#ekran-sahne .secim');
-await sayfa.waitForSelector('.sahne-son .dugme', { timeout: 8000 });
-await tikla('.sahne-son .dugme');
-await sayfa.waitForSelector('#ekran-kilit.aktif');
-await cek('kilit-aksam');
-await tikla('.eylem', 'Kordona');
-await sayfa.waitForSelector('#ekran-sahne .secim', { timeout: 8000 });
-await sayfa.waitForTimeout(1200);
-await cek('kordon-gunbatimi');
-await tikla('#ekran-sahne .secim');
-await sayfa.waitForSelector('.sahne-son .dugme', { timeout: 8000 });
-await tikla('.sahne-son .dugme');
-await sayfa.waitForSelector('#ekran-kilit.aktif');
-for (let i = 0; i < 6; i++) {
-  const oyalan = sayfa.locator('.eylem', { hasText: 'oyalan' });
-  if (!(await oyalan.count())) break;
-  await oyalan.first().click();
+// Günler geçer: Defne yazarsa cevap verilir; kilit ekranında randevu kartı görününce durulur.
+let randevuCekildi = false;
+for (let adim = 0; adim < 90 && !randevuCekildi; adim++) {
+  if (await aktif('sahne')) { await sahneyiOyna(['İşten çıkınca', 'gelirim']); continue; }
+  if (!(await aktif('kilit'))) { if (await sayfa.locator('.geri').count()) await tikla('.geri'); await tikla('.sekme', 'Kilitle'); continue; }
+  if (await sayfa.locator('.randevu').count()) {
+    await cek('kilit-randevu');
+    randevuCekildi = true;
+    break;
+  }
+  if (await sayfa.locator('.bildirim', { hasText: 'Defne' }).count()) {
+    await tikla('.bildirim', 'Defne');
+    await sayfa.waitForSelector('#ekran-telefon.aktif');
+    await sayfa.waitForTimeout(800);
+    if (await sayfa.locator('.cevap').count()) {
+      await cek('sohbet-defne');
+      const tercih = sayfa.locator('.cevap', { hasText: 'gelirim' });
+      await ((await tercih.count()) ? tercih.first() : sayfa.locator('.cevap').first()).click();
+      await sayfa.waitForTimeout(3000);
+      await cek('sohbet-defne-cevap');
+    }
+    if (await sayfa.locator('.geri').count()) await tikla('.geri');
+    await tikla('.sekme', 'Kilitle');
+    continue;
+  }
+  const eylemler = sayfa.locator('.eylem');
+  const yazili = eylemler.filter({ hasNotText: /oyalan|Uyu/ });
+  if (await yazili.count()) { await yazili.first().click(); continue; }
+  const uyu = sayfa.locator('.eylem', { hasText: 'Uyu' });
+  if (await uyu.count()) { await uyu.first().click(); continue; }
+  await eylemler.last().click();
   await sayfa.waitForTimeout(200);
 }
-await cek('kilit-gece');
-await tikla('.telefon-dugmesi');
-await cek('telefon-gece');
-await tikla('.sekme', 'Kilitle');
-await tikla('.eylem', 'Uyu');
-await sayfa.waitForTimeout(600);
-await cek('kilit-ertesi-sabah');
-
-// Taşınma: rehbere kaydetme ve gündüz sahnesi.
-for (let i = 0; i < 4; i++) {
-  if (await sayfa.locator('.eylem', { hasText: 'taşın' }).count()) break;
-  await tikla('.eylem', 'oyalan');
-  await sayfa.waitForTimeout(200);
-}
-await tikla('.eylem', 'taşın');
-await sayfa.waitForSelector('#ekran-sahne .secim', { timeout: 8000 });
-await sayfa.waitForTimeout(1200);
-await cek('tasinma');
-for (let i = 0; i < 3; i++) {
-  await tikla('#ekran-sahne .secim');
-  await sayfa.waitForTimeout(1600);
-}
-await sayfa.waitForSelector('.sahne-rehber', { timeout: 8000 });
-await sayfa.locator('#ekran-sahne .sahne-kaydirma').evaluate((d) => { d.scrollTop = d.scrollHeight; });
-await cek('rehber-kaydi');
 
 console.log(hatalar.length ? `Tarayıcı hataları:\n${hatalar.join('\n')}` : 'Tarayıcı hatası yok.');
+console.log(randevuCekildi ? 'Randevu kartı çekildi.' : 'Randevu kartı görülmedi.');
 await tarayici.close();
 sunucu.close();

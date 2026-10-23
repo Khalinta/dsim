@@ -2,7 +2,7 @@
 
 import { el, ikon, havaIkonu, ilkHarf } from './dom.js';
 import { gokKur } from './gok.js';
-import { karanlikMi, goreliZaman } from '../motor/tarih.js';
+import { karanlikMi, goreliZaman, gunNo, saatYaz, tarihYaz } from '../motor/tarih.js';
 
 export class Kilit {
   constructor(app) {
@@ -56,7 +56,18 @@ export class Kilit {
     this.sonCizilenN = Math.max(this.sonCizilenN, enYeni);
 
     const alt = el('footer.kilit-alt');
-    if (oyun.bittiMi()) {
+    for (const r of oyun.randevular()) {
+      const k = r.kisi ? oyun.kisi(r.kisi) : null;
+      alt.append(el('div.randevu', { degisken: { '--k': (k && k.renk) || '#8a8f98' } },
+        el('span.randevu-saat', {}, `${gunNo(r.t) === gunNo(oyun.t) ? 'Bugün' : gunNo(r.t) - gunNo(oyun.t) === 1 ? 'Yarın' : tarihYaz(r.t, false)} ${saatYaz(r.t)}`),
+        el('span.randevu-yer', {}, r.yer)));
+    }
+    if (oyun.durum.oyunBitti) {
+      alt.append(el('div.icerik-sonu', {},
+        el('h2', {}, 'Son.'),
+        el('p', {}, 'Pırnallı\'da bir sezon. Baştan oynarsan başka bir kış çıkabilir.')),
+        el('button.dugme.ikincil', { onclick: () => { this.app.git('giris'); this.app.ekranlar.giris.yeniOyunSor(); } }, 'Yeni oyun'));
+    } else if (oyun.bittiMi()) {
       alt.append(el('div.icerik-sonu', {},
         el('h2', {}, 'Şimdilik bu kadar.'),
         el('p', {}, 'Oyunun yazılmış kısmı burada bitiyor. Yeni bölümler eklendikçe tam buradan devam edeceksin.')));

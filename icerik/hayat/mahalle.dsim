@@ -1,0 +1,208 @@
+# Mahalle ve şehir: Saniye Hanım, Onur, kordon yürüyüşleri, şehir olayları.
+
+=== saniye_merdiven_cay
+tür: eylem
+başlık: Merdivende Saniye Hanım'la çay iç
+tarih: 20 Eylül - 20 Ekim
+pencere: 17:30-20:00
+koşul: gördü(tasinma) ve haftagünü <= 3
+yer: Taş Mahalle, ev
+süre: 40dk
+
+Saniye Hanım merdivenin ilk basamağına bir minder koymuş, ikinci basamağa iki ince belli bardak. Biri onun, biri kimin bilinmez; sen inince onu sana uzatıyor.
+@saniye: Otur. Merdiven gıcırdar, oturunca gıcırdamaz.
+Kediler sırayla geliyor, yüzüne bakıp gidiyor. Saniye Hanım her birinin adını söylüyor: Ferhan, Ayşe Kadın, Hayri. Hepsi bir romandan.
+@saniye: Kırk yıl edebiyat okuttum. Kedilere de roman kahramanlarının adını koydum, öğrencilerime koyamadığım için.
+@saniye: Sen neyden kaçıyorsun?
+* "Kaçmıyorum."
+  @saniye: Herkes ilk derste öyle der. Sonra kompozisyonda yazar.
+* "Babamdan galiba."
+  [saniye.baba]
+  @saniye: Babadan kaçılmaz. Babadan uzaklaşılır. Uzaklaştıkça da büyür, bunu bil.
+  Çayından bir yudum alıyor.
+  @saniye: Benimki öldükten sonra büyüdü. Seninki yaşıyor, şanslısın. Küçültmek için vaktin var.
+* "Bir okuldan. Bir de kendimden."
+  [saniye.kendinden]
+  @saniye: Kendinden kaçana ev kiralamam normalde. Kendi peşinden gelir, kira ödemez.
+  Kalemi gibi tuttuğu çay kaşığını sana doğru sallıyor.
+  @saniye: Ama sen merdivende oturdun. Kaçan oturmaz.
+Akşam ezanı başlıyor. Saniye Hanım susuyor, bitmesini bekliyor; dindar olduğundan değil, birinin cümlesini kesmeyi sevmediğinden.
+@saniye: Rahmetli kocam akşamları burada otururdu. Ben içeride kompozisyon okurdum, o burada sigara içerdi. Kırk bir yıl.
+@saniye: Ben merdivende hiç oturmadım o yaşarken. Şimdi oturuyorum. Garip, değil mi? İnsan bir yeri ancak boşalınca görüyor.
+Bardakları toplayıp kalkıyor. Kapıda dönüp sana bakıyor; ilk gün yaptığı gibi, bir ödevi okur gibi.
+@saniye: Hâlâ karar vermedim. Ama notun yükseliyor.
+
+
+=== saniye_klima
+tür: eylem
+başlık: Saniye Hanım'ın kapısını çal
+tarih: 24 Kasım - 30 Kasım
+pencere: 17:00-21:00
+koşul: gördü(tasinma)
+yer: Taş Mahalle, ev
+süre: 30dk
+
+Klima üç gündür çalışmıyor; açıyorsun, bir kez inliyor, susuyor. Onur yatağının üstüne iki battaniye koymuş ve oradan çıkmıyor. Odanın camında sabahları buz değil ama buz olmayı düşünen bir buğu var.
+Aşağı inip kapıyı çalıyorsun. Saniye Hanım kapıyı açınca içeriden soba sıcağı vuruyor yüzüne; portakal kabuğu kokusu, kediler, kitap.
+@saniye: Klima.
+Söylemeden biliyor.
+@saniye: O klima kocamdan kalma. Ondan önce kimseye çalışmadı, ondan sonra da çalışmayacak. Bir elektrik sobası var dolapta, onu al.
+Dolaptan turuncu, eski, tek telli bir elektrik sobası çıkarıyor. Kablosu bantla sarılmış.
+@saniye: Gece açık bırakma. Kocam bir gece açık bırakmıştı, perde tutuştu. Söndürdük, perdeyi değiştirdik. Ondan sonra o perdeye hiç bakamadım.
+* "Klimaya bir bakayım mı? Belki bir parçası gitmiştir."
+  [saniye.klima_tamir]
+  [saniye.yakinlik +1]
+  @saniye: Sen? Makine mühendisi değil misin? Bak bakalım.
+  Klimanın dış ünitesini söküyorsun; bir saat sürüyor. Fanın arkasına bir kuş yuva yapmış, terk etmiş. Yuvayı çıkarıyorsun, kabloyu yeniden bağlıyorsun. Klima inliyor, bir kez öksürüyor ve çalışıyor.
+  Saniye Hanım merdivenin başında durmuş, kollarını kavuşturmuş izliyor.
+  @saniye: Kırk bir yıl kocam bakardı. Bir kere tamir edemedi.
+  @saniye: Ama yuvayı ben söyleyeyim: kocam yaptırmıştı kuşa. Her bahar orada bir serçe olurdu. Neyse. Bahara yenisini yapar.
+* "Teşekkür ederim. Dikkat ederim."
+  @saniye: Etmezsin. Kimse etmez. Ben de etmedim. Ama söylemek benim işim.
+Sobayı odana taşırken merdiven her basamakta başka bir notadan gıcırdıyor. Saniye Hanım aşağıdan sesleniyor:
+@saniye: Gıcırtının notalarını öğrendin mi? Ben öğrendim. Kimin indiğini, kimin çıktığını bilirim.
+
+
+=== saniye_ocak
+tür: eylem
+başlık: Saniye Hanım'la merdivende otur
+tarih: 2 Ocak - 5 Ocak
+pencere: 16:00-20:00
+koşul: gördü(tasinma)
+yer: Taş Mahalle, ev
+süre: 30dk
+
+Hava soğuk ama güneşli; kış ortasının o tuhaf, cam gibi aydınlığı. Saniye Hanım merdivende, üstünde iki hırka, dizinde kırmızı kalemli gazete.
+@saniye: Bugün sıfır hata. Gazetede.
+@saniye: Bu iyi bir şey değil. Ya düzeldiler ya da benim gözüm gitti.
+Yanına oturuyorsun. Bir süre gazeteyi okuyor, okuyormuş gibi yapıyor.
+@saniye: Kiranın ocak taksiti var. Ocakta peşin alırım, bilirsin. Onur'unkini aldım bile, Onur'un nereden bulduğunu sormadım.
+@saniye: Seninkini alayım mı?
+* "Alın."
+  [karar.saniye_kira]
+  Saniye Hanım bir şey demiyor. Gazetenin kenarına kırmızı kalemle bir şey yazıyor, gösteriyor: bir rakam değil, bir harf. A.
+  @saniye: Notun. İlk derste vermedim, son derste veriyorum.
+* "Biraz daha bekleyin. Salıya kadar."
+  @saniye: Salı.
+  @saniye: Otobüs salı akşamı kalkıyor, değil mi? Herkesin otobüsü salı akşamı kalkar. Ben bekleyebilirim. Kırk bir yıl bekledim, iki gün nedir.
+* "Ben gidiyorum, Saniye Hanım."
+  [karar.saniye_gidiyorum]
+  Saniye Hanım gazeteyi katlıyor. Kalemin kapağını kapatıyor; tıpkı ilk gün, "kalacak birine de benzemiyorsun" derken yaptığı gibi.
+  @saniye: Peki.
+  @saniye: Gidiyorsun, ama ilk gün sandığım gibi gitmiyorsun. Bunu bil.
+
+
+=== onur_ilk_gece_evde
+tür: mesaj
+kişi: onur
+zaman: 17 Eylül 23:30
+koşul: gördü(tasinma)
+
+@onur: kanka yarın sabah 9da duş benim. tek duş var, sistem böyle
+@onur: bi de saniye hanım'ın kedisi ferhan bazen pencereden giriyo. kovma. kovarsan saniye hanım duyar, sonra seni kovar
+* ferhan mı
+  @onur: ferhan. roman kahramanıymış. ben okumadım. sen okudun mu
+  @onur: okuma. sorar sonra
+* tamam duş senin
+  @onur: adamsın
+
+
+=== kordon_pastirma
+tür: eylem
+grup: yuruyus
+başlık: Uzunkum'a in
+tarih: 27 Ekim - 2 Kasım
+pencere: 12:00-17:00
+yer: Uzunkum
+süre: 1sa30dk
+
+Pastırma yazı. Ekimin sonunda bir hafta yaz geri geliyor, kimse inanmıyor ama herkes plaja iniyor. Uzunkum'da yirmi kişi var; eylülde iki bin vardı.
+Su soğuk ama değil; girmeden önce soğuk, girince ılık. Kıyıda yaşlı bir adam denize giriyor, kollarını iki yana açıp geri geri yürüyerek, hiç bakmadan.
+* (Denize gir.)
+  [yuruyus.son_deniz]
+  Giriyorsun. Su ilk anda nefesini kesiyor, sonra bırakıyor. Sırtüstü yatıyorsun; gökyüzü eylülden daha uzak, daha soluk.
+  Kıyıya döndüğünde yaşlı adam havlusuna sarınmış, sana bakıyor.
+  @yabanci(Yaşlı adam): Son deniz. Bundan sonrası kış yüzücüsünün denizi. Onlar deli.
+* (Kumda otur.)
+  Kumda oturup denize girenleri izliyorsun. Girerken hepsi aynı sesi çıkarıyor; çıkarken başka bir ses.
+Lagün'ün yerinde artık üç direk ve kumla dolmuş bir bar tezgâhı var. Tezgâhın üstüne biri tebeşirle bir şey yazmış, yağmurlar yarısını silmiş: "…EZON". Sezon mu, yoksa bir adın sonu mu, bilmiyorsun.
+
+
+=== kordon_bos
+tür: eylem
+grup: yuruyus
+başlık: Kordonda yürü
+tarih: 3 Kasım - 30 Kasım
+pencere: 15:00-18:30
+yer: Kordon
+süre: 1sa
+
+Kordon boş. Dondurmacının kepengi kapalı; kepengin üstüne birisi, yazdan kalma kâğıdın yerine, yeni bir kâğıt yapıştırmış: "NİSANDA AÇILACAKTIR." Tarih yok.
+Belediye Çay Bahçesi'nin etrafını camla kapatmışlar. İçeride emekliler tavla oynuyor; zar sesi camın arkasından boğuk, uzaktan bir çekiç gibi geliyor.
+Uzunkum'un arkasındaki sitelerde akşam iniyor. Saymaya çalışıyorsun: Mavi Kent'te iki ışık, Ege Konakları'nda bir. Geri kalan bütün pencereler kör.
+* (Çay bahçesine gir, bir çay iç.)
+  İçerisi sıcak ve kalabalık; bütün şehir burada gibi. Garson sana ince belli bardağı "yeni misin" diye sormadan bırakıyor. Yan masadaki adam tavla tahtasının üstünden sana bakıyor.
+  @yabanci(Tavlacı): Mendirek'in yeni çocuğu. Palamutu bir kere çeviriyormuşsun. Nuri söyledi.
+  Nuri Abi'nin seni birine anlattığını düşünüyorsun. Çayın tadı bir an değişiyor.
+* (Yürümeye devam et.)
+  Kordonun sonuna kadar yürüyorsun. Rüzgâr arkandan, sonra önünden. Uzunkum'un başında dönüyorsun; dönerken şehrin ışıklarının hepsinin bir anda, sırayla değil, aynı anda yandığını görüyorsun. Belediyenin saati.
+
+
+=== kordon_firtina_sonrasi
+tür: eylem
+grup: yuruyus
+başlık: Kordona in
+tarih: 5 Aralık - 9 Aralık
+pencere: 09:00-17:00
+yer: Kordon
+süre: 1sa
+
+Kordon tanınmayacak hâlde. Deniz gece taşları aşıp yolun ortasına kadar gelmiş, çekilirken arkasında yosun, ip, bir plastik sandalye, bir kayık küreği bırakmış. Her şey tuz kokuyor.
+Okaliptüslerden biri devrilmiş, kökleri havada, toprağıyla birlikte. Belediye ekibi testereyle başında duruyor; kimse testereyi çalıştırmıyor.
+Bir kadın, Saniye Hanım'ın yaşında, ağacın yanında durmuş, elini köklere koymuş.
+@yabanci(Kadın): Belediye bunu kesmek istiyordu. İmza topladık, kesemediler. Fırtına kesti.
+@yabanci(Kadın): Haklı çıktık mı, haksız mı, bilmiyorum şimdi.
+* "İkisi de."
+  @yabanci(Kadın): İkisi de. Evet. Edebiyatçı gibi konuştun.
+  @yabanci(Kadın): Saniye'nin kiracısı sen misin? Belli.
+* (Bir şey deme. Köke sen de dokun.)
+  Kökler ıslak, soğuk, içinde hâlâ toprak. Kadın sana bakıyor ve başını sallıyor; bir şey anlaşılmış gibi.
+
+
+=== fabrika_son_film
+tür: eylem
+grup: fabrika
+başlık: Fabrika'ya git, sezonun son filmi
+tarih: 17 Ekim
+pencere: 19:30-21:00
+yer: Fabrika
+süre: 30dk
+
+>> saat 21:00
+Eski zeytinyağı fabrikasının avlusu dolu. Paslı pres makinelerinin arasına sandalyeler, battaniyeler, minderler yayılmış; herkes yanında evinden bir şey getirmiş.
+Perdenin üstünde, bacanın gölgesi. Bir çocuk bacayı göstererek "o da film mi" diye soruyor; annesi "hayır" diyor, sonra emin olamıyor.
+Film eski bir Türk filmi; siyah-beyaz, her şeyin yüksek sesle söylendiği türden. Avlu filmi biliyor. Bir sahnede herkes aynı repliği fısıldıyor, filmle birlikte, bir dua gibi.
+Arada sırada rüzgâr perdeyi şişiriyor; oyuncuların yüzü bir anda büyüyor, bir anda küçülüyor.
+Film bitince ışıklar yanmıyor. Bir süre kimse kalkmıyor. Sonra biri alkışlıyor, sonra herkes. Fabrikanın görevlisi büyük demir kapıyı kapatmadan önce asma kilidi elinde bir süre tartıyor.
+@yabanci(Görevli): Nisanda.
+>> saat 23:30
+>> yer Fabrika
+
+
+=== bayram_fener_alayi
+tür: eylem
+grup: bayram
+başlık: Kordona in, fener alayı
+tarih: 29 Ekim
+pencere: 19:00-21:00
+yer: Kordon
+süre: 1sa30dk
+
+>> saat 20:00
+Bütün şehir kordonda. Ellerde kâğıt fenerler; bazıları evde yapılmış, bazıları belediyenin dağıttığı. Bir bando, notaların yarısını rüzgâra kaptırarak çalıyor.
+Çocuklar fenerlerini yakmak için büyüklerine uzatıyor; büyükler çakmaklarını rüzgârdan korumak için fenerin içine eğiliyor, yüzleri bir anda turuncu oluyor.
+Saat dokuzda havai fişekler başlıyor. Körfezin üstünde patladıkça deniz bir an kırmızı, bir an yeşil; sonra yeniden siyah. Her patlamada kalabalık aynı sesi çıkarıyor, "ooo".
+Çay bahçesinin önünde Saniye Hanım'ı görüyorsun. Elinde bir fener yok; sadece başını kaldırmış, bakıyor. Bir patlamanın ışığında yüzünü görüyorsun ve bakmamış gibi yapıyorsun.
+>> eğer is.mendirek
+  Mendirek'in önünde Nuri Abi, Saadet Abla ve Cemal yan yana durmuş. Saadet Abla seni görünce el sallıyor, yanına çağırıyor. Dördünüz bir sıra, havai fişeklerin altında; bir aile fotoğrafı gibi, kimse çekmiyor.
+  @saadet: Her yıl aynı fişekler. Her yıl "ooo" diyoruz. İnsan sevinmeyi unutmasın diye.

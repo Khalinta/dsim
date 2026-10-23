@@ -1,11 +1,11 @@
 # 15 Eylül, Pazartesi. Sezonun kapandığı gecenin sabahı.
-# Not: 14 Eylül gecesi (Lagün'ün kapanışı, Defne) 3. adımda bu dosyanın önüne eklenecek.
-# Oyuncu o gece Defne'de kalırsa açılış sahnesine bir koşul eklenecek.
+# Oyuncu 14 Eylül gecesi Defne'de kaldıysa sabah personel evinde değil, atölyede uyanır (acilis_sabah_defne).
 
 === acilis_sabah
 tür: sahne
 kişi: emre
 zaman: 15 Eylül 08:10
+koşul: değil defne.ilk_gece
 yer: Lagün, personel evi
 süre: 10dk
 
@@ -315,3 +315,97 @@ kişi: annem
 @annem: [Cevapsız arama]
 >> bekle 3dk
 @annem: Uyudun herhalde. Yarın ararım. İyi geceler oğlum.
+
+
+=== acilis_sabah_defne
+tür: sahne
+kişi: defne
+zaman: 15 Eylül 08:10
+koşul: defne.ilk_gece
+yer: Taş Mahalle, Çatlak Seramik
+süre: 20dk
+
+Kahve kokusuyla uyanıyorsun; altında kil ve dünden kalma sigara. Merdivenden tırnak sesleri çıkıyor, yavaş ve kararlı: Müdür denetime geliyor. Kapının eşiğinde durup sana bakıyor, sonra yatağın yanına uzanıp gözlerini kapatıyor.
+Defne balkonda. Üstünde dizlerine kadar inen, solmuş bir tişört var; tişörtün üstünde artık okunmayan bir festival adı. Bir elinde kahve, öbüründe sigara. Sabah ışığında yüzü dün geceden daha genç, daha yorgun.
+İçeri girip elindeki ikinci fincanı sana uzatıyor.
+@defne: Sezon kuralı: kahvaltı yok.
+Sonra masaya yarım bir ekmek, bir domates, bir parça beyaz peynir koyuyor; bıçağı da domatesin yanına.
+@defne: Bu kahvaltı değil. Bu, buzdolabında bozulmak üzere olan şeyler.
+>> eğer defne.ilk_gece_itiraf
+  Sandalyeye ters oturuyor, kollarını arkalığa dayıyor.
+  @defne: Dün gece bir şey söyledin. Hatırlıyor musun, yoksa onu da kapanış gecesine mi sayıyoruz?
+  * "Hatırlıyorum. Kalıyorum."
+    [defne.yakinlik +1]
+    @defne: Kalıyorsun.
+    Kahvesinden bir yudum alıyor, fincanın kenarından sana bakıyor.
+    @defne: Bak, bir şey söyleyeyim, sonra kahveni iç ve git. Ben gidecek insanlarla iyiyim. Kalanlarla ne yapılır bilmiyorum. Hiç denemedim.
+    @defne: O yüzden bu bir şey değildi. Tamam mı? Çok güzel bir hiçbir şeydi.
+  * "Yarın gidiyorum demem daha kolaydı."
+    [defne.durust +1]
+    @defne: Biliyorum. Ben de senin yerinde olsam derdim.
+    @defne: Ama ben senin yerinde olsam sabah da söylemezdim. Sen söyledin. Bunu not ettim, bir yere.
+  * "Unutalım istersen."
+    [defne.unutalim]
+    @defne: Unutmak. Tamam. Ben unutmakta iyiyim, sen bilmiyorsun daha.
+    Sigarasını tabağın kenarında söndürüyor; tabak dünden kalma, üstünde çatlak bir sır.
+>> yoksa
+  Sandalyeye ters oturuyor, kollarını arkalığa dayıyor.
+  >> eğer defne.yalan_derin
+    @defne: Otobüs on ikide. Söküm onda. Bavulun personel evinde. Her şeyi düşünmüşsün.
+  >> yoksa
+    @defne: Otobüs kaçta demiştin? Söylemedin aslında. Sordum, sustun. Dün gece hoşuma gitmişti o susmak. Sabah biraz şüpheli.
+  * "On ikide."
+    [defne.yalan_derin]
+    @defne: Güzel.
+    Ekmekten bir parça koparıp Müdür'e atıyor. Müdür havada yakalıyor, sanki bunu her sabah yapıyorlarmış gibi.
+    @defne: İstanbul'a varınca bir gün atölyenin Instagram'ını beğenirsin. Ben de görürüm, "ha, o" derim. Güzel bir son bu.
+  * "Aslında gitmiyorum."
+    [defne.sabah_itiraf]
+    [defne.kaliyor_dedi]
+    [değil defne.gidiyor_dedi]
+    Fincan dudağının önünde duruyor.
+    @defne: Gitmiyor musun.
+    @defne: Hiç mi?
+    * "Buradaki üniversiteye geçtim. Kışın da buradayım."
+      [defne.universite_biliyor]
+      @defne: Üniversite. Tamam. Ciddi bir kalış bu, bavullu bir kalış.
+    * "Bilmiyorum. Şimdilik gitmiyorum."
+      @defne: "Şimdilik." Güzel kelime. Ben iki yıldır şimdilik buradayım.
+    Fincanı masaya bırakıyor, biraz fazla dikkatli.
+    @defne: Bunu dün gece söyleseydin ne olurdu biliyorum. Hiçbir şey olmazdı. O yüzden söylemedin, değil mi?
+    * "Evet."
+      [defne.durust +1]
+      @defne: İyi. En azından şimdi dürüstsün. Geç kalmış bir dürüstlük ama dürüstlük.
+    * "Hayır. Aklıma gelmedi."
+      @defne: Aklına gelmedi. Tamam. Bunu da bir yere yazıyorum.
+    * (Sus.)
+      Susuyorsun. Defne başını sallıyor, kendine.
+  * "Bir şey söylemem lazım ama önce kahveyi bitireyim."
+    [defne.erteledi]
+    @defne: Kötü haber kahveyle verilir zaten. Reklamcılıkta da öyleydi.
+    Bekliyor. Sen kahveni içiyorsun. Fincan bitiyor; söylemiyorsun. Defne fincana, sonra sana bakıyor ve gülüyor, ama güldüğü şey bu değil.
+    @defne: Tamam. Söylemedin. Kapıya kadar geçirmeme izin ver bari.
+Aşağıda, atölyede, rafların arasından geçerken bir kupaya omzun değiyor; sallanıyor, düşmüyor. Defne nefesini tuttuğunu ancak bıraktığında fark ediyor.
+Kapıda Müdür sizden önce davranıp eşiğe yatıyor.
+@defne: Kapıyı çarpma. Müdür kapı çarpınca küsüyor. İki gün yüzüme bakmıyor, ben de dayanamıyorum.
+Kapıyı çarpmadan çıkıyorsun. Yokuşun başında dönüp bakınca sarı kapı kapanmış; Müdür kapının önünde, başı patilerinde.
+>> yer Taş Mahalle
+
+
+=== emre_veda
+tür: mesaj
+kişi: emre
+zaman: 15 Eylül 08:25
+koşul: defne.ilk_gece
+
+@emre: kanka neredesin
+@emre: otobüse iki saat var. vedalaşmadan gidicez herhalde
+@emre: kremi pervaza bıraktım. bilerek bıraktım bu arada
+* bir yerde kaldım, kusura bakma
+  @emre: bi yerde kaldın 😏
+  @emre: anlatma. otobüste düşünürüm, daha güzel olur
+* iyi yolculuklar kanka. eskişehir'e selam
+  @emre: eskişehir sana selam söylemez ama ben söylerim
+  @emre: kışın gelirsen yaz
+* (Cevap verme.)
+  >> okudu

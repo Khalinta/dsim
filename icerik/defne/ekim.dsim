@@ -1,0 +1,784 @@
+# Defne, ekim: ikinci şans, ilk yağmur ve kurallar, kötü film gecesi, Müdür, doğum günü.
+# defne.kurallar_konusuldu: kurallar bir kez konuşuldu (kabul edilmiş ya da edilmemiş).
+# defne.kurallar: oyuncu kuralları kabul etti. defne.sevgili: şehrin gözünde "görüşüyorlar".
+# defne.kis: kış karanlığı. Yalnız kaldıkça artar, yanında biri oldukça azalır.
+
+# ---------- Eylülde kapı kapandıysa: son bir kez ----------
+
+=== defne_ikinci_sans
+tür: eylem
+başlık: Sabahçı Fırını'na in
+tarih: 26 Eylül - 17 Ekim
+pencere: 06:30-09:30
+koşul: tanıdı(defne) ve değil defne.devam ve haftagünü == 5
+yer: Çarşı, Sabahçı Fırını
+
+Cuma sabahı. Fırının camı buğulu; içeride Rahmi Usta radyoyla kavga ediyor. Kuyrukta üç kişi var, en önde çamurlu bir hırka.
+Defne ekmeğini alıp dönüyor, seni görüyor. Duruyor; ekmek koltuğunun altında, sıcağı hırkasına geçiyor.
+>> eğer defne.yalan_ikinci
+  @defne: Bugün hangi otobüsü kaçırdın?
+>> yoksa eğer defne.gidiyor_dedi
+  @defne: Hâlâ buradasın. Ben de hâlâ buradayım. Şehir küçük, kaçamıyoruz.
+>> yoksa
+  @defne: Kalan adam. Bakarız demiştin. Baktın mı?
+Gözlerinin altı mor; dün gece fırın yanmış, belli.
+* "Özür dilerim. Bunu düzgün yapamadım."
+  [defne.yakinlik +1]
+  @defne: Neyi?
+  * "Sana doğruyu söylemeyi."
+    [defne.durust +1]
+    [defne.universite_biliyor]
+    [değil defne.gidiyor_dedi]
+    [defne.kaliyor_dedi]
+    @defne: Gece kimse doğruyu söylemez. Sabah söylenir, ekmek kuyruğunda. Bunu bil.
+  * "Cevap vermeyi. Sana yazmayı."
+    @defne: Yazmadın. Ben de yazmadım. Yazmamakta iyiyiz ikimiz de, bir şeyde iyiyiz en azından.
+* "Bir boyoz alayım, sonra konuşuruz."
+  @defne: Boyoz. Tamam. Ben boyoz bekleyecek kadar sabırlı değilim ama ekmeğim sıcak, o da bir şey.
+  Rahmi Usta sana boyozu uzatırken Defne kapının yanında bekliyor. Gitmiyor; beklemiyormuş gibi bekliyor.
+* (Başınla selam ver, sıranı bekle.)
+  Defne başını sallıyor ve çıkıyor. Kapının camından onu yokuşa doğru yürürken görüyorsun; köşede duruyor, bir an geri bakıyor, sonra dönüyor.
+  @yabanci(Rahmi Usta): Bak, döndü baktı. Ben o kızı iki senedir görüyorum, hiç dönüp bakmaz. Yalan değil bu, haber değil.
+  [defne.kapandi]
+  -> son
+@defne: Benim kuralım şu: ikinci şans yok. Kimseye. Hiç olmadı.
+@defne: Bu ikinci şans değil, birinci şansın devamı. Reklamcılıkta buna "uzatılmış kampanya" denir. Fiyat aynı.
+>> eğer değil defne.numara
+  @defne: Ver telefonunu.
+  >> rehber defne: Defne | Seramikçi | Sarı kapı
+  [defne.numara]
+@defne: Fırın dün yandı, bu gece açılıyor. Bir buçukta. Gelirsen gel.
+[defne.devam]
+[defne.firin_davet]
+>> randevu defne_firin_1 yarın 01:30 | Çatlak Seramik, fırın açılışı
+
+
+# ---------- İlk yağmur, 3 Ekim gecesi ----------
+
+=== defne_yagmur_mesaj
+tür: mesaj
+kişi: defne
+tarih: 3 Ekim
+pencere: 23:40-23:59
+koşul: defne.devam ve değil defne.uzak ve gördü(defne_firin_1)
+
+@defne: yağmur.
+@defne: [Fotoğraf: Atölyenin penceresi. Camda iri damlalar; arkada, sokak lambasının ışığında, ıslak taşlar parlıyor.] ilk yağmur. aylardır ilk
+@defne: fırın da bu gece açılıyor. ilk yağmurla fırın aynı gece. bu bir işaret. neye işaret bilmiyorum
+>> zaman_aşımı 1sa45dk -> gec
+* gelirim. bir buçukta
+  @defne: şemsiye getirme. şemsiyeli adamla ilk yağmur izlenmez
+* ıslanırım ama
+  @defne: ıslan. kuruturum. fırın hâlâ iki yüz derece
+* bu gece yorgunum
+  [defne.yakinlik -1]
+  @defne: tamam.
+  @defne: bu nokta yorgun nokta değil. bu nokta "tamam" noktası. ikisi farklı
+  -> son
+>> randevu defne_yagmur 4 Ekim 01:30 | Çatlak Seramik, ilk yağmur
+-> son
+:: gec
+@defne: fırını tek başıma açıyorum. yağmur dinmedi. ikisi de beklemedi, ben de beklemiyorum
+@defne: neyse. ilk yağmur bir kere yağar. ikincisi sadece yağmur
+
+
+=== defne_yagmur
+tür: sahne
+kişi: defne
+yer: Taş Mahalle, Çatlak Seramik
+ton: gece
+süre: 30dk
+
+Yokuş bir dereye dönmüş; su taşların arasından, senin çıktığın yönün tersine, aşağı akıyor. Bütün mahalle toprak kokuyor, aylardır kapalı kalmış bir sandık açılmış gibi.
+Sarı kapı açık. Müdür eşiğin içinde, kuru tarafta oturuyor; ıslak olan sensin, o değil.
+Defne fırının önünde değil, kapının önünde, saçağın altında. Kolunu dışarı uzatmış, avucuna yağmur topluyor.
+@defne: Geldin. Islanmışsın. Güzel. Kural böyle.
+@defne: Fırın seksen dokuz derece. Bekledik zaten, sen gelene kadar inmiş.
+Fırının kapağını birlikte açıyorsunuz.
+>> eğer defne.termostat
+  Sırlar bu kez parlıyor. Termostat tamir edildiğinden beri ilk pişirim; Defne bir şey demiyor, ama bir kâseyi iki kez ışığa tutuyor.
+>> yoksa
+  Sırlar yine mat. Defne bir kâseyi ışığa tutup omuz silkiyor; fırına değil, kendine.
+Rafların birinden küçük bir kupa alıp ışığa tutuyor.
+>> eğer defne.termostat
+  Altında, tırnakla kazınmış bir harf: senin harfin. Kulpu düzgün. Şaşırtıcı derecede düzgün.
+  @defne: Söz vermiştim. Düzgün kulp. Hayatımda yaptığım en sıkıcı kulp. Al.
+  [defne.kupa_harf]
+>> yoksa
+  Kulpu ters takılmış.
+  @defne: Bu senin. Bir sebebi yok. Kulpu ters, o da bir sebep değil.
+  [defne.kupa_ters]
+Kupayı iki elinle tutuyorsun; hâlâ sıcak. Dışarıda yağmur hızlanıyor, saçaktan inen su bir perde oluyor.
+Defne kapının eşiğine, Müdür'ün yanına oturuyor. Sana yer açıyor.
+@defne: Bir şey konuşmamız lazım. Ben "konuşmamız lazım" cümlesinden nefret ederim, o yüzden buna konuşma demeyeceğim. Buna kural koymak diyeceğim.
+@defne: Kural bir: kimse "biz neyiz" demez.
+@defne: Kural iki: kahvaltı yok.
+@defne: Kural üç: biri giderse, öbürü otogara gelir.
+Üçüncüyü söylerken sesi değişmiyor ama yağmura bakıyor, sana değil.
+[defne.kurallar_konusuldu]
+* "Kabul."
+  [defne.kurallar]
+  @defne: Bu kadar mı? Pazarlık yok mu? Reklamcıyla anlaşma yapıyorsun, en azından küçük puntoları oku.
+  -> kurallar_tamam
+* "Bir kural da benden: yalan yok."
+  [defne.kurallar]
+  [defne.kural_dort]
+  >> eğer defne.yalan_ikinci veya defne.yalan_derin
+    @defne: Senden mi? Sen, "yalan yok" kuralını mı koyuyorsun?
+    Uzun uzun yüzüne bakıyor.
+    @defne: Tamam. Komik, ama tamam. Kural dört. Seninle başladı, seninle bitsin.
+  >> yoksa
+    @defne: Yalan yok.
+    Avucundaki suyu yere döküyor.
+    @defne: Bu zor bir kural. Benim mesleğim yalandı. Tamam. Kural dört.
+  -> kurallar_tamam
+* "Üçüncüsünü anlamadım. Kim gidiyor?"
+  [defne.yakinlik +1]
+  @defne: Kimse. Henüz. Ama biri hep gider. Ben kurallarımı yazarken sona göre yazarım; başı kendiliğinden gelir.
+  * "Kabul o zaman."
+    [defne.kurallar]
+    -> kurallar_tamam
+  * "Ben gitmiyorum."
+    -> kural_yok
+* "Kural istemiyorum."
+  -> kural_yok
+
+:: kural_yok
+[defne.kurallar_reddi]
+Defne bir an hiç kıpırdamıyor. Sonra gülüyor; ama gülüşün başı yok, ortadan başlıyor.
+@defne: Kural istemiyorsun.
+@defne: Kuralsız bir şey benim için yeni. Kuralsız şeylere korku filmi derler.
+Elini ensene koyuyor ve seni öpüyor. Hızlı, yağmur kokan, bir cümlenin ortasını kesen bir öpücük. Konuşmayı bitirmek için.
+* (Öpüşmeye devam et.)
+  [defne.sevgili]
+  Ona dönüyorsun. Öpücük yavaşlıyor; bir süre sadece yağmur ve Müdür'ün nefesi.
+  Ayrıldığınızda alnını alnına dayıyor.
+  @defne: Bu bir cevap değildi. Biliyorum. Cevabım yok. Bu gece yok.
+  -> yukari_mi
+* "Bu bir cevap değil."
+  [defne.yakinlik +1]
+  [defne.cevap_istedi]
+  Geri çekiliyorsun; Defne'nin eli enseden omzuna kayıyor, orada kalıyor. Bir süre ikiniz de susuyorsunuz.
+  @defne: Değil. Haklısın. Sinir bozucu derecede haklısın.
+  @defne: Cevap şu: bilmiyorum. Ben kalanlarla ne yapılır bilmiyorum. Hiç denemedim.
+  @defne: Bir gün bilirsem söylerim. Söz değil bu. Not.
+  Elini dizinin üstüne koyuyor, orada bırakıyor. Yağmur dinene kadar öyle oturuyorsunuz.
+  -> eve
+
+:: kurallar_tamam
+Yağmur bir süre sesini değiştirmeden yağıyor. Defne başını omzuna koyuyor; ağır değil, sadece orada.
+@defne: Kural yaptık. Artık ne istersek yapabiliriz.
+Yüzünü sana çeviriyor. Bekliyor. Bu sefer acele etmiyor; bu, onun için tuhaf, ikinizin de bildiği bir yavaşlık.
+* (Onu öp.)
+  [defne.sevgili]
+  Öpüyorsun. Dudakları yağmurdan soğuk, ağzı şaraptan sıcak. Elini saçlarının arasına, kalemin tuttuğu topuzun altına sokuyor; kalem düşüp eşikten yuvarlanıyor.
+  -> yukari_mi
+* "Kural koyduk ama kimse bir şey yapmıyor."
+  [defne.sevgili]
+  Gülüyor.
+  @defne: Reklamcılar gibi. Brief toplantısı üç saat, iş yok.
+  Seni yakandan tutup kendine çekiyor ve öpüyor. Önce gülerek, sonra gülmeden.
+  -> yukari_mi
+* "Bu gece sadece yağmur."
+  @defne: Sadece yağmur.
+  Başını omzundan kaldırmıyor.
+  @defne: Tamam. Bu da bir kural olsun. Bu geceye özel.
+  -> eve
+
+:: yukari_mi
+Kapının önünde, ıslak eşikte öpüşüyorsunuz; Müdür bir ara kalkıp içeriye, kuru köşeye gidiyor, sizden sıkılmış gibi.
+Defne geri çekilip yüzüne bakıyor. Yanakları kızarmış; soğuktan mı, değil mi, belli değil.
+@defne: Bak. Ayığım. İki kadeh şarap, dört saat. Yukarı çıkmak istiyorum. Seninle. Bunu açık söylüyorum ki sonra kimse "bilmiyordum" demesin.
+* "Ben de istiyorum."
+  -> yukari
+* "Bu gece değil. Ama yarın da var."
+  [defne.yakinlik +1]
+  @defne: Yarın.
+  @defne: "Yarın" bir vaat. Vaatlerden korkarım. Ama tamam. Yarın da var. İlk defa biri bana yarın diyor ve korkunç değil.
+  -> eve
+* (Bir şey söyleme. Elini tut, kapıyı kapat, merdivene yürü.)
+  -> yukari
+
+:: yukari
+[defne.ikinci_gece]
+Merdiven dar ve dik; ışığı yakmıyor. Önde o, arkada sen; ıslak çoraplarınız basamaklarda iz bırakıyor.
+Yukarısı tek oda. Yatak pencerenin altında, yorgan yarı yere düşmüş. Pencereden yağmurun içinde denizin şeridi görünmüyor, sadece karanlığın biraz daha koyusu.
+Defne seni yatağa doğru itiyor ve ıslak tişörtünü kendi eliyle başından çıkarıyor; kolların takılıyor, gülüyor.
+@defne: Islak pamuk. Satış ekibi bunu düşünmemiş.
+Kendi kazağını da çıkarıp yere atıyor. Bir şeyi hızlandırmak istiyor gibi; ilk geceki gibi, sezonluk gibi, her şey bir esprinin içinde olsun diye.
+>> eğer defne.ilk_gece
+  İlk gecenin ezberini biliyor gibisin: üstüne çıkacak, hızlı olacak, gülecek. Öyle başlıyor da.
+>> yoksa
+  Ne yapacağını bildiği belli; acele ediyor, bir planı izler gibi.
+* (Onun hızına uy.)
+  Onun hızına uyuyorsun. Pantolonunu birlikte çıkarıyorsunuz, düğmede takılıyorsunuz, Defne bir küfür ediyor ve gülüyor. Seni sırtüstü yatırıp üstüne çıkıyor; prezervatifi komodinin çekmecesinden alıyor, ambalajı dişleriyle açıyor, kendisi takıyor.
+  -> hizli
+* (Onu yavaşlat. Bileklerini tut, bir an öyle kal.)
+  [defne.yavas]
+  Bileklerini tutuyorsun; sıkmadan. Defne duruyor. Gözleri karanlıkta senin gözlerini arıyor.
+  @defne: Ne?
+  * "Acelemiz yok. Ben buradayım. Yarın da."
+    [defne.yakinlik +1]
+    Bir şey söyleyecek gibi oluyor, söylemiyor. Sonra çok yavaşça yanına uzanıyor, yüzü yüzüne dönük. İlk defa, ikinizin de ne yapacağını bilmediği bir an.
+    -> yavas
+  * "Hiçbir şey. Seni görmek istedim."
+    @defne: Görmek. Karanlıkta.
+    @defne: Tamam. Bak.
+    Yanına uzanıyor. Işığı yakmıyor ama sokak lambası pencereden yeterince giriyor.
+    -> yavas
+* "Dur. Bir dakika."
+  -> durduk
+
+:: hizli
+Üstünde, ellerini göğsüne dayamış; yavaş başlıyor, sonra hızlanıyor. Yatağın başı duvara vuruyor, bir kere, iki kere; Defne gülerek elini uzatıp yastığı araya sıkıştırıyor ve ritmini bozmadan devam ediyor.
+Gözleri kapalı. Bir şey söylüyor, şaka mı küfür mü anlaşılmıyor. Sen kalçalarını tutuyorsun; o elini senin elinin üstüne koyuyor, nereyi, ne kadar sıkı tutacağını gösteriyor.
+* (Doğrulup onu kucağına al, yüz yüze ol.)
+  Doğruluyorsun; şimdi kucağında, yüz yüzesiniz. Hız düşüyor. Alnını alnına dayıyor ama gözlerini açmıyor; nefesi kulağının dibinde, kısa.
+  Bir süre böyle, ikiniz de neredeyse hiç kıpırdamadan.
+* (Olduğu gibi bırak, onu izle.)
+  Onu izliyorsun. Saçları yüzüne düşmüş, ağzı aralık. Bir an gözlerini açıyor, seni kendisini izlerken buluyor ve hemen kapatıyor; gülerek, ama çabuk.
+  @defne: Bakma. Kural beş.
+* "Dur."
+  -> durduk
+Hızlanıyor; bitişe kendisi gidiyor, sana yaslanıp. Geldiğinde ses çıkarmıyor; omzunu ısırıyor, sonra ısırdığı yeri öpüyor. Sen biraz sonra, o hâlâ üstündeyken, onun kalçalarını tutarak.
+Yirmi dakika, belki biraz fazla. Yağmurun sesi bütün o süre boyunca değişmedi; değişen siz oldunuz.
+-> sonrasi
+
+:: yavas
+Yan yana, yüz yüze. Önce sadece öpüşüyorsunuz; Defne'nin eli sırtında, omuz kemiğinde, kaburgalarında bir şey sayar gibi geziyor.
+Pantolonları yatakta, yorganın altında çıkarıyorsunuz; dar yer, dirsekler, bir diz, bir "ay". Defne prezervatifi çekmeceden alıp sana veriyor; bu sefer kendisi takmıyor, bekliyor.
+Yan yatarken bacağını kalçana atıyor, seni kendine çekiyor. Yavaş. Kimse hızlanmıyor.
+Gözleri açık. Hep açık; birkaç kere kapatmaya kalkıyor, kapatmıyor. Bu ona bir şey yaptırıyor; ilk defa sustuğunu fark ediyorsun. Ne şaka, ne küfür. Sadece nefesi ve bir ara adın, yarım.
+* (Sırtüstü dön, onu üstüne al.)
+  Sırtüstü dönüyorsun, onu da beraberinde. Üstüne çıkıyor ama yavaşlığı bozmuyor; ellerini senin ellerine geçirip yatağa bastırıyor, yüzünü yüzüne indiriyor.
+* (Böyle kal. Onu bırakma.)
+  Böyle kalıyorsunuz. Uzun bir süre, aynı yavaş ritimle; yorgan yere kayıyor, ikiniz de fark etmiyorsunuz.
+* "Dur."
+  -> durduk
+Bitişe yaklaştığında yüzünü boynuna gömüyor, gözlerini ilk kez orada kapatıyor; ses çıkarmıyor, sadece bütün vücudu bir kere sertleşip gevşiyor. Sen ondan biraz sonra, onu sıkıca tutarak.
+Ne kadar sürdüğünü bilmiyorsun. Yarım saatten fazla. Yağmur dinmiş; ikiniz de dinmesini duymamışsınız.
+[defne.gozler_acik]
+-> sonrasi
+
+:: durduk
+Duruyorsun. Defne de hemen duruyor; elleri havada, sonra yorganın üstünde.
+@defne: Tamam.
+@defne: Bu "tamam" kızgın tamam değil. Gerçekten tamam.
+Yanına uzanıyor, yorganı ikinizin üstüne çekiyor. Bir süre tavana bakıyor.
+@defne: İstediğin zaman dur. Ben de dururum. Bunu bilmek iyi. Daha önce kimse durmadı, ben de kimseyi durdurmadım; ikisi de hep çok hızlıydı.
+Uyumuyorsunuz ama konuşmuyorsunuz da. Bir süre sonra yağmurun dindiğini fark ediyorsun.
+[defne.durdu]
+[defne.yakinlik +1]
+-> sabah
+
+:: sonrasi
+Sonra, yorganın altında, ikiniz de soğuyan tenlerinizle. Defne bir sigara yakıyor, iki nefes çekip söndürüyor.
+@defne: Sekizinci kez bırakıyorum. Bu da sayılmaz.
+Elini göğsüne koyuyor, parmağıyla bir şey yazıyor, harf mi, çizgi mi, anlayamıyorsun.
+>> eğer defne.gozler_acik
+  @defne: Gözlerimi kapatamadım.
+  Söyler söylemez pişman oluyor; yorganı başına çekiyor.
+  @defne: Duymadın. Rüzgârdı.
+>> yoksa
+  @defne: Sezonluk usulü. Hâlâ biliyormuşum.
+  Bunu söylerken tavana bakıyor; bilmenin iyi bir şey olup olmadığını tartıyor gibi.
+-> sabah
+
+:: sabah
+Saat dörde geliyor. Defne doğruluyor; yorgan omzunda, saçları bir yanda.
+@defne: Kural iki.
+>> eğer defne.kurallar
+  @defne: Kahvaltı yok. Bunu sen de kabul ettin. Git, sabah ben yokum, Müdür var, o da kimseyle kahvaltı etmez.
+>> yoksa
+  @defne: Kahvaltı yok. Sen kuralları kabul etmedin ama bu kural benim, evim, ekmeğim.
+Seni kapıya kadar geçirmiyor, merdivenin başında duruyor. Aşağıda Müdür kalkıp kapıyı açmanı bekliyor.
+@defne: Kupanı unutma.
+Kupayı alıyorsun. Hâlâ biraz ılık.
+>> zaman 4 Ekim 04:20
+-> eve
+
+:: eve
+Yokuştan inerken sokak lambaları ıslak taşlarda ikişer yanıyor. Her şey yıkanmış. Bir pencerede bir kadın, gece yarısından kalma çamaşırları içeri topluyor; sana bakıyor ve hiçbir şey söylemiyor.
+>> yer Taş Mahalle
+
+
+=== defne_yagmur_sabah
+tür: mesaj
+kişi: defne
+zaman: 4 Ekim 11:20
+koşul: defne.ikinci_gece
+
+@defne: günaydın. kural iki ihlali yok, tebrikler
+@defne: [Fotoğraf: Bir kupa kahve, pencerenin pervazında. Kupanın kulpu ters. Arkada yağmurdan sonra parlak, mavi bir deniz şeridi.] bu benim kahvaltım. kahve kahvaltı sayılmaz. bu kuralın küçük puntosu
+>> eğer defne.gozler_acik
+  @defne: dün gece bir şey söyledim. rüzgârdı
+* rüzgâr olduğunu biliyorum
+  [defne.yakinlik +1]
+  @defne: 🫡
+* bir dahakine ben de kahve getiririm
+  @defne: getiremezsin. kural iki kahveyi de kapsıyor. ben şimdi ekledim
+  @defne: tamam, getir. ama gizli getir. müdür'e görünmesin, o ispiyoncu
+* (Bir fotoğraf gönder: senin kupan, masanda, içinde kalemler.)
+  [defne.yakinlik +1]
+  @defne: kalem
+  @defne: ilk kupamdan kalemlik yapan adam. bunu ajansta yazsam "fazla duygusal" derlerdi
+
+
+# ---------- Kurallar hiç konuşulmadıysa: kısa hâli ----------
+
+=== defne_kurallar_kisa
+tür: mesaj
+kişi: defne
+tarih: 8 Ekim - 20 Ekim
+pencere: 00:30-02:30
+koşul: defne.devam ve değil defne.uzak ve değil defne.kurallar_konusuldu ve gördü(defne_firin_1)
+
+@defne: bir şey yazıyorum. cevap verme hemen. oku
+@defne: kural bir: kimse "biz neyiz" demez.
+@defne: kural iki: kahvaltı yok.
+@defne: kural üç: biri giderse öbürü otogara gelir.
+@defne: bunlar benim kurallarım. kimseye sormam. sana soruyorum. bu yeni
+[defne.kurallar_konusuldu]
+* kabul
+  [defne.kurallar]
+  @defne: bu kadar kolay mı. küçük puntoyu okumadın
+  @defne: tamam. imzalandı. 🏺
+* bir tane de benden: yalan yok
+  [defne.kurallar]
+  [defne.kural_dort]
+  @defne: yalan yok.
+  >> bekle 2dk
+  @defne: zor kural. tamam. dört.
+* kural istemiyorum
+  [defne.kurallar_reddi]
+  @defne: kural istemiyorsun.
+  >> bekle 4dk
+  @defne: tamam.
+  @defne: bu "tamam" ne demek bilmiyorum. ben de bilmiyorum. iyi geceler
+
+
+# ---------- Kötü film gecesi ----------
+
+=== defne_film_mesaj
+tür: mesaj
+kişi: defne
+tarih: 6 Ekim - 22 Ekim
+pencere: 20:30-22:00
+koşul: defne.devam ve değil defne.uzak ve gördü(defne_firin_1) ve haftagünü <= 3
+
+@defne: bu akşam bir şişe şarap ve çok kötü bir film var.
+@defne: biri sende biri bende. film bende.
+@defne: yani şarabı sen getiriyorsun. bu bir davet değil, bir ticari teklif
+>> zaman_aşımı 1sa -> gec
+* geliyorum. kırmızı mı beyaz mı
+  @defne: kırmızı. film o kadar kötü ki beyazla izlenmez
+  [defne.film_sarap]
+* film ne
+  @defne: bir kadın paris'e gidiyor, bir fırıncıya aşık oluyor, fırıncının bir sırrı var. sır: fırıncı. iki saat
+  @defne: puanı dört nokta bir. ben dört nokta birleri severim
+  * geliyorum
+  * bu gece olmaz
+    @defne: 🙂
+    @defne: fırıncı seni affetmeyecek
+    -> son
+* bu gece olmaz
+  @defne: 🙂
+  @defne: fırıncı seni affetmeyecek
+  -> son
+>> randevu defne_film sonra 40dk | Defne'nin evi, film gecesi
+-> son
+:: gec
+@defne: film başladı. fırıncı ekranda, şarap bende. sen yoksun, fırıncı fark etmedi
+
+
+=== defne_film
+tür: sahne
+kişi: defne
+yer: Taş Mahalle, Defne'nin evi
+ton: gece
+süre: 30dk
+
+Atölyenin ışıkları sönük. Defne yukarıdan sesleniyor: "Açık, çık." Merdivenin basamaklarında yarım kalmış kâseler var, her basamakta bir; çıkarken birine çarpmamaya çalışıyorsun.
+Yukarısı tek oda; bir köşede ocak, bir köşede yatak, ortada bir kanepe ve kanepeye bakan, bir tabureye konmuş eski bir dizüstü bilgisayar. Ekranda bir film, durdurulmuş: bir kadın, bir fırının vitrininde kendine bakıyor.
+Defne kanepenin bir ucunda bağdaş kurmuş, battaniyenin altında. Müdür kanepenin önünde, yerde, kanepeyi kendisi bekliyormuş gibi.
+>> eğer defne.film_sarap
+  @defne: Kırmızı. Gördün mü, sözünü tutan adam. Tirbuşon şurada, kendi işini kendin yap. Ben filme odaklıyım.
+>> yoksa
+  @defne: Şarap getirmedin. Önemli değil, bende var. Bende hep var. Bu bir itiraf değil, bir envanter.
+Film başlıyor. Kötü. Gerçekten kötü: Paris'in sokakları besbelli bir stüdyo, fırıncının Fransızcası dublajda Antalyalı, kadın her sahnede başka bir paltoyla ağlıyor.
+Defne her sahneye yorum yapıyor. "Bu ışık yalan." "Kimse ekmeğe böyle bakmaz." "Bu kadın ilk günden fırıncıya kredi kartı numarasını verecek, bak." Veriyor.
+Ellinci dakikada, kadın fırıncıya "Sen kalacak mısın?" diye sorunca Defne susuyor. Ekrana bakıyor. Gözleri dolu.
+@defne: İroni olsun diye izliyorum. Ağlamak da ironinin parçası.
+* (Bir şey söyleme. Battaniyenin altında elini bul.)
+  [defne.yakinlik +1]
+  Elini buluyorsun. Elini çekmiyor; sana da bakmıyor. Film devam ediyor.
+* "İroni ağlatıyorsa iyi bir ironi."
+  @defne: Bunu bir yere yaz. Sat. Ben satarım, ben satabilirim bunu. Bir zamanlar satabilirdim.
+* "Durdurayım mı?"
+  @defne: Durdurma. Asla durdurma. Kötü filmin tek kuralı bu; sonuna kadar izlenir. Yoksa ne kadar kötü olduğunu bilemezsin.
+Bir sonraki sahne bir doğum günü partisi. Fırıncı kadına bir pasta yapmış, mumların hepsi aynı anda sönmüyor.
+Defne bilgisayarın tuşuna basıp sahneyi atlıyor.
+@defne: Doğum günü sahnesi. Bunu hep geçerim. Kural.
+* "Seninki ne zaman?"
+  @defne: Şubat.
+  Hiç düşünmeden söylüyor. Çok hızlı.
+  [defne.dg_subat]
+* (Bir şey sorma.)
+  Bir şey sormuyorsun. Defne'nin omzu biraz gevşiyor; bunu ancak gevşeyince fark ediyorsun.
+Telefonu titriyor, ekranda bir isim: Nilüfer Berkmen. Defne telefona bakıyor, açmıyor, ters çeviriyor.
+@defne: Bana borcu olan bir kadın. Bir yemek takımı. Altmış parça. Temmuzda teslim ettim, "eylülde" dedi. Eylül bitti. Şimdi o beni arıyor, ben açmıyorum. Mantıksız, biliyorum.
+@defne: Açarsam "ekimde" diyecek. "Ekimde" diyeceğini duymak istemiyorum. Duymazsam hâlâ eylülde olabiliriz.
+[defne.berkmen_ogrendi]
+* "Ne kadar?"
+  @defne: Kira kadar. Üç kira kadar.
+  @defne: Para konuşmayalım. Para konuşunca film daha kötü oluyor, imkânsız ama oluyor.
+* "Lagün'ün kapanış gecesindeki kız, onlardan değil miydi? Berkmenlerin kızı."
+  >> eğer gördü(prolog_kapanis)
+    @defne: O. Gece elbisesiyle tek başına içen. Annesinin parasını o mu içiyordu, kendi parası mı, bilmiyorum.
+    @defne: Bir gün villaya çıkıp kapıyı çalacağım. Bu kışa kadar değilse, bu kış.
+  [defne.lara_hatirladi]
+* "Ben arayayım. Senin adına."
+  [defne.kurtarici +1]
+  Defne sana dönüyor; yüzündeki ifade bir an tanınmaz.
+  @defne: Hayır.
+  @defne: Ben kendi borcumu kendim kovalarım. Kötü kovalarım ama benim.
+>> eğer değil defne.kurallar_konusuldu
+  Film bitince ekrana bakmaya devam ediyor; yazılar geçiyor, Antalyalı fırıncının sesi bir şarkı söylüyor.
+  @defne: Seninle bir şey yapmam lazım. Kural. Benim kurallarım vardır, herkese söylerim; sana söylemedim daha.
+  @defne: Bir: kimse "biz neyiz" demez. İki: kahvaltı yok. Üç: biri giderse öbürü otogara gelir.
+  [defne.kurallar_konusuldu]
+  * "Kabul."
+    [defne.kurallar]
+    @defne: Hızlıydı. Hızlı olmana alışkın değilim.
+  * "Bir de benden: yalan yok."
+    [defne.kurallar]
+    [defne.kural_dort]
+    @defne: Yalan yok. Zor. Tamam.
+  * "Kural istemiyorum."
+    [defne.kurallar_reddi]
+    @defne: İstemiyorsun.
+    Uzun bir süre bir şey söylemiyor. Sonra filmin başına geri sarıyor, sessiz.
+    @defne: Bir daha izleyelim. Bu sefer daha da kötü olacak, biliyorum.
+>> eğer değil defne.sevgili ve değil defne.kurallar_reddi
+  Film bitiyor. Fırıncı ile kadın bir köprünün üstünde öpüşüyor; arkalarında Paris, besbelli bir fon perdesi, rüzgârda dalgalanıyor.
+  @defne: Şimdi öpüşürler. Kötü filmlerin sonunda hep öpüşürler. İyi filmlerde biri trene biner.
+  Ekrandan gözünü ayırmıyor. Battaniyenin altında dizi dizine değiyor.
+  * (Onu öp.)
+    [defne.sevgili]
+    [defne.yakinlik +1]
+    Ona dönüyorsun. Defne bir an şaşırıyor; kendi kurduğu cümleye yakalanmış gibi. Sonra gözlerini kapatıyor.
+    Şarap, battaniye, bir köpeğin derin nefesi. Ayrıldığınızda Defne ekrana bakıyor; yazılar geçiyor.
+    @defne: Kötü bir film gibi. Bunu iltifat olarak söylüyorum. Benim ağzımda en büyük iltifat bu.
+  * "İyi filmde kim trene biner?"
+    @defne: Kalmak isteyen. Hep o biner. Gitmek isteyen peronda kalır, el sallar.
+    Sana dönüyor.
+    @defne: Bu filmde kimse trene binmiyor. İyi. Ben bu gece iyi film kaldıramam.
+  * (Kalk, bardakları topla.)
+    Bardakları toplarken Defne arkandan bakıyor; bir şey söylemiyor. Barmenlik refleksi, diye düşünüyor belki. Belki başka bir şey.
+Saat bir. Film bitmiş. Defne battaniyenin altında uyuklamaya başlamış; başı yavaş yavaş omzuna iniyor, iniyor, sonra omzunda kalıyor.
+* (Kıpırdama. Böyle uyu.)
+  [defne.kahve]
+  [defne.yakinlik +1]
+  Kıpırdamıyorsun. Bir süre sonra sen de uyuyorsun; kanepede, oturarak, boynun yanlış bir açıda.
+  Uyandığında oda gri. Defne mutfakta, sırtı dönük; cezve fokurduyor. Sana bakmadan bir kupa uzatıyor.
+  @defne: Kahve. Kahvaltı değil. Kural iki ihlal edilmedi.
+  @defne: Boynun tutulmuş. Ben bunu sana yaptım, uyuyarak. Özür dilerim. Kahve özür.
+  >> saat 08:30
+* (Onu yavaşça yatırıp üstünü ört, çık.)
+  Başını kanepenin koluna, bir yastığın üstüne yerleştiriyorsun; uyanmıyor. Battaniyeyi omzuna kadar çekiyorsun.
+  Kapıdan çıkarken Müdür bir gözünü açıyor ve bir şey demeden kapatıyor.
+  >> saat 01:30
+>> yer Taş Mahalle
+
+
+=== defne_mudur_hikayesi
+tür: mesaj
+kişi: defne
+tarih: 11 Ekim - 22 Ekim
+pencere: 14:00-17:30
+koşul: defne.devam ve değil defne.uzak ve defne.yakinlik >= 3 ve gördü(defne_film)
+
+@defne: [Fotoğraf: Müdür, atölyenin eşiğinde, güneşte. Gözleri kapalı, kulağının biri ters dönmüş.] ilk kışımın şubatında kapımın önüne geldi
+@defne: kovdum. gitmedi. yine kovdum. sabaha karşı kapıyı açtım, aynı yerde oturuyordu. buz gibi taşın üstünde
+@defne: üçüncü gün içeri aldım. bacağı o zaman da topaldı. veteriner "sekiz yaşında" dedi. ben "müdür" dedim
+@defne: neyse. hikâye bu
+* hiç gitmedi demek
+  [defne.yakinlik +1]
+  >> bekle 4dk
+  @defne: gitmedi.
+  @defne: kalan ilk o. ondan sonra da başka kalan olmadı
+  >> bekle 1dk
+  @defne: şimdilik
+* müdür seni seçmiş
+  @defne: müdür kapıyı seçti. ben kapıdaydım. denk geldi
+  @defne: ama evet. galiba
+* (Kalp bırak.)
+  @defne: müdür kalbi gördü. ciddi ciddi baktı. bu onun için çok fazla
+[defne.mudur_hikayesi]
+
+
+# ---------- Doğum günü ----------
+
+=== defne_lugat
+tür: eylem
+başlık: Kültür Evi'ne çık
+tarih: 13 Ekim - 24 Ekim
+pencere: 10:00-17:00
+koşul: defne.kelime ve değil esya.lugat
+yer: Taş Mahalle, Kültür Evi
+
+Eski kilisenin kapısı ağır, ahşap; içeri girince dışarıdaki ses birden kesiliyor. Apsiste, solmuş bir freskin içinden bir azizin yarım yüzü bakıyor.
+Gönül Hanım masasında, gözlüğünü burnunun ucuna indirmiş. Kapının yanında bağış kitaplarıyla dolu kolilere bir kâğıt yapıştırmış: "Her biri 20 lira. Para kutuya. Kutu güvenilir."
+Kolinin birinin dibinde, sırtı dökülmüş kalın bir kitap: Türkçe bir lügat. Eski kelimeler, eski harflerle değil, yenisiyle; kenarlarında biri kurşunkalemle notlar almış. "Mahzun" kelimesinin altı çizilmiş.
+* (Yirmi lirayı kutuya at, lügati al.)
+  [esya.lugat]
+  @gonul: O lügat burada üç yıl durdu. Kimse almadı. Hangi kelimeyi arıyorsun?
+  * "Hasbelkader."
+    @gonul: Ha. Onu bilen kalmadı sanıyordum. Seramikçi kız söyler o kelimeyi. Bir kere buradan geçerken bana "efkâr" dedi, yirmi yıldır kimse bana efkâr dememişti.
+  * "Hiçbirini. Hediye."
+    @gonul: Hediye. İyi. Eski kelimeler hediye edilir, satılmaz.
+  * "Mahzun. Altı çizilmiş."
+    @gonul: Ben çizmedim. Önceki sahibi. Ölmüş. Kitaplar ölünce gelir buraya, genelde.
+    Gözlüğünü düzeltiyor.
+    @gonul: Ama hediye olacaksa bunu söyleme.
+* (Bırak. Kitaplara bakmaya devam et.)
+  Kolileri karıştırıyorsun; bir Aziz Nesin, yarısı yırtılmış bir Pırnallı tarihi, kırk yıl öncesinden bir telefon rehberi. Lügati yerine koyuyorsun.
+
+
+=== onur_defne_dogum_gunu
+tür: mesaj
+kişi: onur
+zaman: 23 Ekim 20:40
+koşul: defne.devam ve değil defne.uzak
+
+@onur: kanka seramikçi kızın yarın doğum günüymüş
+@onur: otuz yaşına giriyomuş. sarp söyledi
+@onur: kuyuda bi şey yapcaklarmış ama kıza söylememişler sürpriz diye. sen de söyleme
+@onur: aslında bana da söylemediler. ben duydum
+[defne.dg_biliyor]
+* otuz mu?
+  @onur: otuz dedi bence. yirmi bir de diyebilir. sarp hızlı konuşuyo
+* saat kaçta
+  @onur: on bir gibi. sarp "kapanışa yakın" dedi. kuyu üçte kapanıyo yani bilmiyorum
+* teşekkürler onur
+  @onur: ne demek kanka. bu şehirde bilgi benden geçer
+  @onur: yarısı yanlış ama geçer
+
+
+=== defne_dogum_gunu
+tür: eylem
+başlık: Kuyu'ya git
+tarih: 24 Ekim - 25 Ekim
+pencere: 21:00-02:30
+koşul: defne.dg_biliyor ve değil defne.uzak ve ((tarih == "24 Ekim" ve saat >= 21) veya (tarih == "25 Ekim" ve saat < 3))
+kişi: defne
+yer: Çarşı, Kuyu
+süre: 1sa
+
+>> eğer saat < 6
+  Gece yarısı çoktan geçmiş. Çarşının arka sokakları boş; Kuyu'nun merdiveninden müzik geliyor, kapanışa yakın bir şarkı.
+>> yoksa
+  Çarşının arka sokakları ıslak; bir kedi bir kapı eşiğinde kurumaya çalışıyor. Kuyu'nun merdiveninden müzik geliyor.
+Kuyu bodrumda. Cam zeminin altında kuyunun ağzı, mavi bir ışıkla aydınlatılmış; içine atılmış bozuk paralar dipte parlıyor.
+Barın ucunda küçük bir kalabalık: sakallı, kahve kokan bir adam, barın arkasında kolları dövmeli bir barmen, iki kişi daha. Ortalarında Defne. Önünde, üstünde tek bir mum yanan, besbelli marketten alınmış bir kek.
+Seni görünce yüzü önce düşüyor, sonra toparlanıyor; bir saniyenin içinde, ama gördün.
+>> eğer defne.dg_subat
+  @defne: Şubat.
+  @defne: Ben sana şubat dedim. Kim söyledi? Sarp. Hayır, Sarp söylemez. Onur. Onur'dur. Onur'un doğum günü kaç, onu da yanlış söyler.
+  * "Sen de yalan söyledin. Ödeştik."
+    >> eğer defne.gidiyor_dedi veya defne.yalan_ikinci veya defne.yalan_derin
+      @defne: Ödeştik.
+      Uzun uzun bakıyor.
+      @defne: Hayır, ödeşmedik. Seninki daha büyüktü. Ama bu gece doğum günüm, bu gece ödeştik.
+    >> yoksa
+      @defne: Doğum günü yalanı yalan sayılmaz. Bu evrensel bir kural, Cenevre'de imzalandı.
+  * "Şubatta da kutlarız."
+    [defne.yakinlik +1]
+    @defne: Şubatta.
+    Bir şey söyleyecek gibi oluyor, kekin mumuna bakıyor.
+    @defne: Şubatta burada mı olacaksın? Cevap verme. Bugün doğum günüm, bugün cevap yok.
+>> yoksa
+  @defne: Kim söyledi? Sarp söylemez. Onur. Onur'dur. Şehrin tek haber ajansı.
+@yabanci(Barmen): Sarp. Söylemedim, yemin ederim. Ben sadece "yarın Defne'nin doğum günü" dedim, o da bir soruydu aslında.
+@yabanci(Sakallı adam): Arda. Kahveci. Biz kek aldık, kızma. Mum bir tane, çünkü yaşını bilmiyoruz.
+@defne: Yirmi altı. Bunu kimseye söylemeyin. Yirmi beşi bitirdim, bitirmek kötü bir kelime.
+Mumu üflemiyor. Sarp bir şişe tekila koyuyor bara; "doğum günü kuralı" diyor; Defne ilk shotu içiyor, ikincisini de.
+* (Ona hediyeni ver.)
+  -> hediye
+* "Ben bir şey getirmedim."
+  [defne.yakinlik +1]
+  @defne: Güzel. Hediye getirenlerden korkarım. Hediye bir borç, bir sonraki yıla senet.
+  -> kutlama
+* (Bir şey söyleme. Mumu sen üfle.)
+  [defne.yakinlik +1]
+  Eğilip mumu üflüyorsun. Sarp "hey" diyor, Arda gülüyor.
+  @defne: Dileğimi sen tuttun. Ne diledin? Söyleme. Söylersen olmaz. Söylemezsen de olmaz, ama en azından bilmem.
+  -> kutlama
+
+:: hediye
+>> eğer esya.lugat
+  Kalın, sırtı dökülmüş lügati barın üstüne koyuyorsun. Defne ona bakıyor ve dokunmuyor.
+  @defne: Ne bu?
+  Kapağı açıyor. Sayfaları çeviriyor, bir yerde duruyor. Kurşunkalemle altı çizilmiş bir kelime.
+  @defne: Mahzun.
+  Gürültü devam ediyor; Arda bir şey anlatıyor, Sarp bardak yıkıyor. Defne lügate bakıyor ve hiçbir şey söylemiyor. Bir süre. Çok uzun bir süre, onun için.
+  [defne.lugat_hediye]
+  [defne.yakinlik +2]
+  [defne.kis -1]
+  @defne: Kim çizmiş bunun altını?
+  * "Bilmiyorum. Kitabın eski sahibi."
+    @defne: Eski sahibi. Biri bu kelimeyi aramış. Bulmuş. Altını çizmiş.
+    Lügati kapatıp göğsüne bastırıyor.
+    @defne: Teşekkür etmeyeceğim. Edersem ağlarım. Doğum günümde ağlamam, sadece kötü filmlerde.
+  * "Ben çizdim."
+    [defne.yakinlik -1]
+    @defne: Yalan. Bu kurşunkalem otuz yaşında. Sen otuz yaşında değilsin.
+    @defne: Ama güzel yalan. Kötü yalan güzel gerçeğe hakarettir, ama güzel yalan... Neyse. Teşekkürler. Tamam, ettim.
+>> yoksa eğer defne.kupa_harf veya defne.kupa_ters veya defne.catlak_kupa
+  Elinde hiçbir şey yok; ceplerini yokluyorsun, cebinden bir anahtar ve bir Mendirek fişi çıkıyor.
+  @defne: Fiş. Bana fiş getirdin.
+  Fişi alıp çeviriyor. Arkasına, barın kalemiyle bir şey yazıyor ve sana geri veriyor: "Bu bir hata mı, tercih mi?"
+  @defne: Ödeştik. İlk mesajım. Hatırlamıyorsan da sorun değil, ben hatırlarım, sloganlarımı unutmam.
+>> yoksa
+  Elinde hiçbir şey yok.
+  @defne: Hiçbir şey getirmedin. İyi. Hediye bir borç; bir sonraki yıla senet.
+-> kutlama
+
+:: kutlama
+Gece ilerliyor. Defne üçüncü shotu, dördüncüyü içiyor; her biri için bir sebep var: "Yirmi beş için. Yirmi altı için. Fırın için. Müdür için." Arda bir ara onun bardağını sessizce suyla değiştiriyor; Defne fark edip geri değiştiriyor.
+Saat ikiye doğru Sarp ışıkları açıyor. Defne bir tabureye tutunarak kalkıyor.
+@defne: Ben yürürüm. Yokuş benim. Yokuşu tanırım.
+Yürüyemiyor; ikinci adımda sana tutunuyor.
+@yabanci(Arda): Ben götürürüm istersen. Ya da sen. Kim götürecek, şimdi karar verelim, o karar veremez.
+* "Ben götürürüm."
+  -> yokus
+* "Sen götür. Benim yolum ters."
+  [defne.yakinlik -1]
+  [defne.kis +1]
+  Arda Defne'nin koluna giriyor. Defne sana bakıyor; ne kızgın, ne kırgın. Sadece bakıyor.
+  @defne: Ters yol. Tamam. İyi geceler, ters yollu adam.
+  Merdivenden çıkıyorlar. Lügat ya da kek, bir şey barın üstünde kalıyor; Sarp onu kaldırıp rafa koyuyor, "yarın gelir alır" diyor.
+  >> yer Çarşı
+  -> son
+
+:: yokus
+Taş Mahalle'nin yokuşu gece daha dik. Defne kolunda; her yirmi adımda bir duruyor, bir şey söylüyor, sonra ne söylediğini unutuyor.
+@defne: Yirmi altı. Annem yirmi altısında evliydi. Babam yirmi altısında bir bina yapmıştı. Ben yirmi altısında yokuş çıkamıyorum.
+@defne: Bunu sloganlaştıramıyorum. Hiçbir şeyi sloganlaştıramıyorum bu gece.
+Sarı kapının önünde duruyor. Müdür içeride, kapının arkasında; tırmalama sesi.
+Defne sırtını kapıya yaslıyor. Gözleri sende; tam odaklanamıyor, bir sende bir omzunun arkasında bir şeyde.
+@defne: Bu kış kötü geçecek. Biliyorum. Şimdiden biliyorum.
+Söyler söylemez gülüyor; ama gülüş yarıda kalıyor.
+@defne: Gir içeri. Yukarı. Benimle. Doğum günü kuralı.
+Yakanı tutup çekiyor; dudakları ağzının kenarına geliyor, tam değil. Ayakta duramıyor, nefesi tekila.
+* "Bu gece değil. Seni yukarı çıkarayım, o kadar."
+  Ellerini yakandan alıp avuçlarının içinde tutuyorsun.
+  -> yatir
+* (Başını çevir, alnından öp.)
+  Başını çeviriyorsun; dudakları yanağına geliyor. Alnından öpüyorsun.
+  @ben: Bu gece değil. Yarın konuşuruz.
+  -> yatir
+
+:: yatir
+[defne.durdu_sarhos]
+@defne: Bu gece değil.
+Tekrar ediyor, bir yabancı dildeki bir cümleyi tekrar eder gibi.
+@defne: Tamam. Bu gece değil. Bu gece ne?
+Anahtarını çantasında bulamıyor; sen buluyorsun. Müdür kapı açılınca bir kere havlıyor, sonra Defne'nin bacaklarına yaslanıyor, merdivende onunla birlikte, onu tutar gibi çıkıyor.
+Yukarıda Defne yatağa oturuyor, oturduğu gibi kalıyor. Ayakkabılarını sen çıkarıyorsun; botların bağcıkları çift düğüm, ikisini de çözüyorsun. Botları yatağın yanına, yan yana koyuyorsun.
+Ocağın yanından bir bardak su doldurup komodinin üstüne bırakıyorsun. Bir de lavabonun altında bulduğun boş bir kovayı yatağın yanına.
+@defne: Kova. Profesyonelsin. Barmen, garson, mühendis, hemşire. Kaç kişisin sen?
+Yan yatıyor, yorganı sen örtüyorsun. Gözleri kapanıyor, açılıyor.
+@defne: Gitme. Hayır, git. Kural iki. Hayır. Bilmiyorum.
+* (Kanepede, onu görecek yerde, sabaha kadar otur.)
+  [defne.yakinlik +1]
+  [defne.kanepede]
+  Kanepeye oturuyorsun. Müdür yatağın ayak ucuna yatıyor, başını patilerinin üstüne koyup sana bakıyor; ikiniz de nöbettesiniz.
+  Defne bir ara uyanıp suyu içiyor, kovaya bakıyor, kullanmıyor. Yeniden uyuyor. Nefesi düzenleniyor.
+  Saat altıda, oda grileşirken, kapıyı arkandan sessizce çekiyorsun. Müdür kalkıp eşiğe kadar geliyor.
+  >> zaman 25 Ekim 06:10
+* (Uyuduğundan emin ol, çık. Kapıyı kilitlemeden çek.)
+  Bir süre bekliyorsun. Nefesi düzenleniyor, bir eli yorganın dışında, avucu yukarıda.
+  Merdivenden iniyorsun. Müdür seninle birlikte iniyor, kapıda duruyor, sonra geri dönüp merdivene, yukarı çıkıyor. Nöbeti devraldı.
+  >> zaman 25 Ekim 03:20
+>> yer Taş Mahalle
+
+
+=== defne_dg_ertesi
+tür: mesaj
+kişi: defne
+zaman: 25 Ekim 13:40
+koşul: defne.durdu_sarhos
+
+@defne: uyandım.
+@defne: botlarım yan yana dizilmiş. ben botlarımı hiç dizmem. biri dizmiş
+@defne: yanımda bir bardak su ve bir kova. kova temiz. tebrikler bana
+>> eğer defne.kanepede
+  @defne: kanepenin minderi çökmüş. biri gece boyu oturmuş
+>> bekle 3dk
+@defne: dün gece bir şey yaptım. kapıda. hatırlıyorum, keşke hatırlamasaydım
+@defne: sen durdun.
+>> bekle 2dk
+@defne: teşekkür etmeyeceğim. teşekkür edersem bir şey olmuş gibi olur. bir şey olmadı. sen durdun, o kadar
+@defne: ama not ettim. büyük harfle. ben büyük harf kullanmam, biliyorsun
+[defne.yakinlik +1]
+[defne.durdu_biliyor]
+* nasılsın
+  @defne: başım. yirmi altı yaşında bir baş. yirmi beşten ağır
+* doğum günün kutlu olsun. bir gün geç
+  @defne: bir gün geç olunca daha iyi oluyor. kimse beklemiyor
+  @defne: 🫡
+* (Fotoğraf gönder: Mendirek'in mutfağından, bir bardak ayran.)
+  @defne: ayran. kuşluk vakti ayran
+  @defne: bu kelime de lügatte var bu arada. "kuşluk". bugün öğrendim. bugünün kelimesi
+
+
+=== defne_dg_kacirdi
+tür: mesaj
+kişi: defne
+zaman: 25 Ekim 03:10
+koşul: defne.devam ve değil defne.uzak ve değil gördü(defne_dogum_gunu)
+
+>> eğer defne.dg_biliyor
+  @defne: onur söylemiş sana. sarp söyledi onur'a söylediğini
+  @defne: gelmedin.
+  @defne: iyi. gelmemen iyiydi. gelseydin ne yapacağımı bilmezdim. hiç bilmem
+  @defne: 🙂
+>> yoksa
+  @defne: bugün doğum günümdü. dündü. saat üç, artık dündü
+  @defne: kimse bilmiyordu. iyi ki kimse bilmiyordu
+  @defne: 🙂
+[defne.kis +1]
+>> zaman_aşımı 10sa -> sabaha
+* kutlu olsun. bilmiyordum
+  @defne: bilmiyordun. tamam. bu yalan değil, biliyorum. bu sadece bir bilgi eksikliği. kampanyanın hatası
+* uyumuyor musun
+  @defne: yirmi altı yaşında uyunmaz. ilk gece uyunmaz
+  @defne: şaka. uyuyorum. şu an uyuyorum, rüyamda yazıyorum
+* (Bir kalp bırak.)
+  >> okudu
+-> son
+:: sabaha
+[defne.yakinlik -1]
+
+
+=== defne_karanlik
+tür: mesaj
+kişi: defne
+tarih: 28 Ekim - 31 Ekim
+pencere: 18:20-18:50
+koşul: defne.devam ve değil defne.uzak
+
+@defne: güneş altıyı yirmi geçe battı
+@defne: resmî itirazımı ilettim. kime ilettim bilmiyorum. belediyeye
+@defne: [Fotoğraf: Atölyenin penceresinden sokak. Saat erken ama lambalar yanmış. Karşı evin bacasından ilk duman.] daha ekim. ekimde duman olmaz
+[defne.kis +1]
+* karanlık erken, ama ben de erken gelirim
+  [defne.kis -1]
+  [defne.yakinlik +1]
+  @defne: erken gelen adam. bu da yeni
+  @defne: bu akşam gelme ama. bu akşam karanlıkla tanışıyoruz, ikimiz. üçüncü kişi ayıp olur
+* belediyeye ben de yazarım
+  @defne: yaz. "sayın belediye, güneşi uzatın. saygılarımla, bir kalan"
+* ne yapıyorsun şu an
+  @defne: hiçbir şey. karanlığa bakıyorum. o da bana bakıyor. kimse göz kırpmıyor

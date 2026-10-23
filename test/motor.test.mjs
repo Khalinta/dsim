@@ -129,6 +129,7 @@ const KISILER = {
   ben: { ad: 'Sen' },
   ali: { ad: 'Ali', tanimsiz: 'Adam', numara: '0500 000 00 00', yazmaHizi: 1, okumaGecikmesi: 30 },
   veli: { ad: 'Veli', numara: '0500 000 00 01', rehberde: 'Veli' },
+  uykucu: { ad: 'Uykucu', numara: '0500 000 00 02', yazmaHizi: 1, okumaGecikmesi: 30, uyku: '05:00-11:00' },
 };
 const AYAR = { 'başlangıç': '15 Eylül 08:00', 'içerik_sonu': '17 Eylül 08:00', 'ilk_yer': 'Ev' };
 
@@ -311,18 +312,57 @@ süre: 1sa
 
 Yürüyorsun.
 `);
-  assert.deepEqual(oyun.eylemler().map((e) => e.kimlik), ['_oyalan']);
+  const yazili = () => oyun.eylemler().filter((e) => !e.yerlesik).map((e) => e.kimlik);
+  assert.deepEqual(yazili(), []);
   oyun.ilerle(tarihCoz('15 Eylül 09:15'));
-  assert.deepEqual(oyun.eylemler().map((e) => e.kimlik), ['e', '_oyalan']);
+  assert.deepEqual(yazili(), ['e']);
   oyun.eylemSec('e');
   assert.deepEqual(oyun.sahneDevam().map((b) => b.t), ['anlatı', 'son']);
   oyun.sahneKapat();
   assert.equal(saatYaz(oyun.t), '10:15');
-  assert.deepEqual(oyun.eylemler().map((e) => e.kimlik), ['_oyalan']);
+  assert.deepEqual(yazili(), []);
+  oyun.eylemSec('_kadar_11');
+  assert.equal(saatYaz(oyun.t), '11:00');
   oyun.ilerle(tarihCoz('15 Eylül 23:00'));
   oyun.eylemSec('_uyu');
   assert.equal(gunBilgisi(oyun.t).tarih, '16 Eylül');
   assert.equal(saatYaz(oyun.t), '08:00');
+});
+
+test('oyun: "saat X\'e kadar oyalan" yeni bir eylemin saati gelince durur', () => {
+  const oyun = kur(`
+=== aksam
+tür: eylem
+başlık: İşe git
+pencere: 16:30-19:30
+
+İşe gidiyorsun.
+`);
+  oyun.ilerle(tarihCoz('15 Eylül 16:00'));
+  oyun.eylemSec('_kadar_21');
+  assert.equal(saatYaz(oyun.t), '16:30');
+  assert.ok(oyun.eylemler().some((e) => e.kimlik === 'aksam'));
+  oyun.eylemSec('_kadar_21');
+  assert.equal(saatYaz(oyun.t), '21:00');
+});
+
+test('oyun: uyuyan kişi mesajı uyanınca okur ve cevaplar', () => {
+  const oyun = kur(`
+=== m
+tür: mesaj
+kişi: uykucu
+zaman: 16 Eylül 02:00
+
+@uykucu: uyuyor musun
+* uyumuyorum
+  @uykucu: iyi
+`);
+  oyun.ilerle(tarihCoz('16 Eylül 07:59'));
+  oyun.cevapla('uykucu', 0);
+  oyun.ilerle(tarihCoz('16 Eylül 10:59'));
+  assert.equal(oyun.durum.sohbet.uykucu.at(-1).k, 'b');
+  oyun.ilerle(tarihCoz('16 Eylül 11:05'));
+  assert.equal(oyun.durum.sohbet.uykucu.at(-1).m, 'iyi');
 });
 
 test('oyun: kayıt dışa verilip geri yüklenince aynı yerden sürer', () => {
@@ -396,6 +436,104 @@ yer: Kordon
   oyun.ilerle(tarihCoz('15 Eylül 23:00'));
   oyun.eylemSec('_uyu');
   assert.equal(oyun.durum.yer, 'Yeni ev');
+});
+
+test('oyun: eylem grupları sırayla açılır, yazılanlar bitince sessiz yedek kalır', () => {
+  const oyun = kur(`
+=== v1
+tür: eylem
+grup: vardiya
+başlık: Vardiyaya git
+öncelik: 2
+
+Birinci vardiya.
+
+=== v2
+tür: eylem
+grup: vardiya
+başlık: Vardiyaya git
+öncelik: 1
+
+İkinci vardiya.
+
+=== v_yedek
+tür: eylem
+grup: vardiya
+başlık: Vardiyaya git
+öncelik: -10
+tekrar: evet
+süre: 1sa
+`);
+  const vardiya = () => oyun.eylemler().filter((e) => !e.yerlesik);
+  assert.deepEqual(vardiya().map((e) => e.kimlik), ['v1']);
+  oyun.eylemSec('v1'); oyun.sahneDevam(); oyun.sahneKapat();
+  assert.deepEqual(vardiya().map((e) => e.kimlik), ['v2']);
+  oyun.eylemSec('v2'); oyun.sahneDevam(); oyun.sahneKapat();
+  assert.deepEqual(vardiya().map((e) => e.kimlik), ['v_yedek']);
+  const t = oyun.t;
+  oyun.eylemSec('v_yedek');
+  assert.equal(oyun.sahne, null);
+  assert.equal(oyun.t - t, 3600);
+});
+
+test('oyun: randevu kilit ekranında görünür, vaktinde sahneyi başlatır, iptal edilebilir; bitir oyunu bitirir', () => {
+  const oyun = kur(`
+=== m
+tür: mesaj
+kişi: ali
+zaman: 15 Eylül 08:30
+
+@ali: akşam gel
+* gelirim
+  >> randevu bulusma 15 Eylül 20:00 | Ali'nin evi
+* gelemem
+  >> iptal bulusma
+
+=== bulusma
+tür: sahne
+kişi: ali
+
+@ali: Geldin.
+>> bitir
+`);
+  oyun.ilerle(tarihCoz('15 Eylül 08:31'));
+  oyun.cevapla('ali', 0);
+  assert.equal(oyun.randevular()[0].yer, "Ali'nin evi");
+  oyun.ilerle(tarihCoz('15 Eylül 23:00'));
+  assert.equal(oyun.sahne.kimlik, 'bulusma');
+  assert.equal(saatYaz(oyun.t), '20:00');
+  assert.equal(oyun.randevular().length, 0);
+  oyun.sahneDevam();
+  oyun.sahneKapat();
+  assert.equal(oyun.bittiMi(), true);
+});
+
+test('oyun: randevu "yarın 19:30" ertesi günün saatine kurulur; tarih eşitliği tarihle karşılaştırılır', () => {
+  const oyun = kur(`
+=== m
+tür: mesaj
+kişi: ali
+zaman: 15 Eylül 23:30
+
+@ali: yarın gel
+>> randevu bulusma yarın 19:30 | Ali'nin evi
+
+=== bulusma
+tür: sahne
+kişi: ali
+
+@ali: Geldin.
+
+=== e
+tür: eylem
+başlık: Bir şey yap
+koşul: tarih != "16 Eylül" ve değil (x == "metin")
+`);
+  oyun.ilerle(tarihCoz('15 Eylül 23:31'));
+  assert.equal(oyun.randevular()[0].t, tarihCoz('16 Eylül 19:30'));
+  assert.ok(oyun.eylemler().some((e) => e.kimlik === 'e'));
+  oyun.ilerle(tarihCoz('16 Eylül 10:00'));
+  assert.ok(!oyun.eylemler().some((e) => e.kimlik === 'e'));
 });
 
 // ---------- Kayıt kodu ----------

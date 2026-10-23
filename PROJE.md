@@ -99,6 +99,36 @@ Her karar ve nedeni burada. Bir karar değişirse eskisinin ~~üstü çizilir~~ 
     - **İleride bu metne dokunulacak, önceden bildirildi:**
       - 3\. adımda 14 Eylül gecesi (Defne) başa eklenecek. Oyuncu o gece Defne'de kalırsa açılış sahnesine bir koşul eklenecek.
       - 4\. adımda taşınma sahnesine Saniye Hanım'ın oyuncuyu eczaneye yollaması (Ilgın'la tanışma) eklenecek.
+    - *3. adımda yapıldı:* 14 Eylül gecesi başa eklendi; açılış sahnesine "Defne'de kalmadıysa" koşulu kondu; Burak'ın 03:12 mesajı eski mesajlardan çıkıp 15 Eylül 03:12'ye taşındı (kapanış gecesinden önce gelmesi saçmaydı).
+
+### Pilot adımında alınan kararlar (3. adım)
+
+27. **Oyun 14 Eylül 23:05'te, Lagün'ün kapanış gecesinde başlar.** (`oyun.json`) Önceki başlangıç 15 Eylül sabahıydı; 26. kararda bildirildiği gibi değişti.
+28. **Simge: pırnal yaprağı.** ~~Gün batımı~~ → koyu deniz yeşili zemin üstünde krem rengi, dikenli kenarlı bir pırnal meşesi yaprağı.
+    - *Neden değişti:* Kullanıcı istedi. Şehrin adı bu ağaçtan geliyor; küçük boyutta da tanınan, gün batımı fotoğraflarına benzemeyen bir şekil.
+29. **Oyuncunun kendi hayatı, karakterlerden bağımsız bir omurga olarak yazıldı.**
+    - Mendirek vardiyaları (perşembe–pazar, her biri ayrı yazılmış, bitince sessiz yedek), okul, aile, mahalle (Saniye Hanım, Onur, kordon).
+    - Babanın ipliği: itiraf ya da İTÜ'den gelen yazı, 26 Kasım'daki arama, 13 Aralık'taki ziyaret, 6 Ocak 23:15 bileti.
+    - *Neden:* Hiçbir karakterle ilerlemeyen oyuncu da 115 günü dolu yaşamalı; karakter sahneleri bu hayatın arasına düşüyor.
+30. **Motora eklenenler** (ayrıntı `icerik/BICIM.md`'de):
+    - `grup` (tekrarlanan işin her seferi ayrı yazılır), `>> randevu` (kilit ekranında kart; uykuyu da böler), `>> iptal`, `>> bitir`, `>> saat`, `>> ev`, `bugün`/`yarın` zamanları.
+    - Kişilerin uyku saatleri: Defne sabah 05–11 arası uyur; o saatte yazılan mesajı 11'de okur ve cevaplar ("görüldü" de öyle).
+    - Sahne sürerken de mesaj gelir; yalnızca yanında olunan kişinin mesajı sahne bitince gelir. (Önceden sahnenin içindeki saat atlamasına denk gelen mesajlar kayboluyordu; bulunup düzeltildi.)
+    - "Saat X'e kadar oyalan" yeni bir şey yapılabilir olunca durur. (Önceden 16:00'dan 21:00'e atlayan oyuncu vardiyayı hiç görmüyordu.)
+    - Aile sahnede "Baban", "Annen" diye görünür.
+    - Telefona bakınca karakterin tepkisi (Defne: önce şaka, sonra kendi telefonuna döner, sonra sigaraya çıkar; ciddi sahnelerde hiçbiri).
+31. **Defne'nin yolu ölçülerle değil, olaylarla ilerler.** Gizli iki ölçü var: yakınlık ve kış (karanlık). Belirleyici olaylar:
+    - Fırtına gecesi (4 Aralık) Defne'nin yanına mı, karanlıkta yalnız kalan Saniye Hanım'ın yanına mı gidildiği.
+    - Kötü gece (10 Aralık): kış ölçüsü yüksekse yaşanır; oyuncu gelirse acile birlikte gidilir, gelmezse Defne'yi komşusu bulur. Kış düşükse kötü gece yerine Defne ilaçlarını oyuncuya emanet eder.
+    - Kontrat (31 Aralık): Defne ancak yakınlık yüksekse ya da oyuncu kalacağını söyleyip gerçekten yanında olduysa kalır. Kötü gece yalnız geçtiyse ya da Defne uzaklaştıysa atölyeyi kapatır ve 6 Ocak'ta aynı otobüsle İstanbul'a döner.
+    - Tuzaklar: erken "biz neyiz?" (Defne bir haftalığına İstanbul'a kaçar; üçüncü denemede konuşur), kurtarıcılık, soğuk kalmak (Kasım'da bir yabancı).
+32. **Sonlar şimdilik Defne'ye ve yalnızlığa göre yazıldı** (`icerik/son/son.dsim`): kalmak ("Kaldın."), uğurlanmak, birlikte gitmek, onu uğurlamak, aynı otobüste yabancı gibi, kimseye söylemeden gitmek, yalnız kalmak. Ardından kısa bir Şubat epilogu. Diğer karakterler 4. adımda bu dosyaya kendi dallarıyla eklenecek.
+33. **Okuma aracına "özenli oyuncu" eklendi.** Bir karakterin en iyi yolunu dener (her seçimde seçenekleri kopyada oynatıp en iyisini seçer). Böylece en iyi sonun gerçekten ulaşılabilir olduğu her okumada denetleniyor.
+34. **Diğer karakterlere dokunan yerler şimdilik adsız ya da yarım bırakıldı; 4. adımda doldurulacak (önceden bildiriliyor):**
+    - Kötü gecedeki doktor "Doktor" diye geçiyor; Ceren yazılınca o olacak.
+    - Kötü gecede kapıyı ilk çalan Ilgın sahnesi eklenecek (reçeteyi biliyor).
+    - Defne'nin Berkmen villasına gidişi bir mesajda anlatılıyor; Lara yazılınca sahneye dönüşebilir.
+    - Fabrika'daki son film gecesine Defne dalı eklenebilir; Sude'nin cumartesi dersi henüz yok.
 
 ## Yol haritası
 
@@ -121,6 +151,7 @@ Her karar ve nedeni burada. Bir karar değişirse eskisinin ~~üstü çizilir~~ 
 Bir oyun yaklaşık 10–15 saat.
 - *Hesap:* 115 gün × günde ortalama 5–8 dakika; sakin günler hızlı geçer.
 - Kesin değil; pilot karakterle ölçülecek.
+- *Pilot ölçümü (3. adım):* Defne'ye özen gösteren bir oyunda okunacak metin yaklaşık 17 bin kelime; okuma ve seçimlerle 1,5–2 saat tutuyor. Altı karakter ve kesişmelerle hedefin alt ucu (10 saat civarı) gerçekçi. Gerçek bir oyuncuyla ölçülmedi.
 
 ## Açık sorular
 
@@ -144,4 +175,21 @@ Bir oyun yaklaşık 10–15 saat.
 - **Ekran görüntüleri:** iPhone boyutunda alınıp kontrol edildi. Bulunan kusurlar düzeltildi: kayan başlık, tırnaklar, bildirim gruplama, kontrast, tekrarlanan tepki, ev konumu.
 - **Kullanıcıya düşen:** GitHub Pages'i açmak (sohbette adım adım anlatıldı). Sonra telefonda Safari'den "Ana Ekrana Ekle".
 
-**Sıradaki:** 3. adım, pilot karakter Defne (büyük). Kullanıcının "devam" demesi bekleniyor.
+**3. oturum:** 3. adım tamamlandı: pilot Defne, 14 Eylül'den 6 Ocak'a kadar baştan sona oynanabilir.
+- **İçerik (132 parça):**
+  - `eylul/14-eylul.dsim`: kapanış gecesi (tanışma, yalan ya da doğru, ilk gece).
+  - `hayat/`: Mendirek, okul, aile (babanın ipliği), mahalle.
+  - `defne/`: eylül ("Kaldın.", ilk fırın, termostat), ekim (ilk yağmur ve kurallar, kötü film, Müdür, doğum günü), kasım (03:40, "biz neyiz", İstanbul, yabancı, soba gecesi, oyuncunun doğum günü), aralık (fırtına, kötü gece ya da zor gece, otogardaki sır, Rıfat Bey, kontrat, yılbaşı), telefona bakma tepkileri.
+  - `son/son.dsim`: 5 Ocak'ta "Yarın gidiyor musun?", 6 Ocak 23:15 otogar, sonlar, Şubat.
+- **Motor:** 30. karardaki eklemeler. 30 otomatik test.
+- **Okuma:** Okuma aracıyla 19 yoldan (özenli, ilk, son, tembel, rastgele) defalarca okundu. Bulunanlar düzeltildi:
+  - Sahne içinde kaybolan mesajlar, oyalanırken kaçan vardiyalar.
+  - Geç cevap verilince sabaha kayan gece buluşmaları (davetlere cevap süresi kondu).
+  - Bir gece erken açılan doğum günü.
+  - Uyurken anında cevap veren Defne; uyurken "çevrimiçi" görünmesi.
+  - Adı bilinmeden geçen "Defne".
+  - Çelişen "ilk kez"ler, tekrar eden cümleler, kurulamayan davetler.
+- **Ekran görüntüleri:** Rehberdeki oval simgeler artık daire. Randevu kartı, telefona bakma tepkisi, Defne sohbeti kontrol edildi.
+- **Kullanıcıya düşen:** Yok. Telefonda oyun kendiliğinden güncellenir (sürüm 0.3.0). Eski kayıt yeni başlangıçla uyuşmaz; "Yeni oyun" önerilir.
+
+**Sıradaki:** 4. adım, diğer beş karakter (büyük). Önerilen sıra: Ilgın, Ceren, Sude, Ela, Lara. Kullanıcının "devam" demesi bekleniyor.

@@ -1,0 +1,770 @@
+# Defne, aralık: Büyük Lodos, kötü gece (ya da zor gece), otogardaki sır, Rıfat Bey, kontrat, yılbaşı.
+# defne.firtina_yardim: fırtınada atölyeye gitti. defne.firtina_yalniz: Defne fırtınada yalnız kaldı.
+# defne.kotu_gece: acil gecesi yaşandı. defne.yanindaydi: oyuncu o gece oradaydı. defne.kotu_gece_yalniz: değildi.
+# defne.ilaclar_bende: kötü gece yaşanmadı, Defne ilaçlarını oyuncuya verdi.
+# defne.kontrat: atölye kalıyor. defne.kapatiyor: atölye kapanıyor, Defne 6 Ocak'ta İstanbul'a dönüyor.
+
+# ---------- Büyük Lodos, 4 Aralık ----------
+
+=== nuri_firtina
+tür: mesaj
+kişi: nuri
+zaman: 4 Aralık 12:10
+koşul: is.mendirek
+
+@nuri: Bu akşam kapalıyız.
+@nuri: Lodos.
+@nuri: Evden çıkma.
+* tamam abi
+* yardım lazım mı? masaları içeri alırız
+  >> bekle 40dk
+  @nuri: Aldık.
+  @nuri: Sen evden çıkma.
+
+
+=== defne_firtina_mesaj
+tür: mesaj
+kişi: defne
+zaman: 4 Aralık 20:12
+koşul: defne.devam ve değil defne.bitti ve değil defne.uzak
+
+@defne: alt kat su alıyor.
+@defne: kapının altından. sokak bir dere. sokak bütün mahallenin suyunu benim kapıma getiriyor
+@defne: fırın yerde. fırın yerde durmamalıydı. biliyordum
+>> bekle 6dk
+@defne: bir şey isteyeceğim ama istemiyorum. müdür merdivende. bu bir hava durumu raporu
+
+
+=== firtina
+tür: sahne
+kişi: saniye
+zaman: 4 Aralık 20:20
+yer: Taş Mahalle, ev
+ton: gece
+
+Rüzgâr akşamüstü başladı, şimdi bir başka şey. Pencerenin camı çerçevesinin içinde titriyor; her uğultuda evin bir yerinden, merdivenden, çatıdan, bir şey cevap veriyor.
+Aşağıdan, sokaktan, bir saksının devrilip yokuştan yuvarlanan sesi. Sonra bir tane daha.
+Saat sekiz buçuğa doğru ışıklar bir kere göz kırpıyor, sonra sönüyor. Bütün mahalle birden; pencereden bakınca Taş Mahalle'nin yerinde yalnızca yokuşun ve denizin daha koyu karanlığı.
+Aşağıdan Saniye Hanım'ın sesi, merdivenin dibinden:
+@saniye: Evladım! Mumun var mı? Benim var, sana soruyorum. Olmayan kiracı mum ister, sonra.
+>> eğer defne.devam ve değil defne.bitti ve değil defne.uzak
+  Telefon cebinde titriyor; az önce de titremişti. Ekranın ışığı odadaki tek ışık.
+  Defne: "alt kat su alıyor."
+  Defne: "kapının altından. sokak bir dere. sokak bütün mahallenin suyunu benim kapıma getiriyor"
+  Defne: "fırın yerde. fırın yerde durmamalıydı. biliyordum"
+  Defne: "bir şey isteyeceğim ama istemiyorum. müdür merdivende. bu bir hava durumu raporu"
+  -> secim
+>> yoksa
+  -> saniye
+
+:: secim
+Merdivenin dibinde Saniye Hanım bir mumla duruyor; mumun ışığı yüzünü aşağıdan aydınlatıyor, kırk yıllık bir öğretmenin yüzü, bir hikâyeyi sonundan okumaya alışmış.
+@saniye: Telefonun yanıyor. Biri seni istiyor.
+* "Saniye Hanım, bir arkadaşımın evini su basıyor. Gitmem lazım."
+  @saniye: Git.
+  @saniye: Bende soba var, mum var, üç kedi var, bir de kırk yıl var. Fırtınayı ben tanırım, beni de o tanır.
+  @saniye: İnsülinim buzdolabında. Elektrik gelmezse yarın akşama kadar dayanır. Bilirim. Bilmek başka şey tabii. Git sen.
+  -> defneye
+* (Telefonu cebine koy. Aşağı in, Saniye Hanım'ın yanında kal.)
+  [defne.firtina_yalniz]
+  [defne.kis +2]
+  -> saniye
+* "Bir arkadaşımın evini su basıyor. Ama siz yalnız kalırsanız..."
+  @saniye: Yalnız kalırsam ne olur? Yirmi yıldır yalnız kalıyorum, her gece. Fırtına bir gece daha.
+  @saniye: Ama kalırsan kal. Kalırsan çay demlerim; çay elektrikle demlenmez, Allah'a şükür.
+  * (Defne'ye git.)
+    -> defneye
+  * (Kal.)
+    [defne.firtina_yalniz]
+    [defne.kis +2]
+    -> saniye
+
+:: saniye
+Saniye Hanım'ın salonu sobanın ışığıyla turuncu. Kediler sobanın etrafında üç ayrı uzaklıkta, her biri kendi sıcaklığını seçmiş. Masada iki mum, bir de gaz lambası; lambanın camı is tutmuş.
+Saniye Hanım çaydanlığı sobanın üstüne koyuyor.
+@saniye: Seksen dokuzdaki fırtınada kocam balkona çıkıp tenteyi tuttu. Bütün gece. Rüzgâr tenteyi götürecekti, o tenteyi götürmesin diye. Sabah elleri kan içindeydi. Tente gitti zaten.
+@saniye: Sordum, neden tuttun? "Tutulacak bir şey vardı," dedi. Kırk bir yıl evli kaldık, o cümleyi anlamam yirmi yıl sürdü.
+* "Anladınız mı peki?"
+  @saniye: Anladım. Öldükten sonra. Her şeyi öldükten sonra anlıyorum onunla ilgili; geç anlamak bir edebiyat türü.
+* "Ben de bir şey tutmaya geldim galiba."
+  @saniye: Galiba. Gençler hep "galiba" der. Galiba'yla roman yazılmaz.
+  Bardağını uzatıyor.
+  @saniye: Ama çay içilir.
+* (Bir şey söyleme. Çayını iç.)
+  Bir süre susuyorsunuz. Rüzgâr cama vuruyor; Hayri, kedilerin en büyüğü, her vuruşta kulağını o yöne çeviriyor.
+Gece yarısına doğru Saniye Hanım koltukta uyukluyor. Gaz lambasını kısıp üstüne battaniyesini örtüyorsun. Kediler yerlerini değiştirmiyor.
+>> eğer defne.firtina_yalniz
+  Merdivenden çıkarken telefonuna bakıyorsun. Defne'den bir mesaj daha, iki saat önce: "tamam. hallettik. müdür ve ben. iyi geceler."
+  Nokta. Tamam'ın sonunda nokta.
+[saniye.firtina]
+>> zaman 5 Aralık 08:00
+>> yer Taş Mahalle, ev
+-> son
+
+:: defneye
+[defne.firtina_yardim]
+[defne.kis -2]
+[defne.yakinlik +2]
+Dışarısı bir ses. Rüzgâr yokuştan aşağı iniyor, sen yukarı çıkıyorsun; her adımda geri itiyor. Yağmur yatay. Sokak lambaları sönük, yalnızca bir iki pencerede mum. Bir yerde bir çatı kiremidi düşüp kırılıyor; nerede, görmüyorsun.
+Yokuşun ortasından su akıyor; ayak bileğine kadar, buz gibi.
+Sarı kapı açık. İçeride bir el feneri ışığı oynuyor. Atölyenin tabanı bir göl; kapının altından giren su taşların arasında yol bulmuş, rafların dibinde dalgalanıyor.
+Defne suyun ortasında, botlarıyla, bir kovayla. Kovayla su atıyor kapıdan; su geri geliyor. Seni görünce kovayı bırakmıyor.
+@defne: Sigortayı kapattım. Elektrik zaten yok, ama yine de kapattım. Ben bunları bilirim. Bunları bilmek kimseyi kurtarmaz.
+@defne: Fırın. Fırın suyun içinde. Kaldırmamız lazım. Tek başıma kaldıramadım, denedim. İki kere.
+Fırın bir buzdolabı büyüklüğünde. Yan duvarda bir yığın ateş tuğlası var.
+* "Sen bir yanından kaldır, ben tuğlaları altına sokayım."
+  @defne: Ben kaldırırım. Sen sok. Mühendis sensin.
+  Defne fırının bir yanına omzunu veriyor; kaldırıyor, iki parmak. Tuğlayı altına itiyorsun. Bir daha. Bir daha. Dört köşeye, iki sıra.
+* "Levye var mı?"
+  @defne: Levye. Var. Neden var bilmiyorum, ilk kışımda aldım. İlk kışımda çok şey aldım.
+  Levyeyi fırının altına sokup bir taşın üstünden kaldırıyorsun; Defne tuğlaları itiyor. Dört köşeye, iki sıra.
+Fırın şimdi suyun üstünde, iki tuğla boyu yüksekte. Defne fenerle altına bakıyor; içi kuru.
+@defne: Kuru.
+Bunu söylerken sesi ilk kez titriyor. Hemen toparlıyor.
+@defne: Şimdi kupalar. Alt raflar. Yukarı.
+Bir saat boyunca merdiveni inip çıkıyorsunuz. Pişmiş kupalar, pişmemiş kâseler, sır kovaları, bir torba kil. Müdür merdivenin ortasında, her geçişte bir basamak yukarı çekiliyor ama yerinden kalkmıyor.
+Son rafı boşalttığınızda Defne suyun içinde duruyor, fenerin ışığında boş raflara bakıyor.
+@defne: Her şey yukarıda. Ben aşağıdayım. Yanlış kat.
+Yukarısı soğuk. Soba yanıyor ama ıslak bir odayı ısıtmaya yetmiyor. Defne üç mum yakıyor, sonra bir dördüncüyü.
+İkiniz de sırılsıklamsınız. Defne dolaptan bir eşofman, iki tişört, iki kazak çıkarıyor; hepsi onun, hepsi sana küçük.
+@defne: Giy. Komik olacaksın. Komik olman lazım, ben bu gece komik olamıyorum.
+Giyiyorsun. Kollar dirseğinde kalıyor. Defne bakıyor ve gülmüyor; gülmeye çalışıyor, gülemiyor. Elleri titriyor; soğuktan da, başka bir şeyden de.
+* (Ellerini avuçlarına al, ısıt.)
+  Ellerini avuçlarına alıyorsun. Buz gibi. Bir süre ikiniz de mumlara bakıyorsunuz; Defne elini çekmiyor.
+  @defne: Geçen kış burası da su almıştı. Ben yalnızdım. Bir şey kaldıramadım. Sabaha kadar merdivende oturdum, suya baktım.
+  @defne: Bu kış merdivende oturmuyorum. Bunu bil. Sadece bil, bir şey söyleme.
+  [defne.ilk_kis_ipucu]
+* "Şarabın var mı? Isınırız."
+  [defne.kurtarici +1]
+  @defne: Var. Bu gece içmeyeceğim.
+  Sana bakıyor; sorunun nereye gittiğini ölçüyor.
+  @defne: İçince ısınmıyorsun, sadece öyle sanıyorsun. Bunu biliyorum. Biliyorum, biliyorum.
+* (Bir şey söyleme. Battaniyeyi yere ser, sobanın önüne.)
+  Battaniyeyi sobanın önüne seriyorsun. Defne yanına oturuyor, dizlerini göğsüne çekiyor, başını omzuna yaslıyor.
+Rüzgâr sabaha karşı dönüyor. Sesi değişiyor; uğultu inlemeye, inleme ıslığa.
+Defne yatağa uzanıyor ve yorganı kaldırıp sana yer açıyor. Giyinik, iki kat kazakla, çorapla.
+@defne: Sadece uyu. Benimle. Bu gece sadece bu.
+Yanına uzanıyorsun. Sırtını göğsüne yaslıyor; elini alıp karnının üstüne koyuyor, orada tutuyor. Müdür merdivenden çıkıp yatağın ayak ucuna, yorganın üstüne atlıyor; kimse onu indirmiyor.
+Uyuyor. Sen bir süre daha uyanık kalıyorsun; rüzgâr, Defne'nin nefesi, Müdür'ün horlaması.
+>> zaman 5 Aralık 08:10
+Sabah her şey sessiz. Pencereden bakınca sokak yosun ve kiremit kırığı içinde. Bir komşu kapısının önünü süpürüyor; süpürgenin sesi bütün mahallenin tek sesi.
+Defne uyanmış, sana bakıyor. Bir şey söylemeden kalkıyor, ocağı yakıyor; gaz ocağı, elektrik hâlâ yok.
+@defne: Kahve. Kahvaltı değil.
+@defne: Ama aşağıda bir şey var. Gel bak.
+Aşağıda su çekilmiş; taşların üstünde ince bir çamur tabakası. Fırının üstünde, gecenin bir saatinde Defne'nin oraya koyduğu bir kupa: senin kupan değil; yeni, sırsız, gri.
+@defne: Bunu dün gece yaptım. Sen kupaları taşırken. Elim boş durmasın diye. Bilmiyorum ne. Pişmemiş.
+@defne: Pişince söylerim ne olduğunu.
+[defne.firtina_kupasi]
+>> yer Taş Mahalle
+-> son
+
+
+=== defne_firtina_ertesi
+tür: mesaj
+kişi: defne
+zaman: 5 Aralık 16:40
+koşul: defne.firtina_yalniz ve defne.devam ve değil defne.bitti
+
+@defne: fırın kurtuldu.
+@defne: karşı komşunun oğlu geldi, levyeyle. kaldırdık. iki kişi gerekiyormuş, bir komşu bir levye
+@defne: sen saniye hanım'ın yanındaydın. biliyorum, ışık yanıyordu penceresinde, mum ışığı. iki kişilik mum
+@defne: doğru olanı yaptın. doğru olanı yapan adamlara kızamam. denedim
+>> zaman_aşımı 6sa -> sustu
+* özür dilerim. gelmeliydim
+  @defne: gelmemeliydin. yaşlı bir kadını karanlıkta bırakmayan adamsın. not ettim. kızgın değilim
+  @defne: sadece yalnızdım. bu ikisi farklı
+* saniye hanım yalnızdı
+  @defne: biliyorum. ben de.
+  @defne: herkes yalnızdı dün gece. lodos herkesi kendi evine kilitledi
+* bu gece gelebilirim
+  @defne: elektrik yok. sıcak su yok. bir kova çamur var. gel, kovayı sen taşı
+  [defne.kis -1]
+-> son
+:: sustu
+[defne.kis +1]
+
+
+=== saniye_firtina_sabah
+tür: mesaj
+kişi: saniye
+zaman: 5 Aralık 10:30
+koşul: defne.firtina_yardim
+
+@saniye: Gece gelmedin.
+@saniye: Kediler saydı. Ben saymadım.
+@saniye: İnsülin iyi. Elektrik yok. Soba yanıyor. Merak etme diye yazıyorum, merak ettiğin için değil.
+* iyi misiniz? bir şey lazım mı
+  @saniye: Ekmek. Fırın açıksa. Rahmi Usta fırtınada da açar, inatçıdır.
+* özür dilerim, sizi yalnız bıraktım
+  @saniye: Bırakmadın. Ben kaldım. İkisi farklı.
+
+
+# ---------- Kötü gece ----------
+
+=== defne_kotu_gece
+tür: sahne
+kişi: defne
+zaman: 10 Aralık 02:50
+koşul: defne.devam ve değil defne.bitti ve defne.kis >= 3
+yer: Taş Mahalle
+ton: gece
+
+[sahne.uzakta]
+Telefon titriyor. Bir kere, sonra bir daha. Ekranın ışığı karanlıkta: 02:50.
+Defne: "uyuyor musun"
+İki dakika sonra:
+Defne: "boşver"
+Bir dakika sonra:
+Defne: "müdür bana bakıyo. söyle bakmasın"
+"Bakıyo." Defne kelimeleri yarım yazmaz. Hiç.
+* (Kalk. Giyin. Defne'ye git.)
+  -> git
+* (Yaz: "ne oldu? iyi misin?")
+  Cevap geç geliyor.
+  Defne: "iyiym. iki tane aldım belki üç. uyumak için. şarap da. ikisi biribiriyle anlaşmıyo derler ama"
+  Defne: "anlaşıyolar bence. ben anlaşamıyorm"
+  * (Kalk. Hemen.)
+    -> git
+  * (Yaz: "uyuma. konuş benimle. geliyorum")
+    -> git
+  * (Yaz: "uyu o zaman. sabah konuşuruz")
+    -> gitmedi
+* (Telefonu ters çevir. Uyu.)
+  -> gitmedi
+
+:: git
+[değil sahne.uzakta]
+[sahne.ciddi]
+Yokuş buz gibi. Fırtınadan beri sokakta yosun kokusu hiç gitmedi; gece daha da keskin. Taş Mahalle'de bir tek pencere yanık: atölyenin üstü.
+Sarı kapı kilitli değil. Müdür merdivenin tepesinde; havlamıyor, inliyor, ince bir ses, bu cüssede bir köpekten beklenmeyecek bir ses.
+Yukarıda lamba açık. Defne yerde, yatağın yanında, sırtı yatağa dayalı oturuyor. Yanında bir şarap şişesi, dibinde bir parmak. Yerde bir ilaç şeridi; folyonun dört yuvası boş.
+Seni görüyor. Gözleri seni bulmakta bir an geç kalıyor.
+@defne: Geldin. Gelme demiştim. Demedim. Diyecektim.
+Konuşması yavaş; her kelime ayrı ayrı geliyor, kendi başına.
+* (112'yi ara.)
+  -> ambulans
+* "Kaç tane aldın, Defne?"
+  @defne: Saymadım. Saymamak kural. Kural beş. Şimdi koydum.
+  Şeride bakıyorsun: dört boş yuva.
+  -> ambulans
+* (Yanına çömel. Yüzünü tut, gözlerine bak.)
+  Yüzünü tutuyorsun. Teni soğuk. Gözleri bir sende, bir senin omzunun arkasında bir yerde. Konuşuyorsun; cevap veriyor, ama cevaplar sorulara uymuyor.
+  @defne: Müdür'e su verdin mi? Müdür'ün suyu.
+  -> ambulans
+
+:: ambulans
+[defne.kotu_gece]
+[defne.yanindaydi]
+Telefonda bir kadın sesi, sakin, ezberlenmiş bir sakinlik. Adresi soruyor; Taş Mahalle'nin sokak adını ilk kez yüksek sesle söylüyorsun. Ne aldığını soruyor; şeridi alıp üstündeki ismi okuyorsun. Kaç tane; dört. Ne zaman; bilmiyorsun. Alkol; bir şişe şarap, belki biraz eksik.
+@yabanci(112): Uyutmayın. Konuşturun. Kusturmaya çalışmayın. On beş dakika.
+On beş dakika boyunca Defne'yle konuşuyorsun. Ne konuştuğunu sonra hatırlamayacaksın. O da hatırlamayacak.
+Bir ara kendi kendine gülüyor.
+@defne: Kalan adam. Gelen adam. Gelen adam bir slogan değil. Bir... şey.
+Ambulans yokuşun dibinde kalıyor; sokak sedyeye dar. İki sağlıkçı onu sandalyeyle aşağı indiriyor. Müdür arkalarından merdivenden iniyor, sonra kapının önünde duruyor; ambulansa binmiyor, binemeyeceğini biliyor.
+Kapıyı çekiyorsun. Müdür'ün suyunu dolduruyorsun; bunu neden yaptığını, ambulansın arka kapısında Defne'nin sana baktığını görünce anlıyorsun.
+>> zaman 10 Aralık 03:40
+>> yer Hastane, acil
+Acil floresan bir koridor. Plastik sandalyeler, bir sedye, sedyenin üstünde Defne; bir serum, parmağında bir klips. Gece üç kırk ve acil dolu: bir balıkçı, eli sarılı; bir çocuk, annesinin kucağında öksürüyor; bir sarhoş, kapının yanında oturmuş uyuyor.
+Doktor senin yaşına yakın bir kadın. Önlüğünün cebinde üç kalem, üçünün kapağı da yok. Gözleri yorgun ama hızlı; şeridi elinden alıp okuyor, saymadan, bir bakışta.
+@yabanci(Doktor): Dört. Zolpidem. Şarap. Saat?
+* "Bilmiyorum. Bana 02:50'de yazdı."
+  @yabanci(Doktor): 02:50. Yazabiliyorsa iyi. Yazabilen iyidir.
+* "Bir şişe şarap. İlacı saymamış."
+  @yabanci(Doktor): Saymamış. Sayan yok zaten. Sen saydın, iyi ki.
+@yabanci(Doktor): Midesini yıkamayacağız. Yatırıp izleyeceğiz. Uyuyacak. Sabah konuşur.
+Defne'nin sedyesinin başında durup bir şey yazıyor. Sonra sana dönüyor.
+@yabanci(Doktor): Yakını mısın?
+* "Evet."
+  @yabanci(Doktor): Peki. Bir sandalye bul. Sabaha kadar uzun.
+* "Bilmiyorum. Kalan biriyim."
+  Doktor kalemi bir an durduruyor; bu cümlenin ne demek olduğunu tartıyor gibi.
+  @yabanci(Doktor): Kalan biri. İyi. Kalanlara sandalye var. Şurada.
+* "Arkadaşıyım."
+  @yabanci(Doktor): Arkadaş. Gece üçte gelen arkadaş az olur. Sandalye şurada.
+Doktor gidiyor; koridorun sonunda biri onu çağırıyor, koşmadan ama hızlı yürüyor. Bir daha görmüyorsun.
+Sandalyede oturuyorsun. Defne uyuyor; arada bir yüzünü buruşturuyor, bir rüyaya itiraz eder gibi.
+>> zaman 10 Aralık 07:40
+Pencereden gri bir ışık. Defne uyanıyor; tavana bakıyor, sonra sana. Uzun süre bir şey söylemiyor.
+@defne: Kampanya başarısız. Ürün geri çağrıldı.
+* (Gülümse. Bir şey söyleme.)
+  Gülümsüyorsun. Defne başını çeviriyor, pencereye.
+  @defne: Kahve var mı burada? Hastane kahvesi. Kötü olanından. En kötüsünden.
+  -> ikinci
+* "Nasılsın?"
+  @defne: Hastanedeyim. Hastanede insan nasıl olur? Hastanede.
+  -> ikinci
+* "Korkuttun beni."
+  [defne.yakinlik -1]
+  @defne: Biliyorum. Özür dilerim. Bunu yazmak için dört taslak kullanacaktım, hiç taslağım yok. En kötüsü bu.
+  -> ikinci
+
+:: ikinci
+* "Defne."
+  -> ucuncu
+* "Seni eve götüreyim. Müdür bekliyor."
+  @defne: Müdür. Müdür'ün suyunu doldurdun. Hatırlıyorum. Bir onu hatırlıyorum.
+  [defne.yakinlik +1]
+  -> eve
+* "Ne oldu dün gece?"
+  @defne: Kasım oldu. Kasım bitti, sonra aralık oldu. Aralık daha kötü. Takvim bir zalimlik.
+  * "Ne oldu, Defne?"
+    -> ucuncu
+  * "Tamam. Sormuyorum."
+    -> eve
+
+:: ucuncu
+Pencereye bakmaya devam ediyor. Sesi kısa, cümleleri kısa. Espri gelmiyor; gelmeyince ne kadar az şey söylediğini fark ediyorsun.
+@defne: İlk kışım. Burada. Çok içtim. İlaca başladım, uyuyamıyordum. Bir gece kendimi sahilde buldum, sabaha karşı. Ayaklarım suyun içinde. Oraya nasıl yürüdüğümü hatırlamıyorum.
+@defne: Kimse bilmiyor. Annem bilmiyor. Bilmeyecek.
+@defne: Bu kış olmayacak sanıyordum. Biri kaldı diye. Sen kaldın diye.
+Sana bakıyor.
+@defne: Bu senin suçun değil. Bunu söylüyorum çünkü yüzün öyle diyor.
+[defne.ilk_kis_ogrendi]
+* (Elini tut. Bir şey söyleme.)
+  [defne.yakinlik +2]
+  Elini tutuyorsun. Klipsli parmağı, serumlu kolu. Bir süre ikiniz de pencereye bakıyorsunuz.
+* "Bir daha olursa beni ara. Saat kaç olursa olsun."
+  [defne.yakinlik +1]
+  @defne: Aradım. Yazdım. Geldin.
+  @defne: Bu yetmeyecek. Biliyorsun. Bir kişi yetmez. Ama dün gece yetti.
+* "Annene haber vermeliyiz."
+  [defne.kurtarici +1]
+  [defne.yakinlik -1]
+  @defne: Hayır.
+  Hemen, sertçe; sonra yumuşuyor.
+  @defne: Hayır. Annem gelirse bu bir hikâye olur. Bunu hikâye yapmayalım. Lütfen.
+-> eve
+
+:: eve
+Öğlene doğru taburcu ediyorlar. Bir hemşire Defne'ye bir kâğıt veriyor; bir psikiyatri randevusu, İzmir'de. Defne kâğıdı katlıyor, bir kere daha katlıyor, cebine koyuyor. Atmıyor.
+Yokuşu yavaş çıkıyorsunuz. Sarı kapının önünde Müdür; kalkıp Defne'nin bacaklarına yaslanıyor, bütün ağırlığıyla, onu yere düşürecek kadar.
+@defne: Tamam. Tamam. Geldim. Bağırma.
+Müdür hiç ses çıkarmıyor.
+>> zaman 10 Aralık 12:30
+>> yer Taş Mahalle
+-> son
+
+:: gitmedi
+[defne.kotu_gece]
+[defne.kotu_gece_yalniz]
+[defne.kis +2]
+Telefonu ters çeviriyorsun. Bir süre ekranın kenarından sızan ışığı görüyorsun, sonra o da sönüyor.
+>> zaman 10 Aralık 08:15
+Kapı çalıyor. Saniye Hanım, sabahlığıyla, merdivenin başında; elinde hiçbir şey yok, yüzünde bir haber.
+@saniye: Seramikçi kızı gece ambulans almış. Köpek sabaha kadar uludu, bütün mahalle duydu. Karşı komşusu aramış, köpeğin sesine kalkmış.
+@saniye: Yaşıyor. Hastanede. Bunu da söyleyeyim, ilk cümleden sonra herkes bunu sorar.
+Bir an bekliyor. Gözü elindeki telefona gidiyor.
+@saniye: Sen biliyordun.
+Soru değil.
+>> yer Taş Mahalle, ev
+
+
+=== defne_hastane
+tür: eylem
+başlık: Hastaneye git
+tarih: 10 Aralık
+pencere: 09:00-17:00
+koşul: defne.kotu_gece_yalniz
+kişi: defne
+yer: Hastane
+süre: 1sa
+
+[sahne.ciddi]
+Hastanenin gözlem odası; altı yatak, dördü dolu. Defne pencerenin yanındaki yatakta, oturuyor, giyinik; taburcu olmayı bekliyor.
+Seni görüyor. Gülümsüyor; geniş, hazırlanmış, bir müşteriye gülümser gibi.
+@defne: Ziyaretçi. Çiçek getirmedin. İyi. Çiçek bir yük, sonra suyunu değiştirmek gerekir.
+* "Yazdığında gelmeliydim."
+  @defne: Uyuyordun. Gece üçte uyuyan adam suçlu değildir. Bunu bir yere yazdırırım.
+  @defne: Karşı komşum geldi. Müdür'ün sesine. Müdür beni kurtardı. Bir köpek. Bunu kimseye söyleme, gururu okşanır.
+* "Nasılsın?"
+  @defne: İyiyim. İyi olmam lazımdı, oldum. Hızlıyım biliyorsun.
+* (Bir şey söyleme. Yanına otur.)
+  Oturuyorsun. Defne bir süre bekliyor, sonra konuşmaya başlıyor; hava, hastanenin yemeği, hemşirenin küpeleri. Hiçbir şeyden. Sen dinliyorsun. O konuştukça daha uzak.
+[defne.uzak_kis]
+Taburcu kâğıdını imzalarken eli titremiyor. Kapıda sana dönüyor.
+@defne: Teşekkür ederim geldiğin için. Gerçekten. Bu bir kibarlık değil, bir... Neyse. Kibarlık.
+>> yer Hastane
+
+
+=== defne_kotu_gece_sonra
+tür: mesaj
+kişi: defne
+zaman: 11 Aralık 13:10
+koşul: defne.yanindaydi
+
+@defne: [Fotoğraf: Fırının içi, kapağı açık, rafları boş. Fırının önünde Müdür, uyuyor.] bu hafta fırın yakmıyorum. fırın da tatil hak eder
+>> zaman_aşımı 8sa -> sessiz
+* dün geceyle ilgili konuşmak istersen...
+  @defne: istemem.
+  @defne: dün gece yoktu. lütfen. fırın tatilde, ben de tatildeyim, dün gece de tatilde
+  [defne.hatirlatti]
+* fırın tatildeyse sen ne yapıyorsun
+  [defne.yakinlik +2]
+  @defne: müdür'ü izliyorum. müdür uyuyor. ben onu izliyorum. çok verimli bir gün
+  @defne: yarın kil açacağım. yeni bir şey yapacağım. ne olduğunu bilmiyorum. elim bilir
+* (Bir fotoğraf gönder: Mendirek'te, Saadet Abla'nın çorba tenceresi.)
+  [defne.yakinlik +2]
+  @defne: çorba. saadet abla'nın çorbası mı o
+  @defne: bir kâse ayır bana. gelmem belki. ama ayır
+-> son
+:: sessiz
+
+
+# ---------- Kötü gece yerine: zor gece ----------
+
+=== defne_zor_gece
+tür: mesaj
+kişi: defne
+zaman: 10 Aralık 01:40
+koşul: defne.devam ve değil defne.bitti ve değil defne.uzak ve defne.kis < 3
+
+@defne: uyanık mısın
+>> zaman_aşımı 30dk -> uyumus
+* uyanığım
+  -> konus
+* buradayım
+  -> konus
+:: konus
+@defne: bu hafta kötü. fırtına geçti ama içimde hâlâ esiyor
+@defne: klişe. affet. saat bir buçukta klişe serbest
+>> bekle 3dk
+@defne: lavabonun üstünde ilaçlarım var. uyku ilacı. ilk kışımdan kalma, ikinci kışıma da yetti
+@defne: onları sana vereceğim yarın. sorma neden
+@defne: sende dursun. istersem verirsin. istemem herhalde
+* tamam. getir
+  @defne: getiririm. bir kupanın içinde. kulpu ters. tanırsın
+* neden bana
+  @defne: sorma dedim.
+  >> bekle 2dk
+  @defne: çünkü kalıyorsun. kalan birine emanet verilir. gidene verilmez, götürür
+* (Bir şey yazma. Sadece telefonu tut.)
+  >> okudu
+  >> bekle 4dk
+  @defne: okuduğunu gördüm. yeter. yarın getiriyorum
+[defne.ilaclar_bende]
+[defne.kis -1]
+-> son
+:: uyumus
+>> bekle 9sa
+@defne: dün gece uyumuşsun. iyi. biri uyusun bu şehirde
+@defne: kapına bir kupa bıraktım. kulpu ters. içinde bir şey var. açma. sadece tut. sende dursun
+@defne: istersem verirsin. istemem herhalde
+[defne.ilaclar_bende]
+
+
+# ---------- Bitmiş yol: haber Onur'dan gelir ----------
+
+=== onur_defne_acil
+tür: mesaj
+kişi: onur
+zaman: 10 Aralık 14:20
+koşul: tanıdı(defne) ve (defne.bitti veya değil defne.devam)
+
+@onur: kanka
+@onur: seramikçi kızı gece ambulansla götürmüşler. komşusu söyledi bakkala, bakkal bana
+@onur: köpek sabaha kadar ulumuş. iyiymiş şimdi. galiba
+@onur: bi şey içmiş diyolar. ne içtiğini diyen yok. bu sefer ben de bilmiyorum
+* hangi hastane
+  @onur: devlet. başka hastane yok kanka, pırnallıda
+* iyi olsun
+  @onur: olur olur. o kız sağlamdır. galiba
+[defne.kotu_gece]
+[defne.kotu_gece_yalniz]
+[defne.uzaktan_duydu]
+
+
+# ---------- Otogar: on iki yaşındaki yaz ----------
+
+=== defne_otogar_mesaj
+tür: mesaj
+kişi: defne
+tarih: 15 Aralık - 22 Aralık
+pencere: 19:30-20:00
+koşul: defne.devam ve değil defne.bitti ve değil defne.uzak ve defne.yakinlik >= 8 ve (defne.kalan_gece veya defne.firtina_yardim veya defne.yanindaydi) ve haftagünü <= 3
+
+@defne: bu gece otogara gidiyorum.
+@defne: sorma neden. gel istersen. on bir gibi
+@defne: 23:15'e kadar oradayım. sonra değilim
+>> zaman_aşımı 2sa -> gec
+* geliyorum
+* otogarda ne işin var
+  @defne: sorma dedim. gelince sorma. gelince ben anlatırım. belki
+* bu gece gelemem
+  @defne: tamam. başka bir gece. otobüs her gece kalkıyor, bu onun iyi yanı
+  -> son
+>> randevu defne_otogar bugün 22:30 | Otogar
+-> son
+:: gec
+@defne: tamam. gidiyorum yine de. ben oraya kimse için gitmem zaten
+
+
+=== defne_otogar
+tür: sahne
+kişi: defne
+yer: Otogar
+ton: gece
+süre: 40dk
+
+[sahne.ciddi]
+Otogar şehrin girişinde, İzmir yolunun başında; floresan ışıkları gecenin içinde bir akvaryum gibi. Pırnallı Turizm'in yazıhanesi açık, camında elle yazılmış bir kâğıt: "İSTANBUL 23:15."
+Bekleme bankları plastik, turuncu, yarısı kırık. Çaycı bir semaverin başında, gazete okuyor. Peronda bir otobüs, motoru çalışıyor; egzozunun dumanı soğukta beyaz.
+Defne en uçtaki bankta, ellerini kabanının ceplerine sokmuş, peronlara bakıyor. Müdür ayaklarının dibinde. Seni görünce kaymıyor, yer açmıyor; banka gelip oturmanı bekliyor.
+@defne: Çay iç. Çaycının çayı kötü. Herkes için kötü, adil bir çay.
+Çaycı iki çay getiriyor, bir şey sormadan.
+Peronda insanlar biniyor. Bir anne kızını uğurluyor; kız on dokuz yirmi yaşında, bavulu kocaman, annesi bavulu bagaja kendi koymak istiyor, şoför izin vermiyor. Bir asker. İki öğrenci, ellerinde poşetler. Bir adam yalnız, hiçbir şeyi yok, eli boş biniyor.
+@defne: Ben buraya gelirim bazen. Kimin bindiğine bakarım.
+@defne: Kimin binmediğine de.
+* (Bir şey sorma. Çayını iç, peronu izle.)
+  [defne.yakinlik +1]
+  Çayını içiyorsun. Defne'nin omzu omzuna değiyor. Anne, otobüs kalkmak üzereyken bir poşet daha uzatıyor kızına, cama vura vura.
+* "Neden?"
+  Defne bir süre cevap vermiyor.
+* "Senin otobüsün hangisi olurdu?"
+  @defne: Bu. Hep bu. Başka İstanbul otobüsü yok.
+@defne: On iki yaşındaydım. Son tatilimiz buradaydı. Ailemin. Annem, babam, ben. Pırnallı'da. Kordonda bir pansiyon, şimdi yok, yerinde bir dondurmacı var.
+@defne: İki hafta. İkinci haftanın sonunda babam bir gün erken döndü. Bu otobüsle. 23:15. İşi varmış.
+@defne: Annemle beni de ertesi gün arabayla götürdü bir arkadaşı. Annem yol boyunca hiç konuşmadı. Altı saat. Eylülde boşandılar.
+@defne: Babam binerken buradaydık. Annemle ben. Bankta. Bu bank değildir herhalde. Belki bu.
+Peronda şoför kapıyı kapatıyor. Otobüs geri geri çıkıyor; ışıkları bekleme salonunun camını yalayıp geçiyor.
+@defne: Buraya taşındığımda bunu kendime söylemedim. "Deniz, kil, sessizlik" dedim. Reklam metni gibi. İki yıl sonra bir gece kendimi bu bankta buldum ve anladım. Buraya bunun için gelmişim.
+@defne: Bir şeyin bittiği yere. Bitişini başka türlü yapmak için.
+@defne: Bunu kimseye söylemedim. Pınar'a bile. Sana neden söylediğimi de bilmiyorum. Biliyorum. Söylemeyeceğim.
+[defne.sir]
+[defne.yakinlik +2]
+* (Elini tut.)
+  Elini tutuyorsun. Ceplerinden çıkmış, soğuk. Defne avucunu çeviriyor, parmaklarını parmaklarının arasına geçiriyor.
+* "Bitişini başka türlü yapabildin mi?"
+  @defne: Henüz değil. Her gece bir otobüs kalkıyor. Her gece bir deneme.
+* "Kural üç bu yüzden mi?"
+  @defne: Biri giderse öbürü otogara gelir.
+  Başını sallıyor.
+  @defne: Babam giderken ben buradaydım. Kimse bunu ona söylemedi. Ben söyleyemedim; on iki yaşındaydım, bağırmayı bilmiyordum. Şimdi biliyorum. Bağırmıyorum ama biliyorum.
+>> eğer karar.bilet
+  Cebinde bir şey var; sen hatırlamadan o hatırlatıyor kendini. Babanın bıraktığı bilet. 6 Ocak, 23:15. Koltuk 17.
+  * (Bileti çıkar, ona göster.)
+    [defne.bilet_biliyor]
+    Defne bilete bakıyor. Uzun süre. Sonra kendisi alıp ışığa tutuyor, sanki bir kupanın sırrına bakıyor.
+    @defne: 6 Ocak. 23:15. Koltuk 17.
+    @defne: Bu otobüs.
+    Bileti geri veriyor; parmakları bir an bırakmak istemiyor.
+    @defne: Binecek misin?
+    * "Hayır."
+      [defne.kalacak_dedi]
+      @defne: Hayır.
+      @defne: Bunu herkes der. Babam da "yarın dönüyorum" demişti, bir gün erken döndü. Ben insanlara inanmam, otobüslere inanırım.
+      @defne: Ama bunu not ettim. Kural dört.
+    * "Bilmiyorum."
+      @defne: Bilmiyorsun. Dürüst. Kötü ama dürüst.
+      @defne: Bilmemek iyi. Bilen insanlar yalan söyler.
+    * "Evet. Galiba."
+      [defne.gidecek_dedi]
+      Defne başını sallıyor. Uzun uzun peronlara bakıyor.
+      @defne: Kural üç. Gelirim. Söz değil, kural.
+  * (Bileti cebinde bırak. Bir şey söyleme.)
+    [defne.bilet_saklandi]
+Otobüsün ışıkları İzmir yoluna dönüyor ve gözden kayboluyor. Çaycı semaverin altını kısıyor. Defne kalkıyor; Müdür de.
+@defne: Gidelim. Bu gece kimse binmedi. Yani bindiler. Biz binmedik. Bu sayılır.
+>> yer Otogar
+
+
+# ---------- Rıfat Bey ----------
+
+=== defne_rifat
+tür: mesaj
+kişi: defne
+zaman: 17 Aralık 12:40
+koşul: defne.devam ve değil defne.bitti
+
+@defne: rıfat bey aradı. ev sahibim. izmir'de oturur, yetmiş yaşında, telefonda bağırır çünkü kendisi duymaz
+@defne: iki seçenek: kira iki katı ya da satış. otuz bir aralık'a kadar karar
+@defne: kararı ben vermiyorum. para veriyor. para da hâlâ berkmenlerde
+* ne yapacaksın
+  @defne: bilmiyorum. bilmiyorum demeyi sevmem ama bilmiyorum
+  @defne: belki istanbul. annem "dön" diyor zaten. iki yıldır diyor. bir gün haklı çıkacak, bunu ona yaşatmak istemiyorum
+* ben yardım edebilirim. biraz biriktirdim
+  [defne.kurtarici +1]
+  @defne: hayır.
+  @defne: mendirek'teki bahşişlerinle kiramı ödemeyeceksin. bunu bir filmde görsem kapatırdım
+  >> bekle 3dk
+  @defne: ama teşekkür ederim. bir kez. bir daha söyleme
+* kal.
+  [defne.kal_dedi]
+  >> okudu
+  >> bekle 25dk
+  @defne: bunu söyleme.
+  @defne: söylersen kalırım. kalırsam ve sen gidersen ben ne yaparım. bunu düşündün mü
+  >> eğer defne.kalacak_dedi
+    @defne: hayır dedin. otogarda. hatırlıyorum. not ettim
+    @defne: tamam. düşünüyorum. iki katı. ders veririm. instagram. bilmiyorum. düşünüyorum
+* berkmenler ödemedi mi hâlâ
+  @defne: ödemedi. villaya çıktım geçen hafta. kapıyı kızları açtı, "annem halleder" dedi
+  @defne: annesi halletmeyecek. kızı da biliyor. ikimiz de biliyoruz. kapıda iki kadın, ikisi de biliyor, ikisi de "tamam" diyor
+  [defne.berkmen_villa]
+
+
+=== defne_kontrat
+tür: sahne
+kişi: defne
+zaman: 31 Aralık 13:30
+koşul: defne.devam ve değil defne.bitti ve değil defne.kotu_gece_yalniz ve değil defne.uzak
+yer: Taş Mahalle, Çatlak Seramik
+
+>> eğer defne.yakinlik >= 18 veya (defne.yakinlik >= 12 ve (defne.kal_dedi veya defne.kalacak_dedi veya defne.kalan_gece veya defne.firtina_yardim veya defne.yanindaydi))
+  [defne.kontrat]
+  -> kaliyor
+>> yoksa
+  [defne.kapatiyor]
+  -> kapaniyor
+
+:: kaliyor
+Yılın son günü. Sarı kapı açık; içeriden torna sesi. Defne tezgâhın başında, çamurun içinde, bir kâse çekiyor.
+Seni görünce tornayı durdurmuyor.
+@defne: Rıfat Bey'i aradım. Sabah dokuzda. Dokuzda uyanmam, biliyorsun. Uyandım, aradım.
+@defne: İki katı. Kabul ettim. Nasıl ödeyeceğimi bilmiyorum. Kış dersleri, sipariş, Instagram. Bir de kahvaltı yasağını kaldırıp kahvaltı dersi veririm belki.
+@defne: Bilmemek de bir plan. Bunu yeni öğrendim. Bir mühendisten.
+Kâse ellerinin arasında yükseliyor. Bu sefer çökmüyor.
+* "Kaldın."
+  Tornayı durduruyor. Sana bakıyor.
+  @defne: Bu benim cümlemdi.
+  @defne: Kaldım. Evet. Kalan benim bu sefer. Tuhaf bir his. Ayakkabı ters giymiş gibi. Ama yürüyorum.
+* "Neden?"
+  @defne: Çünkü...
+  Çamurlu elini havada tutuyor.
+  @defne: Kural bir. Hâlâ geçerli. "Biz neyiz" demeyeceğim. Ama bu kışı burada geçirmek istiyorum. Kışın ortasında. İlk kez istiyorum.
+* (Bir şey söyleme. Yanına git, kâseye bak.)
+  Arkasında duruyorsun. Kâse dönüyor; Defne'nin parmakları duvarını inceltiyor, inceltiyor, tam çökecekken bırakıyor.
+  @defne: İşte. Durmayı bilmek. Seramikte en zor şey bu.
+[defne.yakinlik +1]
+>> yer Taş Mahalle
+-> son
+
+:: kapaniyor
+Yılın son günü. Sarı kapı açık; içeride koliler. Rafların yarısı boş, yarısı gazete kâğıdına sarılı kupalarla dolu. Tornanın üstünde bir koli bandı, bir makas.
+Defne yerde, bağdaş kurmuş, bir kupayı gazeteye sarıyor. Seni görünce durmuyor.
+@defne: Rıfat Bey'i aradım. Hayır dedim. Satsın. Satsın, biri burayı Airbnb yapsın, yazın İstanbullular gelsin, kış boyu kapalı dursun. Bütün mahalle gibi.
+@defne: Annemin yanına dönüyorum. Moda. Eski odam. Duvardaki harita.
+@defne: Kamyon beşinde geliyor. Fırını İstanbul'a götürüyorum; annemin bodrumu var. Müdür kamyonla gidiyor, şoförün yanında, ön koltukta. Benden önce varacak. Annem onu sevmeyecek, o da annemi sevmeyecek. Anlaşacaklar.
+>> eğer defne.bilet_biliyor
+  @defne: Ben otobüsle. Altısında. 23:15. Onu ben seçtim. Senin otobüsün. Biliyorum.
+>> yoksa
+  @defne: Ben otobüsle. Altısında. 23:15. İstanbul otobüsü bir tane bu şehirde; gidenlerin hepsi aynı otobüse biner.
+[defne.altisinda]
+* "Kalabilirdin."
+  @defne: Kalabilirdim. İki katı kira. Berkmen parası yok. Bir kış daha. Biliyorum ne olacağını.
+  >> eğer defne.kotu_gece
+    @defne: Biliyorsun ne olacağını. Sen de oradaydın.
+* "Seninle gelebilirim."
+  [defne.birlikte_teklif]
+  Kupayı sarmayı bırakıyor.
+  @defne: Gelebilirsin.
+  @defne: Bu bir teklif değil. Bu bir gerçek. Otobüs herkese açık.
+  @defne: Ama benim için gelme. Benim için gelen kimse kalmadı yanımda, sezonluklar bile kendileri için gitti. Gelirsen kendin için gel.
+* (Bir şey söyleme. Yanına otur, bir kupa al, gazeteye sar.)
+  [defne.yakinlik +1]
+  Bir kupa alıp sarıyorsun. Defne sana bakıyor, bir şey diyecek oluyor, demiyor. Bir saat boyunca sarıyorsunuz. Konuşmadan. Gazetenin sayfaları geçen yılın kasımından; bir okaliptüs haberi, bir imza kampanyası.
+>> yer Taş Mahalle
+-> son
+
+
+=== defne_kapatiyor_haber
+tür: mesaj
+kişi: defne
+zaman: 31 Aralık 13:30
+koşul: defne.devam ve değil defne.bitti ve (defne.kotu_gece_yalniz veya defne.uzak)
+
+@defne: rıfat bey'e hayır dedim. atölye kapanıyor
+@defne: annemin yanına dönüyorum. altı ocak. 23:15
+@defne: müdür kamyonla gidiyor, ön koltukta. benden önce varacak
+@defne: sana söylemek istedim. söyleyecek kimse kalmadı aslında, sen kaldın
+[defne.kapatiyor]
+[defne.altisinda]
+* kalabilirdin
+  @defne: kalabilirdim. kalmadım. bu yıl öyle bir yıl
+* otogara gelirim
+  @defne: kural üç. sen hatırlıyorsun. ben unutmuştum
+  @defne: gelme. gelirsen ağlarım. gidenin arkasından bir kere ağlarım, gidince ağlamam
+  [defne.ugurlayacak]
+* (Bir şey yazma.)
+  >> okudu
+
+
+# ---------- Yılbaşı ----------
+
+=== yilbasi
+tür: sahne
+zaman: 31 Aralık 18:00
+ton: gece
+
+>> eğer is.mendirek ve mendirek.yilbasi_soz
+  -> mendirek
+>> yoksa
+  >> zaman 31 Aralık 22:30
+  -> kuyu
+
+:: mendirek
+>> yer Liman, Mendirek
+[mendirek.son_gun = bugün]
+[mendirek.yilbasi]
+Mendirek'in kapısının üstünde yarısı yanan ampul zinciri. İçerisi dolu; masalar birleştirilmiş, iki aile, bir grup emekli öğretmen, kordonun balıkçıları, bir de yalnız bir adam, köşede, her yıl aynı masada oturduğu belli.
+Saadet Abla peçetenin arkasına yazdığı menüyü mutfağın kapısına iğnelemiş. Cemal servis yaparken ıslık çalıyor; bu yıl kızı yok, ıslık onu dolduruyor.
+@cemal: Geldin. Adamsın. Bu gece masaya üçüncü kez gitmek serbest. Yılbaşı istisnası.
+Saatler geçiyor; tabaklar gidip geliyor. On bire doğru Nuri Abi kendi eliyle bir rakı açıyor ve mutfaktakiler dahil herkese birer parmak koyuyor; sana da.
+@nuri: Yeni yıl.
+@nuri: Gelecek yıl buradaysan iki parmak.
+>> eğer defne.devam ve değil defne.bitti ve değil defne.uzak
+  On bir elliye doğru kapı açılıyor; soğukla birlikte Defne. Müdür onunla, bu kez içeri giriyor; Saadet Abla hiçbir şey demiyor, bir tabak artık balık koyuyor yere.
+  Defne barın ucuna oturuyor. Kabanının cebinden bir şey çıkarıyor, gazeteye sarılı.
+  >> eğer defne.firtina_kupasi
+    @defne: Fırından bu sabah çıktı. Fırtına gecesinin kupası. Pişince söylerim demiştim.
+  >> yoksa
+    @defne: Fırından bu sabah çıktı. Yılın son pişirimi. Fırın da ben de yorgunuz.
+  Gazeteyi açıyorsun. Bir kupa; sırrı koyu, denizin fırtınadan sonraki rengi. Kulpu ters.
+  @defne: Kulpu ters. Bilerek. Bu senin. Ters tutulur; elin bilmediği bir yerinden tutar.
+  Kupayı çevirmek üzereyken elini elinin üstüne koyuyor.
+  @defne: Altına bakma. Altına bir şey yazdım, sırın altına. Şimdi değil. Kural altı.
+  [defne.yilbasi_kupa]
+  Gece yarısı kordonda birileri kendi fişeklerini atıyor; belediye iptal etti, insanlar etmedi. Mendirek'in camında renkler; kırmızı, yeşil, bir tane de yanlışlıkla yere düşüp kayalarda patlayan.
+  Herkes sayıyor. Defne saymıyor. Sana bakıyor.
+  * (Onu öp.)
+    Öpüyorsun. Barın üstünden, tepsinin yanından. Cemal ıslık çalıyor, bu kez başka bir ıslık. Saadet Abla mutfağın kapısından bakıyor ve içeri giriyor, bir şey görmemiş gibi, görmüş gibi.
+  * (Sayıma katıl. Defne'ye bakmaya devam et.)
+    Sayıyorsun: üç, iki, bir. Defne saymıyor; sonunda yalnızca "bir"i söylüyor, seninle birlikte.
+>> yoksa
+  Gece yarısı kordonda birileri kendi fişeklerini atıyor; belediye iptal etti, insanlar etmedi. Mendirek'in camında renkler. Herkes sayıyor; köşedeki yalnız adam saymıyor, kadehini kaldırıp kimseye değil, cama tutuyor.
+  Cemal yanına geliyor.
+  @cemal: Senin yılın nasıldı?
+  * "Garip."
+    @cemal: Garip iyidir. Benimki bildikti. Bildik kötüdür.
+  * "Daha bitmedi."
+    @cemal: Bitti. Yarım dakika önce. Ama anlıyorum.
+>> saat 01:40
+Kapanışta Nuri Abi ışık zincirinin fişini çekiyor. Zincir sönerken bir ampul inatla yanmaya devam ediyor; Nuri Abi ona bakıyor ve onu söndürmüyor.
+>> yer Kordon
+-> son
+
+:: kuyu
+>> yer Çarşı, Kuyu
+Kuyu dolu; merdivenlere kadar insan. Cam zeminin üstünde dans eden ayaklar; altında kuyunun ağzı, mavi ışıkta, içine atılmış yılbaşı dilekleri, bozuk paralar.
+Sarp barın arkasında, kafasında bir parti şapkası, yüzünde ciddi bir ifade; metalci bir barmenin yılbaşı ciddiyeti.
+>> eğer defne.devam ve değil defne.bitti ve değil defne.uzak
+  Defne barın ucunda; seni görünce elini kaldırıyor. Önünde bir bardak su. Bir de bir bira, dokunulmamış.
+  @defne: Su. Bu gece su. Bira yanında duruyor, bana bakıyor. Bakışmaya devam ediyoruz.
+  Kabanının cebinden gazeteye sarılı bir şey çıkarıyor.
+  >> eğer defne.firtina_kupasi
+    @defne: Fırtına gecesinin kupası. Bu sabah çıktı fırından. Pişince söylerim demiştim.
+  >> yoksa
+    @defne: Yılın son pişirimi. Bu sabah çıktı fırından.
+  Bir kupa; sırrı koyu, kulpu ters.
+  @defne: Kulpu ters. Bilerek. Bu senin.
+  Kupayı çevirmek üzereyken elini elinin üstüne koyuyor.
+  @defne: Altına bakma. Sırın altına bir şey yazdım. Şimdi değil. Kural altı.
+  [defne.yilbasi_kupa]
+  Gece yarısı herkes sayıyor; müzik kesiliyor, Sarp bir zil çalıyor. Defne saymıyor, sana bakıyor.
+  * (Onu öp.)
+    Öpüyorsun. Etraftaki gürültü bir an çok uzakta. Defne'nin elindeki su bardağı eğiliyor, biraz su cam zemine dökülüyor, kuyunun mavi ışığına.
+  * (Sayıma katıl.)
+    Sayıyorsun. Defne yalnızca son "bir"i söylüyor, seninle birlikte.
+>> yoksa
+  Gece yarısı herkes sayıyor. Biri seni tanıyor; "Mendirek'in çocuğu" diyor, bir bira uzatıyor. Sarp zili çalıyor. Bir yıl bitiyor, öteki başlıyor; cam zeminin altında kuyu aynı.
+>> saat 01:30
+>> yer Çarşı

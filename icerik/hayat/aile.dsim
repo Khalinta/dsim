@@ -1,0 +1,514 @@
+# Aile: oyuncunun yalanı ve oyunun sonunu getiren iplik.
+# Annesi pazar akşamları yazar. Oyuncu babasına kendisi itiraf edebilir (babam.itiraf).
+# Etmezse 24 Kasım'da İTÜ'den eve yazı gider (aile.ogrendi).
+# 26 Kasım: doğum günü, babanın telefonu. 13 Aralık: baba Mendirek'te. 14 Aralık: otobüs bileti, 6 Ocak 23:15.
+
+=== annem_pazar_1
+tür: mesaj
+kişi: annem
+zaman: 21 Eylül 20:40
+
+@annem: Oğlum, akşam yemeğini yedik. Senin sandalyen yine boş durdu, baban ekmeği o tarafa koymayı unuttu.
+>> eğer annem.gelecek_sandi
+  @annem: Söküm bitti mi? Ne zaman geliyorsun? Baban otogarın saatini soruyor.
+  * ayın sonunda gelirim
+    [annem.ay_sonu]
+    [yalan.annem +1]
+    @annem: Tamam. Ben de tam ona göre perdeleri takarım.
+  * anne burada iş buldum. kalıcam biraz
+    [annem.kaliyor_dedi]
+    >> bekle 4dk
+    @annem: İş mi buldun? Ne işi?
+    * bir meyhanede garsonluk
+      [annem.meyhane]
+      >> bekle 3dk
+      @annem: Meyhane.
+      @annem: Tamam. Ben babana "lokanta" derim. Aynı şey.
+    * bir lokantada
+      @annem: Lokanta. İyi. Yemek de yersin hiç olmazsa.
+  * (Cevap verme.)
+    >> okudu
+>> yoksa eğer annem.kaliyor_dedi
+  @annem: Babana söyledim, kalıyorsun diye. Bir şey demedi. "İş ne?" dedi sadece.
+  * bir meyhanede garsonluk
+    [annem.meyhane]
+    >> bekle 3dk
+    @annem: Meyhane.
+    @annem: Ben ona "lokanta" derim. Aynı şey.
+  * lokanta. limanda bir lokanta
+    @annem: Güzel. Öyle söylerim.
+  * (Cevap verme.)
+    >> okudu
+>> yoksa
+  @annem: Sezon bitti mi? Eve dönüyor musun?
+  * biraz daha kalıcam anne. burada kışın da iş var
+    [annem.kaliyor_dedi]
+    >> bekle 3dk
+    @annem: Kışın.
+    @annem: Tamam. Ben babana söylerim. Bilmiyorum nasıl söylerim ama söylerim.
+  * ayın sonunda gelirim
+    [annem.ay_sonu]
+    [annem.gelecek_sandi]
+    [yalan.annem +1]
+    @annem: Tamam oğlum. Haber ver, baban otogara gelir.
+  * (Cevap verme.)
+    >> okudu
+
+
+=== annem_ay_sonu
+tür: mesaj
+kişi: annem
+zaman: 30 Eylül 21:15
+koşul: annem.ay_sonu ve değil annem.kaliyor_dedi
+
+@annem: Ayın sonu bugün.
+>> bekle 2dk
+@annem: Gelmiyorsun, değil mi?
+* gelmiyorum anne. burada kalıyorum. iş buldum
+  [annem.kaliyor_dedi]
+  [değil annem.gelecek_sandi]
+  >> bekle 5dk
+  @annem: Biliyordum.
+  @annem: Kızgın değilim. Bunu yazarken yüzüm kızgın değil, onu bil.
+* birkaç hafta daha
+  [yalan.annem +1]
+  @annem: Peki.
+* (Cevap verme.)
+  >> okudu
+  >> bekle 1sa
+  @annem: Tamam.
+
+
+=== annem_pazar_2
+tür: mesaj
+kişi: annem
+zaman: 5 Ekim 21:10
+
+@annem: Burada da yağmur başladı. Senin odanın penceresi sızdırıyormuş. Yıllardır sızdırıyormuş, bu yıl fark ettim.
+* babam bir baksın
+  @annem: Baktı. "Silikon lazım" dedi. Silikonu alacak, sonra unutacak, sonra ben alacağım. Biliyorsun.
+* ben gelince bakarım
+  [annem.gelince_bakarim]
+  @annem: Gelince.
+  @annem: Tamam, ben bir havlu koydum altına. Havlu gelene kadar dayanır.
+* ❤️
+  @annem: 🙂
+
+
+=== annem_pazar_3
+tür: mesaj
+kişi: annem
+zaman: 26 Ekim 20:50
+
+@annem: [Fotoğraf: Pazar sofrası. Üç tabak, bir boş sandalye. Masanın ucunda bir bilgisayar; ekranda Ezgi, Berlin'den el sallıyor.]
+@annem: Ezgi de katıldı. Sen de bir pazar katılsana. Bilgisayardan.
+* katılırım anne
+  [annem.katilirim]
+  @annem: Söz mü?
+  * söz
+    [annem.soz]
+    @annem: Tamam. Ezgi'ye söyledim, o da güldü. Neden güldü bilmiyorum.
+  * çalışıyorum pazar akşamları ama
+    @annem: Pazar akşamı çalışılır mı? Neyse. Sen bilirsin.
+* pazarları çalışıyorum anne
+  @annem: Meyhanede pazar da mı açık?
+  @annem: Tabii açık. Herkes pazar akşamı rakı içiyor, baban da içiyor. Senin içtiğini düşünüyor bu arada. Söylemedim.
+* (Kalp bırak.)
+  @annem: 🙂
+
+
+=== annem_dogum_gunu
+tür: mesaj
+kişi: annem
+zaman: 23 Kasım 20:30
+
+@annem: Çarşamba doğum günün. Ne istiyorsun?
+@annem: Kışlık bir şey göndereyim diyorum, adresini hâlâ yazmadın. Üç aydır soruyorum. Bilerek yazmıyorsun, biliyorum.
+* taş mahalle'de bir ev. saniye hanım'ın evi diye sorsan bulurlar
+  [annem.adres]
+  @annem: Saniye Hanım'ın evi. Tamam.
+  @annem: Bir mont gönderiyorum. Babanınkini. Ona küçük geliyor, sana büyük gelir. Ortası yok bizde.
+* bir şey istemiyorum anne
+  @annem: Herkes bir şey ister. İstemeyen çocuk korkutur annesini.
+* (Cevap verme.)
+  >> okudu
+
+
+# ---------- Baba: itiraf ----------
+
+=== babam_itiraf
+tür: mesaj
+kişi: babam
+başlatan: oyuncu
+başlık: baba, konuşmamız lazım
+tarih: 20 Eylül - 23 Kasım
+koşul: değil babam.itiraf ve değil aile.ogrendi
+
+>> bekle 20dk
+@babam: Dinliyorum.
+* İTÜ'den kaydımı sildirdim. Buradaki üniversiteye geçtim. Kayıt dondurma yalandı
+  [babam.itiraf_duz]
+* baba, kayıt dondurmadım. yatay geçiş yaptım, pırnallı'ya. sana söyleyemedim
+  [babam.itiraf_yumusak]
+* (Yazma. Bir şey yazıp sil.)
+  >> bekle 30dk
+  @babam: Ne konuşacaktık?
+  * önemli değil baba
+    @babam: Tamam.
+    -> son
+  * İTÜ'den kaydımı sildirdim. Buradaki üniversiteye geçtim
+    [babam.itiraf_duz]
+[babam.itiraf]
+[aile.ogrendi]
+>> bekle 40dk
+@babam: Ne zaman?
+* ağustosta
+  @babam: Ağustosta.
+* sana kayıt donduracağım dediğim gece
+  [babam.ayni_gece]
+  @babam: Aynı gece.
+>> bekle 25dk
+@babam: Annene ben söylerim.
+>> başlat annem_itiraf_sonrasi sonra 3sa
+>> bekle 2sa
+@babam: Okuyor musun bari?
+* okuyorum. derslere gidiyorum
+  [babam.okuyorum]
+  @babam: Tamam.
+* okuyorum. bir de çalışıyorum
+  @babam: Ne iş?
+  * bir meyhanede garsonluk
+    [babam.meyhane]
+    >> bekle 10dk
+    @babam: Tamam.
+  * bir lokantada
+    @babam: Tamam.
+* (Cevap verme.)
+  >> okudu
+
+
+=== annem_itiraf_sonrasi
+tür: mesaj
+kişi: annem
+koşul: babam.itiraf
+
+@annem: Baban söyledi.
+>> bekle 3dk
+@annem: Bana neden söylemedin? Ben söylemezdim ona. Biliyorsun söylemezdim.
+* biliyorum anne. o yüzden söylemedim
+  [annem.anlasti]
+  >> bekle 5dk
+  @annem: Ne demek o?
+  >> bekle 2dk
+  @annem: Tamam. Anladım ne demek. Haklısın da. Sus.
+* özür dilerim
+  @annem: Özür dileme. Ye, iç, oku. Özür dilemek kolay.
+* (Cevap verme.)
+  >> okudu
+
+
+# ---------- İTÜ'den yazı (itiraf edilmediyse) ----------
+
+=== itu_yazisi
+tür: mesaj
+kişi: annem
+zaman: 24 Kasım 19:40
+koşul: değil babam.itiraf
+
+[aile.ogrendi]
+[aile.yazidan]
+@annem: Oğlum, İTÜ'den bir yazı geldi.
+@annem: "Kayıt silme işleminiz tamamlanmıştır" diyor.
+>> bekle 1dk
+@annem: Ne demek bu?
+>> bekle 2dk
+@annem: Baban okudu.
+* anne, yatay geçiş yaptım. buradaki üniversiteye. söyleyemedim
+  [annem.yazi_itiraf]
+  >> bekle 6dk
+  @annem: Ağustostan beri mi?
+  @annem: Ağustostan beri biz seni dinleniyor sandık.
+  >> bekle 4dk
+  @annem: Baban odada. Kapıyı kapattı. Ben şimdi oraya gidiyorum.
+* yanlışlık olmuştur anne
+  [annem.yazi_yalan]
+  [yalan.annem +1]
+  >> bekle 8dk
+  @annem: Baban okulu aradı.
+  @annem: Yanlışlık olmamış.
+* (Cevap verme.)
+  >> okudu
+  >> bekle 40dk
+  @annem: Baban seni arayacak. Aç bari.
+
+
+=== ezgi_yazidan_sonra
+tür: mesaj
+kişi: ezgi
+zaman: 25 Kasım 11:20
+koşul: aile.ogrendi
+
+@ezgi: babam aradı
+@ezgi: beni. kendi kendine. ilk defa
+@ezgi: senin yüzünden tabii ama olsun, bir ilk
+>> bekle 2dk
+@ezgi: iyi misin gerçekten. "iyiyim" yazarsan engellerim
+* iyi değilim abla
+  [ezgi.iyi_degilim]
+  @ezgi: tamam
+  @ezgi: bu "iyiyim"den iyi bir cevap
+  @ezgi: babam sana bağırmaz bu arada. susar. susmasına dayan, gerisi kolay
+* idare ediyorum
+  @ezgi: idare. ok. o da bir şey
+* iyiyim
+  @ezgi: 🙄
+  @ezgi: engellemedim. ama aklımdaydı
+
+
+# ---------- Doğum günü: babanın telefonu ----------
+
+=== babam_dogum_gunu
+tür: sahne
+kişi: babam
+zaman: 26 Kasım 20:15
+yer: Telefonda
+ton: gece
+
+Telefon titriyor. Ekranda "Babam" yazıyor. Babanın seni en son ne zaman aradığını düşünüyorsun; hatırlamıyorsun. Annen arar, arkada babanın sesi geçer; babanın kendisi aramaz.
+* (Aç.)
+  Açıyorsun. Bir an karşıdan hiçbir şey gelmiyor; televizyonun sesi, sonra bir kapının kapanması. Sonra baban.
+* (Bir çaldır, sonra aç.)
+  Telefon bir kez daha çalıyor, ikinci kez. Açıyorsun. Karşıda bir kapının kapandığını duyuyorsun; baban konuşmak için odaya geçmiş.
+@babam: Doğum günün kutlu olsun.
+@babam: Yirmi iki.
+>> eğer babam.itiraf
+  Sesi düz, hep olduğu gibi. Ama bir yerinde bir şey var, bir boru dirseğinde kalan hava gibi.
+  @babam: Annen pasta yaptı. Sen yoksun diye yemedik. Yarın yeriz.
+  * "Teşekkür ederim, baba."
+    @babam: Ne için?
+    Cevap vermeni beklemiyor.
+  * "Yeseydiniz keşke."
+    @babam: Annen yedirmedi.
+  @babam: Okul nasıl?
+  * "İyi. Vizeleri verdim."
+    [babam.vizeler]
+    @babam: Hepsini mi?
+    * "Hepsini."
+      @babam: Tamam.
+      Bu "tamam" öbürlerinden farklı; bir milim.
+    * "Birini veremedim."
+      @babam: Birini.
+      @babam: Bir tane olsun. İTÜ'de dörttü.
+  * "Bilmiyorum, baba. Sanırım iyi."
+    @babam: "Sanırım."
+    Bir süre susuyor.
+    @babam: Ben de senin yaşındayken "sanırım" derdim. Dedem kızardı. Ben kızmıyorum. Not ediyorum.
+>> yoksa
+  Sesi düz. Bu düzlüğü tanıyorsun; çocukken karnelerin üstünde okuduğun ses.
+  @babam: Yazıyı okudum.
+  @babam: Ağustostan beri.
+  * "Söyleyemedim."
+    @babam: Biliyorum söyleyemediğini. Neden söyleyemediğini soruyorum.
+    * "Kızacaktın."
+      @babam: Kızdım. Şimdi de kızgınım. Kızdım diye bir şey değişti mi?
+    * "Hayal kırıklığına uğrayacaktın."
+      [babam.hayal_kirikligi]
+      Baban uzun süre susuyor. Televizyonun sesi bile gelmiyor artık.
+      @babam: Uğradım.
+      @babam: Bunu duymak istedin, söyledim. Şimdi devam edelim.
+    * (Sus.)
+      Susuyorsun. Baban da susuyor. İkinizin susması aynı susma; bunu ilk kez fark ediyorsun.
+  * "Özür dilerim."
+    @babam: Özrü annene dile. Bana açıklama borçlusun.
+  * "Kendi kararımdı. İlk kez bir şeye kendim karar verdim."
+    [babam.kendi_karar]
+    @babam: Kendi kararın.
+    @babam: Kendi kararını kendin ödersin o zaman. Bunu biliyorsun değil mi?
+@babam: Ayın on üçünde İzmir'de bir toplantım var. Cumartesi. Sonra oraya geleceğim.
+@babam: Nerede çalışıyorsun?
+* "Limanda, Mendirek diye bir meyhane."
+  [babam.mendirek_biliyor]
+  @babam: Meyhane.
+  @babam: Tamam. Oraya gelirim.
+* "Gelme baba. Ben gelirim."
+  @babam: Gelirsin. Ne zaman? Ağustosta gelecektin.
+  @babam: Ben gelirim. Nerede çalıştığını annen söyledi zaten.
+* (Sus.)
+  @babam: Annen söyledi nerede çalıştığını. Oraya gelirim.
+@babam: Annen seni öpüyor. Ben kapatıyorum.
+Kapatıyor. "İyi geceler" demeden; hiç demezdi zaten. Ekranda arama süresi: dört dakika on bir saniye. Daha uzun sürmüş gibiydi.
+[babam.gelecek]
+
+
+# ---------- Baba Mendirek'te ----------
+
+=== babam_mendirek
+tür: sahne
+kişi: babam
+zaman: 13 Aralık 18:00
+yer: Liman, Mendirek
+ton: gece
+
+[mendirek.son_gun = bugün]
+Cumartesi akşamı. Baban "cumartesi" demişti; saat söylememişti. Altıdan beri her açılışında kapıya bakıyorsun. Cemal üçüncüsünde fark ediyor.
+@cemal: Birini mi bekliyorsun?
+* "Babamı."
+  @cemal: Baban.
+  Bardağı bırakıp bir süre bir şey demiyor.
+  @cemal: Benimki hiç gelmedi buraya. Öldükten sonra Nuri Abi şu masaya onun için bir kadeh koydu; o gece gelmiş sayıldı. Seninki ayağıyla geliyor. Yüzünü öyle yapma.
+* "Kimseyi."
+  @cemal: Tamam. Kimseyi bekleme o zaman, masaları bekle.
+>> saat 20:00
+Saat sekiz. Fırtınadan sonra Mendirek ilk kez dolu sayılır; altı masa. Cemal'le ikiniz yetişiyorsunuz.
+Kapı açılıyor. İçeri giren adamın montu sana tanıdık geliyor önce, yüzünden de önce. Annenin "babanınkini göndereyim" dediği mont bu; ya da aynısının yenisi.
+Baban.
+Masaya oturuyor; kapıya, duvardaki tekne fotoğrafına, sana bakabileceği tek masaya. Montunu çıkarmıyor.
+Cemal bir an sana, bir an adama bakıyor; benzerliği gördüğü belli. Bir şey demeden o masayı sana bırakıyor.
+* (Masaya git. "Hoş geldin" de.)
+  [babam.hos_geldin]
+  @babam: Hoş bulduk.
+  Menüye bakmıyor.
+* (Masaya git. Bir garsonun diyeceğini de: "Ne alırsınız?")
+  [babam.garson_gibi]
+  Baban sana bakıyor. Uzun bir an.
+  @babam: Ne önerirsin?
+  Bunu ciddi soruyor, ya da ciddi soruyormuş gibi yapıyor; hangisi olduğunu bilmiyorsun.
+* (Masaya gitme. Cemal'e "sen bak" de.)
+  [babam.kacti]
+  Cemal başını iki yana sallıyor. "Olmaz" der gibi değil, "yapma" der gibi. Masaya gidiyor ama sipariş almıyor; sana dönüp çeneyle masayı gösteriyor.
+  Sonunda gidiyorsun.
+  @babam: Kaçmayı bırak bari. Buraya kadar geldim.
+@babam: Balık. Ne varsa. Bir de su.
+Saadet Abla mutfak kapısından çıkıp masaya bakıyor, sonra sana; sonra yeniden masaya. Mutfağa dönerken Nuri Abi'nin kulağına bir şey söylüyor.
+Akşam boyunca masalar arasında gidip geliyorsun. Her geçişte babanın gözlerinin seni izlediğini hissediyorsun; elinde tabaklar, tepsiler, sandalye. Bir kez bir bardak düşürüyorsun. Cemal yerden toplarken "olur" diyor, "olur böyle şeyler".
+Baban yemeğini bitiriyor. Nuri Abi kendisi götürüyor tabağı; dönerken masanın yanında bir an duruyor.
+@nuri: Oğlunuz palamutu bir kere çeviriyor.
+Baban Nuri Abi'ye bakıyor, ne demek istediğini anlamaya çalışıyor; anlamıyor. Nuri Abi açıklamıyor.
+Kapanışa kadar oturuyor. Bir saat boyunca tek bir su istiyor. Saadet Abla ona yine de bir tabak tatlı bırakıyor; dokunmuyor, ama tabağı geri götürmelerine de izin vermiyor.
+>> eğer defne.sevgili ve değil defne.bitti ve değil defne.uzak
+  Gece yarısına doğru kapı açılıyor; Defne. Müdür onun arkasında kapıda kalıyor. Barın önüne gelip sana gülümsüyor, sonra senin yüzünden bir şeyler olduğunu anlıyor. Bakışını takip ediyor; köşedeki masa.
+  Defne bir an bekliyor. Sonra masaya yürüyor.
+  @defne: İyi akşamlar. Ben Defne. Oğlunuzun Mendirek'teki en kötü müşterisiyim. Üçüncü kez gelince ona "git" dediriyorum.
+  Baban kalkıyor, elini uzatıyor; nezaketi bir alışkanlık, bir refleks.
+  @babam: Murat.
+  @defne: Tanıştığımıza memnun oldum. Ben çıkıyorum, burada fazlayım. Ama size bir şey söyleyeyim: o kalır. Ben insanlar hakkında yanılırım ama bu konuda yanılmam.
+  Defne çıkıyor. Baban ayakta, eli hâlâ yarı açık, sana dönüyor.
+  @babam: O kim?
+  * "Biri."
+    @babam: Biri.
+  * "Önemli biri."
+    [babam.defne_onemli]
+    @babam: Belli.
+Kapanış. Sandalyeleri masalara diziyorsun; baban kalkıp bir sandalyeyi kendisi diziyor, sonra bir tane daha. Nuri Abi bunu görüyor ve hiçbir şey söylemiyor.
+>> yer Liman, dalgakıran
+Dışarıda dalgakıranın üstünde yürüyorsunuz. Fırtınadan kalma yosunlar taşların arasında kurumuş. Rüzgâr dinmiş; deniz kendi kendine bir şey anlatıyor gibi.
+Baban montunun cebinden katlanmış bir kâğıt çıkarıyor ama hemen vermiyor.
+@babam: Bana söyleyemedin. Annene de söyleyemedin.
+@babam: Kime söyledin?
+* "Kimseye."
+  @babam: Kimseye. Dört ay. Bunu da bir başarı sayma.
+* "Bir kıza. Bir de ev sahibine."
+  [babam.kime_soyledin]
+  @babam: Bir kıza ve bir ev sahibine. Bize değil.
+  Gülümsemiyor ama bir şey kıpırdıyor yüzünde.
+  @babam: Ben senin yaşında dedeme değil, kahveciye söylerdim. Sonra dede kahveciden duyardı.
+* "Sana söyleyecektim."
+  @babam: Ne zaman?
+  Cevabını beklemiyor.
+  @babam: Söyleyecektin. Ağustosta da dönecektin. Ben senin "-ecek"lerine güvenmeyi bıraktım, oğlum. Bunu kötü bir şey için söylemiyorum. Bilgi olarak söylüyorum.
+Kâğıdı uzatıyor. Bir otobüs bileti: Pırnallı – İstanbul. 6 Ocak, Salı, 23:15. Koltuk 17.
+@babam: Altı Ocak. Finallerin bitmiş olur. Gel. Masaya oturalım, konuşalım.
+@babam: Gelmezsen…
+Duruyor. Kelimeyi arıyor; bir mühendisin bir hesabı yeniden yapması gibi.
+@babam: Gelmezsen kendi başınasın. Bunu tehdit olarak söylemiyorum. Bilgi olarak söylüyorum. Okulun, kiran, her şeyin. Kendi başına.
+* "Gelirim."
+  [karar.soz_gelirim]
+  @babam: Görürüz.
+* "Gelmeyeceğim, baba."
+  [karar.soz_gelmem]
+  Baban sana uzun süre bakıyor. Sonra başını sallıyor, kendi kendine.
+  @babam: Bileti yine de al. Altı Ocak'ta ne diyeceğini altı Ocak'ta bilirsin.
+* "Bilmiyorum."
+  @babam: Biliyorum bilmediğini. On dokuz yaşından beri bilmiyorsun. Altı Ocak'a kadar öğren.
+[karar.bilet]
+Otelini soruyorsun; kordonun başındaki küçük otel. Seni oraya kadar yürütmüyor; "sen git, yarın sabah otobüsüm var" diyor. Arkasını dönüp gidiyor. Montu bir an kordonun ışıklarında görünüyor, sonra okaliptüslerin gölgesinde kayboluyor.
+Bileti katlayıp cüzdanına koyuyorsun. Cüzdan kapanmıyor; bilet biraz büyük.
+>> yer Kordon
+
+
+=== babam_bilet_mesaji
+tür: mesaj
+kişi: babam
+zaman: 14 Aralık 08:40
+koşul: karar.bilet
+
+@babam: Otobüsteyim.
+@babam: Bileti kaybetme. Kaybedersen haber ver, yenisini alırım.
+* kaybetmem
+  @babam: Tamam.
+* iyi yolculuklar baba
+  >> bekle 10dk
+  @babam: Sağ ol.
+* (Cevap verme.)
+  >> okudu
+
+
+=== annem_baba_dondu
+tür: mesaj
+kişi: annem
+zaman: 14 Aralık 21:30
+koşul: karar.bilet
+
+@annem: Baban döndü.
+@annem: Bir şey anlatmadı. Akşam yemeğini yarım bıraktı, sonra mutfağa gelip senin sandalyene oturdu. Neden oturdu bilmiyorum, hiç oturmazdı oraya.
+@annem: Sen bir şey anlat bari.
+* anne, otobüs bileti verdi. altı ocak
+  @annem: Biliyorum. Bileti ben almıştım, internetten. O "alsana" dedi, ben aldım.
+  @annem: Pencere kenarı seçtim. Uyuyamazsın diye.
+* iyi geçti anne. konuştuk
+  @annem: Konuştunuz.
+  @annem: İyi o zaman. Konuşmuşsunuz.
+* (Cevap verme.)
+  >> okudu
+
+
+=== annem_son_pazar
+tür: mesaj
+kişi: annem
+zaman: 4 Ocak 20:30
+koşul: karar.bilet
+
+>> eğer karar.soz_gelmem
+  @annem: Salı.
+  @annem: Gelmeyeceksin, değil mi? Baban öyle dedi. "Gelmeyecek" dedi, sonra bütün akşam televizyonun sesini açtı.
+>> yoksa
+  @annem: Salı akşamı otobüsün. Baban sabah yedide otogarda olacak. Ben de gelirim, ama arabada beklerim. Otogarda ağlamam.
+* geleceğim anne
+  [karar.anneme_gelecegim]
+  @annem: Tamam. Odanı havalandırdım. Pencereye silikon çektirdim bu arada. Ben çektim. Baban unuttu.
+* bilmiyorum anne. karar vermedim
+  @annem: Karar vermemek de bir karar, derdi rahmetli dedem. Ben hiç anlamadım ne demek. Şimdi anlıyorum.
+* gelmeyeceğim anne
+  [karar.anneme_gelmem]
+  >> bekle 6dk
+  @annem: Tamam.
+  @annem: Tamam oğlum. Kış için mont gönderdim zaten. Babanınki. Giy onu.
+
+
+=== ezgi_son_gun
+tür: mesaj
+kişi: ezgi
+zaman: 6 Ocak 15:10
+
+@ezgi: bugün mü
+@ezgi: annem üç saattir mutfakta. yemek yapıyor. kime yaptığını bilmiyor bence
+* bilmiyorum abla. hâlâ bilmiyorum
+  @ezgi: tamam. bilmemek de bir şey
+  @ezgi: ama bir şey söyleyeyim, berlin'e taşınırken ben de bilmiyordum. bindim, uçakta bildim
+  @ezgi: bazen binmeden bilinmiyor. bazen de binmeyince biliniyor. işte bu kadar bilgeyim
+* gidiyorum galiba
+  @ezgi: ok
+  @ezgi: annem mutluluktan bayılır. babam bayılmaz ama bayılmak ister
+* kalıyorum galiba
+  @ezgi: ok
+  @ezgi: "galiba"yı sil, ondan sonra konuşalım
