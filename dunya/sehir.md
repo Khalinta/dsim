@@ -105,7 +105,7 @@ Marinada prefabrik bir bina ve bir kızak. Optimist tekneleri, Laser'lar ve iske
 
 ### Oyuncunun evi
 Taş Mahalle'nin alt ucunda, Saniye Hanım'ın evinin üst katı. İki oda ve küçük bir mutfak var; deniz bir binanın arkasından çeyrek görünür. Soba yok, klima kasımda bozulur. Merdiven gıcırdar.
-- **Saniye Hanım (78):** Alt katta oturur. Emekli edebiyat öğretmeni, dul ve keskindir. Şeker hastası; insülin kullanır, ilaçlarını Yeni Eczane'den alır. Kiracılarını roman karakteri gibi okur, kendi kendine konuşur, üç kedisi var. Oyuncuya ilk gün "Sen gidecek birine benzemiyorsun, kalacak birine de benzemiyorsun. İlginç," der.
+- **Saniye Hanım (78):** Alt katta oturur. Soyadı Karaca. Emekli edebiyat öğretmeni, dul ve keskindir. Şeker hastası; insülin kullanır, ilaçlarını Yeni Eczane'den alır. Kiracılarını roman karakteri gibi okur, kendi kendine konuşur, üç kedisi var. Oyuncuya ilk gün "Sen gidecek birine benzemiyorsun, kalacak birine de benzemiyorsun. İlginç," der.
 - **Onur (24):** Ev arkadaşı. Aydınlı, İktisat'ta yedinci yılında. Tembel ve iyi kalplidir; şehrin dedikodu merkezidir. Her şeyi bilir ama yarısı yanlıştır.
 
 ### Otogar
