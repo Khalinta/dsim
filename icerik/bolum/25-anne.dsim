@@ -102,7 +102,10 @@ Odanda açıyorsun. İçinde bir kazak; lacivert, el örgüsü, yakası dik, kol
   [anne.koli_bos]
 >> yoksa
   Zarfın içinde bir kâğıt; çizgili, bir defterden koparılmış.
-  "Oğlum. Kazağı geçen kış ördüm, göndermeye fırsat olmadı. Kollar uzun oldu; kıvırırsın. Reçel benim, fasulye ev sahibine; elini öp. Baban bilmiyor bu koliyi gönderdiğimi. Bilse kızmaz; bilmesine gerek yok. Pazar ararım. Seni çok seviyorum, bunu yazıyla söylemek daha kolaymış. — Annen."
+  >> eğer itiraf.anne
+    "Oğlum. Kazağı geçen kış ördüm, göndermeye fırsat olmadı. Kollar uzun oldu; kıvırırsın. Reçel benim, fasulye ev sahibine; elini öp. Baban bilmiyor bu koliyi gönderdiğimi. Öbür şeyi de hâlâ bilmiyor. İkisini aynı gün söylerim belki; bir koli, bir okul. Seni çok seviyorum, bunu yazıyla söylemek daha kolaymış. — Annen."
+  >> yoksa
+    "Oğlum. Kazağı geçen kış ördüm, göndermeye fırsat olmadı. Kollar uzun oldu; kıvırırsın. Reçel benim, fasulye ev sahibine; elini öp. Baban bilmiyor bu koliyi gönderdiğimi. Bilse kızmaz; bilmesine gerek yok. Pazar ararım. Seni çok seviyorum, bunu yazıyla söylemek daha kolaymış. — Annen."
   "Baban bilmiyor." Bir koli; bir kazak, bir kavanoz, bir yalan, küçük, anneden. Annen de saklıyor; sen öğrenmeden önce o öğrenmiş, saklamayı.
   Kazağı giyiyorsun. Kolları uzun; iki kere kıvırıyorsun.
   [anne.koli_not]
