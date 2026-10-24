@@ -1,2 +1,2 @@
 // Her yayında artırılır. sw.js içindeki SURUM ile aynı olmalı (testler denetler).
-export const SURUM = '0.6.0';
+export const SURUM = '0.7.0';

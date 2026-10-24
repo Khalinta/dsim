@@ -198,6 +198,19 @@ Her karar ve nedeni burada. Bir karar değişirse eskisinin ~~üstü çizilir~~ 
 51. **Etiket kuralı (denetim):** Bir etiketin üstündeki kısım bir atlamayla bitmeli. *Neden:* İlk taslakta "İyi geceler" diyen oyuncu, farkında olmadan bir sonraki etiketteki yatak sahnesine düşüyordu.
 52. **Yeni bölüm eklenince kayıt sürer.** Yazılmış son bölümü bitiren oyuncu, yeni bölümler yayınlanınca uygulamayı açtığında oradan devam eder.
 
+### II. Perde (7. adım)
+
+53. **Bölüm anatomisi, uzun hâliyle.** Her bölüm: ortak bir omurga (sabah, kasaba, Mendirek) + bir ya da iki yol ayrımı (dal sahnesi kaynakta 1.500–2.000 kelime) + seçilmeyenlerin ve görenlerin gece mesajları + bağı zayıf oyuncu için de dolu bir "ev" dalı (Saniye Hanım, Onur, Nuri Abi).
+   - *Neden:* Tek okuyuşta 2.500–3.500 kelime hedefi (karar 41'in altındaki not). Yazarken sahne uzunluğunu sürekli yarı yarıya düşük tahmin ettim; dalı kaynakta en az 1.500 kelime yazmak gerekiyor, çünkü bir okuyuş dalın aşağı yukarı yarısını görüyor.
+54. **Plan yazılırken uyarlandı** (ayrıntı `hikaye/bolumler.md`'de, eskisinin üstü çizili):
+   - 16: Yol ayrımına Ela (Nilüfer'in kopan halatı) ve Saniye Hanım'ın son kolisi eklendi; Lara'ya gitmek, çekici geçtikten sonra boş garaj ve dolmuşu öğretmek oldu. Lügat Halit Bey'in kitaplarından.
+   - 17: Sabah Ela'yla soğuk su, öğleden sonra Saadet Abla'yla helva, Hasan Bey inmeden beri ilk kez Mendirek'te; eve dönen için ertesi sabah Nuri Abi'yle ağ.
+   - 18: Efe ve kulüp çocukları yürüyüş sahnelerinde yok (esnemez kural: romantik bir sahnede anılmazlar bile). Okaliptüs kesimi bahara ertelendi.
+   - 19: Eşikler üç güne yayıldı (cuma Ceren ya da Ela, cumartesi Sude'nin sorusu, cumartesi gecesi Defne ya da Lara, pazar Ilgın). ~~Ilgın: pazar sabahı, 2 Kasım nöbetinden sonra çay.~~ → Pazar öğlen Tezcanların evinde börek ve tavla, sonra nöbetinden önce çay. *Neden:* Nöbet tarihi o gecenin tarihi (9, 17, 25 Ekim böyle yazıldı); 2 Kasım nöbeti pazar gecesi, "pazar sabahı nöbet çıkışı" takvimle çelişiyordu.
+55. **Babaya itiraf kapısı açıldı (18. bölüm, bayram mesajı).** `itiraf.baba` olan oyuncuda baba "Tamam. Annene ben söylerim." der ve susar. 26 (İTÜ'den yazı), 27 (doğum günü araması) ve 33 (babanın gelişi) bu işarete göre dallanmalı. Ceren'e ve Lara'ya da itiraf kapısı açıldı (17).
+56. **Çarşı Eczanesi'nin eczacısı: Sevim Abla.** 15–17'de önce "Nermin" yazılmıştı; Sude'nin annesinin adı Nermin olduğu için değiştirildi.
+57. **Cinsel sahneler (19):** Ela, Ceren, Defne ve Lara'yla yazıldı; Sude ve Ilgın'ın eşiği bir soru ve bir çay. Biçim 1. bölümdeki gibi: eylem, sıra, pozisyon ve süre açık; anatomik yakın plan yok; her adımda durmak, "emin misin" ve "bu gece değil" seçeneği; korunma sahnenin içinde. Defne'nin doğum gecesi (17) çok sarhoş olduğu için cinsel seçenek yok; oyuncunun durması sahnenin kendisi.
+
 ## Yol haritası
 
 1. ~~Temel belgeler~~ → **Temel belgeler + ses testi.** ✅
@@ -215,8 +228,9 @@ Her karar ve nedeni burada. Bir karar değişirse eskisinin ~~üstü çizilir~~ 
 4. **Bölüm planı.** ✅ (4. oturum) Omurga baştan yazıldı; 41 bölümün planı; karakter belgeleri, takvim, rehber güncellendi.
 5. **Motor ve ekranlar bölüm yapısına.** ✅ (karar 45–47)
 6. **I. Perde (Bölüm 1–11).** ✅ (karar 48–52) Bütün tanışmalarla; okuma aracıyla baştan sona okunup düzeltildi. Eski içerik ve eski yapının kodu kalktı.
-7. **II–V. Perdeler,** perde perde (her biri büyük).
-8. **Sonlar, Şubat ve cila** (büyük). Tutarlılık taraması, son okuma turları.
+7. **II. Perde (Bölüm 12–19).** ✅ (karar 53–57)
+8. **III–V. Perdeler,** perde perde (her biri büyük).
+9. **Sonlar, Şubat ve cila** (büyük). Tutarlılık taraması, son okuma turları. Kısa kalan bölümler: I. Perde'den 4, 5, 8, 10; II. Perde'den 14, 18, 19'un bağı zayıf yolları.
 
 ## Oynanış süresi hedefi
 
@@ -228,6 +242,21 @@ Her karar ve nedeni burada. Bir karar değişirse eskisinin ~~üstü çizilir~~ 
   - ~~Kullanıcıya bildirildi; nasıl kapatılacağı onun kararı.~~ → **Kullanıcı öneriyi kabul etti (6. adımın sonu):** II. Perde'den itibaren bölümler çok daha uzun yazılır; hedef tek okuyuşta bölüm başına **2.500–3.500 kelime** (en az 2.000), kaliteden ödün vermeden. I. Perde'nin kısa bölümleri (4, 5, 8, 10) cila adımında genişler.
   - *Kullanıcının notu:* "Giriş de kısa olmasa iyiydi ama hikâyeye hızlı girebilmek ve sürükleyicilik açısından iyi bile olabilir. Kaliteden kaybetmemen önemli."
   - Bu hızla 41 bölüm yaklaşık 8–10 saat.
+- **II. Perde ölçümü (7. adım).** Tek okuyuşta, 24 yol:
+
+  | Bölüm | En kısa | Ortanca | En uzun |
+  |---|---|---|---|
+  | 12 Kötü film | 1.680 | 2.250 | 3.090 |
+  | 13 Palamut | 2.050 | 2.800 | 3.970 |
+  | 14 Manzara | 1.120 | 1.990 | 3.340 |
+  | 15 Son film | 2.180 | 2.670 | 3.250 |
+  | 16 Çekici | 2.000 | 2.250 | 2.990 |
+  | 17 Yirmi altı | 1.800 | 2.550 | 3.560 |
+  | 18 Fener alayı | 1.750 | 2.130 | 2.350 |
+  | 19 Son deniz | 1.340 | 2.070 | 3.120 |
+
+  - Bir kadına özen gösteren okuyuşlar çoğunlukla 2.000–3.000. Hedefin (2.500–3.500) alt yarısında; I. Perde'nin iki katı.
+  - En kısalar bağı zayıf ya da her şeyi geri çeviren yollar (14'te "evde kal", 19'da cuma ve cumartesi evde). Cila adımında genişler.
 
 ## Açık sorular
 
@@ -299,4 +328,13 @@ Her karar ve nedeni burada. Bir karar değişirse eskisinin ~~üstü çizilir~~ 
 - **Ölçüm:** Bölümler planın yarısı uzunlukta (bkz. "Oynanış süresi hedefi"). Kullanıcıya bildirildi.
 - **Kullanıcıya düşen:** Telefonda oyun kendiliğinden güncellenir. Eski kayıt açılmaz; giriş ekranı "yeni oyun" önerir.
 
-**Sıradaki:** 7. adım, II. Perde (Bölüm 12–19) (büyük). Kullanıcının "devam" demesi ve uzunluk konusundaki kararı bekleniyor.
+~~**Sıradaki:** 7. adım, II. Perde (Bölüm 12–19) (büyük). Kullanıcının "devam" demesi ve uzunluk konusundaki kararı bekleniyor.~~ → Kullanıcı uzunluk önerisini kabul etti, "devam" dedi.
+
+**5. oturum (7. adım):** II. Perde yazıldı ve oyuna girdi (karar 53–57). Sürüm 0.7.0.
+- **Metin:** 8 bölüm (12–19), 6 Ekim – 2 Kasım. Kötü film, palamut, manzara, Fabrika'da son film, çekici, Defne'nin doğum günü, fener alayı, son deniz. Her bölümde yol ayrımları, seçilmeyenlerin ve görenlerin gece mesajları; kasabanın kendi iplikleri (okaliptüsler bahara ertelendi; Saniye Hanım ve Halit Bey; Hasan Bey'in tavlası; Onur ile Cansu; Nuri Abi'nin "Kalacak mısın?" sorusunun ilk hâli).
+- **Eşikler:** Ela, Ceren, Defne ve Lara'yla ilk ya da yeni geceler; Sude'nin sorusu; Ilgın'ın "Peki. Ama ben söylemedim, sen anladın." İtiraf kapıları: Ezgi (14), Ceren ve Lara (17), baba (18).
+- **Okuma:** Her bölümden sonra okuma aracıyla 24 yol; dökümler okundu. Bulunup düzeltilenler: oyuncunun adını bilmediği kişilerin adıyla anılması (Gönül Hanım, Sarp, Dilan), geriye giden saatler, yaşlar ve yıllar (Defne'nin reklamcılık yılı, Ceren'in Pırnallı'daki süresi, Cemal'in kızının nerede yaşadığı), iki dalda aynı satırlar, bir dalda açılıp öbüründe kapanmayan bilgiler, isim çakışması (karar 56), Ela'nın omzunun açılma sırasına uyulmaması (artık önceden duymuş olana göre).
+- **Ölçüm:** bkz. "Oynanış süresi hedefi"; çoğu yol 2.000–3.000, bağı zayıf yollar daha kısa.
+- **Kullanıcıya düşen:** Yok. Telefonda oyun kendiliğinden güncellenir; I. Perde'yi bitirmiş kayıt 12. bölümden sürer.
+
+**Sıradaki:** 8. adım, III. Perde (Bölüm 20–28, 3–30 Kasım) (büyük).

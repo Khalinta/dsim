@@ -19,3 +19,4 @@ bolum/15-son-film.dsim
 bolum/16-cekici.dsim
 bolum/17-yirmi-alti.dsim
 bolum/18-fener-alayi.dsim
+bolum/19-son-deniz.dsim

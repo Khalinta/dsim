@@ -225,6 +225,7 @@ Uzunluk: Bir bölüm, oyuncunun tek bir okuyuşunda 2.500–4.000 kelime (15–2
   - **Lara, Kültür Evi:** Gündüz. Freskin önünde, Gönül Hanım'ın masasında. Lara azizin yarım yüzüne bakarak ne gördüğünü anlatıyor; oyuncu ilk kez onun gerçekten bir şeyi bildiğini duyuyor. (Lara'yla bağ varsa.)
 - **Gece:** Seçilmeyenlerden.
 - **Değişen:** Oyuncu bir kadının en çok kimseye göstermediği yerini gördü.
+- **Yazılırken değişen (7. adım):** Lara'nın freski salı gecesinin seçeneği değil, perşembe sabahı ayrı bir sahne (Lara'yla bağ varsa; para teklif edilmediyse); Gönül Hanım'ın 1962 envanterini Saniye Hanım'ın kocası Halit Bey tutmuş. Çarşamba Defne villaya gidip Lara'yla tabak anlaşması yapar. Tarık Hoca İTÜ transkriptini sorar. Evde kalana Onur'un Cansu itirafı ve Burak'ın İstanbul teklifi.
 
 ## 15. Son film
 **17 Ekim, Cuma. Kalabalık bölüm.**
@@ -241,6 +242,7 @@ Uzunluk: Bir bölüm, oyuncunun tek bir okuyuşunda 2.500–4.000 kelime (15–2
 - **Gece:** Seçmediğin biri bir şey yazar ya da yazmaz. Defne: "battaniyen güzeldi bu arada. kimin battaniyesiydi"
 - **Değişen:** Kasaba oyuncuyu biriyle eşleştirdi. Fabrika'nın kapısı nisana kadar kilitlendi.
 - **Dikkat:** Kalabalık sahnede herkese aynı ağırlığı vermeye çalışma; oyuncunun yanındaki kişi sahnenin merkezidir, diğerleri kenarda yaşar.
+- **Yazılırken değişen (7. adım):** Saadet Abla oyuncuya kırk yıllık ekose battaniyesini verir; "hangi battaniyenin altına" onun battaniyesiyle kimin yanına oturduğun olur. Onur'un yanı da bir seçenek. Ilgın gelirse nöbetini Çarşı Eczanesi'nden Sevim Abla'yla değiştirmiştir (salıyı o tutar). Filmin son cümlesi herkese ortak; ardından yanında oturanın tepkisi. Ceren'in fotoğrafı gece yarısından sonra gelir ("iki saattir göndermedim").
 
 ## 16. Çekici
 **20–23 Ekim, Pazartesi–Perşembe.**
@@ -254,6 +256,7 @@ Uzunluk: Bir bölüm, oyuncunun tek bir okuyuşunda 2.500–4.000 kelime (15–2
   - **Kültür Evi, lügat:** Defne'nin eski kelimeleri. Gönül Hanım'ın bağış kolisinde sırtı dökülmüş bir lügat; "mahzun"un altı çizilmiş. Yirmi lira. (Defne'yle bağ varsa ve doğum gününü duyduysa.)
 - **Gece:** Lara, seçilmediyse, 03:00: "araba gitti" / "araba benim değildi zaten" / "hiçbir şey benim değildi" / "bunu yazdığıma pişman olacağım ama yazdım"
 - **Değişen:** Oyuncu Ilgın ile Lara arasında bir şey olduğunu biliyor; ne olduğunu bilmiyor.
+- **Yazılırken değişen (7. adım):** ~~Lara'ya gitmek: villanın önünde, Lara arabanın içinde oturuyor, inmiyor.~~ → Çekici eczanenin önünden geçtikten sonra gelinir; Lara boş garajda, yağ lekesinin üstünde, olanı anlatır; oyuncu ona dolmuşa binmeyi öğretir. *Neden:* Çekici sabit sahnede çarşıdan geçiyor; aynı arabanın aynı anda villada durması mümkün değildi. Yol ayrımına Ela (Nilüfer'in kopan halatı) ve Saniye Hanım'ın son kolisi eklendi; lügat Halit Bey'in kitaplarından. Salı lodosta kulüpte düğüm dersi; perşembe Mendirek'te Hüsnü Kaptan.
 
 ## 17. Yirmi altı
 **24 Ekim, Cuma.**
@@ -267,6 +270,7 @@ Uzunluk: Bir bölüm, oyuncunun tek bir okuyuşunda 2.500–4.000 kelime (15–2
 - **Gece / ertesi gün:** Defne'ye gitmeyen ve doğum gününü bilen, 03:10'da bir mesaj alır: "onur söylemiş sana. sarp söyledi onur'a söylediğini" / "gelmedin." / "iyi. gelmemen iyiydi." / "🙂". Bilmeyen ise: "bugün doğum günümdü. dündü. saat üç, artık dündü" / "kimse bilmiyordu. iyi ki kimse bilmiyordu"
 - **Değişen:** Biri oyuncunun bir gece durduğunu, ya da gelmediğini, kaydetti.
 - **Dikkat:** Doğum günü sahnesi oyuncuyu kahraman yapmamalı. Durmak doğal olan; sahne bunu alkışlamaz. Defne ertesi gün bile teşekkür etmez.
+- **Yazılırken değişen (7. adım):** Sabah Ela'yla lodostan sonra soğuk su; öğleden sonra Saadet Abla'yla helva (her dalda birine verilir); Hasan Bey inmeden beri ilk kez Mendirek'te. Davet Sarp'tan gelir (Defne'yle bağ varsa); daveti olmayan ve Onur'u dinlemeyen oyuncu "bilmeyen" sayılır. Eve dönen için ertesi sabah Nuri Abi'yle ağ ve "Kalacak mısın?" sorusunun ilk hâli. Ceren ve Lara dallarında itiraf kapısı. Ertesi gün: Defne'nin kanepesinden çıkan oyuncuyu Sude görür; Ilgın'ın nöbet penceresi.
 
 ## 18. Fener alayı
 **29 Ekim, Çarşamba. Kalabalık bölüm.**
@@ -281,6 +285,7 @@ Uzunluk: Bir bölüm, oyuncunun tek bir okuyuşunda 2.500–4.000 kelime (15–2
 - **Yol ayrımı:** Kiminle yürüyorsun? Kordonda görülme riski romanın en yüksek olduğu yerlerden. Birden fazla kadınla bir şey yaşıyorsa oyuncu burada bunu ilk kez gerçekten hisseder: biriyle yürürken öbürünün bakışı.
 - **Gece:** Görülenlerin ve görenlerin yazışmaları. Onur: "kanka seni gördüm" / "kiminle olduğunu söylemiycem" / "kimseye"
 - **Değişen:** Kasaba oyuncunun kiminle olduğunu artık biliyor ya da bildiğini sanıyor.
+- **Yazılırken değişen (7. adım):** ~~Ilgın, Efe ve Hasan Bey'le~~ → Ilgın, Hasan Bey ve Gülay Hanım'la. ~~Ela kulüpteki çocuklarla, fenerleri yakıyor.~~ → Ela kulübün fenerlerini yakıyor. *Neden:* Esnemez kural; yürüyüş romantik bir sahne, 18 yaş altı kimse anılmaz. Hasan Bey kordonda Lara'yı çağırır; Defne Lara'ya herkesin önünde "Ortak!" der; Sude'nin annesi görüntülü arar. Öğleden sonra okaliptüs kesimi bahara ertelenir. Öğlen babadan bayram mesajı: itiraf kapısı. Mendirek'te kalana çatı ve Saadet Abla'nın 1985'i.
 
 ## 19. Son deniz
 **31 Ekim – 2 Kasım, Cuma–Pazar. II. Perdenin sonu.**
@@ -291,12 +296,13 @@ Uzunluk: Bir bölüm, oyuncunun tek bir okuyuşunda 2.500–4.000 kelime (15–2
   - **Ela, şamandıra:** "Şamandıraya kadar yarış. Kaybeden döner ısmarlar." Kum, tuz, ıslak saç. Ela ilk kez kazanmayı umursamıyor. Kulüp binası, gece, tekne deposu: Ela'yla ilk gece; rahat, rekabetçi, gülerek; bir an omzu acıyor ve bunu söylemek onu utandırıyor.
   - **Ceren, Kırık Koy:** Cuma öğle; izin günü (cumartesi nöbetçi). Ceren'in yılın son yüzmesi. Kimsenin görmediği yer. Kararı o anda o verir: "Emin değilim." Durur; ya gerçekten durur, ya da emin olur. "Bunu yapmamamız lazım." Sonra bir sigara.
   - **Sude, soru:** "Cumartesi saat 4'te boş musun? Bir şey sormak istiyorum, yüz yüze." Lodos Kahve. "Bana ilgi mi duyuyorsun, yoksa kibar mı davranıyorsun? Ayırt edemiyorum. Bunu sormak istemiyordum ama sordum." Oyuncunun cevabı (net ya da kaçamak) Sude'nin yayını belirler.
-  - **Ilgın, nöbet çıkışı:** Pazar sabahı (2 Kasım nöbetinden sonra) çay bahçesinde ilk çay. Ilgın oyuncunun çayını da söylemiş. Kordonun boş hâli. Bir şey söylemiyor; bir şeyi kabul ediyor: "Peki. Ama ben söylemedim, sen anladın."
+  - **Ilgın, ~~nöbet çıkışı:** Pazar sabahı (2 Kasım nöbetinden sonra) çay bahçesinde ilk çay.~~ → pazar öğlen:** Tezcanların evinde börek ve tavla, sonra nöbetinden önce çay bahçesinde ilk çay. *Neden:* Nöbet o gecenin tarihidir; 2 Kasım nöbeti pazar gecesi. Ilgın oyuncunun çayını da söylemiş. Kordonun boş hâli. Bir şey söylemiyor; bir şeyi kabul ediyor: "Peki. Ama ben söylemedim, sen anladın."
   - **Defne:** "güneş altıyı yirmi geçe battı" / "resmî itirazımı ilettim". Akşam atölye; ilk kez kahvaltıya kalmak, kendi isteğiyle: kural iki bozuluyor. (İlk yağmurda kurallar konuştuysa.)
   - **Lara:** Havuz yeşil; denize giriyor, gece. Oyuncuyu çağırıyor: "denize gir. benimle. bu bir davet değil, bir rica. rica etmeyi bilmiyorum, bu ilk deneme."
 - **Gece:** Yılın son sıcak gecesi. Ertesi sabah poyraz başlayacak.
 - **Değişen:** Bir ilişki bir eşiği geçti. Ya da oyuncu bir eşikte kaçtı.
 - **Dikkat:** Bu bölümün altı yolu da "ilk gece" olmamalı. Bazılarında eşik bir soru, bir çay, bir sınır. Cinsellik yazıldığı yerde karakterin belgesindeki gibi: Ela'da omuz, Ceren'de suçluluk ve klinik dürüstlük, Defne'de kalan biriyle yavaşlık.
+- **Yazılırken değişen (7. adım):** Eşikler üç güne yayıldı: cuma Ceren (Kırık Koy) ya da Ela (şamandıra, gece tekne deposu); cumartesi 16:00 Sude; cumartesi gecesi Defne ya da Lara; pazar Ilgın. Seçilmeyen cuma için Uzunkum (Onur, Lagün'ün kalıntısı, Burak'ın son mesajı). Lara'nın gecesi bağ yüksekse ilk gece ("Hangi oda? Altı tane var. Seç."), değilse "sadece uyu". Pazar gecesi poyraz başlar; II. Perde orada biter.
 
 ---
 
