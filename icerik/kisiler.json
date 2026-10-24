@@ -20,6 +20,7 @@
   "hatice": { "ad": "Hatice Hemşire", "tanimsiz": "Hemşire", "renk": "#7a5a62" },
   "kerem": { "ad": "Kerem", "tanimsiz": "Kerem", "renk": "#5f6f7a" },
   "gulay": { "ad": "Gülay Hanım", "tanimsiz": "Ilgın'ın annesi", "renk": "#7d6a52" },
+  "nermin": { "ad": "Nermin Hanım", "tanimsiz": "Sude'nin annesi", "renk": "#6f6a8a" },
   "rahmi": { "ad": "Rahmi Usta", "tanimsiz": "Fırıncı", "renk": "#8a7356" },
   "rasim": { "ad": "Rasim Efendi", "tanimsiz": "Yaşlı adam", "renk": "#6e6a58" },
   "dilan": { "ad": "Dilan", "tanimsiz": "Kıvırcık kız", "numara": "0541 287 33 60", "renk": "#7c6b8f", "yazmaHizi": 1.1, "okumaGecikmesi": 30 },
