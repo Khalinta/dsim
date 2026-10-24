@@ -366,13 +366,13 @@ Son teknede Ela duruyor; teknenin kenarına oturuyor, nefes nefese.
 Telefonunu cebinden çıkarmıyor. Mesajı ezbere söylüyor; bir yarışın sonucunu söyler gibi.
 >> eğer ela.mert_duydu
   * "Doktor ne demişti?"
-    Ela sana bakıyor. Uzun.
-    @ela: Altı ay demişti.
-    @ela: İkinci sakatlıktan sonra. "Altı ay. Dönersin." Ben "olimpik seviyeyi unut dedi" dedim herkese. Babama, hocama, Mert'e. Mert biliyordu; doktoru tanıyordu.
-    Bunu söyleyip susuyor. Teknenin kenarında; elleri dizlerinde, sağ omzu düz, hiçbir şey olmamış gibi.
-    @ela: Bunu kimse bilmiyor. Bir Mert biliyor, bir sen. Mert'e söylemedim, o bildi. Sana söyledim.
-    [ela.ben_biraktim]
-    [ela.yakin +2]
+    Ela sana bakıyor. Uzun; bir şey tartıyor, ağzını açıyor.
+    Sonra kapatıyor.
+    @ela: Doktor çok şey dedi. Doktorlar çok şey der. Ceren abla da çok şey diyor.
+    @ela: Mert bir şey bildiğini sanıyor. Bilmiyor. Bilmiyor diyorum; bilmesin diyorum aslında. İkisi aynı şey değil 😭
+    Teknenin kenarından kalkıyor. Sağ omzunu sol eliyle tutmuyor; bu sefer tutmamaya çalıştığını görüyorsun, eli bir an kalkıyor, iniyor.
+    [ela.doktor_sordu]
+    [ela.yakin +1]
   * (Bir şey sorma. Yanına otur.)
     [ela.yakin +1]
     Yanına oturuyorsun; teknenin kenarına. Ela bir şey demiyor. Sonra başını omzuna koyuyor; bir saniye, bir yelken torbasına koyar gibi.
