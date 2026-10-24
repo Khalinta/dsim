@@ -902,50 +902,50 @@ kişi: defne
 Sarı kapının altından duman sızıyor. İnce, gri, sokak lambasının ışığında kıvrılarak yukarı. Müdür kapının önünde, kapıya değil sokağa bakıyor, burnunu buruşturmuş; içeride kalmayı reddetmiş bir köpek.
 Kapı aralık. İçerisi duman. Atölyenin tavanında bir bulut; lamba onun içinde sarı bir leke, raflardaki kâseler bir sisin içinden bakıyor. Pencere ardına kadar açık; soğuk içeri giriyor, duman çıkmıyor.
 Defne sobanın önünde, çömelmiş; elinde bir maşa, gözleri yaşlı, dumandan.
-@defne: geldin. gel değil, gir; gelmek dışarıda kalanların fiili.
-@defne: bu soba geçen kışı Arda'nın evinde geçirdi, bana bu sabah geldi. Arda "çalışıyor" dedi. Çalışıyor, haklı; sadece yönünü bilmiyor.
+@defne: Geldin. Gel değil, gir; gelmek dışarıda kalanların fiili.
+@defne: Bu soba geçen kışı Arda'nın evinde geçirdi, bana bu sabah geldi. Arda "çalışıyor" dedi. Çalışıyor, haklı; sadece yönünü bilmiyor.
 Sobanın borusuna bakıyorsun. Duvara giden boru; dirsek, uzun bir parça, sonra duvardaki delik. Borunun ortasında, dirseğin hemen üstünde, küçük bir kol; bir kapağın kolu, yatay, kapalı.
 * (Kolu çevir. Kapağı aç.)
   [defne.baca22]
   Kolu çeviriyorsun; dikey. Borunun içinde bir şey değişiyor; bir uğultu, bir çekiş. Duman sobanın ağzından içeri dönüyor, borudan yukarı, dışarı. Bir dakika. Tavandaki bulut incelmeye başlıyor.
   Defne bakıyor. Kola, sana, sobaya, kola.
-  @defne: bu muydu?
-  @defne: bir kol. bir saattir dumanda oturuyorum ve bir kolmuş, çeyrek tur.
-  @defne: bunu kimseye anlatmayacağım; anlatırsam bütün kasaba "Defne bir kolu bilmiyormuş" der, ki doğru.
+  @defne: Bu muydu?
+  @defne: Bir kol. Bir saattir dumanda oturuyorum ve bir kolmuş, çeyrek tur.
+  @defne: Bunu kimseye anlatmayacağım; anlatırsam bütün kasaba "Defne bir kolu bilmiyormuş" der, ki doğru.
 * "Önce sobayı söndürelim."
   Sobanın kapağını açıyorsun; içeride odunlar, yarım yanmış, tüten. Maşayla dağıtıyorsun; kül kovasına, suyla. Sonra borudaki kolu fark ediyorsun; kapalı. Çeviriyorsun.
   [defne.baca22]
-  @defne: söndürdün. yeniden yakacağız, ama artık biliyoruz ne yaptığımızı.
-  @defne: "biliyoruz" dedim, "biliyorsun" demem lazımdı; ben hâlâ bilmiyorum.
+  @defne: Söndürdün. Yeniden yakacağız, ama artık biliyoruz ne yaptığımızı.
+  @defne: "Biliyoruz" dedim, "biliyorsun" demem lazımdı; ben hâlâ bilmiyorum.
 Yarım saat. Pencere açık; duman çıkıyor, soğuk giriyor. Defne iki battaniye getiriyor; birini sana atıyor, öbürüne sarılıyor. Kanepede, yan yana, pencereden gelen ayazın içinde, sobanın yeniden tutuşmasını bekliyorsunuz.
 Müdür içeri giriyor; burnunu havaya kaldırıp kokluyor, kabul ediyor, sobanın önüne kıvrılıyor.
-@defne: bu akşam içmedim.
-@defne: mesajda yazdım, yüzüne de söylüyorum, çünkü mesajda söylenen şey sabah silinebilir; yüze söylenen silinmiyor, yüz hatırlıyor.
-@defne: geçen hafta gece üçte sana bir fotoğraf attım. şarap kadehi, telefon. sabah "şarap yazdı onu" dedim. şarap yazmadı; ben yazdım, şarap yalnızca kalemi tuttu.
+@defne: Bu akşam içmedim.
+@defne: Mesajda yazdım, yüzüne de söylüyorum, çünkü mesajda söylenen şey sabah silinebilir; yüze söylenen silinmiyor, yüz hatırlıyor.
+@defne: Geçen hafta gece üçte sana bir fotoğraf attım. Şarap kadehi, telefon. Sabah "şarap yazdı onu" dedim. Şarap yazmadı; ben yazdım, şarap yalnızca kalemi tuttu.
 Pencereyi kapatıyorsun. Soba yanıyor; borusundan bir uğultu, dışarı, doğru yöne.
 >> eğer defne.biz_neyiz
   Defne battaniyenin kenarını çekiştiriyor.
-  @defne: geçen cuma bir şey sordun. biz neyiz dedin; ben de seni gönderdim.
-  @defne: bu gece de cevabım yok. kural bir hâlâ yürürlükte. ama seni göndermeyeceğim; bu ikisi aynı gece olabiliyormuş, bunu bu akşam öğrendim.
+  @defne: Geçen cuma bir şey sordun. Biz neyiz dedin; ben de seni gönderdim.
+  @defne: Bu gece de cevabım yok. Kural bir hâlâ yürürlükte. Ama seni göndermeyeceğim; bu ikisi aynı gece olabiliyormuş, bunu bu akşam öğrendim.
   * "Soru yok. Kalıyorum."
     [defne.yakin +1]
-    @defne: kalıyorsun.
-    @defne: soru sormadan kalan biri. bu da bir kampanya olabilirdi, ama değil, söz.
+    @defne: Kalıyorsun.
+    @defne: Soru sormadan kalan biri. Bu da bir kampanya olabilirdi, ama değil, söz.
   * "Cevap vermeyeceksen gideyim."
     [defne.gitti22]
     Defne sana bakıyor. Bir şey söylemek istiyor; görüyorsun, ağzının kenarında. Söylemiyor.
-    @defne: haklısın.
-    @defne: git. soba yanıyor artık, sayende. bunu yazacağım bir yere; borcum var sana, bir kol kadar.
+    @defne: Haklısın.
+    @defne: Git. Soba yanıyor artık, sayende. Bunu yazacağım bir yere; borcum var sana, bir kol kadar.
     Kapıdan çıkıyorsun. Müdür başını kaldırıyor; seni izliyor, kalkmıyor.
     -> son
-@defne: kal.
-@defne: bu gece. sabaha kadar. bu bir rica, ben ricayı küçük harfle yazarım ama yüksek sesle söylüyorum.
+@defne: Kal.
+@defne: Bu gece. Sabaha kadar. Bu bir rica, ben ricayı küçük harfle yazarım ama yüksek sesle söylüyorum.
 * (Kal.)
   -> yukari
 * "Sadece kalayım. Uyuyalım."
   [defne.sadece_kaldi22]
-  @defne: uyuyalım.
-  @defne: tamam. uyumak da bir şey. hatta bazen en büyüğü; kimseyle uyumadım ben, yani uyumadım, gerçekten uyumadım.
+  @defne: Uyuyalım.
+  @defne: Tamam. Uyumak da bir şey. Hatta bazen en büyüğü; kimseyle uyumadım ben, yani uyumadım, gerçekten uyumadım.
   -> uyku
 -> yukari
 
@@ -954,72 +954,72 @@ Pencereyi kapatıyorsun. Soba yanıyor; borusundan bir uğultu, dışarı, doğr
 [defne.yakin +2]
 Merdiven. Defne önde; battaniye omzunda, bir pelerin gibi sürükleniyor basamaklarda. Üst kat; yatak, raflar, kitaplar, bir lamba. Sobanın sıcağı aşağıdan yukarı çıkıyor; tavanın altında toplanıyor, yatağın üstünde.
 Defne lambayı yakıyor. Söndürmüyor.
-@defne: açık kalsın.
-@defne: yüzünü görmek istiyorum. ilk gece görmedim, karanlıktı, hızlıydı, sezonluk. sonra gördüm ama bu gece başka türlü görmek istiyorum, sobayı tamir eden birinin yüzünü.
+@defne: Açık kalsın.
+@defne: Yüzünü görmek istiyorum. İlk gece görmedim, karanlıktı, hızlıydı, sezonluk. Sonra gördüm ama bu gece başka türlü görmek istiyorum, sobayı tamir eden birinin yüzünü.
 Saçında duman kokusu; seninkinde de. Defne bunu fark ediyor, kokluyor, gülüyor.
-@defne: ikimiz de bir soba gibi kokuyoruz. bu en kötü afrodizyak; bunu bir yere not et, reklamını yapmayalım.
+@defne: İkimiz de bir soba gibi kokuyoruz. Bu en kötü afrodizyak; bunu bir yere not et, reklamını yapmayalım.
 Gülerek öpüyor. Gülüşü ağzının içinde; sonra gülüş bitiyor, öpüş bitmiyor.
 Kazağını çıkarıyor; sonra yarıda bırakıyor, kafası kazağın içinde, kolları yukarıda, kımıldamadan.
-@defne: yardım et. sıkıştım. bu da romantik bir an değil, ama bizim anımız.
+@defne: Yardım et. Sıkıştım. Bu da romantik bir an değil, ama bizim anımız.
 * (Kazağı çek. Gül.)
   [defne.yakin +1]
   Kazağı çekiyorsun; saçları elektriklenmiş, havada, bir tutam alnında. Defne'nin yüzü ortaya çıkıyor; gülüyor, sen de. Lambanın ışığında, duman kokusunda, yarı çıplak, gülüyorsunuz; Defne gülerek sevişir, bunu bu gece öğreniyorsun.
 * (Kazağı çek. Gülme. Ona bak.)
   Kazağı çekiyorsun. Defne'nin yüzü ortaya çıkıyor; gülüyor, sonra bakışını görüyor, gülmeyi bırakıyor.
-  @defne: bakıyorsun.
-  @defne: bak. lamba bunun için açık.
+  @defne: Bakıyorsun.
+  @defne: Bak. Lamba bunun için açık.
 Yatağa uzanıyor; sırtüstü, seni üstüne çekmeden, yanına. Elini tutuyor; göğsüne koyuyor, sonra karnına, sonra daha aşağı, yavaş, bir sırrı fırçayla sürer gibi.
-@defne: bugün sen.
-@defne: hep ben yönetiyorum. bugün sen yönet. ben bakacağım; bakmak da bir tür yönetmekse ikimiz de yönetiyoruz.
+@defne: Bugün sen.
+@defne: Hep ben yönetiyorum. Bugün sen yönet. Ben bakacağım; bakmak da bir tür yönetmekse ikimiz de yönetiyoruz.
 * (Yavaş. Onun nefesini dinleyerek.)
   [defne.yakin +1]
   Yavaş. Defne'nin nefesini dinliyorsun; hızlandığı yerde yavaşlıyorsun, yavaşladığı yerde bekliyorsun. Defne gözlerini kapatmıyor; lambanın ışığında, açık, sana bakıyor.
 * ("Böyle mi?" diye sor.)
-  @defne: böyle.
-  @defne: sorman güzel. sorunca cevabı ben de öğreniyorum; kendime hiç sormamıştım.
+  @defne: Böyle.
+  @defne: Sorman güzel. Sorunca cevabı ben de öğreniyorum; kendime hiç sormamıştım.
 * (Dur. "Emin misin?")
   Duruyorsun. Defne doğruluyor; dirseklerinin üstünde.
-  @defne: eminim.
-  @defne: ayığım, eminim, korkuyorum. üçü birden. üçü de doğru; ikisi iyi, biri normal.
+  @defne: Eminim.
+  @defne: Ayığım, eminim, korkuyorum. Üçü birden. Üçü de doğru; ikisi iyi, biri normal.
 Komodinin çekmecesinde bir kutu; Defne uzanıp açıyor, birini sana veriyor. Bir şey demiyor; yalnızca kaşını kaldırıyor, yarım santim.
 Üstüne geliyorsun. Defne bacaklarını beline doluyor; seni kendine çekiyor, yavaş, sonra bir an, sonra hepsi. Nefesi kesiliyor; gözlerini kapatmıyor.
 Aşağıda Müdür bir kere havlıyor; sobaya, bir kıvılcıma, rüyasına. Defne gülüyor; altında, sana sarılmış, gülerek. Gülüşü göğsünde titriyor; senin göğsünde.
-@defne: köpeğim bile yorum yapıyor.
+@defne: Köpeğim bile yorum yapıyor.
 Sonra gülmüyor. Gözleri açık; lambanın ışığı içlerinde. Elleri yüzünü tutuyor.
-@defne: bana bir şey söyle. doğru bir şey. slogan değil.
+@defne: Bana bir şey söyle. Doğru bir şey. Slogan değil.
 * "Kalıyorum."
   [defne.kaliyorum22]
   Defne'nin elleri yüzünde duruyor. Gözleri bir an kayıyor; tavana, lambaya. Sonra geri geliyor.
-  @defne: biliyorum.
-  @defne: korkunç bir cümle bu. bir daha söyle.
+  @defne: Biliyorum.
+  @defne: Korkunç bir cümle bu. Bir daha söyle.
 * "Korkuyorum."
   [defne.yakin +1]
-  @defne: ben de.
-  @defne: ikimiz de korkuyoruz ve ikimiz de buradayız. bu bir şey demek; ne demek bilmiyorum, ama bir şey.
+  @defne: Ben de.
+  @defne: İkimiz de korkuyoruz ve ikimiz de buradayız. Bu bir şey demek; ne demek bilmiyorum, ama bir şey.
 * ("Defne." Yalnızca adını.)
-  @defne: bir daha.
+  @defne: Bir daha.
   Bir daha söylüyorsun. Defne'nin yüzünde bir şey; bir kıvılcım, sobanın kapağı açılınca görünen.
 Uzun. Lambanın ışığında, sobanın uğultusunda, duman kokusunda. Defne bir yerde ritmi değiştiriyor; seni yana çeviriyor, üstüne çıkıyor, sonra bırakıyor, yine altında. Yönetmeyecekti; yönetiyor, sonra yine bırakıyor. Kırk dakika; belki daha uzun. Bir yerde adını söylüyor; bir kere, düz, nefes nefese. Sonra sen.
 Sonra lamba açık. Defne yanında; başı omzunda, eli göğsünde, gözleri açık, tavana.
-@defne: lamba açıktı.
-@defne: hep açıktı ve ben hep baktım; kolay bir cümle değil bu, ama ayık bir cümle.
+@defne: Lamba açıktı.
+@defne: Hep açıktı ve ben hep baktım; kolay bir cümle değil bu, ama ayık bir cümle.
 -> uyku
 -> uyku
 
 :: uyku
 Sabaha kadar. Soba bir kere sönüyor; Defne kalkıyor, battaniyeyle iniyor, odun atıyor, kolu kontrol ediyor, gülüyor kendi kendine, çıkıyor. Yanına uzanıyor; ayakları buz gibi, bacaklarının arasına sokuyor.
-@defne: kolu kontrol ettim. dikey. bir kol öğrendim bu gece; hayatımın en verimli gecesi.
+@defne: Kolu kontrol ettim. Dikey. Bir kol öğrendim bu gece; hayatımın en verimli gecesi.
 >> zaman 13 Kasım 08:20
 Sabah. Atölyenin camında buğu; dışarıda ayaz, çatılarda beyaz. Soba hâlâ ılık.
 Mutfağa iniyorsun. Buzdolabında yumurta, iki domates, bir biber. Tava. Menemen; yazın öğrendiğin tek şey, iyi yaptığın tek şey.
 Defne merdivenin başında; battaniye omzunda, saçları bir yana yatmış, gözleri yarı kapalı. Kokuyu alıyor.
-@defne: kural ikiyi hatırlatırım: kahvaltı yok.
+@defne: Kural ikiyi hatırlatırım: kahvaltı yok.
 Aşağı iniyor. Masaya oturuyor. Tavayı önüne çekiyor; ekmeği koparıp batırıyor, bir lokma, bir lokma daha.
 >> eğer defne.kahvalti
-  @defne: ilk menemeni ben yaptım, bunu sen yaptın. benimki daha iyiydi. değildi. seninki daha iyi; bunu kayıtlara geçirme, inkâr ederim.
+  @defne: İlk menemeni ben yaptım, bunu sen yaptın. Benimki daha iyiydi. Değildi. Seninki daha iyi; bunu kayıtlara geçirme, inkâr ederim.
 >> yoksa
-  @defne: kural iki askıya alınmıştır. bugünlük. menemen yüzünden; kural koyan biri menemene yenilirse bunu reklamda kullanmazsın.
-@defne: soba ılık. kol dikey. menemen iyi. üç doğru cümle, sabah dokuzdan önce; bu bir rekor.
+  @defne: Kural iki askıya alınmıştır. Bugünlük. Menemen yüzünden; kural koyan biri menemene yenilirse bunu reklamda kullanmazsın.
+@defne: Soba ılık. Kol dikey. Menemen iyi. Üç doğru cümle, sabah dokuzdan önce; bu bir rekor.
 [defne.esik22]
 -> son
 
@@ -1188,7 +1188,7 @@ Torbaların üstünde, yan yana. Depo soğuk; Ela montunun yakasını kaldırıy
 Uyuyor. Beş dakika değil; yirmi. Sen kımıldamıyorsun. Ampul tavanda hafifçe sallanıyor; bir yerde bir cereyan.
 Uyandığında yüzünü omzundan kaldırıyor; yanağında montunun fermuarının izi.
 @ela: Uyudum.
-@ela: Söyleme kimseye. Ela uyumaz. Ela dikiş diker, bağırır, kazanır. Uyumaz 😭
+@ela: Mehmet duyarsa bitti. Ela uyumaz. Ela dikiş diker, bağırır, kazanır. Uyumaz 😭
 Kapıyı kilitliyor. Anahtarı cebine koyarken bir an duruyor; anahtara bakıyor, sana.
 @ela: Teşekkür. Tuttuğun için. Yelkeni yani.
 Marinadan kordona yürüyorsunuz. Gece bir; direklerin telleri sessiz, rüzgâr yok, bir tek bir teknenin içinde bir radyo, kısık. Ela ellerini cebine sokmuş, yüksüğün izi avucunda kırmızı.
