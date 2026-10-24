@@ -178,6 +178,28 @@ Karakterler hatırlar ama insan gibi:
 
 **Takas testi, ritimle:** Bir repliği başka birinin ağzına koy; kelimeler değil cümlenin biçimi de yerinden oynamalı. Defne'nin replikleri Ela'nın ağzına sığmamalı: çok uzun, çok süslü. Ela'nınkiler Sude'nin ağzına sığmamalı: çok kırık, çok argo.
 
+## 5c. Davranış ayrımı: aynı ana herkes başka türlü
+
+> 8. adımın sonunda kullanıcı ekledi: her karakter yalnızca konuşmasıyla değil, kişiliğiyle ve davranışıyla da kendine özgü olsun. Ölçünce III. Perde'de ritimden derin bir benzerlik çıktı: oyuncu sustuğunda altı kadının altısı da bunu övüyordu ("Bir şey söylemedin. İyi."), altısı da yakınlaştığında "kimse bunu yapmadı / ilk kez" diye itiraf ediyordu. Bu da yazarın sesiydi.
+
+Bir sahneyi yazmadan önce sor: **bu kadın bu anda ne yapar?** Ne söyler değil; ne yapar. Tablo karakter belgelerinden çıkarıldı; belge ile tablo çelişirse belge kazanır.
+
+| An | Ilgın | Sude | Ceren | Defne | Ela | Lara |
+|---|---|---|---|---|---|---|
+| Oyuncu susunca | Fark eder, söylemez; bir iş yapar (çay koyar, kutu dizer). | Susmanın ne demek olduğunu sorar; anlamını bilmeden duramaz. | Sever; tek kişi o. Sessizliği hak eden bir şey sayar ("sessizliğe dayanabiliyorsun"). | Doldurur: bir espri, bir slogan; sonra kendisi de susar ve o susuş sahnenin kalbidir. | Sinirlenir: "Bir şey söyle." Sessizliği kararsızlık sayar. | Güç oyunu okur; görüldü atar, sonra pişman olur. |
+| Bir iyilik görünce | "Tamam." Teşekkür etmez; ertesi gün karşılığını eylemle verir (poğaça, ilaç, çayını da söylemiş olmak). | Teşekkür eder, uzun; neden teşekkür ettiğini açıklar. | Bir kere, net: "Teşekkür ederim." Tekrarlamaz. | Bir benzetmeyle geçiştirir; sonra bir nesne yapıp verir (kâse, kupa). | "Aferin" der ya da omzuna vurur; duygusunu bir harekete çevirir. | Önce iğneler, sonra İngilizce bir kelimeyle kabul eder; bir şey ısmarlamak ister, parası yok. |
+| Sır açarken | Kapıyı aralar, açmaz: "Başka zaman." Açtığında tek cümle. | Sırayla, numaralı, eksiksiz; sonunda "bu çok uzun oldu". | Klinik, düz, saat ve tarihle; duygusunu adlandırmaz, belirtisini söyler. | Bir hikâye gibi anlatır, ortasında güler, sonunda susar. | Anlatmaz; yürürken ya da teknedeyken ağzından kaçar, sonra kaçar. | Üçüncü şahısla, ironiyle ("bankanın evinde oturan kız"); gece üçte doğrudan. |
+| Takdir edilince | Sertleşir; konuyu değiştirir. | İltifata değil gözleme inanır; ayırır. | "Çok güçlüsün"den nefret eder; soğur. | Kampanya diliyle savuşturur. | Kızarır, bağırarak reddeder. | Alışkın; ama içtenini tanır ve şaşırır. |
+| Kızınca | "Buyurun." Müşteri gibi davranır; görüldü. | Bir liste yazar. "Anladım." | Nazikleşir; en kötü işaret. | Kaybolur; kapıya kâğıt. | Bağırır, kordonun ortasında; sonra koşar. | Önce gider. |
+| Yakınlık gösterirken | Zamanıyla: Clio'ya bindirmek, nöbet penceresi, "yarın da gel". | Sorarak: "Elimi tutmak istersen tutabilirsin; garip mi oldu?" | Saatle: gece üçte yazmak, fırında iki çay. | Elleriyle: yaptığı bir şeyi vermek; kalmak. | Bedeniyle: yanında koşmak, koluna girip çıkmak, simit. | Gece üçte; gündüz inkâr eder. |
+
+**Kimsenin olmayan davranış tikleri** (okuma aracı sayıyor):
+- Oyuncunun susmasını övmek: yalnızca Ceren'de doğal; başkasında bir kere bile fazla.
+- "Kimse bunu yapmadı / ilk kez" itirafı: Sude'nin deneyimsizliğinde doğal (gerçekten ilkler); öbürlerinde bütün roman boyunca birkaç kez, bir dönüm noktasında.
+- Bir şeyi "bir yere yazmak / not etmek": Sude'nin (defter, günlük). Defne'nin "bir kenara" demesi bile seyrek olmalı.
+
+**Takas testi, davranışla:** Bir sahnede kadının adını değiştir. Sahne hâlâ çalışıyorsa yazılmamıştır. Ilgın'ın sahnesinde Ela olsa oyuncunun susmasına kızardı; Sude olsa ne demek olduğunu sorardı. Sahne bunu taşımıyorsa yeniden yaz.
+
 ## 6. Denetim listesi (her metin parçası için)
 
 Bir parçayı bitmiş saymadan önce sırayla:

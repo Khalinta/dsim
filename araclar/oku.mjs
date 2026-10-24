@@ -94,6 +94,10 @@ const SES_KALIPLARI = [
   ['kimseye söyleme', /kimseye söyleme/i, null],
   ['söylemem gerek(miyordu)', /söylemem (gerek|lazım)/i, null],
   ['niye/neden söyledim', /(niye|neden) söyl(üyorum|edim)/i, null],
+  // Davranış kalıpları (rehber 5c): aynı ana aynı tepki.
+  ['oyuncunun susmasını övmek', /bir ?şey (söylemedin|demedin)|susuyorsun|sustun\b|sormadın|konuşmadın|kımıldamadın/i, 'ceren'],
+  ['kimse yapmadı / ilk kez itirafı', /ilk kez|ilk defa|hayatımda ilk|kimse (bunu )?(yapmadı|yapmamıştı|söylemedi|sormadı)/i, 'sude'],
+  ['bir yere yazmak / not etmek', /bir yere yaz|deftere|günlüğe|not ed/i, 'sude'],
 ];
 const sesSatirlari = new Map(Object.keys(SES_HEDEF).map((k) => [k, []]));
 // Replikler iç içe durur (seçenek, koşul, yazışma); ağacın tamamı gezilir.
