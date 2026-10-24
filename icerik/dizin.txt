@@ -28,3 +28,4 @@ bolum/24-zeytin.dsim
 bolum/25-anne.dsim
 bolum/26-yazi.dsim
 bolum/27-yirmi-iki.dsim
+bolum/28-kural-bir.dsim
