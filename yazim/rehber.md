@@ -146,6 +146,38 @@ Karakterler hatırlar ama insan gibi:
 
 ---
 
+## 5b. Ses ayrımı: cümle ritmi ve kimin kalıbı kimin
+
+> 7. adımın sonunda kullanıcı fark etti, ölçünce doğrulandı: altı kadın aynı ritimle konuşuyordu. Cümle başına ortalama 3 kelime, cümlelerin beşte biri tek kelime ("Tamam. Neyse. Bilmiyorum."). Bu yazarın sesiydi, onların değil. Okuma aracı artık her adımda bunu ölçüyor (`okuma/ozet.md`, "Ses ayrımı").
+
+**Ritim hedefleri** (konuşma ve mesaj birlikte):
+
+| Kişi | Kelime/cümle | Tek kelimelik cümle | Cümlenin mimarisi |
+|---|---|---|---|
+| Defne | 7–11 | en çok %10 | Akar, bağlaçlarla uzar, virgülle zincirlenir, benzetmeyle biter. Kısa cümle yalnızca ciddileşince; o zaman bir uyarıdır. |
+| Sude | 7–11 | en çok %8 | Tam, kurallı, öznesi yüklemi yerinde; yan cümleler ("…dığı için", "…sa bile"). Kısaltma yok. Kendini düzeltirken bile cümle kurar. |
+| Ceren | 6–9 | en çok %12 | Kısa, kuru iki cümleden sonra beklenmedik uzunlukta bir cümle; tıbbi kelime ironiyle. Mesajda paragraf. |
+| Lara | 5–8 | en çok %15 | Hızlı, iğneli; soruya soruyla cevap; cümlenin ortasında konu değiştirir; en fazla bir İngilizce kelime. |
+| Ilgın | 3–5 | en çok %30 | Kısa ve net; ama laf sokmak için yan cümle kurar. "He". Eczacılık. Soruya soruyla. |
+| Ela | 3–5 | en çok %30 | Kısa, emir kipi, ünlem; argo yerinde; denizcilik terimleri. Kısalığı Ilgın'ınkinden farklı: Ilgın keser, Ela bağırır. |
+
+**Kalıpların sahipleri.** Bir kalıp yalnızca sahibinin ağzında kullanılır; başkasının ağzında görülürse yeniden yazılır.
+
+| Kalıp | Sahibi |
+|---|---|
+| "neyse" (konuyu kapatmak) | Lara |
+| "kural", "kampanya", "altına küçük puntoyla" | Defne |
+| "sayma / sayılır" | Lara |
+| "bilgin olsun", "bunu bil", "bu bir … (kendini etiketlemek: bu bir içgörü, bu bir şakaydı)" | Sude |
+| "fark var" | Ilgın |
+| "bir şey demiyorum. dedim zaten" | Ela |
+| "gerçek bir cevap", "kibar ve gerçek" | Ceren |
+| "Hm." | Saadet Abla, Saniye Hanım |
+
+**Kimsenin olmayan kalıplar** (yazarın tikleri; kimse kullanmaz): "Bunu söylemem gerekmiyordu. Söyledim.", "Bunu niye söyledim bilmiyorum.", "Bunu kimseye söyleme.", "İkisi." (iki duyguyu birden söyleyip "ikisi" diye bağlamak), bir kelimeyi sorup kendi cevaplamak ("Kızgın mıyım? Değilim.").
+
+**Takas testi, ritimle:** Bir repliği başka birinin ağzına koy; kelimeler değil cümlenin biçimi de yerinden oynamalı. Defne'nin replikleri Ela'nın ağzına sığmamalı: çok uzun, çok süslü. Ela'nınkiler Sude'nin ağzına sığmamalı: çok kırık, çok argo.
+
 ## 6. Denetim listesi (her metin parçası için)
 
 Bir parçayı bitmiş saymadan önce sırayla:

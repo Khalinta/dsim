@@ -76,6 +76,54 @@ for (const p of icerik.parcalar.values()) {
 }
 const ayniSatirlar = [...satirYerleri].filter(([, y]) => y.length > 1);
 
+// Ses ölçümü: altı kadının replikleri (konuşma ve mesaj) cümle ritmi ve kimin kalıbı kimin ağzında.
+// Hedefler ve kalıpların sahipleri yazim/rehber.md, "Ses ayrımı".
+const SES_HEDEF = {
+  defne: [7, 11, 10], sude: [7, 11, 8], ceren: [6, 9, 12], lara: [5, 8, 15], ilgin: [3, 5, 30], ela: [3, 5, 30],
+};
+const SES_KALIPLARI = [
+  ['neyse', /\bneyse\b/i, 'lara'],
+  ['bir şey demiyorum', /(bir ?şey|bişey) demiyorum/i, 'ela'],
+  ['kural', /\bkural/i, 'defne'],
+  ['kampanya / küçük punto', /kampanya|küçük puntoyla/i, 'defne'],
+  ['sayma / sayılır', /\bsay(ma|ılır|ıyorum|ılıyor)\b/i, 'lara'],
+  ['bilgin olsun / bunu bil', /bilgin olsun|bunu bil\b/i, 'sude'],
+  ['bu bir … (kendini etiketleme)', /\bbu bir \p{L}+[.!]?$/iu, 'sude'],
+  ['fark var', /fark(ı)? var/i, 'ilgin'],
+  ['gerçek bir / kibar ve gerçek', /\bgerçek (bir|cevap)|kibar .* gerçek/i, 'ceren'],
+  ['kimseye söyleme', /kimseye söyleme/i, null],
+  ['söylemem gerek(miyordu)', /söylemem (gerek|lazım)/i, null],
+  ['niye/neden söyledim', /(niye|neden) söyl(üyorum|edim)/i, null],
+];
+const sesSatirlari = new Map(Object.keys(SES_HEDEF).map((k) => [k, []]));
+// Replikler iç içe durur (seçenek, koşul, yazışma); ağacın tamamı gezilir.
+const sesTopla = (d, gorulen) => {
+  if (!d || typeof d !== 'object' || gorulen.has(d)) return;
+  gorulen.add(d);
+  if (Array.isArray(d)) { d.forEach((x) => sesTopla(x, gorulen)); return; }
+  const kim = d.kim || d.kisi || d.konusan;
+  if (d.t === 'söz' && sesSatirlari.has(kim)) sesSatirlari.get(kim).push(d.metin);
+  for (const v of Object.values(d)) if (v && typeof v === 'object') sesTopla(v, gorulen);
+};
+const sesGorulen = new Set();
+for (const p of icerik.parcalar.values()) sesTopla(p.listeler, sesGorulen);
+const sesRaporu = ['| Kişi | Satır | Kelime/cümle (hedef) | Tek kelimelik cümle % (en çok) |', '|---|---|---|---|'];
+const kalipRaporu = [];
+for (const [kim, satirlar] of sesSatirlari) {
+  if (!satirlar.length) continue;
+  const cumleler = satirlar.flatMap((s) => s.split(/[.!?…]+/)).map((c) => c.trim()).filter(Boolean);
+  const ort = cumleler.reduce((t, c) => t + c.split(/\s+/).length, 0) / cumleler.length;
+  const tek = (100 * cumleler.filter((c) => c.split(/\s+/).length === 1).length) / cumleler.length;
+  const [alt, ust, tekUst] = SES_HEDEF[kim];
+  const isaret = ort < alt || ort > ust || tek > tekUst ? ' ⚠' : '';
+  sesRaporu.push(`| ${kim} | ${satirlar.length} | ${ort.toFixed(1)} (${alt}–${ust}) | ${tek.toFixed(0)} (${tekUst})${isaret} |`);
+  for (const [ad, desen, sahip] of SES_KALIPLARI) {
+    if (sahip === kim) continue;
+    const n = satirlar.filter((s) => desen.test(s)).length;
+    if (n) kalipRaporu.push(`- "${ad}" ${kim} ağzında ${n} kez` + (sahip ? ` (sahibi: ${sahip})` : ' (kimsenin değil)'));
+  }
+}
+
 const { hatalar: denetimHatalari, uyarilar } = denetle(icerik, { yasakliKaliplar: yasakliKaliplar() });
 const hicGorulmeyen = [...icerik.parcalar.values()].filter((p) => p.tur !== 'tepki' && !gorulenParcalar.has(p.kimlik)).map((p) => `${p.kimlik} (${p.dosya})`);
 
@@ -96,6 +144,11 @@ const rapor = [
   '',
   '## Hiçbir oyunda görülmeyen parçalar',
   ...(hicGorulmeyen.length ? hicGorulmeyen.map((p) => `- ${p}`) : ['- yok']),
+  '',
+  '## Ses ayrımı (bütün içerik)',
+  ...sesRaporu,
+  '',
+  ...(kalipRaporu.length ? kalipRaporu : ['- başkasının kalıbı yok']),
   '',
   '## İçerikte birebir aynı yazılmış satırlar',
   ...(ayniSatirlar.length ? ayniSatirlar.map(([s, y]) => `- "${s}" → ${y.join(', ')}`) : ['- yok']),

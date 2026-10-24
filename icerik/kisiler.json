@@ -6,6 +6,7 @@
   "ezgi": { "ad": "Ezgi", "tanimsiz": "Ablan", "numara": "+49 151 2240 7718", "rehberde": "Ezgi", "biliniyor": true, "renk": "#6f8b86", "yazmaHizi": 1.3, "okumaGecikmesi": 90 },
   "onur": { "ad": "Onur", "tanimsiz": "Onur", "numara": "0546 381 72 05", "rehberde": "Onur Ev", "biliniyor": true, "renk": "#8a8270", "yazmaHizi": 1.2, "okumaGecikmesi": 30 },
   "burak": { "ad": "Burak", "tanimsiz": "Burak", "numara": "0532 990 14 61", "rehberde": "Burak Lagün", "biliniyor": true, "renk": "#7f8790", "yazmaHizi": 1.1, "okumaGecikmesi": 60 },
+  "irem": { "ad": "İrem", "tanimsiz": "İrem", "numara": "0537 441 26 09", "rehberde": "İrem", "biliniyor": true, "renk": "#8a7b8f", "yazmaHizi": 0.9, "okumaGecikmesi": 120 },
   "emre": { "ad": "Emre", "tanimsiz": "Emre", "numara": "0544 612 30 87", "rehberde": "Emre Lagün", "biliniyor": true, "renk": "#7b8a99", "yazmaHizi": 1.2, "okumaGecikmesi": 40 },
   "nuri": { "ad": "Nuri Abi", "tanimsiz": "Bıyıklı adam", "numara": "0532 207 66 15", "renk": "#5f7a86", "yazmaHizi": 0.4, "okumaGecikmesi": 900 },
   "saadet": { "ad": "Saadet Abla", "tanimsiz": "Mutfaktaki kadın", "renk": "#9b7a5c" },

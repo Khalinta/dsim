@@ -472,7 +472,7 @@ Asya biniyor. Avlu alkışlıyor; Laser takımı ıslık çalıyor, Kaan "Bas ga
 Film ilerliyor; kamyon, ev, bebek. Avlunun ışığı perdenin ışığı; yüzler maviden sarıya, sarıdan beyaza.
 Saat dokuzu geçiyor. Taş duvarlardan bir serinlik iniyor; ekimin, zeytinliklerin, açık havanın serinliği. Naz montunun fermuarını çenesine kadar çekiyor. Berk ellerini cebine sokuyor.
 Ela susuyor.
-Bir dakika. İki dakika. Ela susmaz. Perdede İlyas bir şey söylüyor, avlu gülüyor; Ela gülmüyor, susuyor. Sağ elini, farkında olmadan, sol omzuna götürüyor; parmaklarıyla omzunun önünü, köprücük kemiğinin altını bastırıyor. Sonra fark ediyor, elini indiriyor.
+Bir dakika. İki dakika. Ela susmaz. Perdede İlyas bir şey söylüyor, avlu gülüyor; Ela gülmüyor, susuyor. Sol elini, farkında olmadan, sağ omzuna götürüyor; parmaklarıyla omzunun önünü, köprücük kemiğinin altını bastırıyor. Sonra fark ediyor, elini indiriyor.
 >> eğer ela.omuz_duydu
   Omzunu biliyorsun. Ondan değil; başkasından duydun. Ela da bunu biliyor, ya da bildiğini bilmiyor; hangisi olduğunu kestiremiyorsun.
 * (Bir şey söyleme. Battaniyeyi aç, ikinizin omzuna sar.)
@@ -988,7 +988,7 @@ Buradan, ortanın biraz arkasından, avlunun hepsi görünüyor. Yüzler perdede
 >> eğer defne.yakin >= 5
   Ortada Defne şişeden bir yudum alıyor. Bir ara başını çeviriyor; Arda'nın omzunun üstünden, avluya, sana. Bir saniye. Kaşlarından biri yarım santim kalkıyor. Sonra perdeye.
 >> eğer ela.yakin >= 5
-  Arkada Ela duvara yaslanmış; bir ara sağ eli sol omzuna gidiyor, bastırıyor, iniyor. Sonra çenesiyle sana bir işaret; "ne oturuyorsun lan" der gibi, ya da "otur, iyi yapıyorsun" der gibi, ikisi Ela'da aynı işaret.
+  Arkada Ela duvara yaslanmış; bir ara sol eli sağ omzuna gidiyor, bastırıyor, iniyor. Sonra çenesiyle sana bir işaret; "ne oturuyorsun lan" der gibi, ya da "otur, iyi yapıyorsun" der gibi, ikisi Ela'da aynı işaret.
 >> eğer sude.yakin >= 5
   Önde Sude karanlıkta yazıyor. Bir ara arkasını dönüp avluya bakıyor; birini arıyor, buluyor, defterine dönüyor. Bir şey yazıyor. Ne yazdığını tahmin etmemeye çalışıyorsun.
 >> eğer lara.yakin >= 3
