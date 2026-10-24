@@ -324,6 +324,7 @@ Uzunluk: Bir bölüm, oyuncunun tek bir okuyuşunda 2.500–4.000 kelime (15–2
 - **Yol ayrımı (cuma gecesi):** Gecelerden biri buluşmaya döner. Defne "gelme" der ("gelirsen bir şey olmuş olur"), oyuncu yine de gider ya da gitmez. Lara "gel" der. Ceren nöbetten çıkınca "Fırına gidiyorum. Uyanıksan." der.
 - **Değişen:** Oyuncu kimin gecesinde olduğunu seçti; birden çok kişiyle yazışıyorsa yalanların birbirini tutması gerekmeye başladı.
 - **Dikkat:** "Biz neyiz?" sorusu bu bölümden itibaren oyuncunun ağzından çıkabilir; Defne'ye sorulursa kaçar (bkz. 28).
+- **Yazılırken değişen (8. adım):** Gece mesajlarının yanına gündüzler eklendi: Saniye Hanım'ın gece çorbası (2'de), Ilgın'ın tavla öğle arası (Hasan Bey; arayan numara İstanbul'dan, Ilgın yalnızca "İstanbul." der, teklifin kendisi 22'de), Sude'nin bağlanma kuramı kartları, Ela'nın kulüpteki sobası ve kamp fotoğrafı. İrem'in mesajı salı öğlen; Ezgi gece. Cuma gecesi Defne "gelme" der; Lara "gel" der; ev. Ceren cumartesi sabahı fırına çağırır (Kerem'in gelişinden önce "normal ol" ricası).
 
 ## 21. Kerem
 **8–9 Kasım, Cumartesi–Pazar.**
@@ -339,6 +340,7 @@ Uzunluk: Bir bölüm, oyuncunun tek bir okuyuşunda 2.500–4.000 kelime (15–2
   - **Eve dönmek:** Saniye Hanım'ın kapısında bir zarf; okaliptüs için ikinci mektup.
 - **Değişen:** Oyuncu Ceren'in bir hayatı olduğunu, o hayatın yüzünü gördü. Kerem bir isim değil artık.
 - **Dikkat:** Kerem'i kötülemek yok; roman da kötülemez. Kerem'in iyi olması sahnenin bütün ağırlığıdır.
+- **Yazılırken değişen (8. adım):** Cemal'in kuralı onun babasının kuralı (Kemeraltı'nda otuz yıl garsonluk). Kerem pazar sabahı fırında tek başına oyuncuyla oturur. ~~Lara: oyuncu ona yumurta kırmayı öğretiyor.~~ → Lara yumurta kırmayı 12'de öğrenmişti; bu kez kendisi kırar (öğrenmemişse öğrenir). *Neden:* Tekrar. ~~Sude: kütüphane.~~ → Kabaktepe'de türbinlerin altındaki bank. *Neden:* 20 ve 22'de de kütüphane var. Babanın Selanik'teki yeri: Kalamarya, bir kadının evi ("biri sorarsa bilmiyorsun").
 
 ## 22. Siren
 **10–12 Kasım, Pazartesi–Çarşamba.**
@@ -354,6 +356,7 @@ Uzunluk: Bir bölüm, oyuncunun tek bir okuyuşunda 2.500–4.000 kelime (15–2
   - **Defne, soba:** "sobam yanıyor. ama dışarıya değil içeriye." Baca kapağı. "Bu akşam içmedim. Hiç." "Kal. Bu gece. Sabaha kadar." **Kalan biriyle:** ışık açık, gözler açık, yavaş; ne şaka, ne slogan. Sabah menemen: "Kural ikiyi hatırlatırım: kahvaltı yok." (Defne'yle bağ varsa.)
   - **Sude, kütüphane:** Vize gecesi, yirmi dört saat açık kütüphane, saat iki. "Elimi tutmak istiyorsan tutabilirsin. Bunu söylemem garip mi oldu?"
 - **Değişen:** Bir ilişki yatağa ya da bir eşiğe vardı. Ilgın'ın ve Ceren'in hayatına bir takvim girdi.
+- **Yazılırken değişen (8. adım):** ~~Efe'nin öksürüğü~~ → Hasan Bey'in gece öksürüğü. *Neden:* Esnemez kural; Efe 16 yaşında, böyle bir sahnede anılmaz bile. Gece seçimine Ela (depoda yelken dikişi) ve Lara (iki yüz on beş mum) eklendi; ev dalında Ezgi ve Nuri Abi'nin çarşamba gecesi defteri. Salı yelken dersi: yol hakkı (düğüm dersi 16'da yapılmıştı). Seçilmeyenlerin mesajları ertesi sabah gelir (saat sırası).
 
 ## 23. Son zengin gece
 **14–15 Kasım, Cuma–Cumartesi. Kalabalık bölüm.**
@@ -370,6 +373,7 @@ Uzunluk: Bir bölüm, oyuncunun tek bir okuyuşunda 2.500–4.000 kelime (15–2
 - **Sabit (05:00):** Sude'nin telefonu titriyor. Annesi: "Neredesin?" Konum: Fener Burnu, Berkmen villası. Sude bembeyaz. Oyuncu ne yapar: yanında durur, ona ne yapacağını söyler (yanlış), onu yurda götürmeye çalışır, bir yalan önerir (Sude'nin defterine bir sayı daha). Ya da orada değildir; Sude'nin sabahını Dilan'dan duyar.
 - **Değişen:** Lara'nın son büyük gösterisi bitti. Sude'nin annesi geliyor.
 - **Dikkat:** Partide herkes aynı anda konuşmasın. Lara'nın evinin bir zamanlar nasıl bir yer olduğunu ve bu gecenin neden bir veda olduğunu okur sessiz bir ayrıntıdan anlamalı.
+- **Yazılırken değişen (8. adım):** Evin eski bir yer olduğunu söyleyen ayrıntı: 1979'dan beri tutulan misafir defteri; Lara'nın sayfası "Son." Partiden önce Ilgın'ın gündüzü (Hasan Bey'in zeytin daveti) ve Ceren'in bahsi (acile kaç kişi gelecek). Odalar üç tur gezilir.
 
 ## 24. Zeytin
 **15–16 Kasım, Cumartesi–Pazar.**
@@ -381,6 +385,7 @@ Uzunluk: Bir bölüm, oyuncunun tek bir okuyuşunda 2.500–4.000 kelime (15–2
   - **Lara'nın sabahı:** Boş şampanya şişeleri, Hayriye Hanım'la temizlik. Lara ilk kez bir şeyi kendisi topluyor. "Bu son partiydi. Bundan sonra ev bankanın, ben kendimin." Para bitti; Defne'nin borcu için atölyede çalışmayı düşünüyor. (Lara'yla bağ varsa.)
 - **Gece:** Seçilmeyenlerden.
 - **Değişen:** Oyuncu bir kadının ailesinin gözünde biri oldu, ya da bir kadının en kötü sabahında yanındaydı.
+- **Yazılırken değişen (8. adım):** ~~Efe oyuncuyu sınıyor.~~ → Efe bu bölümde yok. *Neden:* Esnemez kural; sahnenin altında bir romantik alt metin var. Pazar: sıkımhane, Saniye Hanım'ın sobası (ilk soba dumanı buraya kaydı), annenin telefonu, Mendirek'te personel yemeği. Onur'un babası Kemal Bey hoparlörden.
 
 ## 25. Anne
 **17–20 Kasım, Pazartesi–Perşembe.**
@@ -393,6 +398,7 @@ Uzunluk: Bir bölüm, oyuncunun tek bir okuyuşunda 2.500–4.000 kelime (15–2
   - Sude annesine "hayır" der ya da teslim olur; ilk adımı. Annesi giderken kızına bir zarf bırakıyor: yatay geçiş formu, doldurulmuş, imzası boş.
 - **Gece:** Sude: "Bugün bir yalanı sildim. Defterden değil. Gerçekten." ya da "Bugün üç yalan daha yazdım. Hepsi sen." 
 - **Değişen:** Sude'nin kararı artık bir kâğıt.
+- **Yazılırken değişen (8. adım):** Yemek İskele Lokantası'nda (Mendirek çarşamba kapalı). Oyuncunun annesinden koli (babaya söylediyse zarf boş). Saniye Hanım'ın annesi Nebahat; kedisinin adı. ~~Ela'nın sırrı ("Ben bıraktım")~~ burada açılmaz; Mert'in "Doktor öyle demedi" mesajı ve bir ipucu. Hasan Bey'in tavlanın içindeki notu: "Kızım gidecek. Sen kalacak mısın?"
 
 ## 26. Yazı
 **21–24 Kasım, Cuma–Pazartesi.**
@@ -409,6 +415,7 @@ Uzunluk: Bir bölüm, oyuncunun tek bir okuyuşunda 2.500–4.000 kelime (15–2
   - **Lara:** "Babanla sorunun olması seni ilginç yapmıyor. Beni de yapmıyor. İkimizin de bilmesi lazım."
   - **Kimseye:** Saniye Hanım merdivende. "Kompozisyonda yazarsın demiştim."
 - **Değişen:** Ailesi biliyor. Bir kadın, oyuncunun en çok sakladığı şeyi biliyor.
+- **Yazılırken değişen (8. adım):** Üç dal: babaya söylediyse (itiraf.baba) sessizlik ve Ezgi; annesine eylülde söylediyse (itiraf.anne) annesi babasına söyleyememiş, yazı ondan önce davranmış; hiç söylemediyse annenin mesajları. Aynı sabah Saniye Hanım'a kız kardeşi Leman'dan cevap. Tarık Hoca "Kalıyor musun?" diye sorar (türbin projesi). Sude defterin ilk sayfasını gösterir ama sayı söylemez ("bir defter dolusu").
 
 ## 27. Yirmi iki
 **26 Kasım, Çarşamba.**
@@ -418,6 +425,7 @@ Uzunluk: Bir bölüm, oyuncunun tek bir okuyuşunda 2.500–4.000 kelime (15–2
 - **Sabit (20:15):** **Babanın telefonu.** "Doğum günün kutlu olsun." "Yirmi iki." "Yazıyı okudum." (ya da itiraf ettiyse: "Annen anlattı.") "Ağustostan beri." Oyuncu: söyleyemedim / özür dilerim / kendi kararımdı. "Ayın on üçünde İzmir'de bir toplantım var. Sonra oraya geleceğim. Nerede çalışıyorsun?" Dört dakika on bir saniye.
 - **Yol ayrımı (aramadan sonra):** Kime gidiyorsun? Birine "kötü geçti" yazıp yazmamak. Kim gel derse: Defne'nin sobası ("bu bir teklif değil, bir hava durumu"), Ilgın'ın penceresi, Ceren'in balkonu, Ela'nın kordonu (yürüyerek, konuşmadan), Sude'nin kütüphanesi, Lara'nın havuz kenarı.
 - **Değişen:** Baba geliyor.
+- **Yazılırken değişen (8. adım):** Doğum gününü kim nereden biliyor: Defne (oyuncu söyledi), Onur'un gece yarısı hikâyesi (Sude, Ela, Lara), Ilgın (reçete), Ceren (eylüldeki acil dosyası), Saniye Hanım (kira sözleşmesi). Babanın telefonuna not, ev ve para soruları eklendi; açılmazsa yazılı mesaj. Ceren'in on dokuz yaşındaki kız hikâyesi bağı derinse bu gece açılır.
 
 ## 28. Kural bir
 **27–30 Kasım, Perşembe–Pazar. III. Perdenin sonu.**
@@ -431,6 +439,7 @@ Uzunluk: Bir bölüm, oyuncunun tek bir okuyuşunda 2.500–4.000 kelime (15–2
   - **Kaçış:** Oyuncu bir şeyden kaçtıysa (İrem'e cevap vermedi, babaya yazmadı, birine "bakarız" dedi): o kaçışın bedeli bu bölümde ilk kez ödenir.
 - **Değişen:** Bir şey kırıldı. Kış başlıyor.
 - **Dikkat:** Kırılmayı oyuncuyu cezalandırmak için yazma. Gerçekçi yaz; kırılan şey çoğu zaman kadının kendi korkusudur, oyuncunun hatası değil.
+- **Yazılırken değişen (8. adım):** ~~Duvardaki teknenin adı: Nesrin.~~ → Emine (Nuri Abi'nin annesi). *Neden:* Ela'nın annesinin adı Nesrin. Tekne yirmi yıl önce batmak üzere olan Mendirek'i kurtarmak için satıldı (Mendirek 1981'den beri açık). Kırılma bir sayaçla seçilir (derin bağ sayısı: iki ve üstü yakalanma, bir "biz neyiz", sıfır soğuma); yakalanmada öğrenen sırası Sude, Ilgın, Ela, Lara, Defne, Ceren. Lara'ya savcılıktan yazı (İzmir, 2 Aralık).
 
 ---
 

@@ -211,6 +211,21 @@ Her karar ve nedeni burada. Bir karar değişirse eskisinin ~~üstü çizilir~~ 
 56. **Çarşı Eczanesi'nin eczacısı: Sevim Abla.** 15–17'de önce "Nermin" yazılmıştı; Sude'nin annesinin adı Nermin olduğu için değiştirildi.
 57. **Cinsel sahneler (19):** Ela, Ceren, Defne ve Lara'yla yazıldı; Sude ve Ilgın'ın eşiği bir soru ve bir çay. Biçim 1. bölümdeki gibi: eylem, sıra, pozisyon ve süre açık; anatomik yakın plan yok; her adımda durmak, "emin misin" ve "bu gece değil" seçeneği; korunma sahnenin içinde. Defne'nin doğum gecesi (17) çok sarhoş olduğu için cinsel seçenek yok; oyuncunun durması sahnenin kendisi.
 
+### III. Perde (8. adım)
+
+58. **Ses ayrımı (kullanıcının geri bildirimi).** Kullanıcı Defne'nin konuşmasının garip geldiğini, öbür karakterlerin cümle yapılarında da benzerlikler olduğunu söyledi. Ölçüm haklı çıktı: I–II. Perde'de altı kadın da cümle başına ortalama **3 kelimeyle** konuşuyordu (2,9–3,8) ve birbirinin kalıplarını kullanıyordu ("neyse", "kural", "sayılır", "bilgin olsun", "fark var" herkesin ağzında).
+    - `yazim/rehber.md` 5b: her kadının cümle ritmi hedefi ve kalıp sahipliği; kimsenin kullanmayacağı kalıplar.
+    - `araclar/oku.mjs`: `ozet.md`'ye "Ses ayrımı" tablosu ve başkasının kalıbını kullananların listesi.
+    - III. Perde'de ayrıştı: Sude 6,2, Defne 5,1, Ceren 4,7, Lara 3,7, Ela 2,8, Ilgın 2,6 kelime/cümle. Hedefe (Defne ve Sude 7–11) henüz varmadı ama yön doğru.
+    - I–II. Perde'nin sesleri **değiştirilmedi** (yazılmış metin). Geriye dönük bir ses geçişi cila adımında önerilecek; kullanıcı isterse daha önce.
+59. **Annenin eylülde öğrendiği yol (`itiraf.anne`, 4. bölüm).** II. Perde bu işareti hiç izlememişti. Karar: annesi çatışmadan kaçan biri olduğu için babasına söyleyemedi. 24 (pazar telefonu), 25 (koli), 26 (İTÜ'nün yazısı), 27 (babanın telefonu) buna göre dallanıyor. 5–19'da bu işaretin izlenmemesi cila adımında kontrol edilecek.
+60. **Ilgın'ın iş teklifi İstanbul'dan** (belgeyle aynı). 20'de yanlışlıkla İzmir yazılmıştı ve teklif anı orada harcanmıştı; düzeltildi, an 22'ye kaldı.
+61. **Ela'nın sakat omzu sağ.** 15–17'de yanlışlıkla sol yazılmıştı; düzeltildi. Ela'nın en derin sırrı ("Ben bıraktım") plandaki yerinde, IV. Perde'de açılacak; 25'te yalnızca Mert'in mesajı ve bir ipucu var.
+62. **Esnemez kuralın uygulamaları:** 22'de Ilgın'ın katındaki sahnede aşağıdan duyulan ses babasının (plan Efe'nin öksürüğüydü); 24'te Efe yok (plan "Efe oyuncuyu sınıyor"du).
+63. **28'de kırılma bir sayaçla seçilir.** `derin28` = derin bağ sayısı (Ilgın, Ceren, Defne, Ela, Lara'yla gece; Sude'yle ilk öpücük). İki ve üstü: yakalanma (öğrenen sırası Sude, Ilgın, Ela, Lara, Defne, Ceren). Bir: "Biz neyiz?". Sıfır: soğuma. Kaçılan şeylerin (İrem'e cevapsızlık, babanın açılmayan telefonu) bedeli üstüne eklenir. Nuri Abi'nin cevabı `nuri.kal`'da.
+64. **Yeni kişiler ve küçük gerçekler:** İrem, Kerem, Gülay Hanım, Nermin Hanım kişilere eklendi. Saniye Hanım'ın soyadı Karaca, kız kardeşi Leman, kedisi Nebahat (annesinin adı). Nuri Abi'nin teknesi Emine (plan "Nesrin"di; Ela'nın annesiyle çakışıyordu); Mendirek 1981'den beri açık, tekne yirmi yıl önce Mendirek'i kurtarmak için satıldı.
+65. **Seçilmeyenlerin gece mesajları, dal geç biterse ertesi sabah gelir.** *Neden:* Motor zamanı geri almaz; uzun bir dalın ardından gece 23:00'ün mesajı yanlış yerde okunuyordu.
+
 ## Yol haritası
 
 1. ~~Temel belgeler~~ → **Temel belgeler + ses testi.** ✅
@@ -229,8 +244,11 @@ Her karar ve nedeni burada. Bir karar değişirse eskisinin ~~üstü çizilir~~ 
 5. **Motor ve ekranlar bölüm yapısına.** ✅ (karar 45–47)
 6. **I. Perde (Bölüm 1–11).** ✅ (karar 48–52) Bütün tanışmalarla; okuma aracıyla baştan sona okunup düzeltildi. Eski içerik ve eski yapının kodu kalktı.
 7. **II. Perde (Bölüm 12–19).** ✅ (karar 53–57)
-8. **III–V. Perdeler,** perde perde (her biri büyük).
-9. **Sonlar, Şubat ve cila** (büyük). Tutarlılık taraması, son okuma turları. Kısa kalan bölümler: I. Perde'den 4, 5, 8, 10; II. Perde'den 14, 18, 19'un bağı zayıf yolları.
+8. ~~**III–V. Perdeler,** perde perde (her biri büyük).~~ → **III. Perde (Bölüm 20–28).** ✅ (karar 58–65)
+   - *Neden bölündü:* Her perde ayrı bir adım; bir perde tek oturumda ancak bitiyor.
+9. **IV. Perde (Bölüm 29–35, 1–21 Aralık)** (büyük).
+10. **V. Perde (Bölüm 36–41)** (büyük).
+11. **Sonlar, Şubat ve cila** (büyük). Tutarlılık taraması, son okuma turları, geriye dönük ses geçişi (karar 58). Kısa kalan bölümler: I. Perde'den 4, 5, 8, 10; II. Perde'den 14, 18, 19'un bağı zayıf yolları; III. Perde'den 23–28 (bkz. ölçüm).
 
 ## Oynanış süresi hedefi
 
@@ -257,6 +275,24 @@ Her karar ve nedeni burada. Bir karar değişirse eskisinin ~~üstü çizilir~~ 
 
   - Bir kadına özen gösteren okuyuşlar çoğunlukla 2.000–3.000. Hedefin (2.500–3.500) alt yarısında; I. Perde'nin iki katı.
   - En kısalar bağı zayıf ya da her şeyi geri çeviren yollar (14'te "evde kal", 19'da cuma ve cumartesi evde). Cila adımında genişler.
+
+- **III. Perde ölçümü (8. adım).** Tek okuyuşta, 24 yol:
+
+  | Bölüm | En kısa | Ortanca | En uzun |
+  |---|---|---|---|
+  | 20 Gece yarısından sonra | 1.560 | 2.140 | 3.830 |
+  | 21 Kerem | 2.010 | 2.100 | 2.520 |
+  | 22 Siren | 1.680 | 2.040 | 3.270 |
+  | 23 Son zengin gece | 1.490 | 1.890 | 2.370 |
+  | 24 Zeytin | 1.410 | 1.830 | 3.100 |
+  | 25 Anne | 1.260 | 1.800 | 3.340 |
+  | 26 Yazı | 1.800 | 2.010 | 2.230 |
+  | 27 Yirmi iki | 1.120 | 1.520 | 2.030 |
+  | 28 Kural bir | 1.360 | 1.440 | 1.650 |
+
+  - **20–22 ve 26 hedefin alt ucunda; 23–25, 27 ve 28 altında** (ortanca 1.440–1.890; en az 2.000 hedefi tutmadı).
+  - *Neden:* Bu bölümlerde her kadının yolu yalnızca kendi dalını görüyor; bir kadına özen gösteren okuyuş omurga + tek dal okuyor. Dalları ve omurgayı her bölümde iki-üç kez genişlettim, ama ilk yazışta her bölüm okuyuş başına 1.000 kelime civarındaydı.
+  - *Ders (IV. Perde'ye):* Bölümü planlarken her kadın için o bölümde kendi sahnesi olacak şekilde kurmak; omurgayı en az 1.200 kelimelik ortak sahnelerle (kasaba, Mendirek, ev) baştan yazmak.
 
 ## Açık sorular
 
@@ -337,4 +373,15 @@ Her karar ve nedeni burada. Bir karar değişirse eskisinin ~~üstü çizilir~~ 
 - **Ölçüm:** bkz. "Oynanış süresi hedefi"; çoğu yol 2.000–3.000, bağı zayıf yollar daha kısa.
 - **Kullanıcıya düşen:** Yok. Telefonda oyun kendiliğinden güncellenir; I. Perde'yi bitirmiş kayıt 12. bölümden sürer.
 
-**Sıradaki:** 8. adım, III. Perde (Bölüm 20–28, 3–30 Kasım) (büyük).
+~~**Sıradaki:** 8. adım, III. Perde (Bölüm 20–28, 3–30 Kasım) (büyük).~~ → Kullanıcı "devam" dedi ve ses benzerliği konusunda uyardı (karar 58).
+
+**6. oturum (8. adım):** III. Perde yazıldı ve oyuna girdi (karar 58–65). Sürüm 0.8.0.
+- **Metin:** 9 bölüm (20–28), 3–30 Kasım. Poyraz ve gece mesajları, İrem; Kerem Mendirek'te; vize sınavında siren, Ilgın'a teklif, ikinci eşik gecesi (Ilgın, Ceren, Defne, Sude; Ela ve Lara da); Lara'nın son partisi; Tezcanların zeytini; Sude'nin annesi ve "Bölümden asistan"; İTÜ'nün yazısı ve "kime anlatıyorsun"; doğum günü ve babanın telefonu; Nuri Abi'nin rakısı ve kırılma.
+- **Kasabanın iplikleri:** Saniye Hanım'ın mektupları (belediyeye üç; kız kardeşinden cevap), Halit Bey'in sobası ve mumu; Saadet Abla'nın revanisi ve personel yemeği; Nuri Abi'nin defteri, kovası, teknesi; Onur ve Cansu, Onur'un babası; Rahmi Usta'nın oğlu; Tarık Hoca'nın türbini.
+- **Ses:** rehber 5b ve okuma aracının ses tablosu (karar 58).
+- **Önceki bölümlerde düzeltilenler:** Ela'nın omzu (15–17), Ilgın'ın teklifinin şehri ve mesaj biçimi (20–21), kulüp fotoğrafı (20), Defne'nin yüz yüze konuşmasının büyük harfle yazılması (22–23), annenin eylülde öğrendiği yol (24–25).
+- **Okuma:** Her bölümden sonra okuma aracıyla 24 yol; dökümler okundu. Bulunup düzeltilenler: tekrar eden ders (izbarço 16'da vardı), geriye giden saatler (cumartesi vardiyasından önce okunan pazar sahneleri; dallardan sonra gelen gece mesajları), açılma sırasından önce açılan sır (Ela), Nuri Abi'nin yaşıyla çelişen yıl, belgede olmayan akrabalık, yasaklı kalıplar ve başkasının kalıbı.
+- **Ölçüm:** bkz. "Oynanış süresi hedefi"; 23–28 hedefin altında.
+- **Kullanıcıya düşen:** Yok. Telefonda oyun kendiliğinden güncellenir; II. Perde'yi bitirmiş kayıt 20. bölümden sürer.
+
+**Sıradaki:** 9. adım, IV. Perde (Bölüm 29–35, 1–21 Aralık) (büyük).
