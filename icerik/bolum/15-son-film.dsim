@@ -56,7 +56,7 @@ Listeyi okuduğunu kimse görmüyor. Dolmuş geliyor.
   [ilgin.geldi15]
   Vardiyaya çıkmadan önce gömleğini ütülerken telefon titriyor.
   >> yazışma ilgin
-    @ilgin: çarşı eczanesi. nermin abla. bu geceyi o tutuyo, salıyı ben tutuyorum
+    @ilgin: çarşı eczanesi. sevim abla. bu geceyi o tutuyo, salıyı ben tutuyorum
     @ilgin: nöbet devredilmez. değiştirilir. farkı var
     >> bekle 2dk
     @ilgin: babam sordu nereye. fabrika dedim
@@ -73,13 +73,13 @@ Listeyi okuduğunu kimse görmüyor. Dolmuş geliyor.
     * (Cevap verme. Görüldü kalsın.)
       >> bekle 4dk
       @ilgin: görüldü attın
-      @ilgin: geliyorum yine de. nermin ablaya söz verdim, şimdi dönersem ayıp
+      @ilgin: geliyorum yine de. sevim ablaya söz verdim, şimdi dönersem ayıp
 >> eğer ilgin.istendi15 ve değil ilgin.geldi15
   [ilgin.gelmedi15]
   Gömleğin yarısı ütülenmişken telefon titriyor; ütüyü dik bırakıyorsun.
   >> yazışma ilgin
     @ilgin: olmadı
-    @ilgin: nermin ablanın torunu hasta. çarşı eczanesi kapalı bu gece. kimse yok
+    @ilgin: sevim ablanın torunu hasta. çarşı eczanesi kapalı bu gece. kimse yok
     @ilgin: sonunu biliyorum zaten. babam her yıl izliyo. cemşit'i tutuyo, annem ilyas'ı. kırk yıldır aynı kavga
     * yarın anlatırım
       >> bekle 1dk
@@ -242,7 +242,7 @@ Mendirek'e döndüğünde içerisi tıklım tıklım; Fabrika'dan dönenlerin ya
   @saadet: Hasan'ın kızı nöbetini devretmiş.
   Bunu sana söylemiyor; mutfağın kapısına, Nuri Abi'ye, kendine söylüyor.
   @saadet: Ilgın nöbet devretmez. Hasan da devretmezdi. Kırk yılda bir kere, Gülay doğururken. Bir kere.
-  @saadet: Nermin bana söyledi. Saat beşte. Fırından ekmek alırken. "Hasan'ın kızı benden nöbet istedi, cumayı." Ben "niye" demedim. Nermin söyledi niye. Fabrika.
+  @saadet: Sevim bana söyledi. Saat beşte. Fırından ekmek alırken. "Hasan'ın kızı benden nöbet istedi, cumayı." Ben "niye" demedim. Sevim söyledi niye. Fabrika.
   Battaniyeyi katlamayı bitiriyor. Sana bakmıyor.
   @saadet: Yarın sabah çarşı bilir. Pazartesi kordon. Bilerek oturdun mu?
   * "Bilerek."
@@ -829,7 +829,7 @@ Seni görünce kartonun üstünde kenara kayıyor; yer açmıyor, kayıyor. Fark
 @ilgin: Geç kaldın.
 @ilgin: Film başlamadı daha. Ama geç kaldın. Sekiz buçuk dedim.
 Yanına oturuyorsun; karton ikinize dar, dizlerin onunkine değiyor, kimse çekmiyor.
-@ilgin: Nermin Abla'ya salı borçluyum. Salı sabaha kadar ben. Salı gece gelme, ayakta uyuyacağım, ilacını yanlış veririm.
+@ilgin: Sevim Abla'ya salı borçluyum. Salı sabaha kadar ben. Salı gece gelme, ayakta uyuyacağım, ilacını yanlış veririm.
 @ilgin: Şaka. Yanlış vermem. Hiç vermedim. Ama gelme.
 Battaniyeyi görüyor.
 @ilgin: Saadet Abla'nın.
@@ -866,7 +866,7 @@ Film başlıyor. Kamyon; toz; al yazma. Avlu "ohhh" diyor. Ilgın demiyor.
 Film ilerliyor. Ilgın filmi bir reçete okur gibi izliyor; her sahneyi bir kere, dikkatle, sonra bir yorum, kısa.
 İlyas bir sahnede iki gecedir uyumamış, kamyonun direksiyonunda.
 @ilgin: Gözünün altına bak. Mor. Bir de alkol. Karaciğeri bitik bunun. Otuz yaşında altmışlık karaciğer.
-@ilgin: Asya'ya söyleseler. Ama kimse söylemez. Bu kasabada da söylemezler. Ben söylerim, bu yüzden kimse benden ilaç almak istemez, herkes Nermin Abla'ya gider.
+@ilgin: Asya'ya söyleseler. Ama kimse söylemez. Bu kasabada da söylemezler. Ben söylerim, bu yüzden kimse benden ilaç almak istemez, herkes Sevim Abla'ya gider.
 * "Ben senden alırım."
   [ilgin.yakin +1]
   @ilgin: Alıyorsun zaten. Ağrı kesici. İki kutu dedin, bir kutu verdim.
@@ -881,7 +881,7 @@ Taş duvardan serinlik iniyor. Ilgın ellerini dizlerinin arasına sıkıştır�
   Ellerini alıyorsun. Ilgın'ın parmakları buz gibi; kemikli, kuru, sabun kokan eczacı elleri. Bir an çekiyor; refleks.
   @ilgin: Herkes görüyor.
   Ama elini geri almıyor. Perdeye bakıyor; sonra kapıya, Gönül Hanım'ın masasına, avlunun ortasına, Saadet Abla'nın bütün kordonuna.
-  @ilgin: Görsünler. Nermin Abla saat beşte zaten herkese söyledi. Beşten beri görüyorlar zaten.
+  @ilgin: Görsünler. Sevim Abla saat beşte zaten herkese söyledi. Beşten beri görüyorlar zaten.
   Parmakları ellerinin arasında yavaş yavaş ısınıyor. Konuşmuyor. Film boyunca ellerini geri almıyor.
 * (Bir şey yapma.)
   Bir şey yapmıyorsun. Ilgın ellerini dizlerinin arasında tutmaya devam ediyor. Bir süre sonra, sen bakmazken, omzunu duvardan ayırıp seninkine dayıyor; yarım santim, bir ağırlık, sonra o da gitmiyor.
@@ -927,7 +927,7 @@ Son kelimeyi söyledikten sonra duruyor. Kendi kelimesini duyuyor; bunu fark ett
   [ilgin.sen_soyle]
   Ilgın sana dönüyor; ilk kez bütün film boyunca.
   @ilgin: Ben söyleyeceğim. Doğru.
-  @ilgin: Herkes bana ne olduğunu söylüyor. Annem "fedakârlık" diyor, İzmir'deki arkadaşlarım "korkaklık", Nermin Abla "evlat". Sen "sen söyleyeceksin" dedin.
+  @ilgin: Herkes bana ne olduğunu söylüyor. Annem "fedakârlık" diyor, İzmir'deki arkadaşlarım "korkaklık", Sevim Abla "evlat". Sen "sen söyleyeceksin" dedin.
   @ilgin: Tamam. Ben söyleyeceğim. Bir gün. Bugün değil.
 * (Bir şey söyleme.)
   Ilgın cevabı beklemiyor zaten. Kendi sorusunu cebine koyuyor, bir müşterinin bıraktığı bozuk para gibi; sonra sayacak.
