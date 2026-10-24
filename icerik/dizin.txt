@@ -24,3 +24,4 @@ bolum/20-gece-yarisindan-sonra.dsim
 bolum/21-kerem.dsim
 bolum/22-siren.dsim
 bolum/23-son-zengin-gece.dsim
+bolum/24-zeytin.dsim
