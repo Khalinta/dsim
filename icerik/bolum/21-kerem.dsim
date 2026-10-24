@@ -398,28 +398,28 @@ tür: sahne
 kişi: ilgin
 
 >> zaman 9 Kasım 13:05
->> eğer ilgin.izmir20
+>> eğer ilgin.istanbul20
   >> yazışma ilgin
-    @ilgin: Babama söylemedim.
-    @ilgin: İzmir'i.
-    @ilgin: Sen de söyleme.
+    @ilgin: babama söylemedim
+    @ilgin: istanbul'u
+    @ilgin: sen de söyleme
     * söylemem
       >> bekle 4dk
-      @ilgin: Biliyorum.
-      @ilgin: Yine de yazdım.
+      @ilgin: biliyorum
+      @ilgin: yine de yazdım
     * ne zaman söyleyeceksin
       >> bekle 15dk
-      @ilgin: Bilmiyorum.
-      @ilgin: Sorma demiştim. Bu sefer cevap verdim. İlk.
+      @ilgin: bilmiyorum
+      @ilgin: sorma demiştim. bu sefer cevap verdim. ilk
   -> son
 >> yazışma ilgin
-  @ilgin: Yarın gece nöbet bende.
-  @ilgin: Vize haftası. Bütün kampüs mide ilacı alıyor.
-  @ilgin: Erken yat.
+  @ilgin: yarın gece nöbet bende
+  @ilgin: vize haftası. bütün kampüs mide ilacı alıyo
+  @ilgin: erken yat
   * sen de
     >> bekle 3dk
-    @ilgin: Ben nöbetteyim.
-    @ilgin: Yatmam. Otururum.
+    @ilgin: ben nöbetteyim
+    @ilgin: yatmam. otururum
   * (Cevap verme.)
 -> son
 

@@ -604,14 +604,14 @@ tür: sahne
 >> zaman 7 Kasım 12:15
 >> yer Çarşı, Yeni Eczane
 >> yazışma ilgin
-  @ilgin: Babam tavla diyor.
-  @ilgin: Ben demiyorum. O diyor.
-  @ilgin: Bir buçuğa kadar öğle arası. Kapı kapalı. Arkadan gel.
+  @ilgin: babam tavla diyo
+  @ilgin: ben demiyorum. o diyo
+  @ilgin: bir buçuğa kadar öğle arası. kapı kapalı. arkadan gel
   * geliyorum
   * ıhlamuru içtim
     >> bekle 2dk
-    @ilgin: Yalan.
-    @ilgin: Gel yine de.
+    @ilgin: yalan
+    @ilgin: gel yine de
 >> zaman 7 Kasım 12:40
 Eczanenin camında "ÖĞLE ARASI" yazan karton. Arka kapı avluya açılıyor; avluda bir incir ağacı, yaprakları dökülmüş, dalları poyrazda birbirine vuruyor. Kapı aralık.
 İçeride, ilaç dolaplarının arkasındaki küçük odada Hasan Bey tavlayı açmış. Bir elektrikli soba, turuncu, tıkırdıyor. Duvarda bir takvim; 1998'den kalma bir ilaç firmasının, sayfası ağustosta kalmış.
@@ -638,7 +638,7 @@ Sonra ilaç dolabının önündeki tabureye oturuyor. İzliyor. Bir şey demeden
   Ilgın başını çeviriyor; dolaba, kutulara, alfabetik raflara.
   @ilgin: Baba.
   @hasan: Ne? Gitmiyorsun. Doğru söylüyorum.
-Telefon titriyor. Ilgın'ın telefonu; tezgâhın üstünde, ekranı yukarı. Bir numara, kayıtsız, 0232 ile başlayan. İzmir.
+Telefon titriyor. Ilgın'ın telefonu; tezgâhın üstünde, ekranı yukarı. Bir numara, kayıtsız, 0212 ile başlayan. İstanbul.
 Ilgın telefona bakıyor. Uzanmıyor. Titreme duruyor. Bir daha başlıyor. Ilgın telefonu ters çeviriyor; ekranı tezgâha, sırtı tavana.
 @hasan: Kim?
 @ilgin: Depo.
@@ -659,9 +659,9 @@ Hasan Bey zarları sallıyor. Sallamaya devam ediyor; atmadan, uzun uzun. Bir ş
     @ilgin: Sorma dedim. Sordun.
     @ilgin: Sormadın aslında. Söyledin. Fark var.
     Elini cebine sokuyor; telefonun durduğu cebe değil, öbürüne.
-    @ilgin: İzmir. Bir yer. Bir iş. Başvurmuştum. Ağustosta. Unutmuştum.
-    @ilgin: Unutmamıştım.
-    [ilgin.izmir20]
+    @ilgin: İstanbul.
+    @ilgin: Bu kadar. Gerisi yok daha.
+    [ilgin.istanbul20]
   Kapıyı açık tutuyor; avludan çarşıya, sen çıkasın diye.
   @ilgin: Ihlamuru iç. Bu sefer gerçekten.
 >> yoksa
